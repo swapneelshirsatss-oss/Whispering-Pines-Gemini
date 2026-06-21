@@ -1,0 +1,6 @@
+{
+  "name": "Whispering Pines Resort Mukteshwar",
+  "description": "Premium luxury villas offered by Whispering Pines by Casa De Bello in Mukteshwar, featuring magnificent Himalayan views, woody pine settings, and bespoke WhatsApp-driven booking packages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
