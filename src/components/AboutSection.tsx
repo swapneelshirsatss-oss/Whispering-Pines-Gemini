@@ -2,6 +2,7 @@ import React from "react";
 import { Trees, Compass, Home } from "lucide-react";
 import { RESORT_CONTACT } from "../data";
 import resortDiningHallImg from "../assets/images/resort_dining_hall_1782030904946.jpg";
+import villaBedroomImg from "../assets/images/villa_suite_bedroom_1782032168947.jpg";
 import LazyImage from "./LazyImage";
 
 export default function AboutSection() {
@@ -76,9 +77,10 @@ export default function AboutSection() {
             <div className="relative rounded-sm overflow-hidden shadow-2xl">
               {/* Main Photo */}
               <LazyImage
-                src={resortDiningHallImg}
-                alt="Beautiful and elegant wood-crafted dining hall and restaurant inside Whispering Pines Resort"
-                className="w-full aspect-video sm:aspect-auto sm:h-[480px] lg:h-[520px] object-cover hover:scale-105 transition-transform duration-500"
+                src={villaBedroomImg}
+                alt="Beautiful and elegant wood-crafted bedroom inside Whispering Pines Resort"
+                className="group w-full aspect-video sm:aspect-auto sm:h-[480px] lg:h-[520px]"
+                imgClassName="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"
               />
               {/* Highlight Overlay */}

@@ -5,6 +5,7 @@
 
 import React from "react";
 import Navbar from "./components/Navbar";
+import Breadcrumbs from "./components/Breadcrumbs";
 import Hero from "./components/Hero";
 import AboutSection from "./components/AboutSection";
 import RoomInventoryList from "./components/RoomInventoryList";
@@ -21,6 +22,9 @@ export default function App() {
     <div className="relative min-h-screen bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
       {/* 1. Header Navigation Bar */}
       <Navbar />
+
+      {/* Breadcrumb Navigation */}
+      <Breadcrumbs />
 
       {/* 2. Hero Presentation Block */}
       <Hero />

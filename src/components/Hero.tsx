@@ -2,17 +2,20 @@ import React from "react";
 import { ArrowUpRight, Check } from "lucide-react";
 import { generateWhatsAppLink } from "../data";
 import resortLuxuryHeroImg from "../assets/images/resort_mukteshwar_luxury_hero_1782031089955.jpg";
+import LazyImage from "./LazyImage";
 
 export default function Hero() {
   return (
     <header className="relative min-h-screen flex items-center justify-center bg-[#1B3322] overflow-hidden first-letter:">
       {/* Decorative Overlays for Rich Contrast */}
       <div className="absolute inset-0 z-0">
-        <img
+        <LazyImage
           src={resortLuxuryHeroImg}
           alt="Whispering Pines Resort luxury 4-star mountain hotel exterior overlooking Himalayan snow peaks in Mukteshwar"
           className="w-full h-full object-cover opacity-45 scale-105"
           referrerPolicy="no-referrer"
+          placeholderColor="#1B3322"
+          priority
         />
         {/* Organic Vignettes */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#1B3322] via-[#1B3322]/50 to-transparent" />
