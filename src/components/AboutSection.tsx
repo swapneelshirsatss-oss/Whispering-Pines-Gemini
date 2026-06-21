@@ -40,8 +40,8 @@ export default function AboutSection() {
             
             <p className="text-base text-[#2C3531]/90 font-sans leading-relaxed">
               Tucked away on the scenic Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh, 
-              <strong> Whispering Pines Resort Mukteshwar</strong> (locally revered as <i>Casa De Bello - Whistling Pines</i>) 
-              is a rare, boutique homestay experience. Perched at an altitude of 1,780 meters, this 
+              <strong> Whispering Pines Resort Mukteshwar</strong> (formerly known as <strong>Clark Exotica</strong> and locally revered as <i>Casa De Bello - Whistling Pines</i>) 
+              is a rare, boutique homestay experience. Continuing the legacy of the Clark Exotica brand, we ensure our loyal customers and new guests receive the same exceptional hospitality. Perched at an altitude of 1,780 meters, this 
               sanctuary offers absolute solace, away from the humdrum of city traffic and crowded commercial hill stations.
             </p>
             <p className="text-base text-[#2C3531]/90 font-sans leading-relaxed">
@@ -78,7 +78,7 @@ export default function AboutSection() {
               <LazyImage
                 src={resortDiningHallImg}
                 alt="Beautiful and elegant wood-crafted dining hall and restaurant inside Whispering Pines Resort"
-                className="w-full h-[380px] sm:h-[480px] hover:scale-105 transition-transform duration-500"
+                className="w-full aspect-video sm:aspect-auto sm:h-[480px] lg:h-[520px] object-cover hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"
               />
               {/* Highlight Overlay */}

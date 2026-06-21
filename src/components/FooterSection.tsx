@@ -1,11 +1,9 @@
-import React, { useState } from "react";
-import { Mail, Phone, MapPin, ExternalLink, Globe, HelpCircle, ChevronDown, ChevronUp, Facebook, Instagram, Twitter } from "lucide-react";
+import React from "react";
+import { Mail, Phone, MapPin, ExternalLink, Facebook, Instagram, Twitter } from "lucide-react";
 import { RESORT_CONTACT } from "../data";
 import Logo from "./Logo";
 
 export default function FooterSection() {
-  const [showDeployGuide, setShowDeployGuide] = useState(false);
-
   const currentYear = new Date().getFullYear();
 
   return (
@@ -115,67 +113,6 @@ export default function FooterSection() {
               referrerPolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
-        </div>
-
-        {/* Deployment Toggle Block for Developers / Users */}
-        <div className="mt-8 border-b border-[#FAF9F6]/10 pb-8 text-center sm:text-left">
-          <button
-            type="button"
-            onClick={() => setShowDeployGuide(!showDeployGuide)}
-            className="inline-flex items-center space-x-2 text-xs font-mono text-[#c9a832] hover:text-[#FAF9F6] transition-colors uppercase tracking-widest focus:outline-none"
-          >
-            <Globe className="w-4 h-4" />
-            <span>Show Tech Deployment & Domain Mapping Guide</span>
-            {showDeployGuide ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-          </button>
-
-          {showDeployGuide && (
-            <div className="mt-6 bg-[#FAF9F6]/5 border border-[#FAF9F6]/10 rounded-sm p-5 sm:p-6 text-left space-y-6 text-xs sm:text-sm font-sans leading-relaxed">
-              <h4 className="font-display font-medium text-base text-[#FAF9F6] border-b border-[#FAF9F6]/15 pb-2">
-                Static Hosting & Domain Mapping (GitHub Pages + Hostinger)
-              </h4>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                
-                {/* Step 1: GitHub Pages */}
-                <div className="space-y-2">
-                  <h5 className="font-bold text-[#c9a832] uppercase tracking-wider">Step 1: Deploying to GitHub Pages</h5>
-                  <ol className="list-decimal pl-4 space-y-1 text-white/80">
-                    <li>Initialize repository: <code className="bg-black/30 px-1 py-0.5 rounded font-mono">git init</code> inside root.</li>
-                    <li>Commit codebase changes: <code className="bg-black/30 px-1 py-0.5 rounded font-mono">git commit -am "First release"</code></li>
-                    <li>Add your remote link: <code className="bg-black/30 px-1 py-0.5 rounded font-mono">git remote add origin https://github.com/[your-user]/[repo-name]</code></li>
-                    <li>Generate the static build locally using <code className="bg-black/30 px-1 py-0.5 rounded font-mono">npm run build</code>. This generates a folder called <code className="bg-black/30 px-1 py-0.5 rounded font-mono">/dist</code>.</li>
-                    <li>Configure custom domain inside distributor: Create a raw file in <code className="bg-black/30 px-1 py-0.5 rounded font-mono">public/CNAME</code> and write <code className="font-mono text-[#c9a832]">whisperingpinesresort.in</code> on line 1. (This tells GitHub to bypass standard *.github.io maps).</li>
-                    <li>Deploy built folder to <code className="bg-black/30 px-1 py-0.5 rounded font-mono">gh-pages</code> branch easily using the <code className="bg-black/30 px-1 py-0.5 rounded font-mono">gh-pages</code> NPM installer, or push the repo and toggle Settings → Pages → Deploy from branch.</li>
-                  </ol>
-                </div>
-
-                {/* Step 2: Hostinger DNS */}
-                <div className="space-y-4">
-                  <div>
-                    <h5 className="font-bold text-[#c9a832] uppercase tracking-wider">Step 2: DNS Records inside Hostinger Panel</h5>
-                    <p className="text-white/85 mb-2">Logs into Hostinger hPanel → Select Domain <b>whisperingpinesresort.in</b> → Manage DNS Zones, and configure these exact values:</p>
-                    
-                    <div className="bg-black/20 p-3 rounded font-mono text-[11px] text-white/95 space-y-1">
-                      <div><strong className="text-[#c9a832]">A Record:</strong> @ Points to <strong className="text-white">185.199.108.153</strong></div>
-                      <div><strong className="text-[#c9a832]">A Record:</strong> @ Points to <strong className="text-white">185.199.109.153</strong></div>
-                      <div><strong className="text-[#c9a832]">A Record:</strong> @ Points to <strong className="text-white">185.199.110.153</strong></div>
-                      <div><strong className="text-[#c9a832]">A Record:</strong> @ Points to <strong className="text-white">185.199.111.153</strong></div>
-                      <div><strong className="text-[#c9a832]">CNAME Record:</strong> www Points to <strong className="text-white">[your-user].github.io.</strong></div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <h5 className="font-bold text-[#c9a832] uppercase tracking-wider">Step 3: Enable SSL Encrypted Security</h5>
-                    <p className="text-white/80">
-                      Go to GitHub repository → Settings → Pages. Put <code className="bg-black/30 px-1 py-0.5 rounded font-mono">whisperingpinesresort.in</code> in custom domain input, and check **"Enforce HTTPS"** as soon as Hostinger's DNS records propagate (typically takes 5 to 15 minutes).
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          )}
         </div>
 
         {/* Footer bottom legal copyrights panel */}

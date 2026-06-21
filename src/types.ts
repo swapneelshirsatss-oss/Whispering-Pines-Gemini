@@ -8,7 +8,6 @@ export interface RoomOption {
   subtitle: string;
   capacity: string;
   bedType: string;
-  size: string;
   pricePerNight: number;
   featured: boolean;
   image: string;

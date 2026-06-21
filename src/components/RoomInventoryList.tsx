@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Users, Bed, Square, Check, ArrowRight, Apple, Snowflake, Info } from "lucide-react";
+import { Users, Bed, Check, ArrowRight, Apple, Snowflake, Info } from "lucide-react";
 import { ROOMS_INVENTORY, generateWhatsAppLink } from "../data";
 import LazyImage from "./LazyImage";
 
@@ -16,8 +16,8 @@ export default function RoomInventoryList() {
   const filteredRooms = ROOMS_INVENTORY.filter((room) => {
     if (filter === "all") return true;
     if (filter === "villa") return room.id === "entire-cottage";
-    if (filter === "suite") return room.id === "attic-suite";
-    if (filter === "deluxe") return room.id === "orchard-room" || room.id === "cedar-room";
+    if (filter === "suite") return room.id === "delux-room";
+    if (filter === "deluxe") return room.id === "delux-room" || room.id === "orchard-room" || room.id === "cedar-room";
     return true;
   });
 
@@ -115,18 +115,14 @@ export default function RoomInventoryList() {
                   </p>
 
                   {/* Badges Bar */}
-                  <div className="grid grid-cols-3 gap-2 py-3.5 border-y border-[#2C3531]/10 mb-6 text-xs text-[#2C3531]/75 font-mono">
+                  <div className="grid grid-cols-2 gap-2 py-3.5 border-y border-[#2C3531]/10 mb-6 text-xs text-[#2C3531]/75 font-mono">
                     <span className="flex items-center">
                       <Users className="w-4 h-4 mr-2 text-[#c9a832]" />
                       <strong>Occupancy:</strong> &nbsp; {room.capacity}
                     </span>
-                    <span className="flex items-center border-x border-[#2C3531]/10 px-2">
+                    <span className="flex items-center border-l border-[#2C3531]/10 pl-2">
                       <Bed className="w-4 h-4 mr-2 text-[#c9a832]" />
                       <strong>Beds:</strong> &nbsp; {room.bedType}
-                    </span>
-                    <span className="flex items-center pl-2">
-                      <Square className="w-4 h-4 mr-2 text-[#c9a832]" />
-                      <strong>Area:</strong> &nbsp; {room.size}
                     </span>
                   </div>
 
