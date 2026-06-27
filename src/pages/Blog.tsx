@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Breadcrumbs from "../components/Breadcrumbs";
 import FooterSection from "../components/FooterSection";
 import WhatsAppButton from "../components/WhatsAppButton";
 
 const BLOG_POSTS = [
+
   {
     id: 1,
     title: "The Ultimate Guide to Mukteshwar",
@@ -59,6 +60,23 @@ export default function Blog() {
       }
     }))
   };
+
+  useEffect(() => {
+    document.title = "Blog & Journal | Whispering Pines Resort Mukteshwar";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Discover updates, travel tips, and stories from the heart of the Himalayas at Whispering Pines Resort.");
+    }
+    
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', 'https://whisperingpinesresort.in/blog');
+  }, []);
 
   return (
     <div className="relative min-h-screen bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">

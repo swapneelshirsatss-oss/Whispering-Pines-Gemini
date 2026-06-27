@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Breadcrumbs from "../components/Breadcrumbs";
 import Hero from "../components/Hero";
@@ -13,6 +13,23 @@ import FooterSection from "../components/FooterSection";
 import WhatsAppButton from "../components/WhatsAppButton";
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "Whispering Pines Resort | Luxury Homestay in Mukteshwar";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Experience luxury at Whispering Pines Resort in Mukteshwar. Enjoy panoramic Himalayan views, premium villas, and nature retreats.");
+    }
+    
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', 'https://whisperingpinesresort.in/');
+  }, []);
+
   return (
     <div className="relative min-h-screen bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
       {/* 1. Header Navigation Bar */}
