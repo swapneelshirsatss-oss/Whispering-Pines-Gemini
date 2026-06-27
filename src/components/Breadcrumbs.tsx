@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, Home } from 'lucide-react';
+import { useLocation, Link } from 'react-router-dom';
 
 export default function Breadcrumbs() {
   const [activeSection, setActiveSection] = useState('Home');
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+
+      if (location.pathname !== '/') return;
 
       const sections = ['about', 'rooms', 'amenities', 'experiences', 'booking', 'faq'];
       const scrollPosition = window.scrollY + 200; // Offset for header
@@ -32,9 +36,13 @@ export default function Breadcrumbs() {
       setActiveSection(window.scrollY < 100 ? 'Home' : current);
     };
 
+    if (location.pathname === '/blog') {
+      setActiveSection('Blog');
+    }
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [location]);
 
   return (
     <>
@@ -48,16 +56,17 @@ export default function Breadcrumbs() {
         <div className="max-w-7xl mx-auto flex items-center text-xs sm:text-sm font-medium">
           <ol className="flex items-center space-x-1 sm:space-x-2 w-full truncate">
             <li className="flex items-center">
-              <a 
-                href="#" 
+              <Link 
+                to="/" 
                 className="text-[#2C3531]/60 hover:text-[#c9a832] transition-colors flex items-center"
               >
                 <Home className="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-1" />
                 <span className="sr-only">Home</span>
-              </a>
+              </Link>
             </li>
             <li className="flex items-center text-[#2C3531]/40">
               <ChevronRight className="w-3.5 h-3.5" />
+
             </li>
             <li className="flex items-center">
               <span className="text-[#2C3531]/60">Uttarakhand</span>

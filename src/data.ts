@@ -9,6 +9,7 @@ export const RESORT_CONTACT = {
   name: "Whispering Pines Resort Mukteshwar",
   legalName: "Casa De Bello - Whistling Pines",
   phone: "+91 7505029696",
+  altPhone: "+91 7088107777",
   email: "booking@whisperingpinesresort.in",
   domain: "https://whisperingpinesresort.in/",
   location: "Malla Ramgarh, House no. 23 - 13/4, Bhowali-Ramgarh-Mukteshwar Rd, Uttarakhand 263137",

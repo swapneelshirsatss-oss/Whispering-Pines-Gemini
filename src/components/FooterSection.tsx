@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, ExternalLink, Facebook, Instagram, Twitter } from "lucide-react";
 import { RESORT_CONTACT } from "../data";
 import Logo from "./Logo";
@@ -68,6 +69,15 @@ export default function FooterSection() {
                 <Phone className="w-4 h-4 text-[#c9a832] mr-2 shrink-0" />
                 <span>{RESORT_CONTACT.phone}</span>
               </a>
+              {RESORT_CONTACT.altPhone && (
+                <a
+                  href={`tel:${RESORT_CONTACT.altPhone}`}
+                  className="flex items-center hover:text-[#c9a832] transition-colors"
+                >
+                  <Phone className="w-4 h-4 text-[#c9a832] mr-2 shrink-0" />
+                  <span>{RESORT_CONTACT.altPhone}</span>
+                </a>
+              )}
               <a
                 href={`mailto:${RESORT_CONTACT.email}`}
                 className="flex items-center hover:text-[#c9a832] transition-colors"
@@ -84,14 +94,15 @@ export default function FooterSection() {
               Explore Pages
             </h4>
             <div className="grid grid-cols-2 gap-2 text-xs sm:text-sm font-sans text-[#FAF9F6]/80">
-              <a href="#" className="hover:text-[#c9a832] transition-colors">Home Top</a>
-              <a href="#about" className="hover:text-[#c9a832] transition-colors">About Homestay</a>
-              <a href="#rooms" className="hover:text-[#c9a832] transition-colors">Room Prices</a>
-              <a href="#amenities" className="hover:text-[#c9a832] transition-colors">Resort Amenities</a>
-              <a href="#experiences" className="hover:text-[#c9a832] transition-colors">Experiences</a>
-              <a href="#reviews" className="hover:text-[#c9a832] transition-colors">Guest Reviews</a>
-              <a href="#faq" className="hover:text-[#c9a832] transition-colors">Read FAQ</a>
-              <a href="#book-form" className="hover:text-[#c9a832] transition-colors">Book Now</a>
+              <Link to="/" className="hover:text-[#c9a832] transition-colors">Home Top</Link>
+              <Link to="/#about" className="hover:text-[#c9a832] transition-colors">About Homestay</Link>
+              <Link to="/#rooms" className="hover:text-[#c9a832] transition-colors">Room Prices</Link>
+              <Link to="/#amenities" className="hover:text-[#c9a832] transition-colors">Resort Amenities</Link>
+              <Link to="/#experiences" className="hover:text-[#c9a832] transition-colors">Experiences</Link>
+              <Link to="/#reviews" className="hover:text-[#c9a832] transition-colors">Guest Reviews</Link>
+              <Link to="/blog" className="hover:text-[#c9a832] transition-colors">Blog & Updates</Link>
+              <Link to="/#faq" className="hover:text-[#c9a832] transition-colors">Read FAQ</Link>
+              <Link to="/#book-form" className="hover:text-[#c9a832] transition-colors">Book Now</Link>
             </div>
           </div>
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Phone, Menu, X, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { RESORT_CONTACT, generateWhatsAppLink } from "../data";
 import Logo from "./Logo";
 
@@ -20,11 +21,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "The Resort", href: "#about" },
-    { name: "Cottages & Suites", href: "#rooms" },
-    { name: "Amenities", href: "#amenities" },
-    { name: "Experiences", href: "#experiences" },
-    { name: "FAQ", href: "#faq" },
+    { name: "The Resort", href: "/#about" },
+    { name: "Cottages & Suites", href: "/#rooms" },
+    { name: "Amenities", href: "/#amenities" },
+    { name: "Experiences", href: "/#experiences" },
+    { name: "Blog", href: "/blog" },
+    { name: "FAQ", href: "/#faq" },
   ];
 
   return (
@@ -38,20 +40,20 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Brand Identity with Dynamic Golden Emblem */}
-          <a href="#" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <Logo />
-          </a>
+          </Link>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className="text-[#FAF9F6]/90 hover:text-[#c9a832] text-sm font-medium tracking-wide transition-colors duration-200"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -96,14 +98,14 @@ export default function Navbar() {
       >
         <div className="px-4 pt-2 pb-4 space-y-3">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
+              to={link.href}
               onClick={() => setIsOpen(false)}
               className="block px-3 py-2 text-base font-medium text-[#FAF9F6]/95 hover:text-[#c9a832] hover:bg-[#FAF9F6]/5 rounded-sm transition-colors"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
           
           <div className="border-t border-[#FAF9F6]/10 pt-4 px-3 space-y-4">
