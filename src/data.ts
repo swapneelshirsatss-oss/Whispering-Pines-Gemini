@@ -12,7 +12,7 @@ export const RESORT_CONTACT = {
   altPhone: "+91 7088107777",
   email: "booking@whisperingpinesresort.in",
   domain: "https://whisperingpinesresort.in/",
-  location: "Malla Ramgarh, House no. 23 - 13/4, Bhowali-Ramgarh-Mukteshwar Rd, Uttarakhand 263137",
+  location: "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Uttarakhand 263137",
   gmapsLink: "https://maps.google.com/?cid=8386667112972057918",
   socials: {
     facebook: "https://www.facebook.com/profile.php?id=61590982499102",

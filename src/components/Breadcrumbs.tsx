@@ -13,7 +13,7 @@ export default function Breadcrumbs() {
 
       if (location.pathname !== '/') return;
 
-      const sections = ['about', 'rooms', 'amenities', 'experiences', 'booking', 'faq'];
+      const sections = ['about', 'rooms', 'amenities', 'experiences', 'booking'];
       const scrollPosition = window.scrollY + 200; // Offset for header
 
       let current = 'Home';
@@ -31,7 +31,6 @@ export default function Breadcrumbs() {
       else if (current === 'Rooms') current = 'Suites & Cottages';
       else if (current === 'Experiences') current = 'Local Experiences';
       else if (current === 'Booking') current = 'Reservation';
-      else if (current === 'Faq') current = 'FAQ';
 
       setActiveSection(window.scrollY < 100 ? 'Home' : current);
     };

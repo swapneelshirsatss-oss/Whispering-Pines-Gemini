@@ -14,11 +14,11 @@ import WhatsAppButton from "../components/WhatsAppButton";
 
 export default function Home() {
   useEffect(() => {
-    document.title = "Whispering Pines Resort | Luxury Homestay in Mukteshwar";
+    document.title = "Whispering Pines Resort Mukteshwar | Formerly Clarks Exotica";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Experience luxury at Whispering Pines Resort in Mukteshwar. Enjoy panoramic Himalayan views, premium villas, and nature retreats.");
+      metaDescription.setAttribute("content", "Experience luxury at Whispering Pines Resort Mukteshwar (ex-Clarks Exotica). Enjoy panoramic Himalayan views, orchards & boutique stays. Book direct & save 20%!");
     }
     
     let canonical = document.querySelector('link[rel="canonical"]');
