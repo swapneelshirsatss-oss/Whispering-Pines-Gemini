@@ -3,6 +3,7 @@ import { Phone, Menu, X, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { RESORT_CONTACT, generateWhatsAppLink } from "../data";
 import Logo from "./Logo";
+import { trackAdsConversion } from "../utils/analytics";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +28,10 @@ export default function Navbar() {
     { name: "Experiences", href: "/#experiences" },
     { name: "Blog", href: "/blog" },
   ];
+
+  const handleNavBookingClick = () => {
+    trackAdsConversion("generate_lead", "booking", "nav_whatsapp_booking");
+  };
 
   return (
     <nav
@@ -69,6 +74,7 @@ export default function Navbar() {
               href={generateWhatsAppLink("Entire Cottage")}
               target="_blank"
               rel="noreferrer"
+              onClick={handleNavBookingClick}
               className="bg-[#c9a832] hover:bg-[#A6875D] text-[#1B3322] hover:text-[#FAF9F6] text-xs font-semibold uppercase tracking-wider px-4 py-2.5 rounded-sm flex items-center transition-all duration-200"
             >
               Book Stay
@@ -120,7 +126,10 @@ export default function Navbar() {
               href={generateWhatsAppLink("Entire Cottage")}
               target="_blank"
               rel="noreferrer"
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                setIsOpen(false);
+                handleNavBookingClick();
+              }}
               className="w-full text-center bg-[#c9a832] text-[#1B3322] font-semibold uppercase tracking-wider py-3 rounded-sm flex items-center justify-center transition-colors"
             >
               Instant Booking (WhatsApp)

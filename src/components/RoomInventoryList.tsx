@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Users, Bed, Check, ArrowRight, Apple, Snowflake, Info } from "lucide-react";
 import { ROOMS_INVENTORY, generateWhatsAppLink } from "../data";
 import LazyImage from "./LazyImage";
+import { trackAdsConversion } from "../utils/analytics";
 
 export default function RoomInventoryList() {
   const [filter, setFilter] = useState("all");
@@ -20,6 +21,10 @@ export default function RoomInventoryList() {
     if (filter === "deluxe") return room.id === "delux-room" || room.id === "orchard-room" || room.id === "cedar-room";
     return true;
   });
+
+  const handleRoomBookingClick = () => {
+    trackAdsConversion("generate_lead", "booking", "room_list_whatsapp_booking");
+  };
 
   return (
     <section id="rooms" className="py-20 lg:py-28 bg-[#1B3322]/5">
@@ -153,6 +158,7 @@ export default function RoomInventoryList() {
                     href={generateWhatsAppLink(room.name)}
                     target="_blank"
                     rel="noreferrer"
+                    onClick={handleRoomBookingClick}
                     className="w-full sm:w-auto bg-[#1B3322] hover:bg-[#2A4832] text-[#FAF9F6] font-mono text-center text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-sm shadow-md flex items-center justify-center space-x-2 transition-all duration-200"
                   >
                     <span>Instant Booking</span>

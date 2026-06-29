@@ -3,8 +3,13 @@ import { ArrowUpRight, Check } from "lucide-react";
 import { generateWhatsAppLink } from "../data";
 import resortLuxuryHeroImg from "../assets/images/resort_mukteshwar_luxury_hero_1782031089955.jpg";
 import LazyImage from "./LazyImage";
+import { trackAdsConversion } from "../utils/analytics";
 
 export default function Hero() {
+  const handleHeroBookingClick = () => {
+    trackAdsConversion("generate_lead", "booking", "hero_whatsapp_booking");
+  };
+
   return (
     <header className="relative min-h-screen flex items-center justify-center bg-[#1B3322] overflow-hidden first-letter:">
       {/* Decorative Overlays for Rich Contrast */}
@@ -72,6 +77,7 @@ export default function Hero() {
             href={generateWhatsAppLink("Entire Cottage")}
             target="_blank"
             rel="noreferrer"
+            onClick={handleHeroBookingClick}
             className="w-full sm:w-auto bg-[#c9a832] hover:bg-[#A6875D] text-[#1B3322] hover:text-[#FAF9F6] px-8 py-4 font-semibold text-sm uppercase tracking-wider rounded-sm shadow-md hover:shadow-xl flex items-center justify-center transition-all duration-300 transform hover:-translate-y-0.5"
           >
             Instantly Book via WhatsApp

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Calendar, Users, Home, ArrowUpRight } from "lucide-react";
 import { ROOMS_INVENTORY, generateWhatsAppLink } from "../data";
+import { trackAdsConversion } from "../utils/analytics";
 
 export default function BookingInteractiveForm() {
   const [selectedRoomId, setSelectedRoomId] = useState(ROOMS_INVENTORY[0].id);
@@ -54,6 +55,10 @@ export default function BookingInteractiveForm() {
     checkOut,
     guestsCount
   );
+
+  const handleBookingClick = () => {
+    trackAdsConversion("generate_lead", "booking", "whatsapp_form_booking");
+  };
 
   return (
     <section id="book-form" className="py-20 lg:py-28 bg-[#1B3322]/10 relative">
@@ -211,6 +216,7 @@ export default function BookingInteractiveForm() {
                 href={whatsAppLink}
                 target="_blank"
                 rel="noreferrer"
+                onClick={handleBookingClick}
                 className="w-full bg-[#c9a832] hover:bg-[#A6875D] text-[#1B3322] hover:text-[#FAF9F6] font-mono text-center text-xs font-bold uppercase tracking-widest py-4 px-6 rounded-sm shadow-xl flex items-center justify-center transition-all duration-300 transform hover:-translate-y-0.5"
               >
                 <span>Instantly Check Dates on WhatsApp</span>
