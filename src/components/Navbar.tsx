@@ -54,6 +54,17 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 to={link.href}
+                onClick={(e) => {
+                  if (link.href.startsWith('/#') && window.location.pathname === '/') {
+                    e.preventDefault();
+                    const id = link.href.replace('/#', '');
+                    const element = document.getElementById(id);
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                      window.history.pushState(null, '', link.href);
+                    }
+                  }
+                }}
                 className="text-[#FAF9F6]/90 hover:text-[#c9a832] text-sm font-medium tracking-wide transition-colors duration-200"
               >
                 {link.name}
@@ -106,7 +117,18 @@ export default function Navbar() {
             <Link
               key={link.name}
               to={link.href}
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => {
+                if (link.href.startsWith('/#') && window.location.pathname === '/') {
+                  e.preventDefault();
+                  const id = link.href.replace('/#', '');
+                  const element = document.getElementById(id);
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                    window.history.pushState(null, '', link.href);
+                  }
+                }
+                setIsOpen(false);
+              }}
               className="block px-3 py-2 text-base font-medium text-[#FAF9F6]/95 hover:text-[#c9a832] hover:bg-[#FAF9F6]/5 rounded-sm transition-colors"
             >
               {link.name}
