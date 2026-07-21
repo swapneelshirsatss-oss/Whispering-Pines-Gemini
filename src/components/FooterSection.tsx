@@ -79,7 +79,7 @@ export default function FooterSection() {
             </h4>
             <div className="grid grid-cols-2 gap-2 text-xs sm:text-sm font-sans text-[#FAF9F6]/80">
               <a href="/" className="hover:text-[#c9a832] transition-colors">Home Top</a>
-              <a href="/#about" className="hover:text-[#c9a832] transition-colors">About Homestay</a>
+              <a href="/#about" className="hover:text-[#c9a832] transition-colors">About us</a>
               <a href="/#rooms" className="hover:text-[#c9a832] transition-colors">Room Prices</a>
               <a href="/#amenities" className="hover:text-[#c9a832] transition-colors">Resort Amenities</a>
               <a href="/#experiences" className="hover:text-[#c9a832] transition-colors">Experiences</a>

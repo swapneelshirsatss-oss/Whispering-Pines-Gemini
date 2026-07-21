@@ -69,8 +69,7 @@ export default function BookingInteractiveForm() {
           </h2>
           <div className="w-16 h-[2px] bg-[#c9a832] mx-auto mt-4 mb-6" />
           <p className="text-sm text-[#2C3531]/80 font-sans leading-relaxed">
-            Configure your dream holiday below. Our reception team will verify availability for your preferred category, 
-            drafting a unified inquiry ticket to instantly dispatch on WhatsApp.
+            Configure your dream mountain getaway below to secure Ramgarh's best rates. Our reception team will verify availability for your preferred suites and cottages, drafting a personalized inquiry to instantly dispatch on WhatsApp for our best price guaranteed.
           </p>
         </div>
 

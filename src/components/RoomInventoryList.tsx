@@ -46,8 +46,7 @@ export default function RoomInventoryList({ initialFilter = "all", hideLink = fa
           </h2>
           <div className="w-16 h-[2px] bg-[#c9a832] mx-auto mb-6" />
           <p className="text-sm sm:text-base text-[#2C3531]/80 font-sans leading-relaxed">
-            Meticulously paneled with local pine and cedar timbers, each suite is an expansive private refuge 
-            engineered for serenity. Choose from individual loft suites or secure the premium villas offered by Whispering Pines by Casa De Bello.
+            Meticulously paneled with local pine and cedar timbers, each suite is an expansive private refuge engineered for serenity. Whether you need a private villa for a multi-generational holiday or a deluxe skylight suite for a couples' retreat near Nainital, Whispering Pines by Casa De Bello offers Ramgarh's most loved family accommodations.
           </p>
         </div>
 
