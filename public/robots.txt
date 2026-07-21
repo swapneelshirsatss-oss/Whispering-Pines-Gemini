@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://whisperingpinesresort.in/sitemap-website.xml
+Sitemap: https://whisperingpinesresort.in/sitemap-blog.xml

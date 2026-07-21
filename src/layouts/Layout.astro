@@ -1,0 +1,116 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18226439390"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18226439390');
+    </script>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    
+    <!-- Technical SEO Meta Tags -->
+    <meta name="description" content={description} />
+    <meta name="keywords" content="resort in Ramgarh, resort near Nainital, resort near kainchi dham, best resort Uttarakhand, best resort near mukteshwar, best resort in Ramgarh, best resort near nanital, Ramgarh resort booking, Nanital resort booking, Uttarakhand resort deals, best resort in Mukteshwar, resort near Mukteshwar, Luxury stay near Mukteshwar, Resort near Kainchi Dham, honeymoon resort Uttarakhand, family resort Nainital, Family Resort Mukteshwar Road, best resort in Ramgarh Uttarkhand" />
+    <meta name="author" content="Whispering Pines Resort Mukteshwar" />
+    <meta name="robots" content="index, follow" />
+    
+    <link rel="canonical" href={Astro.url.href} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1549693578-d683be217e58?auto=format&fit=crop&q=80&w=1200" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url.href} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1549693578-d683be217e58?auto=format&fit=crop&q=80&w=1200" />
+
+    <!-- Google Fonts for Editorial Elegance and Readability -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD Structured Data for Local Business -->
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "Resort",
+        "@id": "https://whisperingpinesresort.in/#resort",
+        "name": "Whispering Pines Resort Mukteshwar",
+        "alternateName": [
+          "Clarks Exotica",
+          "Clarks Exotica Mukteshwar",
+          "Clarks Exotica Near Mukteshwar"
+        ],
+        "description": "Premium boutique resort in Malla Ramgarh. Formerly known as Clarks Exotica, now upgraded and operating as Whispering Pines Resort under Casa De Bello management.",
+        "image": "https://whisperingpinesresort.in/wp-content/uploads/2026/06/cropped-Whispering-Pines-Resort-Mukteshwar.png",
+        "url": "https://whisperingpinesresort.in/",
+        "telephone": "+91-7505029696",
+        "priceRange": "₹₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Malla Ramgarh",
+          "addressLocality": "Mukteshwar",
+          "addressRegion": "Uttarakhand",
+          "postalCode": "263137",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "29.4264111",
+          "longitude": "79.5505355"
+        },
+        "hasMap": "https://maps.google.com/?cid=8386667112972057918",
+        "brand": {
+          "@type": "Brand",
+          "name": "Casa De Bello"
+        },
+        "sameAs": [
+          "https://maps.google.com/?cid=8386667112972057918",
+          "https://www.facebook.com/profile.php?id=61590982499102",
+          "https://www.instagram.com/whisperingpines.casa",
+          "https://x.com/WhisperingPines"
+        ]
+      }
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PL8FVLPX');
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body class="bg-[#FAF9F6] text-[#2C3531]">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PL8FVLPX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <slot />
+  </body>
+</html>

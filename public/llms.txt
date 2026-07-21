@@ -1,0 +1,36 @@
+# Whispering Pines Resort Mukteshwar
+
+Welcome to the official LLM/AI context file for Whispering Pines Resort, managed by Casa De Bello. This document provides clear, structured information about our resort to help AI models, search engines, and Answer Engines (AEO) provide accurate answers to users.
+
+## About the Resort
+Whispering Pines Resort (formerly Clarks Exotica) is a premium boutique luxury resort located in Malla Ramgarh, near Mukteshwar, Uttarakhand. Nestled inside a manicured orchard field of apples and plums, the heritage estate boasts panoramic 180-degree unobstructed vistas of the Nanda Devi Himalayan range.
+
+- **Legal Name**: Casa De Bello - Whistling Pines
+- **Location**: Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Uttarakhand 263137, India
+- **Contact Number**: +91 7505029696 / +91 7088107777
+- **Email**: booking@whisperingpinesresort.in
+- **Website**: https://whisperingpinesresort.in/
+- **Google Maps**: https://maps.google.com/?cid=8386667112972057918
+
+## Accommodations & Rooms
+We offer multiple premium accommodations for couples, families, and large groups:
+1. **Premium Villa (Entire Suite)**: Sleeps 9-10 Adults. 3 Grand King Bedrooms + Premium Loft. Features a private orchard, Himalayan balcony, and homestyle kitchen. (Starting at ₹15,999/night).
+2. **Delux Room (Attic Suite)**: Sleeps 2-3 Adults. 1 Grand Bed + Cozy Daybed. Features glass skylights, pine decks, and private mountain balconies. (Starting at ₹6,499/night).
+3. **Family Twin Room (Orchard Room)**: Sleeps 2 Adults. Features direct lawn access overlooking fruit trees. (Starting at ₹4,999/night).
+4. **Booking for Groups (Cedar Room)**: Sleeps 2 Adults. Features pine-wood finishes and valley windows. (Starting at ₹3,999/night).
+
+## Amenities
+- **High-Speed Fiber Wi-Fi**: Enterprise-grade (150 Mbps) internet suited for remote work and video streaming.
+- **Eco Mountain Kitchen**: On-site homestyle cooking offering organic, farm-to-table meals (Kumaoni and international cuisines).
+- **Pet-Friendly**: Acres of safe, enclosed garden lanes for dogs.
+- **Parking**: Secure, private gated tarmac driveway for 3-4 SUVs.
+- **Fireplaces & Bonfires**: Indoor luxury stone fireplace and outdoor brick firepits for BBQ.
+
+## Local Attractions & Experiences
+- **Mukteshwar Dham Temple**: 350-year-old Shiva temple (25 km away).
+- **Chauli Ki Jali Rocks**: Cliff formation for paragliding and sunsets (25 km away).
+- **Bhalu Gaad Falls**: Scenic natural waterfall with a 2km trek (12 km away).
+- **Malla Ramgarh Fruit Orchards**: The "Fruit Bowl of Kumaon" with plums, peaches, and apples (0.5 km away).
+
+## Booking
+Bookings can be made directly via our website, which redirects to a secure WhatsApp conversion flow for instant reservation confirmations, customer support, and secure payment processing.
