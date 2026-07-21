@@ -4,9 +4,10 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description: string;
+  noindex?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, noindex = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -29,7 +30,11 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <meta name="keywords" content="resort in Ramgarh, resort near Nainital, resort near kainchi dham, best resort Uttarakhand, best resort near mukteshwar, best resort in Ramgarh, best resort near nanital, Ramgarh resort booking, Nanital resort booking, Uttarakhand resort deals, best resort in Mukteshwar, resort near Mukteshwar, Luxury stay near Mukteshwar, Resort near Kainchi Dham, honeymoon resort Uttarakhand, family resort Nainital, Family Resort Mukteshwar Road, best resort in Ramgarh Uttarkhand" />
     <meta name="author" content="Whispering Pines Resort Mukteshwar" />
-    <meta name="robots" content="index, follow" />
+    {noindex ? (
+      <meta name="robots" content="noindex, nofollow" />
+    ) : (
+      <meta name="robots" content="index, follow" />
+    )}
     
     <link rel="canonical" href={Astro.url.href} />
 

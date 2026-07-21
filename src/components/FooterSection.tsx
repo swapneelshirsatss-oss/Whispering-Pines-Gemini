@@ -53,15 +53,7 @@ export default function FooterSection() {
                 <Phone className="w-4 h-4 text-[#c9a832] mr-2 shrink-0" />
                 <span>{RESORT_CONTACT.phone}</span>
               </a>
-              {RESORT_CONTACT.altPhone && (
-                <a
-                  href={`tel:${RESORT_CONTACT.altPhone}`}
-                  className="flex items-center hover:text-[#c9a832] transition-colors"
-                >
-                  <Phone className="w-4 h-4 text-[#c9a832] mr-2 shrink-0" />
-                  <span>{RESORT_CONTACT.altPhone}</span>
-                </a>
-              )}
+
               <a
                 href={`mailto:${RESORT_CONTACT.email}`}
                 className="flex items-center hover:text-[#c9a832] transition-colors"
@@ -78,15 +70,13 @@ export default function FooterSection() {
               Explore Pages
             </h4>
             <div className="grid grid-cols-2 gap-2 text-xs sm:text-sm font-sans text-[#FAF9F6]/80">
-              <a href="/" className="hover:text-[#c9a832] transition-colors">Home Top</a>
-              <a href="/#about" className="hover:text-[#c9a832] transition-colors">About us</a>
-              <a href="/#rooms" className="hover:text-[#c9a832] transition-colors">Room Prices</a>
-              <a href="/#amenities" className="hover:text-[#c9a832] transition-colors">Resort Amenities</a>
-              <a href="/#experiences" className="hover:text-[#c9a832] transition-colors">Experiences</a>
-              <a href="/#reviews" className="hover:text-[#c9a832] transition-colors">Guest Reviews</a>
-              <a href="/blog" className="hover:text-[#c9a832] transition-colors">Blog & Updates</a>
-              <a href="/#faq" className="hover:text-[#c9a832] transition-colors">Read FAQ</a>
-              <a href="/#book-form" className="hover:text-[#c9a832] transition-colors">Book Now</a>
+              <a href="/" className="hover:text-[#c9a832] transition-colors">Home</a>
+              <a href="/about" className="hover:text-[#c9a832] transition-colors">About Us</a>
+              <a href="/stay" className="hover:text-[#c9a832] transition-colors">Rooms & Suites</a>
+              <a href="/villas" className="hover:text-[#c9a832] transition-colors">Premium Villas</a>
+              <a href="/gallery" className="hover:text-[#c9a832] transition-colors">Gallery</a>
+              <a href="/reviews" className="hover:text-[#c9a832] transition-colors">Guest Reviews</a>
+              <a href="/blog" className="hover:text-[#c9a832] transition-colors">Journal</a>
             </div>
           </div>
 
@@ -111,14 +101,21 @@ export default function FooterSection() {
         </div>
 
         {/* Footer bottom legal copyrights panel */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-[#FAF9F6]/60 text-center sm:text-left">
-          <div>
+        <div className="mt-8 flex flex-col lg:flex-row items-center justify-between gap-6 text-xs font-sans text-[#FAF9F6]/60 text-center lg:text-left">
+          <div className="space-y-2">
             <p>© {currentYear} Whispering Pines Resort Mukteshwar. All Rights Reserved.</p>
-            <p className="text-[10px] mt-1 text-white/40">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-[11px]">
+              <a href="/privacy-policy" className="hover:text-[#c9a832] transition-colors">Privacy Policy</a>
+              <span>|</span>
+              <a href="/terms" className="hover:text-[#c9a832] transition-colors">Terms & Conditions</a>
+              <span>|</span>
+              <a href="/sitemap" className="hover:text-[#c9a832] transition-colors">Sitemap</a>
+            </div>
+            <p className="text-[10px] mt-2 text-white/40 max-w-2xl">
               Constructed as Casa De Bello - Whistling Pines. Malla Ramgarh Rural Estate. Operated by <a href="https://casadebello.com/" target="_blank" rel="noreferrer" className="underline hover:text-[#c9a832] transition-colors">Casa De Bello - Luxury Resort Hotel in Bhowali, Nainital</a>.
             </p>
           </div>
-          <div>
+          <div className="text-center lg:text-right">
             <p className="font-mono text-[#c9a832]">
               Domain Direct: <a href={RESORT_CONTACT.domain} className="hover:underline">{RESORT_CONTACT.domain.replace("https://", "")}</a>
             </p>

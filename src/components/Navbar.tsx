@@ -24,8 +24,9 @@ export default function Navbar() {
     { name: "The Resort", href: "/#about" },
     { name: "Cottages & Suites", href: "/#rooms" },
     { name: "Amenities", href: "/#amenities" },
-    { name: "Services", href: "/#services" },
     { name: "Experiences", href: "/#experiences" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Reviews", href: "/reviews" },
   ];
 
   const handleNavBookingClick = () => {

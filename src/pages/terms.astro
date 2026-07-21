@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LegalDocument from '../react-pages/LegalDocument';
+
+const termsContent = `
+<h2>1. Acceptance of Terms</h2>
+<p>By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. In addition, when using this website's particular services, you shall be subject to any posted guidelines or rules applicable to such services.</p>
+
+<h2>2. Booking & Cancellation Policy</h2>
+<p>All bookings are subject to availability and written confirmation. To secure a reservation, a deposit may be required. Cancellation policies vary based on the season and the room rate selected. Please refer to your specific booking confirmation for exact cancellation deadlines and fees.</p>
+
+<h2>3. Check-In & Check-Out</h2>
+<ul>
+  <li><strong>Check-in time:</strong> 14:00 (2:00 PM)</li>
+  <li><strong>Check-out time:</strong> 11:00 AM</li>
+</ul>
+<p>Early check-in or late check-out is strictly subject to availability and may incur additional charges.</p>
+
+<h2>4. Resort Rules</h2>
+<p>Guests are expected to conduct themselves appropriately at all times and to comply with company procedures and/or requests with regard to conduct and respect for the property of the Resort, its employees and guests and their health and safety.</p>
+
+<h2>5. Liability</h2>
+<p>Whispering Pines Resort by Casa De Bello accepts no liability and will not pay any compensation where the performance of its obligations is prevented or affected directly or indirectly by or as a result of force majeure or any circumstances beyond its reasonable control.</p>
+`;
+---
+
+<Layout
+  title="Terms & Conditions | Whispering Pines Resort"
+  description="Terms and conditions for booking a stay at Whispering Pines Resort in Ramgarh."
+  noindex={true}
+>
+  <LegalDocument 
+    client:load 
+    title="Terms & Conditions" 
+    lastUpdated="March 1, 2024" 
+    contentHtml={termsContent} 
+  />
+</Layout>
