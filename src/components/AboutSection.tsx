@@ -8,9 +8,17 @@ import { motion } from "motion/react";
 
 interface AboutSectionProps {
   hideLink?: boolean;
+  title?: string;
+  asH1?: boolean;
 }
 
-export default function AboutSection({ hideLink = false }: AboutSectionProps = {}) {
+export default function AboutSection({ 
+  hideLink = false,
+  title = "A Cozy Sanctuary Amidst Fruit Orchards & Whispering Pines",
+  asH1 = false
+}: AboutSectionProps = {}) {
+  const HeadingTag = asH1 ? "h1" : "h2";
+
   const USPList = [
     {
       title: "Alpine Heritage Design",
@@ -45,15 +53,15 @@ export default function AboutSection({ hideLink = false }: AboutSectionProps = {
             <span className="text-xs font-mono tracking-widest text-[#c9a832] uppercase block">
               Escape to the Heights
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1B3322]">
-              A Cozy Sanctuary Amidst Fruit Orchards & Whispering Pines
-            </h2>
+            <HeadingTag className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1B3322]">
+              {title}
+            </HeadingTag>
             <div className="w-16 h-[2px] bg-[#c9a832] my-4" />
             
             <p className="text-[17px] sm:text-lg text-[#2C3531]/90 font-sans leading-relaxed">
               Tucked away on the scenic Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh, 
-              <strong> Whispering Pines by Casa De Bello</strong> (formerly known as <strong>Clarks Exotica</strong> and locally revered as <a href="https://casadebello.com/" target="_blank" rel="noreferrer" className="italic hover:text-[#c9a832] underline decoration-[#c9a832]/30 underline-offset-2 transition-colors">Casa De Bello - Whispering Pines</a>) 
-              is widely recognized as the best resort in Ramgarh. Continuing the legacy of the Clarks Exotica brand, we ensure our loyal customers and new guests experience the ultimate mountain resort near Nainital and Mukteshwar. Perched at an altitude of 1,780 meters, this 
+              <strong> Whispering Pines by Casa De Bello</strong> (formerly <strong>Clarks Exotica near Mukteshwar</strong>) 
+              is widely recognized as the <strong>best resort in Ramgarh, Uttarakhand</strong>. Continuing the legacy of authentic Kumaoni hospitality, we ensure our loyal customers and new guests experience the ultimate mountain resort near Nainital. Perched at an altitude of 1,780 meters, this 
               premium sanctuary offers private fruit orchards and absolute solace, away from the humdrum of city traffic.
             </p>
             <p className="text-[17px] sm:text-lg text-[#2C3531]/90 font-sans leading-relaxed">

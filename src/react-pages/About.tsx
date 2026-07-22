@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Breadcrumbs from "../components/Breadcrumbs";
 import AboutSection from "../components/AboutSection";
+import SEOAboutContent from "../components/SEOAboutContent";
 import FooterSection from "../components/FooterSection";
 import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
@@ -12,7 +13,12 @@ export default function About() {
       <Navbar />
       <Breadcrumbs />
       <main className="pt-24">
-        <AboutSection hideLink={true} />
+        <AboutSection 
+          hideLink={true}
+          asH1={true}
+          title="best resort in Ramgarh, Uttarakhand — Whispering Pines by Casa De Bello"
+        />
+        <SEOAboutContent />
       </main>
       <FooterSection />
       <WhatsAppButton />

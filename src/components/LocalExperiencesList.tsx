@@ -5,9 +5,17 @@ import LazyImage from "./LazyImage";
 
 interface LocalExperiencesListProps {
   hideLink?: boolean;
+  title?: string;
+  asH1?: boolean;
 }
 
-export default function LocalExperiencesList({ hideLink = false }: LocalExperiencesListProps = {}) {
+export default function LocalExperiencesList({ 
+  hideLink = false, 
+  title = "Local Sights & Highland Excursions",
+  asH1 = false 
+}: LocalExperiencesListProps = {}) {
+  const HeadingTag = asH1 ? "h1" : "h2";
+
   return (
     <section id="experiences" className="py-20 lg:py-28 bg-[#FAF9F6]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,13 +25,14 @@ export default function LocalExperiencesList({ hideLink = false }: LocalExperien
           <span className="text-xs font-mono tracking-widest text-[#c9a832] uppercase block mb-2">
             Explore Uttarakhand
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-[#1B3322]">
-            Local Sights & Highland Excursions
-          </h2>
+          <HeadingTag className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-[#1B3322]">
+            {title}
+          </HeadingTag>
           <div className="w-16 h-[2px] bg-[#c9a832] mx-auto mt-4 mb-6" />
           <p className="text-sm sm:text-base text-[#2C3531]/80 font-sans leading-relaxed">
-            While our secluded premium villas invite quiet contemplation, Malla Ramgarh serves as a spectacular 
-            central node to explore historic mountain shrines, cliff viewpoints, and hidden waterfall treks.
+            If you are searching for the best <strong>things to do in Ramgarh</strong>, our location serves as a spectacular 
+            central node. From historic mountain shrines and hidden waterfall treks to some of the most scenic 
+            <strong>places to visit near Ramgarh Uttarakhand</strong>, your highland excursion begins here.
           </p>
         </div>
 

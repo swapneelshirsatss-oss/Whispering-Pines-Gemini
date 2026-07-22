@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Breadcrumbs from "../components/Breadcrumbs";
 import ServicesSection from "../components/ServicesSection";
+import SEOServicesContent from "../components/SEOServicesContent";
 import FooterSection from "../components/FooterSection";
 import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
@@ -12,7 +13,12 @@ export default function Services() {
       <Navbar />
       <Breadcrumbs />
       <main className="pt-24 bg-[#FAF9F6]">
-        <ServicesSection hideLink={true} />
+        <ServicesSection 
+          hideLink={true}
+          asH1={true}
+          title="Your Stay in Ramgarh, Elevated — Premium Services, Real Mountain Experiences"
+        />
+        <SEOServicesContent />
       </main>
       <FooterSection />
       <WhatsAppButton />

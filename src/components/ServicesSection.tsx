@@ -12,9 +12,17 @@ const iconMap: Record<string, LucideIcon> = {
 
 interface ServicesSectionProps {
   hideLink?: boolean;
+  title?: string;
+  asH1?: boolean;
 }
 
-export default function ServicesSection({ hideLink = false }: ServicesSectionProps = {}) {
+export default function ServicesSection({ 
+  hideLink = false,
+  title = "Dedicated Personal Care",
+  asH1 = false
+}: ServicesSectionProps = {}) {
+  const HeadingTag = asH1 ? "h1" : "h2";
+
   return (
     <section id="services" className="py-20 lg:py-28 bg-[#FAF9F6] text-[#2C3531]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,13 +32,12 @@ export default function ServicesSection({ hideLink = false }: ServicesSectionPro
           <span className="text-xs font-mono tracking-widest text-[#c9a832] uppercase block mb-2 animate-pulse">
             Premium Resort Services
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1B3322]">
-            Dedicated Personal Care
-          </h2>
+          <HeadingTag className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1B3322]">
+            {title}
+          </HeadingTag>
           <div className="w-16 h-[2px] bg-[#c9a832] mx-auto mt-4 mb-6" />
           <p className="text-sm sm:text-base text-[#2C3531]/80 font-sans leading-relaxed">
-            Our dedicated team is always on hand to provide personalized services that elevate your stay.
-            From in-room dining to tailored travel assistance, we ensure every moment is effortless.
+            Whether you are planning a quiet retreat or an active <strong>stay in Ramgarh</strong>, our dedicated team is always on hand to provide personalized services that elevate your experience. As a premier <strong>family resort near Nainital</strong>, we ensure every moment is effortless—from bespoke in-room dining to tailored travel assistance.
           </p>
         </div>
 
