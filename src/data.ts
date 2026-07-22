@@ -7,7 +7,7 @@ import orchardRoomImg from "./assets/images/Family_Twin Room_Near_nainital.avif?
 
 export const RESORT_CONTACT = {
   name: "Whispering Pines Resort by Casa De Bello",
-  legalName: "Casa De Bello - Whistling Pines",
+  legalName: "Casa De Bello - Whispering Pines",
   phone: "+91-7505029696",
   whatsapp: "https://wa.me/917505029696",
   email: "booking@whisperingpinesresort.in",

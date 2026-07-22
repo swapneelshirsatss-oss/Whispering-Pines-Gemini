@@ -1,9 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128">
-    <path d="M50.4 78.5a75.1 75.1 0 0 0-28.5 6.9l24.2-65.7c.7-2 1.9-3.2 3.4-3.2h29c1.5 0 2.7 1.2 3.4 3.2l24.2 65.7s-11.6-7-28.5-7L67 45.5c-.4-1.7-1.6-2.8-2.9-2.8-1.3 0-2.5 1.1-2.9 2.7L50.4 78.5Zm-1.1 28.2Zm-4.2-20.2c-2 6.6-.6 15.8 4.2 20.2a17.5 17.5 0 0 1 .2-.7 5.5 5.5 0 0 1 5.7-4.5c2.8.1 4.3 1.5 4.7 4.7.2 1.1.2 2.3.2 3.5v.4c0 2.7.7 5.2 2.2 7.4a13 13 0 0 0 5.7 4.9v-.3l-.2-.3c-1.8-5.6-.5-9.5 4.4-12.8l1.5-1a73 73 0 0 0 3.2-2.2 16 16 0 0 0 6.8-11.4c.3-2 .1-4-.6-6l-.8.6-1.6 1a37 37 0 0 1-22.4 2.7c-5-.7-9.7-2-13.2-6.2Z" />
-    <style>
-        path { fill: #000; }
-        @media (prefers-color-scheme: dark) {
-            path { fill: #FFF; }
-        }
-    </style>
+<svg
+  viewBox="0 0 100 100"
+  class="w-10 h-10 hover:scale-105 transition-transform duration-300"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFBA73" />
+      <stop offset="40%" stop-color="#FFF2D4" />
+      <stop offset="60%" stop-color="#c9a832" />
+      <stop offset="100%" stop-color="#9E7D46" />
+    </linearGradient>
+    <linearGradient id="goldGradientLight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c9a832" />
+      <stop offset="50%" stop-color="#FFF2D4" />
+      <stop offset="100%" stop-color="#A88E62" />
+    </linearGradient>
+
+    <filter id="bevel" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="0.5" result="blur" />
+      <feOffset dx="0.5" dy="0.5" result="offsetGlow" />
+      <feSpecularLighting in="blur" surfaceScale="2" specularConstant="0.8" specularExponent="20" lighting-color="#FFF2D4" result="specOut">
+        <fePointLight x="-50" y="-50" z="50" />
+      </feSpecularLighting>
+      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut" />
+      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint" />
+      <feDropShadow in="litPaint" dx="0" dy="1" stdDeviation="1" flood-color="#000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <g filter="url(#bevel)">
+    <!-- 1. OUTER FLOWER PERIMETER -->
+    <path
+      d="M 50 4 Q 30 27, 50 50 Q 70 27, 50 4 Z M 50 96 Q 70 73, 50 50 Q 30 73, 50 96 Z M 4 50 Q 27 30, 50 50 Q 27 70, 4 50 Z M 96 50 Q 73 70, 50 50 Q 73 30, 96 50 Z"
+      stroke="url(#goldGradient)"
+      stroke-width="2.5"
+      fill="none"
+      stroke-linejoin="round"
+    />
+
+    <!-- 2. INNER CORE -->
+    <path
+      d="M 50 20 Q 40 35, 50 50 Q 60 35, 50 20 Z M 50 80 Q 60 65, 50 50 Q 40 65, 50 80 Z M 20 50 Q 35 40, 50 50 Q 35 60, 20 50 Z M 80 50 Q 65 60, 50 50 Q 65 40, 80 50 Z"
+      stroke="url(#goldGradientLight)"
+      stroke-width="2"
+      fill="url(#goldGradient)"
+      fill-opacity="0.4"
+      stroke-linejoin="round"
+    />
+
+    <!-- 3. BISECTING LINES FROM CENTER -->
+    <path
+      d="M 50 4 L 50 96 M 4 50 L 96 50"
+      stroke="url(#goldGradient)"
+      stroke-width="2"
+      fill="none"
+    />
+  </g>
 </svg>

@@ -18,7 +18,7 @@ export default function FooterSection() {
             <Logo />
             <div className="pt-1">
               <span className="text-xs font-mono text-[#c9a832] uppercase tracking-widest block">
-                Casa De Bello - Whistling Pines
+                Casa De Bello - Whispering Pines
               </span>
             </div>
             <p className="text-xs sm:text-sm text-[#FAF9F6]/80 font-sans leading-relaxed max-w-sm">
@@ -112,7 +112,7 @@ export default function FooterSection() {
               <a href="/sitemap" className="hover:text-[#c9a832] transition-colors">Sitemap</a>
             </div>
             <p className="text-[10px] mt-2 text-white/40 max-w-2xl">
-              Constructed as Casa De Bello - Whistling Pines. Malla Ramgarh Rural Estate. Operated by <a href="https://casadebello.com/" target="_blank" rel="noreferrer" className="underline hover:text-[#c9a832] transition-colors">Casa De Bello - Luxury Resort Hotel in Bhowali, Nainital</a>.
+              Constructed as Casa De Bello - Whispering Pines. Malla Ramgarh Rural Estate. Operated by <a href="https://casadebello.com/" target="_blank" rel="noreferrer" className="underline hover:text-[#c9a832] transition-colors">Casa De Bello - Luxury Resort Hotel in Bhowali, Nainital</a>.
             </p>
           </div>
           <div className="text-center lg:text-right">

@@ -70,12 +70,7 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
-            <a 
-              href="/blog"
-              className="text-[#FAF9F6]/90 hover:text-[#c9a832] text-sm font-medium tracking-wide transition-colors duration-200"
-            >
-              Journal
-            </a>
+
           </div>
 
           {/* Contact CTAs */}

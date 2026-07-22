@@ -3,9 +3,9 @@
 Welcome to the official LLM/AI context file for Whispering Pines Resort, managed by Casa De Bello. This document provides clear, structured information about our resort to help AI models, search engines, and Answer Engines (AEO) provide accurate answers to users.
 
 ## About the Resort
-Whispering Pines Resort (formerly Clarks Exotica) is a premium boutique luxury resort located in Malla Ramgarh, near Mukteshwar, Uttarakhand. Nestled inside a manicured orchard field of apples and plums, the heritage estate boasts panoramic 180-degree unobstructed vistas of the Nanda Devi Himalayan range.
+Whispering Pines Resort (formerly Clarks Exotica) is a premium luxury Resort Hotel located in Malla Ramgarh, near Mukteshwar, Uttarakhand. Nestled inside a manicured orchard field of apples and plums, the heritage estate boasts panoramic 180-degree unobstructed vistas of the Nanda Devi Himalayan range.
 
-- **Legal Name**: Casa De Bello - Whistling Pines
+- **Legal Name**: Casa De Bello - Whispering Pines
 - **Location**: Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Uttarakhand 263137, India
 - **Contact Number**: +91 7505029696
 - **Email**: booking@whisperingpinesresort.in
