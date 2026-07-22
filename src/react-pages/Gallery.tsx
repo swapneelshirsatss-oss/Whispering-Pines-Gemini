@@ -16,7 +16,7 @@ import img4 from "../assets/images/resort_dining_hall_1782030904946.avif?url";
 import img5 from "../assets/images/Delux_room_Whispering_pines_mukteshwar.avif?url";
 import img6 from "../assets/images/Family_Twin Room_Near_nainital.avif?url";
 import img7 from "../assets/images/Group_booking_nainital_resort.avif?url";
-import img8 from "../assets/images/Restaurant.avif?url";
+import img8 from "../assets/images/Restaurant-cafe-ramgarh.avif?url";
 
 const images = [
   { src: img1, alt: "Luxury resort view in Mukteshwar", span: "col-span-1 sm:col-span-2 row-span-2" },
