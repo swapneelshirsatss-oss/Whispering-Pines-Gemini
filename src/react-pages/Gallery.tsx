@@ -12,7 +12,7 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
 import img1 from "../assets/images/resort_mukteshwar_luxury_hero_1782031089955.avif?url";
 import img2 from "../assets/images/villa_in_nanital.avif?url";
 import img3 from "../assets/images/Whispering-pines-balcony-view-nanital.webp?url";
-import img4 from "../assets/images/resort_dining_hall_1782030904946.avif?url";
+import img4 from "../assets/images/Private-Dining-Area-resort-near-mukteshwar.avif?url";
 import img5 from "../assets/images/Delux_room_Whispering_pines_mukteshwar.avif?url";
 import img6 from "../assets/images/Family_Twin Room_Near_nainital.avif?url";
 import img7 from "../assets/images/Group_booking_nainital_resort.avif?url";
