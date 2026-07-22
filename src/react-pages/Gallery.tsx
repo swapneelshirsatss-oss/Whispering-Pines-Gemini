@@ -2,6 +2,11 @@ import React from "react";
 import { motion } from "motion/react";
 import { Image as ImageIcon } from "lucide-react";
 import LazyImage from "../components/LazyImage";
+import Navbar from "../components/Navbar";
+import Breadcrumbs from "../components/Breadcrumbs";
+import FooterSection from "../components/FooterSection";
+import WhatsAppButton from "../components/WhatsAppButton";
+import RecentBookingNotification from "../components/RecentBookingNotification";
 
 // Import existing images
 import img1 from "../assets/images/resort_mukteshwar_luxury_hero_1782031089955.avif?url";
@@ -26,8 +31,11 @@ const images = [
 
 export default function Gallery() {
   return (
-    <div className="pt-24 pb-20 bg-[#FAF9F6] min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-screen bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden pb-20 md:pb-0 selection:bg-[#c9a832] selection:text-[#1B3322]">
+      <Navbar />
+      <Breadcrumbs />
+      <main className="pt-24 pb-20 bg-[#FAF9F6]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
         <motion.div 
@@ -72,7 +80,11 @@ export default function Gallery() {
             </motion.div>
           ))}
         </div>
-      </div>
+        </div>
+      </main>
+      <FooterSection />
+      <WhatsAppButton />
+      <RecentBookingNotification />
     </div>
   );
 }
