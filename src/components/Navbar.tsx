@@ -22,8 +22,8 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "The Resort", href: "/#about" },
-    { name: "Cottages & Suites", href: "/#rooms" },
-    { name: "Amenities", href: "/#amenities" },
+    { name: "Cottages & Suites", href: "/stay" },
+    { name: "Amenities", href: "/amenities" },
     { name: "Experiences", href: "/#experiences" },
     { name: "Gallery", href: "/gallery" },
     { name: "Reviews", href: "/reviews" },
