@@ -8,9 +8,18 @@ import { motion } from "motion/react";
 interface RoomInventoryListProps {
   initialFilter?: string;
   hideLink?: boolean;
+  title?: string;
+  isH1?: boolean;
+  categoryIntro?: string;
 }
 
-export default function RoomInventoryList({ initialFilter = "all", hideLink = false }: RoomInventoryListProps = {}) {
+export default function RoomInventoryList({
+  initialFilter = "all",
+  hideLink = false,
+  title = "Suites & Cottages at Uttarakhand's Most Loved Family Resort",
+  isH1 = false,
+  categoryIntro = "Suites & Cottages at Uttarakhand's Most Loved Family Resort",
+}: RoomInventoryListProps = {}) {
   const [filter, setFilter] = useState(initialFilter);
 
   const filterOptions = [
@@ -41,12 +50,23 @@ export default function RoomInventoryList({ initialFilter = "all", hideLink = fa
           <span className="text-xs font-mono tracking-widest text-[#c9a832] uppercase block mb-2">
             Sanctuaries of Slumber
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-[#1B3322] mb-4">
-            Suites & Cottages at Uttarakhand's Most Loved Family Resort
-          </h2>
+          {isH1 ? (
+            <>
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-[#1B3322] mb-4">
+                {title}
+              </h1>
+              <h2 className="font-display text-xl sm:text-2xl font-bold text-[#2C3531]/80 mt-4 mb-4">
+                {categoryIntro}
+              </h2>
+            </>
+          ) : (
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-[#1B3322] mb-4">
+              {title}
+            </h2>
+          )}
           <div className="w-16 h-[2px] bg-[#c9a832] mx-auto mb-6" />
           <p className="text-sm sm:text-base text-[#2C3531]/80 font-sans leading-relaxed">
-            Meticulously paneled with local pine and cedar timbers, each suite is an expansive private refuge engineered for serenity. Whether you need a private villa for a multi-generational holiday or a deluxe skylight suite for a couples' retreat near Nainital, Whispering Pines by Casa De Bello offers Ramgarh's most loved family accommodations.
+            Meticulously paneled with local Kumaoni pine and cedar timbers, each suite is an expansive private refuge engineered for absolute serenity. Secure your <strong>Ramgarh resort booking</strong> directly to avoid third-party commissions. Whether you need a private villa for a multi-generational holiday or a deluxe skylight attic suite for a couple's retreat, Whispering Pines by Casa De Bello is the premier <strong>family resort Nainital</strong> visitors recommend for high-altitude peace and genuine local hospitality.
           </p>
         </div>
 
@@ -131,7 +151,7 @@ export default function RoomInventoryList({ initialFilter = "all", hideLink = fa
                       {room.amenities.slice(0, 4).map((item, idx) => (
                         <div key={idx} className="flex items-center text-xs text-[#2C3531]/80">
                           <div className="w-1 h-1 bg-[#c9a832] rounded-full mr-3 shrink-0" />
-                          <span className="font-sans font-light">{item}</span>
+                          <h3 className="font-sans font-light">{item}</h3>
                         </div>
                       ))}
                     </div>

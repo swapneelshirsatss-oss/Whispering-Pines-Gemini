@@ -64,7 +64,7 @@ export const ROOMS_INVENTORY: RoomOption[] = [
       "Exclusive Private Orchard Yard & Fireplace Living Room",
       "Ideal for Multi-Generational Family Holidays Near Nainital"
     ],
-    description: "Rent the entire wood-and-stone alpine estate for absolute privacy. Nestled inside a manicured orchard field of apples and plums, this heritage villa boasts massive double-height wooden trusses, warm timber floorings, glass-pane windows viewing the majestic snow peaks, and personalized hospitality."
+    description: "Rent the entire wood-and-stone alpine estate for absolute privacy. Perfect for family resort Nainital getaways, this three-bedroom heritage villa nestled inside orchard fields features massive double-height wooden trusses, glass-pane windows viewing the majestic snow peaks, and direct Ramgarh resort booking perks."
   },
   {
     id: "delux-room",
@@ -80,7 +80,7 @@ export const ROOMS_INVENTORY: RoomOption[] = [
       "Cedar Pine Deck Overlooking Bhowali-Ramgarh Valley",
       "Rain Shower Bath & Radiator Heating for Winter Stays"
     ],
-    description: "Located on the pristine top floor under cathedral wooden panels, this iconic Attic suite features beautiful skylights for star-gazing at night. Walk out to your private wooden deck of cedar pine and look over the Bhowali-Ramgarh valleys under fresh Himalayan mist."
+    description: "Located on the pristine top floor under cathedral wooden panels, this iconic Attic suite features beautiful skylights for star-gazing at night. Ideal for couples seeking a premium Ramgarh resort booking, walk out to your private wooden deck of cedar pine and look over the Bhowali-Ramgarh valleys at this tranquil family resort near Nainital."
   },
   {
     id: "orchard-room",
@@ -96,11 +96,11 @@ export const ROOMS_INVENTORY: RoomOption[] = [
       "Exposed Old-Stone Brick Archways & Geo-Heater Warmth",
       "Best Value Family Room at Our Ramgarh Resort"
     ],
-    description: "Open your doors directly onto green grass lawns and heavy-laden peach and apple trees. With exposed old-stone brick archways, state-of-the-art geo-heaters for absolute winter warmth, and cozy interiors, it represents mountain leisure at its highest order."
+    description: "Open your doors directly onto green lawns and private peach and apple trees. Featuring exposed old-stone brick archways, state-of-the-art geo-heaters for absolute winter warmth, and cozy interiors, it represents the finest choice for a family resort Nainital experience, with simple direct Ramgarh resort booking parameters."
   },
   {
     id: "cedar-room",
-    name: "Group Cottage Booking - Ramgarh's Best Rate for Large Families",
+    name: "Group Cottage Booking — Ramgarh's Best Rate for Large Families",
     subtitle: "Premium Comfort Infused with Pine Aromatics",
     capacity: "2 Adults",
     bedType: "1 Premium Double Bed",
@@ -112,50 +112,90 @@ export const ROOMS_INVENTORY: RoomOption[] = [
       "High-Capacity Heaters for Winter Group Travel",
       "Best Group Rates — Book Directly for Maximum Savings"
     ],
-    description: "Incredibly cozy room accented with authentic cedar wood finishes that release subtle earthy forest oils, calming the senses. Offering pristine vistas of the forested Bhowali hills and comfortable, deep bedding for restful sleep."
+    description: "An incredibly cozy room accented with authentic cedar wood finishes that release subtle earthy forest oils, calming the senses. Offering pristine vistas of the forested Bhowali hills, this room is perfect for group travel, with direct Ramgarh resort booking steps for a memorable family resort Nainital vacation."
   }
 ];
 
 export const GENERAL_AMENITIES = [
   {
-    title: "Panoramic Vistas",
+    title: "180° Himalayan Panoramas — Nanda Devi & Trishul From Every Balcony",
     icon: "Compass",
-    description: "Breathtaking 180-degree unobstructed panoramas of the snow-crested Nanda Devi range directly from your balconies and lawns."
+    description: "Breathtaking 180-degree unobstructed panoramas of the snow-crested Nanda Devi range directly from your balconies and lawns, making Whispering Pines the best resort near Mukteshwar for scenic beauty.",
+    features: [
+      "Unobstructed Ridge Views at 1,780 Metres Altitude",
+      "Snow-Crested Nanda Devi Range Visible Year-Round",
+      "Sunrise & Sunset Views Directly from Your Balcony or Lawn"
+    ]
   },
   {
-    title: "Wood-Fired Hearth",
+    title: "Wood-Fired Stone Fireplace — The Heart of Our Mountain Resort",
     icon: "Flame",
-    description: "A gorgeous luxury stone fireplace in the main lodge living room where we light comforting cedar logs every winter evening."
+    description: "A gorgeous luxury stone fireplace in the main lodge living room of the best resort near Mukteshwar, where we light comforting cedar logs every winter evening.",
+    features: [
+      "Cedar Log Fireplace in the Main Lodge Living Room",
+      "Fireplace Setup on Every Winter Arrival",
+      "Outdoor Bonfire & Charcoal BBQ Grill on Private Grounds"
+    ]
   },
   {
-    title: "High-Speed Fiber",
+    title: "100 Mbps Fiber Wi-Fi — Uttarakhand's Most Connected Mountain Resort",
     icon: "Wifi",
-    description: "Robust, enterprise-grade high speed fiber optical Wi-Fi connection covering the entire villa area and terraces for remote work."
+    description: "Robust, enterprise-grade high speed fiber optical Wi-Fi connection covering the entire area of the best resort near Mukteshwar for seamless remote work.",
+    features: [
+      "Enterprise-Grade Fiber Optic Connection — Full Property Coverage",
+      "Seamless Video Calls, Streaming & Remote Work Sessions",
+      "Best Workcation Resort Near Mukteshwar for Digital Nomads"
+    ]
   },
   {
-    title: "Eco Mountain Kitchen",
+    title: "Farm-to-Table Eco Kitchen — Kumaoni Cuisine & Custom International Menus",
     icon: "UtensilsCrossed",
-    description: "Homestyle cook cooks delicious organic farm-to-table meals locally, combining mountain Kumaon styles with custom international menus."
+    description: "Delicious organic farm-to-table meals cooked locally at the best resort near Mukteshwar, combining mountain Kumaon styles with custom international menus.",
+    features: [
+      "Resident Cook — Fresh Organic Vegetables, Locally Sourced",
+      "Kumaoni Delicacies & Multi-Cuisine Custom Menus on Demand",
+      "Breakfast, Lunch & Dinner Packages or On-Demand Orders"
+    ]
   },
   {
-    title: "Pet Paradise",
+    title: "Pet-Friendly Resort Near Mukteshwar — Safe Lawns & Open Trails",
     icon: "Heart",
-    description: "We are deeply pet friendly! Acres of safe, enclosed garden lanes and open pine trails surrounding the property for dogs to romp."
+    description: "We are deeply pet friendly! Acres of safe, enclosed garden lanes and open pine trails at the best resort near Mukteshwar ensure a pet paradise for dogs and cats.",
+    features: [
+      "Fully Enclosed Safe Garden Lawns for Dogs to Roam",
+      "Direct Wilderness Pine Trail Access for Pet Walks",
+      "No Extra Pet Charges — Bring Your Dog or Cat"
+    ]
   },
   {
-    title: "Tarmac Parking",
+    title: "Secure Parking, Backup Power & Flat Tarmac Driveway",
     icon: "Car",
-    description: "Uniquely flat, secure private gated tarmac driveway on-site that comfortably fits 3 to 4 traveller SUVs or private sedans."
+    description: "Uniquely flat, secure private gated tarmac driveway, silent generators, and pump channels at the best resort near Mukteshwar.",
+    features: [
+      "Flat Gated Tarmac Parking for 3–4 SUVs On-Site",
+      "High-Capacity Silent Generators — No Power Outage Risk",
+      "Double Water Pumping Channels for Uninterrupted Supply"
+    ]
   },
   {
-    title: "Sunset Bonfire grounds",
-    icon: "Sparkles",
-    description: "Gather around our brick firepits for warm open bonfires, slow acoustic guitars, and customized luxury charcoal BBQ grills."
-  },
-  {
-    title: "Orchard Trails",
+    title: "Bonfire Pits, Pine Forest Trails & Fruit Orchards",
     icon: "Trees",
-    description: "Pluck your own fruits! Stroll peacefully under the natural shade of plum and apple fruit orchards within our gates."
+    description: "Gather around brick firepits for warm open bonfires and pluck fresh organic apples and plums at the best resort near Mukteshwar.",
+    features: [
+      "Private Peach, Plum, Apple & Apricot Orchard Walks",
+      "Deodar, Pine & Oak Forest Trails from the Property Gate",
+      "Brick Firepit Bonfire Evenings with Acoustic Guitar Sessions"
+    ]
+  },
+  {
+    title: "Expansive scenic event lawn",
+    icon: "Sparkles",
+    description: "Beautifully manicured wide green lawns overlooking mountain peaks, offering event capabilities unmatched by any other resort near Mukteshwar.",
+    features: [
+      "Expansive Gated Green Lawns for Group Gatherings",
+      "Unobstructed Valley & Himalayan Mountain Backdrops",
+      "Custom Catering & Decor Setups for Private Gatherings"
+    ]
   }
 ];
 

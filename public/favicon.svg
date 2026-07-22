@@ -1,22 +1,25 @@
 <svg
-  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
   class="w-10 h-10 hover:scale-105 transition-transform duration-300"
   fill="none"
-  xmlns="http://www.w3.org/2000/svg"
 >
   <defs>
+    <!-- Gold Gradients -->
     <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#DFBA73" />
       <stop offset="40%" stop-color="#FFF2D4" />
       <stop offset="60%" stop-color="#c9a832" />
       <stop offset="100%" stop-color="#9E7D46" />
     </linearGradient>
+    
     <linearGradient id="goldGradientLight" x1="0%" y1="100%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#c9a832" />
       <stop offset="50%" stop-color="#FFF2D4" />
       <stop offset="100%" stop-color="#A88E62" />
     </linearGradient>
 
+    <!-- 3D Bevel & Drop Shadow Filter -->
     <filter id="bevel" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="0.5" result="blur" />
       <feOffset dx="0.5" dy="0.5" result="offsetGlow" />
@@ -27,34 +30,25 @@
       <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint" />
       <feDropShadow in="litPaint" dx="0" dy="1" stdDeviation="1" flood-color="#000" flood-opacity="0.4" />
     </filter>
+
+    <!-- Base geometric component (Top Petal Quadrant) -->
+    <g id="petal">
+      <!-- Outer large leaf -->
+      <path d="M 100,15 A 50,50 0 0,1 100,100 A 50,50 0 0,1 100,15 Z" />
+      
+      <!-- Inner small leaf -->
+      <path d="M 100,55 A 27,27 0 0,1 100,100 A 27,27 0 0,1 100,55 Z" />
+      
+      <!-- Central bisecting line -->
+      <line x1="100" y1="15" x2="100" y2="55" />
+    </g>
   </defs>
 
-  <g filter="url(#bevel)">
-    <!-- 1. OUTER FLOWER PERIMETER -->
-    <path
-      d="M 50 4 Q 30 27, 50 50 Q 70 27, 50 4 Z M 50 96 Q 70 73, 50 50 Q 30 73, 50 96 Z M 4 50 Q 27 30, 50 50 Q 27 70, 4 50 Z M 96 50 Q 73 70, 50 50 Q 73 30, 96 50 Z"
-      stroke="url(#goldGradient)"
-      stroke-width="2.5"
-      fill="none"
-      stroke-linejoin="round"
-    />
-
-    <!-- 2. INNER CORE -->
-    <path
-      d="M 50 20 Q 40 35, 50 50 Q 60 35, 50 20 Z M 50 80 Q 60 65, 50 50 Q 40 65, 50 80 Z M 20 50 Q 35 40, 50 50 Q 35 60, 20 50 Z M 80 50 Q 65 60, 50 50 Q 65 40, 80 50 Z"
-      stroke="url(#goldGradientLight)"
-      stroke-width="2"
-      fill="url(#goldGradient)"
-      fill-opacity="0.4"
-      stroke-linejoin="round"
-    />
-
-    <!-- 3. BISECTING LINES FROM CENTER -->
-    <path
-      d="M 50 4 L 50 96 M 4 50 L 96 50"
-      stroke="url(#goldGradient)"
-      stroke-width="2"
-      fill="none"
-    />
+  <!-- Rendering the 4 symmetrical quadrants with the Bevel Filter & Gold Stroke -->
+  <g filter="url(#bevel)" fill="none" stroke="url(#goldGradient)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <use href="#petal" />
+    <use href="#petal" transform="rotate(90 100 100)" />
+    <use href="#petal" transform="rotate(180 100 100)" />
+    <use href="#petal" transform="rotate(270 100 100)" />
   </g>
 </svg>

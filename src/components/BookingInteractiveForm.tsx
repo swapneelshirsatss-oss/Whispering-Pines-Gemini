@@ -3,7 +3,15 @@ import { Calendar, Users, Home, ArrowUpRight, ChevronDown } from "lucide-react";
 import { ROOMS_INVENTORY, BOOKING_ENGINE_URL } from "../data";
 import { trackAdsConversion } from "../utils/analytics";
 
-export default function BookingInteractiveForm() {
+interface BookingInteractiveFormProps {
+  title?: string;
+  features?: string[];
+}
+
+export default function BookingInteractiveForm({
+  title = "Complete Your Ramgarh Resort Booking in Easy Steps",
+  features
+}: BookingInteractiveFormProps = {}) {
   const [selectedRoomId, setSelectedRoomId] = useState(ROOMS_INVENTORY[0].id);
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
@@ -60,13 +68,23 @@ export default function BookingInteractiveForm() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-mono tracking-widest text-[#c9a832] uppercase block mb-2">
             Plan your Getaway
           </span>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-[#1B3322]">
-            Complete Your Ramgarh Resort Booking in Easy Steps
+            {title}
           </h2>
+          {features && (
+            <div className="mt-6 mb-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center justify-center max-w-3xl mx-auto border-y border-[#1B3322]/10 py-6">
+              {features.map((feat, idx) => (
+                <div key={idx} className="flex items-center justify-center text-xs text-[#2C3531]/80">
+                  <span className="w-1.5 h-1.5 bg-[#c9a832] rounded-full mr-2.5 shrink-0" />
+                  <h3 className="font-sans font-light leading-relaxed">{feat}</h3>
+                </div>
+              ))}
+            </div>
+          )}
           <div className="w-16 h-[2px] bg-[#c9a832] mx-auto mt-4 mb-6" />
           <p className="text-sm text-[#2C3531]/80 font-sans leading-relaxed">
             Configure your dream mountain getaway below to secure Ramgarh's best rates. Our reception team will verify availability for your preferred suites and cottages, drafting a personalized inquiry to instantly dispatch on WhatsApp for our best price guaranteed.

@@ -12,7 +12,11 @@ export default function Amenities() {
       <Navbar />
       <Breadcrumbs />
       <main className="pt-24 bg-[#1B3322]">
-        <AmenitiesList hideLink={true} />
+        <AmenitiesList 
+          hideLink={true} 
+          title="Best Resort Near Mukteshwar — Amenities Built for a True Mountain Escape"
+          isH1={true}
+        />
       </main>
       <FooterSection />
       <WhatsAppButton />

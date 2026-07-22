@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Breadcrumbs from "../components/Breadcrumbs";
 import RoomInventoryList from "../components/RoomInventoryList";
+import BookingInteractiveForm from "../components/BookingInteractiveForm";
 import FooterSection from "../components/FooterSection";
 import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
@@ -12,7 +13,13 @@ export default function Stay() {
       <Navbar />
       <Breadcrumbs />
       <main className="pt-24 bg-[#1B3322]/5">
-        <RoomInventoryList hideLink={true} initialFilter="all" />
+        <RoomInventoryList 
+          hideLink={true} 
+          initialFilter="all" 
+          title="Ramgarh Resort Booking — Choose Your Suite, Cottage or Private Villa"
+          isH1={true}
+        />
+        <BookingInteractiveForm title="Complete Your vacation Booking" />
       </main>
       <FooterSection />
       <WhatsAppButton />

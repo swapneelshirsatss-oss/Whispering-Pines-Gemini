@@ -19,6 +19,7 @@ export interface AmenityCategory {
   title: string;
   icon: string;
   description: string;
+  features?: string[];
 }
 
 export interface LocalExperience {

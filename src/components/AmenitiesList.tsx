@@ -16,9 +16,15 @@ const iconMap: Record<string, LucideIcon> = {
 
 interface AmenitiesListProps {
   hideLink?: boolean;
+  title?: string;
+  isH1?: boolean;
 }
 
-export default function AmenitiesList({ hideLink = false }: AmenitiesListProps = {}) {
+export default function AmenitiesList({
+  hideLink = false,
+  title = "Tailored Mountain Luxuries",
+  isH1 = false
+}: AmenitiesListProps = {}) {
   return (
     <section id="amenities" className="py-20 lg:py-28 bg-[#1B3322] text-[#FAF9F6]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,13 +34,23 @@ export default function AmenitiesList({ hideLink = false }: AmenitiesListProps =
           <span className="text-xs font-mono tracking-widest text-[#c9a832] uppercase block mb-2 animate-pulse">
             Bespoke Guest Comforts
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#FAF9F6]">
-            Tailored Mountain Luxuries
-          </h2>
+          {isH1 ? (
+            <>
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#FAF9F6]">
+                {title}
+              </h1>
+              <h2 className="font-display text-xl sm:text-2xl font-bold text-[#c9a832] mt-4 mb-4">
+                What Sets Us Apart — Amenities No Other Resort Near Mukteshwar Offers
+              </h2>
+            </>
+          ) : (
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#FAF9F6]">
+              {title}
+            </h2>
+          )}
           <div className="w-16 h-[2px] bg-[#c9a832] mx-auto mt-4 mb-6" />
           <p className="text-sm sm:text-base text-[#FAF9F6]/85 font-sans leading-relaxed">
-            Experience premium, rustic estate hospitality inside a private gated preserve. 
-            We provide everything required to turn a mountain retreat into a highly-connected, comfortable, and warm sanctuary.
+            Experience premium, rustic estate hospitality inside a private gated preserve. As the <strong>best resort near mukteshwar</strong>, we provide everything required to turn a mountain retreat into a highly-connected, comfortable, and warm sanctuary built for a true Himalayan escape.
           </p>
         </div>
 
@@ -53,14 +69,28 @@ export default function AmenitiesList({ hideLink = false }: AmenitiesListProps =
                 </div>
                 
                 {/* Title */}
-                <h3 className="text-lg font-display font-semibold text-[#FAF9F6] mb-3">
+                <h2 className="text-lg font-display font-semibold text-[#FAF9F6] mb-3">
                   {amenity.title}
-                </h3>
+                </h2>
                 
-                {/* description */}
-                <p className="text-xs sm:text-sm text-[#FAF9F6]/80 font-sans leading-relaxed">
-                  {amenity.description}
-                </p>
+                {/* Description fallback */}
+                {!amenity.features && (
+                  <p className="text-xs sm:text-sm text-[#FAF9F6]/80 font-sans leading-relaxed">
+                    {amenity.description}
+                  </p>
+                )}
+
+                {/* Feature List (H3 sub-headers) */}
+                {amenity.features && (
+                  <div className="mt-4 space-y-3">
+                    {amenity.features.map((feature, fIdx) => (
+                      <div key={fIdx} className="flex items-start text-xs text-[#FAF9F6]/85">
+                        <span className="w-1.5 h-1.5 bg-[#c9a832] rounded-full mr-2.5 mt-1.5 shrink-0" />
+                        <h3 className="font-sans font-light leading-relaxed">{feature}</h3>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             );
           })}
