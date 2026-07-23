@@ -15,7 +15,7 @@ export const RESORT_CONTACT = {
   location: "Malla Ramgarh, House no. 23 - 13/4, Ramgarh, Uttarakhand 263137",
   address: "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Uttarakhand 263137",
   geoCoordinates: "29.4264111 79.5505355",
-  gmapsLink: "https://maps.app.goo.gl/pfPTYmMpZAAi3jao7",
+  gmapsLink: "https://maps.app.goo.gl/hieeCQ2Ymc1vKNxj7",
   gmapsCid: "https://maps.google.com/?cid=8386667112972057918",
   socials: {
     facebook: "https://facebook.com/whisperingpinesbycasadebello",

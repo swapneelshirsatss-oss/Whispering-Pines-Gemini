@@ -1,12 +1,15 @@
 import React from "react";
-import { MapPin, Phone, Mail, MessageCircle, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, MessageCircle, Clock, Briefcase } from "lucide-react";
 import { RESORT_CONTACT } from "../data";
 import FAQAccordion from "../components/FAQAccordion";
 import { motion } from "framer-motion";
+import Navbar from "../components/Navbar";
+import FooterSection from "../components/FooterSection";
 
 export default function Contact() {
   return (
     <div className="pt-24 bg-[#FAF9F6] min-h-screen">
+      <Navbar />
       
       {/* Hero Section */}
       <section className="py-16 sm:py-20 bg-[#1B3322] border-b border-[#c9a832]/20">
@@ -104,6 +107,19 @@ export default function Contact() {
                       </p>
                     </div>
                   </div>
+
+                  {/* B2B Partner */}
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-[#1B3322]/5 rounded-full flex items-center justify-center shrink-0 mr-4">
+                      <Briefcase className="w-5 h-5 text-[#1B3322]" />
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-bold text-[#1B3322] uppercase tracking-wider mb-1">Partner With Us (B2B)</h3>
+                      <a href={`mailto:${RESORT_CONTACT.email}?subject=B2B Partnership Inquiry`} className="text-lg text-[#2C3531] hover:text-[#c9a832] transition-colors font-medium">
+                        Corporate & B2B Queries
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -113,13 +129,13 @@ export default function Contact() {
               <h2 className="text-2xl font-display font-bold text-[#1B3322] mb-8">Locate Us in Ramgarh</h2>
               <div className="w-full h-[400px] bg-gray-200 rounded-sm shadow-inner border border-gray-300 overflow-hidden">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111246.51860656094!2d79.4673896561148!3d29.41843949826359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a099ca1965bb29%3A0x74601fc3965b9abe!2sWhispering%20Pines%20Resort%20Mukteshwar!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3475.0886542866456!2d79.5506314!3d29.4262052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0a3285f1c95a9%3A0x74636d4e06267d3e!2sWhispering%20Pines%20Resort%20by%20casa%20de%20bello!5e0!3m2!1sen!2sin!4v1784812384641!5m2!1sen!2sin" 
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 
                   allowFullScreen={false} 
                   loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade"
+                  referrerPolicy="strict-origin-when-cross-origin"
                   title="Whispering Pines Resort Google Maps Location"
                 ></iframe>
               </div>
@@ -143,6 +159,7 @@ export default function Contact() {
       {/* FAQ Section included here */}
       <FAQAccordion />
 
+      <FooterSection />
     </div>
   );
 }
