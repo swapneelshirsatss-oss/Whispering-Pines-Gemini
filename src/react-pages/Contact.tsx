@@ -1,6 +1,6 @@
 import React from "react";
 import { MapPin, Phone, Mail, MessageCircle, Clock, Briefcase } from "lucide-react";
-import { RESORT_CONTACT } from "../data";
+import { RESORT_CONTACT, CONTACT_FAQS } from "../data";
 import FAQAccordion from "../components/FAQAccordion";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
@@ -157,7 +157,11 @@ export default function Contact() {
       </section>
 
       {/* FAQ Section included here */}
-      <FAQAccordion />
+      <FAQAccordion 
+        faqs={CONTACT_FAQS} 
+        title="Resort Location & F.A.Q."
+        description="Everything you need to know about our location in Ramgarh, resort amenities, room types, pet policy, and direct booking benefits."
+      />
 
       <FooterSection />
     </div>

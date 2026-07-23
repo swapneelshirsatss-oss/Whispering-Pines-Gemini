@@ -23,7 +23,6 @@ export default function Navbar() {
   const navLinks = [
     { name: "The Resort", href: "/about-whispering-pines-resort-ramgarh/" },
     { name: "Cottages & Suites", href: "/suites-cottages-ramgarh-resort/" },
-    { name: "Amenities", href: "/resort-amenities-mukteshwar/" },
     { name: "Experiences", href: "/things-to-do-near-mukteshwar/" },
     { name: "Gallery", href: "/gallery/" },
     { name: "Reviews", href: "/reviews/" },

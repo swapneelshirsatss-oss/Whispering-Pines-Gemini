@@ -1,8 +1,17 @@
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp, HelpCircle } from "lucide-react";
-import { FAQS } from "../data";
+import { FAQS as defaultFAQS } from "../data";
+import type { FAQItem } from "../types";
 
-export default function FAQAccordion() {
+export default function FAQAccordion({ 
+  faqs = defaultFAQS, 
+  title = "Stay Details & F.A.Q.", 
+  description = "Everything you need to know about parking, high-speed fiber internet, food cooking, pet friendly rules, and our simple secure WhatsApp reservation process." 
+}: { 
+  faqs?: FAQItem[],
+  title?: string,
+  description?: string
+}) {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   const toggleFAQ = (idx: number) => {
@@ -23,18 +32,17 @@ export default function FAQAccordion() {
             Answering Your Questions
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1B3322]">
-            Stay Details & F.A.Q.
+            {title}
           </h2>
           <div className="w-16 h-[2px] bg-[#c9a832] mx-auto mt-4 mb-6" />
           <p className="text-sm text-[#2C3531]/80 font-sans leading-relaxed">
-            Everything you need to know about parking, high-speed fiber internet, food cooking, 
-            pet friendly rules, and our simple secure WhatsApp reservation process.
+            {description}
           </p>
         </div>
 
         {/* FAQ list */}
         <div className="space-y-4">
-          {FAQS.map((faq, idx) => {
+          {faqs.map((faq, idx) => {
             const isOpen = openIdx === idx;
             return (
               <article

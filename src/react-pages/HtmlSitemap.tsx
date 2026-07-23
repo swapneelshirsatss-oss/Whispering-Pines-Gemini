@@ -25,6 +25,14 @@ export default function HtmlSitemap() {
       ]
     },
     {
+      category: "Journal Posts",
+      links: [
+        { name: "Clarks Exotica Transition", url: "/blog/clarks-exotica-transition/" },
+        { name: "Ramgarh Fruit Bowl of Kumaon", url: "/blog/ramgarh-fruit-bowl-of-kumaon/" },
+        { name: "Winter in the Himalayas", url: "/blog/winter-in-the-himalayas/" },
+      ]
+    },
+    {
       category: "Legal & Policies",
       links: [
         { name: "Privacy Policy", url: "/privacy-policy" },

@@ -1,0 +1,12 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogList from '../../react-pages/BlogList.tsx';
+import { BLOG_POSTS } from '../../data/blogPosts.tsx';
+---
+
+<Layout 
+  title="Blog | Whispering Pines Resort Mukteshwar" 
+  description="Read the latest news, travel guides, and stories from Whispering Pines Resort Mukteshwar."
+>
+  <BlogList posts={BLOG_POSTS} client:load />
+</Layout>

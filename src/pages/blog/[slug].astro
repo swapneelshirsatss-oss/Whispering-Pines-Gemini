@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogPost from '../../react-pages/BlogPost.tsx';
+import { BLOG_POSTS, BlogPostData } from '../../data/blogPosts.tsx';
+
+export async function getStaticPaths() {
+  return BLOG_POSTS.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: BlogPostData;
+}
+
+const { post } = Astro.props;
+---
+
+<Layout 
+  title={`${post.title} | Whispering Pines Resort Mukteshwar`}
+  description={post.excerpt}
+>
+  <BlogPost post={post} client:load />
+</Layout>
