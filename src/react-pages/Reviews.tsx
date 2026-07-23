@@ -30,9 +30,14 @@ export default function Reviews() {
             Whispering Pines Reviews
           </h1>
           <div className="w-20 h-[2px] bg-[#c9a832] mx-auto mb-6" />
-          <p className="text-[17px] sm:text-lg text-[#FAF9F6]/80 font-sans leading-relaxed">
+          <p className="text-[17px] sm:text-lg text-[#FAF9F6]/80 font-sans leading-relaxed mb-8">
             Discover why our guests consistently rate us as the best resort in Ramgarh. Read genuine testimonials from families, couples, and solo travelers who found their perfect Himalayan escape with us.
           </p>
+          <div className="inline-flex items-center justify-center space-x-2 bg-[#FAF9F6]/5 border border-[#FAF9F6]/10 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-[13px] sm:text-sm font-sans text-[#FAF9F6]/90">
+            <strong className="text-[#c9a832] font-semibold">4.6★</strong> <span>on Google (388 reviews)</span>
+            <span className="mx-1 sm:mx-2 opacity-40">•</span> 
+            <strong className="text-[#c9a832] font-semibold">4.9★</strong> <span>across all platforms</span>
+          </div>
         </motion.div>
       </div>
 

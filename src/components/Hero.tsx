@@ -102,8 +102,8 @@ export default function Hero() {
               <span className="text-[10px] font-bold leading-none">4.9</span>
             </div>
           </div>
-          <span className="text-xs font-sans text-[#FAF9F6]/70 tracking-wide">
-            Highly rated by <strong className="text-[#FAF9F6] font-medium">1,000+</strong> guests
+          <span className="text-[11px] sm:text-xs font-sans text-[#FAF9F6]/80 tracking-wide text-center">
+            <strong className="text-[#c9a832] font-semibold">4.6★</strong> on Google (388 reviews) <span className="mx-1.5 opacity-50">•</span> <strong className="text-[#c9a832] font-semibold">4.9★</strong> across all platforms
           </span>
         </div>
       </motion.div>
