@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Breadcrumbs from "../components/Breadcrumbs";
 import FooterSection from "../components/FooterSection";
 import WhatsAppButton from "../components/WhatsAppButton";
-import { BlogPostData } from "../data/blogPosts";
+import type { BlogPostData } from "../data/blogPosts";
 
 interface BlogListProps {
   posts: BlogPostData[];

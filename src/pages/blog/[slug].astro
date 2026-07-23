@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import BlogPost from '../../react-pages/BlogPost.tsx';
-import { BLOG_POSTS, BlogPostData } from '../../data/blogPosts.tsx';
+import { BLOG_POSTS, type BlogPostData } from '../../data/blogPosts.tsx';
 
 export async function getStaticPaths() {
   return BLOG_POSTS.map((post) => ({

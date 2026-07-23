@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import FooterSection from "../components/FooterSection";
 import WhatsAppButton from "../components/WhatsAppButton";
-import { BlogPostData } from "../data/blogPosts";
+import type { BlogPostData } from "../data/blogPosts";
 
 interface BlogPostProps {
   post: BlogPostData;
