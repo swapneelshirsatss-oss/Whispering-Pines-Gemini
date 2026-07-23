@@ -304,25 +304,88 @@ export const LOCAL_EXPERIENCES: LocalExperience[] = [
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    name: "Dr. Vikram Sethi",
+    name: "Digital Swapneel",
     rating: 5,
-    source: "Google Local Guide",
-    date: "May 2026",
-    comment: "An absolute masterpiece of a premium villa! The panoramic Nanda Devi peaks look otherworldly from the Attic suite in the morning. The chef's Kumaoni local chicken curry and warm mandua rotis were stellar. High-speed Wi-Fi let me consult cases seamlessly. Will return!"
-  },
-  {
-    name: "Priya & Rohan Sen",
-    rating: 5,
-    source: "Airbnb Superguest",
-    date: "April 2026",
-    comment: "Words cannot describe the tranquility of Malla Ramgarh. Whispering Pines is surrounded by massive peach trees and silent pinewood hills. The kids loved the fireplace evenings and our Golden Retriever was in absolute heaven running in the safe garden lawns. Gated parking was very convenient."
-  },
-  {
-    name: "Aman Rastogi",
-    rating: 5,
-    source: "Booking.com Review",
+    source: "Google Reviews",
     date: "June 2026",
-    comment: "Exceptional remote working setup. Constant 150 Mbps speed on fiber, hot showers, cozy timber wood bed, and serene fresh air. Highly recommend booking the Entire Villa if travelling with extended family — the living room wood hearth is magnificent!"
+    comment: "Absolutely stunning upgrade! Whispering Pines Resort Mukteshwar has completely transformed the old Clarks Exotica property. Same beautiful location, but much better luxury amenities. Book direct on their site for the best rates. 10/10 mountain escape."
+  },
+  {
+    name: "Anurag Arya",
+    rating: 5,
+    source: "Google Reviews",
+    date: "July 2026",
+    comment: "Really nice place for a peaceful getaway. The rooms were clean, staff was very friendly and the food was tasty. Loved the view and the calm atmosphere. Would definitely visit again. Highly recommended!"
+  },
+  {
+    name: "Himanshu Saxena",
+    rating: 5,
+    source: "Google Reviews",
+    date: "April 2026",
+    comment: "It was a pleasant stay with awesome staff, food and serenity. Location easy to reach, staff very supportive and cooperative, property quite scenic."
+  },
+  {
+    name: "Mayank Tyagi",
+    rating: 5,
+    source: "Google Reviews",
+    date: "March 2025",
+    comment: "First of all it is a great property, well maintained neat and clean and since it's Ramgarh near Mukteshwar so away from crowd and quiet place where you just enjoy the beauty of the nature. Me and my friends planned a visit to Baba Neeb Karori ashram with Family and booked a stay..."
+  },
+  {
+    name: "Khushi Joshi",
+    rating: 5,
+    source: "Google Reviews",
+    date: "June 2025",
+    comment: "The view was amazing, the staff and the owner were very sweet with their service. I would recommend everyone who are planning to visit Ramgarh to give it a try for sure!"
+  },
+  {
+    name: "Ashok Gupta",
+    rating: 5,
+    source: "Google Reviews",
+    date: "June 2025",
+    comment: "We 20 peoples stayed for two days, It was awesome experience. Very nice views, food quality was very good, service staff very cooperative. All rooms well maintained and clean."
+  },
+  {
+    name: "Manasvi Vats",
+    rating: 5,
+    source: "Google Reviews",
+    date: "June 2025",
+    comment: "It is really good hotel. View from hotel is beautiful and the services are really nice. Staff is very polite and humble. Great experience. Must visit if anyone is coming to Nainital."
+  },
+  {
+    name: "Simran Kashyap",
+    rating: 5,
+    source: "Google Reviews",
+    date: "February 2025",
+    comment: "Our stay was very good, we visited with our family in January it was surely a good choice, they have a gaming area as well. Will visit again definitely."
+  },
+  {
+    name: "Amit Tripathi",
+    rating: 5,
+    source: "Google Reviews",
+    date: "December 2025",
+    comment: "Had a good stay for 2 days in the double room, spacious clean. Excellent service and good food served with homely warmth."
+  },
+  {
+    name: "Priyanka Gupta",
+    rating: 5,
+    source: "Google Reviews",
+    date: "June 2025",
+    comment: "Our stay during last 3 days was awesome... Food was really good. Staff was very cooperative. The view from the room was breathtaking.. we would definitely like to come back.."
+  },
+  {
+    name: "Krish Bisht",
+    rating: 5,
+    source: "Google Reviews",
+    date: "February 2025",
+    comment: "We had an amazing stay, helpful staff good food, very good views from the property. Would definitely visit again."
+  },
+  {
+    name: "Neeraj Sharma",
+    rating: 5,
+    source: "Google Reviews",
+    date: "December 2024",
+    comment: "Nice place. nice staff. very good service. we have pleasant stay. staff is very cordial... will come again."
   }
 ];
 
