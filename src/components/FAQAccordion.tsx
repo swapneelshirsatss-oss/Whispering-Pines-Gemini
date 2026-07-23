@@ -67,8 +67,8 @@ export default function FAQAccordion({
 
                 {/* Collapsible Content Area */}
                 <div
-                  className={`transition-all duration-300 ease-in-out ${
-                    isOpen ? "max-h-[300px] border-t border-[#2C3531]/5 p-5 sm:p-6 bg-[#FAF9F6]/40" : "max-h-0 overflow-hidden"
+                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                    isOpen ? "max-h-[1000px] border-t border-[#2C3531]/5 p-5 sm:p-6 bg-[#FAF9F6]/40" : "max-h-0"
                   }`}
                 >
                   <p className="text-xs sm:text-sm text-[#2C3531]/95 font-sans leading-relaxed">
