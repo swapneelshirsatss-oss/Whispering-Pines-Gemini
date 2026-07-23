@@ -11,6 +11,18 @@
   --color-brand-gold-dark: #A6875D;
   --color-brand-cream: #FAF9F6;
   --color-brand-dark: #2C3531;
+
+  --animate-fade-in: fade-in 0.8s ease-out;
+  --animate-fade-in-up: fade-in-up 0.8s ease-out;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 }
 
 /* Base style smoothing */

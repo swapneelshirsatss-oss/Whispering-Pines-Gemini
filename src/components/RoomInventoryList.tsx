@@ -3,7 +3,7 @@ import { Users, Bed, Check, ArrowRight, Apple, Snowflake, Info } from "lucide-re
 import { ROOMS_INVENTORY, BOOKING_ENGINE_URL } from "../data";
 import LazyImage from "./LazyImage";
 import { trackAdsConversion } from "../utils/analytics";
-import { motion } from "motion/react";
+
 
 interface RoomInventoryListProps {
   initialFilter?: string;
@@ -90,13 +90,9 @@ export default function RoomInventoryList({
         {/* Room List Grid */}
         <div className="space-y-16 lg:space-y-24">
           {filteredRooms.map((room, index) => (
-            <motion.article
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
+            <article
               key={room.id}
-              className="bg-transparent overflow-hidden group grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center"
+              className="bg-transparent overflow-hidden group grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center animate-fade-in-up"
             >
               {/* Room Image - Left/Top */}
               <div className="lg:col-span-7 relative h-72 sm:h-96 lg:h-[32rem] overflow-hidden rounded-sm">
@@ -172,7 +168,7 @@ export default function RoomInventoryList({
                   </a>
                 </div>
               </div>
-            </motion.article>
+            </article>
           ))}
         </div>
 

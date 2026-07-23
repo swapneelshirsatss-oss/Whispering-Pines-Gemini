@@ -4,7 +4,7 @@ import { BOOKING_ENGINE_URL } from "../data";
 import resortLuxuryHeroImg from "../assets/images/Whispering-pines-balcony-view-nanital.webp?url";
 import LazyImage from "./LazyImage";
 import { trackAdsConversion } from "../utils/analytics";
-import { motion } from "motion/react";
+
 
 export default function Hero() {
   const handleHeroBookingClick = () => {
@@ -29,11 +29,8 @@ export default function Hero() {
       </div>
 
       {/* Main Structural Content Grid */}
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-12"
+      <div 
+        className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-12 animate-fade-in"
       >
         {/* Small Tagline */}
         <div className="inline-flex items-center space-x-2 bg-[#1B3322]/40 backdrop-blur-md border border-[#FAF9F6]/20 px-4 py-2 rounded-full mb-8">
@@ -106,7 +103,7 @@ export default function Hero() {
             <strong className="text-[#c9a832] font-semibold">4.6★</strong> on Google (388 reviews) <span className="mx-1.5 opacity-50">•</span> <strong className="text-[#c9a832] font-semibold">4.9★</strong> across all platforms
           </span>
         </div>
-      </motion.div>
+      </div>
       
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:block z-20">

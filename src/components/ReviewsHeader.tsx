@@ -1,14 +1,12 @@
 import React from "react";
-import { motion } from "motion/react";
+
 import { Star } from "lucide-react";
 
 export default function ReviewsHeader() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center max-w-3xl mx-auto"
+      <div 
+        className="text-center max-w-3xl mx-auto animate-fade-in"
       >
         <span className="text-xs font-mono tracking-widest text-[#c9a832] uppercase flex items-center justify-center mb-3">
           <Star className="w-4 h-4 mr-2" />
@@ -41,7 +39,7 @@ export default function ReviewsHeader() {
             <strong className="text-[#34e0a1] font-semibold">5.0★</strong> <span>Tripadvisor</span>
           </a>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

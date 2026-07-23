@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "motion/react";
+
 import { Image as ImageIcon } from "lucide-react";
 import LazyImage from "./LazyImage";
 
@@ -74,10 +74,8 @@ export default function GalleryGrid() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Header Block */}
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center max-w-3xl mx-auto mb-16"
+      <div 
+        className="text-center max-w-3xl mx-auto mb-16 animate-fade-in"
       >
         <span className="text-xs font-mono tracking-widest text-[#c9a832] uppercase flex items-center justify-center mb-3">
           <ImageIcon className="w-4 h-4 mr-2" />
@@ -90,18 +88,14 @@ export default function GalleryGrid() {
         <p className="text-[17px] sm:text-lg text-[#2C3531]/80 font-sans leading-relaxed">
           Explore the tranquil corners, grand alpine architecture, and breathtaking panoramic views that make Whispering Pines the best resort in Ramgarh.
         </p>
-      </motion.div>
+      </div>
 
       {/* Gallery Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4 auto-rows-[200px]">
         {images.map((img, idx) => (
-          <motion.div
+          <div
             key={idx}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: idx * 0.1 }}
-            className={`relative overflow-hidden rounded-sm group ${img.span}`}
+            className={`relative overflow-hidden rounded-sm group ${img.span} animate-fade-in`}
           >
             <LazyImage
               src={img.src}
@@ -113,7 +107,7 @@ export default function GalleryGrid() {
                 {img.alt}
               </span>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

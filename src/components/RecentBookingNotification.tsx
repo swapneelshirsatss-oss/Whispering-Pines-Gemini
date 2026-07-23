@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+
 import { Tag, X, Phone } from "lucide-react";
 import { RESORT_CONTACT } from "../data";
 
@@ -24,14 +24,10 @@ export default function RecentBookingNotification() {
   }, []);
 
   return (
-    <AnimatePresence>
+    <>
       {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: 50, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 20, scale: 0.9 }}
-          transition={{ type: "spring", stiffness: 300, damping: 25 }}
-          className="fixed bottom-24 left-4 z-50 md:bottom-6 md:left-6 max-w-sm w-[calc(100%-2rem)] bg-white rounded-lg shadow-2xl border border-[#c9a832]/30 p-4 flex items-start space-x-3 pointer-events-auto"
+        <div
+          className="fixed bottom-24 left-4 z-50 md:bottom-6 md:left-6 max-w-sm w-[calc(100%-2rem)] bg-white rounded-lg shadow-2xl border border-[#c9a832]/30 p-4 flex items-start space-x-3 pointer-events-auto animate-fade-in-up transition-all duration-300"
         >
           <div className="shrink-0 pt-0.5 bg-[#c9a832]/10 p-2 rounded-full">
             <Tag className="w-5 h-5 text-[#c9a832]" />
@@ -63,8 +59,8 @@ export default function RecentBookingNotification() {
           >
             <X className="w-4 h-4" />
           </button>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    </>
   );
 }

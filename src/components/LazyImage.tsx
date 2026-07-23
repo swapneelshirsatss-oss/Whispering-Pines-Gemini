@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'motion/react';
 
 interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
@@ -54,15 +53,11 @@ export default function LazyImage({
   }
 
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.7, ease: "easeOut" }}
-      className={`relative overflow-hidden ${className}`} 
+    <div 
+      className={`relative overflow-hidden animate-fade-in-up ${className}`} 
       style={{ backgroundColor: placeholderColor }}
     >
       {imgElement}
-    </motion.div>
+    </div>
   );
 }

@@ -4,7 +4,7 @@ import { RESORT_CONTACT } from "../data";
 import resortDiningHallImg from "../assets/images/Private-Dining-Area-resort-near-mukteshwar.avif?url";
 import balconyViewImg from "../assets/images/Whispering-pines-balcony-view-nanital.webp?url";
 import LazyImage from "./LazyImage";
-import { motion } from "motion/react";
+
 
 interface AboutSectionProps {
   hideLink?: boolean;
@@ -41,12 +41,8 @@ export default function AboutSection({
     <section id="about" className="py-20 lg:py-28 bg-[#FAF9F6]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Intro Grid */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
+        <div 
+          className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center animate-fade-in"
         >
           {/* Narrative - Left */}
           <div className="lg:col-span-7 space-y-6">
@@ -120,7 +116,7 @@ export default function AboutSection({
             {/* Background Decorative Frame */}
             <div className="absolute -top-4 -right-4 h-full w-full border border-[#c9a832]/50 -z-10 rounded-sm" />
           </div>
-        </motion.div>
+        </div>
 
         {!hideLink && (
           <div className="mt-16 text-center">

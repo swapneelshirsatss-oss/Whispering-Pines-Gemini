@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckCircle2, ShieldCheck, Dumbbell, UtensilsCrossed, BedDouble, ConciergeBell, PartyPopper, Gift } from 'lucide-react';
-import { motion } from "motion/react";
+
 import LazyImage from "./LazyImage";
 import wellnessImg from "../assets/images/outside-view-from-resort-hotel.avif?url";
 import diningImg from "../assets/images/Restaurant-cafe-ramgarh.avif?url";
