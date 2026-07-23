@@ -6,48 +6,58 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://whisperingpinesresort.in/about</loc>
+    <loc>https://whisperingpinesresort.in/about-whispering-pines-resort-ramgarh/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://whisperingpinesresort.in/stay</loc>
+    <loc>https://whisperingpinesresort.in/suites-cottages-ramgarh-resort/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://whisperingpinesresort.in/villas</loc>
+    <loc>https://whisperingpinesresort.in/private-villas-near-nainital/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://whisperingpinesresort.in/amenities</loc>
+    <loc>https://whisperingpinesresort.in/resort-amenities-mukteshwar/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://whisperingpinesresort.in/services</loc>
+    <loc>https://whisperingpinesresort.in/resort-services-ramgarh/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://whisperingpinesresort.in/experiences</loc>
+    <loc>https://whisperingpinesresort.in/things-to-do-near-mukteshwar/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://whisperingpinesresort.in/gallery</loc>
+    <loc>https://whisperingpinesresort.in/gallery/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://whisperingpinesresort.in/reviews</loc>
+    <loc>https://whisperingpinesresort.in/reviews/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://whisperingpinesresort.in/sitemap</loc>
+    <loc>https://whisperingpinesresort.in/sitemap/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://whisperingpinesresort.in/privacy-policy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://whisperingpinesresort.in/terms/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

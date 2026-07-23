@@ -1,23 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://whisperingpinesresort.in/blog</loc>
+    <loc>https://whisperingpinesresort.in/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://whisperingpinesresort.in/blog#clarks-exotica-transition</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://whisperingpinesresort.in/blog#ramgarh-fruit-bowl-of-kumaon</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://whisperingpinesresort.in/blog#winter-in-the-himalayas</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>
