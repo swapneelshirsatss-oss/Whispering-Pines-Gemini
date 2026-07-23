@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, ShieldCheck, Dumbbell, UtensilsCrossed, BedDouble, ConciergeBell, PartyPopper } from 'lucide-react';
+import { CheckCircle2, ShieldCheck, Dumbbell, UtensilsCrossed, BedDouble, ConciergeBell, PartyPopper, Gift } from 'lucide-react';
 import { motion } from "motion/react";
 import LazyImage from "./LazyImage";
 import wellnessImg from "../assets/images/outside-view-from-resort-hotel.avif?url";
@@ -7,6 +7,7 @@ import diningImg from "../assets/images/Restaurant-cafe-ramgarh.avif?url";
 import roomImg from "../assets/images/Room-interior-in-resort-near-nanital.avif?url";
 import servicesImg from "../assets/images/lounge-area-inwhispering-pines-resort-by-casa-de-bello.avif?url";
 import eventsImg from "../assets/images/banquest-hall-in-resort.avif?url";
+import packagesImg from "../assets/images/Group_booking_nainital_resort.avif?url";
 
 const SEO_SERVICES_CONTENT = [
   {
@@ -91,6 +92,22 @@ const SEO_SERVICES_CONTENT = [
       "Unforgettable Celebrations at Ramgarh's Most Scenic Family Resort Near Nainital"
     ],
     eeat: "Executing flawless mountain events requires immense logistical expertise. Our dedicated event management team has successfully hosted dozens of seamless high-altitude celebrations, guaranteeing an immaculate experience for you and your guests."
+  },
+  {
+    id: "packages",
+    sectionTitle: "Curated Packages & Retreats",
+    h2: "Special Group Packages, Corporate Conferences & Winter Honeymoons in Ramgarh",
+    icon: <Gift className="w-6 h-6 text-[#c9a832] mb-4" />,
+    image: packagesImg,
+    alt: "Group booking and corporate events setup at Whispering Pines Resort Ramgarh",
+    h3s: [
+      "Romantic Winter Honeymoon Packages — Cozy Fireplaces, Private Dinners & Snowfall",
+      "Special Group Booking Deals — Ideal for Multi-Generational Family Getaways",
+      "Professional Corporate Conference Packages — Meeting Venues & Team Building Activities",
+      "Dedicated Event Manager for Corporate Retreats — Seamless Execution from Start to Finish",
+      "Custom Itineraries & Group Sightseeing — Tailored for Your Team or Family's Unique Needs"
+    ],
+    eeat: "We recognize that corporate retreats and honeymoons require entirely different atmospheres. Our specialized hospitality managers meticulously tailor the privacy, dining, and activities to ensure your specific group dynamic is perfectly accommodated."
   }
 ];
 
