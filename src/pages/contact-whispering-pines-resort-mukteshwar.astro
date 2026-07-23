@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Contact from '../react-pages/Contact';
+import FAQSchemaContact from '../components/FAQSchemaContact.astro';
 ---
 
 <Layout
@@ -8,4 +9,5 @@ import Contact from '../react-pages/Contact';
   description="Contact Whispering Pines Resort in Ramgarh, Mukteshwar. Find our address, phone number, WhatsApp contact, and FAQs for a seamless direct booking experience."
 >
   <Contact client:load />
+  <FAQSchemaContact />
 </Layout>
