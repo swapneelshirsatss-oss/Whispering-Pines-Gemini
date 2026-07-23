@@ -21,6 +21,7 @@ export default function HtmlSitemap() {
       links: [
         { name: "Photo Gallery", url: "/gallery" },
         { name: "Guest Reviews", url: "/reviews" },
+        { name: "Contact Us", url: "/contact-whispering-pines-resort-mukteshwar" },
       ]
     },
     {

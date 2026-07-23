@@ -105,6 +105,7 @@ export default function FooterSection() {
               <a href="/gallery/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Gallery</a>
               <a href="/reviews/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Guest Reviews</a>
               <a href="/blog/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Journal</a>
+              <a href="/contact-whispering-pines-resort-mukteshwar/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Contact Us</a>
             </div>
           </div>
 

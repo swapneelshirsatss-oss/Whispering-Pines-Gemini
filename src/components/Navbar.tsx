@@ -27,6 +27,7 @@ export default function Navbar() {
     { name: "Experiences", href: "/things-to-do-near-mukteshwar/" },
     { name: "Gallery", href: "/gallery/" },
     { name: "Reviews", href: "/reviews/" },
+    { name: "Contact", href: "/contact-whispering-pines-resort-mukteshwar/" },
   ];
 
   const handleNavBookingClick = () => {
