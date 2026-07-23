@@ -88,7 +88,7 @@ export default function LocalExperiencesList({
         {!hideLink && (
           <div className="mt-16 text-center">
             <a
-              href="/experiences"
+              href="/things-to-do-near-mukteshwar"
               className="inline-flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 bg-transparent border border-[#c9a832] text-[#1B3322] hover:bg-[#c9a832] hover:text-[#FAF9F6] font-mono text-[11px] sm:text-xs font-semibold uppercase tracking-widest transition-colors duration-300 rounded-sm group"
             >
               View All Excursions

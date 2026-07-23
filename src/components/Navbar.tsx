@@ -21,10 +21,10 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "The Resort", href: "/#about" },
-    { name: "Cottages & Suites", href: "/stay" },
-    { name: "Amenities", href: "/amenities" },
-    { name: "Experiences", href: "/#experiences" },
+    { name: "The Resort", href: "/about-whispering-pines-resort-ramgarh" },
+    { name: "Cottages & Suites", href: "/suites-cottages-ramgarh-resort" },
+    { name: "Amenities", href: "/resort-amenities-mukteshwar" },
+    { name: "Experiences", href: "/things-to-do-near-mukteshwar" },
     { name: "Gallery", href: "/gallery" },
     { name: "Reviews", href: "/reviews" },
   ];
@@ -54,6 +54,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
+                data-astro-prefetch="hover"
                 onClick={(e) => {
                   if (link.href.startsWith('/#') && window.location.pathname === '/') {
                     e.preventDefault();
@@ -127,6 +128,7 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
+              data-astro-prefetch="hover"
               onClick={(e) => {
                 if (link.href.startsWith('/#') && window.location.pathname === '/') {
                   e.preventDefault();

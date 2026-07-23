@@ -7,12 +7,12 @@ export default function HtmlSitemap() {
       category: "Main Pages",
       links: [
         { name: "Home", url: "/" },
-        { name: "About Us", url: "/about" },
-        { name: "Suites & Cottages", url: "/stay" },
-        { name: "Premium Villas", url: "/villas" },
-        { name: "Amenities", url: "/amenities" },
-        { name: "Services", url: "/services" },
-        { name: "Local Experiences", url: "/experiences" },
+        { name: "About Us", url: "/about-whispering-pines-resort-ramgarh" },
+        { name: "Suites & Cottages", url: "/suites-cottages-ramgarh-resort" },
+        { name: "Premium Villas", url: "/private-villas-near-nainital" },
+        { name: "Amenities", url: "/resort-amenities-mukteshwar" },
+        { name: "Services", url: "/resort-services-ramgarh" },
+        { name: "Local Experiences", url: "/things-to-do-near-mukteshwar" },
         { name: "Journal & Blog", url: "/blog" },
       ]
     },

@@ -8,6 +8,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://whisperingpinesresort.in',
   integrations: [react()],
+  prefetch: true,
 
   vite: {
     plugins: [tailwindcss()]
