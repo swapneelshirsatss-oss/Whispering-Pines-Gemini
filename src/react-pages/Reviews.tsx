@@ -58,7 +58,7 @@ export default function Reviews() {
 
       {/* Render the actual TestimonialList component */}
         <div className="border-t border-[#FAF9F6]/10 pt-4 pb-20">
-          <TestimonialList />
+          <TestimonialList layout="grid" />
         </div>
       </main>
       <FooterSection />

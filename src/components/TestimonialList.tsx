@@ -13,7 +13,11 @@ const getAvatarColor = (name: string) => {
   return avatarColors[Math.abs(hash) % avatarColors.length];
 };
 
-export default function TestimonialList() {
+interface TestimonialListProps {
+  layout?: "carousel" | "grid";
+}
+
+export default function TestimonialList({ layout = "carousel" }: TestimonialListProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -59,10 +63,12 @@ export default function TestimonialList() {
           </p>
         </div>
 
-        {/* Carousel Container */}
-        <div className="relative max-w-5xl mx-auto">
-          {/* Controls */}
-          <div className="absolute top-1/2 -translate-y-1/2 -left-4 md:-left-12 z-10 hidden sm:block">
+        {/* Container */}
+        <div className={`relative ${layout === "carousel" ? "max-w-5xl mx-auto" : "max-w-7xl mx-auto"}`}>
+          {/* Controls - Only show in carousel mode */}
+          {layout === "carousel" && (
+            <>
+              <div className="absolute top-1/2 -translate-y-1/2 -left-4 md:-left-12 z-10 hidden sm:block">
             <button
               onClick={() => scroll('left')}
               disabled={!canScrollLeft}
@@ -87,18 +93,28 @@ export default function TestimonialList() {
               <ChevronRight className="w-6 h-6" />
             </button>
           </div>
+          </>
+          )}
 
-          {/* Reviews Scroll Track */}
+          {/* Reviews List / Track */}
           <div 
             ref={scrollContainerRef}
-            onScroll={checkScroll}
-            className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-6 pb-8 -mx-4 px-4 sm:mx-0 sm:px-0"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            onScroll={layout === "carousel" ? checkScroll : undefined}
+            className={
+              layout === "carousel"
+                ? "flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-6 pb-8 -mx-4 px-4 sm:mx-0 sm:px-0"
+                : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            }
+            style={layout === "carousel" ? { scrollbarWidth: 'none', msOverflowStyle: 'none' } : undefined}
           >
             {TESTIMONIALS.map((review, idx) => (
               <div
                 key={idx}
-                className="w-[85vw] sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] shrink-0 snap-center bg-white border border-[#e8eaed] p-5 sm:p-6 rounded-xl shadow-sm flex flex-col justify-start"
+                className={
+                  layout === "carousel"
+                    ? "w-[85vw] sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] shrink-0 snap-center bg-white border border-[#e8eaed] p-5 sm:p-6 rounded-xl shadow-sm flex flex-col justify-start"
+                    : "bg-white border border-[#e8eaed] p-5 sm:p-6 rounded-xl shadow-sm flex flex-col justify-start w-full h-full"
+                }
               >
                 {/* Google My Business Review Header */}
                 <div className="flex items-center space-x-3 mb-3">
@@ -142,11 +158,13 @@ export default function TestimonialList() {
           </div>
           
           {/* Mobile Swipe Indicator */}
-          <div className="flex justify-center mt-6 sm:hidden space-x-1.5 flex-wrap px-4 gap-y-2">
-            {TESTIMONIALS.map((_, i) => (
-              <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${i === 0 ? 'w-6 bg-[#4285F4]' : 'w-1.5 bg-[#e8eaed]'}`} />
-            ))}
-          </div>
+          {layout === "carousel" && (
+            <div className="flex justify-center mt-6 sm:hidden space-x-1.5 flex-wrap px-4 gap-y-2">
+              {TESTIMONIALS.map((_, i) => (
+                <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${i === 0 ? 'w-6 bg-[#4285F4]' : 'w-1.5 bg-[#e8eaed]'}`} />
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Third-Party Review Widget Placeholder */}
