@@ -1,13 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import About from '../react-pages/About.tsx';
+import Breadcrumbs from "../components/Breadcrumbs";
+import AboutSection from "../components/AboutSection.astro";
+import SEOAboutContent from "../components/SEOAboutContent.astro";
+import WhatsAppButton from "../components/WhatsAppButton";
+import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
 <Layout 
-
-  title="Best Resort in Ramgarh, Uttarakhand | Whispering Pines by Casa De Bello" 
-  description="Discover Whispering Pines Resort by Casa De Bello (formerly Clarks Exotica near Mukteshwar)—the best resort in Ramgarh, Uttarakhand. Book direct & save 20%."
-
+  title="About Us | Whispering Pines Resort Ramgarh by Casa De Bello" 
+  description="Discover the legacy of Whispering Pines (formerly Clarks Exotica) - the best resort in Ramgarh. Experience authentic Kumaoni architecture, luxury rooms, and pristine nature."
 >
-  <About client:load />
+  <div class="relative w-full text-[#2C3531] overflow-x-hidden pb-20 md:pb-0 selection:bg-[#c9a832] selection:text-[#1B3322]">
+    <Breadcrumbs client:load />
+    
+    <main>
+      <AboutSection 
+        hideLink={true}
+        asH1={true}
+        title="best resort in Ramgarh, Uttarakhand — Whispering Pines by Casa De Bello"
+      />
+      <SEOAboutContent />
+    </main>
+    
+    <WhatsAppButton client:load />
+    <RecentBookingNotification client:load />
+  </div>
 </Layout>

@@ -14,6 +14,9 @@ const siteBase = 'https://whisperingpinesresort.in';
 const canonicalURL = new URL(canonical || Astro.url.pathname, siteBase);
 
 import BreadcrumbSchema from '../components/BreadcrumbSchema.astro';
+import Navbar from '../components/Navbar.tsx';
+import FooterSection from '../components/FooterSection.astro';
+import Logo from '../components/Logo.astro';
 ---
 
 <!doctype html>
@@ -82,6 +85,17 @@ import BreadcrumbSchema from '../components/BreadcrumbSchema.astro';
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PL8FVLPX"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <slot />
+    
+    <div class="pt-24 bg-[#FAF9F6] min-h-screen flex flex-col">
+      <Navbar client:load>
+        <Logo />
+      </Navbar>
+      
+      <main class="flex-grow">
+        <slot />
+      </main>
+
+      <FooterSection />
+    </div>
   </body>
 </html>

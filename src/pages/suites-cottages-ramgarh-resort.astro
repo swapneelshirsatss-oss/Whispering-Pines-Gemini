@@ -1,12 +1,31 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Stay from '../react-pages/Stay.tsx';
+import Breadcrumbs from "../components/Breadcrumbs";
+import RoomInventoryList from "../components/RoomInventoryList";
+import BookingInteractiveForm from "../components/BookingInteractiveForm";
+import WhatsAppButton from "../components/WhatsAppButton";
+import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
 <Layout 
-
-  title="Suites & Cottages | Whispering Pines Resort Mukteshwar" 
-  description="Explore our authentic pine wood suites and premium family cottages at Whispering Pines Resort in Malla Ramgarh. Perfect for couples and families."
+  title="Suites & Cottages | Luxury Rooms in Ramgarh & Mukteshwar" 
+  description="Book luxury suites, cottages, and family rooms at Whispering Pines Resort. Enjoy Himalayan views, premium amenities, and private balconies."
 >
-  <Stay client:load />
+  <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
+    <Breadcrumbs client:load />
+    
+    <main class="bg-[#1B3322]/5">
+      <RoomInventoryList 
+        client:load
+        hideLink={true} 
+        initialFilter="all" 
+        title="Ramgarh Resort Booking — Choose Your Suite, Cottage or Private Villa"
+        isH1={true}
+      />
+      <BookingInteractiveForm title="Complete Your vacation Booking" client:load />
+    </main>
+
+    <WhatsAppButton client:load />
+    <RecentBookingNotification client:load />
+  </div>
 </Layout>

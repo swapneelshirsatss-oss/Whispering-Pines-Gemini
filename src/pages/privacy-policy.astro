@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import LegalDocument from '../react-pages/LegalDocument';
 
 const privacyContent = `
 <h2>1. Introduction</h2>
@@ -34,10 +33,29 @@ const privacyContent = `
   title="Privacy Policy | Whispering Pines Resort"
   description="Read the privacy policy for Whispering Pines Resort to understand how we collect, use, and protect your data when booking your stay."
 >
-  <LegalDocument 
-    client:load 
-    title="Privacy Policy" 
-    lastUpdated="March 1, 2024" 
-    contentHtml={privacyContent} 
-  />
+  <div class="pt-24 pb-20 bg-[#FAF9F6] min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      {/* Header */}
+      <div class="mb-12 border-b border-[#2C3531]/10 pb-8">
+        <h1 class="font-display text-4xl sm:text-5xl font-bold text-[#1B3322] mb-4">
+          Privacy Policy
+        </h1>
+        <p class="text-sm text-[#2C3531]/60 font-mono uppercase tracking-wider">
+          Last Updated: March 1, 2024
+        </p>
+      </div>
+
+      {/* Content Body */}
+      <div 
+        class="prose prose-lg prose-stone max-w-none 
+                   prose-headings:font-display prose-headings:text-[#1B3322] prose-headings:font-bold
+                   prose-p:font-sans prose-p:text-[#2C3531]/90 prose-p:leading-relaxed
+                   prose-a:text-[#c9a832] prose-a:no-underline hover:prose-a:underline
+                   prose-li:text-[#2C3531]/90"
+        set:html={privacyContent}
+      />
+      
+    </div>
+  </div>
 </Layout>

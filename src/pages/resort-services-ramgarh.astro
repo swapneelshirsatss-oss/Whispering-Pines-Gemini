@@ -1,12 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Services from '../react-pages/Services.tsx';
+import Breadcrumbs from "../components/Breadcrumbs";
+import ServicesSection from "../components/ServicesSection.astro";
+import SEOServicesContent from "../components/SEOServicesContent.astro";
+import WhatsAppButton from "../components/WhatsAppButton";
+import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
 <Layout 
-  title="Stay in Ramgarh | Premium Resort Services for Families Near Nainital" 
-  description="Plan your stay in Ramgarh with premium resort services — dining, bonfire & BBQ evenings etc. for a family vacation in Ramgarh, near Nainital Uttarakhand."
-
+  title="Resort Services | Family Resort near Nainital" 
+  description="Discover premium services at Whispering Pines Resort. From guided treks and orchard walks to in-room dining and corporate event management."
 >
-  <Services client:load />
+  <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
+    <Breadcrumbs client:load />
+    
+    <main class="bg-[#FAF9F6]">
+      <ServicesSection 
+        hideLink={true}
+        asH1={true}
+        title="Your Stay in Ramgarh, Elevated — Premium Services, Real Mountain Experiences"
+      />
+      <SEOServicesContent />
+    </main>
+
+    <WhatsAppButton client:load />
+    <RecentBookingNotification client:load />
+  </div>
 </Layout>

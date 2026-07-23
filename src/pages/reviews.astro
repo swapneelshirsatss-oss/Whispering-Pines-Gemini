@@ -1,14 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Reviews from '../react-pages/Reviews';
-import ResortLodgingSchema from '../components/ResortLodgingSchema.astro';
+import Breadcrumbs from "../components/Breadcrumbs";
+import ReviewsHeader from "../components/ReviewsHeader";
+import TestimonialList from "../components/TestimonialList";
+import WhatsAppButton from "../components/WhatsAppButton";
+import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
-<Layout
-
-  title="Guest Reviews & Testimonials | Whispering Pines Resort"
-  description="Read genuine reviews from families, couples, and solo travelers who have stayed at Whispering Pines Resort in Ramgarh. See why we are rated as the best mountain getaway near Nainital."
+<Layout 
+  title="Guest Reviews & Testimonials | Whispering Pines Resort Ramgarh" 
+  description="Read verified guest reviews for Whispering Pines Resort. See why families, couples, and corporate groups rate us the best resort in Ramgarh, Uttarakhand."
 >
-  <Reviews client:load />
-  <ResortLodgingSchema />
+  <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
+    <Breadcrumbs client:load />
+    
+    <main class="pt-24 bg-[#1B3322]">
+      <ReviewsHeader client:load />
+
+      <div class="border-t border-[#FAF9F6]/10 pt-4 pb-20">
+        <TestimonialList layout="grid" client:load />
+      </div>
+    </main>
+
+    <WhatsAppButton client:load />
+    <RecentBookingNotification client:load />
+  </div>
 </Layout>

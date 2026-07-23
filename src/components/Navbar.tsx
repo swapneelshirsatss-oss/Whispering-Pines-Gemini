@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Phone, Menu, X, ArrowUpRight } from 'lucide-react';
 import { RESORT_CONTACT, BOOKING_ENGINE_URL } from "../data";
-import Logo from "./Logo";
 import { trackAdsConversion } from "../utils/analytics";
 
-export default function Navbar() {
+interface NavbarProps {
+  children?: React.ReactNode;
+}
+
+export default function Navbar({ children }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -45,7 +48,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Brand Identity with Dynamic Golden Emblem */}
           <a href="/" className="flex items-center gap-2 lg:gap-3 group z-50">
-            <Logo />
+            {children}
           </a>
 
           {/* Desktop Navigation Links */}

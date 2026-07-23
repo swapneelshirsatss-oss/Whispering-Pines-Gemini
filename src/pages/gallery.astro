@@ -1,11 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Gallery from '../react-pages/Gallery';
+import Breadcrumbs from "../components/Breadcrumbs";
+import GalleryGrid from "../components/GalleryGrid";
+import WhatsAppButton from "../components/WhatsAppButton";
+import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
-<Layout
-  title="Photo Gallery | Whispering Pines Resort Ramgarh"
-  description="Take a visual journey through Whispering Pines Resort near Nainital & Mukteshwar. View our premium villas, deluxe skylight suites, family cottages, and stunning 180° Himalayan panoramas."
+<Layout 
+  title="Photo Gallery | Whispering Pines Resort Ramgarh" 
+  description="Explore the photo gallery of Whispering Pines Resort in Malla Ramgarh. View our premium rooms, private villas, dining area, and 180-degree Himalayan views."
 >
-  <Gallery client:load />
+  <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
+    <Breadcrumbs client:load />
+    <main class="pt-24 pb-20 bg-[#FAF9F6]">
+      <GalleryGrid client:load />
+    </main>
+    <WhatsAppButton client:load />
+    <RecentBookingNotification client:load />
+  </div>
 </Layout>

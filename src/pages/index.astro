@@ -1,14 +1,67 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Home from '../react-pages/Home.tsx';
 import ResortLodgingSchema from '../components/ResortLodgingSchema.astro';
+
+import Breadcrumbs from "../components/Breadcrumbs";
+import Hero from "../components/Hero";
+import AboutSection from "../components/AboutSection.astro";
+import RoomInventoryList from "../components/RoomInventoryList";
+import AmenitiesList from "../components/AmenitiesList.astro";
+import ServicesSection from "../components/ServicesSection.astro";
+import LocalExperiencesList from "../components/LocalExperiencesList.astro";
+import BookingInteractiveForm from "../components/BookingInteractiveForm";
+import OTABadges from "../components/OTABadges.astro";
+import TestimonialList from "../components/TestimonialList";
+import FAQAccordion from "../components/FAQAccordion";
+import WhatsAppButton from "../components/WhatsAppButton";
+import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
 <Layout 
-
   title="Resort in Ramgarh | Best Mountain Resort Near Nainital & Mukteshwar" 
   description="Best resort in Ramgarh Uttarakhand for families — 180° Nanda Devi views, private villa, pool & fruit orchards. Near Nainital & Mukteshwar. Book direct on WhatsApp. Best price guaranteed."
 >
-  <Home client:load />
+  <div class="relative w-full text-[#2C3531] overflow-x-hidden pb-20 md:pb-0 selection:bg-[#c9a832] selection:text-[#1B3322]">
+    {/* Breadcrumb Navigation */}
+    <Breadcrumbs client:load />
+
+    {/* Hero Presentation Block */}
+    <Hero client:load />
+
+    <main>
+      {/* About Sanctuary Story Section */}
+      <AboutSection />
+
+      {/* Complete Room, Suite & Cottage Inventory Cards */}
+      <RoomInventoryList client:load />
+
+      {/* General Amenities */}
+      <AmenitiesList />
+
+      {/* Premium Resort Services */}
+      <ServicesSection />
+
+      <OTABadges />
+
+      {/* Local Destinations */}
+      <LocalExperiencesList />
+
+      {/* Booking Form */}
+      <BookingInteractiveForm client:load />
+
+      {/* Guest Reviews */}
+      <TestimonialList client:visible />
+
+      {/* FAQ Accordion panel */}
+      <FAQAccordion client:visible />
+    </main>
+
+    {/* Floating WhatsApp Button */}
+    <WhatsAppButton client:load />
+
+    {/* Social Proof Popup */}
+    <RecentBookingNotification client:load />
+  </div>
+
   <ResortLodgingSchema />
 </Layout>

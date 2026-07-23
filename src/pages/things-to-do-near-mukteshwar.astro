@@ -1,12 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Experiences from '../react-pages/Experiences.tsx';
+import Breadcrumbs from "../components/Breadcrumbs";
+import LocalExperiencesList from "../components/LocalExperiencesList.astro";
+import SEOExperiencesContent from "../components/SEOExperiencesContent.astro";
+import WhatsAppButton from "../components/WhatsAppButton";
+import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
 <Layout 
-  title="Things to Do Near Mukteshwar | Local Experiences — Whispering Pines, Ramgarh" 
-  description="Discover the best things to do in Ramgarh & near Mukteshwar. Visit historic Mukteshwar Dham, trek Bhalu Gaad falls, and explore lush fruit orchards."
-
+  title="Things to Do Near Mukteshwar | Local Sights from Ramgarh" 
+  description="Discover the best things to do near Mukteshwar and Ramgarh. From Kainchi Dham and Mukteshwar Dham Temple to Bhalu Gaad waterfalls and fruit orchard walks."
 >
-  <Experiences client:load />
+  <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
+    <Breadcrumbs client:load />
+    <main class="bg-[#FAF9F6]">
+      <LocalExperiencesList 
+        hideLink={true} 
+        asH1={true}
+        title="Things to Do Near Mukteshwar — Local Sights & Highland Experiences from Ramgarh Uttarkhand kumaon region"
+      />
+      <SEOExperiencesContent />
+    </main>
+    <WhatsAppButton client:load />
+    <RecentBookingNotification client:load />
+  </div>
 </Layout>

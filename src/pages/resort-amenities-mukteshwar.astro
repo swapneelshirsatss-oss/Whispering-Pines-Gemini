@@ -1,12 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Amenities from '../react-pages/Amenities.tsx';
+import Breadcrumbs from "../components/Breadcrumbs";
+import AmenitiesList from "../components/AmenitiesList.astro";
+import WhatsAppButton from "../components/WhatsAppButton";
+import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
 <Layout 
-
-  title="Best Resort Near Mukteshwar | Pool, Fireplace & Orchard Amenities — Whispering Pines" 
-  description="Whispering Pines is the best resort near Mukteshwar with amenities that go beyond a standard hotel — 180° Himalayan views, stone fireplace lounge, orchard walks, bonfire grounds & pet-friendly pine trails. Book direct. Save 20%."
+  title="Resort Amenities | Luxury Stay in Mukteshwar & Ramgarh" 
+  description="Explore the premium amenities at Whispering Pines Resort. Enjoy 150 Mbps Wi-Fi, mountain-view dining, bonfire evenings, and private plunge pools."
 >
-  <Amenities client:load />
+  <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
+    <Breadcrumbs client:load />
+    <main class="bg-[#1B3322]">
+      <AmenitiesList 
+        hideLink={true} 
+        title="Best Resort Near Mukteshwar — Amenities Built for a True Mountain Escape"
+        isH1={true}
+      />
+    </main>
+    <WhatsAppButton client:load />
+    <RecentBookingNotification client:load />
+  </div>
 </Layout>
