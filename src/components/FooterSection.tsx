@@ -96,15 +96,15 @@ export default function FooterSection() {
             </h4>
             <div className="grid grid-cols-2 gap-2 text-xs sm:text-sm font-sans text-[#FAF9F6]/80">
               <a href="/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Home</a>
-              <a href="/about-whispering-pines-resort-ramgarh" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">About Us</a>
-              <a href="/suites-cottages-ramgarh-resort" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Rooms & Suites</a>
-              <a href="/private-villas-near-nainital" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Premium Villas</a>
-              <a href="/resort-amenities-mukteshwar" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Amenities</a>
-              <a href="/resort-services-ramgarh" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Services</a>
-              <a href="/things-to-do-near-mukteshwar" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Local Experiences</a>
-              <a href="/gallery" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Gallery</a>
-              <a href="/reviews" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Guest Reviews</a>
-              <a href="/blog" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Journal</a>
+              <a href="/about-whispering-pines-resort-ramgarh/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">About Us</a>
+              <a href="/suites-cottages-ramgarh-resort/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Rooms & Suites</a>
+              <a href="/private-villas-near-nainital/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Premium Villas</a>
+              <a href="/resort-amenities-mukteshwar/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Amenities</a>
+              <a href="/resort-services-ramgarh/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Services</a>
+              <a href="/things-to-do-near-mukteshwar/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Local Experiences</a>
+              <a href="/gallery/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Gallery</a>
+              <a href="/reviews/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Guest Reviews</a>
+              <a href="/blog/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Journal</a>
             </div>
           </div>
 
@@ -133,11 +133,11 @@ export default function FooterSection() {
           <div className="space-y-2">
             <p>© {currentYear} Whispering Pines Resort Mukteshwar. All Rights Reserved.</p>
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-[11px]">
-              <a href="/privacy-policy" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Privacy Policy</a>
+              <a href="/privacy-policy/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Privacy Policy</a>
               <span>|</span>
-              <a href="/terms" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Terms & Conditions</a>
+              <a href="/terms/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Terms & Conditions</a>
               <span>|</span>
-              <a href="/sitemap" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Sitemap</a>
+              <a href="/sitemap/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors">Sitemap</a>
             </div>
             <p className="text-[10px] mt-2 text-white/40 max-w-2xl">
               Constructed as Casa De Bello - Whispering Pines. Malla Ramgarh Rural Estate. Operated by <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#c9a832] transition-colors">Casa De Bello - Luxury Resort Hotel in Bhowali, Nainital</a>.

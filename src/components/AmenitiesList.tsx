@@ -107,7 +107,7 @@ export default function AmenitiesList({
         {!hideLink && (
           <div className="mt-16 text-center">
             <a
-              href="/resort-amenities-mukteshwar"
+              href="/resort-amenities-mukteshwar/"
               className="inline-flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 bg-transparent border border-[#c9a832] text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] font-mono text-[11px] sm:text-xs font-semibold uppercase tracking-widest transition-colors duration-300 rounded-sm group"
             >
               View All Amenities
