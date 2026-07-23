@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckCircle2, ShieldCheck, Dumbbell, UtensilsCrossed, BedDouble, ConciergeBell, PartyPopper } from 'lucide-react';
+import { motion } from "motion/react";
 import LazyImage from "./LazyImage";
 import wellnessImg from "../assets/images/outside-view-from-resort-hotel.avif?url";
 import diningImg from "../assets/images/Restaurant-cafe-ramgarh.avif?url";
@@ -126,13 +127,19 @@ export default function SEOServicesContent() {
                 </div>
 
                 {/* Section Image */}
-                <div className="w-full h-64 md:h-[400px] rounded-sm overflow-hidden mb-10 shadow-lg">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.7, ease: "easeOut" }}
+                  className="w-full h-64 md:h-[400px] rounded-sm overflow-hidden mb-10 shadow-lg"
+                >
                   <LazyImage 
                     src={section.image} 
                     alt={section.alt}
                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" 
                   />
-                </div>
+                </motion.div>
 
                 {/* Bullets (H3s logically, visually list) */}
                 <ul className="space-y-4 mb-10">
