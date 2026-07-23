@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { motion } from 'motion/react';
 
 interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
@@ -28,21 +29,40 @@ export default function LazyImage({
     }
   }, [src]);
 
+  const imgElement = (
+    <img
+      ref={imgRef}
+      src={src}
+      alt={alt}
+      loading={priority ? 'eager' : 'lazy'}
+      fetchPriority={priority ? 'high' : 'auto'}
+      onLoad={() => setIsLoaded(true)}
+      onError={() => setIsLoaded(true)}
+      className={`${imgClassName} ${priority ? '' : 'transition-opacity duration-700 ease-out'} ${
+        isLoaded || priority ? 'opacity-100' : 'opacity-0'
+      }`}
+      {...props}
+    />
+  );
+
+  if (priority) {
+    return (
+      <div className={`relative overflow-hidden ${className}`} style={{ backgroundColor: placeholderColor }}>
+        {imgElement}
+      </div>
+    );
+  }
+
   return (
-    <div className={`relative overflow-hidden ${className}`} style={{ backgroundColor: placeholderColor }}>
-      <img
-        ref={imgRef}
-        src={src}
-        alt={alt}
-        loading={priority ? 'eager' : 'lazy'}
-        fetchPriority={priority ? 'high' : 'auto'}
-        onLoad={() => setIsLoaded(true)}
-        onError={() => setIsLoaded(true)}
-        className={`${imgClassName} ${priority ? '' : 'transition-opacity duration-700 ease-out'} ${
-          isLoaded || priority ? 'opacity-100' : 'opacity-0'
-        }`}
-        {...props}
-      />
-    </div>
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      className={`relative overflow-hidden ${className}`} 
+      style={{ backgroundColor: placeholderColor }}
+    >
+      {imgElement}
+    </motion.div>
   );
 }

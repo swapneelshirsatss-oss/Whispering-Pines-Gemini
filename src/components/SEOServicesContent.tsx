@@ -127,19 +127,13 @@ export default function SEOServicesContent() {
                 </div>
 
                 {/* Section Image */}
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.7, ease: "easeOut" }}
-                  className="w-full h-64 md:h-[400px] rounded-sm overflow-hidden mb-10 shadow-lg"
-                >
+                <div className="w-full h-64 md:h-[400px] rounded-sm overflow-hidden mb-10 shadow-lg">
                   <LazyImage 
                     src={section.image} 
                     alt={section.alt}
                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" 
                   />
-                </motion.div>
+                </div>
 
                 {/* Bullets (H3s logically, visually list) */}
                 <ul className="space-y-4 mb-10">
