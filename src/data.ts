@@ -219,6 +219,11 @@ export const RESORT_SERVICES = [
     title: "Daily Housekeeping",
     icon: "Sparkles",
     description: "Impeccable daily room cleaning and laundry services ensuring your alpine sanctuary remains pristine throughout your stay."
+  },
+  {
+    title: "In-House Restaurant & Private Sitting",
+    icon: "Coffee",
+    description: "Experience our exclusive in-house multi-cuisine restaurant featuring elegant private sitting areas perfect for intimate family dinners and quiet romantic evenings."
   }
 ];
 
