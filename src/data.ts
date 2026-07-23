@@ -254,6 +254,46 @@ export const LOCAL_EXPERIENCES: LocalExperience[] = [
     description: "Ramgarh is the 'Fruit Bowl of Kumaon'. Stroll through pathways filled with plums, peaches, apples, and apricots in full blossom.",
     tag: "Bespoke Leisure",
     image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    id: "stargazing-whispering-pines",
+    title: "Stargazing under Himalayan Skies",
+    distance: "On-site (Terrace)",
+    description: "The clear mountain air at Whispering Pines Resort offers pristine views of the night sky. Enjoy a guided stargazing session right from our terrace.",
+    tag: "Night Sky",
+    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    id: "nature-trail-mountain-walk",
+    title: "Nature Trail & Mountain Walk",
+    distance: "On-site Access",
+    description: "Explore the beautiful pine and oak forests surrounding Whispering Pines. Take a guided walk through the Ramgarh village to experience local Kumaoni life and discover hidden nature trails.",
+    tag: "Nature Walk",
+    image: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    id: "guided-treks-nature-retreats",
+    title: "Guided Treks & Nature Retreats",
+    distance: "Nearby Trails",
+    description: "Embark on curated nature retreats and guided trekking experiences through scenic Himalayan trails near Mukteshwar, designed for both beginners and seasoned adventurers. Personally hosted and guided by Harsh & Priyanka.",
+    tag: "Adventure",
+    image: "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    id: "curated-bonfire-bbq",
+    title: "Curated Experiences: Bonfires, BBQ & Stargazing",
+    distance: "On-site",
+    description: "Experience clear-sky stargazing and curated outdoor bonfires & barbeque at Whispering Pines Resort. Book direct for complimentary winter camping access and hot local Kumaoni snacks.",
+    tag: "Evening Leisure",
+    image: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    id: "group-yoga-sessions",
+    title: "Special Yoga Sessions For Groups",
+    distance: "On-site",
+    description: "Rejuvenate your mind and body with our guided group yoga sessions amidst the serene mountain environment of Whispering Pines Ramgarh.",
+    tag: "Wellness",
+    image: "https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?auto=format&fit=crop&q=80&w=800"
   }
 ];
 
