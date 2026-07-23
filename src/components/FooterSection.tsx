@@ -1,5 +1,5 @@
 import React from "react";
-import { MapPin, Phone, Mail, ArrowUpRight, ExternalLink, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import { MapPin, Phone, Mail, ArrowUpRight, ExternalLink } from 'lucide-react';
 import { RESORT_CONTACT } from "../data";
 import Logo from "./Logo";
 
@@ -28,23 +28,23 @@ export default function FooterSection() {
             {RESORT_CONTACT.socials && (
               <div className="flex items-center gap-4 pt-2">
                 {RESORT_CONTACT.socials.facebook && (
-                  <a href={RESORT_CONTACT.socials.facebook} target="_blank" rel="noopener noreferrer" className="text-[#FAF9F6]/60 hover:text-[#c9a832] transition-colors" aria-label="Facebook">
-                    <Facebook className="w-4 h-4" />
+                  <a href={RESORT_CONTACT.socials.facebook} target="_blank" rel="noopener noreferrer" className="text-[#FAF9F6]/60 hover:text-[#c9a832] transition-colors text-xs font-bold tracking-widest font-mono" aria-label="Facebook">
+                    FB
                   </a>
                 )}
                 {RESORT_CONTACT.socials.instagram && (
-                  <a href={RESORT_CONTACT.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-[#FAF9F6]/60 hover:text-[#c9a832] transition-colors" aria-label="Instagram">
-                    <Instagram className="w-4 h-4" />
+                  <a href={RESORT_CONTACT.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-[#FAF9F6]/60 hover:text-[#c9a832] transition-colors text-xs font-bold tracking-widest font-mono" aria-label="Instagram">
+                    IG
                   </a>
                 )}
                 {RESORT_CONTACT.socials.twitter && (
-                  <a href={RESORT_CONTACT.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-[#FAF9F6]/60 hover:text-[#c9a832] transition-colors" aria-label="Twitter">
-                    <Twitter className="w-4 h-4" />
+                  <a href={RESORT_CONTACT.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-[#FAF9F6]/60 hover:text-[#c9a832] transition-colors text-xs font-bold tracking-widest font-mono" aria-label="Twitter">
+                    TW
                   </a>
                 )}
                 {RESORT_CONTACT.socials.youtube && (
-                  <a href={RESORT_CONTACT.socials.youtube} target="_blank" rel="noopener noreferrer" className="text-[#FAF9F6]/60 hover:text-[#c9a832] transition-colors" aria-label="Youtube">
-                    <Youtube className="w-4 h-4" />
+                  <a href={RESORT_CONTACT.socials.youtube} target="_blank" rel="noopener noreferrer" className="text-[#FAF9F6]/60 hover:text-[#c9a832] transition-colors text-xs font-bold tracking-widest font-mono" aria-label="Youtube">
+                    YT
                   </a>
                 )}
                 {RESORT_CONTACT.socials.tripadvisor && (
