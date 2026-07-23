@@ -1,5 +1,11 @@
 import React from 'react';
 import { CheckCircle2, ShieldCheck, Dumbbell, UtensilsCrossed, BedDouble, ConciergeBell, PartyPopper } from 'lucide-react';
+import LazyImage from "./LazyImage";
+import wellnessImg from "../assets/images/outside-view-from-resort-hotel.avif?url";
+import diningImg from "../assets/images/Restaurant-cafe-ramgarh.avif?url";
+import roomImg from "../assets/images/Room-interior-in-resort-near-nanital.avif?url";
+import servicesImg from "../assets/images/lounge-area-inwhispering-pines-resort-by-casa-de-bello.avif?url";
+import eventsImg from "../assets/images/banquest-hall-in-resort.avif?url";
 
 const SEO_SERVICES_CONTENT = [
   {
@@ -7,6 +13,8 @@ const SEO_SERVICES_CONTENT = [
     sectionTitle: "Wellness & Recreation",
     h2: "Activities & Entertainment That Make Your Ramgarh Stay Unforgettable",
     icon: <Dumbbell className="w-6 h-6 text-[#c9a832] mb-4" />,
+    image: wellnessImg,
+    alt: "Beautiful outdoor view from Whispering Pines Resort highlighting the natural surroundings for wellness activities",
     h3s: [
       "Guided Nature Treks Through Malla Ramgarh's Pine & Deodar Forest Trails",
       "ATV Rides & Zip-Lining — Adventure Sports with Himalayan Views",
@@ -21,6 +29,8 @@ const SEO_SERVICES_CONTENT = [
     sectionTitle: "Dining & Culinary",
     h2: "Farm-Fresh Kumaoni Dining & Multi-Cuisine Meals — Cooked on the Mountain",
     icon: <UtensilsCrossed className="w-6 h-6 text-[#c9a832] mb-4" />,
+    image: diningImg,
+    alt: "Elegant in-house restaurant cafe at Whispering Pines Resort in Ramgarh",
     h3s: [
       "24-Hour In-Room Dining — Meals, Snacks & Midnight Cravings Delivered Fresh",
       "Open-Air Restaurant with Panoramic Himalayan Views & Multi-Cuisine Buffet",
@@ -35,6 +45,8 @@ const SEO_SERVICES_CONTENT = [
     sectionTitle: "Room Amenities & Comfort",
     h2: "Room Amenities Designed for Comfort, Connectivity & Complete Relaxation",
     icon: <BedDouble className="w-6 h-6 text-[#c9a832] mb-4" />,
+    image: roomImg,
+    alt: "Luxurious wooden room interior at Whispering Pines Resort",
     h3s: [
       "In-Room Dining Service — Hot Meals Served on Your Private Balcony",
       "150 Mbps High-Speed Wi-Fi, Smart TV & USB Ports Throughout the Property",
@@ -49,6 +61,8 @@ const SEO_SERVICES_CONTENT = [
     sectionTitle: "Guest Services & Conveniences",
     h2: "Effortless Guest Services — So You Focus Only on Your Ramgarh Stay",
     icon: <ConciergeBell className="w-6 h-6 text-[#c9a832] mb-4" />,
+    image: servicesImg,
+    alt: "Cozy indoor lounge area at Whispering Pines Resort by Casa de Bello",
     h3s: [
       "24/7 Front Desk, Tour Assistance & Luggage Storage — Always at Your Service",
       "Airport Shuttle, Valet Parking & Electric Vehicle Charging on Property",
@@ -66,6 +80,8 @@ const SEO_SERVICES_CONTENT = [
     sectionTitle: "Events & Outdoor Lawn",
     h2: "2,200 Sq Ft Himalayan Lawn — Weddings, Events & Celebrations in Ramgarh",
     icon: <PartyPopper className="w-6 h-6 text-[#c9a832] mb-4" />,
+    image: eventsImg,
+    alt: "Spacious banquet hall setup for events at Whispering Pines Resort",
     h3s: [
       "Nanda Devi Range as Your Backdrop — Outdoor Varmala & Sunset Cocktail Setup",
       "Expansive Green Lawn Facing the Himalayas — Ideal for Open-Air Dinners",
@@ -107,6 +123,15 @@ export default function SEOServicesContent() {
                   <h2 className="font-display text-2xl md:text-3xl font-bold text-[#1B3322] leading-tight">
                     {section.h2}
                   </h2>
+                </div>
+
+                {/* Section Image */}
+                <div className="w-full h-64 md:h-[400px] rounded-sm overflow-hidden mb-10 shadow-lg">
+                  <LazyImage 
+                    src={section.image} 
+                    alt={section.alt}
+                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" 
+                  />
                 </div>
 
                 {/* Bullets (H3s logically, visually list) */}
