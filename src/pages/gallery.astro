@@ -4,6 +4,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import GalleryGrid from "../components/GalleryGrid";
 import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
+import GallerySchema from "../components/GallerySchema.astro";
 ---
 
 <Layout 
@@ -18,4 +19,5 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
     <WhatsAppButton client:load />
     <RecentBookingNotification client:load />
   </div>
+  <GallerySchema />
 </Layout>
