@@ -15,6 +15,26 @@ import TestimonialList from "../components/TestimonialList";
 import FAQAccordion from "../components/FAQAccordion";
 import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
+
+import { getImage } from "astro:assets";
+import heroImgSrc from "../assets/images/Whispering-pines-balcony-view-nanital.webp";
+import villaSuiteImg from "../assets/images/villa_in_nanital.avif";
+import cedarSuiteImg from "../assets/images/Delux_room_Whispering_pines_mukteshwar.avif";
+import orchardRoomImg from "../assets/images/Family_Twin Room_Near_nainital.avif";
+import familyTwinImg from "../assets/images/Group_booking_nainital_resort.avif";
+
+const optimizedHeroImage = await getImage({ src: heroImgSrc, format: "webp", width: 1920 });
+const optVilla = await getImage({ src: villaSuiteImg, format: "webp", width: 800 });
+const optCedar = await getImage({ src: cedarSuiteImg, format: "webp", width: 800 });
+const optOrchard = await getImage({ src: orchardRoomImg, format: "webp", width: 800 });
+const optFamily = await getImage({ src: familyTwinImg, format: "webp", width: 800 });
+
+const roomImages = {
+  "entire-cottage": optVilla.src,
+  "delux-room": optCedar.src,
+  "orchard-room": optOrchard.src,
+  "cedar-room": optFamily.src,
+};
 ---
 
 <Layout 
@@ -26,14 +46,14 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
     <Breadcrumbs client:load />
 
     {/* Hero Presentation Block */}
-    <Hero client:load />
+    <Hero client:load optimizedImage={optimizedHeroImage.src} />
 
     <main>
       {/* About Sanctuary Story Section */}
       <AboutSection />
 
       {/* Complete Room, Suite & Cottage Inventory Cards */}
-      <RoomInventoryList client:load />
+      <RoomInventoryList client:visible optimizedImages={roomImages} />
 
       {/* General Amenities */}
       <AmenitiesList />
@@ -47,7 +67,7 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
       <LocalExperiencesList />
 
       {/* Booking Form */}
-      <BookingInteractiveForm client:load />
+      <BookingInteractiveForm client:visible />
 
       {/* Guest Reviews */}
       <TestimonialList client:visible />
@@ -57,7 +77,7 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
     </main>
 
     {/* Floating WhatsApp Button */}
-    <WhatsAppButton client:load />
+    <WhatsAppButton client:idle />
 
     {/* Social Proof Popup */}
     <RecentBookingNotification client:load />

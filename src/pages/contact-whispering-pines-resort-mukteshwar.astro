@@ -6,8 +6,9 @@ import FAQAccordion from "../components/FAQAccordion";
 ---
 
 <Layout 
-  title="Contact & Location | Whispering Pines Resort near Nainital" 
-  description="Contact Whispering Pines Resort in Malla Ramgarh. Direct WhatsApp booking, resort location map, and directions from Bhowali-Ramgarh-Mukteshwar Road."
+  title="Contact Whispering Pines Resort | Book Your Ramgarh Stay on WhatsApp" 
+  description="Contact Whispering Pines Resort by Casa De Bello — call or WhatsApp to book your stay in Ramgarh near Nainital & Mukteshwar. Best price guaranteed"
+  canonical="/contact-whispering-pines-resort-mukteshwar/"
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
     {/* Hero Section */}
@@ -18,7 +19,7 @@ import FAQAccordion from "../components/FAQAccordion";
             Reach Out To Us
           </span>
           <h1 class="font-display text-4xl sm:text-5xl font-bold text-[#FAF9F6] mb-6">
-            Contact Whispering Pines
+            Contact Whispering Pines Resort — Book Your Ramgarh Stay Directly
           </h1>
           <div class="w-16 h-[2px] bg-[#c9a832] mx-auto mb-6" />
           <p class="text-[#FAF9F6]/80 text-lg max-w-2xl mx-auto font-sans">
@@ -28,15 +29,39 @@ import FAQAccordion from "../components/FAQAccordion";
       </div>
     </section>
 
+    {/* Book Direct Section (SEO) */}
+    <section class="py-12 bg-white border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-10 text-center">
+          <h2 class="text-2xl sm:text-3xl font-display font-bold text-[#1B3322] mb-4">Book Direct on WhatsApp — Best Price Guaranteed on Every Ramgarh Reservation</h2>
+          <div class="w-16 h-[2px] bg-[#c9a832] mx-auto" />
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-[#FAF9F6] p-6 rounded-lg text-center border border-gray-100 shadow-sm">
+            <h3 class="text-sm sm:text-base font-bold text-[#2C3531]">WhatsApp Booking — +91-7505029696 — Instant Response in Under 5 Minutes</h3>
+          </div>
+          <div class="bg-[#FAF9F6] p-6 rounded-lg text-center border border-gray-100 shadow-sm">
+            <h3 class="text-sm sm:text-base font-bold text-[#2C3531]">Save Up to 20% vs MakeMyTrip, Goibibo & Booking.com on Direct Reservations</h3>
+          </div>
+          <div class="bg-[#FAF9F6] p-6 rounded-lg text-center border border-gray-100 shadow-sm">
+            <h3 class="text-sm sm:text-base font-bold text-[#2C3531]">Priority Room Upgrades & Retention Discounts for Past Guests</h3>
+          </div>
+          <div class="bg-[#FAF9F6] p-6 rounded-lg text-center border border-gray-100 shadow-sm">
+            <h3 class="text-sm sm:text-base font-bold text-[#2C3531]">Secure UPI, Credit Card & Net Banking Payment — Instant Confirmation</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
     {/* Main Content Grid */}
-    <section class="py-20">
+    <section class="py-16 sm:py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
           
           {/* Contact Information */}
           <div class="space-y-12">
             <div>
-              <h2 class="text-2xl font-display font-bold text-[#1B3322] mb-8">Get In Touch</h2>
+              <h2 class="text-2xl font-display font-bold text-[#1B3322] mb-8">Reach Our Reservations Team — We Are Available 24 Hours a Day</h2>
               
               <div class="space-y-6">
                 {/* Phone */}
@@ -45,7 +70,7 @@ import FAQAccordion from "../components/FAQAccordion";
                     <Phone class="w-5 h-5 text-[#1B3322]" />
                   </div>
                   <div>
-                    <h3 class="text-sm font-bold text-[#1B3322] uppercase tracking-wider mb-1">Call Us (24/7 Front Desk)</h3>
+                    <h3 class="text-sm font-bold text-[#1B3322] uppercase tracking-wider mb-1">Phone & WhatsApp — +91-7505029696</h3>
                     <a href={`tel:${RESORT_CONTACT.phone.replace(/[^0-9+]/g, '')}`} class="text-lg text-[#2C3531] hover:text-[#c9a832] transition-colors font-medium">
                       {RESORT_CONTACT.phone}
                     </a>
@@ -58,7 +83,7 @@ import FAQAccordion from "../components/FAQAccordion";
                     <MessageCircle class="w-5 h-5 text-[#25D366]" />
                   </div>
                   <div>
-                    <h3 class="text-sm font-bold text-[#1B3322] uppercase tracking-wider mb-1">WhatsApp Direct</h3>
+                    <h3 class="text-sm font-bold text-[#1B3322] uppercase tracking-wider mb-1">Response Time — WhatsApp Queries Answered Within 5 Minutes</h3>
                     <a href={RESORT_CONTACT.whatsapp} target="_blank" rel="noreferrer" class="text-lg text-[#2C3531] hover:text-[#25D366] transition-colors font-medium">
                       Message Reservations
                     </a>
@@ -71,48 +96,35 @@ import FAQAccordion from "../components/FAQAccordion";
                     <Mail class="w-5 h-5 text-[#1B3322]" />
                   </div>
                   <div>
-                    <h3 class="text-sm font-bold text-[#1B3322] uppercase tracking-wider mb-1">Email</h3>
+                    <h3 class="text-sm font-bold text-[#1B3322] uppercase tracking-wider mb-1">Email — booking@whisperingpinesresort.in</h3>
                     <a href={`mailto:${RESORT_CONTACT.email}`} class="text-lg text-[#2C3531] hover:text-[#c9a832] transition-colors font-medium">
                       {RESORT_CONTACT.email}
                     </a>
                   </div>
                 </div>
                 
-                {/* Address */}
-                <div class="flex items-start">
-                  <div class="w-12 h-12 bg-[#1B3322]/5 rounded-full flex items-center justify-center shrink-0 mr-4">
-                    <MapPin class="w-5 h-5 text-[#1B3322]" />
-                  </div>
-                  <div>
-                    <h3 class="text-sm font-bold text-[#1B3322] uppercase tracking-wider mb-1">Resort Address</h3>
-                    <p class="text-lg text-[#2C3531] leading-relaxed">
-                      {RESORT_CONTACT.address}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Timings */}
+                {/* Hours */}
                 <div class="flex items-start">
                   <div class="w-12 h-12 bg-[#1B3322]/5 rounded-full flex items-center justify-center shrink-0 mr-4">
                     <Clock class="w-5 h-5 text-[#1B3322]" />
                   </div>
                   <div>
-                    <h3 class="text-sm font-bold text-[#1B3322] uppercase tracking-wider mb-1">Check-In / Check-Out</h3>
-                    <p class="text-lg text-[#2C3531]">
-                      Check-in: 1:00 PM <br/> Check-out: 11:00 AM
+                    <h3 class="text-sm font-bold text-[#1B3322] uppercase tracking-wider mb-1">Front Desk Hours — Open 24 Hours, 7 Days a Week</h3>
+                    <p class="text-lg text-[#2C3531] leading-relaxed">
+                      Check-in: 1:00 PM | Check-out: 11:00 AM
                     </p>
                   </div>
                 </div>
 
-                {/* B2B Partner */}
+                {/* Website */}
                 <div class="flex items-start">
                   <div class="w-12 h-12 bg-[#1B3322]/5 rounded-full flex items-center justify-center shrink-0 mr-4">
                     <Briefcase class="w-5 h-5 text-[#1B3322]" />
                   </div>
                   <div>
-                    <h3 class="text-sm font-bold text-[#1B3322] uppercase tracking-wider mb-1">Partner With Us (B2B)</h3>
-                    <a href={`mailto:${RESORT_CONTACT.email}?subject=B2B Partnership Inquiry`} class="text-lg text-[#2C3531] hover:text-[#c9a832] transition-colors font-medium">
-                      Corporate & B2B Queries
+                    <h3 class="text-sm font-bold text-[#1B3322] uppercase tracking-wider mb-1">Online Booking — whisperingpinesresort.in</h3>
+                    <a href="/" class="text-lg text-[#2C3531] hover:text-[#c9a832] transition-colors font-medium">
+                      Book Directly on Website
                     </a>
                   </div>
                 </div>
@@ -122,7 +134,16 @@ import FAQAccordion from "../components/FAQAccordion";
 
           {/* Map Column */}
           <div>
-            <h2 class="text-2xl font-display font-bold text-[#1B3322] mb-8">Locate Us in Ramgarh</h2>
+            <h2 class="text-2xl font-display font-bold text-[#1B3322] mb-6">Find Us — Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Uttarakhand</h2>
+            
+            <div class="mb-8 space-y-3">
+              <h3 class="text-sm font-bold text-[#2C3531] flex items-center"><span class="w-2 h-2 rounded-full bg-[#c9a832] mr-3"></span> Malla Ramgarh, Uttarakhand 263137</h3>
+              <h3 class="text-sm font-bold text-[#2C3531] flex items-center"><span class="w-2 h-2 rounded-full bg-[#c9a832] mr-3"></span> 6 to 8 Hours Drive from Delhi, Gurugram & Noida via NH9 and NH309</h3>
+              <h3 class="text-sm font-bold text-[#2C3531] flex items-center"><span class="w-2 h-2 rounded-full bg-[#c9a832] mr-3"></span> Nearest Railhead — Kathgodam Station, 40 Minutes from the Resort</h3>
+              <h3 class="text-sm font-bold text-[#2C3531] flex items-center"><span class="w-2 h-2 rounded-full bg-[#c9a832] mr-3"></span> Nearest Airport — Pantnagar, 55 Minutes from Whispering Pines</h3>
+              <h3 class="text-sm font-bold text-[#2C3531] flex items-center"><span class="w-2 h-2 rounded-full bg-[#c9a832] mr-3"></span> Resort Pick-Up & Drop Service Available — Arrange via WhatsApp</h3>
+            </div>
+
             <div class="w-full h-[400px] bg-gray-200 rounded-sm shadow-inner border border-gray-300 overflow-hidden">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3475.0886542866456!2d79.5506314!3d29.4262052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0a3285f1c95a9%3A0x74636d4e06267d3e!2sWhispering%20Pines%20Resort%20by%20casa%20de%20bello!5e0!3m2!1sen!2sin!4v1784812384641!5m2!1sen!2sin" 
@@ -156,8 +177,39 @@ import FAQAccordion from "../components/FAQAccordion";
     <FAQAccordion 
       client:visible
       faqs={CONTACT_FAQS} 
-      title="Resort Location & F.A.Q."
+      title="Frequently Asked Questions About Booking & Reaching the Resort"
       description="Everything you need to know about our location in Ramgarh, resort amenities, room types, pet policy, and direct booking benefits."
     />
   </div>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Resort",
+    "name": "Whispering Pines Resort by Casa De Bello",
+    "url": "https://whisperingpinesresort.in/contact-whispering-pines-resort-mukteshwar/",
+    "telephone": "+91-7505029696",
+    "email": "booking@whisperingpinesresort.in",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": " Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road",
+      "addressLocality": "Ramgarh",
+      "addressRegion": "Uttarakhand",
+      "postalCode": "263137",
+      "addressCountry": "IN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-7505029696",
+      "contactType": "Reservations",
+      "availableLanguage": ["English", "Hindi"],
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday","Tuesday","Wednesday","Thursday",
+          "Friday","Saturday","Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    }
+  })} />
 </Layout>

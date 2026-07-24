@@ -25,4 +25,40 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
     <WhatsAppButton client:load />
     <RecentBookingNotification client:load />
   </div>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Resort",
+    "name": "Whispering Pines Resort by Casa De Bello",
+    "url": "https://whisperingpinesresort.in/reviews/",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "reviewCount": "388",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Dr. Vikram Sethi" },
+        "datePublished": "2026-05-01",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "reviewBody": "An absolute masterpiece of a premium villa. The panoramic Nanda Devi peaks look otherworldly from the Attic suite in the morning. Kumaoni cuisine was stellar and high-speed Wi-Fi worked seamlessly. Will return."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Priya and Rohan Sen" },
+        "datePublished": "2026-04-01",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "reviewBody": "Whispering Pines is surrounded by massive peach trees and silent pinewood hills. The kids loved the fireplace evenings and our Golden Retriever was in absolute heaven in the safe garden lawns."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Aman Rastogi" },
+        "datePublished": "2026-06-01",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+        "reviewBody": "Exceptional remote working setup. Constant 150 Mbps fiber speed, hot showers, cozy timber bed and serene fresh air. Highly recommend booking the Entire Villa for extended family stays."
+      }
+    ]
+  })} />
 </Layout>

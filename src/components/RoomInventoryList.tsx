@@ -11,6 +11,7 @@ interface RoomInventoryListProps {
   title?: string;
   isH1?: boolean;
   categoryIntro?: string;
+  optimizedImages?: Record<string, string>;
 }
 
 export default function RoomInventoryList({
@@ -19,6 +20,7 @@ export default function RoomInventoryList({
   title = "Suites & Cottages at Uttarakhand's Most Loved Family Resort",
   isH1 = false,
   categoryIntro = "Suites & Cottages at Uttarakhand's Most Loved Family Resort",
+  optimizedImages,
 }: RoomInventoryListProps = {}) {
   const [filter, setFilter] = useState(initialFilter);
 
@@ -97,7 +99,7 @@ export default function RoomInventoryList({
               {/* Room Image - Left/Top */}
               <div className="lg:col-span-7 relative h-72 sm:h-96 lg:h-[32rem] overflow-hidden rounded-sm">
                 <LazyImage
-                  src={room.image}
+                  src={optimizedImages?.[room.id] || room.image}
                   alt={`Cozy interior bedroom of ${room.name} at Whispering Pines Resort Mukteshwar, Uttarakhand`}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                   referrerPolicy="no-referrer"
