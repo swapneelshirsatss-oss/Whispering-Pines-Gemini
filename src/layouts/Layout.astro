@@ -1,5 +1,10 @@
 ---
 import '../styles/global.css';
+import BreadcrumbSchema, { type BreadcrumbItem } from '../components/BreadcrumbSchema.astro';
+import SpeakableSchema from '../components/SpeakableSchema.astro';
+import Navbar from '../components/Navbar.tsx';
+import FooterSection from '../components/FooterSection.astro';
+import Logo from '../components/Logo.astro';
 
 interface Props {
   title: string;
@@ -7,16 +12,12 @@ interface Props {
 
   noindex?: boolean;
   canonical?: string;
+  breadcrumbs?: BreadcrumbItem[];
 }
 
-const { title, description, noindex = false, canonical } = Astro.props;
+const { title, description, noindex = false, canonical, breadcrumbs } = Astro.props;
 const siteBase = 'https://whisperingpinesresort.in';
 const canonicalURL = new URL(canonical || Astro.url.pathname, siteBase);
-
-import BreadcrumbSchema from '../components/BreadcrumbSchema.astro';
-import Navbar from '../components/Navbar.tsx';
-import FooterSection from '../components/FooterSection.astro';
-import Logo from '../components/Logo.astro';
 ---
 
 <!doctype html>
@@ -67,7 +68,8 @@ import Logo from '../components/Logo.astro';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <BreadcrumbSchema />
+    <BreadcrumbSchema title={title} breadcrumbs={breadcrumbs} />
+    <SpeakableSchema />
 
     
     <!-- Google Tag Manager -->

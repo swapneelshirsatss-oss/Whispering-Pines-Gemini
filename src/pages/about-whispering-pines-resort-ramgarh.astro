@@ -5,6 +5,13 @@ import AboutSection from "../components/AboutSection.astro";
 import SEOAboutContent from "../components/SEOAboutContent.astro";
 import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
+
+import balconyViewImg from "../assets/images/Whispering-pines-balcony-view-nanital.webp?url";
+import villaImg from "../assets/images/villa_in_nanital.avif?url";
+
+const siteBase = 'https://whisperingpinesresort.in';
+const balconyUrl = new URL(balconyViewImg, siteBase).href;
+const villaUrl = new URL(villaImg, siteBase).href;
 ---
 
 <Layout 
@@ -53,13 +60,13 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
         "image": [
           {
             "@type": "ImageObject",
-            "url": "https://whisperingpinesresort.in/_astro/Whispering-pines-balcony-view-nanital.CrkGzqPY.webp",
+            "url": balconyUrl,
             "name": "Whispering Pines Resort — 180 Degree Balcony View of Nanda Devi and Trishul Peaks, Malla Ramgarh",
             "description": "Panoramic 180 degree view of Nanda Devi and Trishul Himalayan snow peaks from the balcony of Whispering Pines Resort by Casa De Bello in Malla Ramgarh, Uttarakhand"
           },
           {
             "@type": "ImageObject",
-            "url": "https://whisperingpinesresort.in/_astro/villa_in_nanital.BPKv3osK.avif",
+            "url": villaUrl,
             "name": "Stone and Cedar Heritage Architecture — Whispering Pines Resort Private Villa near Nainital",
             "description": "Artisanal stone masonry and cedar wood heritage villa exterior at Whispering Pines Resort, Malla Ramgarh — built by native Kumaoni craftsmen"
           },

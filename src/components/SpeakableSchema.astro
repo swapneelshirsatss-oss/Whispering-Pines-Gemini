@@ -1,0 +1,26 @@
+---
+// SpeakableSchema.astro
+// Schema.org SpeakableSpecification for Voice Search Optimization (Google Assistant, Siri, Alexa, Gemini Live)
+
+const siteBase = "https://whisperingpinesresort.in";
+const rawPathname = Astro.url.pathname;
+const pathname = rawPathname.endsWith('/') ? rawPathname : `${rawPathname}/`;
+const currentUrl = `${siteBase}${pathname}`;
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${currentUrl}#webpage`,
+  "url": currentUrl,
+  "name": "Whispering Pines Resort Mukteshwar",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "#speakable-hero-intro",
+      "#speakable-about-summary",
+      ".speakable-faq-answer"
+    ]
+  }
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />

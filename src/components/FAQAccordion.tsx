@@ -71,7 +71,7 @@ export default function FAQAccordion({
                     isOpen ? "max-h-[1000px] border-t border-[#2C3531]/5 p-5 sm:p-6 bg-[#FAF9F6]/40" : "max-h-0"
                   }`}
                 >
-                  <p className="text-xs sm:text-sm text-[#2C3531]/95 font-sans leading-relaxed">
+                  <p className="speakable-faq-answer text-xs sm:text-sm text-[#2C3531]/95 font-sans leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

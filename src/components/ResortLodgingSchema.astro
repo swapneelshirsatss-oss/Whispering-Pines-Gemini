@@ -1,12 +1,18 @@
 ---
 // ResortLodgingSchema.astro
 // Resort + LodgingBusiness JSON-LD Schema
----
-<script type="application/ld+json" is:inline>
-{
+import balconyViewImg from '../assets/images/Whispering-pines-balcony-view-nanital.webp?url';
+import villaImg from '../assets/images/villa_in_nanital.avif?url';
+import deluxRoomImg from '../assets/images/Delux_room_Whispering_pines_mukteshwar.avif?url';
+
+const siteBase = 'https://whisperingpinesresort.in';
+const balconyUrl = new URL(balconyViewImg, siteBase).href;
+const villaUrl = new URL(villaImg, siteBase).href;
+const deluxUrl = new URL(deluxRoomImg, siteBase).href;
+
+const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
-
     {
       "@type": ["Resort", "LodgingBusiness"],
       "@id": "https://whisperingpinesresort.in/#resort",
@@ -26,19 +32,19 @@
       "image": [
         {
           "@type": "ImageObject",
-          "url": "https://whisperingpinesresort.in/_astro/Whispering-pines-balcony-view-nanital.CrkGzqPY.webp",
+          "url": balconyUrl,
           "name": "Whispering Pines Resort — Balcony View of Nanda Devi and Trishul Himalayan Peaks, Ramgarh",
           "description": "180 degree panoramic view of Nanda Devi and Trishul snow peaks from the balcony of Whispering Pines Resort by Casa De Bello, Malla Ramgarh, Uttarakhand"
         },
         {
           "@type": "ImageObject",
-          "url": "https://whisperingpinesresort.in/_astro/villa_in_nanital.BPKv3osK.avif",
+          "url": villaUrl,
           "name": "Premium Private Villa — Whispering Pines Resort near Nainital",
           "description": "Stone and cedar wood heritage private villa at Whispering Pines Resort, Ramgarh — sleeps up to 10 guests with private orchard yard and fireplace"
         },
         {
           "@type": "ImageObject",
-          "url": "https://whisperingpinesresort.in/_astro/Delux_room_Whispering_pines_mukteshwar.ClH9v1vF.avif",
+          "url": deluxUrl,
           "name": "Deluxe Skylight Suite — Whispering Pines Resort near Mukteshwar",
           "description": "Deluxe skylight attic suite with cedar pine deck and star-gazing ceiling at Whispering Pines Resort, Malla Ramgarh"
         },
@@ -229,73 +235,6 @@
     },
 
     {
-      "@type": "BreadcrumbList",
-      "@id": "https://whisperingpinesresort.in/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://whisperingpinesresort.in/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "The Resort",
-          "item": "https://whisperingpinesresort.in/about-whispering-pines-resort-ramgarh/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Cottages and Suites",
-          "item": "https://whisperingpinesresort.in/suites-cottages-ramgarh-resort/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Premium Villas Near Nainital",
-          "item": "https://whisperingpinesresort.in/private-villas-near-nainital/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Resort Amenities",
-          "item": "https://whisperingpinesresort.in/resort-amenities-mukteshwar/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "name": "Premium Services",
-          "item": "https://whisperingpinesresort.in/resort-services-ramgarh/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "name": "Things to Do Near Mukteshwar",
-          "item": "https://whisperingpinesresort.in/things-to-do-near-mukteshwar/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 8,
-          "name": "Photo Gallery",
-          "item": "https://whisperingpinesresort.in/gallery/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 9,
-          "name": "Guest Reviews",
-          "item": "https://whisperingpinesresort.in/reviews/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 10,
-          "name": "Journal",
-          "item": "https://whisperingpinesresort.in/blog/"
-        }
-      ]
-    },
-
-    {
       "@type": "FAQPage",
       "@id": "https://whisperingpinesresort.in/#faq",
       "mainEntity": [
@@ -381,7 +320,7 @@
         }
       ]
     }
-
   ]
-}
-</script>
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
