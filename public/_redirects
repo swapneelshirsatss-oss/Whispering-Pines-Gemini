@@ -1,1 +1,4 @@
 # Static routing redirects file
+http://www.whisperingpinesresort.in/* https://whisperingpinesresort.in/:splat 301!
+https://www.whisperingpinesresort.in/* https://whisperingpinesresort.in/:splat 301!
+http://whisperingpinesresort.in/* https://whisperingpinesresort.in/:splat 301!

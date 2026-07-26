@@ -2,4 +2,18 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # Force HTTP to HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # Force WWW to non-WWW
+  RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+  # Force trailing slash on non-file URIs
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteRule ^(.*)$ https://whisperingpinesresort.in/$1/ [R=301,L]
 </IfModule>
+
