@@ -1,4 +1,10 @@
 # Static routing redirects file
+/sitemap.xml/ /sitemap.xml 301!
+/sitemap-index.xml/ /sitemap-index.xml 301!
+/robots.txt/ /robots.txt 301!
+/llms.txt/ /llms.txt 301!
+/llms-full.txt/ /llms-full.txt 301!
+
 http://www.whisperingpinesresort.in/* https://whisperingpinesresort.in/:splat 301!
 https://www.whisperingpinesresort.in/* https://whisperingpinesresort.in/:splat 301!
 http://whisperingpinesresort.in/* https://whisperingpinesresort.in/:splat 301!
