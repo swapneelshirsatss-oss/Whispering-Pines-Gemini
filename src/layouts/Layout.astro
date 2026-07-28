@@ -17,7 +17,9 @@ interface Props {
 
 const { title, description, noindex = false, canonical, breadcrumbs } = Astro.props;
 const siteBase = 'https://whisperingpinesresort.in';
-const canonicalURL = new URL(canonical || Astro.url.pathname, siteBase);
+const rawPathname = canonical || Astro.url.pathname;
+const pathname = (!rawPathname.endsWith('/') && !rawPathname.includes('.')) ? `${rawPathname}/` : rawPathname;
+const canonicalURL = new URL(pathname, siteBase);
 ---
 
 <!doctype html>

@@ -3,17 +3,24 @@
   RewriteEngine On
   RewriteBase /
 
-  # Force HTTP to HTTPS
-  RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
-
-  # Force WWW to non-WWW
-  RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
-  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-
-  # Force trailing slash on non-file URIs
+  # Exclude static file extensions from trailing slash rewrites
   RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !\.(xml|txt|html|js|css|svg|png|jpg|jpeg|webp|ico|json)$ [NC]
+  RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^(.*)$ https://whisperingpinesresort.in/$1/ [R=301,L]
+
+  # Combine HTTP/WWW for static files or URLs with trailing slash into a single 301 redirect
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^(.*)$ https://whisperingpinesresort.in/$1 [R=301,L]
+
+  # Force trailing slash on non-file URIs on canonical HTTPS domain
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !\.(xml|txt|html|js|css|svg|png|jpg|jpeg|webp|ico|json)$ [NC]
   RewriteCond %{REQUEST_URI} !(.*)/$
   RewriteRule ^(.*)$ https://whisperingpinesresort.in/$1/ [R=301,L]
 </IfModule>
+
 

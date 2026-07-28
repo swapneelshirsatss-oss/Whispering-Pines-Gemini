@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://whisperingpinesresort.in/sitemap.xml
 Sitemap: https://whisperingpinesresort.in/sitemap-index.xml
