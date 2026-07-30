@@ -24,7 +24,7 @@ export const RESORT_CONTACT = {
     tripadvisor: "https://www.tripadvisor.in/Hotel_Review-g1049689-d34470070-Reviews-Whispering_Pines_Resort_Mukteshwar-Ramgarh_Nainital_District_Uttarakhand.html",
     youtube: "https://www.youtube.com/channel/UC7WARaMtVTj9QS57zMX3yZw"
   },
-  description: "Whispering Pines Resort by Casa de bello is a 4 Star heritage mountain resort located on the Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh. Surrounded by dense pine canopies and private apple, peach, and plum orchards, the property features offers clean comfortavle rooms with luxury facilties.\n\nDesigned for families, remote professionals, and travelers seeking a quiet Himalayan retreat, the resort offers 180° panoramic views of the Nanda Devi and Trishul peaks. As an upgraded continuation of the Clarks Exotica legacy, we prioritize direct guest relationships.\n\nContact our front desk directly at +91-7505029696 or via WhatsApp to secure exclusive past-guest retention rates and direct-booking benefits."
+  description: "Whispering Pines Resort by Casa de bello is a 4-Star Himalayan Resort Hotel near Mukteshwar located on the Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh. Surrounded by dense pine canopies and private apple, peach, and plum orchards, the property features offers clean comfortavle rooms with luxury facilties.\n\nDesigned for families, remote professionals, and travelers seeking a quiet Himalayan retreat, the resort offers 180° panoramic views of the Nanda Devi and Trishul peaks. As an upgraded continuation of the Clarks Exotica legacy, we prioritize direct guest relationships.\n\nContact our front desk directly at +91-7505029696 or via WhatsApp to secure exclusive past-guest retention rates and direct-booking benefits."
 };
 
 export const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
@@ -138,7 +138,7 @@ export const GENERAL_AMENITIES = [
     ]
   },
   {
-    title: "100 Mbps Fiber Wi-Fi — Uttarakhand's Most Connected Mountain Resort",
+    title: "150 Mbps Fiber Wi-Fi — Uttarakhand's Most Connected Mountain Resort",
     icon: "Wifi",
     description: "Robust, enterprise-grade high speed fiber optical Wi-Fi connection covering the entire area of the best resort near Mukteshwar for seamless remote work.",
     features: [
