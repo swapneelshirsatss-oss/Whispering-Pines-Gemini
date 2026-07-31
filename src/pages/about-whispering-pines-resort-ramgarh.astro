@@ -33,7 +33,7 @@ const villaUrl = new URL(villaImg, siteBase).href;
     <WhatsAppButton client:load />
     <RecentBookingNotification client:load />
   </div>
-  <script type="application/ld+json" set:html={JSON.stringify({
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
 

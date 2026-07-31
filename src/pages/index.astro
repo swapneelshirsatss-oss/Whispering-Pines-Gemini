@@ -41,6 +41,7 @@ const roomImages = {
   title="Resort in Ramgarh | Best Mountain Resort Near Nainital & Mukteshwar" 
   description="Best resort in Ramgarh, Uttarakhand with stunning Himalayan views. located near Nainital & Mukteshwar. Book direct for exclusive rates!"
 >
+  <ResortLodgingSchema slot="head" />
   <div class="relative w-full text-[#2C3531] overflow-x-hidden pb-20 md:pb-0 selection:bg-[#c9a832] selection:text-[#1B3322]">
     {/* Breadcrumb Navigation */}
     <Breadcrumbs client:load />
@@ -82,6 +83,4 @@ const roomImages = {
     {/* Social Proof Popup */}
     <RecentBookingNotification client:load />
   </div>
-
-  <ResortLodgingSchema />
 </Layout>

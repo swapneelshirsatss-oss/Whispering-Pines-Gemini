@@ -73,6 +73,7 @@ const canonicalURL = new URL(pathname, siteBase);
     <BreadcrumbSchema title={title} breadcrumbs={breadcrumbs} />
     <SpeakableSchema />
 
+    <slot name="head" />
     
     <!-- Google Tag Manager -->
     <script type="text/partytown">
