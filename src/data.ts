@@ -23,7 +23,7 @@ export const RESORT_CONTACT = {
     twitter: "https://x.com/WhiperingPines",
     tripadvisor: "https://www.tripadvisor.in/Hotel_Review-g1049689-d34470070-Reviews-Whispering_Pines_Resort_Mukteshwar-Ramgarh_Nainital_District_Uttarakhand.html",
     youtube: "https://www.youtube.com/channel/UC7WARaMtVTj9QS57zMX3yZw",
-    googleTravel: "https://www.google.com/travel/search?q=whispering%20pines%20resort%20by%20casa%20de%20bello&ved=0CAAQ5JsGahgKEwj4z9Gt8PyVAxUAAAAAHQAAAAAQrAI&qs=MiZDaGdJdnZxWnNlQ3AyN0YwR2d3dlp5OHhhR1I2ZWpOcmNEY1FBUTgN&ts=CAEaNwoZEhcKDC9nLzFoZHp6M2twNzoHUmFtZ2FyaBIaEhQKBwjqDxAKGAwSBwjqDxAKGA0YATICCAIqBwoFOgNJTlI&ap=KigKEgnXpJVZEWA9QBEHZHAvROFTQBISCfWcIk-PeT1AEQdkcP9R5VNAMAA"
+    googleTravel: "https://www.google.com/travel/hotels/entity/ChgIvvqZseCp27F0GgwvZy8xaGR6ejNrcDcQAQ"
   },
   description: "Whispering Pines Resort by Casa de bello is a 4 Star heritage mountain resort located on the Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh. Surrounded by dense pine canopies and private apple, peach, and plum orchards, the property features offers clean comfortavle rooms with luxury facilties.\n\nDesigned for families, remote professionals, and travelers seeking a quiet Himalayan retreat, the resort offers 180° panoramic views of the Nanda Devi and Trishul peaks. As an upgraded continuation of the Clarks Exotica legacy, we prioritize direct guest relationships.\n\nContact our front desk directly at +91-7505029696 or via WhatsApp to secure exclusive past-guest retention rates and direct-booking benefits."
 };
