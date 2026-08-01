@@ -15,10 +15,14 @@
   <meta property="og:url" content="https://casadebello.whisperingpinesresort.in/" />
   <meta property="og:image" content="https://whisperingpinesresort.in/og-image.webp" />
 
-  <!-- Google Fonts: Inter, Playfair Display & JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Inter, Playfair Display & JetBrains Mono (Asynchronous / Non-Blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+  </noscript>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -63,6 +67,10 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+    .cv-auto {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 600px;
+    }
   </style>
 
   <!-- Schema.org JSON-LD -->
@@ -99,7 +107,7 @@
   <header class="sticky top-0 z-50 bg-[#1B3322]/95 backdrop-blur-md border-b border-[#FAF9F6]/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <a href="https://whisperingpinesresort.in/" class="flex items-center gap-3 group">
-        <img src="https://whisperingpinesresort.in/logo.svg" alt="Whispering Pines by Casa De Bello Logo" class="w-10 h-10 rounded-full border border-[#c9a832]/40 object-cover shadow-sm group-hover:border-[#c9a832] transition-colors" />
+        <img src="https://whisperingpinesresort.in/logo.svg" alt="Whispering Pines by Casa De Bello Logo" width="40" height="40" decoding="async" class="w-10 h-10 rounded-full border border-[#c9a832]/40 object-cover shadow-sm group-hover:border-[#c9a832] transition-colors" />
         <div>
           <span class="font-display text-xl tracking-wide font-semibold text-[#FAF9F6] block leading-none">CASA DE BELLO</span>
           <span class="text-[10px] font-mono tracking-widest text-[#c9a832] uppercase block mt-1">Whispering Pines</span>
@@ -268,7 +276,7 @@
   </section>
 
   <!-- Accommodations Showcase -->
-  <section id="rooms" class="py-20 bg-[#1B3322] text-[#FAF9F6]">
+  <section id="rooms" class="py-20 bg-[#1B3322] text-[#FAF9F6] cv-auto">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
         <span class="text-[#c9a832] text-xs font-mono uppercase tracking-widest block">Our Inventory</span>
@@ -280,7 +288,7 @@
         <!-- Entire Villa -->
         <div class="bg-white text-[#2C3531] rounded-2xl overflow-hidden border border-[#FAF9F6]/10 shadow-lg hover:shadow-xl transition-shadow">
           <div class="h-56 overflow-hidden">
-            <img src="images/villa_in_nanital.avif" alt="Entire Villa Suite" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            <img src="images/villa_in_nanital.avif" alt="Entire Villa Suite" width="400" height="224" decoding="async" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-6 space-y-3">
             <span class="text-xs font-mono text-[#c9a832] uppercase tracking-wider font-semibold">Private Living Hearth</span>
@@ -295,7 +303,7 @@
         <!-- Deluxe Room -->
         <div class="bg-white text-[#2C3531] rounded-2xl overflow-hidden border border-[#FAF9F6]/10 shadow-lg hover:shadow-xl transition-shadow">
           <div class="h-56 overflow-hidden">
-            <img src="images/Delux_room_Whispering_pines_mukteshwar.avif" alt="Deluxe Mountain Room" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            <img src="images/Delux_room_Whispering_pines_mukteshwar.avif" alt="Deluxe Mountain Room" width="400" height="224" decoding="async" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-6 space-y-3">
             <span class="text-xs font-mono text-[#c9a832] uppercase tracking-wider font-semibold">Valley & Orchard Views</span>
@@ -310,7 +318,7 @@
         <!-- Group Cottage -->
         <div class="bg-white text-[#2C3531] rounded-2xl overflow-hidden border border-[#FAF9F6]/10 shadow-lg hover:shadow-xl transition-shadow">
           <div class="h-56 overflow-hidden">
-            <img src="images/Group_booking_nainital_resort.avif" alt="Group Cottage Suite" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            <img src="images/Group_booking_nainital_resort.avif" alt="Group Cottage Suite" width="400" height="224" decoding="async" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-6 space-y-3">
             <span class="text-xs font-mono text-[#c9a832] uppercase tracking-wider font-semibold">Group & Family Stay</span>
