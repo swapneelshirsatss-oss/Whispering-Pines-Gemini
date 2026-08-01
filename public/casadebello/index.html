@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Casa De Bello — Luxury Resort & Boutique Hotel Management</title>
-  <meta name="description" content="Casa De Bello is a premier luxury hospitality management brand operating heritage boutique mountain resorts, luxury villas, and sanctuaries in the Kumaon Himalayas, Uttarakhand." />
-  <meta name="keywords" content="Casa De Bello, Whispering Pines Resort, Luxury Resorts Mukteshwar, Ramgarh Resorts, Nainital Hotels, Kumaon Hospitality" />
+  <title>Whispering Pines by Casa De Bello — Luxury Resort in Ramgarh, Mukteshwar</title>
+  <meta name="description" content="Whispering Pines by Casa De Bello is a premier 4-star boutique heritage mountain resort in Malla Ramgarh, featuring 180° Himalayan views, private fruit orchards, and luxury stays." />
+  <meta name="keywords" content="Whispering Pines, Casa De Bello, Resort in Ramgarh, Mukteshwar Resort, Nainital Hotels, Kumaon Luxury Resort" />
   <link rel="canonical" href="https://casadebello.whisperingpinesresort.in/" />
   
   <!-- Open Graph -->
-  <meta property="og:title" content="Casa De Bello — Luxury Resort & Boutique Hotel Management" />
-  <meta property="og:description" content="Premier luxury hospitality management brand operating heritage boutique mountain resorts in Kumaon, Uttarakhand." />
+  <meta property="og:title" content="Whispering Pines by Casa De Bello — Luxury Resort in Ramgarh" />
+  <meta property="og:description" content="4-star boutique heritage mountain resort in Malla Ramgarh with 180° Himalayan snow peak views and private orchards." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://casadebello.whisperingpinesresort.in/" />
   <meta property="og:image" content="https://whisperingpinesresort.in/og-image.webp" />
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Inter, Playfair Display & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -28,17 +28,18 @@
         extend: {
           colors: {
             brand: {
-              dark: '#0e1c14',
-              forest: '#1b3322',
+              green: '#1B3322',
+              greenlight: '#2A4832',
               gold: '#c9a832',
-              goldlight: '#e5ca65',
-              cream: '#fdfbf7',
-              muted: '#8e9b90'
+              golddark: '#A6875D',
+              cream: '#FAF9F6',
+              dark: '#2C3531'
             }
           },
           fontFamily: {
-            serif: ['Cormorant Garamond', 'serif'],
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            display: ['Playfair Display', 'serif'],
+            mono: ['JetBrains Mono', 'monospace'],
           }
         }
       }
@@ -46,21 +47,21 @@
   </script>
 
   <style>
-    .glass-card {
-      background: rgba(27, 51, 34, 0.65);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(201, 168, 50, 0.2);
-    }
-    .gold-gradient-text {
-      background: linear-gradient(135deg, #fceb9c 0%, #c9a832 50%, #9e7f19 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
     .hero-bg {
-      background-image: linear-gradient(to bottom, rgba(14, 28, 20, 0.65), rgba(14, 28, 20, 0.92)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=1920');
+      background-image: linear-gradient(to bottom, rgba(27, 51, 34, 0.75), rgba(27, 51, 34, 0.95)), url('https://whisperingpinesresort.in/og-image.webp');
       background-size: cover;
       background-position: center;
+    }
+    .glass-card {
+      background: rgba(27, 51, 34, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(250, 249, 246, 0.15);
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FAF9F6 0%, #c9a832 50%, #FAF9F6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   </style>
 
@@ -68,216 +69,211 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Casa De Bello",
+    "@type": "Resort",
+    "name": "Whispering Pines Resort by Casa De Bello",
     "url": "https://casadebello.whisperingpinesresort.in/",
     "logo": "https://whisperingpinesresort.in/logo.svg",
-    "description": "Luxury hospitality group managing boutique heritage resorts, mountain retreats, and luxury stays in Kumaon Himalayas.",
-    "sameAs": [
-      "https://www.facebook.com/whisperingpinesbycasadebello",
-      "https://www.instagram.com/whisperingpines.casa"
-    ]
+    "image": "https://whisperingpinesresort.in/og-image.webp",
+    "description": "4-star heritage mountain resort in Malla Ramgarh featuring 180° Himalayan snow peak views and private fruit orchards.",
+    "telephone": "+91-7505029696",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road",
+      "addressLocality": "Ramgarh",
+      "addressRegion": "Uttarakhand",
+      "postalCode": "263137",
+      "addressCountry": "IN"
+    }
   }
   </script>
 </head>
-<body class="bg-brand-dark text-brand-cream font-sans antialiased selection:bg-brand-gold selection:text-brand-dark min-h-screen flex flex-col justify-between">
+<body class="bg-[#FAF9F6] text-[#2C3531] font-sans antialiased selection:bg-[#c9a832] selection:text-[#1B3322] min-h-screen flex flex-col justify-between">
 
   <!-- Navigation Bar -->
-  <header class="sticky top-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-gold/20">
+  <header class="sticky top-0 z-50 bg-[#1B3322]/95 backdrop-blur-md border-b border-[#FAF9F6]/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-3 group">
-        <img src="https://whisperingpinesresort.in/logo.svg" alt="Whispering Pines by Casa De Bello Logo" class="w-10 h-10 rounded-full border border-brand-gold/40 object-cover shadow-sm group-hover:border-brand-gold transition-colors" />
+      <a href="https://whisperingpinesresort.in/" class="flex items-center gap-3 group">
+        <img src="https://whisperingpinesresort.in/logo.svg" alt="Whispering Pines by Casa De Bello Logo" class="w-10 h-10 rounded-full border border-[#c9a832]/40 object-cover shadow-sm group-hover:border-[#c9a832] transition-colors" />
         <div>
-          <span class="font-serif text-2xl tracking-wide font-semibold text-white block leading-none">CASA DE BELLO</span>
-          <span class="text-[10px] tracking-widest text-brand-gold uppercase block mt-1">Whispering Pines</span>
+          <span class="font-display text-xl tracking-wide font-semibold text-[#FAF9F6] block leading-none">CASA DE BELLO</span>
+          <span class="text-[10px] font-mono tracking-widest text-[#c9a832] uppercase block mt-1">Whispering Pines</span>
         </div>
       </a>
 
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
-        <a href="#about" class="text-white/80 hover:text-brand-gold transition-colors">About Us</a>
-        <a href="#properties" class="text-white/80 hover:text-brand-gold transition-colors">Managed Properties</a>
-        <a href="#philosophy" class="text-white/80 hover:text-brand-gold transition-colors">Hospitality Standards</a>
-        <a href="#contact" class="text-white/80 hover:text-brand-gold transition-colors">Contact</a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium font-sans">
+        <a href="https://whisperingpinesresort.in/about-whispering-pines-resort-ramgarh/" class="text-[#FAF9F6]/80 hover:text-[#c9a832] transition-colors">The Resort</a>
+        <a href="https://whisperingpinesresort.in/suites-cottages-ramgarh-resort/" class="text-[#FAF9F6]/80 hover:text-[#c9a832] transition-colors">Cottages & Suites</a>
+        <a href="https://whisperingpinesresort.in/things-to-do-near-mukteshwar/" class="text-[#FAF9F6]/80 hover:text-[#c9a832] transition-colors">Experiences</a>
+        <a href="https://whisperingpinesresort.in/gallery/" class="text-[#FAF9F6]/80 hover:text-[#c9a832] transition-colors">Gallery</a>
+        <a href="https://whisperingpinesresort.in/contact-whispering-pines-resort-mukteshwar/" class="text-[#FAF9F6]/80 hover:text-[#c9a832] transition-colors">Contact</a>
       </nav>
 
-      <a href="https://wa.me/917505029696?text=Hi!%20I%20would%20like%20to%20inquire%20about%20Casa%20De%20Bello%20resorts." target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-brand-gold to-brand-goldlight text-brand-dark font-semibold text-xs tracking-wider uppercase hover:shadow-lg hover:shadow-brand-gold/20 transition-all transform hover:-translate-y-0.5">
-        Reserve / Contact
+      <a href="https://wa.me/917505029696?text=Hi!%20I%20would%20like%20to%20book%20a%20stay%20at%20Whispering%20Pines%20by%20Casa%20De%20Bello." target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-[#c9a832] text-[#1B3322] font-semibold text-xs tracking-wider uppercase hover:bg-[#FAF9F6] transition-all transform hover:-translate-y-0.5 shadow-md">
+        Book Direct
       </a>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative hero-bg py-28 md:py-40 flex items-center justify-center text-center px-4 overflow-hidden">
+  <!-- Hero Presentation Block -->
+  <section class="relative hero-bg py-28 md:py-36 flex items-center justify-center text-center px-4 overflow-hidden">
     <div class="max-w-4xl mx-auto z-10 space-y-6">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-forest/80 border border-brand-gold/30 text-brand-gold text-xs tracking-widest uppercase mb-2">
-        <span>✨</span> Premier Himalayan Hospitality Management
+      <div class="inline-flex items-center space-x-2 bg-[#1B3322]/60 backdrop-blur-md border border-[#FAF9F6]/20 px-4 py-2 rounded-full mb-4">
+        <span class="text-[10px] font-mono uppercase tracking-[0.2em] text-[#FAF9F6]">
+          Premium Alpine Luxury • Malla Ramgarh
+        </span>
       </div>
-      <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-light tracking-tight text-white leading-tight">
-        Elevating Mountain Luxury in <br class="hidden sm:inline" />
-        <span class="italic font-normal gold-gradient-text">Kumaon, Uttarakhand</span>
+      
+      <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-medium tracking-tight text-[#FAF9F6] leading-tight drop-shadow-lg">
+        Whispering Pines <br />
+        <span class="font-semibold italic text-3xl sm:text-4xl md:text-5xl gold-gradient-text block mt-3">
+          by Casa De Bello
+        </span>
       </h1>
-      <p class="text-base sm:text-xl text-white/80 max-w-2xl mx-auto font-light leading-relaxed">
-        Casa De Bello curates, operates, and elevates heritage mountain retreats, boutique luxury resorts, and orchard estates designed for discerning travelers.
+      
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-[#FAF9F6]/90 font-sans font-light leading-relaxed drop-shadow-md">
+        Experience a 4-star boutique heritage mountain retreat perched at 1,780 metres in Malla Ramgarh near Nainital & Mukteshwar. Enjoy private apple orchards, cozy wood hearth fireplaces, and 180° Himalayan views of Nanda Devi and Trishul.
       </p>
+
       <div class="pt-6 flex flex-wrap items-center justify-center gap-4">
-        <a href="https://whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-brand-gold text-brand-dark font-semibold text-sm tracking-wider uppercase hover:bg-brand-goldlight transition-all shadow-xl shadow-brand-gold/10">
-          Visit Whispering Pines Resort
+        <a href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20reserving%20a%20room%20at%20Whispering%20Pines%20by%20Casa%20De%20Bello." target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-[#c9a832] text-[#1B3322] font-semibold text-xs tracking-widest uppercase hover:bg-[#FAF9F6] transition-all shadow-xl">
+          Reserve on WhatsApp
         </a>
-        <a href="https://casadebello-book.whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-brand-forest/90 border border-brand-gold/40 text-brand-gold font-semibold text-sm tracking-wider uppercase hover:bg-brand-forest hover:border-brand-gold transition-all">
+        <a href="https://casadebello-book.whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-[#1B3322]/80 border border-[#FAF9F6]/30 text-[#FAF9F6] font-semibold text-xs tracking-widest uppercase hover:bg-[#1B3322] hover:border-[#c9a832] transition-all">
           Direct Booking Engine
         </a>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-24 bg-brand-dark relative border-b border-white/5">
+  <!-- About Sanctuary Section -->
+  <section class="py-20 bg-[#1B3322] text-[#FAF9F6] border-b border-[#FAF9F6]/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div class="space-y-6">
-          <span class="text-brand-gold text-xs uppercase tracking-widest font-semibold block">About Casa De Bello</span>
-          <h2 class="font-serif text-3xl sm:text-5xl font-light text-white leading-tight">
-            Crafting Unforgettable <br /><span class="italic text-brand-gold font-normal">Himalayan Experiences</span>
+          <span class="text-[#c9a832] text-xs font-mono uppercase tracking-widest block">Operational Transition & Legacy</span>
+          <h2 class="font-display text-3xl sm:text-5xl font-medium leading-tight">
+            Formerly Clarks Exotica, <br /><span class="italic text-[#c9a832] font-normal">Now Exclusively Casa De Bello</span>
           </h2>
-          <p class="text-white/70 leading-relaxed text-base font-light">
-            Founded with a passion for serene alpine landscapes and authentic Indian hospitality, Casa De Bello manages exclusive properties across the Kumaon region. We combine timeless architecture, organic orchard settings, and modern luxury amenities to offer sanctuary from urban chaos.
+          <p class="text-[#FAF9F6]/80 leading-relaxed text-base font-light">
+            Operating exclusively under the management of Casa De Bello, Whispering Pines Resort offers a completely upgraded architectural sanctuary in Malla Ramgarh. Set amidst lush orchards of apples, peaches, and plums, our estate provides direct guest transparency and past-guest retention benefits.
           </p>
-          <div class="grid grid-cols-2 gap-6 pt-4">
-            <div class="border-l-2 border-brand-gold pl-4">
-              <span class="block font-serif text-3xl text-brand-gold font-bold">1,780m</span>
-              <span class="text-xs text-white/60 uppercase tracking-wider">Altitude Elevation</span>
+          <div class="grid grid-cols-2 gap-6 pt-4 font-mono text-sm">
+            <div class="border-l-2 border-[#c9a832] pl-4">
+              <span class="block font-display text-3xl text-[#c9a832] font-semibold">1,780m</span>
+              <span class="text-xs text-[#FAF9F6]/60 uppercase">Mountain Elevation</span>
             </div>
-            <div class="border-l-2 border-brand-gold pl-4">
-              <span class="block font-serif text-3xl text-brand-gold font-bold">180°</span>
-              <span class="text-xs text-white/60 uppercase tracking-wider">Snow Peak Vistas</span>
+            <div class="border-l-2 border-[#c9a832] pl-4">
+              <span class="block font-display text-3xl text-[#c9a832] font-semibold">180°</span>
+              <span class="text-xs text-[#FAF9F6]/60 uppercase">Nanda Devi & Trishul Views</span>
             </div>
           </div>
         </div>
+
         <div class="relative">
-          <div class="aspect-4/3 rounded-2xl overflow-hidden border border-brand-gold/30 shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&q=80&w=1000" alt="Casa De Bello Resort View" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
+          <div class="aspect-4/3 rounded-2xl overflow-hidden border border-[#c9a832]/30 shadow-2xl">
+            <img src="https://whisperingpinesresort.in/og-image.webp" alt="Whispering Pines Resort Mukteshwar Balcony View" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
           </div>
           <div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-xl hidden sm:block max-w-xs">
-            <p class="text-xs text-brand-gold font-semibold uppercase tracking-wider">Flagship Property</p>
-            <p class="font-serif text-lg text-white font-medium mt-1">Whispering Pines Resort</p>
-            <p class="text-xs text-white/60 mt-1">Malla Ramgarh, Mukteshwar Road</p>
+            <p class="text-xs text-[#c9a832] font-mono uppercase tracking-wider">Heritage Sanctuary</p>
+            <p class="font-display text-lg text-[#FAF9F6] font-medium mt-1">Whispering Pines Resort</p>
+            <p class="text-xs text-[#FAF9F6]/60 mt-1">Malla Ramgarh, Bhowali Road</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Managed Properties -->
-  <section id="properties" class="py-24 bg-brand-forest/30 relative">
+  <!-- Accommodations Overview -->
+  <section class="py-20 bg-[#FAF9F6]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="text-brand-gold text-xs uppercase tracking-widest font-semibold block">Portfolio</span>
-        <h2 class="font-serif text-4xl sm:text-5xl font-light text-white">Managed Properties</h2>
-        <p class="text-white/60 text-sm">Discover our flagship boutique mountain estate in the heart of Malla Ramgarh.</p>
-      </div>
-
-      <div class="glass-card rounded-3xl overflow-hidden border border-brand-gold/30 p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-xs">
-            <span>⭐️⭐️⭐️⭐️</span> 4-Star Heritage Mountain Resort
-          </div>
-          <h3 class="font-serif text-3xl sm:text-4xl text-white font-medium">Whispering Pines Resort by Casa De Bello</h3>
-          <p class="text-white/70 text-sm sm:text-base leading-relaxed font-light">
-            Situated on the Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh, this 25-room boutique estate features private balconies, wood-paneled suites, organic fruit orchards, and unobstructed 180° views of Nanda Devi and Trishul Himalayan peaks.
-          </p>
-          <ul class="grid grid-cols-2 gap-3 text-xs sm:text-sm text-white/80">
-            <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> 150 Mbps High-Speed Fiber WiFi</li>
-            <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Organic Orchard Dining</li>
-            <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Private Timber Balconies</li>
-            <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Wood Hearth Living Room</li>
-          </ul>
-          <div class="pt-4 flex flex-wrap items-center gap-4">
-            <a href="https://whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-brand-gold text-brand-dark font-semibold text-xs uppercase tracking-wider hover:bg-brand-goldlight transition-colors">
-              Explore Official Website
-            </a>
-            <a href="https://casadebello-book.whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full border border-brand-gold/50 text-brand-gold font-semibold text-xs uppercase tracking-wider hover:border-brand-gold hover:bg-brand-gold/10 transition-colors">
-              Book Online Now
-            </a>
-          </div>
-        </div>
-        <div class="lg:col-span-5">
-          <div class="aspect-4/3 rounded-2xl overflow-hidden border border-brand-gold/20">
-            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800" alt="Whispering Pines Resort Suite" class="w-full h-full object-cover" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Hospitality Standards -->
-  <section id="philosophy" class="py-24 bg-brand-dark border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="text-brand-gold text-xs uppercase tracking-widest font-semibold block">Excellence</span>
-        <h2 class="font-serif text-4xl sm:text-5xl font-light text-white">The Casa De Bello Standard</h2>
+        <span class="text-[#c9a832] text-xs font-mono uppercase tracking-widest block">Accommodations</span>
+        <h2 class="font-display text-4xl sm:text-5xl font-medium text-[#1B3322]">Cottages, Suites & Rooms</h2>
+        <p class="text-[#2C3531]/70 text-sm">Designed for families, couples, and remote professionals seeking quiet Himalayan comfort.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="glass-card p-8 rounded-2xl space-y-4 hover:border-brand-gold/50 transition-colors">
-          <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold font-serif text-2xl">01</div>
-          <h3 class="font-serif text-2xl text-white font-medium">Bespoke Guest Comfort</h3>
-          <p class="text-white/60 text-sm font-light leading-relaxed">
-            From high-capacity timber heaters to high-speed fiber internet, every room is tailored for modern relaxation and remote work ease.
-          </p>
+        <!-- Entire Villa -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#1B3322]/10 shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=800" alt="Entire Villa Suite" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6 space-y-3">
+            <span class="text-xs font-mono text-[#c9a832] uppercase tracking-wider">Private Living Hearth</span>
+            <h3 class="font-display text-2xl text-[#1B3322] font-medium">Entire Villa Cottage</h3>
+            <p class="text-xs text-[#2C3531]/70 leading-relaxed">Spacious private villa with wood-burning hearth, mountain balcony, and dining lounge for extended family stays.</p>
+            <a href="https://wa.me/917505029696?text=Hi!%20I%20want%20to%20inquire%20about%20booking%20the%20Entire%20Villa%20Cottage." target="_blank" rel="noopener noreferrer" class="inline-block pt-2 text-xs font-mono text-[#1B3322] font-semibold hover:text-[#c9a832] transition-colors">
+              Inquire Villa Booking →
+            </a>
+          </div>
         </div>
 
-        <div class="glass-card p-8 rounded-2xl space-y-4 hover:border-brand-gold/50 transition-colors">
-          <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold font-serif text-2xl">02</div>
-          <h3 class="font-serif text-2xl text-white font-medium">Culinary Authenticity</h3>
-          <p class="text-white/60 text-sm font-light leading-relaxed">
-            Farm-to-table dining incorporating fresh ingredients from our private apple, peach, plum, and apricot orchards alongside local Kumaoni cuisine.
-          </p>
+        <!-- Deluxe Room -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#1B3322]/10 shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1626714485846-99eb94b5ee3a?auto=format&fit=crop&q=80&w=800" alt="Deluxe Mountain Room" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6 space-y-3">
+            <span class="text-xs font-mono text-[#c9a832] uppercase tracking-wider">Valley & Orchard Views</span>
+            <h3 class="font-display text-2xl text-[#1B3322] font-medium">Deluxe Mountain Room</h3>
+            <p class="text-xs text-[#2C3531]/70 leading-relaxed">Cedar timber wood finish room with high-capacity heating, 150 Mbps Fiber WiFi, and private balcony.</p>
+            <a href="https://wa.me/917505029696?text=Hi!%20I%20want%20to%20inquire%20about%20the%20Deluxe%20Mountain%20Room." target="_blank" rel="noopener noreferrer" class="inline-block pt-2 text-xs font-mono text-[#1B3322] font-semibold hover:text-[#c9a832] transition-colors">
+              Inquire Deluxe Room →
+            </a>
+          </div>
         </div>
 
-        <div class="glass-card p-8 rounded-2xl space-y-4 hover:border-brand-gold/50 transition-colors">
-          <div class="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold font-serif text-2xl">03</div>
-          <h3 class="font-serif text-2xl text-white font-medium">Direct Relationship</h3>
-          <p class="text-white/60 text-sm font-light leading-relaxed">
-            We prioritize transparent direct bookings with zero hidden charges, personalized itinerary planning, and past-guest loyalty benefits.
-          </p>
+        <!-- Group Cottage -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-[#1B3322]/10 shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800" alt="Group Cottage Suite" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6 space-y-3">
+            <span class="text-xs font-mono text-[#c9a832] uppercase tracking-wider">Group & Family Stay</span>
+            <h3 class="font-display text-2xl text-[#1B3322] font-medium">Group Cottage Suite</h3>
+            <p class="text-xs text-[#2C3531]/70 leading-relaxed">High-capacity group cottage room overlooking apple orchards, ideal for large families and retreats.</p>
+            <a href="https://wa.me/917505029696?text=Hi!%20I%20want%20to%20inquire%20about%20the%20Group%20Cottage%20Suite." target="_blank" rel="noopener noreferrer" class="inline-block pt-2 text-xs font-mono text-[#1B3322] font-semibold hover:text-[#c9a832] transition-colors">
+              Inquire Group Suite →
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact & Reservation CTA -->
-  <section id="contact" class="py-20 bg-brand-forest relative">
+  <!-- Reservation CTA Section -->
+  <section class="py-20 bg-[#1B3322] text-[#FAF9F6]">
     <div class="max-w-4xl mx-auto px-4 text-center space-y-8">
-      <h2 class="font-serif text-4xl sm:text-6xl font-light text-white leading-tight">
-        Plan Your Next Escape with <br /><span class="italic text-brand-gold font-normal">Casa De Bello</span>
+      <h2 class="font-display text-4xl sm:text-6xl font-medium leading-tight">
+        Experience Whispering Pines <br /><span class="italic text-[#c9a832] font-normal">by Casa De Bello</span>
       </h2>
-      <p class="text-white/80 max-w-xl mx-auto text-sm sm:text-base font-light">
-        Connect directly with our reservation team for instant bookings, group packages, and custom mountain staycation plans.
+      <p class="text-[#FAF9F6]/80 max-w-xl mx-auto text-sm sm:text-base font-light">
+        Book direct with our front desk team for best rate guarantees, flexible stay packages, and past-guest benefits.
       </p>
       <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
-        <a href="https://wa.me/917505029696?text=Hello!%20I%20want%20to%20book%20a%20stay%20with%20Casa%20De%20Bello." target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-gradient-to-r from-brand-gold to-brand-goldlight text-brand-dark font-bold text-sm tracking-wider uppercase shadow-xl hover:shadow-brand-gold/30 transition-all transform hover:-translate-y-0.5">
-          💬 Chat on WhatsApp (+91 7505029696)
+        <a href="https://wa.me/917505029696?text=Hello!%20I%20would%20like%20to%20book%20my%20stay%20at%20Whispering%20Pines%20by%20Casa%20De%20Bello." target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-[#c9a832] text-[#1B3322] font-bold text-xs tracking-widest uppercase hover:bg-[#FAF9F6] transition-all shadow-lg">
+          💬 WhatsApp Front Desk (+91 7505029696)
         </a>
-        <a href="tel:+917505029696" class="px-8 py-4 rounded-full bg-brand-dark border border-brand-gold/40 text-white font-semibold text-sm tracking-wider uppercase hover:border-brand-gold transition-colors">
-          📞 Call Desk
+        <a href="tel:+917505029696" class="px-8 py-4 rounded-full bg-transparent border border-[#FAF9F6]/30 text-[#FAF9F6] font-semibold text-xs tracking-widest uppercase hover:border-[#c9a832] transition-colors">
+          📞 Direct Call Desk
         </a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-brand-dark py-12 border-t border-brand-gold/20 text-xs text-white/50">
+  <footer class="bg-[#1B3322] py-12 border-t border-[#FAF9F6]/10 text-xs text-[#FAF9F6]/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
       <div>
-        <span class="font-serif text-lg text-white font-semibold block">Casa De Bello</span>
-        <p class="mt-1">Luxury Resort Hotel & Estate Management. Malla Ramgarh, Uttarakhand 263137.</p>
+        <span class="font-display text-lg text-[#FAF9F6] font-semibold block">Whispering Pines by Casa De Bello</span>
+        <p class="mt-1">Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Uttarakhand 263137.</p>
       </div>
-      <div class="flex items-center space-x-6 text-white/70">
-        <a href="https://whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition-colors">Whispering Pines Main Site</a>
+      <div class="flex items-center space-x-6 text-[#FAF9F6]/80 font-mono">
+        <a href="https://whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" class="hover:text-[#c9a832] transition-colors">Main Website</a>
         <span>|</span>
-        <a href="https://casadebello-book.whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition-colors">Direct Booking Engine</a>
+        <a href="https://casadebello-book.whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" class="hover:text-[#c9a832] transition-colors">Booking Engine</a>
       </div>
-      <p>© 2026 Casa De Bello. All Rights Reserved.</p>
+      <p>© 2026 Whispering Pines by Casa De Bello. All Rights Reserved.</p>
     </div>
   </footer>
 
