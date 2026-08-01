@@ -35,7 +35,7 @@ export default defineConfig({
     react(),
     partytown({
       config: {
-        forward: ['dataLayer.push'],
+        forward: ['dataLayer.push', 'gtag'],
       },
     }),
     sitemap(),
@@ -44,6 +44,20 @@ export default defineConfig({
   prefetch: true,
 
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
+              return 'vendor-react';
+            }
+            if (id.includes('node_modules/lucide-react')) {
+              return 'vendor-icons';
+            }
+          }
+        }
+      }
+    }
   }
 });
