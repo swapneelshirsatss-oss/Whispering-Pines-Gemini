@@ -19,9 +19,9 @@ const villaUrl = new URL(villaImg, siteBase).href;
   description="Discover the legacy of Whispering Pines (formerly Clarks Exotica) - the best resort in Ramgarh. Experience authentic Kumaoni architecture, luxury rooms, and pristine nature."
 >
   <div class="relative w-full text-[#2C3531] overflow-x-hidden pb-20 md:pb-0 selection:bg-[#c9a832] selection:text-[#1B3322]">
-    <Breadcrumbs client:load />
+    <Breadcrumbs />
     
-    <main>
+    <main class="pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <AboutSection 
         hideLink={true}
         asH1={true}
@@ -30,8 +30,8 @@ const villaUrl = new URL(villaImg, siteBase).href;
       <SEOAboutContent />
     </main>
     
-    <WhatsAppButton client:load />
-    <RecentBookingNotification client:load />
+    <WhatsAppButton client:idle />
+    <RecentBookingNotification client:idle />
   </div>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({
     "@context": "https://schema.org",

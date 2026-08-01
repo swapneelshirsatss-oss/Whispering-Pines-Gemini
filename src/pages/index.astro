@@ -48,10 +48,10 @@ const roomImages = {
 
   <div class="relative w-full text-[#2C3531] overflow-x-hidden pb-20 md:pb-0 selection:bg-[#c9a832] selection:text-[#1B3322]">
     {/* Breadcrumb Navigation */}
-    <Breadcrumbs client:load />
+    <Breadcrumbs />
 
     {/* Hero Presentation Block */}
-    <Hero client:load optimizedImage={optimizedHeroImage.src} optimizedMobileImage={optimizedHeroMobile.src} />
+    <Hero client:idle optimizedImage={optimizedHeroImage.src} optimizedMobileImage={optimizedHeroMobile.src} />
 
     <main>
       {/* About Sanctuary Story Section */}
@@ -85,6 +85,6 @@ const roomImages = {
     <WhatsAppButton client:idle />
 
     {/* Social Proof Popup */}
-    <RecentBookingNotification client:load />
+    <RecentBookingNotification client:idle />
   </div>
 </Layout>

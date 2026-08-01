@@ -15,7 +15,15 @@ export default function OTABadges() {
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-[#1B3322] hover:text-[#c9a832] transition-colors"
             >
-              <img src="https://promos.makemytrip.com/Growth/Images/1x/mmt_dt_top_icon.png" alt="MakeMyTrip" className="h-6 object-contain" />
+              <img 
+                src="https://promos.makemytrip.com/Growth/Images/1x/mmt_dt_top_icon.png" 
+                alt="MakeMyTrip" 
+                width="24" 
+                height="24" 
+                decoding="async" 
+                loading="lazy" 
+                className="h-6 w-auto object-contain" 
+              />
               <span className="font-bold text-sm tracking-wide">MakeMyTrip</span>
             </a>
             <a 

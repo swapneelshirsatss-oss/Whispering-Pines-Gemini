@@ -12,7 +12,7 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
   description="Discover the best things to do near Mukteshwar and Ramgarh. From Kainchi Dham and Mukteshwar Dham Temple to Bhalu Gaad waterfalls and fruit orchard walks."
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
-    <Breadcrumbs client:load />
+    <Breadcrumbs />
     <main class="bg-[#FAF9F6]">
       <LocalExperiencesList 
         hideLink={true} 
@@ -21,7 +21,7 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
       />
       <SEOExperiencesContent />
     </main>
-    <WhatsAppButton client:load />
-    <RecentBookingNotification client:load />
+    <WhatsAppButton client:idle />
+    <RecentBookingNotification client:idle />
   </div>
 </Layout>

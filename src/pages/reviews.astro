@@ -12,18 +12,18 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
   description="Read verified guest reviews for Whispering Pines Resort. See why families, couples, and corporate groups rate us the best resort in Ramgarh, Uttarakhand."
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
-    <Breadcrumbs client:load />
+    <Breadcrumbs />
     
     <main class="pt-24 bg-[#1B3322]">
-      <ReviewsHeader client:load />
+      <ReviewsHeader client:idle />
 
       <div class="border-t border-[#FAF9F6]/10 pt-4 pb-20">
-        <TestimonialList layout="grid" client:load />
+        <TestimonialList layout="grid" client:visible />
       </div>
     </main>
 
-    <WhatsAppButton client:load />
-    <RecentBookingNotification client:load />
+    <WhatsAppButton client:idle />
+    <RecentBookingNotification client:idle />
   </div>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({
     "@context": "https://schema.org",
