@@ -23,7 +23,8 @@ import cedarSuiteImg from "../assets/images/Delux_room_Whispering_pines_mukteshw
 import orchardRoomImg from "../assets/images/Family_Twin Room_Near_nainital.avif";
 import familyTwinImg from "../assets/images/Group_booking_nainital_resort.avif";
 
-const optimizedHeroImage = await getImage({ src: heroImgSrc, format: "webp", width: 1920 });
+const optimizedHeroImage = await getImage({ src: heroImgSrc, format: "webp", width: 1600, quality: 80 });
+const optimizedHeroMobile = await getImage({ src: heroImgSrc, format: "webp", width: 800, quality: 75 });
 const optVilla = await getImage({ src: villaSuiteImg, format: "webp", width: 800 });
 const optCedar = await getImage({ src: cedarSuiteImg, format: "webp", width: 800 });
 const optOrchard = await getImage({ src: orchardRoomImg, format: "webp", width: 800 });
@@ -42,12 +43,15 @@ const roomImages = {
   description="Best resort in Ramgarh, Uttarakhand with stunning Himalayan views. located near Nainital & Mukteshwar. Book direct for exclusive rates!"
 >
   <ResortLodgingSchema slot="head" />
+  <link rel="preload" as="image" href={optimizedHeroMobile.src} media="(max-width: 768px)" fetchpriority="high" type="image/webp" slot="head" />
+  <link rel="preload" as="image" href={optimizedHeroImage.src} media="(min-width: 769px)" fetchpriority="high" type="image/webp" slot="head" />
+
   <div class="relative w-full text-[#2C3531] overflow-x-hidden pb-20 md:pb-0 selection:bg-[#c9a832] selection:text-[#1B3322]">
     {/* Breadcrumb Navigation */}
     <Breadcrumbs client:load />
 
     {/* Hero Presentation Block */}
-    <Hero client:load optimizedImage={optimizedHeroImage.src} />
+    <Hero client:load optimizedImage={optimizedHeroImage.src} optimizedMobileImage={optimizedHeroMobile.src} />
 
     <main>
       {/* About Sanctuary Story Section */}
