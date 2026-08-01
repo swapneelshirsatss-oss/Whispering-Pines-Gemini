@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
+  mobileSrc?: string;
   alt: string;
   className?: string;
   imgClassName?: string;
@@ -12,6 +13,7 @@ interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 
 export default function LazyImage({
   src,
+  mobileSrc,
   alt,
   className = '',
   imgClassName = 'w-full h-full object-cover',
@@ -26,9 +28,9 @@ export default function LazyImage({
     if (imgRef.current?.complete) {
       setIsLoaded(true);
     }
-  }, [src]);
+  }, [src, mobileSrc]);
 
-  const imgElement = (
+  const coreImg = (
     <img
       ref={imgRef}
       src={src}
@@ -42,6 +44,16 @@ export default function LazyImage({
       }`}
       {...props}
     />
+  );
+
+  const imgElement = mobileSrc ? (
+    <picture className="block w-full h-full">
+      <source media="(max-width: 768px)" srcSet={mobileSrc} type="image/webp" />
+      <source media="(min-width: 769px)" srcSet={src} type="image/webp" />
+      {coreImg}
+    </picture>
+  ) : (
+    coreImg
   );
 
   if (priority) {

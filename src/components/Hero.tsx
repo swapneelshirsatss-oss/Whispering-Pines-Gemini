@@ -16,16 +16,15 @@ export default function Hero({ optimizedImage, optimizedMobileImage }: HeroProps
     trackAdsConversion("generate_lead", "booking", "hero_whatsapp_booking");
   };
 
-  const activeHeroSrc = (typeof window !== 'undefined' && window.innerWidth < 768 && optimizedMobileImage) 
-    ? optimizedMobileImage 
-    : (optimizedImage || resortLuxuryHeroImg);
+  const mainHeroSrc = optimizedImage || resortLuxuryHeroImg;
 
   return (
     <header className="relative min-h-screen flex items-center justify-center bg-[#1B3322] overflow-hidden">
       {/* Decorative Overlays for Rich Contrast */}
       <div className="absolute inset-0 z-0">
         <LazyImage
-          src={activeHeroSrc}
+          src={mainHeroSrc}
+          mobileSrc={optimizedMobileImage}
           alt="Whispering Pines Resort luxury 4-star mountain hotel exterior overlooking Himalayan snow peaks in Mukteshwar"
           className="w-full h-full object-cover opacity-45 scale-105"
           referrerPolicy="no-referrer"

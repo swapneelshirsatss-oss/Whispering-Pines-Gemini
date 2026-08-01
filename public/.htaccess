@@ -44,6 +44,6 @@
 
 <IfModule mod_headers.c>
   <FilesMatch "\.(ico|jpe?g|png|gif|webp|avif|swf|css|js|svg|woff|woff2)$">
-    Header set Cache-Control "max-age=31536000, public"
+    Header set Cache-Control "max-age=31536000, public, immutable"
   </FilesMatch>
 </IfModule>
