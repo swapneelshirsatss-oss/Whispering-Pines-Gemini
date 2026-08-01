@@ -22,6 +22,8 @@ export default function TestimonialList({ layout = "carousel" }: TestimonialList
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
+  const displayTestimonials = layout === "carousel" ? TESTIMONIALS.slice(0, 6) : TESTIMONIALS;
+
   const checkScroll = () => {
     if (scrollContainerRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
@@ -45,7 +47,7 @@ export default function TestimonialList({ layout = "carousel" }: TestimonialList
   };
 
   return (
-    <section id="reviews" className="py-20 lg:py-28 bg-[#1B3322] border-t border-[#1B3322] overflow-hidden">
+    <section id="reviews" className="py-20 lg:py-28 bg-[#1B3322] border-t border-[#1B3322] overflow-hidden cv-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
@@ -107,7 +109,7 @@ export default function TestimonialList({ layout = "carousel" }: TestimonialList
             }
             style={layout === "carousel" ? { scrollbarWidth: 'none', msOverflowStyle: 'none' } : undefined}
           >
-            {TESTIMONIALS.map((review, idx) => (
+            {displayTestimonials.map((review, idx) => (
               <div
                 key={idx}
                 className={

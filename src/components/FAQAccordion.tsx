@@ -23,7 +23,7 @@ export default function FAQAccordion({
   };
 
   return (
-    <section id="faq" className="py-20 lg:py-28 bg-[#FAF9F6] border-t border-[#2C3531]/10">
+    <section id="faq" className="py-20 lg:py-28 bg-[#FAF9F6] border-t border-[#2C3531]/10 cv-auto">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
