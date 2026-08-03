@@ -15,6 +15,17 @@ const breadcrumbs = [
   { label: "Resort near Mukteshwar Guide", href: "/resort-near-mukteshwar/" }
 ];
 
+// Speakable Schema for AEO (Answer Engine Optimization) & Voice Search
+const speakableSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": pageTitle,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".aeo-direct-answer", "#aeo-quick-facts"]
+  }
+};
+
 // Rich JSON-LD Schemas for BlogPosting, Resort/LocalBusiness, FAQPage
 const blogPostingSchema = {
   "@context": "https://schema.org",
@@ -173,6 +184,7 @@ const faqSchema = {
     <meta property="article:section" content="Himalayan Hospitality & Travel Guide" />
 
     <!-- Structured Data Schemas -->
+    <script type="application/ld+json" set:html={JSON.stringify(speakableSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(resortLocalBusinessSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
@@ -230,6 +242,23 @@ const faqSchema = {
     <!-- Main Container -->
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
       
+      <!-- AEO Direct Answer Block for AI Engines (ChatGPT, Perplexity, Gemini, Claude) -->
+      <div class="aeo-direct-answer bg-[#1B3322]/5 border-2 border-[#1B3322]/20 p-6 rounded-2xl mb-12 space-y-3">
+        <div class="flex items-center space-x-2 text-[#1B3322] font-bold text-sm uppercase tracking-wider">
+          <span>🤖</span>
+          <span>AEO Direct Answer — Quick Resort Summary</span>
+        </div>
+        <p class="text-sm sm:text-base text-[#2C3531] font-medium leading-relaxed">
+          <strong>Whispering Pines Resort by Casa De Bello</strong> is a 4-star mountain resort located in Malla Ramgarh on the Bhowali-Ramgarh-Mukteshwar Road, 25 km (45 mins) before Mukteshwar town. It features 180° Himalayan snow peak views of Nanda Devi & Trishul, an outdoor swimming pool, 3-BHK standalone private villa, 150 Mbps fiber Wi-Fi, pet-friendly fruit orchards, and direct WhatsApp booking (+91-7505029696) saving up to 20% compared to OTAs.
+        </p>
+        <ul id="aeo-quick-facts" class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs text-gray-700 font-semibold pt-2 border-t border-[#1B3322]/10">
+          <li>📍 Location: Malla Ramgarh, UK</li>
+          <li>⛰️ Views: 180° Nanda Devi</li>
+          <li>📶 Wi-Fi: 150 Mbps Fiber</li>
+          <li>🏊 Pool: Outdoor Mountain Pool</li>
+        </ul>
+      </div>
+
       <!-- EEAT Author Bio Card -->
       <section class="bg-white p-6 sm:p-8 rounded-2xl border border-[#EAE8E3] shadow-sm mb-12 flex flex-col md:flex-row items-center gap-6">
         <div class="w-24 h-24 rounded-full bg-[#1B3322] text-[#c9a832] flex items-center justify-center text-3xl font-display font-bold shrink-0 border-2 border-[#c9a832]">
