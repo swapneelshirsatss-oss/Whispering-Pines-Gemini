@@ -14,6 +14,9 @@
 
   # 3. Redirect duplicate blog guide route to primary landing page
   RewriteRule ^blog/resort-near-mukteshwar/?$ https://whisperingpinesresort.in/resort-near-mukteshwar/ [R=301,L]
+  RewriteRule ^why-ramgarh-is-the-fruit-bowl-of-kumaon/?$ https://whisperingpinesresort.in/blog/ramgarh-fruit-bowl-of-kumaon/ [R=301,L]
+  RewriteRule ^blog/why-ramgarh-is-the-fruit-bowl-of-kumaon/?$ https://whisperingpinesresort.in/blog/ramgarh-fruit-bowl-of-kumaon/ [R=301,L]
+  RewriteRule ^ramgarh-fruit-bowl-of-kumaon/?$ https://whisperingpinesresort.in/blog/ramgarh-fruit-bowl-of-kumaon/ [R=301,L]
 
   # 4. Force trailing slash ONLY on directory/page URIs (excluding static files and URIs with trailing slash)
   RewriteCond %{REQUEST_FILENAME} !-f
