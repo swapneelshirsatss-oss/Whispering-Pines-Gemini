@@ -7,15 +7,15 @@ import { BLOG_POSTS, type BlogPostData } from '../../data/blogPosts.tsx';
 export async function getStaticPaths() {
   return BLOG_POSTS.filter((post) => !post.customUrl).map((post) => ({
     params: { slug: post.slug },
-    props: { post },
   }));
 }
 
-interface Props {
-  post: BlogPostData;
-}
+const { slug } = Astro.params;
+const post = BLOG_POSTS.find((p) => p.slug === slug);
 
-const { post } = Astro.props;
+if (!post) {
+  throw new Error(`Blog post not found for slug: ${slug}`);
+}
 
 const schemaData = [
   {
