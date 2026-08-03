@@ -17,19 +17,59 @@ interface Props {
 
 const { post } = Astro.props;
 
-const schemaData = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": post.title,
-  "image": post.imageUrl,
-  "datePublished": new Date(post.date).toISOString(),
-  "description": post.excerpt,
-  "url": `https://whisperingpinesresort.in/blog/${post.slug}/`,
-  "author": {
-    "@type": "Organization",
-    "name": "Whispering Pines Resort"
+const schemaData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://whisperingpinesresort.in/blog/${post.slug}/`
+    },
+    "headline": post.title,
+    "image": [post.imageUrl],
+    "datePublished": new Date(post.date).toISOString(),
+    "dateModified": new Date(post.date).toISOString(),
+    "description": post.excerpt,
+    "url": `https://whisperingpinesresort.in/blog/${post.slug}/`,
+    "author": {
+      "@type": "Person",
+      "name": "Gaurav Pandey",
+      "jobTitle": "Director",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Casa De Bello Pvt Ltd",
+        "url": "https://casadebello.com/"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://whisperingpinesresort.in/logo.svg"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Whispering Pines Resort by Casa De Bello - Malla Ramgarh",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 29.42641,
+      "longitude": 79.55053,
+      "elevation": "1780m"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd",
+      "addressLocality": "Mukteshwar",
+      "addressRegion": "Uttarakhand",
+      "postalCode": "263137",
+      "addressCountry": "IN"
+    }
   }
-};
+];
 ---
 
 <Layout 

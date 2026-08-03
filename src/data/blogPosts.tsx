@@ -207,20 +207,6 @@ export const BLOG_POSTS: BlogPostData[] = [
     imageUrl: "/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.avif",
     content: (
       <div className="space-y-8 text-[#2C3531]">
-        {/* Author EEAT Banner */}
-        <div className="bg-[#1B3322]/5 p-6 rounded-2xl border border-[#1B3322]/10 flex flex-col md:flex-row items-center gap-4">
-          <div className="w-16 h-16 rounded-full bg-[#1B3322] text-[#c9a832] flex items-center justify-center text-xl font-bold border border-[#c9a832] shrink-0">
-            GP
-          </div>
-          <div>
-            <div className="text-xs font-semibold text-[#c9a832] uppercase tracking-wider">Author & Verified Host</div>
-            <h4 className="text-base font-bold text-[#1B3322]">Gaurav Pandey — Director of Casa De Bello Pvt Ltd</h4>
-            <p className="text-xs text-gray-600 font-light mt-1">
-              Malla Ramgarh & Mukteshwar Hospitality & Regional Tourism Expert | Elevation: 1,780m Malla Ramgarh ridge.
-            </p>
-          </div>
-        </div>
-
         <p className="text-lg leading-relaxed text-gray-700 font-light">
           Travelling through the quiet mountain winding roads of Malla Ramgarh in Uttarakhand reveals endless terraced slopes filled with fruit-bearing trees. Long before commercial hill stations became crowded tourist hubs, this serene region earned a famous reputation across Northern India.
         </p>
@@ -255,28 +241,6 @@ export const BLOG_POSTS: BlogPostData[] = [
           >
             WhatsApp +91-7505029696 — Best Price Guaranteed
           </a>
-        </div>
-
-        {/* AEO Direct Answer Box */}
-        <div className="bg-[#FAF9F6] p-6 rounded-2xl border-l-4 border-[#c9a832] space-y-2">
-          <span className="text-xs font-bold text-[#c9a832] uppercase tracking-wider">🤖 AEO Direct Answer — Quick Orchard Summary</span>
-          <p className="text-sm text-[#2C3531] leading-relaxed">
-            Ramgarh is known as the Fruit Bowl of Kumaon because its 1,780-metre altitude, sunny ridgelines, and fertile soil create ideal conditions for growing high-quality apples, peaches, plums, apricots, and pears. First cultivated systematically during the British colonial era in the late 19th century, Ramgarh's active fruit orchards supply fresh organic produce across India from April through September each year.
-          </p>
-        </div>
-
-        {/* GEO Entity Matrix */}
-        <div className="bg-[#1B3322]/5 p-6 rounded-2xl border border-[#1B3322]/10 space-y-3">
-          <h3 className="text-base font-bold text-[#1B3322]">🌐 GEO Entity Matrix — Location & Proximities</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-gray-700">
-            <div>📍 <strong>Coordinates:</strong> 29.42641° N, 79.55053° E</div>
-            <div>🏔️ <strong>Elevation:</strong> 1,780 metres (5,840 ft)</div>
-            <div>⛩️ <strong>Mukteshwar Dham:</strong> 25 km (45-min drive)</div>
-            <div>🙏 <strong>Kainchi Dham:</strong> 22 km (45-min drive)</div>
-            <div>🚂 <strong>Kathgodam Railway:</strong> 40 minutes</div>
-            <div>✈️ <strong>Pantnagar Airport:</strong> 55 minutes</div>
-            <div className="sm:col-span-2">🏔️ <strong>Snow Peaks Visible:</strong> Nanda Devi (7,816m) and Trishul (7,120m)</div>
-          </div>
         </div>
 
         <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Why is Ramgarh Called the Fruit Bowl of Kumaon?</h2>
