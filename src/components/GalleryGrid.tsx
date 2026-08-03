@@ -68,6 +68,15 @@ const images = [
   { src: img29, alt: "Stay near Kainchi Dham", span: "col-span-1 sm:col-span-2 row-span-1" },
   { src: img30, alt: "Twin Room comfort", span: "col-span-1 row-span-1" },
   { src: img31, alt: "Premium Villa in Ramgarh", span: "col-span-1 sm:col-span-2 row-span-1" },
+  { src: "/images/best -resort-in-ramgarh-uttarkahand.avif", alt: "Best Resort in Ramgarh Uttarakhand", span: "col-span-1 sm:col-span-2 row-span-2" },
+  { src: "/images/best-place-to-stay-near-mukteshwar.avif", alt: "Best Place to Stay Near Mukteshwar", span: "col-span-1 row-span-1" },
+  { src: "/images/best-resort-in-uttrakahnd.avif", alt: "Best Mountain Resort in Uttarakhand", span: "col-span-1 sm:col-span-2 row-span-1" },
+  { src: "/images/hotel-near-kainchidham.avif", alt: "Boutique Stay Near Kainchi Dham", span: "col-span-1 row-span-2" },
+  { src: "/images/reosrt-reasurant-near-nanital.avif", alt: "Resort Restaurant near Nainital", span: "col-span-1 sm:col-span-2 row-span-1" },
+  { src: "/images/resoert-near-nanital.avif", alt: "Whispering Pines Resort Estate View", span: "col-span-1 row-span-1" },
+  { src: "/images/resort-for-families-in-mukteshwar.avif", alt: "Resort for Families in Mukteshwar", span: "col-span-1 sm:col-span-2 row-span-1" },
+  { src: "/images/vikka-in-mukteshwar.avif", alt: "Heritage Alpine Villa Exterior", span: "col-span-1 row-span-2" },
+  { src: "/images/villa-for-families-in-mukteshwar.avif", alt: "Private Family Villa Grounds", span: "col-span-1 sm:col-span-2 row-span-1" },
 ];
 
 export default function GalleryGrid() {
