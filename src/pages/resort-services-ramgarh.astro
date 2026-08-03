@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Breadcrumbs from "../components/Breadcrumbs";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
 import ServicesSection from "../components/ServicesSection.astro";
 import SEOServicesContent from "../components/SEOServicesContent.astro";
 import WhatsAppButton from "../components/WhatsAppButton";
@@ -8,22 +8,18 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
 <Layout 
-  title="Resort Services | Family Resort near Nainital" 
-  description="Discover premium services at Whispering Pines Resort. From guided treks and orchard walks to in-room dining and corporate event management."
+  title="Resort Services & Facilities | Whispering Pines Ramgarh" 
+  description="Explore multi-cuisine dining, outdoor pool, 150 Mbps Wi-Fi, bonfire evenings & transport services at Whispering Pines Resort Malla Ramgarh near Mukteshwar."
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
-    <Breadcrumbs client:load />
+    <Breadcrumbs />
     
-    <main class="bg-[#FAF9F6]">
-      <ServicesSection 
-        hideLink={true}
-        asH1={true}
-        title="Your Stay in Ramgarh, Elevated — Premium Services, Real Mountain Experiences"
-      />
+    <main class="pt-8">
+      <ServicesSection asH1={true} title="Resort Services & Guest Facilities" />
       <SEOServicesContent />
     </main>
 
-    <WhatsAppButton client:load />
-    <RecentBookingNotification client:load />
+    <WhatsAppButton client:idle />
+    <RecentBookingNotification client:idle />
   </div>
 </Layout>

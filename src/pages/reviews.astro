@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Breadcrumbs from "../components/Breadcrumbs";
-import ReviewsHeader from "../components/ReviewsHeader";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import ReviewsHeader from "../components/ReviewsHeader.astro";
 import TestimonialList from "../components/TestimonialList";
 import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
@@ -15,7 +15,7 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
     <Breadcrumbs />
     
     <main class="pt-24 bg-[#1B3322]">
-      <ReviewsHeader client:idle />
+      <ReviewsHeader />
 
       <div class="border-t border-[#FAF9F6]/10 pt-4 pb-20">
         <TestimonialList layout="grid" client:visible />

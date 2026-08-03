@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Breadcrumbs from "../components/Breadcrumbs";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
 import RoomInventoryList from "../components/RoomInventoryList";
 import BookingInteractiveForm from "../components/BookingInteractiveForm";
 import WhatsAppButton from "../components/WhatsAppButton";
@@ -8,24 +8,27 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
 <Layout 
-  title="Suites & Cottages | Luxury Rooms in Ramgarh & Mukteshwar" 
-  description="Book luxury suites, cottages, and family rooms at Whispering Pines Resort. Enjoy Himalayan views, premium amenities, and private balconies."
+  title="Suites & Cottages | Whispering Pines Resort Ramgarh" 
+  description="Explore luxury suites, deluxe rooms & private villas at Whispering Pines Resort Ramgarh. Panoramic Himalayan peak views, fireplaces & 150 Mbps Wi-Fi."
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
-    <Breadcrumbs client:load />
+    <Breadcrumbs />
     
-    <main class="bg-[#1B3322]/5">
+    <main class="pt-8">
       <RoomInventoryList 
-        client:load
-        hideLink={true} 
-        initialFilter="all" 
-        title="Ramgarh Resort Booking — Choose Your Suite, Cottage or Private Villa"
+        title="Suites, Deluxe Rooms & Private Villas" 
         isH1={true}
+        client:visible
       />
-      <BookingInteractiveForm title="Complete Your vacation Booking" client:load />
+      
+      <div id="book" class="bg-[#1B3322] text-[#FAF9F6] py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+          <BookingInteractiveForm title="Complete Your Vacation Booking" client:visible />
+        </div>
+      </div>
     </main>
 
-    <WhatsAppButton client:load />
-    <RecentBookingNotification client:load />
+    <WhatsAppButton client:idle />
+    <RecentBookingNotification client:idle />
   </div>
 </Layout>

@@ -1,25 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Breadcrumbs from "../components/Breadcrumbs";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
 import AmenitiesList from "../components/AmenitiesList.astro";
 import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
 <Layout 
-  title="Resort Amenities | Luxury Stay in Mukteshwar & Ramgarh" 
-  description="Explore the premium amenities at Whispering Pines Resort. Enjoy 150 Mbps Wi-Fi, mountain-view dining, bonfire evenings, and private plunge pools."
+  title="Resort Amenities | Whispering Pines Resort Mukteshwar" 
+  description="Enjoy 180° Himalayan views, outdoor pool, 150 Mbps Wi-Fi, wood fireplaces, pet friendly gardens & homestyle dining at Whispering Pines Resort Mukteshwar."
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
-    <Breadcrumbs client:load />
-    <main class="bg-[#1B3322]">
-      <AmenitiesList 
-        hideLink={true} 
-        title="Best Resort Near Mukteshwar — Amenities Built for a True Mountain Escape"
-        isH1={true}
-      />
+    <Breadcrumbs />
+    
+    <main class="pt-8">
+      <AmenitiesList hideLink={true} asH1={true} title="Resort Amenities & Property Highlights" />
     </main>
-    <WhatsAppButton client:load />
-    <RecentBookingNotification client:load />
+
+    <WhatsAppButton client:idle />
+    <RecentBookingNotification client:idle />
   </div>
 </Layout>

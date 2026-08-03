@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Breadcrumbs from "../components/Breadcrumbs";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
 import RoomInventoryList from "../components/RoomInventoryList";
 import BookingInteractiveForm from "../components/BookingInteractiveForm";
 import WhatsAppButton from "../components/WhatsAppButton";
@@ -13,12 +13,12 @@ import { Home, Trees, ShieldCheck, Heart } from "lucide-react";
   description="Book our premium 3-bedroom private villa near Nainital. Perfect for family getaways with private orchard, Himalayan views, fireplace, and full kitchen."
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
-    <Breadcrumbs client:load />
+    <Breadcrumbs />
     
     <main class="pt-24">
       {/* Room Inventory List filtered to 'villa' */}
       <RoomInventoryList 
-        client:load
+        client:visible
         hideLink={true} 
         initialFilter="villa" 
         title="Book Villas Near Nainital — A Stone & Orchard Nature Retreat in Ramgarh"
@@ -168,7 +168,7 @@ import { Home, Trees, ShieldCheck, Heart } from "lucide-react";
 
       {/* Booking Section */}
       <BookingInteractiveForm 
-        client:load
+        client:visible
         title="Reserve Your Villa Near Nainital — Direct Booking, Best Price" 
         features={[
           "Entire Villa Available on Exclusive Rental Basis",
@@ -178,7 +178,7 @@ import { Home, Trees, ShieldCheck, Heart } from "lucide-react";
       />
     </main>
 
-    <WhatsAppButton client:load />
-    <RecentBookingNotification client:load />
+    <WhatsAppButton client:idle />
+    <RecentBookingNotification client:idle />
   </div>
 </Layout>

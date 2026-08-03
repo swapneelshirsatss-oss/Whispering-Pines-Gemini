@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Breadcrumbs from "../components/Breadcrumbs";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
 import GalleryGrid from "../components/GalleryGrid";
 import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
@@ -13,11 +13,11 @@ import GallerySchema from "../components/GallerySchema.astro";
 >
   <GallerySchema slot="head" />
   <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
-    <Breadcrumbs client:load />
+    <Breadcrumbs />
     <main class="pt-24 pb-20 bg-[#FAF9F6]">
-      <GalleryGrid client:load />
+      <GalleryGrid client:visible />
     </main>
-    <WhatsAppButton client:load />
-    <RecentBookingNotification client:load />
+    <WhatsAppButton client:idle />
+    <RecentBookingNotification client:idle />
   </div>
 </Layout>

@@ -2,8 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import ResortLodgingSchema from '../components/ResortLodgingSchema.astro';
 
-import Breadcrumbs from "../components/Breadcrumbs";
-import Hero from "../components/Hero";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import Hero from "../components/Hero.astro";
 import AboutSection from "../components/AboutSection.astro";
 import RoomInventoryList from "../components/RoomInventoryList";
 import AmenitiesList from "../components/AmenitiesList.astro";
@@ -51,7 +51,7 @@ const roomImages = {
     <Breadcrumbs />
 
     {/* Hero Presentation Block */}
-    <Hero client:idle optimizedImage={optimizedHeroImage.src} optimizedMobileImage={optimizedHeroMobile.src} />
+    <Hero optimizedImage={optimizedHeroImage.src} optimizedMobileImage={optimizedHeroMobile.src} />
 
     <main>
       {/* About Sanctuary Story Section */}
