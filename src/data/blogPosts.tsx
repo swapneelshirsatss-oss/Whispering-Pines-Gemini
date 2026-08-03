@@ -13,6 +13,15 @@ export type BlogPostData = {
 
 export const BLOG_POSTS: BlogPostData[] = [
   {
+    id: 0,
+    slug: "resort-near-mukteshwar",
+    title: "Resort near Mukteshwar for Families, Couples & Workation — 2026 Guide",
+    excerpt: "Looking for the best resort near Mukteshwar? Whispering Pines by Casa De Bello in Ramgarh offers 180° Himalayan views, pool, villa, orchard stays & 150 Mbps Wi-Fi. Book direct.",
+    date: "August 3, 2026",
+    readTime: "14 min read",
+    imageUrl: "/images/Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp"
+  },
+  {
     id: 1,
     slug: "clarks-exotica-transition",
     title: "A New Era of Himalayan Luxury: Clarks Exotica Transitions to Whispering Pines Resort Mukteshwar",
