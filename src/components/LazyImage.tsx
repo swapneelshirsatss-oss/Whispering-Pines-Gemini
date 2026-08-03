@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 interface LazyImageProps extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'width' | 'height'> {
-  src: string;
-  mobileSrc?: string;
+  src: string | any;
+  mobileSrc?: string | any;
   srcSet?: string;
   sizes?: string;
   alt: string;
@@ -14,6 +14,16 @@ interface LazyImageProps extends Omit<React.ImgHTMLAttributes<HTMLImageElement>,
   priority?: boolean;
   referrerPolicy?: React.HTMLAttributeReferrerPolicy;
 }
+
+const getSrcString = (val: any): string | undefined => {
+  if (!val) return undefined;
+  if (typeof val === 'string') return val;
+  if (typeof val === 'object') {
+    if (typeof val.src === 'string') return val.src;
+    if (typeof val.default === 'string') return val.default;
+  }
+  return String(val);
+};
 
 export default function LazyImage({
   src,
@@ -29,10 +39,13 @@ export default function LazyImage({
   priority = false,
   ...props
 }: LazyImageProps) {
+  const actualSrc = getSrcString(src);
+  const actualMobileSrc = getSrcString(mobileSrc);
+
   const [isInView, setIsInView] = useState(priority);
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const imgRef = useRef<HTMLImageElement | null>(null);
 
   // IntersectionObserver to delay setting src for off-screen non-priority images
   useEffect(() => {
@@ -66,14 +79,21 @@ export default function LazyImage({
     if (isInView && imgRef.current?.complete) {
       setIsLoaded(true);
     }
-  }, [isInView, src, mobileSrc]);
+  }, [isInView, actualSrc, actualMobileSrc]);
+
+  const handleImgRef = (node: HTMLImageElement | null) => {
+    imgRef.current = node;
+    if (node && node.complete) {
+      setIsLoaded(true);
+    }
+  };
 
   const defaultSizes = sizes || '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
 
   const coreImg = (
     <img
-      ref={imgRef}
-      src={isInView ? src : undefined}
+      ref={handleImgRef}
+      src={isInView ? actualSrc : undefined}
       srcSet={isInView && srcSet ? srcSet : undefined}
       sizes={sizes ? sizes : (srcSet ? defaultSizes : undefined)}
       alt={alt}
@@ -90,10 +110,10 @@ export default function LazyImage({
     />
   );
 
-  const imgElement = mobileSrc ? (
+  const imgElement = actualMobileSrc ? (
     <picture className="block w-full h-full">
-      <source media="(max-width: 768px)" srcSet={isInView ? mobileSrc : undefined} type="image/webp" />
-      <source media="(min-width: 769px)" srcSet={isInView ? (srcSet || src) : undefined} sizes={sizes ? sizes : (srcSet ? defaultSizes : undefined)} type="image/webp" />
+      <source media="(max-width: 768px)" srcSet={isInView ? actualMobileSrc : undefined} type="image/webp" />
+      <source media="(min-width: 769px)" srcSet={isInView ? (srcSet || actualSrc) : undefined} sizes={sizes ? sizes : (srcSet ? defaultSizes : undefined)} type="image/webp" />
       {coreImg}
     </picture>
   ) : (
