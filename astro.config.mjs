@@ -47,6 +47,14 @@ export default defineConfig({
     sitemap(),
     masterSitemap(),
   ],
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp',
+      config: {
+        limitInputPixels: false,
+      },
+    },
+  },
   prefetch: true,
 
   vite: {

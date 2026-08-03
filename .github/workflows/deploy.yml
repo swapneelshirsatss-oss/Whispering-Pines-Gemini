@@ -14,9 +14,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
+      - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Install, build, and upload your site
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Cache Astro Build & Image Assets
+        uses: actions/cache@v4
+        with:
+          path: |
+            .astro
+            node_modules/.cache
+          key: astro-image-cache-${{ runner.os }}-${{ hashFiles('**/package-lock.json', 'src/assets/images/**') }}
+          restore-keys: |
+            astro-image-cache-${{ runner.os }}-
+
+      - name: Install & Build Site
         uses: withastro/action@v3
         with:
           node-version: 22
