@@ -1,7 +1,25 @@
 import React from "react";
 import { MapPin, Compass, ArrowRight } from "lucide-react";
-import { LOCAL_EXPERIENCES } from "../data";
 import LazyImage from "./LazyImage";
+
+const LOCAL_EXPERIENCES = [
+  {
+    id: "mukteshwar-dham",
+    title: "Mukteshwar Dham Temple & Chauli Ki Jali",
+    distance: "25 km (45 mins)",
+    description: "350-year-old Shiva temple at 2,312m elevation with cliff-edge views.",
+    tag: "Spiritual & Views",
+    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    id: "tagore-top-ramgarh",
+    title: "Tagore Top & Mahadevi Verma Museum",
+    distance: "5 km (15 mins)",
+    description: "Historical hill peak where Nobel laureate Rabindranath Tagore stayed.",
+    tag: "Heritage Walk",
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=800"
+  }
+];
 
 interface LocalExperiencesListProps {
   hideLink?: boolean;

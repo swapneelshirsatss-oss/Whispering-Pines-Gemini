@@ -1,9 +1,59 @@
 import React, { useState } from "react";
 import { Users, Bed, Check, ArrowRight, Apple, Snowflake, Info } from "lucide-react";
-import { ROOMS_INVENTORY, BOOKING_ENGINE_URL } from "../data";
 import LazyImage from "./LazyImage";
 import { trackAdsConversion } from "../utils/analytics";
+import type { RoomOption } from "../types";
 
+const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
+
+const FALLBACK_ROOMS: RoomOption[] = [
+  {
+    id: "entire-cottage",
+    name: "Private Villa — The Ultimate Family Resort Experience Near Nainital",
+    subtitle: "Complete Alpine Luxury with Private Orchard & Fireplace",
+    capacity: "Up to 9-10 Adults",
+    bedType: "3 Grand King Bedrooms + Premium Loft",
+    pricePerNight: 15999,
+    featured: true,
+    image: "/images/villa_in_nanital.avif",
+    amenities: [
+      "Sleeps Up to 10 — 3 King Bedrooms + Premium Loft",
+      "3 Private En-Suite Baths with Himalayan Peak Views",
+      "Exclusive Private Orchard Yard & Fireplace Living Room"
+    ],
+    description: "Rent the entire wood-and-stone alpine estate for absolute privacy."
+  },
+  {
+    id: "delux-room",
+    name: "Deluxe Skylight Suite — Solo Travellers & Couples' Retreat",
+    subtitle: "Cozy Wood-Paneled Skylight Hideaway",
+    capacity: "2-3 Adults",
+    bedType: "1 Grand Bed + Cozy Daybed",
+    pricePerNight: 6499,
+    featured: false,
+    image: "/images/Delux_room_Whispering_pines_mukteshwar.avif",
+    amenities: [
+      "Glass Skylight Ceilings for Night-Time Star Gazing",
+      "Cedar Pine Deck Overlooking Bhowali-Ramgarh Valley"
+    ],
+    description: "Located on the pristine top floor under cathedral wooden panels."
+  },
+  {
+    id: "orchard-room",
+    name: "Family Twin Room — Ground Floor Orchard Access for Kids & Parents",
+    subtitle: "Ground Floor Serenity Overlooking Fruits & Blooms",
+    capacity: "2 Adults",
+    bedType: "1 Premium Double Bed",
+    pricePerNight: 4999,
+    featured: false,
+    image: "/images/Family_Twin Room_Near_nainital.avif",
+    amenities: [
+      "Direct Lawn Access — Safe Open Space for Children",
+      "Exposed Old-Stone Brick Archways & Geo-Heater Warmth"
+    ],
+    description: "Open your doors directly onto green lawns and private peach and apple trees."
+  }
+];
 
 interface RoomInventoryListProps {
   initialFilter?: string;
@@ -12,6 +62,7 @@ interface RoomInventoryListProps {
   isH1?: boolean;
   categoryIntro?: string;
   optimizedImages?: Record<string, string>;
+  rooms?: RoomOption[];
 }
 
 export default function RoomInventoryList({
@@ -21,6 +72,7 @@ export default function RoomInventoryList({
   isH1 = false,
   categoryIntro = "Suites & Cottages at Uttarakhand's Most Loved Family Resort",
   optimizedImages,
+  rooms = FALLBACK_ROOMS,
 }: RoomInventoryListProps = {}) {
   const [filter, setFilter] = useState(initialFilter);
 
@@ -31,7 +83,7 @@ export default function RoomInventoryList({
     { label: "Deluxe Rooms (2 Guests)", value: "deluxe" },
   ];
 
-  const filteredRooms = ROOMS_INVENTORY.filter((room) => {
+  const filteredRooms = rooms.filter((room) => {
     if (filter === "all") return true;
     if (filter === "villa") return room.id === "entire-cottage";
     if (filter === "suite") return room.id === "delux-room";

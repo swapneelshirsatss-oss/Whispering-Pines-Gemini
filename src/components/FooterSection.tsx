@@ -1,7 +1,20 @@
 import React from "react";
 import { MapPin, Phone, Mail, ArrowUpRight } from 'lucide-react';
-import { RESORT_CONTACT } from "../data";
 import Logo from "./Logo";
+
+const RESORT_CONTACT = {
+  phone: "+91-7505029696",
+  email: "booking@whisperingpinesresort.in",
+  address: "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+  gmapsLink: "https://maps.app.goo.gl/hieeCQ2Ymc1vKNxj7",
+  socials: {
+    facebook: "https://facebook.com/whisperingpinesbycasadebello",
+    instagram: "https://www.instagram.com/whisperingpines.casa",
+    twitter: "https://x.com/WhiperingPines",
+    youtube: "https://www.youtube.com/channel/UC7WARaMtVTj9QS57zMX3yZw",
+    tripadvisor: "https://www.tripadvisor.in/Hotel_Review-g1049689-d34470070-Reviews-Whispering_Pines_Resort_Mukteshwar-Ramgarh_Nainital_District_Uttarakhand.html"
+  }
+};
 
 export default function FooterSection() {
   const currentYear = new Date().getFullYear();

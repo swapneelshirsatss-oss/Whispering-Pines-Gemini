@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Phone, Menu, X, ArrowUpRight } from 'lucide-react';
-import { RESORT_CONTACT, BOOKING_ENGINE_URL } from "../data";
 import { trackAdsConversion } from "../utils/analytics";
+
+const PHONE_NUMBER = "+91-7505029696";
+const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
 
 interface NavbarProps {
   children?: React.ReactNode;
@@ -87,11 +89,11 @@ export default function Navbar({ children }: NavbarProps) {
           {/* Contact CTAs */}
           <div className="hidden lg:flex items-center space-x-6">
             <a
-              href={`tel:${RESORT_CONTACT.phone}`}
+              href={`tel:${PHONE_NUMBER}`}
               className="flex items-center text-[11px] font-mono tracking-widest text-[#FAF9F6]/85 hover:text-[#FAF9F6] transition-colors"
             >
               <Phone className="w-3.5 h-3.5 mr-1.5 opacity-70" />
-              {RESORT_CONTACT.phone}
+              {PHONE_NUMBER}
             </a>
             <a
               href={BOOKING_ENGINE_URL}
@@ -165,11 +167,11 @@ export default function Navbar({ children }: NavbarProps) {
           
           <div className="border-t border-[#FAF9F6]/10 pt-6 px-4 space-y-5">
             <a
-              href={`tel:${RESORT_CONTACT.phone}`}
+              href={`tel:${PHONE_NUMBER}`}
               className="flex items-center text-base font-mono text-[#FAF9F6]/85 p-2 -ml-2"
             >
               <Phone className="w-5 h-5 mr-3 text-[#c9a832]" />
-              {RESORT_CONTACT.phone}
+              {PHONE_NUMBER}
             </a>
             
             <a

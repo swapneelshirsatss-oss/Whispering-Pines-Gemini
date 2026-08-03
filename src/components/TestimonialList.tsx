@@ -1,6 +1,30 @@
 import React, { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { TESTIMONIALS } from "../data";
+import type { Testimonial } from "../types";
+
+const FALLBACK_TESTIMONIALS: Testimonial[] = [
+  {
+    name: "Digital Swapneel",
+    rating: 5,
+    source: "Google Reviews",
+    date: "June 2026",
+    comment: "Absolutely stunning upgrade! Whispering Pines Resort Mukteshwar has completely transformed the old Clarks Exotica property. Same beautiful location, but much better luxury amenities. Book direct on their site for the best rates. 10/10 mountain escape."
+  },
+  {
+    name: "Anurag Arya",
+    rating: 5,
+    source: "Google Reviews",
+    date: "July 2026",
+    comment: "Really nice place for a peaceful getaway. The rooms were clean, staff was very friendly and the food was tasty. Loved the view and the calm atmosphere. Would definitely visit again. Highly recommended!"
+  },
+  {
+    name: "Himanshu Saxena",
+    rating: 5,
+    source: "Google Reviews",
+    date: "April 2026",
+    comment: "It was a pleasant stay with awesome staff, food and serenity. Location easy to reach, staff very supportive and cooperative, property quite scenic."
+  }
+];
 
 const avatarColors = [
   "bg-[#4285F4]", "bg-[#DB4437]", "bg-[#F4B400]", "bg-[#0F9D58]", 
@@ -15,14 +39,15 @@ const getAvatarColor = (name: string) => {
 
 interface TestimonialListProps {
   layout?: "carousel" | "grid";
+  testimonials?: Testimonial[];
 }
 
-export default function TestimonialList({ layout = "carousel" }: TestimonialListProps) {
+export default function TestimonialList({ layout = "carousel", testimonials = FALLBACK_TESTIMONIALS }: TestimonialListProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const displayTestimonials = layout === "carousel" ? TESTIMONIALS.slice(0, 6) : TESTIMONIALS;
+  const displayTestimonials = layout === "carousel" ? testimonials.slice(0, 6) : testimonials;
 
   const checkScroll = () => {
     if (scrollContainerRef.current) {
@@ -162,7 +187,7 @@ export default function TestimonialList({ layout = "carousel" }: TestimonialList
           {/* Mobile Swipe Indicator */}
           {layout === "carousel" && (
             <div className="flex justify-center mt-6 sm:hidden space-x-1.5 flex-wrap px-4 gap-y-2">
-              {TESTIMONIALS.map((_, i) => (
+              {displayTestimonials.map((_, i) => (
                 <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${i === 0 ? 'w-6 bg-[#4285F4]' : 'w-1.5 bg-[#e8eaed]'}`} />
               ))}
             </div>

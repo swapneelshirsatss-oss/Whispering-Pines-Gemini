@@ -1,7 +1,13 @@
 import React from "react";
 import { Utensils, Flame, Car, Sparkles, ArrowRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { RESORT_SERVICES } from "../data";
+
+const LOCAL_SERVICES = [
+  { id: "dining", title: "Homestyle Kumaoni Dining", category: "Culinary", description: "Farm-to-table organic meals.", icon: "Utensils" },
+  { id: "bonfire", title: "Pine Forest Bonfires & BBQ", category: "Leisure", description: "Nightly fires under clear skies.", icon: "Flame" },
+  { id: "transport", title: "Station & Sightseeing Pickup", category: "Conveyance", description: "Direct transport from Kathgodam/Pantnagar.", icon: "Car" },
+  { id: "workation", title: "High-Speed Workation Wi-Fi", category: "Connectivity", description: "150 Mbps fiber internet.", icon: "Sparkles" }
+];
 
 const iconMap: Record<string, LucideIcon> = {
   Utensils,
@@ -43,7 +49,7 @@ export default function ServicesSection({
 
         {/* Grid Box */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {RESORT_SERVICES.map((service, idx) => {
+          {LOCAL_SERVICES.map((service, idx) => {
             const IconComponent = iconMap[service.icon] || Sparkles;
             return (
               <div

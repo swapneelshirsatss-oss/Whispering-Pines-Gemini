@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Calendar, Users, Home, ArrowUpRight, ChevronDown } from "lucide-react";
-import { ROOMS_INVENTORY, BOOKING_ENGINE_URL } from "../data";
 import { trackAdsConversion } from "../utils/analytics";
+
+const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
+
+const FORM_ROOM_OPTIONS = [
+  { id: "entire-cottage", name: "Private Villa — The Ultimate Family Resort Experience Near Nainital", pricePerNight: 15999 },
+  { id: "delux-room", name: "Deluxe Skylight Suite — Solo Travellers & Couples' Retreat", pricePerNight: 6499 },
+  { id: "orchard-room", name: "Family Twin Room — Ground Floor Orchard Access", pricePerNight: 4999 }
+];
 
 interface BookingInteractiveFormProps {
   title?: string;
@@ -12,14 +19,14 @@ export default function BookingInteractiveForm({
   title = "Complete Your Ramgarh Resort Booking in Easy Steps",
   features
 }: BookingInteractiveFormProps = {}) {
-  const [selectedRoomId, setSelectedRoomId] = useState(ROOMS_INVENTORY[0].id);
+  const [selectedRoomId, setSelectedRoomId] = useState(FORM_ROOM_OPTIONS[0].id);
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
   const [guestsCount, setGuestsCount] = useState("2");
   const [nights, setNights] = useState(1);
   const [totalCost, setTotalCost] = useState(0);
 
-  const selectedRoom = ROOMS_INVENTORY.find((r) => r.id === selectedRoomId) || ROOMS_INVENTORY[0];
+  const selectedRoom = FORM_ROOM_OPTIONS.find((r) => r.id === selectedRoomId) || FORM_ROOM_OPTIONS[0];
 
   useEffect(() => {
     if (checkIn && checkOut) {
@@ -113,7 +120,7 @@ export default function BookingInteractiveForm({
                   onChange={(e) => setSelectedRoomId(e.target.value)}
                   className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#c9a832] rounded-sm py-2 pl-3 pr-8 text-[13px] focus:outline-none transition-colors appearance-none cursor-pointer"
                 >
-                  {ROOMS_INVENTORY.map((room) => (
+                  {FORM_ROOM_OPTIONS.map((room) => (
                     <option key={room.id} value={room.id}>
                       {room.name}
                     </option>

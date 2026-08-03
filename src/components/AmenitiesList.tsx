@@ -1,7 +1,13 @@
 import React from "react";
 import { Compass, Flame, Wifi, UtensilsCrossed, Heart, Car, Sparkles, Trees, ArrowRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { GENERAL_AMENITIES } from "../data";
+
+const GENERAL_AMENITIES = [
+  { title: "180° Himalayan Peak View", category: "View & Location", icon: "Compass", description: "Direct view of Nanda Devi & Trishul peaks." },
+  { title: "Fireplace & Radiator Heating", category: "Warmth & Comfort", icon: "Flame", description: "Indoor wood fireplaces." },
+  { title: "150 Mbps Fiber Wi-Fi", category: "Connectivity", icon: "Wifi", description: "Dedicated high-speed internet." },
+  { title: "Homestyle Dining", category: "Culinary", icon: "UtensilsCrossed", description: "Fresh local organic cuisine." }
+];
 
 const iconMap: Record<string, LucideIcon> = {
   Compass,

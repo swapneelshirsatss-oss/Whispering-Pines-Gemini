@@ -1,10 +1,32 @@
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp, HelpCircle } from "lucide-react";
-import { FAQS as defaultFAQS } from "../data";
 import type { FAQItem } from "../types";
 
+const FALLBACK_FAQS: FAQItem[] = [
+  {
+    question: "Is there dedicated, secure private parking available on site?",
+    answer: "Absolutely! The property features a secure, flat gated private gravel driveway that comfortably accommodates 3 to 4 tourist SUVs/sedans right in front of the villa. No tricky cliff-edge parking required."
+  },
+  {
+    question: "Do you have high-speed internet suited for remote working?",
+    answer: "Yes, we have high-speed dedicated fiber-optic internet connection (150 Mbps) supporting active work sessions, video calls, and streaming seamlessly throughout the villa and front outdoor gardens."
+  },
+  {
+    question: "How do meals and dining work? Can we order customized food?",
+    answer: "We offer delicious customized homestyle dining on-site. Our resident cook prepares fresh multi-cuisine meals and authentic local Kumaoni delicacies using locally-sourced organic vegetables."
+  },
+  {
+    question: "Are pets allowed inside the villa and gardens?",
+    answer: "Absolutely! We love pets and are completely dog-friendly. The villa has large, secure, enclosed front lawns and direct access to wilderness pine forest paths where your dogs can explore safely."
+  },
+  {
+    question: "How does the WhatsApp booking process work?",
+    answer: "To book, simply click select your room, guest count, and dates, then hit 'Instantly Book on WhatsApp'. Our customer service representative will respond in minutes and share secure UPI/Credit Card payment invoices."
+  }
+];
+
 export default function FAQAccordion({ 
-  faqs = defaultFAQS, 
+  faqs = FALLBACK_FAQS, 
   title = "Stay Details & F.A.Q.", 
   description = "Everything you need to know about parking, high-speed fiber internet, food cooking, pet friendly rules, and our simple secure WhatsApp reservation process." 
 }: { 

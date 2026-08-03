@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-
 import { Tag, X, Phone } from "lucide-react";
-import { RESORT_CONTACT } from "../data";
+
+const PHONE_NUMBER = "+91-7505029696";
 
 export default function RecentBookingNotification() {
   const [isVisible, setIsVisible] = useState(false);
@@ -41,7 +41,7 @@ export default function RecentBookingNotification() {
             </p>
             <div className="mt-3 flex items-center space-x-2">
               <a
-                href={`tel:${RESORT_CONTACT.phone}`}
+                href={`tel:${PHONE_NUMBER}`}
                 className="inline-flex items-center justify-center bg-[#1B3322] hover:bg-[#c9a832] text-white hover:text-[#1B3322] text-[11px] font-mono font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-sm transition-all duration-300 shadow-sm"
               >
                 <Phone className="w-3 h-3 mr-1.5" />
