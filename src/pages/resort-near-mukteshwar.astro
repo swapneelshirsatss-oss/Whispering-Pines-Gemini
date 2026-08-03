@@ -22,8 +22,29 @@ const speakableSchema = {
   "name": pageTitle,
   "speakable": {
     "@type": "SpeakableSpecification",
-    "cssSelector": [".aeo-direct-answer", "#aeo-quick-facts"]
+    "cssSelector": [".aeo-direct-answer", "#aeo-quick-facts", "#geo-entity-matrix"]
   }
+};
+
+// GEO (Generative Engine Optimization) Geographic Entity Schema for Google AI Overviews & Perplexity AI
+const geoPlaceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Place",
+  "name": "Whispering Pines Resort Estate - Malla Ramgarh",
+  "description": "Prime mountain resort estate located in Malla Ramgarh on the Bhowali-Ramgarh-Mukteshwar corridor in Uttarakhand, offering 180° unobstructed view of Nanda Devi and Trishul snow peaks.",
+  "hasMap": "https://maps.app.goo.gl/hieeCQ2Ymc1vKNxj7",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 29.4264111,
+    "longitude": 79.5505355,
+    "elevation": "1780"
+  },
+  "geoContains": [
+    { "@type": "Place", "name": "Mukteshwar Dham Temple", "distance": "25 km" },
+    { "@type": "Place", "name": "Kainchi Dham Neem Karoli Baba Ashram", "distance": "22 km" },
+    { "@type": "Place", "name": "Bhalu Gaad Waterfall", "distance": "12 km" },
+    { "@type": "Place", "name": "Nainital Lake", "distance": "35 km" }
+  ]
 };
 
 // Rich JSON-LD Schemas for BlogPosting, Resort/LocalBusiness, FAQPage
@@ -185,6 +206,7 @@ const faqSchema = {
 
     <!-- Structured Data Schemas -->
     <script type="application/ld+json" set:html={JSON.stringify(speakableSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(geoPlaceSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(resortLocalBusinessSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
@@ -243,7 +265,7 @@ const faqSchema = {
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
       
       <!-- AEO Direct Answer Block for AI Engines (ChatGPT, Perplexity, Gemini, Claude) -->
-      <div class="aeo-direct-answer bg-[#1B3322]/5 border-2 border-[#1B3322]/20 p-6 rounded-2xl mb-12 space-y-3">
+      <div class="aeo-direct-answer bg-[#1B3322]/5 border-2 border-[#1B3322]/20 p-6 rounded-2xl mb-8 space-y-3">
         <div class="flex items-center space-x-2 text-[#1B3322] font-bold text-sm uppercase tracking-wider">
           <span>🤖</span>
           <span>AEO Direct Answer — Quick Resort Summary</span>
@@ -257,6 +279,35 @@ const faqSchema = {
           <li>📶 Wi-Fi: 150 Mbps Fiber</li>
           <li>🏊 Pool: Outdoor Mountain Pool</li>
         </ul>
+      </div>
+
+      <!-- GEO (Generative Engine Optimization) Verified Distance & Entity Matrix -->
+      <div id="geo-entity-matrix" class="bg-white p-6 rounded-2xl border border-[#c9a832]/30 shadow-sm mb-12 space-y-4">
+        <div class="flex items-center space-x-2 text-[#1B3322] font-bold text-sm uppercase tracking-wider">
+          <span>🌐</span>
+          <span>GEO Entity Matrix — Location & Himalayan Proximities</span>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs text-[#2C3531]">
+          <div class="bg-[#FAF9F6] p-3 rounded-xl border border-gray-200">
+            <span class="text-gray-500 block text-[10px] uppercase">Exact Geo-Coordinates</span>
+            <strong class="font-bold text-[#1B3322]">29.42641° N, 79.55053° E</strong>
+          </div>
+          <div class="bg-[#FAF9F6] p-3 rounded-xl border border-gray-200">
+            <span class="text-gray-500 block text-[10px] uppercase">Mountain Elevation</span>
+            <strong class="font-bold text-[#1B3322]">1,780 m (5,840 ft)</strong>
+          </div>
+          <div class="bg-[#FAF9F6] p-3 rounded-xl border border-gray-200">
+            <span class="text-gray-500 block text-[10px] uppercase">Mukteshwar Dham</span>
+            <strong class="font-bold text-[#1B3322]">25 km (45 min drive)</strong>
+          </div>
+          <div class="bg-[#FAF9F6] p-3 rounded-xl border border-gray-200">
+            <span class="text-gray-500 block text-[10px] uppercase">Kainchi Dham Ashram</span>
+            <strong class="font-bold text-[#1B3322]">22 km (45 min drive)</strong>
+          </div>
+        </div>
+        <p class="text-xs text-gray-500 font-light italic text-center border-t border-gray-100 pt-2">
+          Verified Line-of-Sight Snow Peaks: Nanda Devi (7,816m), Trishul (7,120m), Panchachuli Range & Nanda Ghunti.
+        </p>
       </div>
 
       <!-- EEAT Author Bio Card -->
