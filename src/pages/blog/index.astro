@@ -7,7 +7,7 @@ import { BLOG_POSTS } from "../../data/blogPosts.tsx";
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "Blog",
-  name: "Whispering Pines Resort Journal",
+  name: "Whispering Pines Resort Blog",
   description:
     "Discover updates, travel tips, and stories from the heart of the Himalayas.",
   url: "https://whisperingpinesresort.in/blog/",
@@ -38,19 +38,30 @@ const schemaData = {
 
     <Breadcrumbs />
 
-    <main class="pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h1
-          class="text-4xl md:text-5xl font-bold tracking-tight text-[#1B3322] mb-4"
-        >
-          Our Journal
+    {/* Hero Header Banner */}
+    <header class="relative bg-[#1B3322] text-white pt-32 pb-20 px-4 sm:px-6 lg:px-8 border-b border-[#c9a832]/20 overflow-hidden">
+      <div class="absolute inset-0 z-0 opacity-30">
+        <img
+          src="/images/Resort-Near-Mukteshwar-for-Families-Couples-Workations.avif"
+          alt="Whispering Pines Resort Mukteshwar Blog & Travel Guides"
+          class="w-full h-full object-cover"
+          loading="eager"
+        />
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto text-center space-y-4">
+        <span class="text-xs font-mono text-[#c9a832] uppercase tracking-[0.25em] font-semibold block">
+          Whispering Pines Himalayan Journal
+        </span>
+        <h1 class="text-4xl md:text-6xl font-bold font-display tracking-tight text-white">
+          Our Blog & Travel Guides
         </h1>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Discover updates, travel tips, and stories from the heart of the
-          Himalayas. Stay informed about local experiences and our resort
-          updates.
+        <p class="text-base md:text-xl text-gray-200 font-light max-w-2xl mx-auto leading-relaxed">
+          Discover Himalayan travel guides, resort stories, seasonal updates, and insider tips from Malla Ramgarh near Mukteshwar.
         </p>
       </div>
+    </header>
+
+    <main class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {

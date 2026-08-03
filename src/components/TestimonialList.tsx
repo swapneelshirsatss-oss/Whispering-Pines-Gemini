@@ -60,7 +60,7 @@ export default function TestimonialList({ layout = "carousel" }: TestimonialList
           </h2>
           <div className="w-16 h-[2px] bg-[#c9a832] mx-auto mt-4 mb-6" />
           <p className="text-sm text-[#FAF9F6]/80 font-sans leading-relaxed">
-            Read certified check-in journals from actual families and remote professionals who made 
+            Read certified guest reviews from actual families and remote professionals who made 
             Malla Ramgarh's Whispering Pines their home.
           </p>
         </div>

@@ -29,7 +29,9 @@ export default function Navbar({ children }: NavbarProps) {
     { name: "Experiences", href: "/things-to-do-near-mukteshwar/" },
     { name: "Gallery", href: "/gallery/" },
     { name: "Reviews", href: "/reviews/" },
+    { name: "Blog", href: "/blog/" },
     { name: "Contact", href: "/contact-whispering-pines-resort-mukteshwar/" },
+    { name: "Casa De Bello", href: "https://casadebello.whisperingpinesresort.in/", external: true },
   ];
 
   const handleNavBookingClick = () => {
@@ -52,12 +54,14 @@ export default function Navbar({ children }: NavbarProps) {
           </a>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                data-astro-prefetch="hover"
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
+                data-astro-prefetch={link.external ? undefined : "hover"}
                 onClick={(e) => {
                   if (link.href.startsWith('/#') && window.location.pathname === '/') {
                     e.preventDefault();
@@ -69,12 +73,15 @@ export default function Navbar({ children }: NavbarProps) {
                     }
                   }
                 }}
-                className="text-[#FAF9F6]/90 hover:text-[#c9a832] text-sm font-medium tracking-wide transition-colors duration-200"
+                className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
+                  link.external
+                    ? "text-[#c9a832] hover:text-[#FAF9F6] font-semibold"
+                    : "text-[#FAF9F6]/90 hover:text-[#c9a832]"
+                }`}
               >
                 {link.name}
               </a>
             ))}
-
           </div>
 
           {/* Contact CTAs */}
@@ -131,7 +138,9 @@ export default function Navbar({ children }: NavbarProps) {
             <a
               key={link.name}
               href={link.href}
-              data-astro-prefetch="hover"
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noopener noreferrer" : undefined}
+              data-astro-prefetch={link.external ? undefined : "hover"}
               onClick={(e) => {
                 if (link.href.startsWith('/#') && window.location.pathname === '/') {
                   e.preventDefault();
@@ -144,7 +153,11 @@ export default function Navbar({ children }: NavbarProps) {
                 }
                 setIsOpen(false);
               }}
-              className="block px-4 py-3.5 text-lg font-medium text-[#FAF9F6]/95 hover:text-[#c9a832] hover:bg-[#FAF9F6]/5 rounded-sm transition-colors"
+              className={`block px-4 py-3.5 text-lg font-medium rounded-sm transition-colors ${
+                link.external
+                  ? "text-[#c9a832] font-semibold hover:bg-[#FAF9F6]/5"
+                  : "text-[#FAF9F6]/95 hover:text-[#c9a832] hover:bg-[#FAF9F6]/5"
+              }`}
             >
               {link.name}
             </a>

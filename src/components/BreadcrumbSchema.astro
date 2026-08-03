@@ -27,7 +27,7 @@ const pageMap: Record<string, string> = {
   "/things-to-do-near-mukteshwar/": "Things to Do Near Mukteshwar",
   "/gallery/": "Photo Gallery",
   "/reviews/": "Guest Reviews",
-  "/blog/": "Journal",
+  "/blog/": "Blog",
   "/contact-whispering-pines-resort-mukteshwar/": "Contact Us",
   "/privacy-policy/": "Privacy Policy",
   "/terms/": "Terms & Conditions",
@@ -45,7 +45,7 @@ if (customBreadcrumbs && customBreadcrumbs.length > 0) {
   const cleanTitle = title ? title.split(" | ")[0] : "Article";
   breadcrumbItems = [
     { name: "Home", item: "https://whisperingpinesresort.in/" },
-    { name: "Journal", item: "https://whisperingpinesresort.in/blog/" },
+    { name: "Blog", item: "https://whisperingpinesresort.in/blog/" },
     { name: cleanTitle, item: `${siteBase}${pathname}` }
   ];
 } else {

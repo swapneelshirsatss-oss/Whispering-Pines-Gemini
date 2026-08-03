@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowUpRight, Check } from "lucide-react";
 import { BOOKING_ENGINE_URL } from "../data";
-import resortLuxuryHeroImg from "../assets/images/Whispering-pines-balcony-view-nanital.webp?url";
+import resortLuxuryHeroImg from "../assets/images/Whispering-pines-balcony-view-nanital.avif?url";
 import LazyImage from "./LazyImage";
 import { trackAdsConversion } from "../utils/analytics";
 

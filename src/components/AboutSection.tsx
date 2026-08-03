@@ -2,7 +2,7 @@ import React from "react";
 import { Trees, Compass, Home, ArrowRight } from "lucide-react";
 import { RESORT_CONTACT } from "../data";
 import resortDiningHallImg from "../assets/images/Private-Dining-Area-resort-near-mukteshwar.avif?url";
-import balconyViewImg from "../assets/images/Whispering-pines-balcony-view-nanital.webp?url";
+import balconyViewImg from "../assets/images/Whispering-pines-balcony-view-nanital.avif?url";
 import LazyImage from "./LazyImage";
 
 

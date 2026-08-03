@@ -80,11 +80,11 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <div className="my-6">
           <img 
-            src="/images/What-Makes-Our-resort-Villas-Different-From-Regular-Homestays-Near-Mukteshwar-uttarkhand.webp" 
-            alt="Private Villa at Whispering Pines Ramgarh" 
+            src="/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.avif" 
+            alt="Why Many Travellers Choose Resort Near Mukteshwar Instead of Staying Inside the Town" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
           />
-          <p className="text-xs text-center text-gray-500 mt-2">Heritage Kumaoni stone architecture at Whispering Pines Private Villa.</p>
+          <p className="text-xs text-center text-gray-500 mt-2">Tranquil fruit orchard and mountain valley corridor of Malla Ramgarh near Mukteshwar.</p>
         </div>
 
         <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Tailored Stays for Families, Couples & Workations</h2>
@@ -156,7 +156,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     excerpt: "The breathtaking Malla Ramgarh sanctuary you previously knew as Clarks Exotica near Mukteshwar has officially evolved. We are proud to announce our comprehensive rebranding and property upgrade to Whispering Pines Resort, now operating exclusively under the premium hospitality management of Casa De Bello (https://casadebello.com/).",
     date: "June 27, 2026",
     readTime: "4 min read",
-    imageUrl: "/images/Whispering-pines-balcony-view-nanital.webp",
+    imageUrl: "/images/Whispering-pines-balcony-view-nanital.avif",
     content: (
       <div className="space-y-6 text-[#2C3531]">
         <p className="text-lg text-gray-700 leading-relaxed font-light">
@@ -251,7 +251,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     excerpt: "From crisp snowy mornings to cozy bonfires, here's everything you need to know about visiting during the winter months.",
     date: "January 10, 2026",
     readTime: "6 min read",
-    imageUrl: "/images/What-Makes-Our-resort-Villas-Different-From-Regular-Homestays-Near-Mukteshwar-uttarkhand.webp",
+    imageUrl: "/images/What-Makes-Our-resort-Villas-Different-From-Regular-Homestays-Near-Mukteshwar-uttarkhand.avif",
     content: (
       <div className="space-y-6 text-[#2C3531]">
         <p className="text-lg text-gray-700 leading-relaxed font-light">
@@ -280,7 +280,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <div className="my-6">
           <img 
-            src="/images/What-Makes-Our-resort-Villas-Different-From-Regular-Homestays-Near-Mukteshwar-uttarkhand.webp" 
+            src="/images/What-Makes-Our-resort-Villas-Different-From-Regular-Homestays-Near-Mukteshwar-uttarkhand.avif" 
             alt="Winter Stone Villa Stay at Whispering Pines" 
             className="w-full h-80 object-cover rounded-xl border border-[#EAE8E3]" 
           />
