@@ -1,14 +1,23 @@
 import React from 'react';
 
 interface BlogContentProps {
-  content?: React.ReactNode;
+  content?: React.ReactNode | React.ComponentType | any;
   excerpt: string;
 }
 
 export default function BlogContent({ content, excerpt }: BlogContentProps) {
-  return content ? (
-    <>{content}</>
-  ) : (
-    <p className="text-gray-600 leading-relaxed">{excerpt}</p>
-  );
+  if (!content) {
+    return <p className="text-gray-600 leading-relaxed">{excerpt}</p>;
+  }
+
+  if (typeof content === 'function') {
+    const Component = content;
+    return <Component />;
+  }
+
+  if (React.isValidElement(content)) {
+    return content;
+  }
+
+  return <>{content}</>;
 }
