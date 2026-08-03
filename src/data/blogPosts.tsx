@@ -21,7 +21,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     excerpt: "Looking for the best resort near Mukteshwar? Whispering Pines by Casa De Bello in Ramgarh offers 180° Himalayan views, pool, villa, orchard stays & 150 Mbps Wi-Fi. Book direct.",
     date: "August 3, 2026",
     readTime: "14 min read",
-    imageUrl: "/Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp",
+    imageUrl: "/images/Resort-Near-Mukteshwar-for-Families-Couples-Workations.avif",
     content: (
       <div className="space-y-8 text-[#2C3531]">
         {/* Author EEAT Banner */}
@@ -48,7 +48,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <div className="my-6">
           <img 
-            src="/images/Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp" 
+            src="/images/Resort-Near-Mukteshwar-for-Families-Couples-Workations.avif" 
             alt="Whispering Pines Resort Balcony View near Mukteshwar" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
           />
@@ -66,7 +66,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <div className="my-6">
           <img 
-            src="/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.webp" 
+            src="/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.avif" 
             alt="Malla Ramgarh Fruit Orchards near Mukteshwar" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
           />
@@ -204,7 +204,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     excerpt: "Explore the lush orchards of Ramgarh, where fresh Himalayan fruits are grown naturally amidst breathtaking valleys.",
     date: "June 18, 2026",
     readTime: "4 min read",
-    imageUrl: "/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.webp",
+    imageUrl: "/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.avif",
     content: (
       <div className="space-y-6 text-[#2C3531]">
         <p className="text-lg text-gray-700 leading-relaxed font-light">
@@ -228,7 +228,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <div className="my-6">
           <img 
-            src="/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.webp" 
+            src="/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.avif" 
             alt="Malla Ramgarh Fruit Orchards" 
             className="w-full h-80 object-cover rounded-xl border border-[#EAE8E3]" 
           />
