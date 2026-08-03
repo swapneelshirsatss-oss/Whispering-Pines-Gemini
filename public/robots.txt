@@ -16,8 +16,21 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
+# AEO (Answer Engine Optimization) & AI Search Engines (ChatGPT, SearchGPT, Perplexity, Claude)
 User-agent: GPTBot
-Disallow: /
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
 
 User-agent: Bytespider
 Disallow: /
