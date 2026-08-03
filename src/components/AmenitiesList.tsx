@@ -2,7 +2,15 @@ import React from "react";
 import { Compass, Flame, Wifi, UtensilsCrossed, Heart, Car, Sparkles, Trees, ArrowRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
-const GENERAL_AMENITIES = [
+interface AmenityItem {
+  title: string;
+  category: string;
+  icon: string;
+  description: string;
+  features?: string[];
+}
+
+const GENERAL_AMENITIES: AmenityItem[] = [
   { title: "180° Himalayan Peak View", category: "View & Location", icon: "Compass", description: "Direct view of Nanda Devi & Trishul peaks." },
   { title: "Fireplace & Radiator Heating", category: "Warmth & Comfort", icon: "Flame", description: "Indoor wood fireplaces." },
   { title: "150 Mbps Fiber Wi-Fi", category: "Connectivity", icon: "Wifi", description: "Dedicated high-speed internet." },
@@ -89,7 +97,7 @@ export default function AmenitiesList({
                 {/* Feature List (H3 sub-headers) */}
                 {amenity.features && (
                   <div className="mt-4 space-y-3">
-                    {amenity.features.map((feature, fIdx) => (
+                    {amenity.features.map((feature: string, fIdx: number) => (
                       <div key={fIdx} className="flex items-start text-xs text-[#FAF9F6]/85">
                         <span className="w-1.5 h-1.5 bg-[#c9a832] rounded-full mr-2.5 mt-1.5 shrink-0" />
                         <h3 className="font-sans font-light leading-relaxed">{feature}</h3>

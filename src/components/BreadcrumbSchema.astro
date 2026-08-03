@@ -3,8 +3,10 @@
 // Dynamic BreadcrumbList JSON-LD Schema for site navigation SEO
 
 export interface BreadcrumbItem {
-  name: string;
-  item: string;
+  name?: string;
+  item?: string;
+  label?: string;
+  href?: string;
 }
 
 interface Props {
@@ -34,10 +36,13 @@ const pageMap: Record<string, string> = {
   "/sitemap/": "Sitemap"
 };
 
-let breadcrumbItems: BreadcrumbItem[] = [];
+let breadcrumbItems: { name: string; item: string }[] = [];
 
 if (customBreadcrumbs && customBreadcrumbs.length > 0) {
-  breadcrumbItems = customBreadcrumbs;
+  breadcrumbItems = customBreadcrumbs.map(b => ({
+    name: b.name || b.label || "Page",
+    item: b.item || (b.href ? (b.href.startsWith("http") ? b.href : `${siteBase}${b.href.startsWith('/') ? b.href : `/${b.href}`}`) : siteBase)
+  }));
 } else if (pathname === "/") {
   breadcrumbItems = [{ name: "Home", item: "https://whisperingpinesresort.in/" }];
 } else if (pathname.startsWith("/blog/") && pathname !== "/blog/") {

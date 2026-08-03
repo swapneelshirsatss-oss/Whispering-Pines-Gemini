@@ -17,13 +17,17 @@ interface Props {
   hideLink?: boolean;
   title?: string;
   isH1?: boolean;
+  asH1?: boolean;
 }
 
 const {
   hideLink = false,
   title = "Tailored Mountain Luxuries",
-  isH1 = false
+  isH1 = false,
+  asH1 = false
 } = Astro.props;
+
+const useH1 = isH1 || asH1;
 ---
 <section id="amenities" class="py-20 lg:py-28 bg-[#1B3322] text-[#FAF9F6] cv-auto">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +37,7 @@ const {
       <span class="text-xs font-mono tracking-widest text-[#c9a832] uppercase block mb-2 animate-pulse">
         Bespoke Guest Comforts
       </span>
-      {isH1 ? (
+      {useH1 ? (
         <>
           <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#FAF9F6]">
             {title}
@@ -61,7 +65,7 @@ const {
           <div class="bg-[#FAF9F6]/5 hover:bg-[#FAF9F6]/10 border border-[#FAF9F6]/10 hover:border-[#c9a832]/30 p-6 sm:p-8 rounded-sm hover:shadow-2xl transition-all duration-300 group">
             {/* Visual Icon Container */}
             <div class="w-12 h-12 bg-[#FAF9F6]/10 group-hover:bg-[#c9a832] rounded-sm flex items-center justify-center mb-6 transition-all duration-300">
-              <IconComponent class="w-6 h-6 text-[#c9a832] group-hover:text-[#1B3322] transition-colors duration-300" />
+              <IconComponent className="w-6 h-6 text-[#c9a832] group-hover:text-[#1B3322] transition-colors duration-300" />
             </div>
             
             {/* Title */}
@@ -107,7 +111,7 @@ const {
           class="inline-flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 bg-transparent border border-[#c9a832] text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] font-mono text-[11px] sm:text-xs font-semibold uppercase tracking-widest transition-colors duration-300 rounded-sm group"
         >
           View All Amenities
-          <ArrowRight class="w-4 h-4 ml-3 transition-transform duration-300 group-hover:translate-x-1" />
+          <ArrowRight className="w-4 h-4 ml-3 transition-transform duration-300 group-hover:translate-x-1" />
         </a>
       </div>
     )}

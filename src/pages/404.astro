@@ -16,7 +16,7 @@ import { RESORT_CONTACT, BOOKING_ENGINE_URL } from "../data";
       
       {/* Visual Badge */}
       <div class="inline-flex items-center space-x-2 bg-[#1B3322]/5 border border-[#1B3322]/10 px-4 py-2 rounded-full">
-        <Compass class="w-4 h-4 text-[#c9a832]" />
+        <Compass className="w-4 h-4 text-[#c9a832]" />
         <span class="text-xs font-mono uppercase tracking-[0.2em] text-[#1B3322] font-semibold">
           404 • Lost in the Pines
         </span>
@@ -40,7 +40,7 @@ import { RESORT_CONTACT, BOOKING_ENGINE_URL } from "../data";
           href="/" 
           class="w-full sm:w-auto inline-flex items-center justify-center bg-[#1B3322] hover:bg-[#1B3322]/90 text-[#FAF9F6] font-mono text-xs font-semibold uppercase tracking-widest px-8 py-3.5 rounded-sm transition-all duration-300 shadow-md group"
         >
-          <Home class="w-4 h-4 mr-2 text-[#c9a832]" />
+          <Home className="w-4 h-4 mr-2 text-[#c9a832]" />
           Return to Home
         </a>
 
@@ -61,7 +61,7 @@ import { RESORT_CONTACT, BOOKING_ENGINE_URL } from "../data";
           href={`tel:${RESORT_CONTACT.phone}`} 
           class="inline-flex items-center text-xs font-mono font-semibold tracking-wider text-[#c9a832] hover:text-[#1B3322] transition-colors"
         >
-          <Phone class="w-3.5 h-3.5 mr-1.5" />
+          <Phone className="w-3.5 h-3.5 mr-1.5" />
           Call Direct Concierge: {RESORT_CONTACT.phone}
         </a>
       </div>
