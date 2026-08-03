@@ -4,6 +4,18 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
 User-agent: GPTBot
 Disallow: /
 
@@ -16,5 +28,8 @@ Disallow: /
 User-agent: *
 Allow: /
 
+# Primary XML Sitemaps
 Sitemap: https://whisperingpinesresort.in/sitemap.xml
 Sitemap: https://whisperingpinesresort.in/sitemap-index.xml
+Sitemap: https://whisperingpinesresort.in/sitemap-website.xml
+Sitemap: https://whisperingpinesresort.in/sitemap-blog.xml
