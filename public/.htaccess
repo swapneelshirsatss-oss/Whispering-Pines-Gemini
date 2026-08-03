@@ -12,7 +12,10 @@
   RewriteCond %{HTTP_HOST} ^www\. [NC]
   RewriteRule ^(.*)$ https://whisperingpinesresort.in/$1 [R=301,L]
 
-  # 3. Force trailing slash ONLY on directory/page URIs (excluding static files and URIs with trailing slash)
+  # 3. Redirect duplicate blog guide route to primary landing page
+  RewriteRule ^blog/resort-near-mukteshwar/?$ https://whisperingpinesresort.in/resort-near-mukteshwar/ [R=301,L]
+
+  # 4. Force trailing slash ONLY on directory/page URIs (excluding static files and URIs with trailing slash)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_URI} !\.(xml|txt|html|js|css|svg|png|jpg|jpeg|webp|ico|json)$ [NC]
   RewriteCond %{REQUEST_URI} !(.*)/$

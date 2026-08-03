@@ -31,6 +31,9 @@ function masterSitemap() {
 export default defineConfig({
   site: 'https://whisperingpinesresort.in',
   trailingSlash: 'always',
+  redirects: {
+    '/blog/resort-near-mukteshwar': '/resort-near-mukteshwar/',
+  },
   integrations: [
     react(),
     partytown({

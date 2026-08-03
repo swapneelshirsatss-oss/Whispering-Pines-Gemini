@@ -5,6 +5,9 @@
 /llms.txt/ /llms.txt 301!
 /llms-full.txt/ /llms-full.txt 301!
 
+/blog/resort-near-mukteshwar/ /resort-near-mukteshwar/ 301!
+/blog/resort-near-mukteshwar /resort-near-mukteshwar/ 301!
+
 http://www.whisperingpinesresort.in/* https://whisperingpinesresort.in/:splat 301!
 https://www.whisperingpinesresort.in/* https://whisperingpinesresort.in/:splat 301!
 http://whisperingpinesresort.in/* https://whisperingpinesresort.in/:splat 301!

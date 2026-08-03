@@ -5,7 +5,7 @@ import BlogContent from "../../components/BlogContent";
 import { BLOG_POSTS, type BlogPostData } from '../../data/blogPosts.tsx';
 
 export async function getStaticPaths() {
-  return BLOG_POSTS.map((post) => ({
+  return BLOG_POSTS.filter((post) => !post.customUrl).map((post) => ({
     params: { slug: post.slug },
     props: { post },
   }));
