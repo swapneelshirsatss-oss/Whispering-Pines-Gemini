@@ -6,7 +6,7 @@ import familyTwinRoomImg from "./assets/images/Group_booking_nainital_resort.avi
 import orchardRoomImg from "./assets/images/Family_Twin Room_Near_nainital.avif?url";
 
 export const RESORT_CONTACT = {
-  name: "Whispering Pines Resort by Casa De Bello",
+  name: "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
   legalName: "Casa De Bello - Whispering Pines",
   phone: "+91-7505029696",
   whatsapp: "https://wa.me/917505029696",
