@@ -21,7 +21,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     excerpt: "Looking for the best resort near Mukteshwar? Whispering Pines by Casa De Bello in Ramgarh offers 180° Himalayan views, pool, villa, orchard stays & 150 Mbps Wi-Fi. Book direct.",
     date: "August 3, 2026",
     readTime: "14 min read",
-    imageUrl: "/images/Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp",
+    imageUrl: "/Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp",
     content: (
       <div className="space-y-8 text-[#2C3531]">
         {/* Author EEAT Banner */}
