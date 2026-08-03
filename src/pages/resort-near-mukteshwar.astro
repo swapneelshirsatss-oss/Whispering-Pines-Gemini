@@ -5,14 +5,14 @@ import { RESORT_CONTACT, generateWhatsAppLink } from '../data';
 
 const pageTitle = "Resort near Mukteshwar | Whispering Pines by Casa De Bello (2026 Guide)";
 const pageDescription = "Looking for the best resort near Mukteshwar? Whispering Pines by Casa De Bello in Ramgarh offers 180° Himalayan views, pool, villa, orchard stays & 150 Mbps Wi-Fi. Book direct.";
-const canonicalUrl = "https://whisperingpinesresort.in/blog/resort-near-mukteshwar/";
+const canonicalUrl = "https://whisperingpinesresort.in/resort-near-mukteshwar/";
 const ogImageUrl = "https://whisperingpinesresort.in/Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp";
 const ogAltText = "Resort near Mukteshwar — Whispering Pines by Casa De Bello, Malla Ramgarh, Uttarakhand 2026 Guide";
 
 const breadcrumbs = [
   { label: "Home", href: "/" },
   { label: "Blog Journal", href: "/blog/" },
-  { label: "Resort near Mukteshwar Guide", href: "/blog/resort-near-mukteshwar/" }
+  { label: "Resort near Mukteshwar Guide", href: "/resort-near-mukteshwar/" }
 ];
 
 // Rich JSON-LD Schemas for BlogPosting, Resort/LocalBusiness, FAQPage
@@ -33,7 +33,8 @@ const blogPostingSchema = {
     "name": "Gaurav Pandey",
     "jobTitle": "Director of Casa De Bello Pvt Ltd",
     "description": "Traveller Host, Hospitality Entrepreneur, and Managing Director at Casa De Bello Pvt Ltd.",
-    "url": "https://casadebello.com/"
+    "url": "https://casadebello.com/",
+    "sameAs": ["https://casadebello.com/"]
   },
   "publisher": {
     "@type": "Organization",
@@ -74,7 +75,14 @@ const resortLocalBusinessSchema = {
     "bestRating": "5",
     "worstRating": "1"
   },
-  "priceRange": "₹3,000 - ₹15,999"
+  "priceRange": "₹3,000 - ₹15,999",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "180° Himalayan Views", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Swimming Pool", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "150 Mbps Fiber Wi-Fi", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Private Fruit Orchards", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Pet Friendly Gardens", "value": true }
+  ]
 };
 
 const faqSchema = {
@@ -151,6 +159,9 @@ const faqSchema = {
 
 <Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
+    <!-- LCP Image Preloading for Core Web Vitals -->
+    <link rel="preload" as="image" href="/Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp" fetchpriority="high" type="image/webp" />
+
     <!-- Custom Meta Tags for Target Keyword & Social Share -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content={pageTitle} />
@@ -175,6 +186,8 @@ const faqSchema = {
         <img 
           src="/Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp" 
           alt="Resort near Mukteshwar — Whispering Pines by Casa De Bello, Malla Ramgarh, Uttarakhand 2026 Guide"
+          width="1200"
+          height="630"
           class="w-full h-full object-cover" 
           loading="eager"
         />
@@ -293,6 +306,8 @@ const faqSchema = {
         <img 
           src="/Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp" 
           alt="Resort near Mukteshwar — Whispering Pines by Casa De Bello, Malla Ramgarh, Uttarakhand 2026 Guide"
+          width="1200"
+          height="630"
           class="w-full h-[350px] sm:h-[500px] object-cover rounded-2xl shadow-md border border-[#EAE8E3]"
           loading="eager"
         />
@@ -385,6 +400,8 @@ const faqSchema = {
           <img 
             src="/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.webp" 
             alt="Why Many Travellers Choose Resort Near Mukteshwar Instead of Staying Inside Mukteshwar Town Market"
+            width="1200"
+            height="675"
             class="w-full h-[320px] sm:h-[450px] object-cover rounded-2xl shadow-md border border-[#EAE8E3]"
             loading="lazy"
           />
@@ -547,6 +564,8 @@ const faqSchema = {
         <img 
           src="/What-Makes-Our-resort-Villas-Different-From-Regular-Homestays-Near-Mukteshwar-uttarkhand.webp" 
           alt="What Makes Whispering Pines Resort Near Mukteshwar Different From Regular Homestays in Uttarakhand"
+          width="1200"
+          height="675"
           class="w-full h-[350px] sm:h-[480px] object-cover rounded-2xl shadow-md border border-[#EAE8E3]"
           loading="lazy"
         />
@@ -567,7 +586,7 @@ const faqSchema = {
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Room 1 -->
           <div class="bg-white rounded-2xl border border-[#EAE8E3] overflow-hidden shadow-sm flex flex-col">
-            <img src="/images/villa_in_nanital.avif" alt="Private Villa stay at Resort Near Mukteshwar" class="w-full h-48 object-cover" />
+            <img src="/images/villa_in_nanital.avif" alt="Private Villa stay at Resort Near Mukteshwar" width="600" height="400" class="w-full h-48 object-cover" />
             <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
               <div>
                 <span class="text-xs font-semibold text-[#c9a832] uppercase tracking-wider">Exclusive Estate Rental</span>
@@ -582,7 +601,7 @@ const faqSchema = {
 
           <!-- Room 2 -->
           <div class="bg-white rounded-2xl border border-[#EAE8E3] overflow-hidden shadow-sm flex flex-col">
-            <img src="/images/Delux_room_Whispering_pines_mukteshwar.avif" alt="Deluxe Skylight Suite at Resort Near Mukteshwar" class="w-full h-48 object-cover" />
+            <img src="/images/Delux_room_Whispering_pines_mukteshwar.avif" alt="Deluxe Skylight Suite at Resort Near Mukteshwar" width="600" height="400" class="w-full h-48 object-cover" />
             <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
               <div>
                 <span class="text-xs font-semibold text-[#c9a832] uppercase tracking-wider">Couples & Star-Gazing</span>
@@ -597,7 +616,7 @@ const faqSchema = {
 
           <!-- Room 3 -->
           <div class="bg-white rounded-2xl border border-[#EAE8E3] overflow-hidden shadow-sm flex flex-col">
-            <img src="/images/Family_Twin Room_Near_nainital.avif" alt="Family Twin Room at Resort Near Mukteshwar" class="w-full h-48 object-cover" />
+            <img src="/images/Family_Twin Room_Near_nainital.avif" alt="Family Twin Room at Resort Near Mukteshwar" width="600" height="400" class="w-full h-48 object-cover" />
             <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
               <div>
                 <span class="text-xs font-semibold text-[#c9a832] uppercase tracking-wider">Ground Floor Family Access</span>
@@ -612,7 +631,7 @@ const faqSchema = {
 
           <!-- Room 4 -->
           <div class="bg-white rounded-2xl border border-[#EAE8E3] overflow-hidden shadow-sm flex flex-col">
-            <img src="/images/Group_booking_nainital_resort.avif" alt="Group Cottage Room at Resort Near Mukteshwar" class="w-full h-48 object-cover" />
+            <img src="/images/Group_booking_nainital_resort.avif" alt="Group Cottage Room at Resort Near Mukteshwar" width="600" height="400" class="w-full h-48 object-cover" />
             <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
               <div>
                 <span class="text-xs font-semibold text-[#c9a832] uppercase tracking-wider">Value Mountain Stay</span>
