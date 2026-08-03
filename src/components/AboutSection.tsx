@@ -95,7 +95,6 @@ export default function AboutSection({
                 className="group w-full aspect-[4/3] sm:aspect-auto sm:h-[480px] lg:h-[520px]"
                 imgClassName="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"
-                priority={true}
               />
               {/* Highlight Overlay */}
               <div className="absolute inset-0 bg-[#1B3322]/5 mix-blend-multiply" />

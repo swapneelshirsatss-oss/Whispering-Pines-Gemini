@@ -191,8 +191,8 @@ const faqSchema = {
 
 <Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
-    <!-- LCP Image Preloading for Core Web Vitals -->
-    <link rel="preload" as="image" href="/images/Resort-Near-Mukteshwar-for-Families-Couples-Workations.avif" fetchpriority="high" type="image/avif" />
+    <!-- LCP Image Preloading for Core Web Vitals (Main Hero Image Only) -->
+    <link rel="preload" as="image" href="/images/resort_mukteshwar_luxury_hero_1782031089955.avif" fetchpriority="high" type="image/avif" />
 
     <!-- Custom Meta Tags for Target Keyword & Social Share -->
     <meta property="og:type" content="article" />
@@ -313,7 +313,7 @@ const faqSchema = {
           width="1200"
           height="630"
           class="w-full h-auto max-h-[850px] object-contain rounded-2xl shadow-lg border border-[#EAE8E3] bg-white p-2 sm:p-4"
-          loading="eager"
+          loading="lazy"
         />
         <figcaption class="text-center text-xs sm:text-sm text-gray-500 mt-3 font-light">
           Figure 1: Resort near Mukteshwar — Whispering Pines by Casa De Bello in Malla Ramgarh featuring 180° Himalayan views of Nanda Devi and Trishul peaks.
