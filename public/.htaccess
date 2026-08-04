@@ -3,8 +3,8 @@
   RewriteEngine On
   RewriteBase /
 
-  # 1. Strip trailing slash from static file requests (e.g. /sitemap.xml/ -> /sitemap.xml)
-  RewriteCond %{REQUEST_URI} ^/(.+)\.(xml|txt|html|js|css|svg|png|jpg|jpeg|webp|ico|json)/+$ [NC]
+  # 1. Strip trailing slash from all static file requests (e.g. /_astro/file.avif/ -> /_astro/file.avif, /sitemap.xml/ -> /sitemap.xml)
+  RewriteCond %{REQUEST_URI} ^/(.+)\.(xml|txt|html|js|css|svg|png|jpg|jpeg|webp|avif|ico|json|woff|woff2)/+$ [NC]
   RewriteRule ^ https://whisperingpinesresort.in/%1.%2 [R=301,L]
 
   # 2. Canonicalize HTTP and/or WWW directly to https://whisperingpinesresort.in in a single 301 step (prevents redirect chains)
@@ -20,7 +20,7 @@
 
   # 4. Force trailing slash ONLY on directory/page URIs (excluding static files and URIs with trailing slash)
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_URI} !\.(xml|txt|html|js|css|svg|png|jpg|jpeg|webp|ico|json)$ [NC]
+  RewriteCond %{REQUEST_URI} !\.(xml|txt|html|js|css|svg|png|jpg|jpeg|webp|avif|ico|json|woff|woff2)$ [NC]
   RewriteCond %{REQUEST_URI} !(.*)/$
   RewriteRule ^(.*)$ https://whisperingpinesresort.in/$1/ [R=301,L]
 </IfModule>
