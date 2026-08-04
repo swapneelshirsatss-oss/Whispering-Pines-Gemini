@@ -1,6 +1,6 @@
 ---
 // BreadcrumbSchema.astro
-// Dynamic BreadcrumbList JSON-LD Schema for site navigation SEO
+// Dynamic BreadcrumbList JSON-LD Schema for site navigation SEO (Google Search Console Compliant)
 
 export interface BreadcrumbItem {
   name?: string;
@@ -69,11 +69,7 @@ const schemaData = {
     "@type": "ListItem",
     "position": idx + 1,
     "name": b.name,
-    "item": {
-      "@type": "WebPage",
-      "@id": b.item,
-      "name": b.name
-    }
+    "item": b.item
   }))
 };
 ---
