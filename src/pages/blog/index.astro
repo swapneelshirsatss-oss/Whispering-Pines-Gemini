@@ -13,18 +13,21 @@ const schemaData = {
   url: "https://whisperingpinesresort.in/blog/",
   publisher: {
     "@type": "Organization",
-    name: "Whispering Pines Resort",
+    name: "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
     logo: {
       "@type": "ImageObject",
       url: "https://whisperingpinesresort.in/logo.svg",
     },
   },
 };
+
+const featuredPost = BLOG_POSTS[0];
+const remainingPosts = BLOG_POSTS.slice(1);
 ---
 
 <Layout
-  title="Blog | Whispering Pines Resort Mukteshwar"
-  description="Read the latest news, travel guides, and stories from Whispering Pines Resort Mukteshwar."
+  title="Blog & Travel Guides | Whispering Pines Resort Mukteshwar"
+  description="Explore travel guides, Kumaon heritage stories, seasonal updates, and insider tips from Whispering Pines Resort by Casa De Bello in Ramgarh near Mukteshwar."
 >
   <div
     class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]"
@@ -52,73 +55,195 @@ const schemaData = {
       </div>
       <div class="relative z-10 max-w-4xl mx-auto text-center space-y-4">
         <span class="text-xs font-mono text-[#c9a832] uppercase tracking-[0.25em] font-semibold block">
-          Whispering Pines Himalayan Blog
+          Himalayan Journal & Travel Guides
         </span>
         <h1 class="text-4xl md:text-6xl font-bold font-display tracking-tight text-white">
-          Our Blog & Travel Guides
+          Stories, Guides & Insights
         </h1>
         <p class="text-base md:text-xl text-gray-200 font-light max-w-2xl mx-auto leading-relaxed">
-          Discover Himalayan travel guides, resort stories, seasonal updates, and insider tips from Malla Ramgarh near Mukteshwar.
+          Discover Himalayan travel itineraries, resort heritage stories, seasonal fruit orchard updates, and insider tips from Malla Ramgarh near Mukteshwar.
         </p>
       </div>
     </header>
 
-    <main class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <main class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {
-          BLOG_POSTS.map((post) => {
+      {/* Featured Article Spotlight Card */}
+      {featuredPost && (
+        <section class="bg-white rounded-3xl border border-[#EAE8E3] shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 group">
+          <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+            <div class="lg:col-span-7 relative h-72 sm:h-96 lg:h-full overflow-hidden min-h-[320px]">
+              <img
+                src={featuredPost.imageUrl}
+                alt={featuredPost.title}
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                loading="eager"
+              />
+              <div class="absolute top-4 left-4">
+                <span class="bg-[#1B3322] text-[#c9a832] text-xs font-semibold uppercase px-3 py-1.5 rounded-full shadow-md border border-[#c9a832]/30">
+                  ★ Featured Guide
+                </span>
+              </div>
+            </div>
+            <div class="lg:col-span-5 p-8 sm:p-10 flex flex-col justify-between bg-white">
+              <div class="space-y-4">
+                <div class="flex items-center gap-3 text-xs text-gray-500 font-medium">
+                  <span class="inline-flex items-center gap-1.5 text-[#1B3322]">
+                    <svg class="w-3.5 h-3.5 text-[#c9a832]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    {featuredPost.date}
+                  </span>
+                  <span>•</span>
+                  <span class="inline-flex items-center gap-1 text-gray-500">
+                    <svg class="w-3.5 h-3.5 text-[#c9a832]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    {featuredPost.readTime}
+                  </span>
+                </div>
+
+                <a href={featuredPost.customUrl || `/blog/${featuredPost.slug}/`} class="block group/title">
+                  <h2 class="text-2xl sm:text-3xl font-bold font-display text-[#1B3322] leading-tight group-hover/title:text-[#c9a832] transition-colors">
+                    {featuredPost.title}
+                  </h2>
+                </a>
+
+                <p class="text-gray-600 font-light text-base leading-relaxed line-clamp-4">
+                  {featuredPost.excerpt}
+                </p>
+              </div>
+
+              <div class="pt-6 mt-6 border-t border-gray-100 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-full bg-[#1B3322] text-[#c9a832] flex items-center justify-center font-bold text-xs border border-[#c9a832]">
+                    GP
+                  </div>
+                  <div class="text-xs">
+                    <p class="font-bold text-[#1B3322]">Gaurav Pandey</p>
+                    <p class="text-gray-500 font-light">Casa De Bello Host</p>
+                  </div>
+                </div>
+
+                <a
+                  href={featuredPost.customUrl || `/blog/${featuredPost.slug}/`}
+                  class="inline-flex items-center gap-2 bg-[#1B3322] text-[#c9a832] hover:bg-[#c9a832] hover:text-[#1B3322] font-semibold text-xs px-5 py-2.5 rounded-full transition-all duration-300 shadow-sm"
+                >
+                  Read Complete Guide
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Grid of Remaining Articles */}
+      <div class="space-y-6">
+        <div class="flex items-center justify-between border-b border-gray-200 pb-4">
+          <h2 class="text-2xl font-bold font-display text-[#1B3322]">
+            Latest Articles & Travel Guides
+          </h2>
+          <span class="text-xs text-gray-500 font-medium">{remainingPosts.length} Articles</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {remainingPosts.map((post) => {
             const articleUrl = post.customUrl || `/blog/${post.slug}/`;
             return (
-              <article class="bg-white rounded-lg shadow-sm border border-[#EAE8E3] overflow-hidden hover:shadow-md transition-shadow flex flex-col">
+              <article class="bg-white rounded-2xl border border-[#EAE8E3] overflow-hidden hover:shadow-xl hover:border-[#c9a832]/30 transition-all duration-300 flex flex-col group">
                 <a
                   href={articleUrl}
-                  class="h-48 w-full overflow-hidden block"
+                  class="h-52 w-full overflow-hidden block relative"
                 >
                   <img
                     src={post.imageUrl}
                     alt={post.title}
-                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                    class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
                   />
-                </a>
-                <div class="p-6 flex-1 flex flex-col">
-                  <div class="flex items-center text-xs text-gray-500 mb-3 space-x-4">
-                    <span>{post.date}</span>
-                    <span>{post.readTime}</span>
+                  <div class="absolute bottom-3 left-3">
+                    <span class="bg-[#1B3322]/90 backdrop-blur-md text-[#c9a832] text-[10px] uppercase tracking-wider font-semibold px-2.5 py-1 rounded-md border border-[#c9a832]/20">
+                      Himalayan Guide
+                    </span>
                   </div>
-                  <a href={articleUrl} class="group block">
-                    <h2 class="text-xl font-bold text-[#1B3322] mb-3 leading-tight group-hover:text-[#c9a832] transition-colors">
-                      {post.title}
-                    </h2>
-                  </a>
-                  <p class="text-sm text-gray-600 mb-4 line-clamp-3 flex-1">
-                    {post.excerpt}
-                  </p>
-                  <a
-                    href={articleUrl}
-                    class="text-[#c9a832] font-semibold text-sm hover:text-[#1B3322] transition-colors flex items-center mt-auto w-fit"
-                  >
-                    Read More
-                    <svg
-                      class="w-4 h-4 ml-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
+                </a>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                  <div class="space-y-3">
+                    <div class="flex items-center gap-3 text-xs text-gray-500 font-medium">
+                      <span>{post.date}</span>
+                      <span>•</span>
+                      <span>{post.readTime}</span>
+                    </div>
+                    <a href={articleUrl} class="group/title block">
+                      <h3 class="text-lg font-bold font-display text-[#1B3322] leading-snug group-hover/title:text-[#c9a832] transition-colors line-clamp-2">
+                        {post.title}
+                      </h3>
+                    </a>
+                    <p class="text-sm text-gray-600 font-light leading-relaxed line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                  </div>
+                  <div class="pt-4 mt-6 border-t border-gray-100 flex items-center justify-between">
+                    <a
+                      href={articleUrl}
+                      class="text-[#1B3322] font-semibold text-xs group-hover:text-[#c9a832] transition-colors flex items-center gap-1.5"
                     >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      />
-                    </svg>
-                  </a>
+                      Read Article
+                      <svg
+                        class="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </article>
             );
-          })
-        }
+          })}
+        </div>
       </div>
+
+      {/* Luxury Resort Direct Booking Callout Card */}
+      <section class="bg-gradient-to-br from-[#1B3322] via-[#24422D] to-[#1B3322] text-white rounded-3xl p-8 sm:p-12 border border-[#c9a832]/30 shadow-2xl relative overflow-hidden text-center space-y-6">
+        <div class="relative z-10 max-w-2xl mx-auto space-y-4">
+          <span class="text-xs font-mono text-[#c9a832] uppercase tracking-[0.2em] font-semibold block">
+            Plan Your Mountain Escape
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-display text-white">
+            Experience Whispering Pines Resort
+          </h2>
+          <p class="text-gray-300 font-light text-sm sm:text-base leading-relaxed">
+            180° Himalayan valley views, 4-star luxury cottages, private 3-BHK villa, pool, and fruit orchards in Malla Ramgarh near Mukteshwar.
+          </p>
+          <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="https://casadebello-book.whisperingpinesresort.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-[#c9a832] hover:bg-[#b09228] text-[#1B3322] font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full transition-all duration-300 shadow-md uppercase tracking-wider"
+            >
+              Book Direct for Best Rates
+            </a>
+            <a
+              href="/contact-whispering-pines-resort-mukteshwar/"
+              class="bg-white/10 hover:bg-white/20 text-white font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-full border border-white/20 transition-all duration-300"
+            >
+              Contact Resort Host
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <WhatsAppButton client:idle />
