@@ -33,7 +33,8 @@ const pageMap: Record<string, string> = {
   "/contact-whispering-pines-resort-mukteshwar/": "Contact Us",
   "/privacy-policy/": "Privacy Policy",
   "/terms/": "Terms & Conditions",
-  "/sitemap/": "Sitemap"
+  "/sitemap/": "Sitemap",
+  "/resort-near-mukteshwar/": "Resort near Mukteshwar Guide"
 };
 
 let breadcrumbItems: { name: string; item: string }[] = [];
@@ -68,7 +69,11 @@ const schemaData = {
     "@type": "ListItem",
     "position": idx + 1,
     "name": b.name,
-    "item": b.item
+    "item": {
+      "@type": "WebPage",
+      "@id": b.item,
+      "name": b.name
+    }
   }))
 };
 ---
