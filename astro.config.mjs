@@ -27,6 +27,55 @@ function masterSitemap() {
   };
 }
 
+/** @returns {import('astro').AstroIntegration} */
+function indexNowIntegration() {
+  const INDEXNOW_KEY = '8f3d1b7e4a9c2d5e6f8a0b1c2d3e4f5a';
+  const HOST = 'whisperingpinesresort.in';
+  const SITE_URL = 'https://whisperingpinesresort.in';
+
+  return {
+    name: 'indexnow-integration',
+    hooks: {
+      'astro:build:done': async ({ pages }) => {
+        const urlList = (pages || [])
+          .map(p => {
+            const rawPath = p.pathname ? (p.pathname.startsWith('/') ? p.pathname : '/' + p.pathname) : '';
+            if (!rawPath || rawPath.includes('404')) return '';
+            return `${SITE_URL}${rawPath.endsWith('/') ? rawPath : rawPath + '/'}`;
+          })
+          .filter(Boolean);
+
+        const list = Array.from(new Set(urlList));
+        if (list.length === 0) return;
+
+        const payload = {
+          host: HOST,
+          key: INDEXNOW_KEY,
+          keyLocation: `${SITE_URL}/${INDEXNOW_KEY}.txt`,
+          urlList: list
+        };
+
+        console.log(`[IndexNow] Submitting instant indexing request for ${payload.urlList.length} pages...`);
+
+        try {
+          const res = await fetch('https://api.indexnow.org/indexnow', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json; charset=utf-8' },
+            body: JSON.stringify(payload)
+          });
+          if (res.ok || res.status === 200 || res.status === 202) {
+            console.log(`[IndexNow] ✓ Instant URL indexing payload submitted successfully (HTTP ${res.status}).`);
+          } else {
+            console.log(`[IndexNow] Instant indexing notification status HTTP ${res.status}`);
+          }
+        } catch (err) {
+          console.warn('[IndexNow] Ping notification deferred:', err.message);
+        }
+      }
+    }
+  };
+}
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://whisperingpinesresort.in',
@@ -46,6 +95,7 @@ export default defineConfig({
     }),
     sitemap(),
     masterSitemap(),
+    indexNowIntegration(),
   ],
   image: {
     service: {
