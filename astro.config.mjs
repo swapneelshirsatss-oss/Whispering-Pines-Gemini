@@ -81,7 +81,7 @@ export default defineConfig({
   site: 'https://whisperingpinesresort.in',
   trailingSlash: 'always',
   redirects: {
-    '/blog/resort-near-mukteshwar': '/resort-near-mukteshwar/',
+    '/resort-near-mukteshwar': '/blog/resort-near-mukteshwar/',
     '/why-ramgarh-is-the-fruit-bowl-of-kumaon': '/blog/ramgarh-fruit-bowl-of-kumaon/',
     '/blog/why-ramgarh-is-the-fruit-bowl-of-kumaon': '/blog/ramgarh-fruit-bowl-of-kumaon/',
     '/ramgarh-fruit-bowl-of-kumaon': '/blog/ramgarh-fruit-bowl-of-kumaon/',

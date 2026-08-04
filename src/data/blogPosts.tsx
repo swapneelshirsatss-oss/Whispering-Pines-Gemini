@@ -16,7 +16,7 @@ export const BLOG_POSTS: BlogPostData[] = [
   {
     id: 0,
     slug: "resort-near-mukteshwar",
-    customUrl: "/resort-near-mukteshwar/",
+    customUrl: "/blog/resort-near-mukteshwar/",
     title: "Resort near Mukteshwar for Families, Couples & Workation — 2026 Guide",
     excerpt: "Looking for the best resort near Mukteshwar? Whispering Pines by Casa De Bello in Ramgarh offers 180° Himalayan views, pool, villa, orchard stays & 150 Mbps Wi-Fi. Book direct.",
     date: "August 3, 2026",
@@ -141,7 +141,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         </div>
 
         <div className="text-xs text-gray-500 border-t pt-4 space-x-4">
-          <a href="/resort-near-mukteshwar/" className="text-[#c9a832] font-bold underline">Read Full Interactive Guide Page →</a>
+          <a href="/blog/resort-near-mukteshwar/" className="text-[#c9a832] font-bold underline">Read Full Interactive Guide Page →</a>
           <a href="/private-villas-near-nainital/" className="hover:underline">Private Villa Details</a>
           <a href="/resort-amenities-mukteshwar/" className="hover:underline">Resort Amenities</a>
           <a href="/contact-whispering-pines-resort-mukteshwar/" className="hover:underline">Contact Front Desk</a>
@@ -681,7 +681,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         {/* Feature Comparison Table */}
         <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Why Stay in Malla Ramgarh Instead of Nainital Mall Road Market?</h2>
         <p className="text-gray-700 leading-relaxed font-light mb-4">
-          When planning a trip to Nainital, location choice dictates your overall holiday quality. While staying on Mall Road appears convenient, visitors face heavy horn noise, pedestrian crowds, strict vehicle entry windows, and paid parking lots far from hotel lobbies. Positioned in Malla Ramgarh, Whispering Pines Resort provides a quiet mountain retreat just 45 minutes away (also compare with our <a href="/resort-near-mukteshwar/" className="text-[#1B3322] font-semibold underline">resort near Mukteshwar guide</a>).
+          When planning a trip to Nainital, location choice dictates your overall holiday quality. While staying on Mall Road appears convenient, visitors face heavy horn noise, pedestrian crowds, strict vehicle entry windows, and paid parking lots far from hotel lobbies. Positioned in Malla Ramgarh, Whispering Pines Resort provides a quiet mountain retreat just 45 minutes away (also compare with our <a href="/blog/resort-near-mukteshwar/" className="text-[#1B3322] font-semibold underline">resort near Mukteshwar guide</a>).
         </p>
 
         <div className="overflow-x-auto my-6">
