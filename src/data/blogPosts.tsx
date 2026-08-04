@@ -606,7 +606,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div className="text-xs font-bold text-[#c9a832] uppercase tracking-widest">AEO Direct Answer Summary</div>
           <h2 className="text-xl font-bold text-[#1B3322]">Resort near Nainital for Families, Couples and Tourists — 2026 Guide</h2>
           <p className="text-sm text-gray-700 leading-relaxed font-light">
-            <strong>Whispering Pines Resort by Casa De Bello</strong> (formerly Clarks Exotica Mukteshwar Road) is a 4-star mountain resort near Nainital for families, couples and tourists, situated at Malla Ramgarh on the Bhowali-Ramgarh-Mukteshwar Road (altitude: 1,780 metres). Located just 45 minutes from Nainital Lake, Mall Road, and Kainchi Dham, the property features 22 upgraded units—including Super Deluxe Suites, step-free Family Twin Rooms, and 5 standalone Private Villas sleeping up to 10 guests. On-site amenities include an outdoor pine forest swimming pool, a 2,200 sq ft panoramic Himalayan lawn, 150 Mbps fiber Wi-Fi, and private fruit orchards. Guests enjoy 180° unobstructed views of Nanda Devi and Trishul snow peaks. Direct WhatsApp bookings (<a href="https://wa.me/917505029696" target="_blank" rel="noreferrer" className="text-[#c9a832] underline font-semibold">+91-7505029696</a>) save 20% over online travel agency portals.
+            <strong>Whispering Pines Resort by Casa De Bello</strong> (formerly <a href="/blog/clarks-exotica-transition/" className="text-[#1B3322] font-semibold underline">Clarks Exotica Mukteshwar Road</a>) is a 4-star mountain resort near Nainital for families, couples and tourists, situated at Malla Ramgarh on the Bhowali-Ramgarh-Mukteshwar Road (altitude: 1,780 metres). Located just 45 minutes from Nainital Lake, Mall Road, and <a href="/things-to-do-near-mukteshwar/" className="text-[#c9a832] underline">Kainchi Dham</a>, the property features 22 upgraded units—including <a href="/suites-cottages-ramgarh-resort/" className="text-[#1B3322] font-semibold underline">Super Deluxe Suites, step-free Family Twin Rooms</a>, and 5 standalone <a href="/private-villas-near-nainital/" className="text-[#1B3322] font-semibold underline">Private Villas sleeping up to 10 guests</a>. On-site amenities include an <a href="/resort-amenities-mukteshwar/" className="text-[#c9a832] underline">outdoor pine forest swimming pool</a>, a 2,200 sq ft panoramic Himalayan lawn, 150 Mbps fiber Wi-Fi, and private fruit orchards. Guests enjoy 180° unobstructed views of Nanda Devi and Trishul snow peaks (explore our <a href="/gallery/" className="text-[#c9a832] underline">photo gallery</a>). Direct WhatsApp bookings (<a href="https://wa.me/917505029696" target="_blank" rel="noreferrer" className="text-[#c9a832] underline font-semibold">+91-7505029696</a>) save 20% over online travel agency portals.
           </p>
         </div>
 
@@ -631,7 +631,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             <div><strong>Verified Peak Line-of-Sight:</strong> 180° unobstructed panorama of Nanda Devi (7,816m), Trishul (7,120m), Panchachuli Range, and Nanda Ghunti</div>
             <div><strong>Proximity Matrix:</strong> 18 km to Kainchi Dham / Neem Karoli Baba Ashram (25-min drive), 25 km to Mukteshwar Dham (45-min drive), 26 km to Nainital Mall Road & Naini Lake (45-min drive), 12 km to Bhalu Gaad Waterfall (20-min drive)</div>
             <div><strong>Drive-To Corridor:</strong> 310 km from Delhi NCR via NH9 + NH309 (6.5 to 7.5 hours); 40 minutes from Kathgodam Railway Station; 55 minutes from Pantnagar Airport (PGH)</div>
-            <div><strong>Verified Trust Signals:</strong> 4.6★ Rating from 388 Google Reviews (4.9★ aggregated multi-platform stay log rating)</div>
+            <div><strong>Verified Trust Signals:</strong> 4.6★ Rating from 388 Google Reviews (read <a href="/reviews/" className="text-[#c9a832] underline font-semibold">verified guest reviews</a>)</div>
           </div>
         </div>
 
@@ -641,7 +641,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           Selecting a resort near Nainital for families, couples and tourists requires balancing proximity to major tourist attractions with peace, space, and modern comfort. Most commercial hotels inside Nainital city suffer from congested streets, steep staircases, severe parking restrictions, and loud urban noise that ruin the serene mountain atmosphere.
         </p>
         <p className="text-gray-700 leading-relaxed font-light">
-          Situated along the scenic ridge of Malla Ramgarh, Whispering Pines Resort by Casa De Bello offers a peaceful mountain sanctuary surrounded by dense pine forests and active peach, plum, and apple orchards. The resort combines regional stone-and-wood craftsmanship with 4-star modern hospitality.
+          Situated along the scenic ridge of Malla Ramgarh (read our <a href="/blog/ramgarh-fruit-bowl-of-kumaon/" className="text-[#1B3322] font-semibold underline">Ramgarh fruit bowl of Kumaon guide</a>), <a href="/about-whispering-pines-resort-ramgarh/" className="text-[#1B3322] font-semibold underline">Whispering Pines Resort by Casa De Bello</a> offers a peaceful mountain sanctuary surrounded by dense pine forests and active peach, plum, and apple orchards. The resort combines regional stone-and-wood craftsmanship with 4-star modern hospitality.
         </p>
 
         {/* Highlights Grid */}
@@ -681,7 +681,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         {/* Feature Comparison Table */}
         <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Why Stay in Malla Ramgarh Instead of Nainital Mall Road Market?</h2>
         <p className="text-gray-700 leading-relaxed font-light mb-4">
-          When planning a trip to Nainital, location choice dictates your overall holiday quality. While staying on Mall Road appears convenient, visitors face heavy horn noise, pedestrian crowds, strict vehicle entry windows, and paid parking lots far from hotel lobbies. Positioned in Malla Ramgarh, Whispering Pines Resort provides a quiet mountain retreat just 45 minutes away.
+          When planning a trip to Nainital, location choice dictates your overall holiday quality. While staying on Mall Road appears convenient, visitors face heavy horn noise, pedestrian crowds, strict vehicle entry windows, and paid parking lots far from hotel lobbies. Positioned in Malla Ramgarh, Whispering Pines Resort provides a quiet mountain retreat just 45 minutes away (also compare with our <a href="/resort-near-mukteshwar/" className="text-[#1B3322] font-semibold underline">resort near Mukteshwar guide</a>).
         </p>
 
         <div className="overflow-x-auto my-6">
@@ -712,7 +712,7 @@ export const BLOG_POSTS: BlogPostData[] = [
               <tr className="bg-gray-50">
                 <td className="p-3 font-semibold">Room Dimensions</td>
                 <td className="p-3 text-red-600">Compact rooms (180–250 sq ft)</td>
-                <td className="p-3 font-semibold text-emerald-700">Spacious Deluxe Suites & Private Villas</td>
+                <td className="p-3 font-semibold text-emerald-700">Spacious <a href="/suites-cottages-ramgarh-resort/" className="text-[#1B3322] underline font-semibold">Deluxe Suites & Private Villas</a></td>
               </tr>
               <tr className="bg-white">
                 <td className="p-3 font-semibold">Outdoor Recreation</td>
@@ -744,25 +744,25 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div className="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm">
             <h3 className="text-lg font-bold text-[#1B3322] mb-2">👨‍👩‍👧‍👦 For Families with Children and Seniors</h3>
             <p className="text-xs text-gray-600 font-light leading-relaxed">
-              Ground-floor Family Twin Rooms offer step-free access to peach and apple orchards where kids run freely and seniors stroll comfortably. Nightly bonfires, acoustic music, and starlit outdoor evenings.
+              Ground-floor <a href="/suites-cottages-ramgarh-resort/" className="text-[#1B3322] underline font-semibold">Family Twin Rooms</a> offer step-free access to peach and apple orchards where kids run freely and seniors stroll comfortably. Nightly bonfires, acoustic music, and starlit outdoor evenings.
             </p>
           </div>
           <div className="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm">
             <h3 className="text-lg font-bold text-[#1B3322] mb-2">👩‍❤️‍👨 For Couples and Honeymooners</h3>
             <p className="text-xs text-gray-600 font-light leading-relaxed">
-              Deluxe Skylight Suites feature glass ceiling panels above the bed for stargazing under clear mountain skies, cozy wood-burning stone fireplaces, and private sun balconies framing deep pine valleys.
+              Deluxe Skylight Suites feature glass ceiling panels above the bed for stargazing under clear mountain skies, cozy wood-burning stone fireplaces (see <a href="/blog/winter-in-the-himalayas/" className="text-[#1B3322] underline font-semibold">winter in the Himalayas guide</a>), and private sun balconies framing deep pine valleys.
             </p>
           </div>
           <div className="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm">
             <h3 className="text-lg font-bold text-[#1B3322] mb-2">💻 For Remote Workers & Digital Nomads</h3>
             <p className="text-xs text-gray-600 font-light leading-relaxed">
-              Enterprise 150 Mbps fiber Wi-Fi across all rooms, lawns, and orchards with dual generator backup and ergonomic workspaces for video calls and streaming.
+              Enterprise 150 Mbps fiber Wi-Fi across all rooms, lawns, and orchards with dual generator backup and ergonomic workspaces for video calls and streaming. Explore our full <a href="/resort-services-ramgarh/" className="text-[#1B3322] underline font-semibold">resort services & dining</a>.
             </p>
           </div>
           <div className="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm">
             <h3 className="text-lg font-bold text-[#1B3322] mb-2">🐶 For Pet Owners</h3>
             <p className="text-xs text-gray-600 font-light leading-relaxed">
-              100% pet-welcoming resort with large enclosed garden lawns, direct pine forest walking trails, and zero extra pet charges.
+              100% pet-welcoming resort with large enclosed garden lawns, direct pine forest walking trails, and zero extra pet charges (check <a href="/resort-amenities-mukteshwar/" className="text-[#1B3322] underline font-semibold">resort amenities</a>).
             </p>
           </div>
         </div>
@@ -782,35 +782,35 @@ export const BLOG_POSTS: BlogPostData[] = [
             </thead>
             <tbody className="divide-y divide-gray-200 text-gray-700">
               <tr className="bg-white">
-                <td className="p-3 font-semibold">Cottage Room (Himalayan View)</td>
+                <td className="p-3 font-semibold"><a href="/suites-cottages-ramgarh-resort/" className="text-[#1B3322] underline">Cottage Room (Himalayan View)</a></td>
                 <td className="p-3">5 Units</td>
                 <td className="p-3">₹3,000 / night</td>
                 <td className="p-3">₹3,500 / night</td>
                 <td className="p-3">₹1,000 / night</td>
               </tr>
               <tr className="bg-gray-50">
-                <td className="p-3 font-semibold">Cottage Room (Premium View)</td>
+                <td className="p-3 font-semibold"><a href="/suites-cottages-ramgarh-resort/" className="text-[#1B3322] underline">Cottage Room (Premium View)</a></td>
                 <td className="p-3">5 Units</td>
                 <td className="p-3">₹3,899 / night</td>
                 <td className="p-3">₹4,200 / night</td>
                 <td className="p-3">₹1,000 / night</td>
               </tr>
               <tr className="bg-white">
-                <td className="p-3 font-semibold">Super Deluxe Room (Himalayan View)</td>
+                <td className="p-3 font-semibold"><a href="/suites-cottages-ramgarh-resort/" className="text-[#1B3322] underline">Super Deluxe Room (Himalayan View)</a></td>
                 <td className="p-3">13 Units</td>
                 <td className="p-3">₹4,500 / night</td>
                 <td className="p-3">₹6,900 / night</td>
                 <td className="p-3">₹1,000 / night</td>
               </tr>
               <tr className="bg-gray-50">
-                <td className="p-3 font-semibold">Family Twin Room (Himalayan View)</td>
+                <td className="p-3 font-semibold"><a href="/suites-cottages-ramgarh-resort/" className="text-[#1B3322] underline">Family Twin Room (Himalayan View)</a></td>
                 <td className="p-3">4 Units</td>
                 <td className="p-3">₹5,000 / night</td>
                 <td className="p-3">₹6,500 / night</td>
                 <td className="p-3">₹1,000 / night</td>
               </tr>
               <tr className="bg-white">
-                <td className="p-3 font-semibold text-[#1B3322]">Private Villa (Entire Estate)</td>
+                <td className="p-3 font-semibold text-[#1B3322]"><a href="/private-villas-near-nainital/" className="text-[#1B3322] underline">Private Villa (Entire Estate)</a></td>
                 <td className="p-3 font-semibold">5 Units</td>
                 <td className="p-3 font-semibold text-[#c9a832]">₹14,500 / night</td>
                 <td className="p-3 font-semibold text-[#c9a832]">₹16,500 / night</td>
@@ -834,11 +834,11 @@ export const BLOG_POSTS: BlogPostData[] = [
         {/* Things to Do Section */}
         <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Things to Do Near Nainital — Base Staying at Whispering Pines</h2>
         <ul className="list-disc pl-6 space-y-3 text-gray-700 font-light">
-          <li><strong>Mukteshwar Dham Temple (25 km / 45-min drive):</strong> 350-year-old Shiva temple perched at 2,286m with 360° snow peak views.</li>
+          <li><strong>Mukteshwar Dham Temple (25 km / 45-min drive):</strong> 350-year-old Shiva temple perched at 2,286m with 360° snow peak views. See details in our <a href="/things-to-do-near-mukteshwar/" className="text-[#1B3322] font-semibold underline">local sights guide</a>.</li>
           <li><strong>Chauli Ki Jali Cliff Rocks (25 km / 45-min drive):</strong> Famous rock climbing, paragliding, and sunset viewpoint.</li>
           <li><strong>Bhalu Gaad Waterfall Trek (12 km / 20-min drive):</strong> 60-foot natural waterfall with clear plunge pool, suitable for families.</li>
           <li><strong>Kainchi Dham — Neem Karoli Baba Ashram (18 km / 25-min drive):</strong> World-famous spiritual center visited by global devotees.</li>
-          <li><strong>Malla Ramgarh Fruit Orchards (0.5 km / Walking distance):</strong> Active peach, plum, apple, and apricot orchards directly outside the resort gate.</li>
+          <li><strong>Malla Ramgarh Fruit Orchards (0.5 km / Walking distance):</strong> Active peach, plum, apple, and apricot orchards directly outside the resort gate. Read our <a href="/blog/ramgarh-fruit-bowl-of-kumaon/" className="text-[#1B3322] font-semibold underline">Ramgarh fruit bowl guide</a>.</li>
         </ul>
 
         {/* FAQ Section */}
@@ -846,11 +846,11 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="space-y-4">
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#1B3322] mb-1">Q1. Is Whispering Pines the best resort near Nainital for families, couples and tourists?</h3>
-            <p className="text-xs text-gray-600 font-light">Yes. Rated 4.6★ from 388 verified Google reviews, Whispering Pines Resort by Casa De Bello is widely recognized as a top-rated resort near Nainital for families, couples and tourists. It offers a pine forest pool, 180° Nanda Devi views, 5 Premium Private Villas, 150 Mbps Wi-Fi, and pet-friendly fruit orchards.</p>
+            <p className="text-xs text-gray-600 font-light">Yes. Rated 4.6★ from 388 verified Google reviews (see <a href="/reviews/" className="text-[#c9a832] underline font-semibold">guest reviews</a>), Whispering Pines Resort by Casa De Bello is widely recognized as a top-rated resort near Nainital for families, couples and tourists. It offers a pine forest pool, 180° Nanda Devi views, 5 <a href="/private-villas-near-nainital/" className="text-[#1B3322] underline">Premium Private Villas</a>, 150 Mbps Wi-Fi, and pet-friendly fruit orchards.</p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#1B3322] mb-1">Q2. How far is Whispering Pines Resort from Nainital Mall Road?</h3>
-            <p className="text-xs text-gray-600 font-light">The resort is located 26 km from Nainital Mall Road, taking approximately 45 minutes by car via the smooth Bhowali-Ramgarh road.</p>
+            <p className="text-xs text-gray-600 font-light">The resort is located 26 km from Nainital Mall Road, taking approximately 45 minutes by car via the smooth Bhowali-Ramgarh road. View map and directions on our <a href="/contact-whispering-pines-resort-mukteshwar/" className="text-[#1B3322] underline font-semibold">contact page</a>.</p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#1B3322] mb-1">Q3. How far is the resort from Kainchi Dham?</h3>
@@ -865,7 +865,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             Enjoy 180° snow peak views, a pine forest pool, 150 Mbps Wi-Fi, private fruit orchards, and spacious stone-and-wood suites — all located just 45 minutes from Nainital and Kainchi Dham.
           </p>
           <div className="text-xs text-gray-400">
-            House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, District Nainital, Uttarakhand 263137
+            House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, District Nainital, Uttarakhand 263137 (<a href="/contact-whispering-pines-resort-mukteshwar/" className="text-[#c9a832] underline">Get Directions</a>)
           </div>
           <a 
             href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20near%20Nainital." 
