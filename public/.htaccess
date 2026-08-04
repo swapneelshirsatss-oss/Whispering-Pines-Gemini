@@ -48,7 +48,14 @@
   ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>
 
+# Security Headers & Caching Controls
 <IfModule mod_headers.c>
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+
   <FilesMatch "\.(ico|jpe?g|png|gif|webp|avif|swf|css|js|svg|woff|woff2)$">
     Header set Cache-Control "max-age=31536000, public, immutable"
   </FilesMatch>

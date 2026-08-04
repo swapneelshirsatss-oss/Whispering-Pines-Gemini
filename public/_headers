@@ -1,3 +1,11 @@
+# Global HTTP Security Response Headers
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
 # Edge CDN & Browser Caching Rules for Static Assets
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
