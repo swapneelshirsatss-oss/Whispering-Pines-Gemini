@@ -32,10 +32,10 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-# AI Training Data Scrapers - Disallow
 User-agent: Google-Extended
-Disallow: /
+Allow: /
 
+# AI Data Scrapers - Disallow
 User-agent: Bytespider
 Disallow: /
 
