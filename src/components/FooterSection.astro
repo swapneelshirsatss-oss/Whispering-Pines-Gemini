@@ -141,21 +141,21 @@ const currentYear = new Date().getFullYear();
             rel="noopener noreferrer"
             class="flex items-start hover:text-[#c9a832] transition-colors group"
           >
-            <MapPin class="w-4 h-4 text-[#c9a832] mr-3 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+            <MapPin className="w-4 h-4 text-[#c9a832] mr-3 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
             <span class="leading-relaxed">{RESORT_CONTACT.location}</span>
           </a>
           <a
             href={`tel:${RESORT_CONTACT.phone}`}
             class="flex items-center hover:text-[#c9a832] transition-colors group"
           >
-            <Phone class="w-4 h-4 text-[#c9a832] mr-3 shrink-0 group-hover:scale-110 transition-transform" />
+            <Phone className="w-4 h-4 text-[#c9a832] mr-3 shrink-0 group-hover:scale-110 transition-transform" />
             <span class="font-mono tracking-wide">{RESORT_CONTACT.phone}</span>
           </a>
           <a
             href={`mailto:${RESORT_CONTACT.email}`}
             class="flex items-center hover:text-[#c9a832] transition-colors group"
           >
-            <Mail class="w-4 h-4 text-[#c9a832] mr-3 shrink-0 group-hover:scale-110 transition-transform" />
+            <Mail className="w-4 h-4 text-[#c9a832] mr-3 shrink-0 group-hover:scale-110 transition-transform" />
             <span>{RESORT_CONTACT.email}</span>
           </a>
         </div>
@@ -169,7 +169,7 @@ const currentYear = new Date().getFullYear();
             class="inline-flex items-center gap-2 bg-[#c9a832] hover:bg-[#FAF9F6] text-[#1B3322] font-mono text-xs font-bold uppercase tracking-wider px-5 py-3 rounded shadow-md transition-all transform hover:-translate-y-0.5"
           >
             <span>Direct WhatsApp Booking</span>
-            <ArrowUpRight class="w-4 h-4" />
+            <ArrowUpRight className="w-4 h-4" />
           </a>
         </div>
       </div>
@@ -180,7 +180,7 @@ const currentYear = new Date().getFullYear();
     <div class="py-8 border-b border-[#FAF9F6]/10">
       <div class="flex items-center justify-between mb-4">
         <h4 class="text-xs font-mono uppercase tracking-[0.2em] text-[#c9a832] font-semibold flex items-center gap-2">
-          <MapPin class="w-3.5 h-3.5 text-[#c9a832]" /> Estate Map & Coordinates
+          <MapPin className="w-3.5 h-3.5 text-[#c9a832]" /> Estate Map & Coordinates
         </h4>
         <span class="text-[11px] font-mono text-[#FAF9F6]/50 hidden sm:inline">Malla Ramgarh, Uttarakhand</span>
       </div>

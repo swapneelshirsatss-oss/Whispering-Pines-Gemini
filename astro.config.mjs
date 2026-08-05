@@ -69,7 +69,7 @@ function indexNowIntegration() {
             console.log(`[IndexNow] Instant indexing notification status HTTP ${res.status}`);
           }
         } catch (err) {
-          console.warn('[IndexNow] Ping notification deferred:', err.message);
+          console.warn('[IndexNow] Ping notification deferred:', err instanceof Error ? err.message : String(err));
         }
       }
     }
