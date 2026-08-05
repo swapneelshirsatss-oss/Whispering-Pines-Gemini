@@ -873,5 +873,551 @@ export const BLOG_POSTS: BlogPostData[] = [
         </div>
       </div>
     )
+  },
+  {
+    id: 5,
+    slug: "resorts-near-kainchi-dham-ashram-neem-karoli-baba",
+    title: "Resorts Near Kainchi Dham Ashram Neem Karoli Baba | Whispering Pines (2026 Guide)",
+    excerpt: "Looking for a senior-friendly 4-star resort hotel near Kainchi Dham Ashram Neem Karoli Baba? Whispering Pines offers ground floor hotel rooms, wheelchair access, private villa, peak views, & 45-min drive to Ashram. Save 20% direct.",
+    date: "August 6, 2026",
+    readTime: "16 min read",
+    imageUrl: "/images/blog-resort-near-kainchi-dham-image/resorts-near-kainchi-dham-ashram-neem-karoli-baba-2026.avif",
+    content: (
+      <div className="space-y-8 text-[#2C3531]">
+        {/* Author E-E-A-T Banner */}
+        <div className="bg-[#1B3322]/5 p-6 rounded-2xl border border-[#1B3322]/10 flex flex-col md:flex-row items-center gap-4">
+          <div className="w-16 h-16 rounded-full bg-[#1B3322] text-[#c9a832] flex items-center justify-center text-xl font-bold border border-[#c9a832] shrink-0">
+            GP
+          </div>
+          <div>
+            <div className="text-xs font-semibold text-[#c9a832] uppercase tracking-wider">Author & Verified Host</div>
+            <h4 className="text-base font-bold text-[#1B3322]">Gaurav Pandey — Director of Casa De Bello Pvt Ltd</h4>
+            <p className="text-xs text-gray-600 font-light mt-1">
+              Traveller host & hospitality entrepreneur leading <a href="https://casadebello.com/" target="_blank" rel="noreferrer" className="text-[#c9a832] underline">Casa De Bello Pvt Ltd</a>. Elevation: 1,780m Malla Ramgarh ridge near Mukteshwar & Kainchi Dham.
+            </p>
+          </div>
+        </div>
+
+        {/* AEO Direct Answer Summary */}
+        <div className="bg-[#FAF9F6] p-6 rounded-2xl border-l-4 border-[#c9a832] shadow-sm space-y-3">
+          <div className="text-xs font-bold uppercase tracking-wider text-[#c9a832]">AEO Direct Answer Summary</div>
+          <p className="text-base text-gray-700 leading-relaxed font-light">
+            <a href="/" className="text-[#1B3322] font-semibold underline">Whispering Pines Resort</a> by Casa De Bello is a senior-friendly 4-star <strong>resort hotel</strong> located in Malla Ramgarh, Uttarakhand, situated a peaceful 45-minute drive (22 km) from Kainchi Dham Ashram (Shri Neem Karoli Baba Ashram). Set at an altitude of 1,780 metres, this luxury resort hotel features ground-floor step-free hotel rooms, on-site wheelchair accessibility for elderly pilgrims, a 3-bedroom private villa sleeping up to 8–10 guests, 180° Himalayan peak views, a pine forest pool, pure vegetarian/Satvik dining, and 150 Mbps Wi-Fi. It is designed to accommodate multi-generational family yatras and hotel guests comfortably. <a href="https://whisperingpinesresort.bookingjini.in/" target="_blank" rel="noreferrer" className="text-[#1B3322] font-semibold underline">Reserve your stay direct for 20% discount</a>.
+          </p>
+        </div>
+
+        {/* GEO Entity & Location Matrix */}
+        <div className="bg-white p-6 rounded-xl border border-[#EAE8E3] space-y-3">
+          <h3 className="font-bold text-[#1B3322] text-lg">GEO Entity & Location Matrix</h3>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-gray-700 font-light">
+            <li><strong>Property Name:</strong> <a href="/" className="text-[#1B3322] font-semibold underline">Whispering Pines Resort Hotel by Casa De Bello</a></li>
+            <li><strong>GMB Category:</strong> Resort Hotel / Hotel / Resort</li>
+            <li><strong>Exact Address:</strong> House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, Uttarakhand 263137</li>
+            <li><strong>Altitude:</strong> 1,780 metres (5,840 feet) above sea level</li>
+            <li><strong>Peak Line-of-Sight:</strong> 180° direct views of Nanda Devi & Trishul</li>
+            <li><strong>Distance to Kainchi Dham Ashram:</strong> 22 km (~45-minute scenic drive)</li>
+            <li><strong>Distance to Mukteshwar Dham:</strong> 25 km (45-minute drive)</li>
+            <li><strong>Distance to Bhalu Gaad Waterfall:</strong> 12 km (20-minute drive)</li>
+            <li><strong>Distance to Kathgodam Station:</strong> 45 km (~40–50 minutes)</li>
+            <li><strong>Verified Guest Rating:</strong> <a href="/reviews/" className="text-[#c9a832] font-semibold underline">4.6★ from 388 Google reviews</a></li>
+          </ul>
+        </div>
+
+        {/* Header Image */}
+        <div className="my-6">
+          <img 
+            src="/images/blog-resort-near-kainchi-dham-image/resorts-near-kainchi-dham-ashram-neem-karoli-baba-Whispering-Pines-2026.avif" 
+            alt="Resorts Near Kainchi Dham Ashram Neem Karoli Baba — Whispering Pines Resort Hotel by Casa De Bello, Malla Ramgarh 2026 Guide" 
+            className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
+          />
+          <p className="text-xs text-center text-gray-500 mt-2">Whispering Pines Resort Hotel — Scenic 45-minute drive to Kainchi Dham Ashram in Malla Ramgarh.</p>
+        </div>
+
+        {/* WhatsApp Banner */}
+        <div className="bg-[#1B3322] text-white p-6 rounded-xl text-center space-y-3">
+          <h3 className="text-xl font-bold">Book Direct on WhatsApp & Save Up to 20% vs OTAs</h3>
+          <p className="text-xs text-gray-300">Skip third-party commissions. Instant reservation response from our front desk team.</p>
+          <a 
+            href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20near%20Kainchi%20Dham." 
+            target="_blank" 
+            rel="noreferrer" 
+            className="inline-block px-6 py-3 bg-[#25D366] text-white font-bold text-sm rounded-lg hover:bg-[#1EBE5D] transition-all"
+          >
+            WhatsApp +91-7505029696 — Best Price Guaranteed
+          </a>
+        </div>
+
+        {/* Senior-Friendly Section */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Senior-Friendly & Accessible Living for Kainchi Dham Pilgrims</h2>
+        <p className="text-lg leading-relaxed text-gray-700 font-light">
+          Pilgrimages to Shri Neem Karoli Baba Ashram often involve multi-generational families traveling with elderly parents and grandparents. For senior citizens who find staircase climbing difficult, choosing an accessible <strong>resort hotel</strong> is critical to ensuring a restful journey.
+        </p>
+
+        <pre className="bg-[#1B3322] text-[#EAE8E3] p-4 sm:p-6 rounded-xl overflow-x-auto text-xs font-mono my-6 leading-relaxed">
+{`                   [ Whispering Pines Resort Hotel Senior & Family Care ]
+                                             |
+         +-----------------------------------+-----------------------------------+
+         |                                                                       |
+ [ Step-Free Ground Floor Hotel Rooms ]                         [ Senior Pilgrim Comforts ]
+ - Zero-stair access to ground rooms                            - On-site wheelchair availability
+ - Direct orchard & lawn access                                 - Dedicated luggage & mobility assistance
+ - Spacious, non-slip bathrooms                                 - Fresh Satvik & home-style hotel food`}
+        </pre>
+
+        <h3 className="text-xl font-bold text-[#1B3322] mt-6 mb-3">Ground Floor Hotel Rooms & Wheelchair Support</h3>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Unlike steep, multi-storey hillside hotels with narrow staircases, Whispering Pines Resort Hotel offers spacious ground-floor hotel room options designed for comfort and ease of movement:
+        </p>
+        <ul className="list-disc pl-6 space-y-3 text-gray-700 font-light">
+          <li><strong>Step-Free Access:</strong> Ground-floor family hotel rooms open directly onto flat garden walkways, allowing senior citizens to move around without navigating stairs.</li>
+          <li><strong>On-Site Wheelchair Assistance:</strong> Wheelchair facilities are available on the property to assist elderly guests from vehicle drop-off points to their hotel rooms and dining areas.</li>
+          <li><strong>Supportive On-Site Hotel Staff:</strong> Our house staff provides dedicated assistance with luggage, vehicle boarding, and personalized room service for elderly pilgrims and hotel guests.</li>
+        </ul>
+
+        {/* Image 2 */}
+        <div className="my-6">
+          <img 
+            src="/images/blog-resort-near-kainchi-dham-image/What-makes-resort-best-stay-near-kainchi-dham.avif" 
+            alt="What Makes Whispering Pines the Best Stay Near Kainchi Dham Ashram" 
+            className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
+          />
+          <p className="text-xs text-center text-gray-500 mt-2">Senior-friendly step-free garden walkways and peaceful orchard lawns at Whispering Pines.</p>
+        </div>
+
+        {/* Why Choose Section */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Why Choose Whispering Pines as Your Resort Hotel Near Kainchi Dham Ashram?</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Finding high-quality hotel accommodation near Kainchi Dham Ashram can be challenging during peak travel seasons. While hotels directly outside the Ashram or along the Bhowali market corridor suffer from heavy traffic bottlenecks and narrow parking, staying at a luxury <strong>resort hotel</strong> in Malla Ramgarh offers a serene alternative.
+        </p>
+        <p className="text-gray-700 leading-relaxed font-light">
+          At <a href="/" className="text-[#1B3322] font-semibold underline">Whispering Pines Resort</a> (our primary 4-star <a href="/about-whispering-pines-resort-ramgarh/" className="text-[#1B3322] font-semibold underline">mountain sanctuary in Malla Ramgarh</a>), devotees and leisure hotel guests enjoy luxury amenities combined with smooth access to the Ashram.
+        </p>
+
+        <div className="space-y-4 my-6">
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-lg mb-1">1. 180° Panoramic Himalayan Views</h3>
+            <p className="text-gray-600 text-sm font-light">Wake up to unobstructed vistas of Nanda Devi and Trishul snow peaks directly from your hotel room balcony. The crisp mountain air at 1,780 metres provides a peaceful setting for morning prayers and meditation before heading to Kainchi Dham.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-lg mb-1">2. Pure Veg, Satvik & Flexible Hotel Dining</h3>
+            <p className="text-gray-600 text-sm font-light">We provide freshly prepared pure vegetarian and Satvik meals tailored for Kainchi Dham pilgrims, along with regional Kumaoni specialties, 24-hour in-room dining, and kitchenette flexibility in our private villa.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-lg mb-1">3. Senior Citizen Friendly Hotel Layout</h3>
+            <p className="text-gray-600 text-sm font-light">Ground-floor hotel rooms, flat garden pathways, wheelchair availability, and step-free access make the resort hotel comfortable for elderly pilgrims and multi-generational families.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-lg mb-1">4. Swimming Pool Surrounded by Pine Forest</h3>
+            <p className="text-gray-600 text-sm font-light">Unwind after your visit to the Ashram at our outdoor <a href="/resort-amenities-mukteshwar/" className="text-[#1B3322] font-semibold underline">pine forest swimming pool</a>. Set amidst dense pine and cedar trees, the pool area offers relaxing mountain surroundings for hotel guests.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-lg mb-1">5. Private 8 to 10-Sleeper Villa for Family Groups</h3>
+            <p className="text-gray-600 text-sm font-light">Traveling with extended family? Our standalone <a href="/private-villas-near-nainital/" className="text-[#1B3322] font-semibold underline">private villa near Nainital</a> features a 3-bedroom layout, 3 washrooms, a spacious living hall, a fully functional kitchenette, and a large open terrace overlooking the hills.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-lg mb-1">6. 150 Mbps Fiber Optic Wi-Fi Across All Hotel Rooms</h3>
+            <p className="text-gray-600 text-sm font-light">Stay connected with enterprise-grade 150 Mbps fiber Wi-Fi throughout all hotel rooms, suites, villa spaces, and outdoor estate grounds.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-lg mb-1">7. Formerly Clarks Exotica — Upgraded Under Casa De Bello</h3>
+            <p className="text-gray-600 text-sm font-light">Operating under the management of Casa De Bello, the resort hotel holds a <a href="/reviews/" className="text-[#c9a832] font-semibold underline">verified guest rating</a> of 4.6★ from 388 Google reviews.</p>
+          </div>
+        </div>
+
+        {/* Image 3 */}
+        <div className="my-6">
+          <img 
+            src="/images/blog-resort-near-kainchi-dham-image/Why-whispering-pines-resort-Is-One-of-the-Best-resort-hotel-Near-Kainchi-Dham.avif" 
+            alt="Why Whispering Pines Resort Is One of the Best Resort Hotels Near Kainchi Dham" 
+            className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
+          />
+          <p className="text-xs text-center text-gray-500 mt-2">180° snow-peak Himalayan view and serene pine canopy at Whispering Pines Resort.</p>
+        </div>
+
+        {/* Comparison Section */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Malla Ramgarh Resort Hotel vs. Kainchi Dham Market & Bhowali Hotels</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Booking a budget hotel immediately adjacent to Kainchi Dham often means dealing with heavy road traffic along the Bhowali-Kainchi corridor, limited parking, and noise. Staying at our Malla Ramgarh resort hotel allows guests to drive down to the Ashram via clean, less congested back routes, complete their Darshan, and return to a quiet sanctuary in the evening.
+        </p>
+
+        <div className="overflow-x-auto rounded-xl border border-[#EAE8E3] my-6">
+          <table className="w-full text-left text-xs sm:text-sm">
+            <thead className="bg-[#1B3322] text-white">
+              <tr>
+                <th className="p-3">Feature / Criteria</th>
+                <th className="p-3">Standard Kainchi / Bhowali Market Hotel</th>
+                <th className="p-3">Whispering Pines Resort Hotel (Malla Ramgarh)</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[#EAE8E3]">
+              <tr>
+                <td className="p-3 font-semibold">GMB Category & Standards</td>
+                <td className="p-3">Basic guesthouse / lodge</td>
+                <td className="p-3 font-semibold text-[#1B3322]">4-Star Resort Hotel with full amenities</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Elderly & Senior Access</td>
+                <td className="p-3">Steep staircases, narrow entrances</td>
+                <td className="p-3 font-semibold text-[#1B3322]">Ground-floor step-free hotel rooms & wheelchair available</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">Ambience & Noise</td>
+                <td className="p-3">Heavy vehicular traffic, honking, street crowds</td>
+                <td className="p-3 font-semibold text-[#1B3322]">Quiet pine forest surroundings, bird sounds</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Himalayan Peak Views</td>
+                <td className="p-3">Obstructed by adjacent buildings / none</td>
+                <td className="p-3 font-semibold text-[#1B3322]">180° unobstructed Nanda Devi & Trishul views</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">Parking & Access</td>
+                <td className="p-3">Limited street parking, narrow alleyways</td>
+                <td className="p-3 font-semibold text-[#1B3322]">Dedicated private hotel parking for cars & traveler buses</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Dining Flexibility</td>
+                <td className="p-3">Basic roadside menus</td>
+                <td className="p-3 font-semibold text-[#1B3322]">Pure Veg, Satvik & Kumaoni options on request</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">Pool & Outdoor Space</td>
+                <td className="p-3">No outdoor grounds or swimming facilities</td>
+                <td className="p-3 font-semibold text-[#1B3322]">Outdoor pine forest pool, bonfire pit, private orchards</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Wi-Fi Speed</td>
+                <td className="p-3">Variable 4G / basic network</td>
+                <td className="p-3 font-semibold text-[#1B3322]">150 Mbps enterprise fiber optic Wi-Fi</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">Drive Time to Ashram</td>
+                <td className="p-3">5–15 mins (subject to 1-2 hr traffic bottlenecks)</td>
+                <td className="p-3 font-semibold text-[#1B3322]">45 mins via scenic, non-congested back roads</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        {/* Flexible Dining Section */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Flexible Dining Options: Pure Veg, Satvik & Authentic Kumaoni Cuisine</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Food is an important part of every journey, especially for visitors traveling to spiritual destinations like Kainchi Dham. Many devotees prefer simple vegetarian meals, home-cooked food, or Satvik dining during their visit. This is one reason why our guests appreciate the dining flexibility at Whispering Pines Resort Hotel by Casa De Bello.
+        </p>
+
+        <pre className="bg-[#1B3322] text-[#EAE8E3] p-4 sm:p-6 rounded-xl overflow-x-auto text-xs font-mono my-6 leading-relaxed">
+{`                   [ Whispering Pines Resort Hotel Dining Choices ]
+                                           |
+         +---------------------------------+---------------------------------+
+         |                                                                   |
+ [ In-House Hotel Restaurant & Service ]                      [ Private Villa Kitchenette ]
+ - Pure Vegetarian & Satvik Meals                             - Fully equipped with cookware
+ - Authentic Kumaoni Regional Thali                           - Tea, coffee, snacks & light cooking
+ - Multi-cuisine & 24/7 Room Service                          - Ideal for elderly parents & kids`}
+        </pre>
+
+        {/* Image 4 */}
+        <div className="my-6">
+          <img 
+            src="/images/blog-resort-near-kainchi-dham-image/resort-near-kainchidham-hotel-dinig-choices.avif" 
+            alt="Pure Veg, Satvik & Kumaoni Dining Choices at Whispering Pines Resort Hotel Near Kainchi Dham" 
+            className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
+          />
+          <p className="text-xs text-center text-gray-500 mt-2">Freshly cooked Pure Veg & Satvik meals prepared for Kainchi Dham pilgrims.</p>
+        </div>
+
+        <h3 className="text-xl font-bold text-[#1B3322] mt-6 mb-3">Pure Veg & Satvik Dining for Devotees</h3>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Our in-house hotel kitchen team prepares freshly cooked, pure vegetarian dishes made without onion or garlic (Satvik preparation) upon prior request.
+        </p>
+        <ul className="list-disc pl-6 space-y-2 text-gray-700 font-light">
+          <li><strong>Clean, Hygienic Hotel Kitchen Standards:</strong> Prepared in a dedicated 4-star resort hotel kitchen facility using fresh local ingredients.</li>
+          <li><strong>Customized Meal Schedules:</strong> Early morning breakfast support for early Ashram visits or light dinners after returning from evening Aarti.</li>
+          <li><strong>Herbal Teas & Infusions:</strong> Fresh ginger-tulsi tea or warm milk brewed to order for hotel guests.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold text-[#1B3322] mt-6 mb-3">Kitchenette Facilities in Our Private Villa</h3>
+        <p className="text-gray-700 leading-relaxed font-light">
+          For families staying in our 8 to 10-guest <a href="/private-villas-near-nainital/" className="text-[#1B3322] font-semibold underline">private villa near Nainital</a>, a fully functional kitchenette includes essential cookware, utensils, a refrigerator, an electric kettle, and basic supplies. Guests can prepare morning breakfast, evening tea, baby food, or simple light meals according to their personal routine.
+        </p>
+
+        <h3 className="text-xl font-bold text-[#1B3322] mt-6 mb-3">Authentic Kumaoni Culinary Experience</h3>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Our local meal options allow hotel guests to experience the rich culinary heritage of Uttarakhand:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 text-gray-700 font-light">
+          <li><strong>Aloo Ke Gutke & Bhang Ki Chutney:</strong> Classic Kumaoni spiced potatoes served with local roasted hemp seed chutney.</li>
+          <li><strong>Gehat Ki Dal & Bhatt Ki Churkani:</strong> Protein-rich Pahadi lentils slow-cooked to perfection.</li>
+          <li><strong>Fresh Fruit Orchard Produce:</strong> Enjoy fresh peaches, plums, apples, and apricots harvested directly from our private orchards during harvest seasons (May to August).</li>
+        </ul>
+
+        {/* Private Villa Section */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Comprehensive Private Villa Overview (Sleeps Up to 8–10 Guests)</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          The private villa layout at Whispering Pines is structured specifically for families visiting Kainchi Dham together, offering balance between togetherness, privacy, and full hotel service support.
+        </p>
+
+        <pre className="bg-[#1B3322] text-[#EAE8E3] p-4 sm:p-6 rounded-xl overflow-x-auto text-xs font-mono my-6 leading-relaxed">
+{`                           [ Private Villa Layout ]
+                                      |
+         +----------------------------+----------------------------+
+         |                            |                            |
+[ 2 Premium Valley-View Rooms ]   [ 1 Cozy Bedroom ]      [ Shared Family Spaces ]
+- Double beds + private balconies- Attached washroom      - Spacious living hall
+- Unobstructed hill views        - Ideal for extra guests - Fully equipped kitchenette
+                                                          - Large open terrace`}
+        </pre>
+
+        <ul className="list-disc pl-6 space-y-2 text-gray-700 font-light my-4">
+          <li><strong>Two Premium Valley-View Bedrooms:</strong> Double beds and private balconies with views of pine hills and valleys.</li>
+          <li><strong>One Cozy Additional Bedroom:</strong> Attached washroom, providing a quiet space for children, grandparents, or additional guests.</li>
+          <li><strong>Three Bathrooms:</strong> Modern washrooms equipped with 24/7 hot water supply.</li>
+          <li><strong>Spacious Living Hall:</strong> Central lounge area with plush seating for family conversations.</li>
+          <li><strong>Fully Functional Kitchenette:</strong> Cookware, utensils, refrigerator, kettle, and kitchen essentials.</li>
+          <li><strong>Large Open Terrace:</strong> Outdoor space for morning yoga, tea, or stargazing under clear skies.</li>
+          <li><strong>Private Parking:</strong> Dedicated parking space located adjacent to the villa entrance.</li>
+        </ul>
+
+        {/* Room Matrix Table */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Property Specifications & Room Comparison Matrix</h2>
+        <div className="overflow-x-auto rounded-xl border border-[#EAE8E3] my-6">
+          <table className="w-full text-left text-xs sm:text-sm">
+            <thead className="bg-[#1B3322] text-white">
+              <tr>
+                <th className="p-3">Accommodation Type</th>
+                <th className="p-3">Max Capacity</th>
+                <th className="p-3">Layout & Key Highlights</th>
+                <th className="p-3">Best For</th>
+                <th className="p-3">Booking Link</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[#EAE8E3]">
+              <tr>
+                <td className="p-3 font-semibold">Private Villa</td>
+                <td className="p-3">Up to 8–10 guests</td>
+                <td className="p-3">2 premium valley-view rooms with balconies, 1 cozy bedroom with bath, 3 washrooms, living hall, kitchenette, terrace</td>
+                <td className="p-3">Multi-generational families, group Yatra retreats</td>
+                <td className="p-3"><a href="/private-villas-near-nainital/" className="text-[#1B3322] font-semibold underline">View Villa</a></td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Family Twin Room</td>
+                <td className="p-3">2 adults + 2 kids</td>
+                <td className="p-3">Ground-floor step-free access, double beds, direct orchard entry</td>
+                <td className="p-3">Families with senior citizens/kids</td>
+                <td className="p-3"><a href="/suites-cottages-ramgarh-resort/" className="text-[#1B3322] font-semibold underline">View Room</a></td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">Deluxe Skylight Suite</td>
+                <td className="p-3">2–3 guests</td>
+                <td className="p-3">Glass skylight ceiling, king bed + daybed, private balcony</td>
+                <td className="p-3">Couples, stargazers, small families</td>
+                <td className="p-3"><a href="/suites-cottages-ramgarh-resort/" className="text-[#1B3322] font-semibold underline">View Suite</a></td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Group Cottage Room</td>
+                <td className="p-3">2 adults</td>
+                <td className="p-3">Cedar wood pine interiors, valley views</td>
+                <td className="p-3">Couples, solo travelers, workations</td>
+                <td className="p-3"><a href="/suites-cottages-ramgarh-resort/" className="text-[#1B3322] font-semibold underline">View Room</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        {/* Map & Distance Matrix */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">🗺️ Tourist Route & Distance Map Guide</h2>
+
+        <pre className="bg-[#1B3322] text-[#EAE8E3] p-4 sm:p-6 rounded-xl overflow-x-auto text-xs font-mono my-6 leading-relaxed">
+{`========================================================================================
+                      KUMAON HIMALAYAS TOURIST HUB & ROUTE MAP
+========================================================================================
+
+                                 [ Mukteshwar Dham ]
+                                 (Temple & Chauli Ki Jali)
+                                         ^
+                                         | 25 km (45 Mins)
+                                         |
+[ Kainchi Dham Ashram ] <------- [ WHISPERING PINES ] -------> [ Bhalu Gaad Waterfall ]
+(Neem Karoli Baba)    22 km      [   RESORT HOTEL   ]  12 km  (Forest Trail & Cascades)
+  (45-Min Scenic Drive)          [ (Malla Ramgarh)  ] (20 Mins)
+                                         |
+                                         | 20 km (40 Mins)
+                                         v
+                                  [ Bhimtal Lake ]
+                                         |
+                                         | 25 km (40 Mins)
+                                         v
+                            [ Kathgodam Railway Station ]
+                            (Entry Gateway from Delhi/NCR)
+========================================================================================`}
+        </pre>
+
+        {/* Image 5 */}
+        <div className="my-6">
+          <img 
+            src="/images/blog-resort-near-kainchi-dham-image/Map-for-excursion-near-kainchi-dham.avif" 
+            alt="Map for Excursions and Driving Routes Near Kainchi Dham Ashram and Whispering Pines Resort" 
+            className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
+          />
+          <p className="text-xs text-center text-gray-500 mt-2">Kumaon regional route map from Malla Ramgarh to Kainchi Dham, Mukteshwar & Bhimtal.</p>
+        </div>
+
+        <div className="overflow-x-auto rounded-xl border border-[#EAE8E3] my-6">
+          <table className="w-full text-left text-xs sm:text-sm">
+            <thead className="bg-[#1B3322] text-white">
+              <tr>
+                <th className="p-3">Destination / Landmark</th>
+                <th className="p-3">Distance from Resort</th>
+                <th className="p-3">Driving Time</th>
+                <th className="p-3">Best Time to Visit</th>
+                <th className="p-3">Key Highlights & Tourist Tips</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[#EAE8E3]">
+              <tr>
+                <td className="p-3 font-semibold">Kainchi Dham Ashram (Neem Karoli Baba)</td>
+                <td className="p-3 font-bold text-[#1B3322]">22 km</td>
+                <td className="p-3 font-bold text-[#1B3322]">45 Mins</td>
+                <td className="p-3">7:00 AM – 11:00 AM</td>
+                <td className="p-3">Spiritual Darshan, Hanuman Chalisa, serene valley setting. Departs early (7:30 AM) to secure smooth parking.</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Bhalu Gaad Waterfall</td>
+                <td className="p-3 font-bold text-[#1B3322]">12 km</td>
+                <td className="p-3 font-bold text-[#1B3322]">20 Mins</td>
+                <td className="p-3">9:00 AM – 3:00 PM</td>
+                <td className="p-3">Light 1.5 km forest trek, natural mountain pool, bird watching.</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">Mukteshwar Dham Temple</td>
+                <td className="p-3 font-bold text-[#1B3322]">25 km</td>
+                <td className="p-3 font-bold text-[#1B3322]">45 Mins</td>
+                <td className="p-3">8:00 AM – 5:00 PM</td>
+                <td className="p-3">350-year-old Shiva temple, Chauli Ki Jali cliff, 180° Himalayan views.</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Malla Ramgarh Fruit Orchards</td>
+                <td className="p-3 font-bold text-[#1B3322]">0.5 km</td>
+                <td className="p-3 font-bold text-[#1B3322]">5-Min Walk</td>
+                <td className="p-3">Morning / Evening</td>
+                <td className="p-3">Private peach, plum, apple, and apricot orchard walks right outside the resort.</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">Bhimtal Lake</td>
+                <td className="p-3 font-bold text-[#1B3322]">20 km</td>
+                <td className="p-3 font-bold text-[#1B3322]">40 Mins</td>
+                <td className="p-3">10:00 AM – 6:00 PM</td>
+                <td className="p-3">Boating, island aquarium, lakeside cafés, less crowded than Nainital.</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Kathgodam Railway Station</td>
+                <td className="p-3 font-bold text-[#1B3322]">45 km</td>
+                <td className="p-3 font-bold text-[#1B3322]">45–50 Mins</td>
+                <td className="p-3">Any Time</td>
+                <td className="p-3">Primary rail gateway for trains from Delhi, Lucknow, and Dehradun.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        {/* 2-Day Itinerary */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Exploring Nearby Attractions: Suggested 2-Day Itinerary</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-lg mb-2">Day 1: Spiritual Darshan & Sunset</h3>
+            <ul className="text-xs text-gray-600 space-y-2 list-disc pl-4">
+              <li><strong>Morning:</strong> Breakfast overlooking Nanda Devi. Depart at 7:30 AM for Kainchi Dham Ashram (45-min drive). Attend morning prayers at Shri Neem Karoli Baba Ashram.</li>
+              <li><strong>Afternoon:</strong> Return to Ramgarh for a relaxed pure vegetarian or Kumaoni lunch at the resort hotel.</li>
+              <li><strong>Evening:</strong> Gentle walk through our private peach, plum, and apple orchards. Unwind by the outdoor bonfire pit under clear mountain skies.</li>
+            </ul>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-lg mb-2">Day 2: Alpine Nature & Heritage</h3>
+            <ul className="text-xs text-gray-600 space-y-2 list-disc pl-4">
+              <li><strong>Morning:</strong> Visit Mukteshwar Dham Temple (25 km / 45 mins) and explore Chauli Ki Jali cliff for panoramic views of the Himalayas.</li>
+              <li><strong>Afternoon:</strong> Embark on the light <a href="/things-to-do-near-mukteshwar/" className="text-[#1B3322] font-semibold underline">Bhalu Gaad waterfall trek</a> (12 km / 20 mins) for forest streams.</li>
+              <li><strong>Evening:</strong> Return to Whispering Pines for a dip in the pine forest swimming pool and a private dinner on the lawn.</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-base mb-1">Q1. Is Whispering Pines the best 4-star resort hotel near Kainchi Dham Ashram Neem Karoli Baba?</h3>
+            <p className="text-xs text-gray-600 font-light">Yes. Whispering Pines Resort Hotel is a top-rated 4-star resort hotel near Kainchi Dham Ashram. Located in Malla Ramgarh (22 km / 45-minute drive), it offers 180° Himalayan views, ground-floor step-free hotel rooms, pure veg/Satvik dining, a pine forest pool, 150 Mbps Wi-Fi, and a <a href="/reviews/" className="text-[#c9a832] font-semibold underline">4.6 star Google rating</a> across 388 reviews.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-base mb-1">Q2. Is Whispering Pines Resort Hotel suitable for senior citizen pilgrims?</h3>
+            <p className="text-xs text-gray-600 font-light">Yes. We offer ground-floor hotel rooms with step-free access to gardens and dining areas. Wheelchair facilities are available on-site, and house staff is present to assist elderly guests with mobility and luggage.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-base mb-1">Q3. What facilities are included in the Private Villa for Kainchi Dham visitors?</h3>
+            <p className="text-xs text-gray-600 font-light">The private villa accommodates up to 8–10 guests and includes 2 premium valley-view bedrooms with private balconies, 1 cozy bedroom with an attached bath (3 washrooms total), a spacious living hall, a fully functional kitchenette, a large open terrace, private parking, Smart TV, 150 Mbps Wi-Fi, and daily housekeeping services.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-base mb-1">Q4. What time should we leave the resort to visit Kainchi Dham Ashram?</h3>
+            <p className="text-xs text-gray-600 font-light">We strongly recommend leaving Whispering Pines Resort Hotel by 7:30 AM. Parking near Kainchi Dham is highly restricted due to daily pilgrim rushes. Leaving early allows you to secure a convenient parking spot before peak morning Yatra traffic builds up.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-base mb-1">Q5. Can we get pure vegetarian or Satvik food at the resort hotel?</h3>
+            <p className="text-xs text-gray-600 font-light">Yes. Our kitchen prepares freshly cooked pure vegetarian and Satvik meals (without onion and garlic) upon prior request for Kainchi Dham devotees.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-base mb-1">Q6. Are there self-cooking facilities available in the Private Villa?</h3>
+            <p className="text-xs text-gray-600 font-light">Yes. The private villa features a fully functional kitchenette with cookware, utensils, a refrigerator, and an electric kettle, allowing families to prepare their own tea, snacks, or simple home-style meals.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-base mb-1">Q7. Was Whispering Pines previously known as Clarks Exotica?</h3>
+            <p className="text-xs text-gray-600 font-light">Yes. The property was formerly known as Clarks Exotica Mukteshwar. It is now operated under upgraded hospitality management by Casa De Bello as Whispering Pines Resort Hotel.</p>
+          </div>
+        </div>
+
+        {/* Pillar & Cluster SEO Internal Link Matrix */}
+        <div className="bg-[#FAF9F6] p-6 rounded-2xl border border-[#EAE8E3] space-y-4 my-8">
+          <h4 className="text-sm font-bold text-[#1B3322] uppercase tracking-wider">Explore Whispering Pines Resort (Pillar Pages & Key Guides)</h4>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
+            <a href="/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-bold hover:border-[#c9a832] transition-colors shadow-sm">
+              🏡 Whispering Pines Home Page (Main Pillar)
+            </a>
+            <a href="/about-whispering-pines-resort-ramgarh/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+              🌲 About Resort & Ramgarh Ridge
+            </a>
+            <a href="/suites-cottages-ramgarh-resort/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+              🛏️ Rooms, Suites & Cottages
+            </a>
+            <a href="/private-villas-near-nainital/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+              🏡 3-BHK Private Villa Estate
+            </a>
+            <a href="/resort-amenities-mukteshwar/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+              🏊 Pine Forest Swimming Pool
+            </a>
+            <a href="/things-to-do-near-mukteshwar/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+              ⛰️ Mukteshwar Sightseeing Guide
+            </a>
+          </div>
+        </div>
+
+        {/* Direct Booking CTA */}
+        <div className="bg-[#1B3322] text-white p-8 rounded-2xl text-center space-y-4 my-8 shadow-lg border border-[#c9a832]/30">
+          <h3 className="text-2xl font-bold text-white">Reserve Your Senior-Friendly Stay Near Kainchi Dham Ashram</h3>
+          <p className="text-xs text-gray-300 max-w-xl mx-auto">
+            Enjoy 180° snow peak views, ground-floor step-free rooms, wheelchair access, pure veg/Satvik dining, a pine forest pool, and private 3-BHK villa stays — located just 45 minutes from Kainchi Dham.
+          </p>
+          <div className="text-xs text-gray-400">
+            House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, District Nainital, Uttarakhand 263137 (<a href="/contact-whispering-pines-resort-mukteshwar/" className="text-[#c9a832] underline">Get Directions</a>)
+          </div>
+          <a 
+            href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20near%20Kainchi%20Dham." 
+            target="_blank" 
+            rel="noreferrer" 
+            className="inline-block px-8 py-3.5 bg-[#c9a832] text-[#1B3322] font-bold text-sm rounded-xl hover:bg-yellow-400 transition-all shadow-md transform hover:-translate-y-0.5"
+          >
+            WhatsApp +91-7505029696 — Save 20% Direct
+          </a>
+        </div>
+      </div>
+    )
   }
 ];

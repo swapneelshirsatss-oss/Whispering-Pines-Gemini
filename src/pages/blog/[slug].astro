@@ -22,13 +22,25 @@ const relatedPosts = BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 3);
 const schemaData = [
   {
     "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+    "alternateName": [
+      "Whispering Pines Resort by Casa De Bello",
+      "Whispering Pines Resort Mukteshwar",
+      "Whispering Pines Resort near Mukteshwar",
+      "Whispering Pines by Casa De Bello"
+    ],
+    "url": "https://whisperingpinesresort.in/"
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "BlogPosting",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://whisperingpinesresort.in/blog/${post.slug}/`
     },
     "headline": post.title,
-    "image": [post.imageUrl],
+    "image": [post.imageUrl.startsWith("http") ? post.imageUrl : `https://whisperingpinesresort.in${post.imageUrl}`],
     "datePublished": new Date(post.date).toISOString(),
     "dateModified": new Date(post.date).toISOString(),
     "description": post.excerpt,
@@ -54,8 +66,12 @@ const schemaData = [
   },
   {
     "@context": "https://schema.org",
-    "@type": "Place",
-    "name": "Whispering Pines Resort by Casa De Bello - Malla Ramgarh",
+    "@type": "Resort",
+    "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+    "image": "https://whisperingpinesresort.in/og-image.webp",
+    "telephone": "+91-7505029696",
+    "url": "https://whisperingpinesresort.in/",
+    "priceRange": "₹3000 - ₹15999",
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": 29.42641,
@@ -90,9 +106,10 @@ const schemaData = [
       {/* Back Button */}
       <a 
         href="/blog/"
-        class="inline-flex items-center gap-2 text-xs font-bold text-[#1B3322] hover:text-[#c9a832] transition-colors group bg-white px-4 py-2 rounded-full border border-[#EAE8E3] shadow-sm"
+        class="inline-flex items-center gap-2 text-xs font-bold text-[#1B3322] hover:text-[#c9a832] focus:outline-none focus:ring-2 focus:ring-[#c9a832] transition-colors group bg-white px-4 py-2 rounded-full border border-[#EAE8E3] shadow-sm"
+        aria-label="Back to All Blog Articles"
       >
-        <svg class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg>
         Back to All Articles
@@ -136,12 +153,14 @@ const schemaData = [
         </div>
 
         {/* Feature Hero Image */}
-        <div class="w-full h-64 sm:h-96 md:h-[480px] overflow-hidden rounded-2xl border border-gray-100 shadow-inner">
+        <div class="w-full h-64 sm:h-96 md:h-[480px] overflow-hidden rounded-2xl border border-gray-100 shadow-inner bg-gray-100">
           <img 
             src={post.imageUrl} 
             alt={post.title} 
             class="w-full h-full object-cover"
             loading="eager"
+            fetchpriority="high"
+            decoding="async"
           />
         </div>
 
