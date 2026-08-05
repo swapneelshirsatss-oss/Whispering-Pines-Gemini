@@ -876,7 +876,7 @@ export const BLOG_POSTS: BlogPostData[] = [
   },
   {
     id: 5,
-    slug: "resorts-near-kainchi-dham-ashram-neem-karoli-baba",
+    slug: "resort-stay-near-kainchi-dham",
     title: "Resorts Near Kainchi Dham Ashram Neem Karoli Baba | Whispering Pines (2026 Guide)",
     excerpt: "Looking for a senior-friendly 4-star resort hotel near Kainchi Dham Ashram Neem Karoli Baba? Whispering Pines offers ground floor hotel rooms, wheelchair access, private villa, peak views, & 45-min drive to Ashram. Save 20% direct.",
     date: "August 6, 2026",
