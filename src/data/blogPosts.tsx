@@ -21,7 +21,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     excerpt: "Looking for the best resort near Mukteshwar? Whispering Pines by Casa De Bello in Ramgarh offers 180° Himalayan views, pool, villa, orchard stays & 150 Mbps Wi-Fi. Book direct.",
     date: "August 3, 2026",
     readTime: "14 min read",
-    imageUrl: "/images/Resort-Near-Mukteshwar-for-Families-Couples-Workations.avif",
+    imageUrl: "/images/Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp",
     content: (
       <div className="space-y-8 text-[#2C3531]">
         {/* Author EEAT Banner */}
@@ -48,8 +48,8 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <div className="my-6">
           <img 
-            src="/images/Resort-Near-Mukteshwar-for-Families-Couples-Workations.avif" 
-            alt="Whispering Pines Resort Balcony View near Mukteshwar" 
+            src="/images/Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp" 
+            alt="Resort near Mukteshwar for Families, Couples & Workations — Whispering Pines by Casa De Bello" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
           />
           <p className="text-xs text-center text-gray-500 mt-2">180° Himalayan views of Nanda Devi and Trishul from Whispering Pines balconies.</p>
@@ -66,25 +66,20 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <div className="my-6">
           <img 
-            src="/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.avif" 
-            alt="Malla Ramgarh Fruit Orchards near Mukteshwar" 
-            className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
-          />
-          <p className="text-xs text-center text-gray-500 mt-2">Peaceful fruit orchard corridor of Malla Ramgarh, 25 km before Mukteshwar town.</p>
-        </div>
-
-        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Why Stay in Malla Ramgarh Instead of Mukteshwar Market?</h2>
-        <p className="text-gray-700 leading-relaxed font-light">
-          Mukteshwar market becomes congested during peak weekends with limited parking and commercial noise. Malla Ramgarh, located 25 km before Mukteshwar, offers pristine pine forest air, quiet orchard walking trails, and quick 45-minute access to all <a href="/things-to-do-near-mukteshwar/" className="text-[#c9a832] underline">Mukteshwar sights</a> including Mukteshwar Dham and Chauli Ki Jali.
-        </p>
-
-        <div className="my-6">
-          <img 
-            src="/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.avif" 
+            src="/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.webp" 
             alt="Why Many Travellers Choose Resort Near Mukteshwar Instead of Staying Inside the Town" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
           />
           <p className="text-xs text-center text-gray-500 mt-2">Tranquil fruit orchard and mountain valley corridor of Malla Ramgarh near Mukteshwar.</p>
+        </div>
+
+        <div className="my-6">
+          <img 
+            src="/images/What-Makes-Our-resort-Villas-Different-From-Regular-Homestays-Near-Mukteshwar-uttarkhand.webp" 
+            alt="What Makes Our Resort Villas Different From Regular Homestays Near Mukteshwar" 
+            className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
+          />
+          <p className="text-xs text-center text-gray-500 mt-2">What makes Casa De Bello resort villas different from regular homestays in Kumaon.</p>
         </div>
 
         <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Tailored Stays for Families, Couples & Workations</h2>
@@ -204,7 +199,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     excerpt: "Discover why Ramgarh is called the Fruit Bowl of Kumaon. Learn about peach, apple, plum & apricot harvest seasons, history, and stay in active orchards.",
     date: "August 3, 2026",
     readTime: "12 min read",
-    imageUrl: "/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.avif",
+    imageUrl: "/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.webp",
     content: (
       <div className="space-y-8 text-[#2C3531]">
         <p className="text-lg leading-relaxed text-gray-700 font-light">
@@ -221,7 +216,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <div className="my-6">
           <img 
-            src="/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.avif" 
+            src="/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.webp"  
             alt="Why Ramgarh is the Fruit Bowl of Kumaon — Whispering Pines Resort by Casa De Bello, Malla Ramgarh 2026" 
             className="w-full h-auto max-h-[850px] object-contain rounded-2xl border border-[#EAE8E3] bg-white p-2" 
             width={1200}
