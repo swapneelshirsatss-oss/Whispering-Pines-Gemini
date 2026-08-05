@@ -29,12 +29,12 @@ const images: GalleryImage[] = [
 
 
   // ROOMS & SUITES
-  { src: "/images/Delux%20Room%202%20Beds.avif", alt: "Deluxe Room with 2 Double Beds — Comfortable Heritage Mountain Lodging in Malla Ramgarh", category: "rooms", categoryLabel: "Rooms & Suites", span: "col-span-1 row-span-1" },
+  { src: "/images/Delux-Room-2-Beds.avif", alt: "Deluxe Room with 2 Double Beds — Comfortable Heritage Mountain Lodging in Malla Ramgarh", category: "rooms", categoryLabel: "Rooms & Suites", span: "col-span-1 row-span-1" },
   { src: "/images/Delux-room-in-whispering-pines-resort.avif", alt: "Deluxe Suite Room Interior featuring Geo-Heaters and Artisanal Stone Walls near Mukteshwar", category: "rooms", categoryLabel: "Rooms & Suites", span: "col-span-1 row-span-1" },
-  { src: "/images/Family-Twin%20Room.avif", alt: "Family Twin Room View overlooking Terraced Fruit Orchards and Pine Canopies in Uttarakhand", category: "rooms", categoryLabel: "Rooms & Suites", span: "col-span-1 sm:col-span-2 row-span-1" },
+  { src: "/images/Family-Twin-Room.avif", alt: "Family Twin Room View overlooking Terraced Fruit Orchards and Pine Canopies in Uttarakhand", category: "rooms", categoryLabel: "Rooms & Suites", span: "col-span-1 sm:col-span-2 row-span-1" },
   { src: "/images/Room-interior-in-resort-near-nanital.avif", alt: "Luxury Suite Interior with Cedar Pine Wood Panel Finish and Himalayan Sunrise View Window", category: "rooms", categoryLabel: "Rooms & Suites", span: "col-span-1 row-span-1" },
-  { src: "/images/Super-delux%20room.avif", alt: "Super Deluxe Room — Premium Himalayan View Suite at Whispering Pines Resort Ramgarh", category: "rooms", categoryLabel: "Rooms & Suites", span: "col-span-1 sm:col-span-2 row-span-1" },
-  { src: "/images/balcony%20Room.avif", alt: "Private Cedar Pine Balcony Room with Scenic Panorama of Bhowali-Ramgarh Valley", category: "rooms", categoryLabel: "Rooms & Suites", span: "col-span-1 row-span-2" },
+  { src: "/images/Super-delux-room.avif", alt: "Super Deluxe Room — Premium Himalayan View Suite at Whispering Pines Resort Ramgarh", category: "rooms", categoryLabel: "Rooms & Suites", span: "col-span-1 sm:col-span-2 row-span-1" },
+  { src: "/images/balcony-Room.avif", alt: "Private Cedar Pine Balcony Room with Scenic Panorama of Bhowali-Ramgarh Valley", category: "rooms", categoryLabel: "Rooms & Suites", span: "col-span-1 row-span-2" },
   { src: "/images/bathtub-in-hotel-room.avif", alt: "Luxury En-Suite Bathroom featuring Deep Soak Bathtub and Rain Shower in Ramgarh Resort", category: "rooms", categoryLabel: "Rooms & Suites", span: "col-span-1 row-span-1" },
   { src: "/images/delux-room-bathroom.avif", alt: "Modern En-Suite Bathroom with Geo-Heating Radiator and Clean Luxury Amenities", category: "rooms", categoryLabel: "Rooms & Suites", span: "col-span-1 row-span-1" },
   { src: "/images/delux-room-in-whispering-pines.avif", alt: "Cozy Deluxe Room Setup with Hand-Crafted Kumaoni Wood Furniture and Warm Bedding", category: "rooms", categoryLabel: "Rooms & Suites", span: "col-span-1 row-span-2" },

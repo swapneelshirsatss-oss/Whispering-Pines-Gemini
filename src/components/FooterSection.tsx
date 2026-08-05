@@ -129,6 +129,18 @@ export default function FooterSection() {
               <a href="/contact-whispering-pines-resort-mukteshwar/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 bg-[#c9a832] rounded-full group-hover:scale-125 transition-transform"></span>Contact Us</a>
               <a href="https://casadebello.whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" className="text-[#c9a832] hover:text-[#FAF9F6] transition-colors flex items-center gap-1.5 group font-semibold"><span className="w-1.5 h-1.5 bg-[#c9a832] rounded-full group-hover:scale-125 transition-transform"></span>Casa De Bello</a>
             </div>
+            <div className="pt-3 mt-3 border-t border-[#FAF9F6]/10">
+              <span className="text-[10px] font-mono uppercase tracking-[0.15em] text-[#c9a832] block mb-2 font-semibold">
+                Featured Travel Guides
+              </span>
+              <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-[#FAF9F6]/75">
+                <a href="/blog/resort-near-mukteshwar/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors underline">Resort near Mukteshwar Guide</a>
+                <span className="text-[#FAF9F6]/30">•</span>
+                <a href="/blog/resort-near-nainital/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors underline">Resort near Nainital Guide</a>
+                <span className="text-[#FAF9F6]/30">•</span>
+                <a href="/blog/ramgarh-fruit-bowl-of-kumaon/" data-astro-prefetch="hover" className="hover:text-[#c9a832] transition-colors underline">Ramgarh Fruit Bowl</a>
+              </div>
+            </div>
           </div>
 
           {/* Column 3: Contact & Location (lg:col-span-4) */}

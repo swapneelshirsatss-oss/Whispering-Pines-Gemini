@@ -3,7 +3,7 @@ import villaSuiteBedroomImg from "./assets/images/villa_in_nanital.avif?url";
 import cedarSuiteBedroomImg from "./assets/images/Delux_room_Whispering_pines_mukteshwar.avif?url";
 import oakSuiteBedroomImg from "./assets/images/Private-Dining-Area-resort-near-mukteshwar.avif?url";
 import familyTwinRoomImg from "./assets/images/Group_booking_nainital_resort.avif?url";
-import orchardRoomImg from "./assets/images/Family_Twin Room_Near_nainital.avif?url";
+import orchardRoomImg from "./assets/images/Family_Twin_Room_Near_nainital.avif?url";
 
 export const RESORT_CONTACT = {
   name: "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",

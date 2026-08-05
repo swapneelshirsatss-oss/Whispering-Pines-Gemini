@@ -46,7 +46,7 @@ const FALLBACK_ROOMS: RoomOption[] = [
     bedType: "1 Premium Double Bed",
     pricePerNight: 4999,
     featured: false,
-    image: "/images/Family_Twin Room_Near_nainital.avif",
+    image: "/images/Family_Twin_Room_Near_nainital.avif",
     amenities: [
       "Direct Lawn Access — Safe Open Space for Children",
       "Exposed Old-Stone Brick Archways & Geo-Heater Warmth"

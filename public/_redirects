@@ -14,6 +14,32 @@
 /ramgarh-fruit-bowl-of-kumaon/ /blog/ramgarh-fruit-bowl-of-kumaon/ 301!
 /ramgarh-fruit-bowl-of-kumaon /blog/ramgarh-fruit-bowl-of-kumaon/ 301!
 
+# Legacy image 301 redirects (Ahrefs Site Audit fixes)
+/Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp /images/Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp 301!
+
+/_astro/villa_in_nanital.BPKv3osK.avif /images/villa_in_nanital.avif 301!
+/_astro/villa%20in%20nanital.C0uPMqEK.avif /images/villa_in_nanital.avif 301!
+/_astro/Delux-room-in-whispering-pines-resort.r3R7VLrI.avif /images/Delux-room-in-whispering-pines-resort.avif 301!
+/_astro/best-resort-in-ramgarh.Bpzqbbuh.avif /images/best-resort-in-ramgarh.avif 301!
+/_astro/twin-room.DFx5V762.avif /images/twin-room.avif 301!
+/_astro/Family_Twin%20Room_Near_nainital.C6090cio.avif /images/Family_Twin_Room_Near_nainital.avif 301!
+/_astro/resort-near-mukteshwar-resort-room.CeEUB5Tc.avif /images/resort-near-mukteshwar-resort-room.avif 301!
+/_astro/double-bed-occupancy-inramgarh-resort.Bsu1F2dv.avif /images/double-bed-occupancy-inramgarh-resort.avif 301!
+/_astro/Premium-Villas-rooms.DQq1Ew5f.avif /images/Premium-Villas-rooms.avif 301!
+/_astro/Family-Twin%20Room.BwjaYckk.avif /images/Family-Twin-Room.avif 301!
+/_astro/outside-view-from-resort-hotel.DxIV4efD.avif /images/outside-view-from-resort-hotel.avif 301!
+/_astro/Delux%20Room%202%20Beds.Ba0aw6g7.avif /images/Delux-Room-2-Beds.avif 301!
+/_astro/Room-interior-in-resort-near-nanital.frb4KrJQ.avif /images/Room-interior-in-resort-near-nanital.avif 301!
+/_astro/lounge-area-inwhispering-pines-resort-by-casa-de-bello.C26RGmYN.avif /images/lounge-area-inwhispering-pines-resort-by-casa-de-bello.avif 301!
+/_astro/Restaurant-cafe-ramgarh.CUOt6YOG.avif /images/Restaurant-cafe-ramgarh.avif 301!
+/_astro/balcony%20Room.Ch_AL7BI.avif /images/balcony-Room.avif 301!
+/_astro/resort_mukteshwar_luxury_hero_1782031089955.D0jObNQu.avif /images/Resort-Near-Mukteshwar-for-Families-Couples-Workations.avif 301!
+/_astro/dining-area-inramgarh-resort.DCBkFpNZ.avif /images/dining-area-inramgarh-resort.avif 301!
+
+# Legacy /_astro/ CSS build redirects (Ahrefs Site Audit fixes)
+/_astro/Layout.*.css /_astro/Layout.BqVSlJg5.css 301!
+/_astro/index.*.css /_astro/Layout.BqVSlJg5.css 301!
+
 http://www.whisperingpinesresort.in/* https://whisperingpinesresort.in/:splat 301!
 https://www.whisperingpinesresort.in/* https://whisperingpinesresort.in/:splat 301!
 http://whisperingpinesresort.in/* https://whisperingpinesresort.in/:splat 301!
