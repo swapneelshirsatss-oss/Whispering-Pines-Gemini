@@ -12,6 +12,7 @@ import LocalExperiencesList from "../components/LocalExperiencesList.astro";
 import BookingInteractiveForm from "../components/BookingInteractiveForm";
 import OTABadges from "../components/OTABadges.astro";
 import TestimonialList from "../components/TestimonialList";
+import BlogCarousel from "../components/BlogCarousel";
 import FAQAccordion from "../components/FAQAccordion";
 import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
@@ -76,6 +77,9 @@ const roomImages = {
 
       {/* Guest Reviews */}
       <TestimonialList client:visible />
+
+      {/* Blog & Travel Guides Carousel */}
+      <BlogCarousel client:visible />
 
       {/* FAQ Accordion panel */}
       <FAQAccordion client:visible />
