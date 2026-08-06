@@ -196,7 +196,7 @@ export default function FooterSection() {
             <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-[#c9a832] font-semibold flex items-center gap-2">
               <MapPin className="w-3.5 h-3.5 text-[#c9a832]" /> Estate Map & Coordinates
             </h4>
-            <span className="text-[11px] font-mono text-[#FAF9F6]/50 hidden sm:inline">Malla Ramgarh, Uttarakhand</span>
+            <span className="text-[11px] font-mono text-[#FAF9F6]/50 hidden sm:inline">Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137</span>
           </div>
           <div className="w-full h-56 sm:h-72 rounded-xl overflow-hidden shadow-xl border border-[#c9a832]/20">
             <iframe 
