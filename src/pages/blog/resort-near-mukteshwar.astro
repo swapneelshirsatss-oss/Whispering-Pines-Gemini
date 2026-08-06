@@ -79,6 +79,19 @@ const blogPostingSchema = {
   }
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+  "alternateName": [
+    "Whispering Pines Resort by Casa De Bello",
+    "Whispering Pines Resort Mukteshwar",
+    "Whispering Pines Resort near Mukteshwar",
+    "Whispering Pines by Casa De Bello"
+  ],
+  "url": "https://whisperingpinesresort.in/"
+};
+
 const resortLocalBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["Resort", "Hotel", "LocalBusiness"],
@@ -89,7 +102,7 @@ const resortLocalBusinessSchema = {
   "email": "booking@whisperingpinesresort.in",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital",
+    "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
     "addressLocality": "Ramgarh",
     "addressRegion": "Uttarakhand",
     "postalCode": "263137",
@@ -205,6 +218,7 @@ const faqSchema = {
     <meta property="article:section" content="Himalayan Hospitality & Travel Guide" />
 
     <!-- Structured Data Schemas -->
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(speakableSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(geoPlaceSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
