@@ -12,8 +12,8 @@
   RewriteCond %{HTTP_HOST} ^www\. [NC]
   RewriteRule ^(.*)$ https://whisperingpinesresort.in/$1 [R=301,L]
 
-  # 3. Redirect duplicate blog guide route to primary landing page
-  RewriteRule ^blog/resort-near-mukteshwar/?$ https://whisperingpinesresort.in/resort-near-mukteshwar/ [R=301,L]
+  # 3. Redirect legacy URL to canonical blog guide route
+  RewriteRule ^resort-near-mukteshwar/?$ https://whisperingpinesresort.in/blog/resort-near-mukteshwar/ [R=301,L]
   RewriteRule ^why-ramgarh-is-the-fruit-bowl-of-kumaon/?$ https://whisperingpinesresort.in/blog/ramgarh-fruit-bowl-of-kumaon/ [R=301,L]
   RewriteRule ^blog/why-ramgarh-is-the-fruit-bowl-of-kumaon/?$ https://whisperingpinesresort.in/blog/ramgarh-fruit-bowl-of-kumaon/ [R=301,L]
   RewriteRule ^ramgarh-fruit-bowl-of-kumaon/?$ https://whisperingpinesresort.in/blog/ramgarh-fruit-bowl-of-kumaon/ [R=301,L]
