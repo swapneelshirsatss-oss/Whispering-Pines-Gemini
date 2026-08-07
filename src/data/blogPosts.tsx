@@ -885,16 +885,23 @@ export const BLOG_POSTS: BlogPostData[] = [
     content: (
       <div className="space-y-8 text-[#2C3531]">
         {/* Author E-E-A-T Banner */}
-        <div className="bg-[#1B3322]/5 p-6 rounded-2xl border border-[#1B3322]/10 flex flex-col md:flex-row items-center gap-4">
-          <div className="w-16 h-16 rounded-full bg-[#1B3322] text-[#c9a832] flex items-center justify-center text-xl font-bold border border-[#c9a832] shrink-0">
-            GP
+        <div className="bg-[#1B3322]/5 p-6 rounded-2xl border border-[#1B3322]/10 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <div className="w-16 h-16 rounded-full bg-[#1B3322] text-[#c9a832] flex items-center justify-center text-xl font-bold border border-[#c9a832] shrink-0">
+              GP
+            </div>
+            <div>
+              <div className="text-xs font-semibold text-[#c9a832] uppercase tracking-wider">Author & Verified Host</div>
+              <h4 className="text-base font-bold text-[#1B3322]">Gaurav Pandey — Director of Casa De Bello Pvt Ltd</h4>
+              <p className="text-xs text-gray-600 font-light mt-1">
+                Traveller host & hospitality entrepreneur leading <a href="https://casadebello.com/" target="_blank" rel="noreferrer" className="text-[#c9a832] underline">Casa De Bello Pvt Ltd</a>. Elevation: 1,780m Malla Ramgarh ridge near Mukteshwar & Kainchi Dham.
+              </p>
+            </div>
           </div>
-          <div>
-            <div className="text-xs font-semibold text-[#c9a832] uppercase tracking-wider">Author & Verified Host</div>
-            <h4 className="text-base font-bold text-[#1B3322]">Gaurav Pandey — Director of Casa De Bello Pvt Ltd</h4>
-            <p className="text-xs text-gray-600 font-light mt-1">
-              Traveller host & hospitality entrepreneur leading <a href="https://casadebello.com/" target="_blank" rel="noreferrer" className="text-[#c9a832] underline">Casa De Bello Pvt Ltd</a>. Elevation: 1,780m Malla Ramgarh ridge near Mukteshwar & Kainchi Dham.
-            </p>
+          <div className="shrink-0 pt-2 md:pt-0">
+            <a href="http://www.blogadda.com" target="_blank" rel="noreferrer" title="Visit BlogAdda.com to discover Indian blogs">
+              <img src="https://www.blogadda.com/images/blogadda.png" width="80" height="15" className="border-0 inline-block" alt="Visit BlogAdda.com to discover Indian blogs" />
+            </a>
           </div>
         </div>
 
