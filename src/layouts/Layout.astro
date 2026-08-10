@@ -85,6 +85,21 @@ const canonicalURL = new URL(pathname, siteBase);
     <BreadcrumbSchema title={title} breadcrumbs={breadcrumbs} />
     <SpeakableSchema />
 
+    <!-- Google WebSite Schema for Site Name SERP Branding -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://whisperingpinesresort.in/#website",
+      "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+      "alternateName": [
+        "Whispering Pines Resort by Casa De Bello",
+        "Whispering Pines Resort Mukteshwar",
+        "Whispering Pines Resort near Mukteshwar",
+        "Whispering Pines by Casa De Bello"
+      ],
+      "url": "https://whisperingpinesresort.in/"
+    })} />
+
     <slot name="head" />
     
     <!-- Google Tag Manager -->
