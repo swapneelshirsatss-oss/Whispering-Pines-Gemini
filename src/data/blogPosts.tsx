@@ -52,7 +52,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <img 
             src="/images/Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp" 
             alt="Resort near Mukteshwar for Families, Couples & Workations — Whispering Pines by Casa De Bello" 
-            className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
+            className="w-full h-auto max-h-[520px] object-contain bg-[#1B3322]/5 rounded-xl border border-[#EAE8E3]" 
           />
           <p className="text-xs text-center text-gray-500 mt-2">180° Himalayan views of Nanda Devi and Trishul from Whispering Pines balconies.</p>
         </div>
@@ -70,7 +70,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <img 
             src="/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.webp" 
             alt="Why Many Travellers Choose Resort Near Mukteshwar Instead of Staying Inside the Town" 
-            className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
+            className="w-full h-auto max-h-[520px] object-contain bg-[#1B3322]/5 rounded-xl border border-[#EAE8E3]" 
           />
           <p className="text-xs text-center text-gray-500 mt-2">Tranquil fruit orchard and mountain valley corridor of Malla Ramgarh near Mukteshwar.</p>
         </div>
@@ -79,7 +79,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <img 
             src="/images/What-Makes-Our-resort-Villas-Different-From-Regular-Homestays-Near-Mukteshwar-uttarkhand.webp" 
             alt="What Makes Our Resort Villas Different From Regular Homestays Near Mukteshwar" 
-            className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
+            className="w-full h-auto max-h-[520px] object-contain bg-[#1B3322]/5 rounded-xl border border-[#EAE8E3]" 
           />
           <p className="text-xs text-center text-gray-500 mt-2">What makes Casa De Bello resort villas different from regular homestays in Kumaon.</p>
         </div>
