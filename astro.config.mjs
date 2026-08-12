@@ -82,6 +82,7 @@ export default defineConfig({
   trailingSlash: 'always',
   redirects: {
     '/resort-near-mukteshwar': '/blog/resort-near-mukteshwar/',
+    '/best-resort-to-stay-near-mukteshwar': '/blog/best-resort-to-stay-near-mukteshwar/',
     '/why-ramgarh-is-the-fruit-bowl-of-kumaon': '/blog/ramgarh-fruit-bowl-of-kumaon/',
     '/blog/why-ramgarh-is-the-fruit-bowl-of-kumaon': '/blog/ramgarh-fruit-bowl-of-kumaon/',
     '/ramgarh-fruit-bowl-of-kumaon': '/blog/ramgarh-fruit-bowl-of-kumaon/',

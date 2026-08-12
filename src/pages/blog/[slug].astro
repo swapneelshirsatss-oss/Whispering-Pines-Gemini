@@ -86,7 +86,9 @@ const schemaData = [
       "postalCode": "263137",
       "addressCountry": "IN"
     }
-  }
+  },
+  ...(post.faqSchema ? [post.faqSchema] : []),
+  ...(post.extraSchemas || [])
 ];
 ---
 
