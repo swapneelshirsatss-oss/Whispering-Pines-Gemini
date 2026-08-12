@@ -155,11 +155,11 @@ const schemaData = [
         </div>
 
         {/* Feature Hero Image */}
-        <div class="w-full aspect-[16/9] max-h-[520px] bg-[#1B3322]/5 rounded-2xl border border-gray-100 shadow-inner overflow-hidden flex items-center justify-center">
+        <div class="w-full h-64 sm:h-96 md:h-[480px] overflow-hidden rounded-2xl border border-gray-100 shadow-inner bg-gray-100">
           <img 
             src={post.imageUrl} 
             alt={post.title} 
-            class="w-full h-full object-contain md:object-cover md:object-top"
+            class="w-full h-full object-cover"
             loading="eager"
             fetchpriority="high"
             decoding="async"
