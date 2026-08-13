@@ -1,0 +1,944 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WhatsAppButton from "../components/WhatsAppButton";
+import RecentBookingNotification from "../components/RecentBookingNotification";
+import { RESORT_CONTACT, generateWhatsAppLink } from '../data';
+
+const pageTitle = "Clarks Exotica Resort Ramgarh Mukteshwar — Now Whispering Pines by Casa De Bello (2026 Guide)";
+const pageDescription = "Clarks Exotica Resort Ramgarh Mukteshwar is now Whispering Pines by Casa De Bello. Same iconic location, fully upgraded. 4.6★ Google. Pool, villa, 180° Himalayan views. Book direct on WhatsApp.";
+const canonicalUrl = "https://whisperingpinesresort.in/clarks-exotica-resort-ramgarh-mukteshwar/";
+const ogImageUrl = "https://whisperingpinesresort.in/images/clarks-exotica-resort-ramgarh-mukteshwar-whispering-pines-casa-de-bello-2026.avif";
+const ogAltText = "Clarks Exotica Resort Ramgarh Mukteshwar — now Whispering Pines by Casa De Bello, Malla Ramgarh Uttarakhand 2026";
+
+const breadcrumbs = [
+  { name: "Home", item: "https://whisperingpinesresort.in/" },
+  { name: "Blog", item: "https://whisperingpinesresort.in/blog/" },
+  { name: "Clarks Exotica Ramgarh Guide", item: canonicalUrl }
+];
+
+// Speakable Schema for AEO (Answer Engine Optimization) & Voice Search
+const speakableSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": pageTitle,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".aeo-direct-answer", "#aeo-quick-facts", "#geo-entity-matrix"]
+  }
+};
+
+// GEO Place Schema for AI Overviews & Perplexity AI
+const geoPlaceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Place",
+  "name": "Whispering Pines Resort (Formerly Clarks Exotica Ramgarh)",
+  "description": "Iconic mountain resort estate in Malla Ramgarh on Bhowali-Ramgarh-Mukteshwar Road, previously operating as Clarks Exotica Ramgarh, now upgraded under Casa De Bello management with swimming pool, 3-BHK villa, and 180° Himalayan views.",
+  "hasMap": "https://maps.app.goo.gl/hieeCQ2Ymc1vKNxj7",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 29.4264111,
+    "longitude": 79.5505355,
+    "elevation": "1780"
+  },
+  "geoContains": [
+    { "@type": "Place", "name": "Mukteshwar Dham Temple", "distance": "25 km" },
+    { "@type": "Place", "name": "Kainchi Dham Neem Karoli Baba Ashram", "distance": "22 km" },
+    { "@type": "Place", "name": "Bhalu Gaad Waterfall", "distance": "12 km" },
+    { "@type": "Place", "name": "Nainital Mall Road", "distance": "26 km" }
+  ]
+};
+
+// BlogPosting Schema
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalUrl
+  },
+  "headline": pageTitle,
+  "description": pageDescription,
+  "image": ogImageUrl,
+  "datePublished": "2026-08-13T10:00:00+05:30",
+  "dateModified": "2026-08-13T10:00:00+05:30",
+  "author": {
+    "@type": "Person",
+    "name": "Gaurav Pandey",
+    "jobTitle": "Director of Casa De Bello Pvt Ltd",
+    "description": "Traveller Host, Hospitality Entrepreneur, and Director at Casa De Bello Pvt Ltd.",
+    "url": "https://casadebello.com/",
+    "sameAs": ["https://casadebello.com/"]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+    "url": "https://whisperingpinesresort.in/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://whisperingpinesresort.in/logo.svg"
+    }
+  }
+};
+
+// Google Site Name & SERP Branding Rules Schema
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://whisperingpinesresort.in/#website",
+  "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+  "alternateName": [
+    "Whispering Pines Resort by Casa De Bello",
+    "Whispering Pines Resort Mukteshwar",
+    "Whispering Pines Resort near Mukteshwar",
+    "Whispering Pines by Casa De Bello"
+  ],
+  "url": "https://whisperingpinesresort.in/"
+};
+
+// Resort / Local Business Schema
+const resortLocalBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Resort", "Hotel", "LocalBusiness"],
+  "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+  "alternateName": [
+    "Clarks Exotica Resort Ramgarh Mukteshwar",
+    "Clarks Exotica Ramgarh",
+    "Whispering Pines Resort Ramgarh"
+  ],
+  "description": "Luxury 4-star mountain resort in Malla Ramgarh near Mukteshwar (formerly Clarks Exotica). Features 25 premium rooms, 3-BHK private villa, outdoor pool, 150 Mbps Wi-Fi, and 180° Nanda Devi Himalayan views.",
+  "url": "https://whisperingpinesresort.in/",
+  "telephone": "+91-7505029696",
+  "email": "booking@whisperingpinesresort.in",
+  "priceRange": "₹3000 - ₹15999",
+  "image": ogImageUrl,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+    "addressLocality": "Mukteshwar",
+    "addressRegion": "Uttarakhand",
+    "postalCode": "263137",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 29.4264111,
+    "longitude": 79.5505355,
+    "elevation": "1780m"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "320"
+  }
+};
+
+// FAQPage Schema
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Clarks Exotica Resort Ramgarh Mukteshwar still open?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clarks Exotica Resort at Ramgarh on the Mukteshwar Road is now operating as Whispering Pines Resort by Casa De Bello. The property is fully open — same address, fully upgraded facilities. Direct bookings via WhatsApp at +91-7505029696."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happened to Clarks Exotica Ramgarh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The property was taken over and elevated by Casa De Bello — a boutique mountain hospitality brand. The physical address in Malla Ramgarh on the Bhowali-Ramgarh-Mukteshwar Road is unchanged. New additions include a swimming pool, standalone private villa, 150 Mbps fiber Wi-Fi, enhanced room interiors, and personalised Casa De Bello management."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Whispering Pines better than Clarks Exotica was?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Returning Clarks Exotica guests consistently say yes. The views, orchards, and location they loved are unchanged — but the room quality, amenities (pool, villa, fiber Wi-Fi), and service level are significantly elevated under Casa De Bello management."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do returning Clarks Exotica guests get special rates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Returning Clarks Exotica guests receive exclusive retention rates on direct WhatsApp booking at +91-7505029696. Mention you are a returning Clarks Exotica guest when you message."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far is it from Mukteshwar Dham?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "25 km — approximately 45 minutes on the Bhowali-Ramgarh-Mukteshwar Road. Same distance as during the Clarks Exotica era. The in-house travel desk now coordinates cab departures directly from the resort."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far is it from Kainchi Dham?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "22 km — approximately 45 minutes. The travel desk manages cab coordination and early morning darshan departures. Pure vegetarian and Satvik meals available on request before departure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the resort have a swimming pool now?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — this is new since the Clarks Exotica era. Whispering Pines has an on-site swimming pool surrounded by pine forest, one of the very few resorts near Mukteshwar to offer this alongside 180° Himalayan views."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Wi-Fi speed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "150 Mbps enterprise fiber optic — full property coverage. This is completely new infrastructure installed under Casa De Bello — a significant upgrade from the Clarks Exotica era."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the resort pet-friendly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — fully pet-friendly with enclosed garden lawns, pine forest trail access, and no additional pet charges. Dogs and cats welcome."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I book at the best price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Book directly via WhatsApp at +91-7505029696. Save up to 20% versus OTA platforms. Returning Clarks Exotica guests receive additional exclusive rates — mention your history with the property when you message."
+      }
+    }
+  ]
+};
+
+const jsonLdSchemas = [
+  websiteSchema,
+  blogPostingSchema,
+  resortLocalBusinessSchema,
+  faqSchema,
+  geoPlaceSchema,
+  speakableSchema
+];
+---
+
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  canonical={canonicalUrl}
+  breadcrumbs={breadcrumbs}
+>
+  <Fragment slot="head">
+    <meta property="og:site_name" content="Whispering Pines Resort by Casa De Bello - Near Mukteshwar" />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:alt" content={ogAltText} />
+    <meta property="twitter:image" content={ogImageUrl} />
+    {jsonLdSchemas.map(schema => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
+  </Fragment>
+
+  <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
+    
+    {/* Hero Banner Header */}
+    <header class="relative bg-[#1B3322] text-white pt-28 pb-16 px-4 sm:px-6 lg:px-8 border-b border-[#c9a832]/20 overflow-hidden">
+      <div class="absolute inset-0 z-0 opacity-25">
+        <img 
+          src={ogImageUrl}
+          alt={ogAltText}
+          class="w-full h-full object-cover"
+          loading="eager"
+          width="1400"
+          height="800"
+        />
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto text-center space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#c9a832]/10 border border-[#c9a832]/30 text-[#c9a832] text-xs font-mono uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-[#c9a832] animate-pulse"></span>
+          Official 2026 Transition Guide
+        </div>
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold font-display tracking-tight text-white leading-tight">
+          Clarks Exotica Resort Ramgarh Mukteshwar — Now Whispering Pines by Casa De Bello
+        </h1>
+        <p class="text-base sm:text-lg text-gray-200 font-light max-w-2xl mx-auto leading-relaxed">
+          Same iconic address on the Bhowali-Ramgarh-Mukteshwar Road. Fully upgraded with a brand-new swimming pool, 3-BHK private villa, 150 Mbps fiber Wi-Fi, and 180° Nanda Devi snow views.
+        </p>
+        
+        <div class="pt-4 flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-gray-300">
+          <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full">
+            <svg class="w-4 h-4 text-[#c9a832]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            4.6★ Google Verified
+          </span>
+          <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full">
+            <svg class="w-4 h-4 text-[#c9a832]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            Malla Ramgarh Ridge (1,780m)
+          </span>
+          <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full">
+            <svg class="w-4 h-4 text-[#c9a832]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            Updated August 2026
+          </span>
+        </div>
+      </div>
+    </header>
+
+    {/* Main Article Content Container */}
+    <main class="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-10">
+
+      {/* Author EEAT Banner */}
+      <div class="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm flex flex-col md:flex-row items-center gap-5">
+        <div class="w-16 h-16 rounded-full bg-[#1B3322] text-[#c9a832] flex items-center justify-center text-xl font-bold border-2 border-[#c9a832] shrink-0 shadow-inner">
+          GP
+        </div>
+        <div class="space-y-1 text-center md:text-left">
+          <div class="text-xs font-bold text-[#c9a832] uppercase tracking-wider">Author & Verified Property Host</div>
+          <h2 class="text-base font-bold text-[#1B3322]">Gaurav Pandey — Managing Director, Casa De Bello Pvt Ltd</h2>
+          <p class="text-xs text-gray-600 font-light leading-relaxed">
+            Leading boutique Himalayan hospitality at <a href="https://casadebello.com/" target="_blank" rel="noreferrer" className="text-[#1B3322] font-semibold underline">Casa De Bello Pvt Ltd</a>. Overseeing the full restoration and management of Whispering Pines Resort (formerly Clarks Exotica) in Malla Ramgarh near Mukteshwar.
+          </p>
+        </div>
+      </div>
+
+      {/* AEO Quick Summary / Direct Answer Box */}
+      <section className="bg-[#1B3322]/5 p-6 rounded-2xl border border-[#1B3322]/15 space-y-3 aeo-direct-answer">
+        <h2 className="text-xs font-bold text-[#1B3322] uppercase tracking-widest flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-[#c9a832]"></span>
+          Quick Executive Summary for Travellers
+        </h2>
+        <p className="text-sm text-gray-800 leading-relaxed font-normal">
+          <strong>Clarks Exotica Resort Ramgarh Mukteshwar</strong> is now operating as <strong><a href="/" className="text-[#1B3322] font-bold underline">Whispering Pines Resort by Casa De Bello</a></strong>. The property maintains its exact geographical address in Malla Ramgarh on the Bhowali-Ramgarh-Mukteshwar Road (Uttarakhand 263137), offering unchanged 180° Himalayan views of Nanda Devi and Trishul. Under Casa De Bello management, it features a brand-new pine forest swimming pool, a 3-BHK standalone private villa, 150 Mbps fiber Wi-Fi, Kumaoni stone cottage architecture, and direct WhatsApp reservations at +91-7505029696.
+        </p>
+      </section>
+
+      {/* Article Body Section 1 */}
+      <div className="space-y-6 text-gray-800 leading-relaxed text-base font-light">
+        <p className="text-lg text-gray-700 leading-relaxed font-light">
+          If you have been searching for <strong>Clarks Exotica Resort Ramgarh Mukteshwar</strong> and finding yourself confused by what has changed — you are in exactly the right place.
+        </p>
+
+        <p>
+          Clarks Exotica Resort on the Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh is now operating as <strong><a href="/about-whispering-pines-resort-ramgarh/" className="text-[#1B3322] font-semibold underline">Whispering Pines Resort by Casa De Bello</a>.</strong> The iconic location has not moved. The spectacular 180° Himalayan views of Nanda Devi and Trishul that guests loved are unchanged. The same winding Mukteshwar Road, the same ridge altitude, the same pine canopy and fruit orchards that made this address one of the most beloved mountain stays in Nainital district — all of it remains.
+        </p>
+
+        <p>
+          What has changed is everything else — and it has changed for the better.
+        </p>
+
+        <p>
+          This guide tells you exactly what happened to Clarks Exotica Ramgarh, what is different now under Casa De Bello management, what has stayed the same, and why returning Clarks Exotica guests consistently say this is the best version this property has ever been.
+        </p>
+
+        {/* Direct WhatsApp Callout Banner */}
+        <div className="bg-[#1B3322] text-white p-6 rounded-2xl text-center space-y-3 my-8 shadow-md border border-[#c9a832]/30">
+          <h3 className="text-xl font-bold text-white">Returning Clarks Exotica Guests — Save 20% Direct</h3>
+          <p className="text-xs text-gray-300 max-w-xl mx-auto">
+            Book Direct on WhatsApp: <strong>+91-7505029696</strong> — Returning Clarks Exotica Guests Receive Exclusive Retention Rates & Best Price Guarantee versus MakeMyTrip or Booking.com.
+          </p>
+          <a 
+            href="https://wa.me/917505029696?text=Hi!%20I'm%20a%20returning%20Clarks%20Exotica%20guest%20inquiring%20about%20retention%20rates." 
+            target="_blank" 
+            rel="noreferrer" 
+            className="inline-block px-6 py-3 bg-[#c9a832] text-[#1B3322] font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-yellow-400 transition-all shadow-sm"
+          >
+            WhatsApp +91-7505029696 — Claim Retention Rates
+          </a>
+        </div>
+      </div>
+
+      {/* H2: What Happened to Clarks Exotica Resort Ramgarh Mukteshwar? */}
+      <section className="space-y-4 pt-4 border-t border-[#EAE8E3]">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#1B3322] font-display">
+          What Happened to Clarks Exotica Resort Ramgarh Mukteshwar?
+        </h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Clarks Exotica Resort Ramgarh was one of the most recognised mountain resort addresses in the Nainital district for years — a trusted name for Delhi NCR families, corporate groups, and Himalayan nature lovers seeking a comfortable stay near Mukteshwar and Kainchi Dham.
+        </p>
+        <p className="text-gray-700 leading-relaxed font-light">
+          The property has now been taken over, fully renovated, and elevated under <strong>Casa De Bello</strong> — a boutique hospitality brand focused on curated mountain experiences. The new identity is <strong>Whispering Pines Resort by Casa De Bello.</strong>
+        </p>
+        <p className="text-gray-700 leading-relaxed font-light">
+          This is not a rebranding in the marketing sense. It is a genuine physical and operational upgrade — new stone cottage architecture, a brand-new <a href="/resort-amenities-mukteshwar/" className="text-[#1B3322] font-semibold underline">swimming pool</a>, enhanced room interiors, a standalone <a href="/private-villas-near-nainital/" className="text-[#1B3322] font-semibold underline">private villa</a> added to the property, 150 Mbps enterprise fiber optic Wi-Fi installed across the estate, and a completely new management team focused on personalised boutique hospitality.
+        </p>
+        <p className="text-gray-700 leading-relaxed font-light font-semibold text-[#1B3322]">
+          The Clarks Exotica name is no longer operational at this address. Whispering Pines Resort by Casa De Bello is the property you are looking for.
+        </p>
+      </section>
+
+      {/* H2: Same Location — Everything You Loved Is Still Here */}
+      <section className="space-y-6 pt-6 border-t border-[#EAE8E3]">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#1B3322] font-display">
+          Same Location — Everything You Loved Is Still Here
+        </h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          For guests who visited Clarks Exotica Ramgarh and are planning a return trip, here is what has remained completely unchanged:
+        </p>
+
+        {/* Comparison Table 1 */}
+        <div className="overflow-x-auto rounded-2xl border border-[#EAE8E3] shadow-sm bg-white">
+          <table className="w-full text-left text-xs sm:text-sm">
+            <thead className="bg-[#1B3322] text-white">
+              <tr>
+                <th className="p-3.5 font-bold">What You Remember from Clarks Exotica</th>
+                <th className="p-3.5 font-bold">Still Here at Whispering Pines</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[#EAE8E3] text-gray-700">
+              <tr className="hover:bg-[#FAF9F6]">
+                <td className="p-3.5 font-medium">Bhowali-Ramgarh-Mukteshwar Road address</td>
+                <td className="p-3.5">✅ Same address — House No. 23-13/4, Malla Ramgarh</td>
+              </tr>
+              <tr className="hover:bg-[#FAF9F6]">
+                <td className="p-3.5 font-medium">180° Himalayan views of Nanda Devi and Trishul</td>
+                <td className="p-3.5">✅ Unchanged — unobstructed from every balcony</td>
+              </tr>
+              <tr className="hover:bg-[#FAF9F6]">
+                <td className="p-3.5 font-medium">Pine forest surroundings</td>
+                <td className="p-3.5">✅ Unchanged — deodar and pine canopy throughout</td>
+              </tr>
+              <tr className="hover:bg-[#FAF9F6]">
+                <td className="p-3.5 font-medium">Private apple and peach orchards</td>
+                <td className="p-3.5">✅ Unchanged — active working orchards on the property</td>
+              </tr>
+              <tr className="hover:bg-[#FAF9F6]">
+                <td className="p-3.5 font-medium">Scenic drive from Bhowali through Ramgarh</td>
+                <td className="p-3.5">✅ Unchanged — same winding mountain approach road</td>
+              </tr>
+              <tr className="hover:bg-[#FAF9F6]">
+                <td className="p-3.5 font-medium">Easy base for Kainchi Dham and Mukteshwar Dham</td>
+                <td className="p-3.5">✅ Same distances — 22 km Kainchi, 25 km Mukteshwar</td>
+              </tr>
+              <tr className="hover:bg-[#FAF9F6]">
+                <td className="p-3.5 font-medium">6–8 hour drive from Delhi/NCR</td>
+                <td className="p-3.5">✅ Same route — NH9 via Haldwani and Bhowali</td>
+              </tr>
+              <tr className="hover:bg-[#FAF9F6]">
+                <td className="p-3.5 font-medium">Kathgodam railway connectivity</td>
+                <td className="p-3.5">✅ Same — 40 minutes from Kathgodam station</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-gray-500 italic text-center">
+          The address, the views, the location advantages — all exactly as returning guests remember them.
+        </p>
+      </section>
+
+      {/* H2: What Is New at Whispering Pines — Upgraded from Clarks Exotica */}
+      <section className="space-y-6 pt-6 border-t border-[#EAE8E3]">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#1B3322] font-display">
+          What Is New at Whispering Pines — Upgraded from Clarks Exotica
+        </h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Now here is what has been significantly elevated since the Clarks Exotica era:
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-6">
+          <div className="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-2">
+            <h3 className="font-bold text-[#1B3322] text-lg flex items-center gap-2">
+              <span>🏊</span> Swimming Pool — Brand New Addition
+            </h3>
+            <p className="text-xs text-gray-600 font-light leading-relaxed">
+              Clarks Exotica did not have an on-site swimming pool. <strong>Whispering Pines now does</strong> — surrounded by pine forest and private fruit orchards at 1,780 metres altitude, making it one of the very few <a href="/resort-amenities-mukteshwar/" className="text-[#1B3322] font-semibold underline">resorts near Mukteshwar with a pool</a> alongside 180° Himalayan views.
+            </p>
+          </div>
+
+          <div className="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-2">
+            <h3 className="font-bold text-[#1B3322] text-lg flex items-center gap-2">
+              <span>🏡</span> Private Villa — New Standalone Estate
+            </h3>
+            <p className="text-xs text-gray-600 font-light leading-relaxed">
+              A completely new <strong>standalone Private Villa</strong> has been added to the property — a <a href="/private-villas-near-nainital/" className="text-[#1B3322] font-semibold underline">3-bedroom stone and cedar wood estate</a> sleeping up to 10 guests with a private orchard yard, stone fireplace living room, and exclusive BBQ terrace.
+            </p>
+          </div>
+
+          <div className="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-2">
+            <h3 className="font-bold text-[#1B3322] text-lg flex items-center gap-2">
+              <span>📶</span> 150 Mbps Enterprise Fiber Wi-Fi
+            </h3>
+            <p className="text-xs text-gray-600 font-light leading-relaxed">
+              The entire property has been rewired with enterprise-grade 150 Mbps fiber optic internet — covering all 25 rooms, the private villa, outdoor terraces, and the orchard garden for seamless remote work and streaming.
+            </p>
+          </div>
+
+          <div className="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-2">
+            <h3 className="font-bold text-[#1B3322] text-lg flex items-center gap-2">
+              <span>🤝</span> Casa De Bello Hospitality Standard
+            </h3>
+            <p className="text-xs text-gray-600 font-light leading-relaxed">
+              Managed directly by Casa De Bello — every guest interaction is personalised. Direct booking via WhatsApp at +91-7505029696 connects guests directly to the reservations team with response times under 5 minutes.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-2">
+          <h3 className="font-bold text-[#1B3322] text-lg flex items-center gap-2">
+            <span>🏔️</span> Enhanced Stone Cottage Architecture
+          </h3>
+          <p className="text-xs text-gray-600 font-light leading-relaxed">
+            The rooms have been renovated with enhanced Kumaoni stone masonry, solid cedar pine wood interiors, and in-room radiator heating and geo-heaters. The character of the original property has been preserved and deepened — not stripped away in favour of generic hotel aesthetics.
+          </p>
+        </div>
+
+        {/* Highlighted CTA */}
+        <div className="bg-[#1B3322]/5 p-5 rounded-xl border border-[#1B3322]/10 text-center space-y-2">
+          <p className="text-xs font-bold text-[#1B3322] uppercase tracking-wider">Book Direct on WhatsApp: +91-7505029696</p>
+          <p className="text-xs text-gray-600">Best Price Guaranteed. Save 20% vs MakeMyTrip and Booking.com.</p>
+        </div>
+      </section>
+
+      {/* H2: Whispering Pines — What the New Property Offers in Full */}
+      <section className="space-y-6 pt-6 border-t border-[#EAE8E3]">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#1B3322] font-display">
+          Whispering Pines — What the New Property Offers in Full
+        </h2>
+
+        {/* Section Image 1 */}
+        <div className="my-6">
+          <img 
+            src="/images/clarks-exotica-resort-ramgarh-mukteshwar-whispering-pines-casa-de-bello-2026.avif" 
+            alt="Clarks Exotica Resort Ramgarh Mukteshwar now Whispering Pines Casa De Bello — families couples groups pet friendly" 
+            className="w-full h-80 sm:h-96 object-cover rounded-2xl border border-[#EAE8E3] shadow-md"
+            width="1200"
+            height="675"
+            loading="lazy"
+          />
+          <p className="text-xs text-center text-gray-500 mt-2">Clarks Exotica Resort Ramgarh Mukteshwar — now Whispering Pines by Casa De Bello, Malla Ramgarh Uttarakhand 2026</p>
+        </div>
+
+        <p className="text-gray-700 leading-relaxed font-light">
+          For guests discovering this property for the first time, here is the complete picture of what Whispering Pines Resort by Casa De Bello offers in 2026:
+        </p>
+
+        {/* Sub-sections for Profiles */}
+        <div className="space-y-6">
+          <div className="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-3">
+            <h3 className="text-xl font-bold text-[#1B3322] flex items-center gap-2">
+              👨‍👩‍👧‍👦 For Families — Including Large Groups and Senior Citizens
+            </h3>
+            <p className="text-xs text-gray-600 font-light">The property accommodates families of all configurations — from couples with young children to multi-generational groups travelling with grandparents.</p>
+            <ul className="list-disc pl-5 text-xs text-gray-700 space-y-1.5 font-light">
+              <li>25 premium rooms plus Private Villa — accommodates 35+ guests at one property</li>
+              <li>Ground floor Family Twin Rooms with step-free direct lawn and orchard access — senior-friendly</li>
+              <li>Flat garden pathways throughout — wheelchair accessible terrain</li>
+              <li>Swimming pool with private pine forest surroundings — safe and uncrowded</li>
+              <li>Multi-cuisine restaurant with customised meal plans — Jain, gluten-free, vegetarian, Satvik all available</li>
+              <li>In-house travel desk coordinates Kainchi Dham, Mukteshwar Dham, and Bhalu Gaad excursions</li>
+              <li>Private Villa with ground-level entry — ideal for senior-accessible group stays</li>
+            </ul>
+            <div className="pt-2">
+              <a href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20a%20family%20stay%20at%20Whispering%20Pines." target="_blank" rel="noreferrer" className="text-xs font-bold text-[#1B3322] underline hover:text-[#c9a832]">
+                [Reserve Your Family Stay — Book Direct on WhatsApp +91-7505029696]
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-3">
+            <h3 className="text-xl font-bold text-[#1B3322] flex items-center gap-2">
+              👩‍❤️‍👨 For Couples and Honeymooners
+            </h3>
+            <ul className="list-disc pl-5 text-xs text-gray-700 space-y-1.5 font-light">
+              <li><a href="/suites-cottages-ramgarh-resort/" className="text-[#1B3322] font-semibold underline">Deluxe Skylight Suite</a> — glass ceilings for star-gazing, cedar pine valley-view deck, rain shower bathroom</li>
+              <li>Private Villa — standalone stone fireplace living room and exclusive orchard yard for complete seclusion</li>
+              <li>Private balcony breakfast — Kumaoni specialities and orchard fruit served at sunrise</li>
+              <li>Nightly bonfire and BBQ on private lawns — no shared spaces</li>
+              <li>180° Nanda Devi panorama — most romantic mountain backdrop in Nainital district</li>
+            </ul>
+            <div className="pt-2">
+              <a href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20a%20couple/honeymoon%20stay." target="_blank" rel="noreferrer" className="text-xs font-bold text-[#1B3322] underline hover:text-[#c9a832]">
+                [Reserve Your Couple Stay — Book Direct on WhatsApp +91-7505029696]
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-3">
+            <h3 className="text-xl font-bold text-[#1B3322] flex items-center gap-2">
+              🐾 For Pet Owners
+            </h3>
+            <ul className="list-disc pl-5 text-xs text-gray-700 space-y-1.5 font-light">
+              <li>Fully enclosed safe garden lawns — dogs roam freely without leash restrictions</li>
+              <li>Direct access to pine and deodar forest trails from the property gate</li>
+              <li>Zero additional pet charges — confirmed at booking, no surprises at checkout</li>
+              <li>Family Twin Room with direct lawn access — most popular for dog owners</li>
+              <li>Water bowls and pet-friendly room arrangements on WhatsApp request</li>
+            </ul>
+            <div className="pt-2">
+              <a href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20a%20pet-friendly%20stay." target="_blank" rel="noreferrer" className="text-xs font-bold text-[#1B3322] underline hover:text-[#c9a832]">
+                [Reserve Your Pet-Friendly Stay — Book Direct on WhatsApp +91-7505029696]
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-3">
+            <h3 className="text-xl font-bold text-[#1B3322] flex items-center gap-2">
+              💻 For Remote Workers and Workcation Guests
+            </h3>
+            <ul className="list-disc pl-5 text-xs text-gray-700 space-y-1.5 font-light">
+              <li>150 Mbps enterprise fiber optic Wi-Fi — full property coverage including outdoor terraces</li>
+              <li>Extended stay pricing for 4–7 night workcation packages</li>
+              <li>Quiet stone-walled rooms with natural light and valley views</li>
+              <li>24-hour in-room dining for flexible remote work meal schedules</li>
+              <li>Bonfire evenings — perfect end to a productive mountain workday</li>
+            </ul>
+            <div className="pt-2">
+              <a href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20a%20workcation%20stay." target="_blank" rel="noreferrer" className="text-xs font-bold text-[#1B3322] underline hover:text-[#c9a832]">
+                [Reserve Your Workcation Stay — Book Direct on WhatsApp +91-7505029696]
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-3">
+            <h3 className="text-xl font-bold text-[#1B3322] flex items-center gap-2">
+              🙏 For Spiritual Seekers — Kainchi Dham and Mukteshwar Dham
+            </h3>
+            <p className="text-xs text-gray-600 font-light">The resort remains the ideal luxury basecamp for <a href="/blog/resort-stay-near-kainchi-dham/" className="text-[#1B3322] font-semibold underline">Kainchi Dham</a> and Mukteshwar Dham visits — exactly as it was during the Clarks Exotica era, now with better room quality and a dedicated travel desk.</p>
+            <ul className="list-disc pl-5 text-xs text-gray-700 space-y-1.5 font-light">
+              <li>Kainchi Dham (Neem Karoli Baba Ashram): 22 km — approximately 45 minutes</li>
+              <li>Mukteshwar Dham temple: 25 km — approximately 45 minutes</li>
+              <li>In-house travel desk coordinates early morning darshan cab departures</li>
+              <li>Pure vegetarian and Satvik meals freshly prepared on request for pilgrims</li>
+              <li>Quiet, clean mountain environment conducive to spiritual retreat</li>
+            </ul>
+            <div className="pt-2">
+              <a href="https://wa.me/917505029696?text=Hi!%20I'm%20planning%20a%20spiritual%20visit%20to%20Kainchi%20Dham/Mukteshwar." target="_blank" rel="noreferrer" className="text-xs font-bold text-[#1B3322] underline hover:text-[#c9a832]">
+                [Reserve Your Spiritual Stay — Book Direct on WhatsApp +91-7505029696]
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* H2: Accommodation at Whispering Pines — Full Room Guide */}
+      <section className="space-y-6 pt-6 border-t border-[#EAE8E3]">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#1B3322] font-display">
+          Accommodation at Whispering Pines — Full Room Guide
+        </h2>
+
+        {/* Section Image 2 */}
+        <div className="my-6">
+          <img 
+            src="/images/Premiuam-villa-room.avif" 
+            alt="Accommodation at the former Clarks Exotica Resort Ramgarh Mukteshwar — villa suite family room Whispering Pines" 
+            className="w-full h-80 sm:h-96 object-cover rounded-2xl border border-[#EAE8E3] shadow-md"
+            width="1200"
+            height="675"
+            loading="lazy"
+          />
+          <p className="text-xs text-center text-gray-500 mt-2">Accommodation at the former Clarks Exotica Resort Ramgarh Mukteshwar — villa suite family room Whispering Pines</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-3">
+            <h3 className="text-xl font-bold text-[#1B3322]">Private Villa — New Addition</h3>
+            <p className="text-xs text-[#c9a832] font-semibold uppercase tracking-wider">Exclusive Nightly Alpine Estate</p>
+            <p className="text-xs text-gray-600 font-light">The standalone stone and cedar wood alpine estate — the most exclusive accommodation near Mukteshwar, added new under Casa De Bello management.</p>
+            <ul className="list-disc pl-5 text-xs text-gray-700 space-y-1 font-light">
+              <li>3 grand king bedrooms plus premium loft — sleeps up to 10 guests</li>
+              <li>3 private en-suite bathrooms with Himalayan valley views</li>
+              <li>Exclusive private apple and peach orchard yard</li>
+              <li>Stone fireplace living room</li>
+              <li>Outdoor BBQ grill and bonfire pit on private lawns</li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-3">
+            <h3 className="text-xl font-bold text-[#1B3322]">Deluxe Skylight Suite</h3>
+            <p className="text-xs text-[#c9a832] font-semibold uppercase tracking-wider">Upgraded from Clarks Era</p>
+            <p className="text-xs text-gray-600 font-light">Top-floor attic suite with glass skylight ceilings, cedar pine valley deck, and rain shower bathroom.</p>
+            <ul className="list-disc pl-5 text-xs text-gray-700 space-y-1 font-light">
+              <li>1 grand king bed plus daybed — sleeps 2–3 guests</li>
+              <li>Glass skylight ceilings for star-gazing</li>
+              <li>Private cedar pine deck overlooking Bhowali-Ramgarh valley</li>
+              <li>Rain shower bathroom with mountain views</li>
+              <li>Radiator heating for winter stays</li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-3">
+            <h3 className="text-xl font-bold text-[#1B3322]">Family Twin Room</h3>
+            <p className="text-xs text-[#c9a832] font-semibold uppercase tracking-wider">Senior-Friendly Ground Floor</p>
+            <p className="text-xs text-gray-600 font-light">The most accessible family room near Mukteshwar — ground floor, step-free, direct orchard lawn access.</p>
+            <ul className="list-disc pl-5 text-xs text-gray-700 space-y-1 font-light">
+              <li>1 premium double bed — sleeps 2 adults plus children</li>
+              <li>Direct step-free access to lawn and private orchards</li>
+              <li>Exposed old-stone brick archways — Kumaoni heritage character</li>
+              <li>Geo-heater for mountain winters</li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-3">
+            <h3 className="text-xl font-bold text-[#1B3322]">Group Cottage Room</h3>
+            <p className="text-xs text-[#c9a832] font-semibold uppercase tracking-wider">Best Value near Mukteshwar</p>
+            <p className="text-xs text-gray-600 font-light">Cedar wood pine finish rooms with mountain valley windows — ideal for groups and extended stays.</p>
+            <ul className="list-disc pl-5 text-xs text-gray-700 space-y-1 font-light">
+              <li>1 premium double bed</li>
+              <li>Cedar wood interiors with mountain valley views</li>
+              <li>High-capacity heaters for winter</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* H3: Compare All Room Types Table */}
+        <div className="pt-4 space-y-3">
+          <h3 className="text-xl font-bold text-[#1B3322]">Compare All Room Types</h3>
+          <div className="overflow-x-auto rounded-2xl border border-[#EAE8E3] shadow-sm bg-white">
+            <table className="w-full text-left text-xs sm:text-sm">
+              <thead className="bg-[#1B3322] text-white">
+                <tr>
+                  <th className="p-3 font-bold">Room</th>
+                  <th className="p-3 font-bold">Capacity</th>
+                  <th className="p-3 font-bold">Best For</th>
+                  <th className="p-3 font-bold">Standout Feature</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-[#EAE8E3] text-gray-700">
+                <tr className="hover:bg-[#FAF9F6]"><td className="p-3 font-semibold">Private Villa</td><td className="p-3">Up to 10 guests</td><td className="p-3">Families, groups, corporates</td><td className="p-3">New — exclusive nightly alpine estate</td></tr>
+                <tr className="hover:bg-[#FAF9F6]"><td className="p-3 font-semibold">Deluxe Skylight Suite</td><td className="p-3">2–3 guests</td><td className="p-3">Couples, honeymooners</td><td className="p-3">Glass skylight star-gazing ceiling</td></tr>
+                <tr className="hover:bg-[#FAF9F6]"><td className="p-3 font-semibold">Family Twin Room</td><td className="p-3">2 adults + children</td><td className="p-3">Families, seniors, pets</td><td className="p-3">Step-free ground floor orchard access</td></tr>
+                <tr className="hover:bg-[#FAF9F6]"><td className="p-3 font-semibold">Group Cottage Room</td><td className="p-3">2 adults</td><td className="p-3">Groups, workcation</td><td className="p-3">Cedar wood pine interiors</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="pt-2 text-center">
+            <a href="/suites-cottages-ramgarh-resort/" className="inline-block px-6 py-2.5 bg-[#1B3322] text-[#c9a832] font-bold text-xs rounded-xl hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors">
+              See all rooms and check availability →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* H2: Location and Distances — Same as Clarks Exotica Era */}
+      <section className="space-y-6 pt-6 border-t border-[#EAE8E3]">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#1B3322] font-display">
+          Location and Distances — Same as Clarks Exotica Era
+        </h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Everything guests valued about the Clarks Exotica location remains fully intact. The property sits at the same Malla Ramgarh address on the Bhowali-Ramgarh-Mukteshwar Road — Uttarakhand's most scenic mountain road corridor.
+        </p>
+
+        <div className="overflow-x-auto rounded-2xl border border-[#EAE8E3] shadow-sm bg-white">
+          <table className="w-full text-left text-xs sm:text-sm">
+            <thead className="bg-[#1B3322] text-white">
+              <tr>
+                <th className="p-3.5 font-bold">Destination</th>
+                <th className="p-3.5 font-bold">Distance</th>
+                <th className="p-3.5 font-bold">Drive Time</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[#EAE8E3] text-gray-700">
+              <tr className="hover:bg-[#FAF9F6]"><td className="p-3 font-medium">Mukteshwar Dham Temple</td><td className="p-3">25 km</td><td className="p-3">45 minutes</td></tr>
+              <tr className="hover:bg-[#FAF9F6]"><td className="p-3 font-medium">Kainchi Dham — Neem Karoli Baba Ashram</td><td className="p-3">22 km</td><td className="p-3">45 minutes</td></tr>
+              <tr className="hover:bg-[#FAF9F6]"><td className="p-3 font-medium">Bhalu Gaad Waterfall</td><td className="p-3">12 km</td><td className="p-3">20 minutes</td></tr>
+              <tr className="hover:bg-[#FAF9F6]"><td className="p-3 font-medium">Chauli Ki Jali Cliff</td><td className="p-3">25 km</td><td className="p-3">45 minutes</td></tr>
+              <tr className="hover:bg-[#FAF9F6]"><td className="p-3 font-medium">Nainital Mall Road and Naini Lake</td><td className="p-3">26 km</td><td className="p-3">45 minutes</td></tr>
+              <tr className="hover:bg-[#FAF9F6]"><td className="p-3 font-medium">Bhimtal Lake</td><td className="p-3">18 km</td><td className="p-3">35 minutes</td></tr>
+              <tr className="hover:bg-[#FAF9F6]"><td className="p-3 font-medium">Malla Ramgarh Fruit Orchards</td><td className="p-3">0.5 km</td><td className="p-3">Walking distance</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-3">
+          <h3 className="text-xl font-bold text-[#1B3322]">Travel Desk — Now Available</h3>
+          <p className="text-xs text-gray-600 font-light leading-relaxed">
+            Unlike the Clarks Exotica era, Whispering Pines now has a dedicated <strong>in-house travel desk</strong> that arranges cabs, guides, and day itineraries for all excursions directly from the resort. All distances are from the property gate. <a href="/things-to-do-near-mukteshwar/" className="text-[#1B3322] font-semibold underline">See all local experiences →</a>
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-gray-700 font-light pt-2">
+            <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#EAE8E3]">
+              <strong>Mukteshwar Dham Temple (25 km):</strong> 350-year-old Shiva temple at 2,286m. Early morning darshan cab departures coordinated.
+            </div>
+            <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#EAE8E3]">
+              <strong>Kainchi Dham (22 km):</strong> Neem Karoli Baba Ashram. Cab coordination and pure vegetarian/Satvik breakfast available.
+            </div>
+            <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#EAE8E3]">
+              <strong>Bhalu Gaad Waterfall (12 km):</strong> 2 km pine canopy trek to natural waterfall. Guided treks coordinated.
+            </div>
+            <div className="p-3 bg-[#FAF9F6] rounded-xl border border-[#EAE8E3]">
+              <strong>Chauli Ki Jali (25 km):</strong> Dramatic cliffs, paragliding, rock climbing, and sunset viewpoints.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* H2: Why Malla Ramgarh Remains the Right Address near Mukteshwar */}
+      <section className="space-y-4 pt-6 border-t border-[#EAE8E3]">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#1B3322] font-display">
+          Why Malla Ramgarh Remains the Right Address near Mukteshwar
+        </h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          The Clarks Exotica Ramgarh address was chosen well. Malla Ramgarh sits 25 km before Mukteshwar market on the Bhowali-Ramgarh-Mukteshwar Road — quiet enough to hear only birdsong and pine wind, while placing every major attraction within a comfortable 45-minute drive.
+        </p>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Mukteshwar market becomes congested during peak weekends and public holidays. Parking is restricted near the temple. The general activity level of a busy mountain town directly contradicts the quiet that most guests drive 6–8 hours from Delhi to find.
+        </p>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Malla Ramgarh gives you clean air, quiet roads, higher ridge altitude for better Himalayan views, and complete mountain peace — while Kainchi Dham, Mukteshwar Dham, Bhalu Gaad, and Nainital all remain within day-trip distance.
+        </p>
+        <p className="text-gray-700 leading-relaxed font-light">
+          This is why the Clarks Exotica address was loved. It is why Whispering Pines continues to occupy the same address. And it is why guests who experienced both consistently call this the best iteration of this property in its history.
+        </p>
+      </section>
+
+      {/* H2: How to Reach — Same Route as Clarks Exotica Era */}
+      <section className="space-y-4 pt-6 border-t border-[#EAE8E3]">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#1B3322] font-display">
+          How to Reach — Same Route as Clarks Exotica Era
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
+          <div className="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-2">
+            <h3 className="font-bold text-[#1B3322] text-sm">🚘 By Road from Delhi/NCR</h3>
+            <p className="text-xs text-gray-600 font-light">NH9 via Moradabad → Rampur → Haldwani → Bhowali → Ramgarh → Malla Ramgarh.</p>
+            <p className="text-xs text-gray-500">Distance: ~320 km | Drive time: 6–8 hours.</p>
+          </div>
+          <div className="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-2">
+            <h3 className="font-bold text-[#1B3322] text-sm">🚆 By Train</h3>
+            <p className="text-xs text-gray-600 font-light">Nearest railhead: Kathgodam Station (~40 minutes). Key trains: Ranikhet Express, Kathgodam Shatabdi.</p>
+            <p className="text-xs text-gray-500">Resort cab pickup available on WhatsApp request.</p>
+          </div>
+          <div className="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-2">
+            <h3 className="font-bold text-[#1B3322] text-sm">✈️ By Air</h3>
+            <p className="text-xs text-gray-600 font-light">Nearest airport: Pantnagar Airport (~55 minutes).</p>
+            <p className="text-xs text-gray-500">Resort cab pickup from Pantnagar available on prior booking.</p>
+          </div>
+        </div>
+
+        <div className="p-4 bg-[#1B3322]/5 rounded-xl border border-[#1B3322]/10 text-xs text-gray-700">
+          <strong>Official Address:</strong> House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, Nainital, Uttarakhand 263137
+        </div>
+      </section>
+
+      {/* H2: Direct Booking — Returning Clarks Exotica Guests */}
+      <section className="space-y-6 pt-6 border-t border-[#EAE8E3]">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#1B3322] font-display">
+          Direct Booking — Returning Clarks Exotica Guests
+        </h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Every direct WhatsApp booking at Whispering Pines saves up to 20% compared to MakeMyTrip, Booking.com, and Goibibo — OTA platforms add 15–25% commission which is reflected in their listed prices. Direct booking eliminates this entirely.
+        </p>
+        <p className="text-gray-700 font-semibold text-[#1B3322]">
+          Returning Clarks Exotica guests receive exclusive retention rates on direct WhatsApp booking — ask for the returning guest rate when you message.
+        </p>
+
+        <div className="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-3">
+          <h3 className="text-base font-bold text-[#1B3322]">Direct Booking Benefits:</h3>
+          <ul className="list-disc pl-5 text-xs text-gray-700 space-y-2 font-light">
+            <li><strong>Lowest available rate</strong> — guaranteed best price on every room and villa</li>
+            <li><strong>Returning Clarks Exotica guest rate</strong> — exclusive discount for past guests</li>
+            <li><strong>Priority room upgrade eligibility</strong> on all direct bookings</li>
+            <li><strong>Flexible check-in and check-out</strong> on request</li>
+            <li><strong>Extended stay workcation packages</strong> with customised meal plans</li>
+            <li><strong>Complimentary fireplace setup</strong> on every winter arrival</li>
+            <li><strong>Satvik and pure vegetarian meal pre-arrangement</strong> for pilgrims</li>
+            <li><strong>Instant response</strong> — WhatsApp queries answered within 5 minutes</li>
+          </ul>
+        </div>
+
+        <div className="bg-[#1B3322] text-white p-8 rounded-2xl text-center space-y-4 shadow-xl border border-[#c9a832]/30">
+          <h3 className="text-2xl font-bold text-white">Call or WhatsApp: +91-7505029696</h3>
+          <p className="text-xs text-gray-300">
+            Email: booking@whisperingpinesresort.in | Website: whisperingpinesresort.in
+          </p>
+          <a 
+            href="https://wa.me/917505029696?text=Hi!%20I'm%20a%20returning%20Clarks%20Exotica%20guest%20inquiring%20about%20retention%20rates." 
+            target="_blank" 
+            rel="noreferrer" 
+            className="inline-block px-8 py-3.5 bg-[#c9a832] text-[#1B3322] font-bold text-sm rounded-xl hover:bg-yellow-400 transition-all shadow-md"
+          >
+            WhatsApp +91-7505029696 — Save 20% Direct Rate
+          </a>
+        </div>
+      </section>
+
+      {/* H2: Frequently Asked Questions — Clarks Exotica Resort Ramgarh Mukteshwar */}
+      <section className="space-y-6 pt-6 border-t border-[#EAE8E3]" id="faqs">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#1B3322] font-display">
+          Frequently Asked Questions — Clarks Exotica Resort Ramgarh Mukteshwar
+        </h2>
+
+        <div className="space-y-4">
+          {faqSchema.mainEntity.map((faq, idx) => (
+            <div key={idx} className="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-2">
+              <h3 className="font-bold text-[#1B3322] text-base flex items-start gap-2">
+                <span className="text-[#c9a832] shrink-0 font-mono">Q{idx+1}.</span>
+                <span>{faq.name}</span>
+              </h3>
+              <p className="text-xs text-gray-600 font-light leading-relaxed pl-7">
+                {faq.acceptedAnswer.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* H2: Reserve Your Stay — Welcome Back to Malla Ramgarh */}
+      <section className="space-y-4 pt-6 border-t border-[#EAE8E3]">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#1B3322] font-display">
+          Reserve Your Stay — Welcome Back to Malla Ramgarh
+        </h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          If you visited Clarks Exotica Resort Ramgarh in the past and are planning a return trip — you are coming back to an address that has been genuinely elevated. The views you remember are exactly as they were. The pine forest, the orchards, the winding Mukteshwar Road approach — unchanged.
+        </p>
+        <p className="text-gray-700 leading-relaxed font-light">
+          What you will find different: a swimming pool, a new private villa, 150 Mbps Wi-Fi throughout, renovated rooms with deeper Kumaoni character, and a management team that answers your WhatsApp within 5 minutes.
+        </p>
+        <p className="text-gray-800 font-bold text-lg text-[#1B3322]">
+          Whispering Pines Resort by Casa De Bello — the best version of this property in its entire history. And it is waiting for you at the same address on the Bhowali-Ramgarh-Mukteshwar Road, Malla Ramgarh, Uttarakhand.
+        </p>
+        <p className="text-sm text-gray-700">
+          Book direct on WhatsApp at <strong>+91-7505029696</strong> for the best price — and ask for the returning guest rate.
+        </p>
+      </section>
+
+      {/* Footer Contact Details Block */}
+      <div className="p-6 bg-[#1B3322] text-white rounded-2xl space-y-2 text-center text-xs">
+        <h3 className="font-bold text-sm text-[#c9a832]">Whispering Pines Resort by Casa De Bello</h3>
+        <p className="text-gray-300">House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, Uttarakhand 263137</p>
+        <p className="text-gray-300">📞 +91-7505029696 | ✉️ booking@whisperingpinesresort.in | 🌐 whisperingpinesresort.in</p>
+      </div>
+
+      {/* Pillar & Cluster SEO Internal Link Matrix */}
+      <div className="bg-[#FAF9F6] p-6 rounded-2xl border border-[#EAE8E3] space-y-4 my-8">
+        <h4 className="text-xs font-bold text-[#1B3322] uppercase tracking-wider">Explore Whispering Pines Resort (Pillar Pages & Key Guides)</h4>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
+          <a href="/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-bold hover:border-[#c9a832] transition-colors shadow-sm">
+            🏡 Whispering Pines Home Page (Main Pillar)
+          </a>
+          <a href="/about-whispering-pines-resort-ramgarh/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+            🌲 About Resort & Ramgarh Ridge
+          </a>
+          <a href="/suites-cottages-ramgarh-resort/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+            🛏️ Rooms, Suites & Cottages
+          </a>
+          <a href="/private-villas-near-nainital/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+            🏡 3-BHK Private Villa Estate
+          </a>
+          <a href="/resort-amenities-mukteshwar/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+            🏊 Pine Forest Swimming Pool
+          </a>
+          <a href="/things-to-do-near-mukteshwar/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+            ⛰️ Mukteshwar Sightseeing Guide
+          </a>
+          <a href="/blog/resort-near-mukteshwar/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+            📖 Resort Near Mukteshwar Guide
+          </a>
+          <a href="/blog/resort-stay-near-kainchi-dham/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+            🙏 Kainchi Dham Ashram Guide
+          </a>
+          <a href="/blog/ramgarh-fruit-bowl-of-kumaon/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+            🍑 Ramgarh Fruit Orchards Guide
+          </a>
+        </div>
+      </div>
+
+    </main>
+
+    <WhatsAppButton client:idle />
+    <RecentBookingNotification client:idle />
+  </div>
+</Layout>
