@@ -16,6 +16,16 @@ export type BlogPostData = {
 
 export const BLOG_POSTS: BlogPostData[] = [
   {
+    id: 10,
+    slug: "clarks-exotica-resort-ramgarh-mukteshwar",
+    customUrl: "/clarks-exotica-resort-ramgarh-mukteshwar/",
+    title: "Clarks Exotica Resort Ramgarh Mukteshwar — Now Whispering Pines by Casa De Bello (2026 Guide)",
+    excerpt: "Clarks Exotica Resort Ramgarh Mukteshwar is now Whispering Pines by Casa De Bello. Same iconic location, fully upgraded. 4.6★ Google. Pool, villa, 180° Himalayan views. Book direct on WhatsApp.",
+    date: "August 13, 2026",
+    readTime: "15 min read",
+    imageUrl: "/images/clarks-exotica-resort-ramgarh-mukteshwar-whispering-pines-casa-de-bello-2026.avif"
+  },
+  {
     id: 0,
     slug: "resort-near-mukteshwar",
     customUrl: "/blog/resort-near-mukteshwar/",
@@ -2231,16 +2241,6 @@ export const BLOG_POSTS: BlogPostData[] = [
         </div>
       </div>
     )
-  },
-  {
-    id: 10,
-    slug: "clarks-exotica-resort-ramgarh-mukteshwar",
-    customUrl: "/clarks-exotica-resort-ramgarh-mukteshwar/",
-    title: "Clarks Exotica Resort Ramgarh Mukteshwar — Now Whispering Pines by Casa De Bello (2026 Guide)",
-    excerpt: "Clarks Exotica Resort Ramgarh Mukteshwar is now Whispering Pines by Casa De Bello. Same iconic location, fully upgraded. 4.6★ Google. Pool, villa, 180° Himalayan views. Book direct on WhatsApp.",
-    date: "August 13, 2026",
-    readTime: "15 min read",
-    imageUrl: "/images/clarks-exotica-resort-ramgarh-mukteshwar-whispering-pines-casa-de-bello-2026.avif"
   }
 ];
 
