@@ -160,6 +160,7 @@ const currentYear = new Date().getFullYear();
           </a>
           <a
             href={`tel:${RESORT_CONTACT.phone}`}
+            onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'phone_call_click', event_category: 'engagement', event_label: 'footer_phone_call' });"
             class="flex items-center hover:text-[#c9a832] transition-colors group"
           >
             <Phone className="w-4 h-4 text-[#c9a832] mr-3 shrink-0 group-hover:scale-110 transition-transform" />

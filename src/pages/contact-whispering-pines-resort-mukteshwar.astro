@@ -71,7 +71,11 @@ import FAQAccordion from "../components/FAQAccordion";
                   </div>
                   <div>
                     <h3 class="text-sm font-bold text-[#1B3322] uppercase tracking-wider mb-1">Phone & WhatsApp — +91-7505029696</h3>
-                    <a href={`tel:${RESORT_CONTACT.phone.replace(/[^0-9+]/g, '')}`} class="text-lg text-[#2C3531] hover:text-[#c9a832] transition-colors font-medium">
+                    <a
+                      href={`tel:${RESORT_CONTACT.phone.replace(/[^0-9+]/g, '')}`}
+                      onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'phone_call_click', event_category: 'engagement', event_label: 'contact_page_phone_call' });"
+                      class="text-lg text-[#2C3531] hover:text-[#c9a832] transition-colors font-medium"
+                    >
                       {RESORT_CONTACT.phone}
                     </a>
                   </div>
