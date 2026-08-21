@@ -227,6 +227,9 @@ export default function FooterSection() {
             <p className="text-[10px] text-[#FAF9F6]/40 max-w-2xl pt-1 leading-normal">
               Operated by <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#c9a832] transition-colors">Casa De Bello - Luxury Resort Hotel in Bhowali, Nainital</a>.
             </p>
+            <p className="text-[11px] text-[#FAF9F6]/70 pt-0.5">
+              Website Developed by <a href="https://growguest.in/" target="_blank" rel="noopener noreferrer" className="text-[#c9a832] hover:underline transition-colors font-medium">Growguest</a>
+            </p>
           </div>
 
           <div className="text-center lg:text-right space-y-1">
