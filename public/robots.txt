@@ -45,8 +45,5 @@ Disallow: /
 User-agent: *
 Allow: /
 
-# Primary XML Sitemaps
-Sitemap: https://whisperingpinesresort.in/sitemap.xml
+# Primary XML Sitemap
 Sitemap: https://whisperingpinesresort.in/sitemap-index.xml
-Sitemap: https://whisperingpinesresort.in/sitemap-website.xml
-Sitemap: https://whisperingpinesresort.in/sitemap-blog.xml

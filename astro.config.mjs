@@ -93,7 +93,9 @@ export default defineConfig({
         forward: ['dataLayer.push', 'gtag'],
       },
     }),
-    sitemap(),
+    sitemap({
+      lastmod: new Date(),
+    }),
     masterSitemap(),
     indexNowIntegration(),
   ],
