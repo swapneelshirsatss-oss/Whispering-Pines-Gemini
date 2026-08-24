@@ -85,6 +85,7 @@ export default defineConfig({
     '/why-ramgarh-is-the-fruit-bowl-of-kumaon': '/blog/ramgarh-fruit-bowl-of-kumaon/',
     '/blog/why-ramgarh-is-the-fruit-bowl-of-kumaon': '/blog/ramgarh-fruit-bowl-of-kumaon/',
     '/ramgarh-fruit-bowl-of-kumaon': '/blog/ramgarh-fruit-bowl-of-kumaon/',
+    '/blog/clarks-exotica-resort-ramgarh-mukteshwar': '/clarks-exotica-resort-ramgarh-mukteshwar/',
   },
   integrations: [
     react(),
