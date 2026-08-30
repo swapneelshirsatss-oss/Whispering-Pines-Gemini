@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { RESORT_CONTACT, generateWhatsAppLink } from '../../data';
+import BlogShareBar from '../../components/BlogShareBar.astro';
 
 const pageTitle = "Himalayan View Resort in Uttarakhand That Will Make You Forget the City Exists — Casa De Bello Whispering Pines, Ramgarh (2026)";
 const pageDescription = "The best Himalayan view resort in Uttarakhand — Whispering Pines by Casa De Bello, Ramgarh. 180° Nanda Devi views, pool, villa, 150 Mbps Wi-Fi. Book direct on WhatsApp. Best price guaranteed.";
@@ -221,7 +222,7 @@ const faqSchema = {
       </div>
 
       <!-- TABLE OF CONTENTS -->
-      <nav class="bg-[#1B3322]/5 p-6 rounded-2xl border border-[#1B3322]/10 mb-12">
+      <nav class="bg-[#1B3322]/5 p-6 rounded-2xl border border-[#1B3322]/10 mb-8">
         <h3 class="text-base font-bold text-[#1B3322] mb-4 flex items-center gap-2">
           <svg class="w-5 h-5 text-[#c9a832]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/></svg>
           What Is in This Guide
@@ -239,6 +240,15 @@ const faqSchema = {
           <li><a href="#faq" class="hover:text-[#c9a832] transition-colors">Frequently Asked Questions</a></li>
         </ol>
       </nav>
+
+      <!-- TOP SHARE BAR -->
+      <BlogShareBar
+        title={pageTitle}
+        url={canonicalUrl}
+        description={pageDescription}
+        label="Planning a trip? Share this guide with your travel group"
+        className="mb-12"
+      />
 
       <!-- INTRO -->
       <section class="prose prose-lg max-w-none text-[#2C3531] space-y-5 mb-14">
@@ -663,6 +673,15 @@ const faqSchema = {
           <details class="group bg-white rounded-xl border border-[#EAE8E3] shadow-sm open:shadow-md"><summary class="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-[#1B3322] text-sm hover:text-[#c9a832] transition-colors gap-4 list-none"><span>How do I book at the best price?</span><span class="shrink-0 text-[#c9a832] group-open:rotate-45 transition-transform text-xl leading-none">+</span></summary><div class="px-6 pb-5 text-sm text-gray-600 font-light leading-relaxed border-t border-[#EAE8E3] pt-4">Book directly via WhatsApp at +91-7505029696. Save up to 20% versus all OTA platforms. Returning Clarks Exotica guests receive exclusive retention rates — mention your history with the property when booking.</div></details>
         </div>
       </section>
+
+      <!-- BOTTOM SHARE BAR -->
+      <BlogShareBar
+        title={pageTitle}
+        url={canonicalUrl}
+        description={pageDescription}
+        label="Found this guide helpful? Share it with your friends or family"
+        className="mb-14"
+      />
 
       <!-- RELATED ARTICLES -->
       <section class="mb-10">

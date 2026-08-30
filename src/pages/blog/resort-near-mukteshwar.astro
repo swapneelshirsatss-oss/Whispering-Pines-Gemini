@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import WhatsAppButton from "../../components/WhatsAppButton";
+import BlogShareBar from "../../components/BlogShareBar.astro";
 import { RESORT_CONTACT, generateWhatsAppLink } from '../../data';
 
 const pageTitle = "Resort near Mukteshwar | Whispering Pines by Casa De Bello (2026 Guide)";
@@ -269,7 +270,7 @@ const faqSchema = {
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
 
       <!-- Table of Contents Quick Nav -->
-      <nav class="bg-[#1B3322]/5 p-6 rounded-2xl border border-[#1B3322]/10 mb-12">
+      <nav class="bg-[#1B3322]/5 p-6 rounded-2xl border border-[#1B3322]/10 mb-8">
         <h3 class="text-lg font-bold text-[#1B3322] mb-4 flex items-center">
           <svg class="w-5 h-5 mr-2 text-[#c9a832]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/></svg>
           Quick Navigation & Article Outline
@@ -289,6 +290,15 @@ const faqSchema = {
           <li><a href="#frequently-asked-questions" class="hover:text-[#c9a832] transition-colors">12. Frequently Asked Questions (FAQ)</a></li>
         </ul>
       </nav>
+
+      <!-- Top Share Bar -->
+      <BlogShareBar
+        title={pageTitle}
+        url={canonicalUrl}
+        description={pageDescription}
+        label="Planning a trip? Share this guide with your travel group"
+        className="mb-12"
+      />
 
       <!-- Introduction Section -->
       <section class="prose prose-lg max-w-none text-[#2C3531] space-y-6">
@@ -996,6 +1006,15 @@ const faqSchema = {
           </div>
         </div>
       </section>
+
+      <!-- Bottom Share Bar -->
+      <BlogShareBar
+        title={pageTitle}
+        url={canonicalUrl}
+        description={pageDescription}
+        label="Found this guide helpful? Share it with your friends or family"
+        className="mt-12 mb-8"
+      />
 
       <!-- Internal Links Directory Component Footer -->
       <footer class="mt-16 pt-8 border-t border-[#EAE8E3] text-xs text-gray-500 space-y-4">

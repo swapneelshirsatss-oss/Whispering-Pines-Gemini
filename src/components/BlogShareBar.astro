@@ -1,0 +1,187 @@
+---
+interface Props {
+  title: string;
+  url: string;
+  description?: string;
+  className?: string;
+  label?: string;
+}
+
+const {
+  title,
+  url,
+  description = '',
+  className = '',
+  label = 'Share this guide with your travel group'
+} = Astro.props;
+
+const encodedUrl = encodeURIComponent(url);
+const encodedTitle = encodeURIComponent(title);
+const whatsappText = encodeURIComponent(`${title}\n\nRead full guide here: ${url}`);
+
+const shareLinks = {
+  whatsapp: `https://api.whatsapp.com/send?text=${whatsappText}`,
+  facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+  twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
+  linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+};
+---
+
+<div class={`blog-share-bar bg-white rounded-2xl p-5 sm:p-6 border border-[#EAE8E3] shadow-sm my-8 ${className}`}>
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <div>
+      <span class="text-xs font-semibold uppercase tracking-wider text-[#c9a832] flex items-center gap-1.5 mb-0.5">
+        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+        </svg>
+        Spread the Word
+      </span>
+      <h4 class="text-sm sm:text-base font-bold text-[#1B3322]">{label}</h4>
+    </div>
+
+    <!-- Share Buttons Grid / Row -->
+    <div class="flex flex-wrap items-center gap-2 sm:gap-2.5">
+      <!-- WhatsApp (Primary CTA) -->
+      <a
+        href={shareLinks.whatsapp}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Share on WhatsApp"
+        class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#25D366] text-white hover:bg-[#1EBE5D] text-xs font-semibold rounded-lg transition-all shadow-sm hover:shadow transform hover:-translate-y-0.5"
+      >
+        <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.1 1.523 5.823L0 24l6.344-1.498A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.792 9.792 0 01-5.002-1.374l-.359-.213-3.765.889.953-3.676-.234-.376A9.794 9.794 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/>
+        </svg>
+        <span>WhatsApp</span>
+      </a>
+
+      <!-- Native Web Share API (Mobile Devices) -->
+      <button
+        type="button"
+        data-share-title={title}
+        data-share-url={url}
+        data-share-text={description || title}
+        aria-label="Share via device options"
+        class="web-share-btn hidden sm:hidden inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#1B3322] text-white hover:bg-[#284931] text-xs font-semibold rounded-lg transition-all shadow-sm"
+      >
+        <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+        </svg>
+        <span>Share</span>
+      </button>
+
+      <!-- Twitter / X -->
+      <a
+        href={shareLinks.twitter}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Share on X (Twitter)"
+        class="inline-flex items-center justify-center w-9 h-9 bg-[#111] hover:bg-black text-white rounded-lg transition-all shadow-sm hover:shadow transform hover:-translate-y-0.5"
+      >
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+      </a>
+
+      <!-- Facebook -->
+      <a
+        href={shareLinks.facebook}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Share on Facebook"
+        class="inline-flex items-center justify-center w-9 h-9 bg-[#1877F2] hover:bg-[#166FE5] text-white rounded-lg transition-all shadow-sm hover:shadow transform hover:-translate-y-0.5"
+      >
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+      </a>
+
+      <!-- LinkedIn -->
+      <a
+        href={shareLinks.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Share on LinkedIn"
+        class="inline-flex items-center justify-center w-9 h-9 bg-[#0A66C2] hover:bg-[#084e96] text-white rounded-lg transition-all shadow-sm hover:shadow transform hover:-translate-y-0.5"
+      >
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+      </a>
+
+      <!-- 1-Click Copy Link Button -->
+      <button
+        type="button"
+        data-copy-url={url}
+        aria-label="Copy link to clipboard"
+        class="copy-link-btn inline-flex items-center gap-1.5 px-3 py-2 bg-gray-100 hover:bg-gray-200 text-[#2C3531] text-xs font-semibold rounded-lg transition-all border border-gray-200"
+      >
+        <svg class="w-3.5 h-3.5 text-gray-600 copy-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+        </svg>
+        <span class="copy-text">Copy Link</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  // Initialize Share Bar Interactions
+  (function initShareBar() {
+    // 1. Show Web Share button on mobile devices supporting navigator.share
+    if (typeof navigator !== 'undefined' && navigator.share) {
+      document.querySelectorAll('.web-share-btn').forEach(function(btn) {
+        btn.classList.remove('hidden');
+        btn.addEventListener('click', async function() {
+          const title = btn.getAttribute('data-share-title') || document.title;
+          const url = btn.getAttribute('data-share-url') || window.location.href;
+          const text = btn.getAttribute('data-share-text') || '';
+          try {
+            await navigator.share({ title, text, url });
+          } catch (err) {
+            // User cancelled or share failed silently
+          }
+        });
+      });
+    }
+
+    // 2. Clipboard Copy with Visual Feedback
+    document.querySelectorAll('.copy-link-btn').forEach(function(btn) {
+      btn.addEventListener('click', async function() {
+        const copyUrl = btn.getAttribute('data-copy-url') || window.location.href;
+        const textSpan = btn.querySelector('.copy-text');
+
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(copyUrl);
+          } else {
+            // Fallback for older browsers
+            const textArea = document.createElement('textarea');
+            textArea.value = copyUrl;
+            textArea.style.position = 'fixed';
+            textArea.style.opacity = '0';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+          }
+
+          if (textSpan) textSpan.textContent = '✓ Copied!';
+          btn.classList.add('bg-emerald-50', 'text-emerald-700', 'border-emerald-200');
+
+          setTimeout(function() {
+            if (textSpan) textSpan.textContent = 'Copy Link';
+            btn.classList.remove('bg-emerald-50', 'text-emerald-700', 'border-emerald-200');
+          }, 2500);
+        } catch (err) {
+          if (textSpan) textSpan.textContent = 'Link copied!';
+          setTimeout(function() {
+            if (textSpan) textSpan.textContent = 'Copy Link';
+          }, 2000);
+        }
+      });
+    });
+  })();
+</script>
