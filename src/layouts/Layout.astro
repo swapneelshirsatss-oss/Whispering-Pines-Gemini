@@ -99,9 +99,11 @@ const canonicalURL = new URL(pathname, siteBase);
       "url": "https://whisperingpinesresort.in/"
     })} />
 
-    <slot name="head" />
-    
+    <!-- Google Preferred Sources (Official Google Publisher Script) -->
+    <link rel="preconnect" href="https://news.google.com" />
+    <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 
+    <slot name="head" />
   </head>
   <body class="bg-[#FAF9F6] text-[#2C3531]">
     <!-- Google Tag Manager (noscript) -->

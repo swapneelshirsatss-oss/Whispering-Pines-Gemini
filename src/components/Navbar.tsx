@@ -188,6 +188,20 @@ export default function Navbar({ children }: NavbarProps) {
               Instant Booking (WhatsApp)
               <ArrowUpRight className="w-5 h-5 ml-1.5" />
             </a>
+
+            {/* Google Preferred Source Button in Mobile Menu */}
+            <div className="pt-2 flex flex-col items-center">
+              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#c9a832] block mb-2 font-semibold text-center">
+                Google Preferred Source
+              </span>
+              <div 
+                className="g-preferred-source inline-block min-h-[36px]" 
+                {...{ "google-add-preferred-source-btn": "" }} 
+                data-domain="whisperingpinesresort.in" 
+                data-theme="dark" 
+                data-lang="en"
+              ></div>
+            </div>
           </div>
         </div>
       </div>

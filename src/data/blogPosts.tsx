@@ -16,6 +16,16 @@ export type BlogPostData = {
 
 export const BLOG_POSTS: BlogPostData[] = [
   {
+    id: 11,
+    slug: "himalayan-view-resort-uttarakhand",
+    customUrl: "/blog/himalayan-view-resort-uttarakhand/",
+    title: "Himalayan View Resort in Uttarakhand That Will Make You Forget the City Exists — Casa De Bello Whispering Pines, Ramgarh (2026)",
+    excerpt: "The best Himalayan view resort in Uttarakhand — Whispering Pines by Casa De Bello, Ramgarh. 180° Nanda Devi views, pool, villa, 150 Mbps Wi-Fi. Book direct on WhatsApp. Best price guaranteed.",
+    date: "August 30, 2026",
+    readTime: "14 min read",
+    imageUrl: "/images/Himalayan-View-Resort-in-Uttarakhand/himalayan-view-resort-uttarakhand-whispering-pines-casa-de-bello-ramgarh-2026.avif"
+  },
+  {
     id: 10,
     slug: "clarks-exotica-resort-ramgarh-mukteshwar",
     customUrl: "/clarks-exotica-resort-ramgarh-mukteshwar/",

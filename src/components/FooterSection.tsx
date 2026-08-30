@@ -106,6 +106,20 @@ export default function FooterSection() {
                     </a>
                   )}
                 </div>
+
+                {/* Google Preferred Source Button */}
+                <div className="pt-4">
+                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#c9a832] block mb-2 font-semibold">
+                    Google Preferred Source
+                  </span>
+                  <div 
+                    className="g-preferred-source inline-block min-h-[36px]" 
+                    {...{ "google-add-preferred-source-btn": "" }} 
+                    data-domain="whisperingpinesresort.in" 
+                    data-theme="dark" 
+                    data-lang="en"
+                  ></div>
+                </div>
               </div>
             )}
           </div>

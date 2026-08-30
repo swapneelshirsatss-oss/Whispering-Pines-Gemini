@@ -4,30 +4,54 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import WhatsAppButton from "../../components/WhatsAppButton";
 import { BLOG_POSTS } from "../../data/blogPosts.tsx";
 
+const pageTitle = "Blog & Himalayan Travel Guides | Whispering Pines Resort Ramgarh Mukteshwar (2026)";
+const pageDescription = "Explore insider travel guides, Himalayan itineraries, Kumaon heritage stories, Kainchi Dham tips, and seasonal updates from Whispering Pines Resort in Malla Ramgarh near Mukteshwar.";
+const canonicalUrl = "https://whisperingpinesresort.in/blog/";
+
+const breadcrumbs = [
+  { name: "Home", item: "https://whisperingpinesresort.in/" },
+  { name: "Blog & Travel Guides", item: canonicalUrl },
+];
+
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "Blog",
-  name: "Whispering Pines Resort Blog",
-  description:
-    "Discover updates, travel tips, and stories from the heart of the Himalayas.",
-  url: "https://whisperingpinesresort.in/blog/",
+  name: "Whispering Pines Resort Himalayan Travel Blog",
+  description: pageDescription,
+  url: canonicalUrl,
   publisher: {
     "@type": "Organization",
     name: "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+    url: "https://whisperingpinesresort.in",
     logo: {
       "@type": "ImageObject",
       url: "https://whisperingpinesresort.in/logo.svg",
     },
   },
+  blogPost: BLOG_POSTS.map((post) => ({
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: "2026-08-01",
+    url: `https://whisperingpinesresort.in${post.customUrl || `/blog/${post.slug}/`}`,
+    image: `https://whisperingpinesresort.in${post.imageUrl}`,
+    author: {
+      "@type": "Person",
+      name: "Gaurav Pandey",
+      jobTitle: "Director, Casa De Bello Pvt Ltd",
+    },
+  })),
 };
 
 const featuredPost = BLOG_POSTS[0];
-const remainingPosts = BLOG_POSTS;
+const remainingPosts = BLOG_POSTS.slice(1);
 ---
 
 <Layout
-  title="Blog & Travel Guides | Whispering Pines Resort Mukteshwar"
-  description="Explore travel guides, Kumaon heritage stories, seasonal updates, and insider tips from Whispering Pines Resort by Casa De Bello in Ramgarh near Mukteshwar."
+  title={pageTitle}
+  description={pageDescription}
+  canonical={canonicalUrl}
+  breadcrumbs={breadcrumbs}
 >
   <div
     class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]"

@@ -1,0 +1,680 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { RESORT_CONTACT, generateWhatsAppLink } from '../../data';
+
+const pageTitle = "Himalayan View Resort in Uttarakhand That Will Make You Forget the City Exists — Casa De Bello Whispering Pines, Ramgarh (2026)";
+const pageDescription = "The best Himalayan view resort in Uttarakhand — Whispering Pines by Casa De Bello, Ramgarh. 180° Nanda Devi views, pool, villa, 150 Mbps Wi-Fi. Book direct on WhatsApp. Best price guaranteed.";
+const canonicalUrl = "https://whisperingpinesresort.in/blog/himalayan-view-resort-uttarakhand/";
+const ogImageUrl = "https://whisperingpinesresort.in/images/Himalayan-View-Resort-in-Uttarakhand/himalayan-view-resort-uttarakhand-whispering-pines-casa-de-bello-ramgarh-2026.avif";
+const ogAltText = "Himalayan view resort Uttarakhand — 180° Nanda Devi panorama at Whispering Pines by Casa De Bello, Malla Ramgarh 2026";
+
+const breadcrumbs = [
+  { name: "Home", item: "https://whisperingpinesresort.in/" },
+  { name: "Blog", item: "https://whisperingpinesresort.in/blog/" },
+  { name: "Himalayan View Resort in Uttarakhand", item: canonicalUrl }
+];
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+  "alternateName": [
+    "Whispering Pines Resort by Casa De Bello",
+    "Whispering Pines Resort Mukteshwar",
+    "Whispering Pines Resort near Mukteshwar",
+    "Whispering Pines by Casa De Bello"
+  ],
+  "url": "https://whisperingpinesresort.in/"
+};
+
+const speakableSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": pageTitle,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".aeo-direct-answer", "#aeo-quick-facts", "#himalayan-view-comparison"]
+  }
+};
+
+const geoPlaceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Place",
+  "name": "Whispering Pines Resort — Malla Ramgarh Ridge, Uttarakhand",
+  "description": "Premier Himalayan view resort estate in Malla Ramgarh at 1,780 metres on the Bhowali-Ramgarh-Mukteshwar corridor, delivering 180° unobstructed panorama of Nanda Devi (7,816m) and Trishul (7,120m) from every room, balcony, pool deck, and orchard lawn.",
+  "hasMap": "https://maps.app.goo.gl/hieeCQ2Ymc1vKNxj7",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 29.4264111,
+    "longitude": 79.5505355,
+    "elevation": "1780"
+  },
+  "geoContains": [
+    { "@type": "Place", "name": "Nanda Devi Peak viewpoint", "description": "7,816m — highest peak entirely within India, visible year-round from property" },
+    { "@type": "Place", "name": "Mukteshwar Dham Temple", "distance": "25 km" },
+    { "@type": "Place", "name": "Kainchi Dham Neem Karoli Baba Ashram", "distance": "22 km" },
+    { "@type": "Place", "name": "Bhalu Gaad Waterfall", "distance": "12 km" },
+    { "@type": "Place", "name": "Nainital Lake", "distance": "35 km" }
+  ]
+};
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
+  "headline": "Himalayan View Resort in Uttarakhand That Will Make You Forget the City Exists",
+  "description": pageDescription,
+  "image": { "@type": "ImageObject", "url": ogImageUrl, "width": 1200, "height": 630 },
+  "datePublished": "2026-08-30T10:00:00+05:30",
+  "dateModified": "2026-08-30T10:00:00+05:30",
+  "author": {
+    "@type": "Person",
+    "name": "Gaurav Pandey",
+    "jobTitle": "Director, Casa De Bello Pvt Ltd",
+    "url": "https://casadebello.com/",
+    "sameAs": ["https://casadebello.com/"]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Whispering Pines Resort by Casa De Bello",
+    "url": "https://whisperingpinesresort.in",
+    "logo": { "@type": "ImageObject", "url": "https://whisperingpinesresort.in/logo.svg" }
+  },
+  "keywords": "Himalayan view resort Uttarakhand, best mountain view resort Uttarakhand, resort with Himalayan view near Nainital, 180 degree Himalayan view resort Ramgarh, Nanda Devi view resort, Mukteshwar view resort"
+};
+
+const resortSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Resort", "Hotel", "LodgingBusiness"],
+  "name": "Whispering Pines Resort by Casa De Bello",
+  "description": "The finest Himalayan view resort in Uttarakhand at 1,780m in Malla Ramgarh. 180° unobstructed Nanda Devi and Trishul panorama from every room, balcony, pool deck. Swimming pool, private villa sleeping 10, 150 Mbps fiber Wi-Fi, stone fireplace rooms, pet-friendly orchards.",
+  "url": "https://whisperingpinesresort.in",
+  "telephone": "+91-7505029696",
+  "email": "booking@whisperingpinesresort.in",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+    "addressLocality": "Ramgarh",
+    "addressRegion": "Uttarakhand",
+    "postalCode": "263137",
+    "addressCountry": "IN"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": "29.4264111", "longitude": "79.5505355" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "388", "bestRating": "5", "worstRating": "1" },
+  "priceRange": "₹3,000 – ₹15,999",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "180° Himalayan Views — Nanda Devi & Trishul", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Swimming Pool at 1,780m altitude", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "150 Mbps Enterprise Fiber Wi-Fi", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Private Villa — 3 bedrooms, sleeps 10", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Stone Fireplace Rooms", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Pet-Friendly Enclosed Gardens", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Private Apple & Peach Orchards", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Kumaoni Farm-to-Table Restaurant", "value": true }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Which is the best Himalayan view resort in Uttarakhand?", "acceptedAnswer": { "@type": "Answer", "text": "Whispering Pines Resort by Casa De Bello in Malla Ramgarh, rated 4.6★ from 388 verified Google reviews, delivers a 180° unobstructed view of Nanda Devi (7,816m) and Trishul (7,120m) from every room, balcony, pool deck, and outdoor lawn at 1,780 metres altitude. It combines this panorama with a swimming pool, private villa sleeping 10, 150 Mbps fiber Wi-Fi, and senior-friendly accessible rooms." } },
+    { "@type": "Question", "name": "Which Himalayan peaks are visible from the resort?", "acceptedAnswer": { "@type": "Answer", "text": "Nanda Devi (7,816m — the highest peak entirely within India), Trishul (7,120m), and the Panchachuli range are all visible from the property. The full Kumaon Himalayan ridgeline spans 180° of the western horizon." } },
+    { "@type": "Question", "name": "Is the Himalayan view visible year-round?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Malla Ramgarh ridge position delivers year-round Himalayan view clarity. Summer mornings (6–10 AM) are clear before afternoon cloud builds. Winter months October to February provide the sharpest views." } },
+    { "@type": "Question", "name": "Does the resort have a swimming pool with Himalayan views?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. An on-site pool surrounded by pine forest — Nanda Devi and Trishul visible above the pool horizon. One of the very few Himalayan view resorts in Uttarakhand at 1,780 metres with a pool alongside 180° mountain panorama." } },
+    { "@type": "Question", "name": "How far is the resort from Mukteshwar?", "acceptedAnswer": { "@type": "Answer", "text": "25 km from Mukteshwar Dham temple — approximately 45 minutes on the Bhowali-Ramgarh-Mukteshwar Road." } },
+    { "@type": "Question", "name": "Is Whispering Pines the same property as Clarks Exotica Ramgarh?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whispering Pines Resort by Casa De Bello is the upgraded successor to Clarks Exotica on the Mukteshwar Road — same iconic Himalayan view address in Malla Ramgarh, now with swimming pool, private villa, 150 Mbps fiber Wi-Fi, and Casa De Bello management." } },
+    { "@type": "Question", "name": "How do I book at the best price?", "acceptedAnswer": { "@type": "Answer", "text": "Book directly via WhatsApp at +91-7505029696. Save up to 20% versus all OTA platforms including MakeMyTrip, Booking.com, and Goibibo." } }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/images/Himalayan-View-Resort-in-Uttarakhand/himalayan-view-resort-uttarakhand-whispering-pines-casa-de-bello-ramgarh-2026.avif" fetchpriority="high" type="image/avif" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:alt" content={ogAltText} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="article:published_time" content="2026-08-30T10:00:00+05:30" />
+    <meta property="article:author" content="Gaurav Pandey — Director, Casa De Bello Pvt Ltd" />
+    <meta property="article:section" content="Himalayan Travel Guide and Hospitality" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(speakableSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(geoPlaceSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(resortSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <article class="bg-[#FAF9F6] text-[#2C3531] font-sans antialiased selection:bg-[#c9a832] selection:text-[#1B3322]">
+
+    <!-- HERO SECTION -->
+    <header class="relative bg-[#1B3322] text-white overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img
+          src="/images/Himalayan-View-Resort-in-Uttarakhand/himalayan-view-resort-uttarakhand-whispering-pines-casa-de-bello-ramgarh-2026.avif"
+          alt="Himalayan view resort Uttarakhand — 180° Nanda Devi and Trishul mountain panorama at Whispering Pines by Casa De Bello, Malla Ramgarh"
+          width="1400"
+          height="800"
+          class="w-full h-full object-cover opacity-40"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1B3322] via-[#1B3322]/60 to-transparent"></div>
+      </div>
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-20 text-center space-y-6">
+        <div class="inline-flex items-center gap-2 bg-[#c9a832]/20 border border-[#c9a832]/40 rounded-full px-4 py-1.5 text-xs sm:text-sm font-semibold text-[#c9a832] backdrop-blur-sm">
+          ★ Official 2026 Himalayan Travel Guide — Uttarakhand
+        </div>
+        <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight max-w-4xl mx-auto">
+          Himalayan View Resort in Uttarakhand That Will Make You Forget the City Exists
+        </h1>
+        <p class="text-base sm:text-xl text-gray-200 font-light max-w-3xl mx-auto leading-relaxed">
+          Casa De Bello Whispering Pines, Malla Ramgarh — 180° Nanda Devi panorama · Private villa · Pool · 150 Mbps Wi-Fi · 4.6★ from 388 reviews
+        </p>
+        <div class="pt-2 flex flex-wrap justify-center gap-3">
+          <a
+            href={generateWhatsAppLink("Himalayan View Resort Uttarakhand Direct Booking")}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-6 py-3.5 bg-[#25D366] text-white font-semibold text-sm rounded-lg hover:bg-[#1EBE5D] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.1 1.523 5.823L0 24l6.344-1.498A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.792 9.792 0 01-5.002-1.374l-.359-.213-3.765.889.953-3.676-.234-.376A9.794 9.794 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/></svg>
+            Book Direct: +91-7505029696
+          </a>
+          <a
+            href="/reviews/"
+            class="inline-flex items-center gap-2 px-6 py-3.5 bg-white/10 border border-white/30 text-white font-medium text-sm rounded-lg hover:bg-white/20 transition-all backdrop-blur-sm"
+          >
+            4.6★ · 388 Reviews
+          </a>
+        </div>
+        <!-- E-E-A-T Author Strip -->
+        <div class="mt-6 inline-flex items-center gap-3 bg-black/30 border border-white/20 rounded-xl px-5 py-3 text-left backdrop-blur-sm">
+          <div class="w-10 h-10 rounded-full bg-[#c9a832] text-[#1B3322] flex items-center justify-center text-sm font-bold shrink-0">GP</div>
+          <div>
+            <div class="text-xs font-bold text-[#c9a832] uppercase tracking-wider">Written by Verified Host</div>
+            <div class="text-sm text-white font-medium">Gaurav Pandey · Director, Casa De Bello Pvt Ltd · On-site since 2023</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+
+      <!-- AEO DIRECT ANSWER BLOCK -->
+      <div class="aeo-direct-answer bg-[#1B3322] text-white rounded-2xl p-6 sm:p-8 border-l-4 border-[#c9a832] mb-12 shadow-lg">
+        <div class="flex items-start gap-3 mb-3">
+          <span class="text-[#c9a832] text-xl">◆</span>
+          <h2 class="text-lg font-bold text-white">Quick Answer: Best Himalayan View Resort in Uttarakhand</h2>
+        </div>
+        <p class="text-gray-200 text-sm sm:text-base leading-relaxed font-light">
+          <strong class="text-white">Whispering Pines Resort by Casa De Bello</strong>, Malla Ramgarh, rated <strong class="text-[#c9a832]">4.6★ from 388 verified Google reviews</strong>, is the best Himalayan view resort in Uttarakhand. Positioned at <strong class="text-white">1,780 metres</strong> on the Bhowali-Ramgarh-Mukteshwar corridor, it delivers a <strong class="text-white">180° unobstructed panorama of Nanda Devi (7,816m) and Trishul (7,120m)</strong> from every room, balcony, pool deck, and lawn — year-round. Features: swimming pool, private villa sleeping 10, 150 Mbps fiber Wi-Fi, stone fireplace rooms, pet-friendly orchards. Book direct on WhatsApp at <strong class="text-[#c9a832]">+91-7505029696</strong>.
+        </p>
+      </div>
+
+      <!-- TABLE OF CONTENTS -->
+      <nav class="bg-[#1B3322]/5 p-6 rounded-2xl border border-[#1B3322]/10 mb-12">
+        <h3 class="text-base font-bold text-[#1B3322] mb-4 flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#c9a832]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/></svg>
+          What Is in This Guide
+        </h3>
+        <ol class="grid grid-cols-1 md:grid-cols-2 gap-1.5 text-xs sm:text-sm text-[#2C3531] list-decimal list-inside">
+          <li><a href="#why-view-is-different" class="hover:text-[#c9a832] transition-colors">Why This Himalayan View Is Different</a></li>
+          <li><a href="#traveller-types" class="hover:text-[#c9a832] transition-colors">Built for Every Traveller Type</a></li>
+          <li><a href="#comparison-table" class="hover:text-[#c9a832] transition-colors">Comparison vs Typical Mountain Resorts</a></li>
+          <li><a href="#accommodation" class="hover:text-[#c9a832] transition-colors">Accommodation — All Room Types</a></li>
+          <li><a href="#amenities" class="hover:text-[#c9a832] transition-colors">Amenities Built Around the View</a></li>
+          <li><a href="#things-to-do" class="hover:text-[#c9a832] transition-colors">Things to Do From the Resort</a></li>
+          <li><a href="#why-ramgarh" class="hover:text-[#c9a832] transition-colors">Why Malla Ramgarh Has the Best View</a></li>
+          <li><a href="#how-to-reach" class="hover:text-[#c9a832] transition-colors">How to Reach</a></li>
+          <li><a href="#direct-booking" class="hover:text-[#c9a832] transition-colors">Direct Booking — Best Price</a></li>
+          <li><a href="#faq" class="hover:text-[#c9a832] transition-colors">Frequently Asked Questions</a></li>
+        </ol>
+      </nav>
+
+      <!-- INTRO -->
+      <section class="prose prose-lg max-w-none text-[#2C3531] space-y-5 mb-14">
+        <p class="text-base sm:text-lg leading-relaxed font-light">
+          There is a specific moment every guest at Whispering Pines Resort describes in their review.
+        </p>
+        <p class="text-base sm:text-lg leading-relaxed font-light">
+          They step out of the car after six hours on the road from Delhi, turn to face the ridge — and stop. Because there, filling the entire sky above the pine canopy, is the Nanda Devi and Trishul Himalayan range. 180°. Unobstructed. Silent. Impossibly large. Not behind a fence or viewed through a tourist crowd — but right there from the private grounds of the property where they will wake up the next morning.
+        </p>
+        <p class="text-base sm:text-lg leading-relaxed font-light">
+          That moment is the reason <a href="/about-whispering-pines-resort-ramgarh/" class="font-semibold text-[#1B3322] hover:text-[#c9a832] underline underline-offset-2">Casa De Bello Whispering Pines Resort</a> in Malla Ramgarh is considered the finest <strong>Himalayan view resort in Uttarakhand</strong> for guests who travel specifically for the mountain panorama — not just a mountain backdrop.
+        </p>
+        <p class="text-base sm:text-lg leading-relaxed font-light">
+          The city you came from — the traffic, the noise, the grey sky — does not just feel far away. It stops existing entirely.
+        </p>
+        <p class="text-base sm:text-lg leading-relaxed font-light">
+          Rated 4.6★ from 388 verified Google reviews. Located on the Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh, Nainital district, at 1,780 metres altitude. A 4-star boutique mountain resort with 25 premium rooms, a standalone <a href="/private-villas-near-nainital/" class="font-semibold text-[#1B3322] hover:text-[#c9a832] underline underline-offset-2">private villa sleeping up to 10</a>, an on-site swimming pool, 150 Mbps enterprise fiber optic Wi-Fi, and 180° panoramic views of the Nanda Devi and Trishul Himalayan peaks from every single room, balcony, terrace, and outdoor lawn.
+        </p>
+
+        <!-- Quick Stats -->
+        <div id="aeo-quick-facts" class="grid grid-cols-2 sm:grid-cols-4 gap-4 my-8 not-prose">
+          <div class="bg-[#1B3322] text-white rounded-xl p-4 text-center border border-[#c9a832]/20">
+            <div class="text-2xl font-bold text-[#c9a832]">4.6★</div>
+            <div class="text-xs font-semibold mt-1 uppercase tracking-wide">Google Rating</div>
+            <div class="text-[10px] text-gray-400 mt-0.5">388 reviews</div>
+          </div>
+          <div class="bg-[#1B3322] text-white rounded-xl p-4 text-center border border-[#c9a832]/20">
+            <div class="text-2xl font-bold text-[#c9a832]">1,780m</div>
+            <div class="text-xs font-semibold mt-1 uppercase tracking-wide">Altitude</div>
+            <div class="text-[10px] text-gray-400 mt-0.5">Malla Ramgarh ridge</div>
+          </div>
+          <div class="bg-[#1B3322] text-white rounded-xl p-4 text-center border border-[#c9a832]/20">
+            <div class="text-2xl font-bold text-[#c9a832]">180°</div>
+            <div class="text-xs font-semibold mt-1 uppercase tracking-wide">Himalayan Panorama</div>
+            <div class="text-[10px] text-gray-400 mt-0.5">Nanda Devi · Trishul</div>
+          </div>
+          <div class="bg-[#1B3322] text-white rounded-xl p-4 text-center border border-[#c9a832]/20">
+            <div class="text-2xl font-bold text-[#c9a832]">25+</div>
+            <div class="text-xs font-semibold mt-1 uppercase tracking-wide">Premium Rooms</div>
+            <div class="text-[10px] text-gray-400 mt-0.5">+ Private Villa</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY VIEW IS DIFFERENT -->
+      <section id="why-view-is-different" class="mb-14 scroll-mt-24">
+        <h2 class="text-2xl sm:text-3xl font-bold text-[#1B3322] mb-6 border-b border-[#c9a832]/30 pb-3">Why the Himalayan View Here Is Different from Every Other Property on the Mukteshwar Road</h2>
+        <p class="text-base leading-relaxed text-gray-700 mb-5 font-light">Not every property that calls itself a <strong>Himalayan view resort in Uttarakhand</strong> delivers a genuine Himalayan view. The distinction matters enormously when the view is the primary reason for the trip. The view at Whispering Pines differs in three specific, verifiable ways.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="bg-white rounded-2xl p-6 border border-[#EAE8E3] shadow-sm">
+            <div class="text-3xl mb-3">🏔️</div>
+            <h3 class="font-bold text-[#1B3322] text-base mb-2">Ridge Position — 1,780m Unobstructed</h3>
+            <p class="text-sm text-gray-600 leading-relaxed font-light">The property sits on the Malla Ramgarh ridge at 1,780 metres — one of the highest ridgeline positions along the entire Bhowali-Ramgarh-Mukteshwar corridor. No buildings, roads, or secondary ridges stand between the property terraces and the Himalayan range. The sightline is completely clean from orchard grass to Nanda Devi at 7,816 metres.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-[#EAE8E3] shadow-sm">
+            <div class="text-3xl mb-3">🌅</div>
+            <h3 class="font-bold text-[#1B3322] text-base mb-2">180 Degrees — Not a Window View</h3>
+            <p class="text-sm text-gray-600 leading-relaxed font-light">Most Himalayan view resorts in Uttarakhand frame the mountain through a large window — one composition, one fixed vantage point. The view at Whispering Pines is experienced across the full 180 degrees of the western horizon from every room balcony, outdoor terrace, pool deck, and orchard lawn. You do not walk to a specific spot to see the view. You live inside it.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-[#EAE8E3] shadow-sm">
+            <div class="text-3xl mb-3">📅</div>
+            <h3 class="font-bold text-[#1B3322] text-base mb-2">Year-Round Clarity</h3>
+            <p class="text-sm text-gray-600 leading-relaxed font-light">The Malla Ramgarh ridge catches prevailing clear air from the west. Nanda Devi is visible year-round — not only in the post-monsoon winter window that most Himalayan view resorts depend on. Summer mornings (6–10 AM) deliver clear peak visibility. Winter October–February: snow-lit peaks against deep blue sky at their most dramatic.</p>
+          </div>
+        </div>
+        <!-- Peaks visible -->
+        <div class="bg-[#1B3322]/5 rounded-2xl p-6 border border-[#1B3322]/10">
+          <h4 class="font-bold text-[#1B3322] mb-4 text-sm uppercase tracking-wider">Himalayan Peaks Visible from the Property</h4>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <li class="flex items-start gap-3 bg-white rounded-xl p-3 border border-[#EAE8E3]">
+              <span class="text-[#c9a832] font-bold text-lg mt-0.5">▲</span>
+              <div><strong class="text-[#1B3322] text-sm">Nanda Devi — 7,816m</strong><p class="text-xs text-gray-500 mt-0.5 font-light">Highest peak entirely within India — visible year-round</p></div>
+            </li>
+            <li class="flex items-start gap-3 bg-white rounded-xl p-3 border border-[#EAE8E3]">
+              <span class="text-[#c9a832] font-bold text-lg mt-0.5">▲</span>
+              <div><strong class="text-[#1B3322] text-sm">Trishul — 7,120m</strong><p class="text-xs text-gray-500 mt-0.5 font-light">Visible year-round from every balcony</p></div>
+            </li>
+            <li class="flex items-start gap-3 bg-white rounded-xl p-3 border border-[#EAE8E3]">
+              <span class="text-[#c9a832] font-bold text-lg mt-0.5">▲</span>
+              <div><strong class="text-[#1B3322] text-sm">Panchachuli Range — 6,904m</strong><p class="text-xs text-gray-500 mt-0.5 font-light">Visible on clear winter mornings</p></div>
+            </li>
+            <li class="flex items-start gap-3 bg-white rounded-xl p-3 border border-[#EAE8E3]">
+              <span class="text-[#c9a832] font-bold text-lg mt-0.5">▲</span>
+              <div><strong class="text-[#1B3322] text-sm">Full Kumaon Himalayan Ridgeline</strong><p class="text-xs text-gray-500 mt-0.5 font-light">Uninterrupted 180 degree western horizon</p></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- TRAVELLER TYPES -->
+      <section id="traveller-types" class="mb-14 scroll-mt-24">
+        <h2 class="text-2xl sm:text-3xl font-bold text-[#1B3322] mb-6 border-b border-[#c9a832]/30 pb-3">The Best Himalayan View Resort in Uttarakhand — Built for Every Traveller</h2>
+        <p class="text-base leading-relaxed text-gray-700 mb-8 font-light"><a href="/about-whispering-pines-resort-ramgarh/" class="font-semibold text-[#1B3322] hover:text-[#c9a832] underline underline-offset-2">Whispering Pines by Casa De Bello</a> is built for every kind of guest who makes the journey to the mountains — without a single compromise on the view, the service, or the amenities that justify the drive.</p>
+
+        <div class="space-y-6">
+          <!-- Families -->
+          <div class="bg-white rounded-2xl border border-[#EAE8E3] shadow-sm overflow-hidden">
+            <div class="bg-[#1B3322]/5 px-6 py-4 border-b border-[#EAE8E3]">
+              <h3 class="font-bold text-[#1B3322] text-lg">🏠 For Families — Including Multi-Generational Groups</h3>
+            </div>
+            <div class="p-6">
+              <p class="text-sm text-gray-600 leading-relaxed mb-4 font-light">A family journey to a Himalayan view resort in Uttarakhand requires more than a beautiful view. It requires capacity for every generation, accessibility for senior guests, and property-level activities for all ages.</p>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0 mt-0.5">✓</span><span class="font-light">25 premium rooms + Private Villa sleeping 10 — multi-generational group at one address, every room with 180° Himalayan view</span></li>
+                <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0 mt-0.5">✓</span><span class="font-light">Ground floor Family Twin Rooms with step-free direct lawn and orchard access — senior-friendly, no internal staircases</span></li>
+                <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0 mt-0.5">✓</span><span class="font-light">Swimming pool surrounded by pine forest — private, safe for children, Himalayan peaks visible above the pool horizon</span></li>
+                <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0 mt-0.5">✓</span><span class="font-light">Multi-cuisine restaurant with customised meal plans for children, Jain, and Satvik diets</span></li>
+                <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0 mt-0.5">✓</span><span class="font-light">Pet-friendly enclosed gardens — families travelling with dogs accommodated at zero extra charge</span></li>
+              </ul>
+              <a href={generateWhatsAppLink("Family Stay — Himalayan View Resort Uttarakhand")} target="_blank" rel="noopener noreferrer" class="inline-block mt-5 px-4 py-2.5 bg-[#25D366] text-white text-xs font-semibold rounded-lg hover:bg-[#1EBE5D] transition-all">Reserve Family Stay — WhatsApp +91-7505029696</a>
+            </div>
+          </div>
+
+          <!-- Couples -->
+          <div class="bg-white rounded-2xl border border-[#EAE8E3] shadow-sm overflow-hidden">
+            <div class="bg-[#1B3322]/5 px-6 py-4 border-b border-[#EAE8E3]">
+              <h3 class="font-bold text-[#1B3322] text-lg">💑 For Couples and Honeymooners</h3>
+            </div>
+            <div class="p-6">
+              <p class="text-sm text-gray-600 leading-relaxed mb-4 font-light">Waking up to Nanda Devi through a glass skylight ceiling. A private bonfire on an exclusive orchard lawn with the Himalayan ridge going golden at sunset. These are the experiences that make Whispering Pines the right Himalayan view resort in Uttarakhand for a honeymoon.</p>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0 mt-0.5">✓</span><span class="font-light">Deluxe Skylight Suite — glass ceiling for star-gazing, Nanda Devi visible from the bed at dawn, private cedar pine valley-view deck, rain shower bathroom</span></li>
+                <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0 mt-0.5">✓</span><span class="font-light">Private Villa — standalone stone fireplace living room, exclusive orchard yard, complete seclusion with 180° Himalayan panorama</span></li>
+                <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0 mt-0.5">✓</span><span class="font-light">Private balcony breakfast — fresh orchard fruit and Kumaoni specialities served at sunrise as peaks catch first light</span></li>
+                <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0 mt-0.5">✓</span><span class="font-light">Nightly bonfire on private lawns — Himalayan ridgeline visible as silver silhouette after dark</span></li>
+              </ul>
+              <a href={generateWhatsAppLink("Honeymoon Stay — Himalayan View Resort Uttarakhand")} target="_blank" rel="noopener noreferrer" class="inline-block mt-5 px-4 py-2.5 bg-[#25D366] text-white text-xs font-semibold rounded-lg hover:bg-[#1EBE5D] transition-all">Reserve Honeymoon Stay — WhatsApp +91-7505029696</a>
+            </div>
+          </div>
+
+          <!-- Workcation -->
+          <div class="bg-white rounded-2xl border border-[#EAE8E3] shadow-sm overflow-hidden">
+            <div class="bg-[#1B3322]/5 px-6 py-4 border-b border-[#EAE8E3]">
+              <h3 class="font-bold text-[#1B3322] text-lg">💻 For Remote Workers and Workcation Guests</h3>
+            </div>
+            <div class="p-6">
+              <p class="text-sm text-gray-600 leading-relaxed mb-4 font-light">Working from a genuine <strong>Himalayan view resort in Uttarakhand</strong> — 150 Mbps fiber optic, stone-walled quiet room, Nanda Devi visible from your desk — is the workcation experience most Indian remote workers have been searching for since 2020.</p>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0 mt-0.5">✓</span><span class="font-light">150 Mbps enterprise fiber optic Wi-Fi — full property coverage, no throttling, no shared bandwidth</span></li>
+                <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0 mt-0.5">✓</span><span class="font-light">Quiet stone-walled rooms with natural light and 180° Himalayan panorama — the most productive desk view in Uttarakhand</span></li>
+                <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0 mt-0.5">✓</span><span class="font-light">Extended stay workcation packages — 4 to 7 nights with customised meal plans</span></li>
+                <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0 mt-0.5">✓</span><span class="font-light">24-hour in-room dining for flexible remote work schedules</span></li>
+              </ul>
+              <a href={generateWhatsAppLink("Workcation — Himalayan View Resort Uttarakhand")} target="_blank" rel="noopener noreferrer" class="inline-block mt-5 px-4 py-2.5 bg-[#25D366] text-white text-xs font-semibold rounded-lg hover:bg-[#1EBE5D] transition-all">Reserve Workcation Stay — WhatsApp +91-7505029696</a>
+            </div>
+          </div>
+
+          <!-- Corporate -->
+          <div class="bg-white rounded-2xl border border-[#EAE8E3] shadow-sm overflow-hidden">
+            <div class="bg-[#1B3322]/5 px-6 py-4 border-b border-[#EAE8E3]">
+              <h3 class="font-bold text-[#1B3322] text-lg">🏢 For Corporate Groups and Leadership Offsites</h3>
+            </div>
+            <div class="p-6">
+              <p class="text-sm text-gray-600 leading-relaxed mb-4 font-light">A leadership retreat at a genuine Himalayan view resort in Uttarakhand removes the team from the city entirely and places them in a physical environment that recalibrates perspective with the immediacy of mountains.</p>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0 mt-0.5">✓</span><span class="font-light">25 rooms + Private Villa — accommodates 35 or more guests at one address</span></li>
+                <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0 mt-0.5">✓</span><span class="font-light">Conference and banquet hall for up to 30 delegates with projector and whiteboard</span></li>
+                <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0 mt-0.5">✓</span><span class="font-light">150 Mbps fiber optic Wi-Fi with full outdoor coverage for hybrid offsite sessions</span></li>
+                <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0 mt-0.5">✓</span><span class="font-light">180° Himalayan panorama from the conference terrace — no motivational poster required</span></li>
+              </ul>
+              <a href={generateWhatsAppLink("Corporate Offsite — Himalayan View Resort Uttarakhand")} target="_blank" rel="noopener noreferrer" class="inline-block mt-5 px-4 py-2.5 bg-[#25D366] text-white text-xs font-semibold rounded-lg hover:bg-[#1EBE5D] transition-all">Enquire Corporate Rates — WhatsApp +91-7505029696</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMPARISON TABLE -->
+      <section id="comparison-table" class="mb-14 scroll-mt-24">
+        <h2 id="himalayan-view-comparison" class="text-2xl sm:text-3xl font-bold text-[#1B3322] mb-6 border-b border-[#c9a832]/30 pb-3">What Makes This the Best Himalayan View Resort in Uttarakhand</h2>
+        <p class="text-base leading-relaxed text-gray-700 mb-8 font-light">The Himalayan view is the defining feature — but it is not the only one. What separates Whispering Pines from every other Himalayan view resort in Uttarakhand is the combination of view quality, amenities, connectivity, and service that no single competitor currently offers together.</p>
+        <div class="overflow-x-auto rounded-2xl border border-[#EAE8E3] shadow-sm">
+          <table class="w-full text-sm min-w-[600px]">
+            <thead>
+              <tr class="bg-[#1B3322] text-white">
+                <th class="text-left px-5 py-4 font-semibold text-xs uppercase tracking-wider">Feature</th>
+                <th class="text-center px-5 py-4 font-semibold text-xs uppercase tracking-wider text-[#c9a832]">Whispering Pines</th>
+                <th class="text-center px-5 py-4 font-semibold text-xs uppercase tracking-wider text-gray-300">Typical Mountain Resort</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white"><td class="px-5 py-3.5 font-medium text-[#1B3322] border-t border-[#EAE8E3]">View quality</td><td class="px-5 py-3.5 text-center text-green-700 font-medium border-t border-[#EAE8E3]">180° unobstructed — every room, terrace, pool, lawn</td><td class="px-5 py-3.5 text-center text-gray-500 font-light border-t border-[#EAE8E3]">Partial — specific rooms or single viewpoint only</td></tr>
+              <tr class="bg-[#FAF9F6]"><td class="px-5 py-3.5 font-medium text-[#1B3322] border-t border-[#EAE8E3]">View reliability</td><td class="px-5 py-3.5 text-center text-green-700 font-medium border-t border-[#EAE8E3]">Year-round — ridge position guarantees morning clarity</td><td class="px-5 py-3.5 text-center text-gray-500 font-light border-t border-[#EAE8E3]">Seasonal — cloud-dependent at lower altitudes</td></tr>
+              <tr class="bg-white"><td class="px-5 py-3.5 font-medium text-[#1B3322] border-t border-[#EAE8E3]">Swimming pool</td><td class="px-5 py-3.5 text-center text-green-700 font-medium border-t border-[#EAE8E3]">On-site at 1,780m — peaks visible from pool deck</td><td class="px-5 py-3.5 text-center text-gray-500 font-light border-t border-[#EAE8E3]">Rare at this altitude in Nainital district</td></tr>
+              <tr class="bg-[#FAF9F6]"><td class="px-5 py-3.5 font-medium text-[#1B3322] border-t border-[#EAE8E3]">Private Villa</td><td class="px-5 py-3.5 text-center text-green-700 font-medium border-t border-[#EAE8E3]">3 bedrooms, sleeps 10, full resort services</td><td class="px-5 py-3.5 text-center text-gray-500 font-light border-t border-[#EAE8E3]">Not available</td></tr>
+              <tr class="bg-white"><td class="px-5 py-3.5 font-medium text-[#1B3322] border-t border-[#EAE8E3]">Wi-Fi speed</td><td class="px-5 py-3.5 text-center text-green-700 font-medium border-t border-[#EAE8E3]">150 Mbps enterprise fiber — full property coverage</td><td class="px-5 py-3.5 text-center text-gray-500 font-light border-t border-[#EAE8E3]">Shared bandwidth, typically 10–25 Mbps</td></tr>
+              <tr class="bg-[#FAF9F6]"><td class="px-5 py-3.5 font-medium text-[#1B3322] border-t border-[#EAE8E3]">Pet-friendly</td><td class="px-5 py-3.5 text-center text-green-700 font-medium border-t border-[#EAE8E3]">Fully — enclosed lawns, forest trails, zero charges</td><td class="px-5 py-3.5 text-center text-gray-500 font-light border-t border-[#EAE8E3]">Restricted access or hidden charges</td></tr>
+              <tr class="bg-white"><td class="px-5 py-3.5 font-medium text-[#1B3322] border-t border-[#EAE8E3]">Google rating</td><td class="px-5 py-3.5 text-center text-green-700 font-medium border-t border-[#EAE8E3]">4.6★ from 388 verified reviews</td><td class="px-5 py-3.5 text-center text-gray-500 font-light border-t border-[#EAE8E3]">Variable</td></tr>
+              <tr class="bg-[#FAF9F6]"><td class="px-5 py-3.5 font-medium text-[#1B3322] border-t border-[#EAE8E3]">Direct booking</td><td class="px-5 py-3.5 text-center text-green-700 font-medium border-t border-[#EAE8E3]">WhatsApp — save 20% vs OTAs</td><td class="px-5 py-3.5 text-center text-gray-500 font-light border-t border-[#EAE8E3]">OTA-dependent pricing</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- GALLERY IMAGES -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-14">
+        <div class="rounded-2xl overflow-hidden border border-[#EAE8E3] shadow-sm">
+          <img
+            src="/images/Himalayan-View-Resort-in-Uttarakhand/Himalayan-View Resort-Uttarakhand with-Private-Villa.avif"
+            alt="Private Villa with 180° Himalayan snow peak views at Whispering Pines Resort Ramgarh Uttarakhand"
+            class="w-full h-56 object-cover"
+            loading="lazy"
+            width="600"
+            height="400"
+          />
+          <p class="text-xs text-center text-gray-500 py-2 px-3 font-light">Private Villa — exclusive stone and cedar estate with 180° Himalayan view</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-[#EAE8E3] shadow-sm">
+          <img
+            src="/images/Himalayan-View-Resort-in-Uttarakhand/Nanda-Devi-the-Best-Himalayan-View-Resort-in-Uttarakhand.png (2026).avif"
+            alt="Nanda Devi (7,816m) peak view from Whispering Pines — best Himalayan view resort in Uttarakhand 2026"
+            class="w-full h-56 object-cover"
+            loading="lazy"
+            width="600"
+            height="400"
+          />
+          <p class="text-xs text-center text-gray-500 py-2 px-3 font-light">Nanda Devi (7,816m) — the highest peak in India, visible year-round from the property</p>
+        </div>
+      </div>
+
+      <!-- ACCOMMODATION -->
+      <section id="accommodation" class="mb-14 scroll-mt-24">
+        <h2 class="text-2xl sm:text-3xl font-bold text-[#1B3322] mb-6 border-b border-[#c9a832]/30 pb-3">Accommodation — Every Room Frames the Himalayan Panorama</h2>
+        <p class="text-base leading-relaxed text-gray-700 mb-8 font-light">Every room is positioned to deliver the 180° Himalayan view. The differentiation is in luxury level, capacity, and exclusive features — not view quality. See the full <a href="/suites-cottages-ramgarh-resort/" class="font-semibold text-[#1B3322] hover:text-[#c9a832] underline underline-offset-2">rooms and suites listing</a>.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-2xl border border-[#EAE8E3] shadow-sm overflow-hidden flex flex-col">
+            <img
+              src="/images/villa_in_nanital.avif"
+              alt="Private Villa 3 BHK luxury stay with 180° Himalayan view at Whispering Pines Resort Ramgarh"
+              width="600"
+              height="350"
+              class="w-full h-48 object-cover"
+              loading="lazy"
+            />
+            <div class="bg-[#1B3322]/5 px-6 py-4 border-b border-[#EAE8E3]"><h3 class="font-bold text-[#1B3322] text-base">🏡 Private Villa (3 BHK + Loft)</h3><p class="text-xs text-gray-500">Up to 10 guests · 180° from orchard yard + all windows</p></div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-semibold text-[#c9a832] uppercase tracking-wider mb-3">Full estate — exclusive nightly resort-service booking</p>
+                <ul class="space-y-1.5 text-sm text-gray-700 mb-4">
+                  <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0">•</span><span class="font-light">3 grand king bedrooms + premium loft — sleeps up to 10</span></li>
+                  <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0">•</span><span class="font-light">Stone fireplace living room — Nanda Devi through picture window</span></li>
+                  <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0">•</span><span class="font-light">Exclusive private apple and peach orchard yard</span></li>
+                  <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0">•</span><span class="font-light">Outdoor BBQ grill and bonfire pit — stargazing at 1,780m</span></li>
+                </ul>
+              </div>
+              <a href="/private-villas-near-nainital/" class="text-xs font-semibold text-[#1B3322] hover:text-[#c9a832] underline underline-offset-2">View villa details →</a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-[#EAE8E3] shadow-sm overflow-hidden flex flex-col">
+            <img
+              src="/images/Delux_room_Whispering_pines_mukteshwar.avif"
+              alt="Deluxe Skylight Suite with glass stargazing ceiling and Himalayan mountain views at Whispering Pines Resort"
+              width="600"
+              height="350"
+              class="w-full h-48 object-cover"
+              loading="lazy"
+            />
+            <div class="bg-[#1B3322]/5 px-6 py-4 border-b border-[#EAE8E3]"><h3 class="font-bold text-[#1B3322] text-base">🌟 Deluxe Skylight Suite</h3><p class="text-xs text-gray-500">2–3 guests · 180° from deck + skylight at dawn</p></div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-semibold text-[#c9a832] uppercase tracking-wider mb-3">Nanda Devi visible from the pillow at first light</p>
+                <ul class="space-y-1.5 text-sm text-gray-700 mb-4">
+                  <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0">•</span><span class="font-light">Glass skylight ceiling — Himalayan peaks visible from bed</span></li>
+                  <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0">•</span><span class="font-light">Private cedar pine deck — morning tea with 180° panorama</span></li>
+                  <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0">•</span><span class="font-light">Rain shower bathroom with mountain views</span></li>
+                  <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0">•</span><span class="font-light">Radiator heating for winter mountain stays</span></li>
+                </ul>
+              </div>
+              <a href="/suites-cottages-ramgarh-resort/" class="text-xs font-semibold text-[#1B3322] hover:text-[#c9a832] underline underline-offset-2">View suite details →</a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-[#EAE8E3] shadow-sm overflow-hidden flex flex-col">
+            <img
+              src="/images/Family_Twin_Room_Near_nainital.avif"
+              alt="Ground floor Family Twin Room with direct orchard garden access and Himalayan views at Whispering Pines"
+              width="600"
+              height="350"
+              class="w-full h-48 object-cover"
+              loading="lazy"
+            />
+            <div class="bg-[#1B3322]/5 px-6 py-4 border-b border-[#EAE8E3]"><h3 class="font-bold text-[#1B3322] text-base">👨‍👩‍👧 Family Twin Room</h3><p class="text-xs text-gray-500">2 adults + children · Step-free garden access</p></div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-semibold text-[#c9a832] uppercase tracking-wider mb-3">Senior-friendly ground floor — direct orchard access</p>
+                <ul class="space-y-1.5 text-sm text-gray-700 mb-4">
+                  <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0">•</span><span class="font-light">Step-free direct access to lawn and orchard</span></li>
+                  <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0">•</span><span class="font-light">Full Himalayan view from private garden at ground level</span></li>
+                  <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0">•</span><span class="font-light">Exposed old-stone brick archways — Kumaoni heritage character</span></li>
+                </ul>
+              </div>
+              <a href="/suites-cottages-ramgarh-resort/" class="text-xs font-semibold text-[#1B3322] hover:text-[#c9a832] underline underline-offset-2">View room details →</a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-[#EAE8E3] shadow-sm overflow-hidden flex flex-col">
+            <img
+              src="/images/Group_booking_nainital_resort.avif"
+              alt="Group Cottage cedar wood interiors with mountain views at Whispering Pines Resort Ramgarh"
+              width="600"
+              height="350"
+              class="w-full h-48 object-cover"
+              loading="lazy"
+            />
+            <div class="bg-[#1B3322]/5 px-6 py-4 border-b border-[#EAE8E3]"><h3 class="font-bold text-[#1B3322] text-base">🪵 Group Cottage Room</h3><p class="text-xs text-gray-500">2 guests · Mountain valley + Himalayan horizon</p></div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-semibold text-[#c9a832] uppercase tracking-wider mb-3">Cedar wood pine interiors — authentic mountain character</p>
+                <ul class="space-y-1.5 text-sm text-gray-700 mb-4">
+                  <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0">•</span><span class="font-light">Cedar wood interiors with Himalayan valley views</span></li>
+                  <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0">•</span><span class="font-light">High-capacity heaters for winter group travel</span></li>
+                  <li class="flex items-start gap-2"><span class="text-[#c9a832] shrink-0">•</span><span class="font-light">Ideal for extended workcation stays</span></li>
+                </ul>
+              </div>
+              <a href="/suites-cottages-ramgarh-resort/" class="text-xs font-semibold text-[#1B3322] hover:text-[#c9a832] underline underline-offset-2">View room details →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AMENITIES -->
+      <section id="amenities" class="mb-14 scroll-mt-24">
+        <h2 class="text-2xl sm:text-3xl font-bold text-[#1B3322] mb-6 border-b border-[#c9a832]/30 pb-3">Amenities — Built Around the Himalayan View</h2>
+        <p class="text-base leading-relaxed text-gray-700 mb-8 font-light">Every amenity at Whispering Pines is positioned to maximise the 180° panorama. See the <a href="/resort-amenities-mukteshwar/" class="font-semibold text-[#1B3322] hover:text-[#c9a832] underline underline-offset-2">complete amenities list</a>.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div class="bg-white rounded-2xl border border-[#EAE8E3] p-6 shadow-sm"><div class="text-3xl mb-3">🏊</div><h3 class="font-bold text-[#1B3322] text-base mb-2">Swimming Pool — Peaks Reflected in the Water</h3><p class="text-sm text-gray-600 leading-relaxed font-light">The pool sits within pine forest and private orchards — positioned so Nanda Devi and Trishul are visible above the pool horizon. One of the very few Himalayan view resorts in Uttarakhand at this altitude with a pool alongside 180° mountain panorama.</p></div>
+          <div class="bg-white rounded-2xl border border-[#EAE8E3] p-6 shadow-sm"><div class="text-3xl mb-3">🔥</div><h3 class="font-bold text-[#1B3322] text-base mb-2">Stone Fireplace Rooms — Nanda Devi Through the Window</h3><p class="text-sm text-gray-600 leading-relaxed font-light">Every fireplace room is positioned so the crackling cedar log fire and the Himalayan panorama occupy the same sightline — warm light in the foreground, snow peaks in the distance. The definitive winter mountain resort experience.</p></div>
+          <div class="bg-white rounded-2xl border border-[#EAE8E3] p-6 shadow-sm"><div class="text-3xl mb-3">🌌</div><h3 class="font-bold text-[#1B3322] text-base mb-2">Bonfire and Stargazing — 1,780 Metres of Dark Sky</h3><p class="text-sm text-gray-600 leading-relaxed font-light">Cedar log bonfires set up every evening on private grounds. At 1,780 metres, far from urban light pollution, the Milky Way is visible on clear nights. The bonfire pit faces west — Nanda Devi transitions from golden alpenglow to silver silhouette as the evening progresses.</p></div>
+          <div class="bg-white rounded-2xl border border-[#EAE8E3] p-6 shadow-sm"><div class="text-3xl mb-3">🍽️</div><h3 class="font-bold text-[#1B3322] text-base mb-2">Farm-to-Table Dining — Breakfast with Nanda Devi</h3><p class="text-sm text-gray-600 leading-relaxed font-light">The restaurant terrace faces the Himalayan range. Breakfast every morning with Nanda Devi and Trishul as the backdrop — fresh Kumaoni mandua roti, kafuli, orchard fruit, and mountain honey. Pure vegetarian and Satvik meals available for Kainchi Dham pilgrims.</p></div>
+        </div>
+      </section>
+
+      <!-- MID-ARTICLE CRO CARD -->
+      <div class="bg-[#1B3322] text-white rounded-2xl p-7 border border-[#c9a832]/30 flex flex-col sm:flex-row items-center justify-between gap-5 mb-14 shadow-xl">
+        <div>
+          <p class="text-xs font-mono uppercase tracking-[0.2em] text-[#c9a832] mb-1">Direct Booking Guarantee</p>
+          <h3 class="text-lg font-bold text-white mb-1">Save 20% — Book Direct on WhatsApp</h3>
+          <p class="text-xs text-gray-300 font-light">Bypass OTA commissions. Best price guaranteed. Priority room upgrade. Instant response.</p>
+        </div>
+        <a href={generateWhatsAppLink("Himalayan View Resort Uttarakhand Direct Booking")} target="_blank" rel="noopener noreferrer" class="shrink-0 px-6 py-3.5 bg-[#c9a832] hover:bg-yellow-400 text-[#1B3322] font-bold text-sm rounded-lg transition-all shadow-md whitespace-nowrap">WhatsApp +91-7505029696</a>
+      </div>
+
+      <!-- THINGS TO DO -->
+      <section id="things-to-do" class="mb-14 scroll-mt-24">
+        <h2 class="text-2xl sm:text-3xl font-bold text-[#1B3322] mb-6 border-b border-[#c9a832]/30 pb-3">Things to Do — From Your Himalayan View Basecamp</h2>
+        <p class="text-base leading-relaxed text-gray-700 mb-8 font-light">Whispering Pines serves as the ideal basecamp for the entire Kumaon corridor. The in-house travel desk arranges cabs, guides, and itineraries. See all <a href="/things-to-do-near-mukteshwar/" class="font-semibold text-[#1B3322] hover:text-[#c9a832] underline underline-offset-2">local experiences near Mukteshwar</a>.</p>
+        <div class="space-y-5">
+          <div class="flex gap-5 bg-white rounded-2xl p-5 border border-[#EAE8E3] shadow-sm"><div class="text-3xl shrink-0">🛕</div><div><div class="flex flex-wrap items-center gap-3 mb-1.5"><h3 class="font-bold text-[#1B3322] text-base">Mukteshwar Dham Temple</h3><span class="text-xs text-[#c9a832] font-mono bg-[#c9a832]/10 px-2 py-0.5 rounded-full">25 km · ~45 min</span></div><p class="text-sm text-gray-600 font-light leading-relaxed">A 350-year-old Shiva temple on a rocky cliff summit at 2,286 metres with the full Himalayan range as its backdrop. Travel desk coordinates early morning departures — arriving before 8 AM for silence and mountain views before day-trippers arrive.</p></div></div>
+          <div class="flex gap-5 bg-white rounded-2xl p-5 border border-[#EAE8E3] shadow-sm"><div class="text-3xl shrink-0">🪂</div><div><div class="flex flex-wrap items-center gap-3 mb-1.5"><h3 class="font-bold text-[#1B3322] text-base">Chauli Ki Jali — Paragliding and Cliff Views</h3><span class="text-xs text-[#c9a832] font-mono bg-[#c9a832]/10 px-2 py-0.5 rounded-full">25 km · ~45 min</span></div><p class="text-sm text-gray-600 font-light leading-relaxed">Adjacent to Mukteshwar Dham — the finest sunset viewpoint in Nainital district. Paragliding from the cliff delivers the Himalayan view from above the ridge. Rock climbing routes available with local guides.</p></div></div>
+          <div class="flex gap-5 bg-white rounded-2xl p-5 border border-[#EAE8E3] shadow-sm"><div class="text-3xl shrink-0">💧</div><div><div class="flex flex-wrap items-center gap-3 mb-1.5"><h3 class="font-bold text-[#1B3322] text-base">Bhalu Gaad Waterfall Trek</h3><span class="text-xs text-[#c9a832] font-mono bg-[#c9a832]/10 px-2 py-0.5 rounded-full">12 km · ~20 min</span></div><p class="text-sm text-gray-600 font-light leading-relaxed">A 2 km pine canopy trek to a hidden natural waterfall — suitable for families, children, and first-time trekkers. Himalayan bulbuls, kalij pheasants, and forest eagles regularly spotted along the stream corridor.</p></div></div>
+          <div class="flex gap-5 bg-white rounded-2xl p-5 border border-[#EAE8E3] shadow-sm"><div class="text-3xl shrink-0">🕌</div><div><div class="flex flex-wrap items-center gap-3 mb-1.5"><h3 class="font-bold text-[#1B3322] text-base">Kainchi Dham — Neem Karoli Baba Ashram</h3><span class="text-xs text-[#c9a832] font-mono bg-[#c9a832]/10 px-2 py-0.5 rounded-full">22 km · ~40 min</span></div><p class="text-sm text-gray-600 font-light leading-relaxed">One of the most spiritually significant destinations in India. Travel desk manages cab and timing coordination. Pure vegetarian and Satvik breakfast prepared on request before departure.</p></div></div>
+          <div class="flex gap-5 bg-white rounded-2xl p-5 border border-[#EAE8E3] shadow-sm"><div class="text-3xl shrink-0">🍎</div><div><div class="flex flex-wrap items-center gap-3 mb-1.5"><h3 class="font-bold text-[#1B3322] text-base">Ramgarh Orchard Walks</h3><span class="text-xs text-[#c9a832] font-mono bg-[#c9a832]/10 px-2 py-0.5 rounded-full">From property gate</span></div><p class="text-sm text-gray-600 font-light leading-relaxed">Apple, peach, plum, and apricot orchards begin at the property gate. Orchard walks during blossom (March–May) and harvest (August–October) are among the most quietly memorable experiences of any stay.</p></div></div>
+        </div>
+      </section>
+
+      <!-- WHY RAMGARH -->
+      <section id="why-ramgarh" class="mb-14 scroll-mt-24">
+        <h2 class="text-2xl sm:text-3xl font-bold text-[#1B3322] mb-6 border-b border-[#c9a832]/30 pb-3">Why Malla Ramgarh Delivers the Best Himalayan View in Uttarakhand</h2>
+        <p class="text-base leading-relaxed text-gray-700 mb-6 font-light">The Malla Ramgarh ridge sits at the precise altitude and orientation that delivers maximum western Himalayan exposure — higher than the lower Nainital district valleys where haze and cloud obstruct views, lower than the Mukteshwar market area where buildings crowd the sightlines.</p>
+        <div class="bg-[#1B3322]/5 rounded-2xl p-6 border border-[#1B3322]/10 mb-6">
+          <h4 class="font-bold text-[#1B3322] mb-4 text-sm uppercase tracking-wider">At 1,780m on the Malla Ramgarh Ridge, the Property Receives:</h4>
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start gap-3"><span class="text-[#c9a832] font-bold shrink-0">→</span><span class="font-light">First light on Nanda Devi before the valley below has woken up</span></li>
+            <li class="flex items-start gap-3"><span class="text-[#c9a832] font-bold shrink-0">→</span><span class="font-light">Full 180° western Himalayan exposure — no secondary ridge obstructs the panorama</span></li>
+            <li class="flex items-start gap-3"><span class="text-[#c9a832] font-bold shrink-0">→</span><span class="font-light">Clean upwind air — Malla Ramgarh sits above the Haldwani valley haze layer</span></li>
+            <li class="flex items-start gap-3"><span class="text-[#c9a832] font-bold shrink-0">→</span><span class="font-light">Year-round morning clarity — the ridge avoids the persistent valley cloud that obscures peaks at lower-altitude properties</span></li>
+          </ul>
+        </div>
+        <p class="text-base leading-relaxed text-gray-700 italic border-l-4 border-[#c9a832] pl-4 font-light">The city you came from stops existing the moment you look up at that ridge. That is the promise. And at 1,780 metres on the Bhowali-Ramgarh-Mukteshwar Road, it is a promise that is kept every single morning.</p>
+      </section>
+
+      <!-- HOW TO REACH -->
+      <section id="how-to-reach" class="mb-14 scroll-mt-24">
+        <h2 class="text-2xl sm:text-3xl font-bold text-[#1B3322] mb-6 border-b border-[#c9a832]/30 pb-3">How to Reach Whispering Pines — Himalayan View Resort, Uttarakhand</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="bg-white rounded-2xl border border-[#EAE8E3] p-5 shadow-sm"><h3 class="font-bold text-[#1B3322] text-sm mb-3">🚗 By Road from Delhi/NCR</h3><ul class="space-y-1.5"><li class="text-xs text-gray-600 font-light">• NH9 via Moradabad → Rampur → Haldwani → Bhowali → Ramgarh → Malla Ramgarh</li><li class="text-xs text-gray-600 font-light">• Distance: ~320 km · Drive: 6–8 hours</li></ul></div>
+          <div class="bg-white rounded-2xl border border-[#EAE8E3] p-5 shadow-sm"><h3 class="font-bold text-[#1B3322] text-sm mb-3">🚂 By Train</h3><ul class="space-y-1.5"><li class="text-xs text-gray-600 font-light">• Nearest: Kathgodam Station (~40 min from resort)</li><li class="text-xs text-gray-600 font-light">• Ranikhet Express (overnight) / Kathgodam Shatabdi (morning)</li><li class="text-xs text-gray-600 font-light">• Resort cab pickup from Kathgodam on prior WhatsApp booking</li></ul></div>
+          <div class="bg-white rounded-2xl border border-[#EAE8E3] p-5 shadow-sm"><h3 class="font-bold text-[#1B3322] text-sm mb-3">✈️ By Air</h3><ul class="space-y-1.5"><li class="text-xs text-gray-600 font-light">• Nearest: Pantnagar Airport (~55 min from resort)</li><li class="text-xs text-gray-600 font-light">• Resort cab pickup from Pantnagar on prior booking</li></ul></div>
+        </div>
+        <div class="mt-5 bg-[#1B3322]/5 rounded-xl p-4 text-sm text-gray-700 border border-[#1B3322]/10">
+          <strong>Address:</strong> House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, Uttarakhand 263137
+          <a href="https://maps.app.goo.gl/hieeCQ2Ymc1vKNxj7" target="_blank" rel="noopener noreferrer" class="ml-3 text-[#c9a832] font-semibold hover:underline text-xs">Open in Google Maps →</a>
+        </div>
+      </section>
+
+      <!-- DIRECT BOOKING -->
+      <section id="direct-booking" class="mb-14 scroll-mt-24">
+        <h2 class="text-2xl sm:text-3xl font-bold text-[#1B3322] mb-6 border-b border-[#c9a832]/30 pb-3">Direct Booking — Best Price at the Best Himalayan View Resort in Uttarakhand</h2>
+        <p class="text-base leading-relaxed text-gray-700 mb-6 font-light">Every direct WhatsApp booking saves up to 20% versus MakeMyTrip, Booking.com, and Goibibo. OTA platforms add 15–25% commission to every listed price. See all <a href="/reviews/" class="font-semibold text-[#1B3322] hover:text-[#c9a832] underline underline-offset-2">verified guest reviews</a>.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+          <div class="flex items-start gap-2 bg-white rounded-xl p-3.5 border border-[#EAE8E3] shadow-sm text-sm text-gray-700"><span class="text-[#c9a832] font-bold shrink-0 mt-0.5">✓</span><span class="font-light">Lowest available rate — guaranteed best price on every room and villa</span></div>
+          <div class="flex items-start gap-2 bg-white rounded-xl p-3.5 border border-[#EAE8E3] shadow-sm text-sm text-gray-700"><span class="text-[#c9a832] font-bold shrink-0 mt-0.5">✓</span><span class="font-light">Priority room upgrade eligibility on all direct bookings</span></div>
+          <div class="flex items-start gap-2 bg-white rounded-xl p-3.5 border border-[#EAE8E3] shadow-sm text-sm text-gray-700"><span class="text-[#c9a832] font-bold shrink-0 mt-0.5">✓</span><span class="font-light">Flexible check-in and check-out on request</span></div>
+          <div class="flex items-start gap-2 bg-white rounded-xl p-3.5 border border-[#EAE8E3] shadow-sm text-sm text-gray-700"><span class="text-[#c9a832] font-bold shrink-0 mt-0.5">✓</span><span class="font-light">Complimentary fireplace setup on every winter arrival</span></div>
+          <div class="flex items-start gap-2 bg-white rounded-xl p-3.5 border border-[#EAE8E3] shadow-sm text-sm text-gray-700"><span class="text-[#c9a832] font-bold shrink-0 mt-0.5">✓</span><span class="font-light">Exclusive retention rates for returning Clarks Exotica guests</span></div>
+          <div class="flex items-start gap-2 bg-white rounded-xl p-3.5 border border-[#EAE8E3] shadow-sm text-sm text-gray-700"><span class="text-[#c9a832] font-bold shrink-0 mt-0.5">✓</span><span class="font-light">Instant response — WhatsApp queries answered within 5 minutes</span></div>
+        </div>
+        <div class="bg-[#1B3322] rounded-2xl p-8 text-center text-white border border-[#c9a832]/30 shadow-xl">
+          <h3 class="text-xl sm:text-2xl font-bold mb-2">Reserve Your Stay at the Himalayan View Resort in Uttarakhand</h3>
+          <p class="text-gray-300 text-sm font-light max-w-2xl mx-auto mb-6 leading-relaxed">25 premium rooms · Private villa sleeping 10 · Swimming pool · 150 Mbps Wi-Fi · Stone fireplace rooms · Kumaoni farm-to-table dining · Bonfire evenings — and 180° Nanda Devi Himalayan views from every corner of the property.</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href={generateWhatsAppLink("Himalayan View Resort Uttarakhand Direct Booking")} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-7 py-4 bg-[#25D366] text-white font-bold text-sm rounded-lg hover:bg-[#1EBE5D] transition-all shadow-lg">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.1 1.523 5.823L0 24l6.344-1.498A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.792 9.792 0 01-5.002-1.374l-.359-.213-3.765.889.953-3.676-.234-.376A9.794 9.794 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/></svg>
+              Book Direct: +91-7505029696
+            </a>
+            <a href="https://casadebello-book.whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-7 py-4 bg-[#c9a832] text-[#1B3322] font-bold text-sm rounded-lg hover:bg-yellow-400 transition-all shadow-lg">Check Availability Online</a>
+          </div>
+          <p class="text-xs text-gray-400 mt-4">booking@whisperingpinesresort.in · whisperingpinesresort.in</p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="mb-14 scroll-mt-24">
+        <h2 class="text-2xl sm:text-3xl font-bold text-[#1B3322] mb-8 border-b border-[#c9a832]/30 pb-3">Frequently Asked Questions — Himalayan View Resort Uttarakhand</h2>
+        <div class="space-y-4">
+          <details class="group bg-white rounded-xl border border-[#EAE8E3] shadow-sm open:shadow-md"><summary class="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-[#1B3322] text-sm hover:text-[#c9a832] transition-colors gap-4 list-none"><span>Which is the best Himalayan view resort in Uttarakhand?</span><span class="shrink-0 text-[#c9a832] group-open:rotate-45 transition-transform text-xl leading-none">+</span></summary><div class="px-6 pb-5 text-sm text-gray-600 font-light leading-relaxed border-t border-[#EAE8E3] pt-4">Whispering Pines Resort by Casa De Bello in Malla Ramgarh, rated 4.6★ from 388 verified Google reviews, delivers a 180° unobstructed view of Nanda Devi (7,816m) and Trishul (7,120m) from every room, balcony, pool deck, and outdoor lawn at 1,780 metres altitude. It is the only Himalayan view resort in Uttarakhand that combines this panorama quality with a swimming pool, private villa sleeping 10, 150 Mbps fiber Wi-Fi, and senior-friendly accessible rooms.</div></details>
+          <details class="group bg-white rounded-xl border border-[#EAE8E3] shadow-sm open:shadow-md"><summary class="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-[#1B3322] text-sm hover:text-[#c9a832] transition-colors gap-4 list-none"><span>Which Himalayan peaks are visible from the resort?</span><span class="shrink-0 text-[#c9a832] group-open:rotate-45 transition-transform text-xl leading-none">+</span></summary><div class="px-6 pb-5 text-sm text-gray-600 font-light leading-relaxed border-t border-[#EAE8E3] pt-4">Nanda Devi (7,816m — the highest peak entirely within India), Trishul (7,120m), and the Panchachuli range are all visible from the property. The full Kumaon Himalayan ridgeline spans 180° of the western horizon from the property grounds.</div></details>
+          <details class="group bg-white rounded-xl border border-[#EAE8E3] shadow-sm open:shadow-md"><summary class="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-[#1B3322] text-sm hover:text-[#c9a832] transition-colors gap-4 list-none"><span>Is the Himalayan view visible year-round?</span><span class="shrink-0 text-[#c9a832] group-open:rotate-45 transition-transform text-xl leading-none">+</span></summary><div class="px-6 pb-5 text-sm text-gray-600 font-light leading-relaxed border-t border-[#EAE8E3] pt-4">Yes. The Malla Ramgarh ridge position delivers year-round Himalayan view clarity. Summer mornings (6–10 AM) are consistently clear before afternoon cloud builds. Winter months October to February provide the sharpest views with maximum snow coverage and full atmospheric clarity.</div></details>
+          <details class="group bg-white rounded-xl border border-[#EAE8E3] shadow-sm open:shadow-md"><summary class="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-[#1B3322] text-sm hover:text-[#c9a832] transition-colors gap-4 list-none"><span>Does the resort have a swimming pool with Himalayan views?</span><span class="shrink-0 text-[#c9a832] group-open:rotate-45 transition-transform text-xl leading-none">+</span></summary><div class="px-6 pb-5 text-sm text-gray-600 font-light leading-relaxed border-t border-[#EAE8E3] pt-4">Yes. An on-site pool surrounded by pine forest — positioned so Nanda Devi and Trishul peaks are visible above the pool horizon. One of the very few Himalayan view resorts in Uttarakhand at 1,780 metres altitude with a pool alongside 180° mountain panorama.</div></details>
+          <details class="group bg-white rounded-xl border border-[#EAE8E3] shadow-sm open:shadow-md"><summary class="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-[#1B3322] text-sm hover:text-[#c9a832] transition-colors gap-4 list-none"><span>How far is the resort from Mukteshwar and Kainchi Dham?</span><span class="shrink-0 text-[#c9a832] group-open:rotate-45 transition-transform text-xl leading-none">+</span></summary><div class="px-6 pb-5 text-sm text-gray-600 font-light leading-relaxed border-t border-[#EAE8E3] pt-4">Mukteshwar Dham temple is 25 km — approximately 45 minutes on the Bhowali-Ramgarh-Mukteshwar Road. Kainchi Dham is 22 km — approximately 45 minutes. The travel desk coordinates cab departures and darshan timing directly from the resort.</div></details>
+          <details class="group bg-white rounded-xl border border-[#EAE8E3] shadow-sm open:shadow-md"><summary class="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-[#1B3322] text-sm hover:text-[#c9a832] transition-colors gap-4 list-none"><span>Is this the same property as Clarks Exotica Ramgarh?</span><span class="shrink-0 text-[#c9a832] group-open:rotate-45 transition-transform text-xl leading-none">+</span></summary><div class="px-6 pb-5 text-sm text-gray-600 font-light leading-relaxed border-t border-[#EAE8E3] pt-4">Yes. Whispering Pines Resort by Casa De Bello is the upgraded successor to Clarks Exotica on the Mukteshwar Road — same iconic Himalayan view address in Malla Ramgarh, now with swimming pool, private villa, 150 Mbps fiber Wi-Fi, and full Casa De Bello management.</div></details>
+          <details class="group bg-white rounded-xl border border-[#EAE8E3] shadow-sm open:shadow-md"><summary class="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-[#1B3322] text-sm hover:text-[#c9a832] transition-colors gap-4 list-none"><span>How do I book at the best price?</span><span class="shrink-0 text-[#c9a832] group-open:rotate-45 transition-transform text-xl leading-none">+</span></summary><div class="px-6 pb-5 text-sm text-gray-600 font-light leading-relaxed border-t border-[#EAE8E3] pt-4">Book directly via WhatsApp at +91-7505029696. Save up to 20% versus all OTA platforms. Returning Clarks Exotica guests receive exclusive retention rates — mention your history with the property when booking.</div></details>
+        </div>
+      </section>
+
+      <!-- RELATED ARTICLES -->
+      <section class="mb-10">
+        <h3 class="text-lg font-bold text-[#1B3322] mb-4 border-b border-[#c9a832]/20 pb-2">Related Guides</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="/blog/resort-near-mukteshwar/" class="bg-white rounded-xl border border-[#EAE8E3] p-4 hover:shadow-md hover:border-[#c9a832]/30 transition-all group"><h4 class="font-semibold text-[#1B3322] text-sm group-hover:text-[#c9a832] transition-colors mb-1">Best Resort Near Mukteshwar — 2026 Guide</h4><p class="text-xs text-gray-500 font-light leading-relaxed">Families, couples and workcation guide to the Bhowali-Mukteshwar corridor.</p></a>
+          <a href="/blog/resort-near-nainital/" class="bg-white rounded-xl border border-[#EAE8E3] p-4 hover:shadow-md hover:border-[#c9a832]/30 transition-all group"><h4 class="font-semibold text-[#1B3322] text-sm group-hover:text-[#c9a832] transition-colors mb-1">Resort Near Nainital — Whispering Pines Guide</h4><p class="text-xs text-gray-500 font-light leading-relaxed">Why Malla Ramgarh is the quieter, more panoramic alternative to Nainital.</p></a>
+          <a href="/blog/resort-stay-near-kainchi-dham/" class="bg-white rounded-xl border border-[#EAE8E3] p-4 hover:shadow-md hover:border-[#c9a832]/30 transition-all group"><h4 class="font-semibold text-[#1B3322] text-sm group-hover:text-[#c9a832] transition-colors mb-1">Resort Stay Near Kainchi Dham — 2026 Guide</h4><p class="text-xs text-gray-500 font-light leading-relaxed">Guide to combining a Kainchi Dham pilgrimage with a Himalayan resort stay.</p></a>
+          <a href="/blog/ramgarh-fruit-bowl-of-kumaon/" class="bg-white rounded-xl border border-[#EAE8E3] p-4 hover:shadow-md hover:border-[#c9a832]/30 transition-all group"><h4 class="font-semibold text-[#1B3322] text-sm group-hover:text-[#c9a832] transition-colors mb-1">Why Ramgarh Is the Fruit Bowl of Kumaon</h4><p class="text-xs text-gray-500 font-light leading-relaxed">The history, orchards, and seasonal harvest guide to Malla Ramgarh.</p></a>
+        </div>
+      </section>
+
+    </div>
+  </article>
+</Layout>
