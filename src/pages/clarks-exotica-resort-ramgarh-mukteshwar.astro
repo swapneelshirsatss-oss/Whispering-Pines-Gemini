@@ -920,36 +920,57 @@ const jsonLdSchemas = [
         class="my-8"
       />
 
-      {/* Pillar & Cluster SEO Internal Link Matrix */}
-      <div class="bg-[#FAF9F6] p-6 rounded-2xl border border-[#EAE8E3] space-y-4 my-8">
-        <h4 class="text-xs font-bold text-[#1B3322] uppercase tracking-wider">Explore Whispering Pines Resort (Pillar Pages & Key Guides)</h4>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
-          <a href="/" class="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-bold hover:border-[#c9a832] transition-colors shadow-sm">
-            🏡 Whispering Pines Home Page (Main Pillar)
+      <!-- Explore Resort & Travel Guides -->
+      <div class="bg-white p-6 sm:p-8 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-6 my-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-[#EAE8E3] pb-3">
+          <h3 class="text-base sm:text-lg font-bold font-display text-[#1B3322]">Explore Whispering Pines Resort & Corridor Guides</h3>
+          <span class="text-xs text-[#c9a832] font-semibold uppercase tracking-wider">Malla Ramgarh · Mukteshwar</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="/about-whispering-pines-resort-ramgarh/" class="p-3.5 rounded-xl border border-[#EAE8E3] hover:border-[#c9a832]/60 hover:bg-[#FAF9F6] transition-all group">
+            <span class="text-[10px] font-mono text-[#c9a832] uppercase tracking-wider block mb-0.5">Heritage Estate</span>
+            <h4 class="text-xs font-bold text-[#1B3322] group-hover:text-[#c9a832] transition-colors">About Whispering Pines</h4>
           </a>
-          <a href="/about-whispering-pines-resort-ramgarh/" class="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
-            🌲 About Resort & Ramgarh Ridge
+
+          <a href="/suites-cottages-ramgarh-resort/" class="p-3.5 rounded-xl border border-[#EAE8E3] hover:border-[#c9a832]/60 hover:bg-[#FAF9F6] transition-all group">
+            <span class="text-[10px] font-mono text-[#c9a832] uppercase tracking-wider block mb-0.5">Accommodations</span>
+            <h4 class="text-xs font-bold text-[#1B3322] group-hover:text-[#c9a832] transition-colors">Rooms, Suites & Cottages</h4>
           </a>
-          <a href="/suites-cottages-ramgarh-resort/" class="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
-            🛏️ Rooms, Suites & Cottages
+
+          <a href="/private-villas-near-nainital/" class="p-3.5 rounded-xl border border-[#EAE8E3] hover:border-[#c9a832]/60 hover:bg-[#FAF9F6] transition-all group">
+            <span class="text-[10px] font-mono text-[#c9a832] uppercase tracking-wider block mb-0.5">Private Estate</span>
+            <h4 class="text-xs font-bold text-[#1B3322] group-hover:text-[#c9a832] transition-colors">3-BHK Luxury Villa</h4>
           </a>
-          <a href="/private-villas-near-nainital/" class="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
-            🏡 3-BHK Private Villa Estate
+
+          <a href="/resort-amenities-mukteshwar/" class="p-3.5 rounded-xl border border-[#EAE8E3] hover:border-[#c9a832]/60 hover:bg-[#FAF9F6] transition-all group">
+            <span class="text-[10px] font-mono text-[#c9a832] uppercase tracking-wider block mb-0.5">Resort Features</span>
+            <h4 class="text-xs font-bold text-[#1B3322] group-hover:text-[#c9a832] transition-colors">Amenities & Swimming Pool</h4>
           </a>
-          <a href="/resort-amenities-mukteshwar/" class="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
-            🏊 Pine Forest Swimming Pool
+
+          <a href="/things-to-do-near-mukteshwar/" class="p-3.5 rounded-xl border border-[#EAE8E3] hover:border-[#c9a832]/60 hover:bg-[#FAF9F6] transition-all group">
+            <span class="text-[10px] font-mono text-[#c9a832] uppercase tracking-wider block mb-0.5">Local Itinerary</span>
+            <h4 class="text-xs font-bold text-[#1B3322] group-hover:text-[#c9a832] transition-colors">Sightseeing & Treks</h4>
           </a>
-          <a href="/things-to-do-near-mukteshwar/" class="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
-            ⛰️ Mukteshwar Sightseeing Guide
+
+          <a href="/blog/himalayan-view-resort-uttarakhand/" class="p-3.5 rounded-xl border border-[#EAE8E3] hover:border-[#c9a832]/60 hover:bg-[#FAF9F6] transition-all group">
+            <span class="text-[10px] font-mono text-[#c9a832] uppercase tracking-wider block mb-0.5">2026 Travel Guide</span>
+            <h4 class="text-xs font-bold text-[#1B3322] group-hover:text-[#c9a832] transition-colors">Himalayan View Resort</h4>
           </a>
-          <a href="/blog/resort-near-mukteshwar/" class="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
-            📖 Resort Near Mukteshwar Guide
+
+          <a href="/blog/resort-near-mukteshwar/" class="p-3.5 rounded-xl border border-[#EAE8E3] hover:border-[#c9a832]/60 hover:bg-[#FAF9F6] transition-all group">
+            <span class="text-[10px] font-mono text-[#c9a832] uppercase tracking-wider block mb-0.5">Mukteshwar Guide</span>
+            <h4 class="text-xs font-bold text-[#1B3322] group-hover:text-[#c9a832] transition-colors">Resort near Mukteshwar</h4>
           </a>
-          <a href="/blog/resort-stay-near-kainchi-dham/" class="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
-            🙏 Kainchi Dham Ashram Guide
+
+          <a href="/blog/resort-stay-near-kainchi-dham/" class="p-3.5 rounded-xl border border-[#EAE8E3] hover:border-[#c9a832]/60 hover:bg-[#FAF9F6] transition-all group">
+            <span class="text-[10px] font-mono text-[#c9a832] uppercase tracking-wider block mb-0.5">Pilgrimage Stay</span>
+            <h4 class="text-xs font-bold text-[#1B3322] group-hover:text-[#c9a832] transition-colors">Kainchi Dham Ashram Guide</h4>
           </a>
-          <a href="/blog/ramgarh-fruit-bowl-of-kumaon/" class="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
-            🍑 Ramgarh Fruit Orchards Guide
+
+          <a href="/blog/ramgarh-fruit-bowl-of-kumaon/" class="p-3.5 rounded-xl border border-[#EAE8E3] hover:border-[#c9a832]/60 hover:bg-[#FAF9F6] transition-all group">
+            <span class="text-[10px] font-mono text-[#c9a832] uppercase tracking-wider block mb-0.5">Orchard Heritage</span>
+            <h4 class="text-xs font-bold text-[#1B3322] group-hover:text-[#c9a832] transition-colors">Fruit Bowl of Kumaon</h4>
           </a>
         </div>
       </div>

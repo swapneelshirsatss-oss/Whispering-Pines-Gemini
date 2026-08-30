@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { MapPin, Phone, Mail, MessageCircle, Clock, Briefcase } from "lucide-react";
 import { RESORT_CONTACT, CONTACT_FAQS } from "../data";
 import FAQAccordion from "../components/FAQAccordion";
+import DistanceTransitMatrix from "../components/DistanceTransitMatrix.astro";
 ---
 
 <Layout 
@@ -38,7 +39,7 @@ import FAQAccordion from "../components/FAQAccordion";
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="bg-[#FAF9F6] p-6 rounded-lg text-center border border-gray-100 shadow-sm">
-            <h3 class="text-sm sm:text-base font-bold text-[#2C3531]">WhatsApp Booking — +91-7505029696 — Instant Response in Under 5 Minutes</h3>
+            <h3 class="text-sm sm:text-base font-bold text-[#2C3531]">Direct Booking & WhatsApp — 075050 29696 / +91-7505029696 — Response Under 5 Mins</h3>
           </div>
           <div class="bg-[#FAF9F6] p-6 rounded-lg text-center border border-gray-100 shadow-sm">
             <h3 class="text-sm sm:text-base font-bold text-[#2C3531]">Save Up to 20% vs MakeMyTrip, Goibibo & Booking.com on Direct Reservations</h3>
@@ -70,13 +71,13 @@ import FAQAccordion from "../components/FAQAccordion";
                     <Phone class="w-5 h-5 text-[#1B3322]" />
                   </div>
                   <div>
-                    <h3 class="text-sm font-bold text-[#1B3322] uppercase tracking-wider mb-1">Phone & WhatsApp — +91-7505029696</h3>
+                    <h3 class="text-sm font-bold text-[#1B3322] uppercase tracking-wider mb-1">Phone & WhatsApp — 075050 29696 / +91-7505029696</h3>
                     <a
-                      href={`tel:${RESORT_CONTACT.phone.replace(/[^0-9+]/g, '')}`}
+                      href={`tel:${RESORT_CONTACT.phoneTel || '+917505029696'}`}
                       onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'phone_call_click', event_category: 'engagement', event_label: 'contact_page_phone_call' });"
-                      class="text-lg text-[#2C3531] hover:text-[#c9a832] transition-colors font-medium"
+                      class="text-lg text-[#2C3531] hover:text-[#c9a832] transition-colors font-medium font-mono"
                     >
-                      {RESORT_CONTACT.phone}
+                      {RESORT_CONTACT.phoneDisplay} <span class="text-sm font-sans text-gray-500 font-normal">({RESORT_CONTACT.phoneIntlDisplay})</span>
                     </a>
                   </div>
                 </div>
@@ -176,6 +177,13 @@ import FAQAccordion from "../components/FAQAccordion";
         </div>
       </div>
     </section>
+
+    {/* Structured Distance & Transit Matrix */}
+    <DistanceTransitMatrix 
+      className="bg-white border-y border-[#EAE8E3]" 
+      title="Distance & Transit Matrix — Travel Times to Whispering Pines Resort"
+      subtitle="Complete transit guide from Delhi NCR, nearby airports, railway stations, and Kumaon temples with direct Google Maps turn-by-turn navigation."
+    />
 
     {/* FAQ Section included here */}
     <FAQAccordion 

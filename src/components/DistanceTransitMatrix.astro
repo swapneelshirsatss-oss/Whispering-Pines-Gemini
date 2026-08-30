@@ -1,0 +1,28 @@
+---
+import DistanceTransitMatrixReact from './DistanceTransitMatrix';
+
+interface Props {
+  initialCategory?: "all" | "transit_hubs" | "local_sights";
+  title?: string;
+  subtitle?: string;
+  className?: string;
+  hideHeader?: boolean;
+}
+
+const { 
+  initialCategory = "all", 
+  title, 
+  subtitle, 
+  className = "",
+  hideHeader = false
+} = Astro.props;
+---
+
+<DistanceTransitMatrixReact 
+  client:visible 
+  initialCategory={initialCategory}
+  title={title}
+  subtitle={subtitle}
+  className={className}
+  hideHeader={hideHeader}
+/>

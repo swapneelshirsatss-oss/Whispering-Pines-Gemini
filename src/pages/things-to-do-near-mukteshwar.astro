@@ -3,13 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import LocalExperiencesList from "../components/LocalExperiencesList.astro";
 import SEOExperiencesContent from "../components/SEOExperiencesContent.astro";
+import DistanceTransitMatrix from "../components/DistanceTransitMatrix.astro";
 import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
 <Layout 
-  title="Things to Do Near Mukteshwar | Local Sights from Ramgarh" 
-  description="Discover the best things to do near Mukteshwar and Ramgarh. From Kainchi Dham and Mukteshwar Dham Temple to Bhalu Gaad waterfalls and fruit orchard walks."
+  title="Things to Do Near Mukteshwar | Local Sights & Transit Distances from Ramgarh" 
+  description="Discover the best things to do near Mukteshwar and Ramgarh. Verified driving distances and routes to Kainchi Dham, Mukteshwar Temple, Naini Lake, and Bhimtal."
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
     <Breadcrumbs />
@@ -19,6 +20,15 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
         asH1={true}
         title="Things to Do Near Mukteshwar — Local Sights & Highland Experiences from Ramgarh Uttarkhand kumaon region"
       />
+      
+      {/* Distance & Transit Matrix */}
+      <DistanceTransitMatrix 
+        initialCategory="local_sights"
+        className="bg-white border-y border-[#EAE8E3]"
+        title="Sightseeing & Transit Distance Matrix — Drive Times from Whispering Pines"
+        subtitle="Plan your Kumaon day trips with verified driving distances, estimated durations, and direct Google Maps route navigation from our resort in Malla Ramgarh."
+      />
+
       <SEOExperiencesContent />
     </main>
     <WhatsAppButton client:idle />

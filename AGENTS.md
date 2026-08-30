@@ -28,6 +28,28 @@ Whenever updating site metadata, `Layout.astro`, or JSON-LD schemas:
 - **OpenGraph `og:site_name`**: Ensure `<meta property="og:site_name" content="Whispering Pines Resort by Casa De Bello - Near Mukteshwar" />` is declared in `Layout.astro`.
 - **Primary Address Format**: Always format the official property address as `"Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137"`.
 
+## Google Business Profile (GBP) & NAP Standards
+
+Whenever updating contact details, footer components, or local schemas:
+- **Official Entity Name**: Set to `"Whispering Pines Resort by Casa De Bello"`.
+- **Primary Address Format**: Always format as `"Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137"`.
+- **Primary Phone Format**: Display `"075050 29696"` (with optional `(+91 75050 29696)` international notation), click-to-call `href="tel:+917505029696"`, and WhatsApp `https://wa.me/917505029696`.
+- **Google Maps CID Link**: Always reference `https://maps.google.com/?cid=8386667112972057918` in footer address links and JSON-LD `hasMap`.
+- **Google Travel Entity**: Maintain link `https://www.google.com/travel/hotels/entity/ChgIvvqZseCp27F0GgwvZy8xaGR6ejNrcDcQAQ`.
+
+## Target Customer Personas & Feeder Corridors
+
+Whenever designing landing pages, writing travel guides, or updating navigation/footer silos:
+- **Target Personas**:
+  - **Urban Families**: Emphasize 3-BHK Alpine Villa (10 Pax), heated living quarters, and 180° Nanda Devi views.
+  - **Workcations**: Highlight 150 Mbps Fiber Wi-Fi, mountain desk setups, and 4-7 night extended stay packages.
+  - **Pet Owners**: Highlight private enclosed orchard lawns and pet-welcoming cottage rooms.
+  - **Weekend Travelers**: Target 6.5–7.5 hour drive searches from Delhi NCR.
+  - **Legacy Guests**: Target former brand keywords (*"Clarks Exotica Ramgarh"*) highlighting upgraded Casa De Bello hospitality.
+- **Primary Drive-To Corridor (6–8h)**: Delhi/South Delhi, Gurugram, Noida, Ghaziabad, Faridabad, Meerut, Agra, Lucknow, Kanpur, Chandigarh.
+- **Secondary Metro Hubs**: Mumbai, Bengaluru, Kolkata, Pune, Ahmedabad, Surat (connecting via Pantnagar Airport PGH, IGI Airport DEL, Kathgodam KGM).
+- **Distance & Transit Matrix**: Maintain verified route data in `src/data/transitMatrix.ts` and embed `DistanceTransitMatrix.astro` across location-sensitive landing pages.
+
 ## IndexNow & Instant Indexing Rules
 
 - **IndexNow Protocol**: The site uses automated post-build IndexNow submission via `astro.config.mjs` (`indexNowIntegration()`) with verification key file `public/8f3d1b7e4a9c2d5e6f8a0b1c2d3e4f5a.txt`.

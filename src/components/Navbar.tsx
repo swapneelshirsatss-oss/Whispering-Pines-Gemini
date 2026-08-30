@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Phone, Menu, X, ArrowUpRight } from 'lucide-react';
 import { trackAdsConversion } from "../utils/analytics";
 
-const PHONE_NUMBER = "+91-7505029696";
+const PHONE_DISPLAY = "075050 29696";
+const PHONE_TEL = "+917505029696";
 const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
 
 interface NavbarProps {
@@ -28,6 +29,8 @@ export default function Navbar({ children }: NavbarProps) {
   const navLinks = [
     { name: "About Us", href: "/about-whispering-pines-resort-ramgarh/" },
     { name: "Cottages & Suites", href: "/suites-cottages-ramgarh-resort/" },
+    { name: "Private Villa", href: "/private-villas-near-nainital/" },
+    { name: "Amenities", href: "/resort-amenities-mukteshwar/" },
     { name: "Gallery", href: "/gallery/" },
     { name: "Reviews", href: "/reviews/" },
     { name: "Blog", href: "/blog/" },
@@ -55,7 +58,7 @@ export default function Navbar({ children }: NavbarProps) {
           </a>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
+          <div className="hidden md:flex items-center space-x-3 lg:space-x-5">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -74,7 +77,7 @@ export default function Navbar({ children }: NavbarProps) {
                     }
                   }
                 }}
-                className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
+                className={`text-xs lg:text-sm font-medium tracking-wide transition-colors duration-200 ${
                   link.external
                     ? "text-[#c9a832] hover:text-[#FAF9F6] font-semibold"
                     : "text-[#FAF9F6]/90 hover:text-[#c9a832]"
@@ -86,24 +89,25 @@ export default function Navbar({ children }: NavbarProps) {
           </div>
 
           {/* Contact CTAs */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-5">
             <a
-              href={`tel:${PHONE_NUMBER}`}
+              href={`tel:${PHONE_TEL}`}
               onClick={() => trackAdsConversion("phone_call_click", "engagement", "header_phone_call")}
-              className="flex items-center text-[11px] font-mono tracking-widest text-[#FAF9F6]/85 hover:text-[#FAF9F6] transition-colors"
+              className="flex items-center text-[11px] font-mono tracking-wider text-[#FAF9F6]/85 hover:text-[#c9a832] transition-colors"
+              title="Call Whispering Pines Direct Front Desk: 075050 29696"
             >
-              <Phone className="w-3.5 h-3.5 mr-1.5 opacity-70" />
-              {PHONE_NUMBER}
+              <Phone className="w-3.5 h-3.5 mr-1.5 text-[#c9a832]" />
+              {PHONE_DISPLAY}
             </a>
             <a
               href={BOOKING_ENGINE_URL}
               target="_blank"
               rel="noreferrer"
               onClick={handleNavBookingClick}
-              className="bg-[#c9a832] hover:bg-[#FAF9F6] text-[#1B3322] hover:text-[#1B3322] text-[10px] font-mono font-semibold uppercase tracking-[0.15em] px-6 py-2.5 rounded-sm flex items-center transition-all duration-300 shadow-md"
+              className="bg-[#c9a832] hover:bg-[#FAF9F6] text-[#1B3322] hover:text-[#1B3322] text-[10px] font-mono font-semibold uppercase tracking-[0.15em] px-5 py-2.5 rounded-sm flex items-center transition-all duration-300 shadow-md"
             >
               Book Stay
-              <ArrowUpRight className="w-3.5 h-3.5 ml-2 opacity-80" />
+              <ArrowUpRight className="w-3.5 h-3.5 ml-1.5 opacity-80" />
             </a>
           </div>
 
@@ -114,7 +118,7 @@ export default function Navbar({ children }: NavbarProps) {
               target="_blank"
               rel="noreferrer"
               onClick={handleNavBookingClick}
-              className="bg-[#c9a832] text-[#1B3322] text-[10px] font-mono font-semibold uppercase tracking-wider px-4 py-2 rounded-sm flex items-center shadow-md active:scale-95 transition-transform"
+              className="bg-[#c9a832] text-[#1B3322] text-[10px] font-mono font-semibold uppercase tracking-wider px-3.5 py-1.5 rounded-sm flex items-center shadow-md active:scale-95 transition-transform"
             >
               Book Stay
             </a>
@@ -129,13 +133,13 @@ export default function Navbar({ children }: NavbarProps) {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Drawer */}
       <div
         className={`md:hidden absolute top-full left-0 w-full bg-[#1B3322] border-b border-[#FAF9F6]/10 shadow-2xl transition-all duration-300 ease-in-out z-40 ${
           isOpen ? "opacity-100 max-h-screen py-5" : "opacity-0 max-h-0 overflow-hidden"
         }`}
       >
-        <div className="px-4 pt-2 pb-4 space-y-3">
+        <div className="px-4 pt-2 pb-4 space-y-2">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -155,7 +159,7 @@ export default function Navbar({ children }: NavbarProps) {
                 }
                 setIsOpen(false);
               }}
-              className={`block px-4 py-3.5 text-lg font-medium rounded-sm transition-colors ${
+              className={`block px-4 py-3 text-base font-medium rounded-sm transition-colors ${
                 link.external
                   ? "text-[#c9a832] font-semibold hover:bg-[#FAF9F6]/5"
                   : "text-[#FAF9F6]/95 hover:text-[#c9a832] hover:bg-[#FAF9F6]/5"
@@ -164,15 +168,52 @@ export default function Navbar({ children }: NavbarProps) {
               {link.name}
             </a>
           ))}
+
+          {/* Quick Persona Chips */}
+          <div className="pt-3 pb-1 border-t border-[#FAF9F6]/10">
+            <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#c9a832] block px-4 mb-2 font-semibold">
+              Curated Stays & Groups
+            </span>
+            <div className="grid grid-cols-2 gap-2 px-4 text-xs font-mono">
+              <a 
+                href="/private-villas-near-nainital/" 
+                onClick={() => setIsOpen(false)}
+                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors text-center"
+              >
+                🏡 3-BHK Villa (10 Pax)
+              </a>
+              <a 
+                href="/about-whispering-pines-resort-ramgarh/" 
+                onClick={() => setIsOpen(false)}
+                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors text-center"
+              >
+                💻 150M Wi-Fi Workcation
+              </a>
+              <a 
+                href="/resort-amenities-mukteshwar/" 
+                onClick={() => setIsOpen(false)}
+                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors text-center"
+              >
+                🐾 Pet-Friendly Lawns
+              </a>
+              <a 
+                href="/clarks-exotica-resort-ramgarh-mukteshwar/" 
+                onClick={() => setIsOpen(false)}
+                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors text-center"
+              >
+                🌲 Clarks Exotica Guests
+              </a>
+            </div>
+          </div>
           
-          <div className="border-t border-[#FAF9F6]/10 pt-6 px-4 space-y-5">
+          <div className="border-t border-[#FAF9F6]/10 pt-4 px-4 space-y-4">
             <a
-              href={`tel:${PHONE_NUMBER}`}
+              href={`tel:${PHONE_TEL}`}
               onClick={() => trackAdsConversion("phone_call_click", "engagement", "mobile_phone_call")}
               className="flex items-center text-base font-mono text-[#FAF9F6]/85 p-2 -ml-2"
             >
               <Phone className="w-5 h-5 mr-3 text-[#c9a832]" />
-              {PHONE_NUMBER}
+              {PHONE_DISPLAY} <span className="text-xs text-[#FAF9F6]/50 ml-2">(+91 75050 29696)</span>
             </a>
             
             <a
@@ -183,7 +224,7 @@ export default function Navbar({ children }: NavbarProps) {
                 setIsOpen(false);
                 handleNavBookingClick();
               }}
-              className="w-full text-center bg-[#c9a832] text-[#1B3322] font-bold uppercase tracking-wider py-4 rounded-sm flex items-center justify-center transition-colors shadow-md active:scale-95"
+              className="w-full text-center bg-[#c9a832] text-[#1B3322] font-bold uppercase tracking-wider py-3.5 rounded-sm flex items-center justify-center transition-colors shadow-md active:scale-95"
             >
               Instant Booking (WhatsApp)
               <ArrowUpRight className="w-5 h-5 ml-1.5" />
