@@ -30,7 +30,7 @@ export const RESORT_CONTACT = {
   latitude: 29.4262052,
   longitude: 79.5506314,
   elevation: "1,780m",
-  gmapsLink: "https://maps.app.goo.gl/hieeCQ2Ymc1vKNxj7",
+  gmapsLink: "https://maps.google.com/?cid=8386667112972057918",
   gmapsCid: "https://maps.google.com/?cid=8386667112972057918",
   googleTravel: "https://www.google.com/travel/hotels/entity/ChgIvvqZseCp27F0GgwvZy8xaGR6ejNrcDcQAQ",
   rating: {
@@ -46,7 +46,7 @@ export const RESORT_CONTACT = {
     youtube: "https://www.youtube.com/channel/UC7WARaMtVTj9QS57zMX3yZw",
     googleTravel: "https://www.google.com/travel/hotels/entity/ChgIvvqZseCp27F0GgwvZy8xaGR6ejNrcDcQAQ"
   },
-  description: "Whispering Pines Resort by Casa de bello is a 4 Star heritage mountain resort located on the Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh. Surrounded by dense pine canopies and private apple, peach, and plum orchards, the property features offers clean comfortavle rooms with luxury facilties.\n\nDesigned for families, remote professionals, and travelers seeking a quiet Himalayan retreat, the resort offers 180° panoramic views of the Nanda Devi and Trishul peaks. As an upgraded continuation of the Clarks Exotica legacy, we prioritize direct guest relationships.\n\nContact our front desk directly at 075050 29696 (+91-7505029696) or via WhatsApp to secure exclusive past-guest retention rates and direct-booking benefits."
+  description: "Whispering Pines Resort by Casa de bello is a 4 Star heritage mountain resort located on the Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh. Surrounded by dense pine canopies and private apple, peach, and plum orchards, the property offers clean comfortable rooms with luxury facilities.\n\nDesigned for families, remote professionals, and travelers seeking a quiet Himalayan retreat, the resort offers 180° panoramic views of the Nanda Devi and Trishul peaks. As an upgraded continuation of the Clarks Exotica legacy, we prioritize direct guest relationships.\n\nContact our front desk directly at 075050 29696 (+91-7505029696) or via WhatsApp to secure exclusive past-guest retention rates and direct-booking benefits."
 };
 
 export const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";

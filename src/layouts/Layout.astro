@@ -9,17 +9,18 @@ import Logo from '../components/Logo.astro';
 interface Props {
   title: string;
   description: string;
-
+  image?: string;
   noindex?: boolean;
   canonical?: string;
   breadcrumbs?: BreadcrumbItem[];
 }
 
-const { title, description, noindex = false, canonical, breadcrumbs } = Astro.props;
+const { title, description, image, noindex = false, canonical, breadcrumbs } = Astro.props;
 const siteBase = 'https://whisperingpinesresort.in';
 const rawPathname = canonical || Astro.url.pathname;
 const pathname = (!rawPathname.endsWith('/') && !rawPathname.includes('.')) ? `${rawPathname}/` : rawPathname;
 const canonicalURL = new URL(pathname, siteBase);
+const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.startsWith('/') ? '' : '/'}${image}`) : 'https://whisperingpinesresort.in/og-image.webp';
 ---
 
 <!doctype html>
@@ -63,14 +64,14 @@ const canonicalURL = new URL(pathname, siteBase);
     <meta property="og:url" content={canonicalURL.href} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://whisperingpinesresort.in/og-image.webp" />
+    <meta property="og:image" content={ogImage} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL.href} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content="https://whisperingpinesresort.in/og-image.webp" />
+    <meta property="twitter:image" content={ogImage} />
 
     <!-- Google Fonts for Editorial Elegance and Readability (Asynchronous / Non-Blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -98,6 +99,11 @@ const canonicalURL = new URL(pathname, siteBase);
       ],
       "url": "https://whisperingpinesresort.in/"
     })} />
+
+    <!-- Generative Engine Optimization (GEO) & LLM Knowledge Base Discovery -->
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="Whispering Pines Resort LLM Knowledge Base" />
+    <link rel="llms" href="/llms.txt" />
+    <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="Whispering Pines Resort Full LLM Knowledge Base" />
 
     <!-- Google Preferred Sources (Official Google Publisher Script) -->
     <link rel="preconnect" href="https://news.google.com" />

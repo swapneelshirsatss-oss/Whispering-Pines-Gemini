@@ -18,7 +18,7 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
       <LocalExperiencesList 
         hideLink={true} 
         asH1={true}
-        title="Things to Do Near Mukteshwar — Local Sights & Highland Experiences from Ramgarh Uttarkhand kumaon region"
+        title="Things to Do Near Mukteshwar — Local Sights & Highland Experiences from Ramgarh, Uttarakhand"
       />
       
       {/* Distance & Transit Matrix */}
@@ -34,4 +34,58 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
     <WhatsAppButton client:idle />
     <RecentBookingNotification client:idle />
   </div>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Resort",
+        "@id": "https://whisperingpinesresort.in/#resort",
+        "name": "Whispering Pines Resort by Casa De Bello",
+        "url": "https://whisperingpinesresort.in/",
+        "telephone": "+91-7505029696",
+        "hasMap": "https://maps.google.com/?cid=8386667112972057918"
+      },
+      {
+        "@type": "ItemList",
+        "name": "Top Things to Do Near Mukteshwar & Ramgarh",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Kainchi Dham Ashram (Neem Karoli Baba)",
+            "description": "World-renowned spiritual retreat visited by global leaders and spiritual seekers. Just 19 km (35 min drive) from Whispering Pines Resort.",
+            "url": "https://whisperingpinesresort.in/blog/resort-stay-near-kainchi-dham/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Mukteshwar Dham & Chauli Ki Jali",
+            "description": "350-year-old Shiva temple and dramatic clifftop rock formation offering vertical valley views and sunset panoramas. 25 km (45 min drive).",
+            "url": "https://whisperingpinesresort.in/things-to-do-near-mukteshwar/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Bhalu Gaad Waterfall",
+            "description": "Hidden 60-foot cascading mountain waterfall reached via a scenic forest trek through pine and oak canopies. 14 km (25 min drive).",
+            "url": "https://whisperingpinesresort.in/things-to-do-near-mukteshwar/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Tagore Top & Literary Heritage Trails",
+            "description": "Historic ridge in Ramgarh where Rabindranath Tagore composed parts of Gitanjali. 6 km (15 min drive).",
+            "url": "https://whisperingpinesresort.in/things-to-do-near-mukteshwar/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Naini Lake & Mall Road, Nainital",
+            "description": "Iconic pear-shaped mountain lake, Naina Devi temple, and colonial shopping promenade. 32 km (60 min drive).",
+            "url": "https://whisperingpinesresort.in/blog/resort-near-nainital/"
+          }
+        ]
+      }
+    ]
+  })} />
 </Layout>

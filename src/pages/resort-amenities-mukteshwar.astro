@@ -8,8 +8,8 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
 <Layout 
-  title="Resort Amenities | Whispering Pines Resort Mukteshwar" 
-  description="Enjoy 180° Himalayan views, outdoor pool, 150 Mbps Wi-Fi, wood fireplaces, pet friendly gardens & homestyle dining at Whispering Pines Resort Mukteshwar."
+  title="Resort Amenities & Facilities | Whispering Pines by Casa De Bello Mukteshwar" 
+  description="Explore luxury resort amenities at Whispering Pines Mukteshwar: outdoor pool, 180° Himalayan views, 150 Mbps fiber Wi-Fi, fireplaces, dining & pet-friendly lawns."
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
     <Breadcrumbs />
@@ -22,4 +22,33 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
     <WhatsAppButton client:idle />
     <RecentBookingNotification client:idle />
   </div>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Resort",
+    "@id": "https://whisperingpinesresort.in/resort-amenities-mukteshwar/#amenities",
+    "name": "Whispering Pines Resort by Casa De Bello",
+    "url": "https://whisperingpinesresort.in/resort-amenities-mukteshwar/",
+    "telephone": "+91-7505029696",
+    "priceRange": "₹₹₹",
+    "hasMap": "https://maps.google.com/?cid=8386667112972057918",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+      "addressLocality": "Mukteshwar",
+      "addressRegion": "Uttarakhand",
+      "postalCode": "263137",
+      "addressCountry": "IN"
+    },
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Outdoor Mountain Swimming Pool", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "180° Nanda Devi & Trishul Himalayan Views", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "150 Mbps High-Speed Fiber Wi-Fi", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Private Fruit Orchards (Peach, Plum, Apple)", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Wood-Burning Fireplaces & Heated Rooms", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Multi-Cuisine Kumaoni & Continental Dining", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Pet-Friendly Enclosed Garden Lawns", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Complimentary On-Site Secured Parking", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Evening Bonfire & Barbecue Evenings", "value": true }
+    ]
+  })} />
 </Layout>

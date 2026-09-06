@@ -96,14 +96,17 @@ const schemaData = [
 <Layout 
   title={`${post.title} | Whispering Pines Resort Mukteshwar`}
   description={post.excerpt}
+  image={post.imageUrl}
 >
-  <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
-    {/* JSON-LD Schema for SEO */}
+  <Fragment slot="head">
+    <link rel="preload" as="image" href={post.imageUrl} fetchpriority="high" />
     <script
       type="application/ld+json"
-      slot="head"
       set:html={JSON.stringify(schemaData)}
     />
+  </Fragment>
+
+  <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
 
     <main class="pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-12">
       {/* Back Button */}

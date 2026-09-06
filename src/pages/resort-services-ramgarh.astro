@@ -8,8 +8,8 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
 <Layout 
-  title="Resort Services & Facilities | Whispering Pines Ramgarh" 
-  description="Explore multi-cuisine dining, outdoor pool, 150 Mbps Wi-Fi, bonfire evenings & transport services at Whispering Pines Resort Malla Ramgarh near Mukteshwar."
+  title="Resort Services & Guest Facilities | Whispering Pines Ramgarh Mukteshwar" 
+  description="Multi-cuisine Kumaoni dining, Kathgodam railway transfers, bonfire nights, guided orchard walks, and concierge services at Whispering Pines Resort Ramgarh."
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
     <Breadcrumbs />
@@ -22,4 +22,47 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
     <WhatsAppButton client:idle />
     <RecentBookingNotification client:idle />
   </div>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Resort",
+        "@id": "https://whisperingpinesresort.in/resort-services-ramgarh/#resort",
+        "name": "Whispering Pines Resort by Casa De Bello",
+        "url": "https://whisperingpinesresort.in/resort-services-ramgarh/",
+        "telephone": "+91-7505029696",
+        "priceRange": "₹₹₹",
+        "hasMap": "https://maps.google.com/?cid=8386667112972057918",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+          "addressLocality": "Mukteshwar",
+          "addressRegion": "Uttarakhand",
+          "postalCode": "263137",
+          "addressCountry": "IN"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Resort Dining & Room Service",
+        "provider": { "@id": "https://whisperingpinesresort.in/resort-services-ramgarh/#resort" },
+        "serviceType": "Food and Beverage",
+        "description": "Authentic Kumaoni regional specialties, North Indian cuisine, and Continental comfort meals served indoors and on the panoramic Himalayan dining deck."
+      },
+      {
+        "@type": "Service",
+        "name": "Kathgodam & Pantnagar Transit Concierge",
+        "provider": { "@id": "https://whisperingpinesresort.in/resort-services-ramgarh/#resort" },
+        "serviceType": "Airport & Railway Station Pickup / Drop",
+        "description": "Convenient private mountain cab pickups and drop-offs to Kathgodam Railway Station (40 km) and Pantnagar Airport (75 km)."
+      },
+      {
+        "@type": "Service",
+        "name": "Evening Mountain Bonfire & Stargazing",
+        "provider": { "@id": "https://whisperingpinesresort.in/resort-services-ramgarh/#resort" },
+        "serviceType": "Recreation & Entertainment",
+        "description": "Warm evening bonfires with barbecue snacks under clear Himalayan night skies overlooking Nanda Devi."
+      }
+    ]
+  })} />
 </Layout>

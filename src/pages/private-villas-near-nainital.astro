@@ -9,8 +9,8 @@ import { Home, Trees, ShieldCheck, Heart } from "lucide-react";
 ---
 
 <Layout 
-  title="Private Villas Near Nainital | Whispering Pines Ramgarh" 
-  description="Book our premium 3-bedroom private villa near Nainital. Perfect for family getaways with private orchard, Himalayan views, fireplace, and full kitchen."
+  title="Private Villas Near Nainital | 3-BHK Alpine Villa with 180° Views — Whispering Pines" 
+  description="Book our 3-BHK private luxury villa near Nainital (10 Pax) at Whispering Pines Resort Ramgarh. Working peach orchard, stone fireplace, kitchen & 180° Nanda Devi views."
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
     <Breadcrumbs />
@@ -196,4 +196,77 @@ import { Home, Trees, ShieldCheck, Heart } from "lucide-react";
     <WhatsAppButton client:idle />
     <RecentBookingNotification client:idle />
   </div>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Resort",
+        "@id": "https://whisperingpinesresort.in/#resort",
+        "name": "Whispering Pines Resort by Casa De Bello",
+        "url": "https://whisperingpinesresort.in/",
+        "telephone": "+91-7505029696",
+        "priceRange": "₹₹₹",
+        "hasMap": "https://maps.google.com/?cid=8386667112972057918",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+          "addressLocality": "Mukteshwar",
+          "addressRegion": "Nainital, Uttarakhand",
+          "postalCode": "263137",
+          "addressCountry": "IN"
+        },
+        "containsPlace": {
+          "@type": "Accommodation",
+          "@id": "https://whisperingpinesresort.in/private-villas-near-nainital/#villa",
+          "name": "3-BHK Private Alpine Heritage Villa",
+          "description": "Standalone hand-hewn stone and cedar wood private villa in Malla Ramgarh near Nainital and Mukteshwar. Features 3 grand king bedrooms, wood attic loft, cozy living room with stone fireplace, self-catering kitchen, and private orchard lawn with 180° Nanda Devi Himalayan views.",
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 10,
+            "unitText": "Person"
+          },
+          "numberOfBedrooms": 3,
+          "numberOfBathroomsTotal": 3,
+          "petsAllowed": true,
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "180° Nanda Devi & Trishul Peak Views", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Private Fruit Orchard Lawn", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Stone Fireplace Living Room", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Fully Equipped Kitchen", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "150 Mbps Fiber Wi-Fi", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Outdoor Bonfire Pit & BBQ", "value": true }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How many guests can stay at the private villa near Nainital?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The 3-BHK Alpine Villa at Whispering Pines comfortably accommodates up to 10 guests across 3 master king bedrooms and an attic loft space, making it ideal for families and small corporate retreats."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the private villa near Nainital pet-friendly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, our private villa is 100% pet-friendly with safe, private enclosed orchard lawns where dogs can roam freely in fresh mountain air."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the villa offer self-catering kitchen facilities?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, the villa includes a dedicated kitchen equipped for family meal prep, along with full access to our on-site resort restaurant and room service."
+            }
+          }
+        ]
+      }
+    ]
+  })} />
 </Layout>

@@ -34,8 +34,21 @@ Whenever updating contact details, footer components, or local schemas:
 - **Official Entity Name**: Set to `"Whispering Pines Resort by Casa De Bello"`.
 - **Primary Address Format**: Always format as `"Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137"`.
 - **Primary Phone Format**: Display `"075050 29696"` (with optional `(+91 75050 29696)` international notation), click-to-call `href="tel:+917505029696"`, and WhatsApp `https://wa.me/917505029696`.
-- **Google Maps CID Link**: Always reference `https://maps.google.com/?cid=8386667112972057918` in footer address links and JSON-LD `hasMap`.
+- **Google Maps CID Link (No Shortlinks)**: Always reference `https://maps.google.com/?cid=8386667112972057918` in footer address links, component links, and JSON-LD `hasMap`. NEVER use `maps.app.goo.gl` shortlinks anywhere in the codebase to avoid breaking Google Knowledge Graph entity reconciliation.
 - **Google Travel Entity**: Maintain link `https://www.google.com/travel/hotels/entity/ChgIvvqZseCp27F0GgwvZy8xaGR6ejNrcDcQAQ`.
+
+## Generative Engine Optimization (GEO) & AI Discovery Standards
+
+Whenever updating site layout, documentation, or robots directives:
+- **LLM Knowledge Base Link**: Ensure `<link rel="alternate" type="text/markdown" href="/llms.txt" title="Whispering Pines Resort LLM Knowledge Base" />` is declared in `<head>` via `Layout.astro`.
+- **AI Crawler Allowances in `public/robots.txt`**: Explicitly allow leading AI search engines (`GPTBot`, `ChatGPT-User`, `OAI-SearchBot`, `PerplexityBot`, `ClaudeBot`, `Google-Extended`, `Applebot-Extended`, `cohere-ai`). Block scraping data-harvesters (`Bytespider`, `CCBot`).
+- **Synchronized LLM Data**: Keep `public/llms.txt` and `public/llms-full.txt` up-to-date with new landing pages, amenities, room configurations, and direct-booking channels.
+
+## Astro Head Slot Scoping Rules
+
+When injecting JSON-LD schemas, preloads, or custom scripts into page templates:
+- **Top-Level `<Fragment slot="head">`**: Always place `<Fragment slot="head">` directly as an immediate child of the `<Layout>` component.
+- **Never Nest Slots Inside Child Elements**: Never put `<script slot="head">` or `<link slot="head">` inside nested `<div>` or child wrapper blocks, as Astro will fail to route them to `<head>` and will instead render them in `<body>`.
 
 ## Target Customer Personas & Feeder Corridors
 
@@ -54,6 +67,7 @@ Whenever designing landing pages, writing travel guides, or updating navigation/
 
 - **IndexNow Protocol**: The site uses automated post-build IndexNow submission via `astro.config.mjs` (`indexNowIntegration()`) with verification key file `public/8f3d1b7e4a9c2d5e6f8a0b1c2d3e4f5a.txt`.
 - **Primary XML Sitemaps**: Maintain references to `sitemap.xml`, `sitemap-index.xml`, `sitemap-website.xml`, and `sitemap-blog.xml` in `public/robots.txt`.
+- **Sitemap Synchronization**: When adding a new core landing page, register it in `public/sitemap-website.xml`. When adding a new blog article, register it in `public/sitemap-blog.xml`.
 
 ## Blog Publishing & Synchronized Registry Rules
 
@@ -65,7 +79,8 @@ Whenever publishing a new blog article or travel guide:
    - Mid-article and sticky WhatsApp direct-booking CRO conversion cards.
 2. **Data Registry**: Add the post object to `src/data/blogPosts.tsx` (`BLOG_POSTS` array) with unique `id`, `slug`, `customUrl`, `title`, `excerpt`, `date`, and `imageUrl`.
 3. **Sitemap**: Add the new page entry to `public/sitemap-blog.xml` with current `<lastmod>` and `<priority>1.0</priority>`.
-4. **Google Docs Ingestion**: When given a Google Doc URL, fetch raw content via `https://docs.google.com/document/d/<DOC_ID>/export?format=txt`.
+4. **LLM Knowledge Base**: Register the new article in `public/llms.txt`.
+5. **Google Docs Ingestion**: When given a Google Doc URL, fetch raw content via `https://docs.google.com/document/d/<DOC_ID>/export?format=txt`.
 
 ## Google "Add to Preferred Sources" Standards
 
@@ -78,3 +93,4 @@ Whenever publishing a new blog article or travel guide:
 ## Git & Version Control Rules
 
 - **No Auto-Commit or Auto-Push**: Do NOT perform automatic git commits or git pushes (`git commit`, `git push`). Make all code edits directly in project files and present them for review. Only commit or push to Git when explicitly requested by the user.
+

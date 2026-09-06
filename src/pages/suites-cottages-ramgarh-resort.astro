@@ -8,8 +8,8 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
 <Layout 
-  title="Suites & Cottages | Whispering Pines Resort Ramgarh" 
-  description="Explore luxury suites, deluxe rooms & private villas at Whispering Pines Resort Ramgarh. Panoramic Himalayan peak views, fireplaces & 150 Mbps Wi-Fi."
+  title="Suites & Cottages in Ramgarh | Whispering Pines by Casa De Bello Mukteshwar" 
+  description="Book luxury suites, deluxe rooms, and private 3-BHK villas at Whispering Pines Resort Ramgarh. 180° Himalayan snow views, fireplaces, 150 Mbps Wi-Fi & orchard balconies."
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#c9a832] selection:text-[#1B3322]">
     <Breadcrumbs />
@@ -48,4 +48,52 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
     <WhatsAppButton client:idle />
     <RecentBookingNotification client:idle />
   </div>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Resort",
+    "@id": "https://whisperingpinesresort.in/suites-cottages-ramgarh-resort/#resort",
+    "name": "Whispering Pines Resort by Casa De Bello",
+    "url": "https://whisperingpinesresort.in/suites-cottages-ramgarh-resort/",
+    "telephone": "+91-7505029696",
+    "priceRange": "₹3000 - ₹15999",
+    "hasMap": "https://maps.google.com/?cid=8386667112972057918",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+      "addressLocality": "Mukteshwar",
+      "addressRegion": "Uttarakhand",
+      "postalCode": "263137",
+      "addressCountry": "IN"
+    },
+    "containsPlace": [
+      {
+        "@type": "HotelRoom",
+        "name": "Deluxe Himalayan View Room",
+        "description": "Spacious mountain-facing room with private balcony offering 180° views of Nanda Devi and Trishul, king bed, heating, and modern en-suite bath.",
+        "occupancy": { "@type": "QuantitativeValue", "maxValue": 3, "unitText": "Person" },
+        "bed": { "@type": "BedDetails", "numberOfBeds": 1, "typeOfBed": "King" }
+      },
+      {
+        "@type": "HotelRoom",
+        "name": "Executive Cedar Suite",
+        "description": "Hand-crafted cedar wood suite with sitting lounge, stone fireplace, private balcony, and panoramic Himalayan vistas.",
+        "occupancy": { "@type": "QuantitativeValue", "maxValue": 4, "unitText": "Person" },
+        "bed": { "@type": "BedDetails", "numberOfBeds": 1, "typeOfBed": "King" }
+      },
+      {
+        "@type": "HotelRoom",
+        "name": "Family Orchard Suite",
+        "description": "Multi-bed family accommodation directly overlooking our private peach and plum orchards with separate children seating area.",
+        "occupancy": { "@type": "QuantitativeValue", "maxValue": 5, "unitText": "Person" },
+        "bed": { "@type": "BedDetails", "numberOfBeds": 2, "typeOfBed": "Queen" }
+      },
+      {
+        "@type": "Accommodation",
+        "name": "3-BHK Alpine Heritage Villa",
+        "description": "Full standalone private villa sleeping up to 10 guests with 3 king bedrooms, attic loft, living room fireplace, kitchen, and private enclosed garden.",
+        "occupancy": { "@type": "QuantitativeValue", "maxValue": 10, "unitText": "Person" },
+        "numberOfBedrooms": 3
+      }
+    ]
+  })} />
 </Layout>
