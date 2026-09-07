@@ -90,7 +90,15 @@ Whenever publishing a new blog article or travel guide:
   - `src/components/FooterSection.astro` & `src/components/FooterSection.tsx` (brand footer column)
   - `src/components/Navbar.tsx` (mobile menu drawer)
 
+## Image Rendering & SSR Standards
+
+Whenever creating or modifying image components, galleries, or Astro islands:
+- **Native Browser Lazy Loading**: Always render `<img>` tags directly into the SSR HTML output. Never suppress `<img>` tags during SSR using client-only `isInView` state guards, and never hide images behind JavaScript `onLoad` opacity transitions (`opacity-0` race conditions when cached by the browser).
+- **Decoupled Container & Image Styling**: When using `LazyImage` or wrapper components, pass container layout classes to `className` (e.g. `w-full h-full`) and image styling to `imgClassName` (e.g. `w-full h-full object-cover transition-transform group-hover:scale-105`).
+- **Interactive Overlays**: Always add `pointer-events-none` to color tints, hover overlays, or gradient masks on top of images so they do not obstruct clicks, taps, or modal triggers.
+
 ## Git & Version Control Rules
 
 - **No Auto-Commit or Auto-Push**: Do NOT perform automatic git commits or git pushes (`git commit`, `git push`). Make all code edits directly in project files and present them for review. Only commit or push to Git when explicitly requested by the user.
+
 
