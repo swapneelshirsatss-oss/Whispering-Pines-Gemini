@@ -233,7 +233,7 @@ export default function BookingInteractiveForm({
               <a
                 href={whatsAppLink}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 onClick={handleBookingClick}
                 className="w-full bg-[#c9a832] hover:bg-[#FAF9F6] text-[#1B3322] hover:text-[#1B3322] font-mono text-center text-[11px] font-bold uppercase tracking-[0.2em] py-5 px-6 rounded-sm shadow-xl flex items-center justify-center transition-all duration-300"
               >

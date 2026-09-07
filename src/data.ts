@@ -86,7 +86,7 @@ export const ROOMS_INVENTORY: RoomOption[] = [
       "Exclusive Private Orchard Yard & Fireplace Living Room",
       "Ideal for Multi-Generational Family Holidays Near Nainital"
     ],
-    description: "Rent the entire wood-and-stone alpine estate for absolute privacy. Perfect for family resort Nainital getaways, this three-bedroom heritage villa nestled inside orchard fields features massive double-height wooden trusses, glass-pane windows viewing the majestic snow peaks, and direct Ramgarh resort booking perks."
+    description: "Rent the entire wood-and-stone alpine estate for absolute privacy. Perfect for family resort Nainital getaways, this three-bedroom heritage alpine villa set within 2 acres of terraced fruit orchards features massive double-height wooden trusses, glass-pane windows viewing the majestic snow peaks, and direct Ramgarh resort booking perks."
   },
   {
     id: "delux-room",
@@ -160,12 +160,12 @@ export const GENERAL_AMENITIES = [
     ]
   },
   {
-    title: "100 Mbps Fiber Wi-Fi — Uttarakhand's Most Connected Mountain Resort",
+    title: "150 Mbps Fiber Wi-Fi — Uttarakhand's Most Connected Mountain Resort",
     icon: "Wifi",
-    description: "Robust, enterprise-grade high speed fiber optical Wi-Fi connection covering the entire area of the best resort near Mukteshwar for seamless remote work.",
+    description: "Enterprise-grade 150 Mbps fiber Wi-Fi covering rooms, private balconies, and outdoor lawn workstations for reliable high-altitude remote work.",
     features: [
       "Enterprise-Grade Fiber Optic Connection — Full Property Coverage",
-      "Seamless Video Calls, Streaming & Remote Work Sessions",
+      "Lag-Free Zoom Calls, Cloud Backups & 4K Streaming",
       "Best Workcation Resort Near Mukteshwar for Digital Nomads"
     ]
   },
@@ -418,7 +418,7 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: "Do you have high-speed internet suited for remote working?",
-    answer: "Yes, we have high-speed dedicated fiber-optic internet connection (150 Mbps) supporting active work sessions, video calls, and streaming seamlessly throughout the villa and front outdoor gardens."
+    answer: "Yes, we have high-speed dedicated fiber-optic internet connection (150 Mbps) supporting active work sessions, video calls, and streaming across the villa, private balconies, and front outdoor gardens."
   },
   {
     question: "How do meals and dining work? Can we order customized food?",

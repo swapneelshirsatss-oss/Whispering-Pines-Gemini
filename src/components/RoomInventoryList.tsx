@@ -153,10 +153,12 @@ export default function RoomInventoryList({
                 <LazyImage
                   src={optimizedImages?.[room.id] || room.image}
                   alt={`Cozy interior bedroom of ${room.name} at Whispering Pines Resort Mukteshwar, Uttarakhand`}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                  className="w-full h-full"
+                  imgClassName="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                  priority={index === 0}
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-[#1B3322]/10 mix-blend-multiply transition-opacity duration-500 group-hover:opacity-0" />
+                <div className="absolute inset-0 bg-[#1B3322]/10 mix-blend-multiply transition-opacity duration-500 group-hover:opacity-0 pointer-events-none" />
                 
                 {/* Special Tags */}
                 {room.featured && (
@@ -213,7 +215,7 @@ export default function RoomInventoryList({
                   <a
                     href={BOOKING_ENGINE_URL}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     onClick={handleRoomBookingClick}
                     className="inline-flex items-center text-[#1B3322] hover:text-[#c9a832] font-mono text-[11px] font-semibold uppercase tracking-[0.2em] transition-colors duration-300 group/btn"
                   >

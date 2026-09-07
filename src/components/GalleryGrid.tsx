@@ -65,7 +65,7 @@ const images: GalleryImage[] = [
   { src: "/images/best-place-to-stay-near-mukteshwar.avif", alt: "Best Place to Stay near Mukteshwar for Families, Couples and Remote Workations", category: "views", categoryLabel: "Outdoors & Views", span: "col-span-1 row-span-1" },
   { src: "/images/best-resort-in-uttrakahnd.avif", alt: "Best Mountain Resort in Uttarakhand featuring Outdoor Swimming Pool and Peak Views", category: "views", categoryLabel: "Outdoors & Views", span: "col-span-1 sm:col-span-2 row-span-1" },
   { src: "/images/hotel-near-kainchidham.avif", alt: "Boutique Mountain Stay near Kainchi Dham with Dedicated 150 Mbps Fiber Wi-Fi", category: "views", categoryLabel: "Outdoors & Views", span: "col-span-1 row-span-2" },
-  { src: "/images/resoert-near-nanital.avif", alt: "Whispering Pines Resort Estate View nestled in Active Peach and Apple Orchards", category: "views", categoryLabel: "Outdoors & Views", span: "col-span-1 row-span-1" },
+  { src: "/images/resoert-near-nanital.avif", alt: "Whispering Pines Resort Estate View set within Active Peach and Apple Orchards", category: "views", categoryLabel: "Outdoors & Views", span: "col-span-1 row-span-1" },
   { src: "/images/resort-for-families-in-mukteshwar.avif", alt: "Resort for Families in Mukteshwar featuring Enclosed Safe Lawns and Bonfire Area", category: "views", categoryLabel: "Outdoors & Views", span: "col-span-1 sm:col-span-2 row-span-1" }
 ];
 

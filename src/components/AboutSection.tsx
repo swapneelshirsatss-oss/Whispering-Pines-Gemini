@@ -24,7 +24,7 @@ export default function AboutSection({
     {
       title: "Alpine Heritage Design",
       icon: Home,
-      desc: "Artisanal hand-crafted stone walls and solid pine wood beams built by native local craftsman, bringing Kumaoni architecture into seamless harmony with modern comfort.",
+      desc: "Artisanal hand-crafted stone walls and solid pine wood beams built by native local craftsman, uniting traditional Kumaoni architecture with 4-star modern comfort.",
     },
     {
       title: "Ramgarh Fruit Hub",

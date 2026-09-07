@@ -82,7 +82,7 @@ export default function Hero({ optimizedImage, optimizedMobileImage }: HeroProps
           <a
             href={BOOKING_ENGINE_URL}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             onClick={handleHeroBookingClick}
             className="w-full sm:w-auto bg-[#c9a832] hover:bg-[#FAF9F6] text-[#1B3322] hover:text-[#1B3322] px-8 py-4 font-mono text-[11px] font-semibold uppercase tracking-[0.15em] transition-all duration-300 flex items-center justify-center border border-[#c9a832] hover:border-[#FAF9F6]"
           >

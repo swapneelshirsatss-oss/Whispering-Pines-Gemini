@@ -102,7 +102,7 @@ export default function Navbar({ children }: NavbarProps) {
             <a
               href={BOOKING_ENGINE_URL}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               onClick={handleNavBookingClick}
               className="bg-[#c9a832] hover:bg-[#FAF9F6] text-[#1B3322] hover:text-[#1B3322] text-[10px] font-mono font-semibold uppercase tracking-[0.15em] px-5 py-2.5 rounded-sm flex items-center transition-all duration-300 shadow-md"
             >
@@ -116,7 +116,7 @@ export default function Navbar({ children }: NavbarProps) {
             <a
               href={BOOKING_ENGINE_URL}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               onClick={handleNavBookingClick}
               className="bg-[#c9a832] text-[#1B3322] text-[10px] font-mono font-semibold uppercase tracking-wider px-3.5 py-1.5 rounded-sm flex items-center shadow-md active:scale-95 transition-transform"
             >
@@ -219,7 +219,7 @@ export default function Navbar({ children }: NavbarProps) {
             <a
               href={BOOKING_ENGINE_URL}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               onClick={() => {
                 setIsOpen(false);
                 handleNavBookingClick();
