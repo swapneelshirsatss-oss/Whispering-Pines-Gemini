@@ -97,8 +97,16 @@ Whenever creating or modifying image components, galleries, or Astro islands:
 - **Decoupled Container & Image Styling**: When using `LazyImage` or wrapper components, pass container layout classes to `className` (e.g. `w-full h-full`) and image styling to `imgClassName` (e.g. `w-full h-full object-cover transition-transform group-hover:scale-105`).
 - **Interactive Overlays**: Always add `pointer-events-none` to color tints, hover overlays, or gradient masks on top of images so they do not obstruct clicks, taps, or modal triggers.
 
+## Content Security Policy (CSP) & Cache Invariants
+
+Whenever updating `public/.htaccess` or `public/_headers`:
+- **Measurement Directives Invariant**: Never restrict `connect-src` or `script-src` without including Google Ads (`*.googleadservices.com`, `googleads.g.doubleclick.net`, `*.doubleclick.net`, `stats.g.doubleclick.net`), Google Tag Assistant (`tagmanager.google.com`), and Google endpoints (`www.google.com`, `*.google.com`).
+- **HTML Cache Revalidation Invariant**: Always ensure `text/html` has `max-age=0, no-cache, no-store, must-revalidate`. Never allow global `ExpiresDefault` to apply 30-day caching to HTML files, ensuring that new deployments and header updates take effect without edge CDN lag.
+- **Dual-Header Synchronization**: Maintain exact 1-to-1 directive parity between `public/.htaccess` and `public/_headers`.
+
 ## Git & Version Control Rules
 
 - **No Auto-Commit or Auto-Push**: Do NOT perform automatic git commits or git pushes (`git commit`, `git push`). Make all code edits directly in project files and present them for review. Only commit or push to Git when explicitly requested by the user.
+
 
 
