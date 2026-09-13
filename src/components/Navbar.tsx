@@ -33,7 +33,6 @@ export default function Navbar({ children }: NavbarProps) {
     { name: "Amenities", href: "/resort-amenities-mukteshwar/" },
     { name: "Gallery", href: "/gallery/" },
     { name: "Reviews", href: "/reviews/" },
-    { name: "Blog", href: "/blog/" },
     { name: "Contact", href: "/contact-whispering-pines-resort-mukteshwar/" },
     { name: "Casa De Bello", href: "https://casadebello.whisperingpinesresort.in/", external: true },
   ];
