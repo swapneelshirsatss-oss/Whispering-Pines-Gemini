@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Users, Bed, Check, ArrowRight, Apple, Snowflake, Info } from "lucide-react";
+import { Users, Bed, Check, ArrowRight, Apple, Snowflake, Info, MessageCircle, Sparkles } from "lucide-react";
 import LazyImage from "./LazyImage";
 import { trackAdsConversion } from "../utils/analytics";
 import type { RoomOption } from "../types";
@@ -161,18 +161,26 @@ export default function RoomInventoryList({
                 <div className="absolute inset-0 bg-[#1B3322]/10 mix-blend-multiply transition-opacity duration-500 group-hover:opacity-0 pointer-events-none" />
                 
                 {/* Special Tags */}
-                {room.featured && (
-                  <div className="absolute top-6 left-6 bg-[#FAF9F6] text-[#1B3322] text-[10px] uppercase font-mono tracking-[0.2em] px-4 py-2 rounded-sm shadow-lg">
-                    Estate Signature
-                  </div>
-                )}
+                <div className="absolute top-4 left-4 flex flex-col gap-1.5 z-10">
+                  {room.featured && (
+                    <div className="bg-[#1B3322] text-[#FAF9F6] text-[10px] uppercase font-mono tracking-[0.2em] px-3.5 py-1.5 rounded-sm shadow-md border border-[#c9a832]/40 font-bold">
+                      Signature Villa
+                    </div>
+                  )}
+                  {room.pricePerNight && (
+                    <div className="bg-[#FAF9F6]/95 backdrop-blur-md text-[#1B3322] text-[11px] font-mono font-bold px-3 py-1.5 rounded-sm shadow-md flex items-center gap-1.5 border border-[#1B3322]/10">
+                      <Sparkles className="w-3 h-3 text-[#c9a832]" />
+                      <span>From ₹{room.pricePerNight.toLocaleString("en-IN")}/night</span>
+                    </div>
+                  )}
+                </div>
               </div>
 
               {/* Room Specifications - Right/Bottom */}
               <div className="lg:col-span-5 flex flex-col justify-center space-y-6 lg:pr-8">
                 <div>
                   <div className="mb-4">
-                    <p className="text-[10px] font-mono text-[#c9a832] uppercase tracking-[0.2em] mb-2">
+                    <p className="text-[10px] font-mono text-[#c9a832] uppercase tracking-[0.2em] mb-2 font-semibold">
                       {room.subtitle}
                     </p>
                     <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1B3322] leading-tight">
@@ -181,46 +189,57 @@ export default function RoomInventoryList({
                   </div>
                   
                   <div className="w-12 h-[1px] bg-[#c9a832] mb-6" />
-                  <p className="text-sm text-[#2C3531]/75 leading-relaxed mb-8 font-sans font-light">
+                  <p className="text-sm text-[#2C3531]/80 leading-relaxed mb-6 font-sans font-light">
                     {room.description}
                   </p>
 
                   {/* Badges Bar */}
-                  <div className="flex space-x-8 mb-8 text-[11px] text-[#2C3531]/70 font-mono uppercase tracking-widest">
+                  <div className="flex flex-wrap gap-4 sm:gap-8 mb-6 text-[11px] text-[#2C3531]/75 font-mono uppercase tracking-wider">
                     <span className="flex items-center">
-                      <Users className="w-3.5 h-3.5 mr-2 opacity-50" />
+                      <Users className="w-3.5 h-3.5 mr-2 text-[#c9a832]" />
                       {room.capacity}
                     </span>
                     <span className="flex items-center">
-                      <Bed className="w-3.5 h-3.5 mr-2 opacity-50" />
+                      <Bed className="w-3.5 h-3.5 mr-2 text-[#c9a832]" />
                       {room.bedType}
                     </span>
                   </div>
 
                   {/* Room Amenities Grid */}
-                  <div className="mb-8">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3">
+                  <div className="mb-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2.5">
                       {room.amenities.slice(0, 4).map((item, idx) => (
                         <div key={idx} className="flex items-center text-xs text-[#2C3531]/80">
-                          <div className="w-1 h-1 bg-[#c9a832] rounded-full mr-3 shrink-0" />
-                          <h3 className="font-sans font-light">{item}</h3>
+                          <div className="w-1.5 h-1.5 bg-[#c9a832] rounded-full mr-2.5 shrink-0" />
+                          <h3 className="font-sans font-light leading-snug">{item}</h3>
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
 
-                {/* Booking Button */}
-                <div className="pt-8 border-t border-[#2C3531]/10">
+                {/* Dual Booking CTAs */}
+                <div className="pt-6 border-t border-[#2C3531]/10 flex flex-wrap items-center gap-3">
+                  <a
+                    href={`https://wa.me/917505029696?text=${encodeURIComponent(`Hi! I would like to book ${room.name} directly at Whispering Pines Resort Mukteshwar. Please share availability and best direct rates.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackAdsConversion("generate_lead", "booking", `room_card_whatsapp_${room.id}`)}
+                    className="inline-flex items-center justify-center gap-2 bg-[#1B3322] hover:bg-[#2A4832] text-[#FAF9F6] font-mono text-[11px] font-bold uppercase tracking-wider px-5 py-3 rounded-sm shadow-md transition-all duration-300 btn-shimmer"
+                  >
+                    <MessageCircle className="w-3.5 h-3.5 text-[#25D366] fill-current" />
+                    <span>Reserve on WhatsApp</span>
+                  </a>
+
                   <a
                     href={BOOKING_ENGINE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={handleRoomBookingClick}
-                    className="inline-flex items-center text-[#1B3322] hover:text-[#c9a832] font-mono text-[11px] font-semibold uppercase tracking-[0.2em] transition-colors duration-300 group/btn"
+                    className="inline-flex items-center text-[#1B3322] hover:text-[#c9a832] font-mono text-[11px] font-semibold uppercase tracking-wider px-3 py-3 transition-colors duration-300 group/btn"
                   >
-                    <span>Reserve Accommodation</span>
-                    <ArrowRight className="w-4 h-4 ml-3 transition-transform duration-300 group-hover/btn:translate-x-1" />
+                    <span>Check Web Engine</span>
+                    <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform duration-300 group-hover/btn:translate-x-1" />
                   </a>
                 </div>
               </div>

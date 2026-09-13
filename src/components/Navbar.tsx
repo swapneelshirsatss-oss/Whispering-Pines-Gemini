@@ -103,21 +103,21 @@ export default function Navbar({ children }: NavbarProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleNavBookingClick}
-              className="bg-[#c9a832] hover:bg-[#FAF9F6] text-[#1B3322] hover:text-[#1B3322] text-[10px] font-mono font-semibold uppercase tracking-[0.15em] px-5 py-2.5 rounded-sm flex items-center transition-all duration-300 shadow-md"
+              className="bg-[#c9a832] hover:bg-[#FAF9F6] text-[#1B3322] hover:text-[#1B3322] text-[10px] font-mono font-bold uppercase tracking-[0.18em] px-5 py-2.5 rounded-sm flex items-center transition-all duration-300 shadow-luxury-sm btn-shimmer"
             >
-              Book Stay
+              <span>Book Stay</span>
               <ArrowUpRight className="w-3.5 h-3.5 ml-1.5 opacity-80" />
             </a>
           </div>
 
           {/* Mobile Actions: Book Now & Menu Toggle */}
-          <div className="flex items-center gap-3 md:hidden">
+          <div className="flex items-center gap-2.5 md:hidden">
             <a
               href={BOOKING_ENGINE_URL}
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleNavBookingClick}
-              className="bg-[#c9a832] text-[#1B3322] text-[10px] font-mono font-semibold uppercase tracking-wider px-3.5 py-1.5 rounded-sm flex items-center shadow-md active:scale-95 transition-transform"
+              className="bg-[#c9a832] text-[#1B3322] text-[10px] font-mono font-bold uppercase tracking-wider px-3.5 py-2 rounded-sm flex items-center shadow-md active:scale-95 transition-transform btn-shimmer"
             >
               Book Stay
             </a>
@@ -134,11 +134,20 @@ export default function Navbar({ children }: NavbarProps) {
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-[#1B3322] border-b border-[#FAF9F6]/10 shadow-2xl transition-all duration-300 ease-in-out z-40 ${
+        className={`md:hidden absolute top-full left-0 w-full bg-[#1B3322]/98 backdrop-blur-xl border-b border-[#FAF9F6]/10 shadow-2xl transition-all duration-300 ease-in-out z-40 ${
           isOpen ? "opacity-100 max-h-screen py-5" : "opacity-0 max-h-0 overflow-hidden"
         }`}
       >
-        <div className="px-4 pt-2 pb-4 space-y-2">
+        <div className="px-4 pt-1 pb-4 space-y-2">
+          {/* Direct Booking VIP Banner */}
+          <a
+            href="/book-direct/"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center justify-between p-3 rounded bg-[#c9a832]/15 border border-[#c9a832]/40 text-[#c9a832] font-mono text-xs tracking-wider uppercase font-bold mb-3 hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors"
+          >
+            <span>✨ Direct Booking VIP Privileges</span>
+            <span className="text-[10px] font-normal lowercase bg-[#c9a832]/20 px-2 py-0.5 rounded">save 15%</span>
+          </a>
           {navLinks.map((link) => (
             <a
               key={link.name}
