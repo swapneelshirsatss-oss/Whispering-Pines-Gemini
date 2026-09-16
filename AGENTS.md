@@ -50,14 +50,23 @@ When injecting JSON-LD schemas, preloads, or custom scripts into page templates:
 - **Top-Level `<Fragment slot="head">`**: Always place `<Fragment slot="head">` directly as an immediate child of the `<Layout>` component.
 - **Never Nest Slots Inside Child Elements**: Never put `<script slot="head">` or `<link slot="head">` inside nested `<div>` or child wrapper blocks, as Astro will fail to route them to `<head>` and will instead render them in `<body>`.
 
+## Core Brand USP & Strategic Positioning Rules
+
+Whenever drafting page copy, meta tags, schemas, or hero sections:
+- **Core USP — 180° Himalayan View From ALL Rooms**: The primary signature differentiator of Whispering Pines Resort is that **every single room and balcony** commands a direct, unobstructed 180° panoramic view of the Nanda Devi and Trishul Himalayan snow peaks. Never imply only select rooms have the view.
+- **Leisure, Relaxation & Pure Unwinding First**: People travel to Whispering Pines for peace, crisp mountain air, slow living, and relaxation away from city stress. Do NOT make internet speed or workcation tech the headline hook. Wi-Fi is an ambient background convenience, not the primary reason to visit.
+- **Great Variety of Delicious Food**: Champion the resort's culinary offerings: authentic regional Kumaoni cuisine, diverse multi-cuisine comfort menus, fresh farm-to-table organic ingredients, and nightly bonfires with live barbecue setups.
+- **Unique Mountain Location**: Celebrate Malla Ramgarh's peaceful fruit bowl orchards (peaches, plums, apples, apricots) and tranquil pine ridge setting.
+
 ## Target Customer Personas & Feeder Corridors
 
 Whenever designing landing pages, writing travel guides, or updating navigation/footer silos:
 - **Target Personas**:
-  - **Urban Families**: Emphasize 3-BHK Alpine Villa (10 Pax), heated living quarters, and 180° Nanda Devi views.
-  - **Workcations**: Highlight 150 Mbps Fiber Wi-Fi, mountain desk setups, and 4-7 night extended stay packages.
+  - **Urban Families & Multi-Gen Groups**: Emphasize 3-BHK Alpine Villa (10 Pax), heated living quarters, and 180° Nanda Devi views from all bedrooms.
+  - **Couples & Relaxation Seekers**: Highlight serene privacy, romantic sunrise peak views from bed, rich food variety, and starlit bonfire dinners.
+  - **Leisure & Wellness Travelers**: Focus on slow living, crisp mountain air, orchard walks, pine forest tranquility, and unwinding.
   - **Pet Owners**: Highlight private enclosed orchard lawns and pet-welcoming cottage rooms.
-  - **Weekend Travelers**: Target 6.5–7.5 hour drive searches from Delhi NCR.
+  - **Weekend Escapes**: Target 6.5–7.5 hour drive searches from Delhi NCR.
   - **Legacy Guests**: Target former brand keywords (*"Clarks Exotica Ramgarh"*) highlighting upgraded Casa De Bello hospitality.
 - **Primary Drive-To Corridor (6–8h)**: Delhi/South Delhi, Gurugram, Noida, Ghaziabad, Faridabad, Meerut, Agra, Lucknow, Kanpur, Chandigarh.
 - **Secondary Metro Hubs**: Mumbai, Bengaluru, Kolkata, Pune, Ahmedabad, Surat (connecting via Pantnagar Airport PGH, IGI Airport DEL, Kathgodam KGM).

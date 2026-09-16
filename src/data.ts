@@ -81,10 +81,10 @@ export const ROOMS_INVENTORY: RoomOption[] = [
     featured: true,
     image: villaSuiteBedroomImg,
     amenities: [
+      "180° Himalayan Snow Views from All Bedrooms & Balconies",
       "Sleeps Up to 10 — 3 King Bedrooms + Premium Loft",
-      "3 Private En-Suite Baths with Himalayan Peak Views",
       "Exclusive Private Orchard Yard & Fireplace Living Room",
-      "Ideal for Multi-Generational Family Holidays Near Nainital"
+      "Ideal for Multi-Generational Family Holidays & Reunions"
     ],
     description: "Rent the entire wood-and-stone alpine estate for absolute privacy. Perfect for family resort Nainital getaways, this three-bedroom heritage alpine villa set within 2 acres of terraced fruit orchards features massive double-height wooden trusses, glass-pane windows viewing the majestic snow peaks, and direct Ramgarh resort booking perks."
   },
@@ -98,9 +98,9 @@ export const ROOMS_INVENTORY: RoomOption[] = [
     featured: false,
     image: cedarSuiteBedroomImg,
     amenities: [
+      "180° Himalayan Peak & Valley Panoramas from Private Deck",
       "Glass Skylight Ceilings for Night-Time Star Gazing",
-      "Cedar Pine Deck Overlooking Bhowali-Ramgarh Valley",
-      "Rain Shower Bath & Radiator Heating for Winter Stays"
+      "Rain Shower Bath & Radiator Heating for Cozy Winter Stays"
     ],
     description: "Located on the pristine top floor under cathedral wooden panels, this iconic Attic suite features beautiful skylights for star-gazing at night. Ideal for couples seeking a premium Ramgarh resort booking, walk out to your private wooden deck of cedar pine and look over the Bhowali-Ramgarh valleys at this tranquil family resort near Nainital."
   },
@@ -114,9 +114,9 @@ export const ROOMS_INVENTORY: RoomOption[] = [
     featured: false,
     image: orchardRoomImg,
     amenities: [
-      "Direct Lawn Access — Safe Open Space for Children",
+      "180° Himalayan Ridge Views & Direct Orchard Lawn Access",
       "Exposed Old-Stone Brick Archways & Geo-Heater Warmth",
-      "Best Value Family Room at Our Ramgarh Resort"
+      "Safe, Quiet Open Space for Children & Relaxed Family Stays"
     ],
     description: "Open your doors directly onto green lawns and private peach and apple trees. Featuring exposed old-stone brick archways, state-of-the-art geo-heaters for absolute winter warmth, and cozy interiors, it represents the finest choice for a family resort Nainital experience, with simple direct Ramgarh resort booking parameters."
   },
@@ -130,9 +130,9 @@ export const ROOMS_INVENTORY: RoomOption[] = [
     featured: false,
     image: familyTwinRoomImg,
     amenities: [
-      "Cedar Wood Pine Finish Rooms with Mountain Valley Windows",
-      "High-Capacity Heaters for Winter Group Travel",
-      "Best Group Rates — Book Directly for Maximum Savings"
+      "180° Himalayan Snow Peak Views from Private Windows",
+      "Cedar Wood Pine Finish Rooms Infused with Forest Aromatics",
+      "High-Capacity Heaters & Homestyle Mountain Comfort"
     ],
     description: "An incredibly cozy room accented with authentic cedar wood finishes that release subtle earthy forest oils, calming the senses. Offering pristine vistas of the forested Bhowali hills, this room is perfect for group travel, with direct Ramgarh resort booking steps for a memorable family resort Nainital vacation."
   }
@@ -140,43 +140,43 @@ export const ROOMS_INVENTORY: RoomOption[] = [
 
 export const GENERAL_AMENITIES = [
   {
-    title: "180° Himalayan Panoramas — Nanda Devi & Trishul From Every Balcony",
+    title: "180° Himalayan Panoramas — Snow Peaks From ALL Rooms & Balconies",
     icon: "Compass",
-    description: "Breathtaking 180-degree unobstructed panoramas of the snow-crested Nanda Devi range directly from your balconies and lawns, making Whispering Pines the best resort near Mukteshwar for scenic beauty.",
+    description: "Breathtaking 180-degree unobstructed panoramas of the snow-crested Nanda Devi range directly from all rooms, private balconies, and lawns.",
     features: [
-      "Unobstructed Ridge Views at 1,780 Metres Altitude",
-      "Snow-Crested Nanda Devi Range Visible Year-Round",
-      "Sunrise & Sunset Views Directly from Your Balcony or Lawn"
+      "180° Unobstructed Ridge Views of Nanda Devi & Trishul from Every Room",
+      "Snow-Crested Peaks Visible Right from Your Bed & Private Balcony",
+      "Spectacular Golden Sunrise & Sunset Mountain Vistas Year-Round"
     ]
   },
   {
-    title: "Wood-Fired Stone Fireplace — The Heart of Our Mountain Resort",
+    title: "Multi-Cuisine Dining & Wide Food Variety — Kumaoni Specialties & Live BBQ",
+    icon: "UtensilsCrossed",
+    description: "Delight in an extensive variety of fresh food prepared on-site, blending authentic regional Kumaoni dishes with North Indian favorites and custom continental menus.",
+    features: [
+      "Authentic Local Kumaoni Delicacies & Rich Multi-Cuisine Menus",
+      "Farm-to-Table Fresh Organic Mountain Ingredients Locally Sourced",
+      "Evening Bonfires with Live Charcoal BBQ & Mountain Snacks"
+    ]
+  },
+  {
+    title: "Pure Mountain Relaxation & Leisure — Quiet Pine Solitude & Fresh Air",
+    icon: "Heart",
+    description: "Designed for restorative rest, slow mountain living, and peaceful relaxation away from city noise, with ambient Wi-Fi available for your peace of mind.",
+    features: [
+      "Peaceful Orchard Lawns & Relaxation Nooks in the Pine Canopy",
+      "Restorative Slow Living Built for Complete Mental Rejuvenation",
+      "Seamless Ambient Wi-Fi for Effortless Connectivity When Needed"
+    ]
+  },
+  {
+    title: "Wood-Fired Stone Fireplace — Cozy Heart of Our Mountain Resort",
     icon: "Flame",
     description: "A gorgeous luxury stone fireplace in the main lodge living room of the best resort near Mukteshwar, where we light comforting cedar logs every winter evening.",
     features: [
       "Cedar Log Fireplace in the Main Lodge Living Room",
-      "Fireplace Setup on Every Winter Arrival",
+      "Fireplace Setup on Every Winter Arrival for Cozy Comfort",
       "Outdoor Bonfire & Charcoal BBQ Grill on Private Grounds"
-    ]
-  },
-  {
-    title: "150 Mbps Fiber Wi-Fi — Uttarakhand's Most Connected Mountain Resort",
-    icon: "Wifi",
-    description: "Enterprise-grade 150 Mbps fiber Wi-Fi covering rooms, private balconies, and outdoor lawn workstations for reliable high-altitude remote work.",
-    features: [
-      "Enterprise-Grade Fiber Optic Connection — Full Property Coverage",
-      "Lag-Free Zoom Calls, Cloud Backups & 4K Streaming",
-      "Best Workcation Resort Near Mukteshwar for Digital Nomads"
-    ]
-  },
-  {
-    title: "Farm-to-Table Eco Kitchen — Kumaoni Cuisine & Custom International Menus",
-    icon: "UtensilsCrossed",
-    description: "Delicious organic farm-to-table meals cooked locally at the best resort near Mukteshwar, combining mountain Kumaon styles with custom international menus.",
-    features: [
-      "Resident Cook — Fresh Organic Vegetables, Locally Sourced",
-      "Kumaoni Delicacies & Multi-Cuisine Custom Menus on Demand",
-      "Breakfast, Lunch & Dinner Packages or On-Demand Orders"
     ]
   },
   {
@@ -210,13 +210,13 @@ export const GENERAL_AMENITIES = [
     ]
   },
   {
-    title: "Expansive scenic event lawn",
+    title: "Expansive Scenic Event Lawn & Viewpoint Deck",
     icon: "Sparkles",
-    description: "Beautifully manicured wide green lawns overlooking mountain peaks, offering event capabilities unmatched by any other resort near Mukteshwar.",
+    description: "Beautifully manicured wide green lawns overlooking mountain peaks, offering event and relaxation capabilities unmatched by any other resort near Mukteshwar.",
     features: [
-      "Expansive Gated Green Lawns for Group Gatherings",
+      "Expansive Gated Green Lawns for Family Relaxation & Gatherings",
       "Unobstructed Valley & Himalayan Mountain Backdrops",
-      "Custom Catering & Decor Setups for Private Gatherings"
+      "Custom Mountain Dining & Leisure Setups for Private Gatherings"
     ]
   }
 ];
@@ -417,12 +417,12 @@ export const FAQS: FAQItem[] = [
     answer: "Absolutely! The property features a secure, flat gated private gravel driveway that comfortably accommodates 3 to 4 tourist SUVs/sedans right in front of the villa. No tricky cliff-edge parking required."
   },
   {
-    question: "Do you have high-speed internet suited for remote working?",
-    answer: "Yes, we have high-speed dedicated fiber-optic internet connection (150 Mbps) supporting active work sessions, video calls, and streaming across the villa, private balconies, and front outdoor gardens."
+    question: "Is Wi-Fi available at the resort if I need to connect?",
+    answer: "Yes, reliable high-speed fiber-optic Wi-Fi is available across all rooms, private balconies, and outdoor gardens. While our guests primarily visit for peaceful relaxation, unwinding in nature, and enjoying the 180° Himalayan views, seamless connectivity is always available whenever you need it."
   },
   {
     question: "How do meals and dining work? Can we order customized food?",
-    answer: "We offer delicious customized homestyle dining on-site. Our resident cook prepares fresh multi-cuisine meals and authentic local Kumaoni delicacies using locally-sourced organic vegetables. Guest can choose breakfast/lunch/dinner packages or order on-demand."
+    answer: "We offer delicious customized homestyle dining on-site with an extensive variety of food. Our resident cook prepares fresh multi-cuisine meals, North Indian comfort food, and authentic local Kumaoni delicacies using locally-sourced organic vegetables. Guests can choose breakfast/lunch/dinner packages or order on-demand."
   },
   {
     question: "Are pets allowed inside the villa and gardens?",
@@ -441,7 +441,7 @@ export const FAQS: FAQItem[] = [
 export const CONTACT_FAQS: FAQItem[] = [
   {
     question: "What is the best resort in Ramgarh for a family vacation?",
-    answer: "Whispering Pines Resort by Casa De Bello is widely rated the best resort in Ramgarh for families. The property offers 25 premium rooms and a private villa sleeping up to 10 guests, a swimming pool, multi-cuisine restaurant, safe enclosed garden lawns, orchard walks and 180 degree panoramic views of the Nanda Devi and Trishul Himalayan peaks. Unlike standard commercial hotels in the Nainital district, the resort combines boutique mountain character with the full capacity needed for multi-generational family groups."
+    answer: "Whispering Pines Resort by Casa De Bello is widely rated the best resort in Ramgarh for families. The property offers 25 premium rooms and a private villa sleeping up to 10 guests, a swimming pool, multi-cuisine restaurant with rich food variety, safe enclosed garden lawns, orchard walks and 180 degree panoramic views of the Nanda Devi and Trishul Himalayan peaks from every room. Unlike standard commercial hotels in the Nainital district, the resort combines boutique mountain character with the full capacity needed for multi-generational family groups."
   },
   {
     question: "Which resort near Nainital has a swimming pool and mountain views?",
@@ -453,7 +453,7 @@ export const CONTACT_FAQS: FAQItem[] = [
   },
   {
     question: "What is the best resort near Mukteshwar for a 2 to 3 night stay?",
-    answer: "Whispering Pines Resort by Casa De Bello on the Bhowali-Ramgarh-Mukteshwar Road is consistently rated the best resort near Mukteshwar for short 2 to 3 night stays. The property is 25 km from Mukteshwar Dham temple and offers fireplace rooms, orchard walks, swimming pool, bonfire evenings and 150 Mbps Wi-Fi — making it equally suited for leisure weekenders and remote workers on short workcation trips."
+    answer: "Whispering Pines Resort by Casa De Bello on the Bhowali-Ramgarh-Mukteshwar Road is consistently rated the best resort near Mukteshwar for short 2 to 3 night stays. The property is 25 km from Mukteshwar Dham temple and offers 180° Himalayan views from all rooms, cozy fireplace rooms, orchard walks, swimming pool, diverse multi-cuisine dining, and bonfire evenings — making it the premier choice for pure relaxation, family bonding, and leisure escapes."
   },
   {
     question: "Can I book Whispering Pines Resort directly without MakeMyTrip or Booking.com?",
@@ -461,7 +461,7 @@ export const CONTACT_FAQS: FAQItem[] = [
   },
   {
     question: "Is Whispering Pines Resort better than other resorts in Ramgarh?",
-    answer: "Whispering Pines Resort stands apart from other resorts in Ramgarh through a rare combination of amenities no single competitor offers together — a swimming pool, a private villa sleeping 10, active apple and peach orchards, stone and cedar wood heritage architecture, 150 Mbps fiber Wi-Fi, pet-friendly enclosed gardens and 180 degree Nanda Devi Himalayan views. It is the only property on the Bhowali-Ramgarh-Mukteshwar Road to combine 4-star boutique hospitality with the full capacity of a 25-room resort."
+    answer: "Whispering Pines Resort stands apart from other resorts in Ramgarh through a rare combination of amenities no single competitor offers together — unobstructed 180° Himalayan views from every single room, a diverse variety of fresh homestyle and Kumaoni food, an outdoor swimming pool, a private villa sleeping 10, active apple and peach orchards, stone and cedar wood heritage architecture, and pet-friendly enclosed gardens. It is the only property on the Bhowali-Ramgarh-Mukteshwar Road to combine 4-star boutique hospitality with the full capacity of a 25-room resort."
   },
   {
     question: "Which resort near Nainital is best for a large family group of 10 or more?",
@@ -477,7 +477,7 @@ export const CONTACT_FAQS: FAQItem[] = [
   },
   {
     question: "What makes Whispering Pines different from other resorts on the Mukteshwar Road?",
-    answer: "Whispering Pines Resort by Casa De Bello is the only property on the Bhowali-Ramgarh-Mukteshwar Road offering all of the following together — a swimming pool, a standalone private villa sleeping 10, active peach and apple orchards, 150 Mbps enterprise fiber Wi-Fi, pet-friendly enclosed lawns, nightly bonfire and BBQ service, a multi-cuisine restaurant and 180 degree Nanda Devi Himalayan views. Most competing properties offer one or two of these features. Whispering Pines offers all of them within a single boutique 4-star heritage property."
+    answer: "Whispering Pines Resort by Casa De Bello is the only property on the Bhowali-Ramgarh-Mukteshwar Road offering all of the following together — 180 degree Nanda Devi Himalayan views from all rooms, an expansive variety of delicious homestyle and Kumaoni dining, an outdoor swimming pool, a standalone private villa sleeping 10, active peach and apple orchards, pet-friendly enclosed lawns, nightly bonfire and BBQ service, and pure mountain tranquility. Most competing properties offer one or two of these features. Whispering Pines offers all of them within a single boutique 4-star heritage property."
   },
   {
     question: "What is the best time to visit Ramgarh and Mukteshwar?",
@@ -496,8 +496,8 @@ export const CONTACT_FAQS: FAQItem[] = [
     answer: "Yes. Kainchi Dham, the Neem Karoli Baba Ashram, is one of the most spiritually significant and visited temples in Uttarakhand and is absolutely worth visiting. It is located approximately 45 minutes from Whispering Pines Resort in Ramgarh. The ashram is set along the Kosi riverbanks in a tranquil valley and receives thousands of devotees and tourists daily. Whispering Pines Resort serves as an ideal base for Kainchi Dham visits — the in-house travel desk coordinates morning cab departures to ensure arrival before peak temple hours."
   },
   {
-    question: "Can remote workers and digital nomads stay at Whispering Pines for extended periods?",
-    answer: "Yes. Whispering Pines Resort is one of the best workcation resorts near Nainital and Mukteshwar, purpose-built for remote working stays of 4 to 7 nights and longer. The property offers enterprise-grade 150 Mbps fiber optic Wi-Fi with full coverage across all rooms, the private villa, outdoor terraces and the orchard garden. Extended stay pricing and customised workcation packages with daily meal plans are available on direct WhatsApp booking at +91-7505029696. The quiet pine forest surroundings and stable mountain internet make it ideal for video conferencing, deep work sessions and creative retreats."
+    question: "Can guests stay for extended relaxation and creative retreats?",
+    answer: "Yes. While Whispering Pines Resort is primarily a sanctuary for relaxation, slow mountain living, and family holidays, we also welcome guests seeking extended wellness stays, creative retreats, or tranquil work-from-mountain weeks. Reliable high-speed fiber Wi-Fi is available throughout the estate, paired with 180° snow peak views from your desk, fresh orchard air, and customized daily meal plans on direct WhatsApp booking at +91-7505029696."
   },
   {
     question: "Is Whispering Pines Resort pet friendly and can I bring my dog?",
@@ -505,7 +505,7 @@ export const CONTACT_FAQS: FAQItem[] = [
   },
   {
     question: "Does Whispering Pines Resort have a restaurant or do guests need to go out for food?",
-    answer: "Whispering Pines Resort has a full on-site multi-cuisine restaurant and 24-hour in-room dining service — guests never need to leave the property for meals. The resident mountain chef prepares fresh Kumaoni cuisine, North Indian, Continental and custom meal options using locally sourced organic vegetables and farm-fresh ingredients. Guests can pre-book daily breakfast, lunch and dinner packages or order meals on demand directly to their room, private balcony or orchard-facing lawn."
+    answer: "Whispering Pines Resort has a full on-site multi-cuisine restaurant and 24-hour in-room dining service — guests never need to leave the property for meals. The resident mountain chef prepares a rich variety of fresh food: authentic Kumaoni regional dishes, North Indian comfort foods, Continental classics, and custom meal options using locally sourced organic vegetables and farm-fresh ingredients. Guests can pre-book daily meal packages or order on demand directly to their room, private balcony, or orchard lawn."
   },
   {
     question: "What room type at Whispering Pines is best for a honeymoon couple?",
@@ -513,10 +513,10 @@ export const CONTACT_FAQS: FAQItem[] = [
   },
   {
     question: "How many rooms does Whispering Pines Resort have and can it accommodate a corporate group?",
-    answer: "Whispering Pines Resort has 25 premium rooms plus a standalone private villa sleeping up to 10 additional guests — giving a total group accommodation capacity of 35 or more guests. The property is well-suited for corporate offsites, leadership retreats and team workcations with a dedicated conference and banquet hall accommodating up to 30 delegates, 150 Mbps enterprise fiber Wi-Fi, projector and whiteboard setup, and fully customisable corporate catering menus. Group booking and corporate retreat packages are available on direct inquiry via WhatsApp at +91-7505029696."
+    answer: "Whispering Pines Resort has 25 premium rooms plus a standalone private villa sleeping up to 10 additional guests — giving a total group accommodation capacity of 35 or more guests. The property is well-suited for executive offsites and leadership retreats with a dedicated conference and banquet hall accommodating up to 30 delegates, ambient Wi-Fi, projector and whiteboard setup, and fully customisable corporate catering menus. Group booking and corporate retreat packages are available on direct inquiry via WhatsApp at +91-7505029696."
   },
   {
     question: "What happened to Clarks Exotica Mukteshwar and is it still open?",
-    answer: "Clarks Exotica Mukteshwar has been upgraded and relaunched as Whispering Pines Resort by Casa De Bello. The property continues to operate at the same iconic Bhowali-Ramgarh-Mukteshwar Road address in Malla Ramgarh, Uttarakhand under new Casa De Bello management. The resort is fully open and has been significantly upgraded with a new private villa, enhanced stone cottage architecture, swimming pool, 150 Mbps fiber Wi-Fi and personalised boutique hospitality. Past Clarks Exotica guests receive exclusive returning-guest rates on direct WhatsApp booking at +91-7505029696."
+    answer: "Clarks Exotica Mukteshwar has been upgraded and relaunched as Whispering Pines Resort by Casa De Bello. The property continues to operate at the same iconic Bhowali-Ramgarh-Mukteshwar Road address in Malla Ramgarh, Uttarakhand under new Casa De Bello management. The resort is fully open and has been significantly upgraded with a new private villa, enhanced stone cottage architecture, swimming pool, diverse multi-cuisine dining, and personalised boutique hospitality. Past Clarks Exotica guests receive exclusive returning-guest rates on direct WhatsApp booking at +91-7505029696."
   }
 ];

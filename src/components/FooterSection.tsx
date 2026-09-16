@@ -32,7 +32,7 @@ export default function FooterSection() {
             </div>
 
             <p className="text-xs font-sans text-[#FAF9F6]/75 leading-relaxed">
-              A luxury 25-room boutique <strong className="text-[#FAF9F6] font-medium">resort near Mukteshwar and Nainital</strong> situated at 1,780m in Malla Ramgarh along the fruit orchards of Kumaon. Offering 180° panoramic views of Nanda Devi and Trishul peaks, private orchards, and heated living quarters.
+              A luxury 25-room boutique <strong className="text-[#FAF9F6] font-medium">resort near Mukteshwar and Nainital</strong> situated at 1,780m in Malla Ramgarh along the fruit orchards of Kumaon. Offering 180° panoramic views of Nanda Devi and Trishul peaks from all rooms, rich multi-cuisine dining, and peaceful mountain relaxation.
             </p>
 
             <div className="pt-0.5 space-y-1">
@@ -40,7 +40,7 @@ export default function FooterSection() {
                 <span>★ Top-Rated Resort Near Mukteshwar & Nainital</span>
               </div>
               <p className="text-[10px] text-[#FAF9F6]/65 leading-tight">
-                180° Himalayan Snow Views • 3-BHK Luxury Villa • Heated Suites • 150 Mbps Wi-Fi
+                180° Himalayan Views From All Rooms • 3-BHK Luxury Villa • Multi-Cuisine Dining • Peaceful Mountain Retreat
               </p>
             </div>
             

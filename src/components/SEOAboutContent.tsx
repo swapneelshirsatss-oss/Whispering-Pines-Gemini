@@ -44,11 +44,11 @@ const SEO_ABOUT_CONTENT = [
     h2: "What Makes Us Uttarakhand's Most Loved Mountain Resort",
     icon: <HeartHandshake className="w-6 h-6 text-[#c9a832] mb-4" />,
     h3s: [
-      "180° Unobstructed Views of Nanda Devi & Trishul Peaks",
-      "Pet-Friendly Resort with Enclosed Garden Trails",
-      "150 Mbps Fiber Wi-Fi for Workcation & Remote Work Stays"
+      "180° Unobstructed Views of Nanda Devi & Trishul Peaks from ALL Rooms",
+      "Great Variety of Delicious Homestyle & Kumaoni Food",
+      "Pure Mountain Relaxation Amidst Fruit Orchards & Pine Trails"
     ],
-    eeat: "By installing enterprise-grade 150 Mbps fiber optics deep in the Himalayas and ensuring completely enclosed, safe trails for pets, we bridge the gap between absolute remote wilderness and modern luxury necessities."
+    eeat: "By offering breathtaking 180° Himalayan snow peak views from every room, a rich variety of freshly prepared mountain cuisine, and tranquil orchard grounds, we provide the ultimate sanctuary for genuine relaxation and peaceful mountain escapes."
   },
   {
     id: "trust",

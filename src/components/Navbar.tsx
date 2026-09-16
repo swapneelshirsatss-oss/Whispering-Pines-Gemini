@@ -43,11 +43,10 @@ export default function Navbar({ children }: NavbarProps) {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled
           ? "bg-[#1B3322]/95 backdrop-blur-md shadow-lg border-b border-[#FAF9F6]/10 py-3"
           : "bg-gradient-to-b from-[#1B3322]/80 to-transparent py-5"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -76,11 +75,10 @@ export default function Navbar({ children }: NavbarProps) {
                     }
                   }
                 }}
-                className={`text-xs lg:text-sm font-medium tracking-wide transition-colors duration-200 ${
-                  link.external
+                className={`text-xs lg:text-sm font-medium tracking-wide transition-colors duration-200 ${link.external
                     ? "text-[#c9a832] hover:text-[#FAF9F6] font-semibold"
                     : "text-[#FAF9F6]/90 hover:text-[#c9a832]"
-                }`}
+                  }`}
               >
                 {link.name}
               </a>
@@ -134,9 +132,8 @@ export default function Navbar({ children }: NavbarProps) {
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-[#1B3322]/98 backdrop-blur-xl border-b border-[#FAF9F6]/10 shadow-2xl transition-all duration-300 ease-in-out z-40 ${
-          isOpen ? "opacity-100 max-h-screen py-5" : "opacity-0 max-h-0 overflow-hidden"
-        }`}
+        className={`md:hidden absolute top-full left-0 w-full bg-[#1B3322]/98 backdrop-blur-xl border-b border-[#FAF9F6]/10 shadow-2xl transition-all duration-300 ease-in-out z-40 ${isOpen ? "opacity-100 max-h-screen py-5" : "opacity-0 max-h-0 overflow-hidden"
+          }`}
       >
         <div className="px-4 pt-1 pb-4 space-y-2">
           {/* Direct Booking VIP Banner */}
@@ -167,11 +164,10 @@ export default function Navbar({ children }: NavbarProps) {
                 }
                 setIsOpen(false);
               }}
-              className={`block px-4 py-3 text-base font-medium rounded-sm transition-colors ${
-                link.external
+              className={`block px-4 py-3 text-base font-medium rounded-sm transition-colors ${link.external
                   ? "text-[#c9a832] font-semibold hover:bg-[#FAF9F6]/5"
                   : "text-[#FAF9F6]/95 hover:text-[#c9a832] hover:bg-[#FAF9F6]/5"
-              }`}
+                }`}
             >
               {link.name}
             </a>
@@ -183,29 +179,29 @@ export default function Navbar({ children }: NavbarProps) {
               Curated Stays & Groups
             </span>
             <div className="grid grid-cols-2 gap-2 px-4 text-xs font-mono">
-              <a 
-                href="/private-villas-near-nainital/" 
+              <a
+                href="/private-villas-near-nainital/"
                 onClick={() => setIsOpen(false)}
                 className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors text-center"
               >
                 🏡 3-BHK Villa (10 Pax)
               </a>
-              <a 
-                href="/about-whispering-pines-resort-ramgarh/" 
+              <a
+                href="/about-whispering-pines-resort-ramgarh/"
                 onClick={() => setIsOpen(false)}
                 className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors text-center"
               >
-                💻 150M Wi-Fi Workcation
+                🏔️ 180° Views (All Rooms)
               </a>
-              <a 
-                href="/resort-amenities-mukteshwar/" 
+              <a
+                href="/resort-amenities-mukteshwar/"
                 onClick={() => setIsOpen(false)}
                 className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors text-center"
               >
                 🐾 Pet-Friendly Lawns
               </a>
-              <a 
-                href="/clarks-exotica-resort-ramgarh-mukteshwar/" 
+              <a
+                href="/clarks-exotica-resort-ramgarh-mukteshwar/"
                 onClick={() => setIsOpen(false)}
                 className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors text-center"
               >
@@ -213,7 +209,7 @@ export default function Navbar({ children }: NavbarProps) {
               </a>
             </div>
           </div>
-          
+
           <div className="border-t border-[#FAF9F6]/10 pt-4 px-4 space-y-4">
             <a
               href={`tel:${PHONE_TEL}`}
@@ -223,7 +219,7 @@ export default function Navbar({ children }: NavbarProps) {
               <Phone className="w-5 h-5 mr-3 text-[#c9a832]" />
               {PHONE_DISPLAY} <span className="text-xs text-[#FAF9F6]/50 ml-2">(+91 75050 29696)</span>
             </a>
-            
+
             <a
               href={BOOKING_ENGINE_URL}
               target="_blank"
@@ -243,11 +239,11 @@ export default function Navbar({ children }: NavbarProps) {
               <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#c9a832] block mb-2 font-semibold text-center">
                 Google Preferred Source
               </span>
-              <div 
-                className="g-preferred-source inline-block min-h-[36px]" 
-                {...{ "google-add-preferred-source-btn": "" }} 
-                data-domain="whisperingpinesresort.in" 
-                data-theme="dark" 
+              <div
+                className="g-preferred-source inline-block min-h-[36px]"
+                {...{ "google-add-preferred-source-btn": "" }}
+                data-domain="whisperingpinesresort.in"
+                data-theme="dark"
                 data-lang="en"
               ></div>
             </div>

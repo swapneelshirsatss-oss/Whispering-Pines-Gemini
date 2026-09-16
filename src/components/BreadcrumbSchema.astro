@@ -17,7 +17,7 @@ interface Props {
 const { breadcrumbs: customBreadcrumbs, title } = Astro.props;
 const siteBase = "https://whisperingpinesresort.in";
 const rawPathname = Astro.url.pathname;
-const pathname = rawPathname.endsWith('/') ? rawPathname : `${rawPathname}/`;
+const pathname = rawPathname.endsWith("/") ? rawPathname : `${rawPathname}/`;
 
 const pageMap: Record<string, string> = {
   "/": "Home",
@@ -34,43 +34,53 @@ const pageMap: Record<string, string> = {
   "/privacy-policy/": "Privacy Policy",
   "/terms/": "Terms & Conditions",
   "/sitemap/": "Sitemap",
-  "/blog/resort-near-mukteshwar/": "Resort near Mukteshwar Guide"
+  "/blog/resort-near-mukteshwar/": "Resort near Mukteshwar Guide",
 };
 
 let breadcrumbItems: { name: string; item: string }[] = [];
 
 if (customBreadcrumbs && customBreadcrumbs.length > 0) {
-  breadcrumbItems = customBreadcrumbs.map(b => ({
+  breadcrumbItems = customBreadcrumbs.map((b) => ({
     name: b.name || b.label || "Page",
-    item: b.item || (b.href ? (b.href.startsWith("http") ? b.href : `${siteBase}${b.href.startsWith('/') ? b.href : `/${b.href}`}`) : siteBase)
+    item:
+      b.item ||
+      (b.href
+        ? b.href.startsWith("http")
+          ? b.href
+          : `${siteBase}${b.href.startsWith("/") ? b.href : `/${b.href}`}`
+        : siteBase),
   }));
 } else if (pathname === "/") {
-  breadcrumbItems = [{ name: "Home", item: "https://whisperingpinesresort.in/" }];
+  breadcrumbItems = [
+    { name: "Home", item: "https://whisperingpinesresort.in/" },
+  ];
 } else if (pathname.startsWith("/blog/") && pathname !== "/blog/") {
   // Clean title for blog post breadcrumb if passed with brand suffix
   const cleanTitle = title ? title.split(" | ")[0] : "Article";
   breadcrumbItems = [
     { name: "Home", item: "https://whisperingpinesresort.in/" },
     { name: "Blog", item: "https://whisperingpinesresort.in/blog/" },
-    { name: cleanTitle, item: `${siteBase}${pathname}` }
+    { name: cleanTitle, item: `${siteBase}${pathname}` },
   ];
 } else {
-  const pageName = pageMap[pathname] || (title ? title.split(" | ")[0] : "Page");
+  const pageName =
+    pageMap[pathname] || (title ? title.split(" | ")[0] : "Page");
   breadcrumbItems = [
     { name: "Home", item: "https://whisperingpinesresort.in/" },
-    { name: pageName, item: `${siteBase}${pathname}` }
+    { name: pageName, item: `${siteBase}${pathname}` },
   ];
 }
 
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "itemListElement": breadcrumbItems.map((b, idx) => ({
+  itemListElement: breadcrumbItems.map((b, idx) => ({
     "@type": "ListItem",
-    "position": idx + 1,
-    "name": b.name,
-    "item": b.item
-  }))
+    position: idx + 1,
+    name: b.name,
+    item: b.item,
+  })),
 };
 ---
+
 <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />

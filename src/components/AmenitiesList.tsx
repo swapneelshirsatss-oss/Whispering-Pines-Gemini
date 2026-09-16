@@ -11,10 +11,10 @@ interface AmenityItem {
 }
 
 const GENERAL_AMENITIES: AmenityItem[] = [
-  { title: "180° Himalayan Peak View", category: "View & Location", icon: "Compass", description: "Direct view of Nanda Devi & Trishul peaks." },
-  { title: "Fireplace & Radiator Heating", category: "Warmth & Comfort", icon: "Flame", description: "Indoor wood fireplaces." },
-  { title: "150 Mbps Fiber Wi-Fi", category: "Connectivity", icon: "Wifi", description: "Dedicated high-speed internet." },
-  { title: "Homestyle Dining", category: "Culinary", icon: "UtensilsCrossed", description: "Fresh local organic cuisine." }
+  { title: "180° Views From ALL Rooms", category: "View & Location", icon: "Compass", description: "Direct view of Nanda Devi & Trishul peaks from every room." },
+  { title: "Rich Variety of Food", category: "Culinary", icon: "UtensilsCrossed", description: "Fresh local Kumaoni cuisine and multi-cuisine favorites." },
+  { title: "Fireplace & Radiator Heating", category: "Warmth & Comfort", icon: "Flame", description: "Indoor wood fireplaces and cozy heating." },
+  { title: "Pure Mountain Relaxation", category: "Wellness", icon: "Heart", description: "Serene orchard lawns, pine trails, and slow living." }
 ];
 
 const iconMap: Record<string, LucideIcon> = {
@@ -64,7 +64,7 @@ export default function AmenitiesList({
           )}
           <div className="w-16 h-[2px] bg-[#c9a832] mx-auto mt-4 mb-6" />
           <p className="text-sm sm:text-base text-[#FAF9F6]/85 font-sans leading-relaxed">
-            Experience premium, rustic estate hospitality inside a private gated preserve. As the <strong>best resort near mukteshwar</strong>, we provide everything required to turn a mountain retreat into a highly-connected, comfortable, and warm sanctuary built for a true Himalayan escape.
+            Experience premium, rustic estate hospitality inside a private gated preserve. As the <strong>best resort near mukteshwar</strong>, we provide everything required to turn a mountain retreat into a deeply relaxing, comfortable, and warm sanctuary built for an authentic Himalayan escape with 180° snow peak views from all rooms and delicious homestyle food.
           </p>
         </div>
 
