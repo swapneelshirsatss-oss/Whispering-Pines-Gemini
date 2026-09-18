@@ -10,6 +10,8 @@ import familyImgSrc from '../assets/images/Family_Twin_Room_Near_nainital.avif';
 import diningImgSrc from '../assets/images/Restaurant-cafe-ramgarh.avif';
 import bathroomImgSrc from '../assets/images/delux-room-bathroom.avif';
 import viewImgSrc from '../assets/images/outside-view-from-resort-hotel.avif';
+import kainchiImgSrc from '../assets/images/casa-de-bello-kainchi-dham.avif';
+import anurraImgSrc from '../assets/images/stay-near-kainchi-dham.avif';
 
 const heroImage = await getImage({ src: heroImgSrc, format: 'webp', width: 1800, quality: 82 });
 const heroMobile = await getImage({ src: heroImgSrc, format: 'webp', width: 800, quality: 78 });
@@ -19,6 +21,8 @@ const familyImg = await getImage({ src: familyImgSrc, format: 'webp', width: 900
 const diningImg = await getImage({ src: diningImgSrc, format: 'webp', width: 900, quality: 80 });
 const bathroomImg = await getImage({ src: bathroomImgSrc, format: 'webp', width: 900, quality: 80 });
 const viewImg = await getImage({ src: viewImgSrc, format: 'webp', width: 900, quality: 80 });
+const kainchiImg = await getImage({ src: kainchiImgSrc, format: 'webp', width: 900, quality: 80 });
+const anurraImg = await getImage({ src: anurraImgSrc, format: 'webp', width: 900, quality: 80 });
 
 const RESORT_PHONE_DISPLAY = "075050 29696";
 const RESORT_PHONE_TEL = "+917505029696";
@@ -286,93 +290,353 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
   </section>
 
   <!-- =========================================================================
-       SECTION 2: THE SIX TENETS OF ALPINE COMFORT (TAJ & CLUB MAHINDRA STANDARDS)
+       SECTION 2: SELECT YOUR HIMALAYAN RESIDENCE — 3 CASA DE BELLO PROPERTIES
        ========================================================================= -->
   <section class="py-24 bg-[#FAF8F5] text-[#1A2421] border-b border-[#1A2421]/10 relative">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-16">
+      <!-- Section Header: Select Your Himalayan Residence -->
+      <div class="text-center max-w-4xl mx-auto mb-16">
         <span class="text-xs font-mono font-bold tracking-[0.25em] text-[#A08127] uppercase block mb-3">
-          The Non-Negotiable Hospitality Standards
+          Properties Managed by Casa De Bello Hospitality
         </span>
         <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[#07150C] leading-tight text-balance">
-          "Everything worked, the bathroom was spotless, and the mountain view was real."
+          Select Your Himalayan Residence
         </h2>
-        <div class="w-16 h-0.5 bg-[#C9A832] mx-auto my-4"></div>
-        <p class="font-sans text-base text-[#526359] max-w-xl mx-auto leading-relaxed">
-          Inspired by the timeless service benchmarks of Taj and Club Mahindra, we focus relentlessly on the fundamentals that make or break a mountain holiday.
+        <div class="w-20 h-0.5 bg-[#C9A832] mx-auto my-4"></div>
+        <p class="font-sans text-base text-[#526359] max-w-3xl mx-auto leading-relaxed text-pretty">
+          Choose your sanctuary across our curated collection of boutique mountain properties managed by <strong>Casa De Bello Hospitality</strong>. From 180° Himalayan snow peak panoramas in Mukteshwar to sacred Neem Karoli Baba Ashram retreats in Kainchi Dham, experience genuine host care, authentic dining, and verified direct booking privileges.
         </p>
       </div>
 
-      <!-- Essential Guarantees Grid (6 Architectural Pillars) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      <!-- Primary Property Showcase Grid (3 Cards Managed by Casa De Bello Hospitality) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
         
-        <!-- Pillar 1: Hot Water -->
-        <div class="bg-white border border-[#1A2421]/10 rounded-xl p-7 shadow-sm hover:shadow-md hover:border-[#C9A832]/40 transition-all group">
-          <div class="w-12 h-12 rounded-lg bg-[#0E2316]/10 text-[#0E2316] flex items-center justify-center font-bold text-xl mb-5 group-hover:bg-[#C9A832]/20 transition-colors">
-            🚿
+        <!-- Property 1: Mukteshwar: Whispering Pines Resort By Casa De Bello -->
+        <div class="bg-white border-2 border-[#C9A832]/35 hover:border-[#C9A832] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all flex flex-col justify-between group">
+          <div>
+            <!-- Hotel Hero Image -->
+            <div class="relative h-64 sm:h-72 overflow-hidden">
+              <img
+                src={viewImg.src}
+                alt="Panoramic Himalayan snow peak views from Mukteshwar: Whispering Pines Resort By Casa De Bello"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+              <div class="absolute top-4 left-4 bg-[#07150C]/90 backdrop-blur-md border border-[#C9A832]/40 text-[#E5C365] font-mono text-[10px] sm:text-[11px] uppercase tracking-wider font-bold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-[#E5C365] animate-pulse"></span>
+                180° Snow Panorama • 1,780m
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="text-[10px] font-mono uppercase tracking-widest text-[#E5C365] block mb-0.5 font-bold">Himalayan Panorama &amp; Orchard Estate</span>
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-white leading-tight">
+                  Mukteshwar: Whispering Pines Resort By Casa De Bello
+                </h3>
+              </div>
+            </div>
+
+            <!-- Hotel Body Details -->
+            <div class="p-6">
+              <p class="text-xs sm:text-sm text-[#526359] leading-relaxed mb-5">
+                Situated in Malla Ramgarh directly on the paved Bhowali-Mukteshwar highway. Celebrated for uninterrupted 180° Himalayan snow peaks, standalone stone cottages with private fireplaces, and apple orchard lawns.
+              </p>
+
+              <!-- Key Hotel Attributes -->
+              <div class="space-y-2.5 mb-5 pb-5 border-b border-gray-100 text-xs text-[#1A2421]">
+                <div class="flex items-start gap-2">
+                  <span class="text-[#A08127] font-bold text-sm shrink-0">📍</span>
+                  <div>
+                    <strong class="text-[#07150C]">Prime Location:</strong>
+                    <span class="text-[#526359]"> Malla Ramgarh, Mukteshwar Rd (Highway drive-in)</span>
+                  </div>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-[#A08127] font-bold text-sm shrink-0">🌄</span>
+                  <div>
+                    <strong class="text-[#07150C]">Experience:</strong>
+                    <span class="text-[#526359]"> Front-row Nanda Devi &amp; Trishul views, fresh Kumaoni cuisine</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Available Room Options (Clean, Simple, No Rates) -->
+              <div class="mb-5 pb-5 border-b border-gray-100">
+                <span class="text-[10px] font-mono uppercase tracking-wider text-[#A08127] font-bold block mb-2.5">
+                  Available Residence Options:
+                </span>
+                <div class="space-y-2">
+                  <div class="p-2.5 rounded-xl bg-[#FAF8F5] border border-gray-100 flex items-center justify-between">
+                    <div>
+                      <strong class="text-xs text-[#07150C] block">3-BHK Alpine Villa</strong>
+                      <span class="text-[11px] text-[#526359]">Fireplace &amp; Orchard Lawn</span>
+                    </div>
+                    <span class="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 8–10</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-[#FAF8F5] border border-gray-100 flex items-center justify-between">
+                    <div>
+                      <strong class="text-xs text-[#07150C] block">Deluxe Skylight Suite</strong>
+                      <span class="text-[11px] text-[#526359]">Stargazing Roof &amp; Balcony</span>
+                    </div>
+                    <span class="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 2–3</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-[#FAF8F5] border border-gray-100 flex items-center justify-between">
+                    <div>
+                      <strong class="text-xs text-[#07150C] block">Family Twin Orchard Room</strong>
+                      <span class="text-[11px] text-[#526359]">Ground Floor Ease • Twin Beds</span>
+                    </div>
+                    <span class="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 4</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Direct Privilege Box -->
+              <div class="bg-[#FAF7F2] border border-[#C9A832]/30 rounded-xl p-3 mb-6 flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] font-mono uppercase tracking-wider text-[#A08127] font-bold block">Direct Host Privilege</span>
+                  <span class="text-xs text-[#07150C] font-semibold">Best Rate Guaranteed • Free Tea Basket</span>
+                </div>
+                <span class="bg-[#C9A832] text-[#07150C] font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded font-bold">
+                  Direct Perks
+                </span>
+              </div>
+            </div>
           </div>
-          <h3 class="font-display text-xl font-semibold text-[#07150C] mb-2">24/7 Dedicated Geyser Hot Water</h3>
-          <p class="text-xs sm:text-sm text-[#526359] leading-relaxed">
-            High-pressure instant piping-hot showers in every private en-suite bathroom. Guaranteed even on freezing 2°C Himalayan winter mornings.
-          </p>
+
+          <!-- Hotel Action CTAs -->
+          <div class="p-6 pt-0 flex flex-col sm:flex-row gap-2">
+            <a
+              href="#accommodations"
+              data-hotel-jump="mukteshwar"
+              class="hotel-jump-btn flex-1 bg-[#0E2316] hover:bg-[#1A3825] text-[#FAF7F2] font-mono text-xs font-bold uppercase tracking-wider py-3 px-3 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1"
+            >
+              <span>Explore Rooms</span>
+              <span>↓</span>
+            </a>
+            <a
+              href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20booking%20at%20Mukteshwar:%20Whispering%20Pines%20Resort%20By%20Casa%20De%20Bello.%20Please%20share%20room%20availability%20and%20direct%20rates."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-mono text-xs font-bold uppercase tracking-wider py-3 px-4 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1.5"
+            >
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
         </div>
 
-        <!-- Pillar 2: 100% Generator Backup -->
-        <div class="bg-white border border-[#1A2421]/10 rounded-xl p-7 shadow-sm hover:shadow-md hover:border-[#C9A832]/40 transition-all group">
-          <div class="w-12 h-12 rounded-lg bg-[#0E2316]/10 text-[#0E2316] flex items-center justify-center font-bold text-xl mb-5 group-hover:bg-[#C9A832]/20 transition-colors">
-            ⚡
+        <!-- Property 2: Casa De Bello Resort- Kainchi Dham -->
+        <div class="bg-white border-2 border-emerald-600/30 hover:border-emerald-600 rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all flex flex-col justify-between group">
+          <div>
+            <!-- Hotel Hero Image -->
+            <div class="relative h-64 sm:h-72 overflow-hidden">
+              <img
+                src={kainchiImg.src}
+                alt="Casa De Bello Resort- Kainchi Dham near Neem Karoli Baba Ashram"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+              <div class="absolute top-4 left-4 bg-[#07150C]/90 backdrop-blur-md border border-emerald-400/40 text-emerald-300 font-mono text-[10px] sm:text-[11px] uppercase tracking-wider font-bold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                9 km (15 Mins) to Ashram • Kehelkwira
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="text-[10px] font-mono uppercase tracking-widest text-emerald-300 block mb-0.5 font-bold">Spiritual Pilgrimage &amp; Valley Retreat</span>
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-white leading-tight">
+                  Casa De Bello Resort- Kainchi Dham
+                </h3>
+              </div>
+            </div>
+
+            <!-- Hotel Body Details -->
+            <div class="p-6">
+              <p class="text-xs sm:text-sm text-[#526359] leading-relaxed mb-5">
+                Tucked away in Kehelkwira, Bhowali on the scenic Ramgarh corridor. Perfect for devotees attending early morning aarti at Kainchi Dham Ashram without hill bypass delays, paired with tranquil valley-facing balconies and cafe dining.
+              </p>
+
+              <!-- Key Hotel Attributes -->
+              <div class="space-y-2.5 mb-5 pb-5 border-b border-gray-100 text-xs text-[#1A2421]">
+                <div class="flex items-start gap-2">
+                  <span class="text-emerald-700 font-bold text-sm shrink-0">📍</span>
+                  <div>
+                    <strong class="text-[#07150C]">Prime Location:</strong>
+                    <span class="text-[#526359]"> Kehelkwira, Bhowali (15 mins to Ashram, 20 mins to Bhimtal)</span>
+                  </div>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-emerald-700 font-bold text-sm shrink-0">☕</span>
+                  <div>
+                    <strong class="text-[#07150C]">Experience:</strong>
+                    <span class="text-[#526359]"> On-site cafe, evening bonfires, level gated parking, 24/7 hot water</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Available Room Options (Clean, Simple, No Rates) -->
+              <div class="mb-5 pb-5 border-b border-gray-100">
+                <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-800 font-bold block mb-2.5">
+                  Available Residence Options:
+                </span>
+                <div class="space-y-2">
+                  <div class="p-2.5 rounded-xl bg-emerald-50/40 border border-emerald-100 flex items-center justify-between">
+                    <div>
+                      <strong class="text-xs text-[#07150C] block">Super Deluxe Valley Room</strong>
+                      <span class="text-[11px] text-[#526359]">Private Balcony • King Bed</span>
+                    </div>
+                    <span class="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 2–3</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-emerald-50/40 border border-emerald-100 flex items-center justify-between">
+                    <div>
+                      <strong class="text-xs text-[#07150C] block">Executive Valley View Suite</strong>
+                      <span class="text-[11px] text-[#526359]">Panoramic Valley View • Lounge Area</span>
+                    </div>
+                    <span class="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 2–4</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Direct Privilege Box -->
+              <div class="bg-emerald-50/70 border border-emerald-200/80 rounded-xl p-3 mb-6 flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-800 font-bold block">Direct Host Privilege</span>
+                  <span class="text-xs text-[#07150C] font-semibold">Best Rate Guaranteed • Ashram Assistance</span>
+                </div>
+                <span class="bg-emerald-600 text-white font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded font-bold">
+                  Direct Perks
+                </span>
+              </div>
+            </div>
           </div>
-          <h3 class="font-display text-xl font-semibold text-[#07150C] mb-2">100% Generator Power Backup</h3>
-          <p class="text-xs sm:text-sm text-[#526359] leading-relaxed">
-            Automatic power backup powering room heating, mobile device charging, bedroom lighting, and uninterrupted high-speed Wi-Fi during hill power cuts.
-          </p>
+
+          <!-- Hotel Action CTAs -->
+          <div class="p-6 pt-0 flex flex-col sm:flex-row gap-2">
+            <a
+              href="#accommodations"
+              data-hotel-jump="kainchi"
+              class="hotel-jump-btn flex-1 bg-emerald-900 hover:bg-emerald-800 text-white font-mono text-xs font-bold uppercase tracking-wider py-3 px-3 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1"
+            >
+              <span>Explore Rooms</span>
+              <span>↓</span>
+            </a>
+            <a
+              href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20booking%20at%20Casa%20De%20Bello%20Resort-%20Kainchi%20Dham%20(Neem%20Karoli%20Baba%20Ashram).%20Please%20share%20room%20availability%20and%20direct%20rates."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-mono text-xs font-bold uppercase tracking-wider py-3 px-4 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1.5"
+            >
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
         </div>
 
-        <!-- Pillar 3: Fiber Wi-Fi -->
-        <div class="bg-white border border-[#1A2421]/10 rounded-xl p-7 shadow-sm hover:shadow-md hover:border-[#C9A832]/40 transition-all group">
-          <div class="w-12 h-12 rounded-lg bg-[#0E2316]/10 text-[#0E2316] flex items-center justify-center font-bold text-xl mb-5 group-hover:bg-[#C9A832]/20 transition-colors">
-            📶
+        <!-- Property 3: Anurra Hotel- Kaincho Dham -->
+        <div class="bg-white border-2 border-amber-600/30 hover:border-amber-600 rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all flex flex-col justify-between group">
+          <div>
+            <!-- Hotel Hero Image -->
+            <div class="relative h-64 sm:h-72 overflow-hidden">
+              <img
+                src={anurraImg.src}
+                alt="Anurra Hotel- Kaincho Dham near Neem Karoli Baba Ashram"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+              <div class="absolute top-4 left-4 bg-[#07150C]/90 backdrop-blur-md border border-amber-400/40 text-amber-300 font-mono text-[10px] sm:text-[11px] uppercase tracking-wider font-bold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                3.3 km (6 Mins) to Ashram • Niglat Malla
+              </div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="text-[10px] font-mono uppercase tracking-widest text-amber-300 block mb-0.5 font-bold">Closest Pilgrim Haven &amp; Pure Veg Kitchen</span>
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-white leading-tight">
+                  Anurra Hotel- Kaincho Dham
+                </h3>
+              </div>
+            </div>
+
+            <!-- Hotel Body Details -->
+            <div class="p-6">
+              <p class="text-xs sm:text-sm text-[#526359] leading-relaxed mb-5">
+                Situated in Niglat Malla along the Bhowali-Almora highway, just 3.3 km from Kainchi Dham Ashram. Offers serene river-valley views, 100% pure vegetarian homestyle/sattvic dining, and peaceful hill-facing balconies.
+              </p>
+
+              <!-- Key Hotel Attributes -->
+              <div class="space-y-2.5 mb-5 pb-5 border-b border-gray-100 text-xs text-[#1A2421]">
+                <div class="flex items-start gap-2">
+                  <span class="text-amber-700 font-bold text-sm shrink-0">📍</span>
+                  <div>
+                    <strong class="text-[#07150C]">Prime Location:</strong>
+                    <span class="text-[#526359]"> Niglat Malla, Bhowali-Almora Hwy (3.3 km / 6 mins to Ashram)</span>
+                  </div>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-amber-700 font-bold text-sm shrink-0">🛕</span>
+                  <div>
+                    <strong class="text-[#07150C]">Experience:</strong>
+                    <span class="text-[#526359]"> 100% Pure Veg restaurant, 250+ Mbps fiber Wi-Fi, open parking</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Available Room Options (Clean, Simple, No Rates) -->
+              <div class="mb-5 pb-5 border-b border-gray-100">
+                <span class="text-[10px] font-mono uppercase tracking-wider text-amber-800 font-bold block mb-2.5">
+                  Available Residence Options:
+                </span>
+                <div class="space-y-2">
+                  <div class="p-2.5 rounded-xl bg-amber-50/40 border border-amber-100 flex items-center justify-between">
+                    <div>
+                      <strong class="text-xs text-[#07150C] block">Deluxe Hill View Room</strong>
+                      <span class="text-[11px] text-[#526359]">Private Balcony • King Bed</span>
+                    </div>
+                    <span class="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 2–3</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-amber-50/40 border border-amber-100 flex items-center justify-between">
+                    <div>
+                      <strong class="text-xs text-[#07150C] block">Grand Valley Family Room</strong>
+                      <span class="text-[11px] text-[#526359]">Spacious Bedding • Pure Veg Meals</span>
+                    </div>
+                    <span class="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 3–4</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Direct Privilege Box -->
+              <div class="bg-amber-50/70 border border-amber-200/80 rounded-xl p-3 mb-6 flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] font-mono uppercase tracking-wider text-amber-800 font-bold block">Direct Host Privilege</span>
+                  <span class="text-xs text-[#07150C] font-semibold">Best Rate Guaranteed • Ashram Assistance</span>
+                </div>
+                <span class="bg-amber-600 text-white font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded font-bold">
+                  Direct Perks
+                </span>
+              </div>
+            </div>
           </div>
-          <h3 class="font-display text-xl font-semibold text-[#07150C] mb-2">100 Mbps Unlimited Fiber Wi-Fi</h3>
-          <p class="text-xs sm:text-sm text-[#526359] leading-relaxed">
-            Dedicated mountain optical fiber network covering all bedrooms, private balconies, and garden lawns for uninterrupted Zoom workations and 4K streaming.
-          </p>
+
+          <!-- Hotel Action CTAs -->
+          <div class="p-6 pt-0 flex flex-col sm:flex-row gap-2">
+            <a
+              href="#accommodations"
+              data-hotel-jump="anurra"
+              class="hotel-jump-btn flex-1 bg-[#2C1810] hover:bg-[#3D2317] text-white font-mono text-xs font-bold uppercase tracking-wider py-3 px-3 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1"
+            >
+              <span>Explore Rooms</span>
+              <span>↓</span>
+            </a>
+            <a
+              href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20booking%20at%20Anurra%20Hotel-%20Kaincho%20Dham%20(Neem%20Karoli%20Baba%20Ashram).%20Please%20share%20room%20availability%20and%20direct%20rates."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-mono text-xs font-bold uppercase tracking-wider py-3 px-4 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1.5"
+            >
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
         </div>
 
-        <!-- Pillar 4: Highway Drive-In -->
-        <div class="bg-white border border-[#1A2421]/10 rounded-xl p-7 shadow-sm hover:shadow-md hover:border-[#C9A832]/40 transition-all group">
-          <div class="w-12 h-12 rounded-lg bg-[#0E2316]/10 text-[#0E2316] flex items-center justify-center font-bold text-xl mb-5 group-hover:bg-[#C9A832]/20 transition-colors">
-            🚗
-          </div>
-          <h3 class="font-display text-xl font-semibold text-[#07150C] mb-2">Paved Highway & Gated Parking</h3>
-          <p class="text-xs sm:text-sm text-[#526359] leading-relaxed">
-            Direct drive-in access off the main paved highway. Zero perilous off-roading. Safe, spacious private parking suitable for small hatchbacks, luxury sedans, and SUVs.
-          </p>
-        </div>
-
-        <!-- Pillar 5: Fresh Kitchen -->
-        <div class="bg-white border border-[#1A2421]/10 rounded-xl p-7 shadow-sm hover:shadow-md hover:border-[#C9A832]/40 transition-all group">
-          <div class="w-12 h-12 rounded-lg bg-[#0E2316]/10 text-[#0E2316] flex items-center justify-center font-bold text-xl mb-5 group-hover:bg-[#C9A832]/20 transition-colors">
-            🍲
-          </div>
-          <h3 class="font-display text-xl font-semibold text-[#07150C] mb-2">Farm-to-Table Kumaoni Kitchen</h3>
-          <p class="text-xs sm:text-sm text-[#526359] leading-relaxed">
-            Wholesome North Indian and authentic Kumaoni dishes prepared fresh to order using regional farm vegetables, pure Himalayan spices, and cold-pressed oils.
-          </p>
-        </div>
-
-        <!-- Pillar 6: 180° Snow Panorama -->
-        <div class="bg-white border border-[#1A2421]/10 rounded-xl p-7 shadow-sm hover:shadow-md hover:border-[#C9A832]/40 transition-all group">
-          <div class="w-12 h-12 rounded-lg bg-[#0E2316]/10 text-[#0E2316] flex items-center justify-center font-bold text-xl mb-5 group-hover:bg-[#C9A832]/20 transition-colors">
-            🌄
-          </div>
-          <h3 class="font-display text-xl font-semibold text-[#07150C] mb-2">180° Snow Peak Panoramas</h3>
-          <p class="text-xs sm:text-sm text-[#526359] leading-relaxed">
-            Unobstructed, front-row views of Nanda Devi, Trishul, and Panchachuli peaks right from your private bedroom window, balcony deck, and orchard garden lawns.
-          </p>
-        </div>
       </div>
 
       <!-- Verbatim Google Guest Chronicles (Authentic Human Proof) -->
@@ -406,36 +670,68 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
   <!-- =========================================================================
        SECTION 3: CURATED SUITES & VILLA COLLECTION (CLUB MAHINDRA STYLE SHOWCASE)
        ========================================================================= -->
-  <section class="py-24 bg-[#0A1A0F] text-[#FAF7F2] border-b border-[#C9A832]/30">
+  <section id="accommodations" class="py-24 bg-[#0A1A0F] text-[#FAF7F2] border-b border-[#C9A832]/30">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="text-center max-w-3xl mx-auto mb-10">
         <span class="text-xs font-mono font-bold tracking-[0.25em] text-[#E5C365] uppercase block mb-3">
-          Curated Mountain Sanctuaries
+          Secondary Room Selection
         </span>
         <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight">
-          Select Your Himalayan Residence
+          Select Your Residence Under Each Hotel
         </h2>
         <div class="w-16 h-0.5 bg-[#C9A832] mx-auto my-4"></div>
         <p class="text-sm text-[#FAF7F2]/80 leading-relaxed">
-          From private standalone villas with fireplaces for family reunions to romantic skylight suites for couples, every residence opens to uninterrupted Himalayan horizons.
+          Filter by property or view all available mountain residences across Mukteshwar and Kainchi Dham.
         </p>
       </div>
 
-      <!-- Accommodations Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+      <!-- Property Filter Switcher (Hotel Primary, Rooms Secondary) -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 mb-12" id="property-tabs">
+        <button
+          type="button"
+          data-tab="all"
+          class="property-tab-btn active px-5 py-2.5 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-all bg-[#C9A832] text-[#07150C] shadow-lg cursor-pointer"
+        >
+          All Residences (6)
+        </button>
+        <button
+          type="button"
+          data-tab="mukteshwar"
+          class="property-tab-btn px-5 py-2.5 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-all bg-[#102618] hover:bg-[#183a24] text-[#FAF7F2] border border-[#C9A832]/40 cursor-pointer"
+        >
+          Mukteshwar: Whispering Pines (3)
+        </button>
+        <button
+          type="button"
+          data-tab="kainchi"
+          class="property-tab-btn px-5 py-2.5 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-all bg-[#102618] hover:bg-[#183a24] text-[#FAF7F2] border border-emerald-500/40 cursor-pointer"
+        >
+          Casa De Bello Resort - Kainchi Dham (1)
+        </button>
+        <button
+          type="button"
+          data-tab="anurra"
+          class="property-tab-btn px-5 py-2.5 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-all bg-[#102618] hover:bg-[#183a24] text-[#FAF7F2] border border-amber-500/40 cursor-pointer"
+        >
+          Anurra Hotel - Kaincho Dham (2)
+        </button>
+      </div>
+
+      <!-- Accommodations Grid (Grouped & Filterable by Hotel) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12" id="accommodations-grid">
         
-        <!-- Room 1: 3-BHK Alpine Villa -->
-        <div class="bg-[#102618] border border-[#C9A832]/35 rounded-2xl overflow-hidden shadow-2xl flex flex-col group">
-          <div class="relative h-60 overflow-hidden">
+        <!-- Room 1: 3-BHK Alpine Villa (Whispering Pines Mukteshwar) -->
+        <div class="accommodation-card bg-[#102618] border border-[#C9A832]/35 rounded-2xl overflow-hidden shadow-2xl flex flex-col group" data-property="mukteshwar">
+          <div class="relative h-64 overflow-hidden">
             <img
               src={villaImg.src}
-              alt="Standalone 3-BHK Alpine Villa with private orchard lawn at Whispering Pines Mukteshwar"
+              alt="Standalone 3-BHK Alpine Villa with private orchard lawn at Mukteshwar: Whispering Pines Resort By Casa De Bello"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"
             />
-            <div class="absolute top-3 left-3 bg-[#07150C]/85 backdrop-blur-md border border-[#C9A832]/40 text-[#E5C365] font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
-              Signature Villa Buyout
+            <div class="absolute top-3 left-3 bg-[#07150C]/90 backdrop-blur-md border border-[#C9A832]/40 text-[#E5C365] font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+              Mukteshwar: Whispering Pines Resort By Casa De Bello
             </div>
             <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-mono text-xs font-bold px-2.5 py-0.5 rounded">
               Sleeps 8 to 10
@@ -443,9 +739,10 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
             <div>
+              <span class="text-[10px] font-mono text-[#E5C365]/90 uppercase tracking-widest block mb-1">Malla Ramgarh • Signature Standalone Cottage</span>
               <h3 class="font-display text-2xl font-semibold text-white mb-2">3-BHK Private Alpine Villa</h3>
               <p class="text-xs text-[#FAF7F2]/75 leading-relaxed mb-4">
-                Standalone Himalayan stone & pine cottage. Features a private living room fireplace, private orchard lawn, 3 grand en-suite baths, and dedicated chef service for family retreats.
+                Standalone Himalayan stone &amp; pine cottage. Features a private living room fireplace, private orchard lawn, 3 grand en-suite baths, and dedicated chef service for family retreats.
               </p>
               <div class="flex flex-wrap gap-2 text-[11px] font-mono text-[#E5C365] mb-6">
                 <span class="bg-[#07150C] px-2.5 py-1 rounded border border-[#C9A832]/25">Private Fireplace</span>
@@ -456,11 +753,11 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
             <div class="pt-4 border-t border-[#FAF7F2]/10 flex flex-col gap-3">
               <div class="flex items-center justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-[#FAF7F2]/60 uppercase block">Direct Host Rate</span>
-                  <span class="font-sans text-xl font-bold text-white">₹15,999 <span class="text-xs font-normal text-[#FAF7F2]/70">/ night</span></span>
+                  <span class="text-[10px] font-mono text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
+                  <span class="font-sans text-base sm:text-lg font-bold text-white">Best Direct Rate Guaranteed</span>
                 </div>
-                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 rounded">
-                  Save 20% Direct
+                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
+                  Zero Platform Fees
                 </span>
               </div>
               <div class="grid grid-cols-2 gap-2">
@@ -474,7 +771,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   <svg class="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
                 <a
-                  href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20the%203-BHK%20Private%20Alpine%20Villa%20at%20Whispering%20Pines%20Resort.%20Could%20you%20please%20share%20availability%20and%20rates%3F"
+                  href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20the%203-BHK%20Private%20Alpine%20Villa%20at%20Mukteshwar:%20Whispering%20Pines%20Resort%20By%20Casa%20De%20Bello.%20Could%20you%20please%20share%20availability%20and%20rates%3F"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
@@ -487,17 +784,17 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           </div>
         </div>
 
-        <!-- Room 2: Deluxe Skylight Mountain Suite -->
-        <div class="bg-[#102618] border border-[#C9A832]/50 rounded-2xl overflow-hidden shadow-2xl flex flex-col group relative ring-2 ring-[#C9A832]/30">
-          <div class="relative h-60 overflow-hidden">
+        <!-- Room 2: Deluxe Skylight Mountain Suite (Whispering Pines Mukteshwar) -->
+        <div class="accommodation-card bg-[#102618] border border-[#C9A832]/50 rounded-2xl overflow-hidden shadow-2xl flex flex-col group relative ring-2 ring-[#C9A832]/30" data-property="mukteshwar">
+          <div class="relative h-64 overflow-hidden">
             <img
               src={suiteImg.src}
               alt="Deluxe Skylight Mountain Suite with glass ceiling and private balcony overlooking Himalayas"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"
             />
-            <div class="absolute top-3 left-3 bg-[#07150C]/85 backdrop-blur-md border border-[#C9A832]/40 text-[#E5C365] font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
-              Most Popular for Couples
+            <div class="absolute top-3 left-3 bg-[#07150C]/90 backdrop-blur-md border border-[#C9A832]/40 text-[#E5C365] font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+              Mukteshwar: Whispering Pines Resort By Casa De Bello
             </div>
             <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-mono text-xs font-bold px-2.5 py-0.5 rounded">
               Sleeps 2 to 3
@@ -505,6 +802,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
             <div>
+              <span class="text-[10px] font-mono text-[#E5C365]/90 uppercase tracking-widest block mb-1">Malla Ramgarh • Romantic Stargazing Suite</span>
               <h3 class="font-display text-2xl font-semibold text-white mb-2">Deluxe Skylight Mountain Suite</h3>
               <p class="text-xs text-[#FAF7F2]/75 leading-relaxed mb-4">
                 Cedar pine panels, private stargazing glass ceiling, and private valley-view balcony overlooking Nanda Devi. The quintessential romantic Himalayan sanctuary.
@@ -518,11 +816,11 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
             <div class="pt-4 border-t border-[#FAF7F2]/10 flex flex-col gap-3">
               <div class="flex items-center justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-[#FAF7F2]/60 uppercase block">Direct Host Rate</span>
-                  <span class="font-sans text-xl font-bold text-white">₹6,499 <span class="text-xs font-normal text-[#FAF7F2]/70">/ night</span></span>
+                  <span class="text-[10px] font-mono text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
+                  <span class="font-sans text-base sm:text-lg font-bold text-white">Best Direct Rate Guaranteed</span>
                 </div>
-                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 rounded">
-                  Save 20% Direct
+                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
+                  Zero Platform Fees
                 </span>
               </div>
               <div class="grid grid-cols-2 gap-2">
@@ -536,7 +834,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   <svg class="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
                 <a
-                  href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20the%20Deluxe%20Skylight%20Mountain%20Suite%20at%20Whispering%20Pines%20Resort.%20Could%20you%20share%20direct%20availability%3F"
+                  href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20the%20Deluxe%20Skylight%20Mountain%20Suite%20at%20Mukteshwar:%20Whispering%20Pines%20Resort%20By%20Casa%20De%20Bello.%20Could%20you%20share%20direct%20availability%3F"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
@@ -549,17 +847,17 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           </div>
         </div>
 
-        <!-- Room 3: Family Twin Orchard Room -->
-        <div class="bg-[#102618] border border-[#C9A832]/35 rounded-2xl overflow-hidden shadow-2xl flex flex-col group">
-          <div class="relative h-60 overflow-hidden">
+        <!-- Room 3: Family Twin Orchard Room (Whispering Pines Mukteshwar) -->
+        <div class="accommodation-card bg-[#102618] border border-[#C9A832]/35 rounded-2xl overflow-hidden shadow-2xl flex flex-col group" data-property="mukteshwar">
+          <div class="relative h-64 overflow-hidden">
             <img
               src={familyImg.src}
               alt="Family Twin Orchard Room ground floor ease with twin double beds near Nainital"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"
             />
-            <div class="absolute top-3 left-3 bg-[#07150C]/85 backdrop-blur-md border border-[#C9A832]/40 text-[#E5C365] font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
-              Elder-Friendly Ground Floor
+            <div class="absolute top-3 left-3 bg-[#07150C]/90 backdrop-blur-md border border-[#C9A832]/40 text-[#E5C365] font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+              Mukteshwar: Whispering Pines Resort By Casa De Bello
             </div>
             <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-mono text-xs font-bold px-2.5 py-0.5 rounded">
               Sleeps 4 Guests
@@ -567,6 +865,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
             <div>
+              <span class="text-[10px] font-mono text-[#E5C365]/90 uppercase tracking-widest block mb-1">Malla Ramgarh • Ground Floor Garden Ease</span>
               <h3 class="font-display text-2xl font-semibold text-white mb-2">Family Twin Orchard Room</h3>
               <p class="text-xs text-[#FAF7F2]/75 leading-relaxed mb-4">
                 Ground-floor garden access with zero steep stairs, perfectly suited for elderly parents and young kids. Features twin double beds, garden sit-out, and quick access to dining.
@@ -580,11 +879,11 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
             <div class="pt-4 border-t border-[#FAF7F2]/10 flex flex-col gap-3">
               <div class="flex items-center justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-[#FAF7F2]/60 uppercase block">Direct Host Rate</span>
-                  <span class="font-sans text-xl font-bold text-white">₹4,999 <span class="text-xs font-normal text-[#FAF7F2]/70">/ night</span></span>
+                  <span class="text-[10px] font-mono text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
+                  <span class="font-sans text-base sm:text-lg font-bold text-white">Best Direct Rate Guaranteed</span>
                 </div>
-                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 rounded">
-                  Save 20% Direct
+                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
+                  Zero Platform Fees
                 </span>
               </div>
               <div class="grid grid-cols-2 gap-2">
@@ -598,7 +897,199 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   <svg class="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
                 <a
-                  href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20the%20Family%20Twin%20Orchard%20Room%20at%20Whispering%20Pines%20Resort.%20Please%20confirm%20availability."
+                  href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20the%20Family%20Twin%20Orchard%20Room%20at%20Mukteshwar:%20Whispering%20Pines%20Resort%20By%20Casa%20De%20Bello.%20Please%20confirm%20availability."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
+                >
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 4: Super Deluxe Valley Room (Casa De Bello Resort- Kainchi Dham) -->
+        <div class="accommodation-card bg-[#102618] border border-[#C9A832]/50 rounded-2xl overflow-hidden shadow-2xl flex flex-col group relative ring-2 ring-[#C9A832]/30" data-property="kainchi">
+          <div class="relative h-64 overflow-hidden">
+            <img
+              src={kainchiImg.src}
+              alt="Super Deluxe Valley View Room at Casa De Bello Resort- Kainchi Dham near Neem Karoli Baba Ashram"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy"
+            />
+            <div class="absolute top-3 left-3 bg-[#07150C]/90 backdrop-blur-md border border-emerald-400/50 text-emerald-300 font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              Casa De Bello Resort- Kainchi Dham (15 Mins to Ashram)
+            </div>
+            <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-mono text-xs font-bold px-2.5 py-0.5 rounded">
+              Sleeps 2 to 3
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono text-[#E5C365] uppercase tracking-widest font-bold block mb-1">Kehelkwira, Bhowali • 9 km (15 Mins) to Neem Karoli Baba Ashram</span>
+              <h3 class="font-display text-2xl font-semibold text-white mb-2">Super Deluxe Valley Room</h3>
+              <p class="text-xs text-[#FAF7F2]/75 leading-relaxed mb-4">
+                Peaceful pine-valley retreat nestled in Kehelkwira, Bhowali. Features a private valley-facing balcony, plush king bed, Smart TV, 24/7 geyser hot water, and high-speed Wi-Fi. The ideal stay for Neem Karoli Baba Ashram devotees and lake circuit tours.
+              </p>
+              <div class="flex flex-wrap gap-2 text-[11px] font-mono text-[#E5C365] mb-6">
+                <span class="bg-[#07150C] px-2.5 py-1 rounded border border-[#C9A832]/25">15 Mins to Ashram</span>
+                <span class="bg-[#07150C] px-2.5 py-1 rounded border border-[#C9A832]/25">Private Valley Balcony</span>
+                <span class="bg-[#07150C] px-2.5 py-1 rounded border border-[#C9A832]/25">King Bed &amp; Geyser</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-[#FAF7F2]/10 flex flex-col gap-3">
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] font-mono text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
+                  <span class="font-sans text-base sm:text-lg font-bold text-white">Best Direct Rate Guaranteed</span>
+                </div>
+                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
+                  Zero Platform Fees
+                </span>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <a
+                  href={BOOKING_ENGINE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-[#C9A832] hover:bg-[#E5C365] text-[#07150C] font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center btn-shimmer"
+                >
+                  <span>Book Online</span>
+                  <svg class="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+                <a
+                  href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20the%20Super%20Deluxe%20Valley%20Room%20at%20Casa%20De%20Bello%20Resort-%20Kainchi%20Dham.%20Please%20share%20availability%20and%20rates."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
+                >
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 5: Deluxe Hill View Room with Balcony (Anurra Hotel- Kaincho Dham) -->
+        <div class="accommodation-card bg-[#102618] border border-amber-600/40 rounded-2xl overflow-hidden shadow-2xl flex flex-col group relative ring-2 ring-amber-500/20" data-property="anurra">
+          <div class="relative h-64 overflow-hidden">
+            <img
+              src={anurraImg.src}
+              alt="Deluxe Hill View Room with Balcony at Anurra Hotel- Kaincho Dham near Neem Karoli Baba Ashram"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy"
+            />
+            <div class="absolute top-3 left-3 bg-[#07150C]/90 backdrop-blur-md border border-amber-400/50 text-amber-300 font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+              Anurra Hotel- Kaincho Dham (3.3 km to Ashram)
+            </div>
+            <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-mono text-xs font-bold px-2.5 py-0.5 rounded">
+              Sleeps 2 to 3
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono text-[#E5C365] uppercase tracking-widest font-bold block mb-1">Niglat Malla, Kainchi Dham • 3.3 km to Ashram</span>
+              <h3 class="font-display text-2xl font-semibold text-white mb-2">Deluxe Hill View Room with Balcony</h3>
+              <p class="text-xs text-[#FAF7F2]/75 leading-relaxed mb-4">
+                Tranquil hill-facing sanctuary with private balcony and river-valley breezes. Features plush king bed, dedicated workspace, 24/7 hot water geyser, and ultra-fast 250+ Mbps Wi-Fi for pilgrim convenience.
+              </p>
+              <div class="flex flex-wrap gap-2 text-[11px] font-mono text-[#E5C365] mb-6">
+                <span class="bg-[#07150C] px-2.5 py-1 rounded border border-[#C9A832]/25">3.3 km to Ashram</span>
+                <span class="bg-[#07150C] px-2.5 py-1 rounded border border-[#C9A832]/25">Private Hill Balcony</span>
+                <span class="bg-[#07150C] px-2.5 py-1 rounded border border-[#C9A832]/25">250+ Mbps Wi-Fi</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-[#FAF7F2]/10 flex flex-col gap-3">
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] font-mono text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
+                  <span class="font-sans text-base sm:text-lg font-bold text-white">Best Direct Rate Guaranteed</span>
+                </div>
+                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
+                  Zero Platform Fees
+                </span>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <a
+                  href={BOOKING_ENGINE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-[#C9A832] hover:bg-[#E5C365] text-[#07150C] font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center btn-shimmer"
+                >
+                  <span>Book Online</span>
+                  <svg class="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+                <a
+                  href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20the%20Deluxe%20Hill%20View%20Room%20at%20Anurra%20Hotel-%20Kaincho%20Dham.%20Please%20share%20availability%20and%20rates."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
+                >
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 6: Grand Valley Family Room (Anurra Hotel- Kaincho Dham) -->
+        <div class="accommodation-card bg-[#102618] border border-amber-600/40 rounded-2xl overflow-hidden shadow-2xl flex flex-col group" data-property="anurra">
+          <div class="relative h-64 overflow-hidden">
+            <img
+              src={anurraImg.src}
+              alt="Grand Valley Family Room at Anurra Hotel- Kaincho Dham near Neem Karoli Baba Ashram"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy"
+            />
+            <div class="absolute top-3 left-3 bg-[#07150C]/90 backdrop-blur-md border border-amber-400/50 text-amber-300 font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+              Anurra Hotel- Kaincho Dham (3.3 km to Ashram)
+            </div>
+            <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-mono text-xs font-bold px-2.5 py-0.5 rounded">
+              Sleeps 3 to 4
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono text-[#E5C365] uppercase tracking-widest font-bold block mb-1">Niglat Malla, Kainchi Dham • Family Pilgrim Suite</span>
+              <h3 class="font-display text-2xl font-semibold text-white mb-2">Grand Valley Family Room</h3>
+              <p class="text-xs text-[#FAF7F2]/75 leading-relaxed mb-4">
+                Generously proportioned family setup designed for devotee families visiting Kainchi Dham Ashram. Features multiple plush bedding options, mountain balcony, 100% pure veg room service, and hot water.
+              </p>
+              <div class="flex flex-wrap gap-2 text-[11px] font-mono text-[#E5C365] mb-6">
+                <span class="bg-[#07150C] px-2.5 py-1 rounded border border-[#C9A832]/25">Pure Veg Dining</span>
+                <span class="bg-[#07150C] px-2.5 py-1 rounded border border-[#C9A832]/25">Valley Balcony</span>
+                <span class="bg-[#07150C] px-2.5 py-1 rounded border border-[#C9A832]/25">Family Bedding</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-[#FAF7F2]/10 flex flex-col gap-3">
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] font-mono text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
+                  <span class="font-sans text-base sm:text-lg font-bold text-white">Best Direct Rate Guaranteed</span>
+                </div>
+                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
+                  Zero Platform Fees
+                </span>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <a
+                  href={BOOKING_ENGINE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-[#C9A832] hover:bg-[#E5C365] text-[#07150C] font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center btn-shimmer"
+                >
+                  <span>Book Online</span>
+                  <svg class="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+                <a
+                  href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20the%20Grand%20Valley%20Family%20Room%20at%20Anurra%20Hotel-%20Kaincho%20Dham.%20Please%20share%20availability%20and%20rates."
                   target="_blank"
                   rel="noopener noreferrer"
                   class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
@@ -809,19 +1300,32 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
         
         <form id="direct-booking-calculator" class="space-y-6">
           
-          <!-- Category Selection -->
-          <div>
-            <label for="calc-room" class="block font-mono text-xs uppercase tracking-wider text-[#E5C365] font-semibold mb-2">
-              1. Choose Accommodation Type
-            </label>
-            <select
-              id="calc-room"
-              class="w-full bg-[#050E08] border border-[#FAF7F2]/20 focus:border-[#C9A832] rounded-lg py-3.5 px-4 text-sm text-[#FAF7F2] focus:outline-none transition-colors"
-            >
-              <option value="Private 3-BHK Alpine Villa" data-price="15999">Private 3-BHK Alpine Villa (Sleeps Up to 10) — ₹15,999 / night</option>
-              <option value="Deluxe Skylight Mountain Suite" data-price="6499" selected>Deluxe Skylight Mountain Suite (Couples / 2 Adults) — ₹6,499 / night</option>
-              <option value="Family Twin Orchard Room" data-price="4999">Family Twin Orchard Room (Ground Floor Access) — ₹4,999 / night</option>
-            </select>
+          <!-- Hotel & Room Selection (Hotel Primary, Room Secondary) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="calc-hotel" class="block font-mono text-xs uppercase tracking-wider text-[#E5C365] font-semibold mb-2">
+                1. Select Hotel Property (Primary)
+              </label>
+              <select
+                id="calc-hotel"
+                class="w-full bg-[#050E08] border border-[#FAF7F2]/20 focus:border-[#C9A832] rounded-lg py-3.5 px-4 text-sm text-[#FAF7F2] focus:outline-none transition-colors cursor-pointer"
+              >
+                <option value="mukteshwar" selected>Mukteshwar: Whispering Pines Resort By Casa De Bello</option>
+                <option value="kainchi">Casa De Bello Resort- Kainchi Dham (9 km to Ashram)</option>
+                <option value="anurra">Anurra Hotel- Kaincho Dham (3.3 km to Ashram)</option>
+              </select>
+            </div>
+            <div>
+              <label for="calc-room" class="block font-mono text-xs uppercase tracking-wider text-[#E5C365] font-semibold mb-2">
+                2. Select Residence Option (Secondary)
+              </label>
+              <select
+                id="calc-room"
+                class="w-full bg-[#050E08] border border-[#FAF7F2]/20 focus:border-[#C9A832] rounded-lg py-3.5 px-4 text-sm text-[#FAF7F2] focus:outline-none transition-colors cursor-pointer"
+              >
+                <!-- Populated dynamically via JS -->
+              </select>
+            </div>
           </div>
 
           <!-- Dates Grid -->
@@ -853,11 +1357,11 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           <!-- Guests Selector -->
           <div>
             <label for="calc-guests" class="block font-mono text-xs uppercase tracking-wider text-[#FAF7F2]/70 mb-2">
-              Number of Guests & Children
+              Number of Guests &amp; Children
             </label>
             <select
               id="calc-guests"
-              class="w-full bg-[#050E08] border border-[#FAF7F2]/20 focus:border-[#C9A832] rounded-lg py-3.5 px-4 text-sm text-[#FAF7F2] focus:outline-none transition-colors"
+              class="w-full bg-[#050E08] border border-[#FAF7F2]/20 focus:border-[#C9A832] rounded-lg py-3.5 px-4 text-sm text-[#FAF7F2] focus:outline-none transition-colors cursor-pointer"
             >
               <option value="2 Adults">2 Adults</option>
               <option value="2 Adults + 1 Child">2 Adults + 1 Child</option>
@@ -867,22 +1371,26 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
             </select>
           </div>
 
-          <!-- Live Price Summary Display -->
+          <!-- Selected Property & Direct Privilege Display (Clean & Un-complex) -->
           <div class="p-6 bg-[#050E08] border border-[#C9A832]/30 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <span class="text-[10px] font-mono text-[#FAF7F2]/60 uppercase tracking-widest block">Estimated Direct Tariff</span>
-              <div class="flex items-baseline gap-2 mt-0.5">
-                <span id="calc-display-price" class="text-3xl font-bold text-[#FAF7F2]">₹6,499</span>
-                <span id="calc-display-nights" class="text-xs text-[#FAF7F2]/70">for 1 night (all taxes included)</span>
+              <span class="text-[10px] font-mono text-[#E5C365] uppercase tracking-widest font-semibold block">Selected Hotel &amp; Residence</span>
+              <div class="flex flex-col gap-1 mt-1">
+                <span id="calc-display-hotel" class="text-xs sm:text-sm font-mono text-emerald-400 font-bold">Mukteshwar: Whispering Pines Resort By Casa De Bello</span>
+                <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+                  <span id="calc-display-room" class="text-xl sm:text-2xl font-bold text-[#FAF7F2]">Deluxe Skylight Mountain Suite</span>
+                  <span id="calc-display-nights" class="text-xs text-[#FAF7F2]/70 font-mono">1 night stay</span>
+                </div>
               </div>
-              <span id="calc-display-savings" class="text-xs text-emerald-400 font-mono mt-1.5 block">
-                ✓ You save approx. ₹1,300 vs MakeMyTrip/Booking.com
+              <span class="text-xs text-emerald-400 font-mono mt-1.5 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                Direct Resident Privilege: Guaranteed best direct tariff &amp; priority room allocation
               </span>
             </div>
 
-            <div class="text-left sm:text-right text-xs font-mono text-[#FAF7F2]/70">
-              <span class="block text-[#E5C365] font-bold">Zero Lock-In</span>
-              <span>No credit card needed to reserve</span>
+            <div class="text-left sm:text-right text-xs font-mono text-[#FAF7F2]/70 shrink-0">
+              <span class="block text-[#E5C365] font-bold">Zero Platform Fees</span>
+              <span>Reserve dates directly via WhatsApp</span>
             </div>
           </div>
 
@@ -1043,13 +1551,43 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
        ========================================================================= -->
   <script is:inline>
     (function () {
+      // Hotel & Room Data Definition (Hotel is Primary, Rooms Secondary)
+      const hotelOptions = {
+        mukteshwar: {
+          name: 'Mukteshwar: Whispering Pines Resort By Casa De Bello',
+          location: 'Malla Ramgarh, Mukteshwar Ridge',
+          rooms: [
+            { id: 'villa', name: '3-BHK Private Alpine Villa (Fireplace & Orchard Lawn)' },
+            { id: 'suite', name: 'Deluxe Skylight Mountain Suite (Stargazing Glass Roof)', default: true },
+            { id: 'family', name: 'Family Twin Orchard Room (Ground Floor Ease)' }
+          ]
+        },
+        kainchi: {
+          name: 'Casa De Bello Resort- Kainchi Dham',
+          location: 'Kehelkwira, Bhowali (9 km / 15 Mins to Ashram)',
+          rooms: [
+            { id: 'kainchi-room', name: 'Super Deluxe Valley Room (Private Balcony & Cafe)', default: true },
+            { id: 'kainchi-suite', name: 'Executive Valley View Suite (Panoramic Valley Sit-Out)' }
+          ]
+        },
+        anurra: {
+          name: 'Anurra Hotel- Kaincho Dham',
+          location: 'Niglat Malla, Bhowali-Almora Highway (3.3 km / 6 Mins to Ashram)',
+          rooms: [
+            { id: 'anurra-deluxe', name: 'Deluxe Hill View Room (Private Balcony & Fast Wi-Fi)', default: true },
+            { id: 'anurra-family', name: 'Grand Valley Family Room (Pure Veg Dining)' }
+          ]
+        }
+      };
+
+      const hotelSelect = document.getElementById('calc-hotel');
       const roomSelect = document.getElementById('calc-room');
       const checkInInput = document.getElementById('calc-checkin');
       const checkOutInput = document.getElementById('calc-checkout');
       const guestsSelect = document.getElementById('calc-guests');
-      const priceDisplay = document.getElementById('calc-display-price');
+      const hotelDisplay = document.getElementById('calc-display-hotel');
+      const roomDisplay = document.getElementById('calc-display-room');
       const nightsDisplay = document.getElementById('calc-display-nights');
-      const savingsDisplay = document.getElementById('calc-display-savings');
       const whatsappBtn = document.getElementById('btn-whatsapp-submit');
       const mobileStickyWhatsapp = document.getElementById('mobile-sticky-whatsapp');
 
@@ -1068,12 +1606,28 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
         checkOutInput.min = toDateInputValue(tomorrow);
       }
 
-      function updateCalculation() {
-        if (!roomSelect || !checkInInput || !checkOutInput || !priceDisplay || !nightsDisplay) return;
+      // Populate room dropdown according to selected hotel
+      function populateRooms(hotelKey, preselectRoomId) {
+        if (!roomSelect) return;
+        roomSelect.innerHTML = '';
+        const hotel = hotelOptions[hotelKey] || hotelOptions.mukteshwar;
+        hotel.rooms.forEach(r => {
+          const opt = document.createElement('option');
+          opt.value = r.name;
+          opt.textContent = r.name;
+          if (preselectRoomId ? r.id === preselectRoomId : r.default) {
+            opt.selected = true;
+          }
+          roomSelect.appendChild(opt);
+        });
+      }
 
-        const selectedOption = roomSelect.options[roomSelect.selectedIndex];
-        const roomName = selectedOption.text.split('—')[0].trim();
-        const basePrice = parseInt(selectedOption.getAttribute('data-price') || '6499', 10);
+      function updateCalculation() {
+        if (!hotelSelect || !roomSelect || !checkInInput || !checkOutInput) return;
+
+        const hotelKey = hotelSelect.value;
+        const hotelInfo = hotelOptions[hotelKey] || hotelOptions.mukteshwar;
+        const selectedRoom = roomSelect.value;
         const guests = guestsSelect ? guestsSelect.value : '2 Adults';
 
         const checkInVal = checkInInput.value;
@@ -1086,27 +1640,22 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           if (calculated > 0) nights = calculated;
         }
 
-        const totalPrice = basePrice * nights;
-        const otaEstimated = Math.round(totalPrice * 1.2);
-        const savings = otaEstimated - totalPrice;
-
-        priceDisplay.textContent = '₹' + totalPrice.toLocaleString('en-IN');
-        nightsDisplay.textContent = 'for ' + nights + ' night' + (nights > 1 ? 's' : '') + ' (all taxes included)';
-        if (savingsDisplay) {
-          savingsDisplay.textContent = '✓ You save approx. ₹' + savings.toLocaleString('en-IN') + ' vs MakeMyTrip/Booking.com';
-        }
+        if (hotelDisplay) hotelDisplay.textContent = `${hotelInfo.name} (${hotelInfo.location})`;
+        if (roomDisplay) roomDisplay.textContent = selectedRoom;
+        if (nightsDisplay) nightsDisplay.textContent = `${nights} night${nights > 1 ? 's' : ''} • ${guests}`;
 
         // Build Structured Pre-Filled WhatsApp Payload
         const message = 
-`Hi! I would like to reserve a stay at Whispering Pines Resort Mukteshwar:
+`Hi! I would like to check availability and direct booking rates at Casa De Bello Hospitality:
 
-🏡 *Accommodation:* ${roomName}
+🏨 *Selected Hotel:* ${hotelInfo.name}
+📍 *Location:* ${hotelInfo.location}
+🏡 *Residence Option:* ${selectedRoom}
 📅 *Check-In:* ${checkInVal || 'Flexible'}
 📅 *Check-Out:* ${checkOutVal || 'Flexible'} (${nights} night${nights > 1 ? 's' : ''})
 👥 *Guests:* ${guests}
-💰 *Est. Direct Tariff:* ₹${totalPrice.toLocaleString('en-IN')}
 
-Please confirm availability and share your best direct booking rate!`;
+Please confirm live availability and share your best direct host tariff & photos!`;
 
         const encodedUrl = 'https://wa.me/917505029696?text=' + encodeURIComponent(message);
 
@@ -1115,8 +1664,7 @@ Please confirm availability and share your best direct booking rate!`;
             if (typeof window.gtag === 'function') {
               window.gtag('event', 'generate_lead', {
                 event_category: 'booking',
-                event_label: 'whatsapp_direct_calculator',
-                value: totalPrice
+                event_label: 'whatsapp_direct_inquiry'
               });
             }
             window.open(encodedUrl, '_blank', 'noopener,noreferrer');
@@ -1128,12 +1676,69 @@ Please confirm availability and share your best direct booking rate!`;
         }
       }
 
+      if (hotelSelect) {
+        hotelSelect.addEventListener('change', function () {
+          populateRooms(hotelSelect.value);
+          updateCalculation();
+        });
+      }
       if (roomSelect) roomSelect.addEventListener('change', updateCalculation);
       if (checkInInput) checkInInput.addEventListener('change', updateCalculation);
       if (checkOutInput) checkOutInput.addEventListener('change', updateCalculation);
       if (guestsSelect) guestsSelect.addEventListener('change', updateCalculation);
 
+      // Initialize default dropdown state
+      populateRooms('mukteshwar');
       updateCalculation();
+
+      // Section 3 Property Tab Filtering Logic
+      const tabs = document.querySelectorAll('#property-tabs .property-tab-btn');
+      const cards = document.querySelectorAll('.accommodation-card');
+
+      function filterCards(propertyKey) {
+        tabs.forEach(btn => {
+          if (btn.getAttribute('data-tab') === propertyKey) {
+            btn.classList.add('bg-[#C9A832]', 'text-[#07150C]', 'shadow-lg');
+            btn.classList.remove('bg-[#102618]', 'text-[#FAF7F2]');
+          } else {
+            btn.classList.remove('bg-[#C9A832]', 'text-[#07150C]', 'shadow-lg');
+            btn.classList.add('bg-[#102618]', 'text-[#FAF7F2]');
+          }
+        });
+
+        cards.forEach(card => {
+          const cardProp = card.getAttribute('data-property');
+          if (propertyKey === 'all' || cardProp === propertyKey) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+          const target = this.getAttribute('data-tab');
+          filterCards(target);
+        });
+      });
+
+      // Section 2 Hotel Jump Buttons (Clicking "Explore ... Rooms ↓" activates corresponding tab & syncs form)
+      const jumpButtons = document.querySelectorAll('.hotel-jump-btn');
+      jumpButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const hotelKey = this.getAttribute('data-hotel-jump');
+          if (hotelKey) {
+            filterCards(hotelKey);
+            if (hotelSelect) {
+              hotelSelect.value = hotelKey;
+              populateRooms(hotelKey);
+              updateCalculation();
+            }
+          }
+        });
+      });
+
     })();
   </script>
 </Layout>
