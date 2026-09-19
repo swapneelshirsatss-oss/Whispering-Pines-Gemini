@@ -109,9 +109,20 @@ Whenever creating or modifying image components, galleries, or Astro islands:
 ## Content Security Policy (CSP) & Cache Invariants
 
 Whenever updating `public/.htaccess` or `public/_headers`:
-- **Measurement Directives Invariant**: Never restrict `connect-src` or `script-src` without including Google Ads (`*.googleadservices.com`, `googleads.g.doubleclick.net`, `*.doubleclick.net`, `stats.g.doubleclick.net`), Google Tag Assistant (`tagmanager.google.com`), and Google endpoints (`www.google.com`, `*.google.com`).
+- **Measurement Directives Invariant**: Never restrict `connect-src` or `script-src` without including:
+  - Google Ads (`*.googleadservices.com`, `googleads.g.doubleclick.net`, `*.doubleclick.net`, `stats.g.doubleclick.net`)
+  - Google Tag Assistant (`tagmanager.google.com`, `*.googletagmanager.com`)
+  - Google endpoints (`www.google.com`, `*.google.com`, `www.google.co.in`, `*.google.co.in`)
+  - **Google Website Call Metrics & Static Assets (`https://www.gstatic.com`, `https://*.gstatic.com`)**: Required for Google Ads dynamic telephone call tracking (`wcm/loader.js`). Missing this results in `script-src-elem` CSP blocks and breaks phone call conversion reporting.
 - **HTML Cache Revalidation Invariant**: Always ensure `text/html` has `max-age=0, no-cache, no-store, must-revalidate`. Never allow global `ExpiresDefault` to apply 30-day caching to HTML files, ensuring that new deployments and header updates take effect without edge CDN lag.
 - **Dual-Header Synchronization**: Maintain exact 1-to-1 directive parity between `public/.htaccess` and `public/_headers`.
+
+## Header Navigation & Menu Architecture Standards
+
+Whenever refactoring or adding links to header navigation:
+- **Desktop Nav Simplicity (Maximum 5 Links)**: Keep the desktop navigation row clean, airy, and uncluttered (`space-x-4 lg:space-x-7`). Restrict visible desktop links to a maximum of 5 high-intent anchors (e.g. `Stay & Villas`, `Amenities`, `Gallery`, `VIP Privileges`, `Contact`).
+- **Direct VIP Booking Callout**: Use a dedicated, styled anchor for direct privileges (e.g. `VIP Privileges` linking to `/book-now/`) with subtle visual accent (gold pulse badge, custom padding) and fire `trackAdsConversion("generate_lead", "booking", "nav_vip_privileges")` on click.
+- **Drawer Depth for Informational Content**: House secondary brand pages (`About Us`, `Reviews`, external brand sister sites) exclusively within the responsive mobile slide-out drawer rather than crowding the main desktop header bar.
 
 ## Direct Booking & WhatsApp CRO Standards
 
