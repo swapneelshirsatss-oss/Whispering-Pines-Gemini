@@ -26,12 +26,19 @@ export default function Navbar({ children }: NavbarProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: "About Us", href: "/about-whispering-pines-resort-ramgarh/" },
-    { name: "Cottages & Suites", href: "/suites-cottages-ramgarh-resort/" },
-    { name: "Private Villa", href: "/private-villas-near-nainital/" },
+  const desktopNavLinks = [
+    { name: "Stay & Villas", href: "/suites-cottages-ramgarh-resort/" },
     { name: "Amenities", href: "/resort-amenities-mukteshwar/" },
     { name: "Gallery", href: "/gallery/" },
+    { name: "VIP Privileges", href: "/book-now/", highlight: true },
+    { name: "Contact", href: "/contact-whispering-pines-resort-mukteshwar/" },
+  ];
+
+  const mobileNavLinks = [
+    { name: "Stay & Villas", href: "/suites-cottages-ramgarh-resort/" },
+    { name: "Amenities", href: "/resort-amenities-mukteshwar/" },
+    { name: "Gallery", href: "/gallery/" },
+    { name: "About Us", href: "/about-whispering-pines-resort-ramgarh/" },
     { name: "Reviews", href: "/reviews/" },
     { name: "Contact", href: "/contact-whispering-pines-resort-mukteshwar/" },
     { name: "Casa De Bello", href: "https://casadebello.whisperingpinesresort.in/", external: true },
@@ -55,16 +62,17 @@ export default function Navbar({ children }: NavbarProps) {
             {children}
           </a>
 
-          {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center space-x-3 lg:space-x-5">
-            {navLinks.map((link) => (
+          {/* Desktop Navigation Links — Streamlined & Clean (5 Items) */}
+          <div className="hidden md:flex items-center space-x-4 lg:space-x-7">
+            {desktopNavLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
-                data-astro-prefetch={link.external ? undefined : "hover"}
+                data-astro-prefetch="hover"
                 onClick={(e) => {
+                  if (link.href === '/book-now/') {
+                    trackAdsConversion("generate_lead", "booking", "nav_vip_privileges");
+                  }
                   if (link.href.startsWith('/#') && window.location.pathname === '/') {
                     e.preventDefault();
                     const id = link.href.replace('/#', '');
@@ -75,11 +83,13 @@ export default function Navbar({ children }: NavbarProps) {
                     }
                   }
                 }}
-                className={`text-xs lg:text-sm font-medium tracking-wide transition-colors duration-200 ${link.external
-                    ? "text-[#c9a832] hover:text-[#FAF9F6] font-semibold"
+                className={`text-xs lg:text-sm font-medium tracking-wide transition-all duration-200 ${
+                  link.highlight
+                    ? "text-[#c9a832] font-semibold flex items-center gap-1.5 bg-[#c9a832]/10 hover:bg-[#c9a832]/20 px-3 py-1.5 rounded border border-[#c9a832]/35 shadow-sm"
                     : "text-[#FAF9F6]/90 hover:text-[#c9a832]"
-                  }`}
+                }`}
               >
+                {link.highlight && <span class="w-1.5 h-1.5 rounded-full bg-[#c9a832] animate-pulse"></span>}
                 {link.name}
               </a>
             ))}
@@ -145,7 +155,7 @@ export default function Navbar({ children }: NavbarProps) {
             <span>✨ Direct Booking VIP Privileges</span>
             <span className="text-[10px] font-normal lowercase bg-[#c9a832]/20 px-2 py-0.5 rounded">save 15%</span>
           </a>
-          {navLinks.map((link) => (
+          {mobileNavLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
