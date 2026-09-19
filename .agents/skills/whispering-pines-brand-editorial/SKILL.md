@@ -34,4 +34,11 @@ This skill governs all content creation, blog writing, schema generation, and bo
 - **Astro Head Slot Scoping**: Always place `<Fragment slot="head">` as an immediate child of the `<Layout>` component. Never nest `<script slot="head">` inside nested `<div>` blocks, which causes Astro to render scripts into the `<body>`.
 - **Generative Engine Optimization (GEO)**: Maintain the `<link rel="alternate" type="text/markdown" href="/llms.txt" />` discovery tag in `Layout.astro` and explicitly permit AI crawlers (`Applebot-Extended`, `cohere-ai`, `ClaudeBot`, `GPTBot`, `PerplexityBot`) in `public/robots.txt`.
 - **Four-Sitemap Architecture**: Maintain both root index and segmented sitemaps (`sitemap.xml`, `sitemap-index.xml`, `sitemap-website.xml`, `sitemap-blog.xml`) in `public/robots.txt`.
+- **Google Ads Conversion & Attribution Standards**:
+  - **Account ID**: `AW-18226439390` with Google Tag initialized with `allow_enhanced_conversions: true` and `conversion_linker: true`.
+  - **Verified Call Conversion Action**: `AW-18226439390/Vc_dCNLMo_UcEN7JhfND` mapped to phone number `7505029696`.
+  - **Primary Canonical Landing Page**: `https://whisperingpinesresort.in/book-now/` is the official paid ads destination URL; `/book-direct/` must permanently 301-redirect to `/book-now/`.
+  - **Universal Conversion Dispatcher**: Use `window.trackBookingConversion(action, category, label, extra)` across all CTAs to ensure synchronous dispatch to both Google Ads and GTM (`GTM-PL8FVLPX`).
+  - **WhatsApp Attribution Tagging**: Automatically inject `sessionStorage` attribution into WhatsApp payloads so front desk staff can trace ad campaigns directly.
+
 

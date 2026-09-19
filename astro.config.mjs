@@ -97,6 +97,7 @@ export default defineConfig({
     '/villa': '/private-villas-near-nainital/',
     '/villas': '/private-villas-near-nainital/',
     '/gallaery': '/gallery/',
+    '/book-direct': '/book-now/',
   },
   integrations: [
     react(),

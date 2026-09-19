@@ -100,7 +100,7 @@ export default function RecentBookingNotification() {
 
         <div className="mt-2 flex items-center gap-3">
           <a
-            href="/book-direct/"
+            href="/book-now/"
             className="text-[10px] font-mono uppercase tracking-wider font-bold text-[#1B3322] hover:text-[#c9a832] underline underline-offset-2 transition-colors"
           >
             Direct Perks & Savings →

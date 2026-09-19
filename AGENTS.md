@@ -113,6 +113,23 @@ Whenever updating `public/.htaccess` or `public/_headers`:
 - **HTML Cache Revalidation Invariant**: Always ensure `text/html` has `max-age=0, no-cache, no-store, must-revalidate`. Never allow global `ExpiresDefault` to apply 30-day caching to HTML files, ensuring that new deployments and header updates take effect without edge CDN lag.
 - **Dual-Header Synchronization**: Maintain exact 1-to-1 directive parity between `public/.htaccess` and `public/_headers`.
 
+## Direct Booking & WhatsApp CRO Standards
+
+Whenever designing or refactoring direct booking pages, room cards, or conversion CTAs:
+- **WhatsApp Visual Dominance**: All primary direct booking buttons must use authentic WhatsApp green (`#25D366` hover `#1EBE5D`), an animated concentric pulse ring, and explicit direct saving microcopy (*"Save 15–20% Direct • ⚡ < 5m reply"*).
+- **Multi-Viewport Availability**:
+  - **Desktop**: Maintain the persistent floating WhatsApp concierge pill at `bottom-6 right-6 z-50 hidden md:flex`.
+  - **Mobile**: Maintain the mobile sticky bottom bar with WhatsApp highlighted as the hero CTA.
+  - **Pre-Header**: Include a 1-click WhatsApp Concierge pill in the top resident privilege ribbon beside `{RESORT_PHONE_DISPLAY}`.
+- **Dynamic Payload Synchronization**: Ensure the client-side JavaScript calculator updates the pre-filled WhatsApp message payload across `#btn-whatsapp-submit`, `#mobile-sticky-whatsapp`, and `#desktop-floating-whatsapp` simultaneously.
+- **Conversion Measurement Invariant**: Every WhatsApp CTA click must fire `generate_lead` / `trackAdsConversion` to Google Ads and Google Tag Manager.
+- **Google Ads Conversion Mapping Standards**:
+  - **Account ID**: `AW-18226439390` initialized with `allow_enhanced_conversions: true` and `conversion_linker: true`.
+  - **Phone Call Conversion Action**: `AW-18226439390/Vc_dCNLMo_UcEN7JhfND` mapped to phone number `7505029696`.
+  - **Lead Conversion Mapping**: WhatsApp inquiries dispatch `generate_lead` + `conversion` (`AW-18226439390`) with dynamic estimated room value and currency `INR` for Smart Bidding / Target ROAS.
+  - **Booking Engine Conversion Mapping**: BookingJini clicks dispatch `begin_checkout` + `conversion` (`AW-18226439390`).
+  - **Attribution Persistence**: Capture `gclid`, `gbraid`, `wbraid`, and UTM parameters into `sessionStorage` on landing page arrival so attribution is preserved throughout the session and injected into WhatsApp payloads.
+
 ## Git & Version Control Rules
 
 - **No Auto-Commit or Auto-Push**: Do NOT perform automatic git commits or git pushes (`git commit`, `git push`). Make all code edits directly in project files and present them for review. Only commit or push to Git when explicitly requested by the user.

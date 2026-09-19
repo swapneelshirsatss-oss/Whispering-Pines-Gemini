@@ -138,7 +138,7 @@ export default function Navbar({ children }: NavbarProps) {
         <div className="px-4 pt-1 pb-4 space-y-2">
           {/* Direct Booking VIP Banner */}
           <a
-            href="/book-direct/"
+            href="/book-now/"
             onClick={() => setIsOpen(false)}
             className="flex items-center justify-between p-3 rounded bg-[#c9a832]/15 border border-[#c9a832]/40 text-[#c9a832] font-mono text-xs tracking-wider uppercase font-bold mb-3 hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors"
           >
