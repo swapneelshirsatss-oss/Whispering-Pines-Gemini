@@ -1,59 +1,9 @@
 import React, { useState } from "react";
-import { Users, Bed, Check, ArrowRight, Apple, Snowflake, Info, MessageCircle, Sparkles } from "lucide-react";
+import { Users, Bed, Check, ArrowRight, Apple, Snowflake, Info, MessageCircle, Sparkles, ShieldCheck } from "lucide-react";
 import LazyImage from "./LazyImage";
 import { trackAdsConversion } from "../utils/analytics";
 import type { RoomOption } from "../types";
-
-const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
-
-const FALLBACK_ROOMS: RoomOption[] = [
-  {
-    id: "entire-cottage",
-    name: "Private Villa — The Ultimate Family Resort Experience Near Nainital",
-    subtitle: "Complete Alpine Luxury with Private Orchard & Fireplace",
-    capacity: "Up to 9-10 Adults",
-    bedType: "3 Grand King Bedrooms + Premium Loft",
-    pricePerNight: 15999,
-    featured: true,
-    image: "/images/villa_in_nanital.avif",
-    amenities: [
-      "Sleeps Up to 10 — 3 King Bedrooms + Premium Loft",
-      "3 Private En-Suite Baths with Himalayan Peak Views",
-      "Exclusive Private Orchard Yard & Fireplace Living Room"
-    ],
-    description: "Rent the entire wood-and-stone alpine estate for absolute privacy."
-  },
-  {
-    id: "delux-room",
-    name: "Deluxe Skylight Suite — Solo Travellers & Couples' Retreat",
-    subtitle: "Cozy Wood-Paneled Skylight Hideaway",
-    capacity: "2-3 Adults",
-    bedType: "1 Grand Bed + Cozy Daybed",
-    pricePerNight: 6499,
-    featured: false,
-    image: "/images/Delux_room_Whispering_pines_mukteshwar.avif",
-    amenities: [
-      "Glass Skylight Ceilings for Night-Time Star Gazing",
-      "Cedar Pine Deck Overlooking Bhowali-Ramgarh Valley"
-    ],
-    description: "Located on the pristine top floor under cathedral wooden panels."
-  },
-  {
-    id: "orchard-room",
-    name: "Family Twin Room — Ground Floor Orchard Access for Kids & Parents",
-    subtitle: "Ground Floor Serenity Overlooking Fruits & Blooms",
-    capacity: "2 Adults",
-    bedType: "1 Premium Double Bed",
-    pricePerNight: 4999,
-    featured: false,
-    image: "/images/Family_Twin_Room_Near_nainital.avif",
-    amenities: [
-      "Direct Lawn Access — Safe Open Space for Children",
-      "Exposed Old-Stone Brick Archways & Geo-Heater Warmth"
-    ],
-    description: "Open your doors directly onto green lawns and private peach and apple trees."
-  }
-];
+import { BOOKING_ENGINE_URL, ROOMS_INVENTORY, generateWhatsAppLink } from "../data";
 
 interface RoomInventoryListProps {
   initialFilter?: string;
@@ -72,7 +22,7 @@ export default function RoomInventoryList({
   isH1 = false,
   categoryIntro = "Suites & Cottages at Uttarakhand's Most Loved Family Resort",
   optimizedImages,
-  rooms = FALLBACK_ROOMS,
+  rooms = ROOMS_INVENTORY,
 }: RoomInventoryListProps = {}) {
   const [filter, setFilter] = useState(initialFilter);
 
@@ -168,9 +118,19 @@ export default function RoomInventoryList({
                     </div>
                   )}
                   {room.pricePerNight && (
-                    <div className="bg-[#FAF9F6]/95 backdrop-blur-md text-[#1B3322] text-[11px] font-mono font-bold px-3 py-1.5 rounded-sm shadow-md flex items-center gap-1.5 border border-[#1B3322]/10">
+                    <div className="bg-[#FAF9F6]/95 backdrop-blur-md text-[#1B3322] text-[11px] font-mono font-bold px-3 py-1.5 rounded-sm shadow-md flex items-center flex-wrap gap-1.5 border border-[#1B3322]/10">
                       <Sparkles className="w-3 h-3 text-[#c9a832]" />
-                      <span>From ₹{room.pricePerNight.toLocaleString("en-IN")}/night</span>
+                      <span>₹{room.pricePerNight.toLocaleString("en-IN")}/night</span>
+                      {room.otaPricePerNight && (
+                        <span className="line-through text-gray-400 font-normal text-[10px]">
+                          ₹{room.otaPricePerNight.toLocaleString("en-IN")}
+                        </span>
+                      )}
+                      {room.directSavings && (
+                        <span className="bg-[#25D366]/20 text-[#15803d] text-[9px] font-bold px-1.5 py-0.5 rounded tracking-tight">
+                          {room.directSavings}
+                        </span>
+                      )}
                     </div>
                   )}
                 </div>
@@ -205,6 +165,24 @@ export default function RoomInventoryList({
                     </span>
                   </div>
 
+                  {/* Direct Resident Privileges Pill */}
+                  {room.directPerks && room.directPerks.length > 0 && (
+                    <div className="mb-6 p-3 rounded bg-[#1B3322]/5 border border-[#1B3322]/10">
+                      <p className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#1B3322] mb-1.5 flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] shrink-0" />
+                        <span>Direct Booking Privileges:</span>
+                      </p>
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-[11px] text-[#2C3531]/80 font-sans">
+                        {room.directPerks.slice(0, 2).map((perk, pIdx) => (
+                          <li key={pIdx} className="flex items-center gap-1.5">
+                            <Check className="w-3 h-3 text-[#25D366] shrink-0" />
+                            <span>{perk}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
                   {/* Room Amenities Grid */}
                   <div className="mb-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2.5">
@@ -221,7 +199,7 @@ export default function RoomInventoryList({
                 {/* Dual Booking CTAs */}
                 <div className="pt-6 border-t border-[#2C3531]/10 flex flex-wrap items-center gap-3">
                   <a
-                    href={`https://wa.me/917505029696?text=${encodeURIComponent(`Hi! I would like to book ${room.name} directly at Whispering Pines Resort Mukteshwar. Please share availability and best direct rates.`)}`}
+                    href={generateWhatsAppLink({ roomName: room.name, source: "Room Inventory Card" })}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => trackAdsConversion("generate_lead", "booking", `room_card_whatsapp_${room.id}`)}

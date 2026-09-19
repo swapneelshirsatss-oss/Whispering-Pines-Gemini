@@ -13,9 +13,26 @@ export interface RoomOption {
   image: string;
   amenities: string[];
   description: string;
+  // Enhanced Direct-Booking CRO & Schema properties
+  otaPricePerNight?: number;
+  directSavings?: string;
+  directPerks?: string[];
+  maxOccupancy?: number;
+  minOccupancy?: number;
+  bedrooms?: number;
+  bathrooms?: number;
+  sizeSqFt?: number;
+  viewType?: string;
 }
 
 export interface AmenityCategory {
+  title: string;
+  icon: string;
+  description: string;
+  features?: string[];
+}
+
+export interface ResortService {
   title: string;
   icon: string;
   description: string;
@@ -34,6 +51,7 @@ export interface LocalExperience {
 export interface FAQItem {
   question: string;
   answer: string;
+  category?: "Booking & Pricing" | "Rooms & Villa" | "Dining & Food" | "Location & Transit" | "Policies & Amenities" | string;
 }
 
 export interface Testimonial {
@@ -42,4 +60,15 @@ export interface Testimonial {
   source: string;
   date: string;
   comment: string;
+  location?: string;
+}
+
+export interface WhatsAppLinkOptions {
+  roomName?: string;
+  checkIn?: string;
+  checkOut?: string;
+  guests?: string;
+  source?: string;
+  utmCampaign?: string;
+  gclid?: string;
 }

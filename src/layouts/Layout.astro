@@ -48,6 +48,32 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
       gtag('config', 'AW-18226439390/Vc_dCNLMo_UcEN7JhfND', {
         'phone_conversion_number': '7505029696'
       });
+
+      // Attribution Persistence for Google Ads / UTM tracking across all sessions
+      try {
+        var urlParams = new URLSearchParams(window.location.search);
+        var gclid = urlParams.get('gclid');
+        var gbraid = urlParams.get('gbraid');
+        var wbraid = urlParams.get('wbraid');
+        var utmSource = urlParams.get('utm_source');
+        var utmCampaign = urlParams.get('utm_campaign');
+        var utmMedium = urlParams.get('utm_medium');
+        var utmContent = urlParams.get('utm_content');
+
+        if (gclid || gbraid || wbraid || utmSource || utmCampaign) {
+          var attribution = {
+            gclid: gclid || '',
+            gbraid: gbraid || '',
+            wbraid: wbraid || '',
+            utm_source: utmSource || '',
+            utm_campaign: utmCampaign || '',
+            utm_medium: utmMedium || '',
+            utm_content: utmContent || '',
+            timestamp: Date.now()
+          };
+          sessionStorage.setItem('wpr_ads_attribution', JSON.stringify(attribution));
+        }
+      } catch (e) {}
     </script>
     
     <meta charset="UTF-8" />
