@@ -1,7 +1,7 @@
 /**
  * Google Ads & GTM Conversion Tracking Utility
- * Google Ads Account: AW-18226439390
- * Phone Call Conversion: AW-18226439390/Vc_dCNLMo_UcEN7JhfND
+ * Google Ads Account: AW-18455442099
+ * Phone Call Conversion: AW-18455442099/Vc_dCNLMo_UcEN7JhfND
  */
 
 export interface ConversionExtraParams {
@@ -18,8 +18,8 @@ export interface ConversionExtraParams {
   [key: string]: any;
 }
 
-export const GOOGLE_ADS_ID = 'AW-18226439390';
-export const GOOGLE_ADS_PHONE_CONVERSION = 'AW-18226439390/Vc_dCNLMo_UcEN7JhfND';
+export const GOOGLE_ADS_ID = 'AW-18455442099';
+export const GOOGLE_ADS_PHONE_CONVERSION = 'AW-18455442099/Vc_dCNLMo_UcEN7JhfND';
 
 export const trackAdsConversion = (
   action: string,

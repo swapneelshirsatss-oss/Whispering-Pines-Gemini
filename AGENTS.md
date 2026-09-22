@@ -135,10 +135,10 @@ Whenever designing or refactoring direct booking pages, room cards, or conversio
 - **Dynamic Payload Synchronization**: Ensure the client-side JavaScript calculator updates the pre-filled WhatsApp message payload across `#btn-whatsapp-submit`, `#mobile-sticky-whatsapp`, and `#desktop-floating-whatsapp` simultaneously.
 - **Conversion Measurement Invariant**: Every WhatsApp CTA click must fire `generate_lead` / `trackAdsConversion` to Google Ads and Google Tag Manager.
 - **Google Ads Conversion Mapping Standards**:
-  - **Account ID**: `AW-18226439390` initialized with `allow_enhanced_conversions: true` and `conversion_linker: true`.
-  - **Phone Call Conversion Action**: `AW-18226439390/Vc_dCNLMo_UcEN7JhfND` mapped to phone number `7505029696`.
-  - **Lead Conversion Mapping**: WhatsApp inquiries dispatch `generate_lead` + `conversion` (`AW-18226439390`) with dynamic estimated room value and currency `INR` for Smart Bidding / Target ROAS.
-  - **Booking Engine Conversion Mapping**: BookingJini clicks dispatch `begin_checkout` + `conversion` (`AW-18226439390`).
+  - **Account ID**: `AW-18455442099` initialized with `allow_enhanced_conversions: true` and `conversion_linker: true`.
+  - **Phone Call Conversion Action**: `AW-18455442099/Vc_dCNLMo_UcEN7JhfND` mapped to phone number `7505029696`.
+  - **Lead Conversion Mapping**: WhatsApp inquiries dispatch `generate_lead` + `conversion` (`AW-18455442099`) with dynamic estimated room value and currency `INR` for Smart Bidding / Target ROAS.
+  - **Booking Engine Conversion Mapping**: BookingJini clicks dispatch `begin_checkout` + `conversion` (`AW-18455442099`).
   - **Attribution Persistence**: Capture `gclid`, `gbraid`, `wbraid`, and UTM parameters into `sessionStorage` on landing page arrival so attribution is preserved throughout the session and injected into WhatsApp payloads.
 
 ## Git & Version Control Rules

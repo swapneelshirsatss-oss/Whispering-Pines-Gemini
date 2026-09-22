@@ -437,7 +437,7 @@ export default function FooterSection() {
         {/* Footer Bottom Copyrights & Legal Panel */}
         <div className="pt-8 flex flex-col lg:flex-row items-center justify-between gap-6 text-xs font-sans text-[#FAF9F6]/65 text-center lg:text-left">
           <div className="space-y-2">
-            <p>© {currentYear} Whispering Pines Resort by Casa De Bello. All Rights Reserved.</p>
+            <p>© {currentYear} Whispering Pines Resort by Casa De Bello. Operated by <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#c9a832] transition-colors">Casa De Bello - Luxury Resort Hotel in Mukteshwar, Nainital</a>.</p>
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-[11px] font-sans">
               <a href="/privacy-policy/" className="hover:text-[#c9a832] transition-colors">Privacy Policy</a>
               <span className="text-[#FAF9F6]/30">•</span>
@@ -447,9 +447,6 @@ export default function FooterSection() {
               <span className="text-[#FAF9F6]/30">•</span>
               <a href="https://casadebello.whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" className="text-[#c9a832] hover:text-[#FAF9F6] transition-colors font-medium">Casa De Bello Edition</a>
             </div>
-            <p className="text-[10px] text-[#FAF9F6]/40 max-w-2xl pt-1 leading-normal">
-              Operated by <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#c9a832] transition-colors">Casa De Bello - Luxury Resort Hotel in Bhowali, Nainital</a>.
-            </p>
             <p className="text-[11px] text-[#FAF9F6]/70 pt-0.5">
               Website Developed by <a href="https://growguest.in/" target="_blank" rel="noopener noreferrer" className="text-[#c9a832] hover:underline transition-colors font-medium">Growguest</a>
             </p>
