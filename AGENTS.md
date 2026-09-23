@@ -74,7 +74,10 @@ Whenever designing landing pages, writing travel guides, or updating navigation/
 
 ## IndexNow & Instant Indexing Rules
 
-- **IndexNow Protocol**: The site uses automated post-build IndexNow submission via `astro.config.mjs` (`indexNowIntegration()`) with verification key file `public/8f3d1b7e4a9c2d5e6f8a0b1c2d3e4f5a.txt`.
+- **Dual-Endpoint IndexNow Protocol**: Automated post-build submission in `astro.config.mjs` (`indexNowIntegration()`) and the standalone CLI tool (`scripts/submit-indexnow.mjs`) dispatches concurrently to both:
+  1. Central Gateway: `https://api.indexnow.org/indexnow` (Bing, Yandex, Seznam, Naver)
+  2. Bing Direct: `https://www.bing.com/indexnow`
+- **On-Demand Single URL Re-Crawl**: Run `npm run indexnow [optional-url]` to immediately notify search engines of newly published or updated content without needing a full production build.
 - **Primary XML Sitemaps**: Maintain references to `sitemap.xml`, `sitemap-index.xml`, `sitemap-website.xml`, and `sitemap-blog.xml` in `public/robots.txt`.
 - **Sitemap Synchronization**: When adding a new core landing page, register it in `public/sitemap-website.xml`. When adding a new blog article, register it in `public/sitemap-blog.xml`.
 
@@ -144,6 +147,7 @@ Whenever designing or refactoring direct booking pages, room cards, or conversio
 ## Git & Version Control Rules
 
 - **No Auto-Commit or Auto-Push**: Do NOT perform automatic git commits or git pushes (`git commit`, `git push`). Make all code edits directly in project files and present them for review. Only commit or push to Git when explicitly requested by the user.
+- **Windows PowerShell Command Chaining**: In Windows PowerShell (PS 5.1), avoid `&&` token chaining as it triggers syntax parse errors. Chain multiple terminal statements using `;` or execute them as distinct commands.
 
 
 
