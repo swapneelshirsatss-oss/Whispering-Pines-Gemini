@@ -81,6 +81,7 @@ export default defineConfig({
   site: 'https://whisperingpinesresort.in',
   trailingSlash: 'always',
   redirects: {
+    '/stay-near-mukteshwar-kainchi-dham': '/blog/stay-near-mukteshwar-kainchi-dham/',
     '/himalayan-view-resort-uttarakhand': '/blog/himalayan-view-resort-uttarakhand/',
     '/resort-near-mukteshwar': '/blog/resort-near-mukteshwar/',
     '/why-ramgarh-is-the-fruit-bowl-of-kumaon': '/blog/ramgarh-fruit-bowl-of-kumaon/',

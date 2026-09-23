@@ -16,6 +16,16 @@ export type BlogPostData = {
 
 export const BLOG_POSTS: BlogPostData[] = [
   {
+    id: 12,
+    slug: "stay-near-mukteshwar-kainchi-dham",
+    customUrl: "/blog/stay-near-mukteshwar-kainchi-dham/",
+    title: "Best Stay Near Mukteshwar & Kainchi Dham: A Peaceful Himalayan Escape",
+    excerpt: "Looking for a stay near Mukteshwar and Kainchi Dham? Discover Whispering Pines by Casa De Bello in Ramgarh with Himalayan views, villas, dining, Wi-Fi and more.",
+    date: "September 23, 2026",
+    readTime: "15 min read",
+    imageUrl: "/images/Best-Stay-Near-Mukteshwar-&-Kainchi-Dham.avif"
+  },
+  {
     id: 11,
     slug: "himalayan-view-resort-uttarakhand",
     customUrl: "/blog/himalayan-view-resort-uttarakhand/",

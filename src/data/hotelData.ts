@@ -64,7 +64,9 @@ export const propertyDetails = {
     "Whispering Pines Resort by Casa De Bello",
     "Whispering Pines Resort Mukteshwar",
     "Whispering Pines Resort near Mukteshwar",
-    "Whispering Pines by Casa De Bello"
+    "Whispering Pines by Casa De Bello",
+    "Casa De Bello Mukteshwar - ramgarh",
+    "Casa De Bello Mukteshwar - Ramgarh"
   ],
   legacyBrand: "Clarks Exotica Resort Ramgarh Mukteshwar",
   tagline: "180° Panoramic Himalayan Views from Every Room | Boutique Luxury Mountain Resort",
