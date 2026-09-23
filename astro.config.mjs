@@ -55,21 +55,28 @@ function indexNowIntegration() {
           urlList: list
         };
 
+        const endpoints = [
+          { name: 'Central Gateway', url: 'https://api.indexnow.org/indexnow' },
+          { name: 'Bing Direct', url: 'https://www.bing.com/indexnow' }
+        ];
+
         console.log(`[IndexNow] Submitting instant indexing request for ${payload.urlList.length} pages...`);
 
-        try {
-          const res = await fetch('https://api.indexnow.org/indexnow', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json; charset=utf-8' },
-            body: JSON.stringify(payload)
-          });
-          if (res.ok || res.status === 200 || res.status === 202) {
-            console.log(`[IndexNow] ✓ Instant URL indexing payload submitted successfully (HTTP ${res.status}).`);
-          } else {
-            console.log(`[IndexNow] Instant indexing notification status HTTP ${res.status}`);
+        for (const ep of endpoints) {
+          try {
+            const res = await fetch(ep.url, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json; charset=utf-8' },
+              body: JSON.stringify(payload)
+            });
+            if (res.ok || res.status === 200 || res.status === 202) {
+              console.log(`[IndexNow] [${ep.name}] [OK] Instant URL indexing payload submitted successfully (HTTP ${res.status}).`);
+            } else {
+              console.log(`[IndexNow] [${ep.name}] Notification status HTTP ${res.status}`);
+            }
+          } catch (err) {
+            console.warn(`[IndexNow] [${ep.name}] Ping deferred:`, err instanceof Error ? err.message : String(err));
           }
-        } catch (err) {
-          console.warn('[IndexNow] Ping notification deferred:', err instanceof Error ? err.message : String(err));
         }
       }
     }
