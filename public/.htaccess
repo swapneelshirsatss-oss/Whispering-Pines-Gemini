@@ -12,11 +12,30 @@
   RewriteCond %{HTTP_HOST} ^www\. [NC]
   RewriteRule ^(.*)$ https://whisperingpinesresort.in/$1 [R=301,L]
 
-  # 3. Redirect legacy URL to canonical blog guide route
+  # 3. Redirect legacy URLs to canonical routes (GSC 404 & Crawl Fixes)
   RewriteRule ^resort-near-mukteshwar/?$ https://whisperingpinesresort.in/blog/resort-near-mukteshwar/ [R=301,L]
   RewriteRule ^why-ramgarh-is-the-fruit-bowl-of-kumaon/?$ https://whisperingpinesresort.in/blog/ramgarh-fruit-bowl-of-kumaon/ [R=301,L]
   RewriteRule ^blog/why-ramgarh-is-the-fruit-bowl-of-kumaon/?$ https://whisperingpinesresort.in/blog/ramgarh-fruit-bowl-of-kumaon/ [R=301,L]
   RewriteRule ^ramgarh-fruit-bowl-of-kumaon/?$ https://whisperingpinesresort.in/blog/ramgarh-fruit-bowl-of-kumaon/ [R=301,L]
+
+  # Legacy WordPress pages
+  RewriteRule ^about/?$ https://whisperingpinesresort.in/about-whispering-pines-resort-ramgarh/ [R=301,L]
+  RewriteRule ^stay/?$ https://whisperingpinesresort.in/suites-cottages-ramgarh-resort/ [R=301,L]
+  RewriteRule ^contact/?$ https://whisperingpinesresort.in/contact-whispering-pines-resort-mukteshwar/ [R=301,L]
+  RewriteRule ^amenities/?$ https://whisperingpinesresort.in/resort-amenities-mukteshwar/ [R=301,L]
+  RewriteRule ^villas/?$ https://whisperingpinesresort.in/private-villas-near-nainital/ [R=301,L]
+  RewriteRule ^experiences/?$ https://whisperingpinesresort.in/things-to-do-near-mukteshwar/ [R=301,L]
+  RewriteRule ^(gallaery|gallery)/?$ https://whisperingpinesresort.in/gallery/ [R=301,L]
+  RewriteRule ^reviews/?$ https://whisperingpinesresort.in/reviews/ [R=301,L]
+
+  # Deprecated WordPress admin/login
+  RewriteRule ^wp-admin.*$ https://whisperingpinesresort.in/ [R=301,L]
+  RewriteRule ^wp-login\.php$ https://whisperingpinesresort.in/ [R=301,L]
+
+  # Legacy image paths with spaces or typos
+  RewriteRule ^images/best[\s%20]+-resort-in-ramgarh-uttarkah?and\.avif$ https://whisperingpinesresort.in/images/best-resort-in-ramgarh-uttarkahand.avif [R=301,L]
+  RewriteRule ^images/villa[\s%20]+in[\s%20]+nanital\.avif$ https://whisperingpinesresort.in/images/villa_in_nanital.avif [R=301,L]
+  RewriteRule ^_astro/stay-near-kainchi-dham\..*\.avif$ https://whisperingpinesresort.in/images/stay-near-kainchi-dham.avif [R=301,L]
 
   # 4. Force trailing slash ONLY on directory/page URIs (excluding static files and URIs with trailing slash)
   RewriteCond %{REQUEST_FILENAME} !-f

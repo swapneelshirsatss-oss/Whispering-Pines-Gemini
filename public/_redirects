@@ -13,6 +13,36 @@
 /blog/why-ramgarh-is-the-fruit-bowl-of-kumaon /blog/ramgarh-fruit-bowl-of-kumaon/ 301!
 /ramgarh-fruit-bowl-of-kumaon/ /blog/ramgarh-fruit-bowl-of-kumaon/ 301!
 
+# Legacy WordPress Page 301 Redirects to Astro Routes (GSC 404 Fixes)
+/about /about-whispering-pines-resort-ramgarh/ 301!
+/about/ /about-whispering-pines-resort-ramgarh/ 301!
+/stay /suites-cottages-ramgarh-resort/ 301!
+/stay/ /suites-cottages-ramgarh-resort/ 301!
+/contact /contact-whispering-pines-resort-mukteshwar/ 301!
+/contact/ /contact-whispering-pines-resort-mukteshwar/ 301!
+/amenities /resort-amenities-mukteshwar/ 301!
+/amenities/ /resort-amenities-mukteshwar/ 301!
+/villas /private-villas-near-nainital/ 301!
+/villas/ /private-villas-near-nainital/ 301!
+/experiences /things-to-do-near-mukteshwar/ 301!
+/experiences/ /things-to-do-near-mukteshwar/ 301!
+/gallery /gallery/ 301!
+/gallaery /gallery/ 301!
+/gallaery/ /gallery/ 301!
+/reviews /reviews/ 301!
+
+# WordPress Admin & API deprecations
+/wp-admin/* / 301!
+/wp-login.php / 301!
+/wp-content/* / 301!
+/wp-includes/* / 301!
+
+# Legacy image 301 redirects (GSC & Ahrefs fixes)
+/images/best%20-resort-in-ramgarh-uttarkahand.avif /images/best-resort-in-ramgarh-uttarkahand.avif 301!
+/images/best%20-resort-in-ramgarh-uttarakhand.avif /images/best-resort-in-ramgarh-uttarkahand.avif 301!
+/images/villa%20in%20nanital.avif /images/villa_in_nanital.avif 301!
+/_astro/stay-near-kainchi-dham.*.avif /images/stay-near-kainchi-dham.avif 301!
+
 # Legacy image 301 redirects (Ahrefs Site Audit fixes)
 /Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp /images/Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp 301!
 
