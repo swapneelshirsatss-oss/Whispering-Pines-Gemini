@@ -4,6 +4,7 @@ import { MapPin, Phone, Mail, MessageCircle, Clock, Briefcase } from "lucide-rea
 import { RESORT_CONTACT, CONTACT_FAQS } from "../data";
 import FAQAccordion from "../components/FAQAccordion";
 import DistanceTransitMatrix from "../components/DistanceTransitMatrix.astro";
+import HostFieldNote from "../components/HostFieldNote.astro";
 ---
 
 <Layout 
@@ -30,29 +31,45 @@ import DistanceTransitMatrix from "../components/DistanceTransitMatrix.astro";
       </div>
     </section>
 
-    {/* Book Direct Section (SEO) */}
-    <section class="py-12 bg-white border-b border-gray-100">
+    {/* Book Direct Section (SEO & Earth Styling) */}
+    <section class="py-14 bg-[#FBF9F5] border-b border-[#E6E0D6]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-10 text-center">
-          <h2 class="text-2xl sm:text-3xl font-display font-bold text-[#1B3322] mb-4">Book Direct on WhatsApp — Best Price Guaranteed on Every Ramgarh Reservation</h2>
+          <span class="text-xs font-mono uppercase tracking-widest text-[#C27847] font-bold block mb-2">
+            Direct Resident Privileges
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-display font-bold text-[#1B3322] mb-3">
+            Book Direct on WhatsApp — Best Price Guaranteed
+          </h2>
           <div class="w-16 h-[2px] bg-[#c9a832] mx-auto" />
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-[#FAF9F6] p-6 rounded-lg text-center border border-gray-100 shadow-sm">
-            <h3 class="text-sm sm:text-base font-bold text-[#2C3531]">Direct Booking & WhatsApp — 075050 29696 / +91-7505029696 — Response Under 5 Mins</h3>
+          <div class="card-earth p-6 text-center">
+            <span class="font-mono text-xs text-[#C27847] uppercase tracking-wider block mb-1">01 / FAST RESPONSE</span>
+            <h3 class="text-sm font-semibold text-[#1B3322]">Direct Front Desk</h3>
+            <p class="text-xs text-[#2C3330]/75 mt-1 font-light">Direct response in &lt; 5 mins on phone or WhatsApp.</p>
           </div>
-          <div class="bg-[#FAF9F6] p-6 rounded-lg text-center border border-gray-100 shadow-sm">
-            <h3 class="text-sm sm:text-base font-bold text-[#2C3531]">Save Up to 20% vs MakeMyTrip, Goibibo & Booking.com on Direct Reservations</h3>
+          <div class="card-earth p-6 text-center">
+            <span class="font-mono text-xs text-[#C27847] uppercase tracking-wider block mb-1">02 / SAVINGS</span>
+            <h3 class="text-sm font-semibold text-[#1B3322]">Save Up to 20% Direct</h3>
+            <p class="text-xs text-[#2C3330]/75 mt-1 font-light">Skip third-party OTA commissions on direct bookings.</p>
           </div>
-          <div class="bg-[#FAF9F6] p-6 rounded-lg text-center border border-gray-100 shadow-sm">
-            <h3 class="text-sm sm:text-base font-bold text-[#2C3531]">Priority Room Upgrades & Retention Discounts for Past Guests</h3>
+          <div class="card-earth p-6 text-center">
+            <span class="font-mono text-xs text-[#C27847] uppercase tracking-wider block mb-1">03 / PRIVILEGES</span>
+            <h3 class="text-sm font-semibold text-[#1B3322]">Priority Room Upgrades</h3>
+            <p class="text-xs text-[#2C3330]/75 mt-1 font-light">Flexible check-in times & complimentary evening bonfire.</p>
           </div>
-          <div class="bg-[#FAF9F6] p-6 rounded-lg text-center border border-gray-100 shadow-sm">
-            <h3 class="text-sm sm:text-base font-bold text-[#2C3531]">Secure UPI, Credit Card & Net Banking Payment — Instant Confirmation</h3>
+          <div class="card-earth p-6 text-center">
+            <span class="font-mono text-xs text-[#C27847] uppercase tracking-wider block mb-1">04 / PAYMENT</span>
+            <h3 class="text-sm font-semibold text-[#1B3322]">Verified UPI & Cards</h3>
+            <p class="text-xs text-[#2C3330]/75 mt-1 font-light">Instant confirmation with secure online invoice payment.</p>
           </div>
         </div>
       </div>
     </section>
+
+    {/* Verified Host Welcome Card */}
+    <HostFieldNote className="my-10" />
 
     {/* Main Content Grid */}
     <section class="py-16 sm:py-20">

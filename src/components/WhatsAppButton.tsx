@@ -29,26 +29,28 @@ export default function WhatsAppButton() {
 
         {/* 50/50 Split Action Buttons */}
         <div className="grid grid-cols-2 gap-2">
-          {/* Action 1: Call Front Desk */}
+          {/* Action 1: Call Front Desk (Anurra Warm Terracotta Tone) */}
           <a
             href="tel:+917505029696"
             onClick={handleCallClick}
-            className="flex items-center justify-center gap-2 bg-[#FAF9F6]/10 hover:bg-[#FAF9F6]/15 active:bg-[#FAF9F6]/20 text-[#FAF9F6] border border-[#FAF9F6]/20 rounded py-2.5 px-2 text-xs font-mono font-semibold uppercase tracking-wider transition-all"
+            className="flex items-center justify-center gap-2 bg-[#C27847] hover:bg-[#b06a3c] active:bg-[#9c5a30] text-[#FAF9F6] border border-[#C27847]/40 rounded-xl py-2.5 px-2 text-xs font-mono font-semibold uppercase tracking-wider transition-all shadow-sm"
             title="Call Whispering Pines Direct Front Desk"
           >
-            <Phone className="w-3.5 h-3.5 text-[#c9a832]" />
+            <Phone className="w-3.5 h-3.5 text-white" />
             <span>Call Resort</span>
           </a>
 
-          {/* Action 2: WhatsApp VIP Booking */}
+          {/* Action 2: WhatsApp VIP Booking (Authentic WhatsApp Branding) */}
           <a
             href="https://wa.me/917505029696?text=Hi!%20I'm%20planning%20a%20stay%20at%20Whispering%20Pines%20Resort%20Mukteshwar.%20Please%20share%20availability%20and%20direct%20booking%20best%20rates."
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => handleWhatsAppClick("sticky_mobile_whatsapp")}
-            className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.98] text-white rounded py-2.5 px-2 text-xs font-mono font-bold uppercase tracking-wider shadow-md transition-all relative overflow-hidden"
+            className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.98] text-white rounded-xl py-2.5 px-2 text-xs font-mono font-bold uppercase tracking-wider shadow-md transition-all relative overflow-hidden"
           >
-            <MessageCircle className="w-3.5 h-3.5 fill-current" />
+            <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.1 1.523 5.823L0 24l6.344-1.498A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.792 9.792 0 01-5.002-1.374l-.359-.213-3.765.889.953-3.676-.234-.376A9.794 9.794 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/>
+            </svg>
             <span>WhatsApp</span>
             <span className="w-2 h-2 rounded-full bg-white animate-ping absolute top-2 right-2 opacity-75" />
           </a>
@@ -72,7 +74,9 @@ export default function WhatsAppButton() {
         >
           {/* Animated WhatsApp Icon Badge */}
           <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-[#25D366] text-white shadow-sm shrink-0">
-            <MessageCircle className="w-5 h-5 fill-current" />
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.1 1.523 5.823L0 24l6.344-1.498A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.792 9.792 0 01-5.002-1.374l-.359-.213-3.765.889.953-3.676-.234-.376A9.794 9.794 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/>
+            </svg>
             <span className="absolute -top-0.5 -right-0.5 flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-3 w-3 bg-[#25D366] border border-white" />

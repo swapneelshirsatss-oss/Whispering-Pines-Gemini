@@ -5,6 +5,8 @@ import ResortLodgingSchema from '../components/ResortLodgingSchema.astro';
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import Hero from "../components/Hero.astro";
 import AboutSection from "../components/AboutSection.astro";
+import HostFieldNote from "../components/HostFieldNote.astro";
+import SlowLivingRhythm from "../components/SlowLivingRhythm.astro";
 import RoomInventoryList from "../components/RoomInventoryList";
 import AmenitiesList from "../components/AmenitiesList.astro";
 import ServicesSection from "../components/ServicesSection.astro";
@@ -57,6 +59,12 @@ const roomImages = {
     <main>
       {/* About Sanctuary Story Section */}
       <AboutSection />
+
+      {/* Verified Resident Host Welcome Note (Anurra & Maati Living Human Touch) */}
+      <HostFieldNote />
+
+      {/* The Rhythm of a Mountain Day (Slow Living Vignette) */}
+      <SlowLivingRhythm />
 
       {/* Complete Room, Suite & Cottage Inventory Cards */}
       <RoomInventoryList client:visible optimizedImages={roomImages} />

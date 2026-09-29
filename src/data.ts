@@ -283,7 +283,7 @@ export const GENERAL_AMENITIES = [
     features: [
       "Peaceful Orchard Lawns & Relaxation Nooks in the Pine Canopy",
       "Restorative Slow Living Built for Complete Mental Rejuvenation",
-      "Seamless Ambient Wi-Fi for Effortless Connectivity When Needed"
+      "Reliable Ambient Wi-Fi Across All Rooms & Lawns"
     ]
   },
   {
@@ -537,7 +537,7 @@ export const FAQS: FAQItem[] = [
   {
     category: "Policies & Amenities",
     question: "Is Wi-Fi available at the resort if I need to connect?",
-    answer: "Yes, reliable high-speed fiber-optic Wi-Fi is available across all rooms, private balconies, and outdoor gardens. While our guests primarily visit for peaceful relaxation, unwinding in nature, and enjoying the 180° Himalayan views, seamless connectivity is always available whenever you need it."
+    answer: "Yes, reliable high-speed fiber-optic Wi-Fi is available across all rooms, private balconies, and outdoor gardens. While our guests primarily visit for peaceful relaxation, unwinding in nature, and enjoying the 180° Himalayan views, reliable fiber Wi-Fi is always available whenever you need it."
   },
   {
     category: "Dining & Food",

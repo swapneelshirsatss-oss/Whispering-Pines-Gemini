@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import AboutSection from "../components/AboutSection.astro";
+import HostFieldNote from "../components/HostFieldNote.astro";
 import SEOAboutContent from "../components/SEOAboutContent.astro";
 import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
@@ -27,6 +28,7 @@ const villaUrl = new URL(villaImg, siteBase).href;
         asH1={true}
         title="best resort in Ramgarh, Uttarakhand — Whispering Pines by Casa De Bello"
       />
+      <HostFieldNote className="my-8" />
       <SEOAboutContent />
     </main>
     

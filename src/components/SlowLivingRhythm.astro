@@ -1,0 +1,146 @@
+---
+import { RESORT_CONTACT, generateWhatsAppLink } from '../data';
+
+interface Props {
+  className?: string;
+}
+
+const { className = "" } = Astro.props;
+
+const rhythmSteps = [
+  {
+    time: "06:30 AM",
+    title: "The Alpenglow Awakening",
+    subtitle: "Nanda Devi at First Light",
+    description: "The horizon turns soft pink and amber as morning sunlight touches the snow crests of Nanda Devi and Trishul. A kettle of steaming adrak cardamom tea arrives on your cedar balcony while the valley below sleeps under morning mist.",
+    sensoryTag: "Fresh Chai • Crisp Mountain Air • 180° Peak View"
+  },
+  {
+    time: "10:30 AM",
+    title: "Orchard & Forest Wandering",
+    subtitle: "Slow Steps Through Peach & Plum Trees",
+    description: "Wander down terraced village trails through fragrant pine canopies and active fruit orchards. Listen to the Himalayan whistling thrush and breathe deep, resinous mountain air with zero car engines in earshot.",
+    sensoryTag: "Birdsong • Terraced Orchards • Pine Solitude"
+  },
+  {
+    time: "01:30 PM",
+    title: "Pahadi Hearth Comfort",
+    subtitle: "Slow-Cooked Mountain Nourishment",
+    description: "Savor a leisurely lunch prepared with organic vegetables from nearby mountain farms. Traditional Bhatt ki Churkani, slow-simmered black soybean curry, hot Pahadi dal, and warm Mandua rotis drizzled with pure mountain ghee.",
+    sensoryTag: "Local Kumaoni Recipes • Farm-Fresh • Homestyle Warmth"
+  },
+  {
+    time: "04:30 PM",
+    title: "Golden Hour Stillness",
+    subtitle: "Unrushed Pages & Amber Light",
+    description: "The afternoon softens into rich amber tones. Settle into the lawn recliners with your favorite book, watch shadows lengthen across the valley, or simply sit quietly with someone you love as the peaks turn golden.",
+    sensoryTag: "Warm Amber Light • Lawn Lounging • Quiet Stillness"
+  },
+  {
+    time: "07:30 PM",
+    title: "Starlit Cedar Hearth",
+    subtitle: "Embers, Stories & Mountain Stars",
+    description: "As the mountain chill sets in, cedar logs crackle in the outdoor bonfire and lodge fireplace. Enjoy sizzling appetizers from the live barbecue, listen to mountain breeze rustle the pines, and gaze at unpolluted Himalayan stars.",
+    sensoryTag: "Cedar Bonfire • Starlit Canopy • Deep Rest"
+  }
+];
+
+const whatsappStoryLink = generateWhatsAppLink("Hi! I love the slow living experience at Whispering Pines Ramgarh. I'd like to plan a peaceful getaway and check available dates.");
+---
+
+<section id="slow-living" class={`py-20 lg:py-28 bg-[#FBF9F5] border-y border-[#E6E0D6] ${className}`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Editorial Section Header -->
+    <div class="max-w-3xl mx-auto text-center mb-16 space-y-4">
+      <span class="text-xs font-mono uppercase tracking-widest text-[#C27847] font-bold block">
+        Slow Living at 1,780 Metres
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1B3322]">
+        The Rhythm of a Mountain Day
+      </h2>
+      <div class="flex justify-center items-center gap-3 text-[#c9a832]/60 select-none text-xs tracking-widest my-2" aria-hidden="true">
+        ✦ &nbsp; ✦ &nbsp; ✦
+      </div>
+      <p class="text-base sm:text-lg text-[#2C3330]/85 font-sans font-light leading-relaxed text-pretty">
+        Time moves differently on the Malla Ramgarh ridge. Away from traffic horns, endless notifications, and city deadlines, every hour invites you into stillness, authentic food, and unobstructed Himalayan horizons.
+      </p>
+    </div>
+
+    <!-- Timeline Grid: 5 Rhythm Steps -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {rhythmSteps.map((step, idx) => (
+        <div class="card-earth card-earth-interactive p-6 sm:p-8 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <!-- Time Badge -->
+            <div class="flex items-center justify-between border-b border-[#E6E0D6] pb-3">
+              <span class="font-mono text-xs sm:text-sm font-bold text-[#C27847] tracking-wider tnum">
+                {step.time}
+              </span>
+              <span class="text-[11px] font-mono text-[#2C3330]/50 uppercase tracking-widest">
+                0{idx + 1} / 05
+              </span>
+            </div>
+
+            <!-- Titles -->
+            <div>
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-[#1B3322] group-hover:text-[#C27847] transition-colors leading-snug">
+                {step.title}
+              </h3>
+              <p class="text-xs font-mono text-[#c9a832] font-semibold mt-1">
+                {step.subtitle}
+              </p>
+            </div>
+
+            <!-- Description -->
+            <p class="text-xs sm:text-sm text-[#2C3330]/80 font-sans font-light leading-relaxed text-pretty">
+              {step.description}
+            </p>
+          </div>
+
+          <!-- Sensory Tag Footer -->
+          <div class="mt-6 pt-4 border-t border-[#E6E0D6]/60">
+            <span class="text-[11px] font-mono text-[#1B3322]/70 block tracking-wide">
+              {step.sensoryTag}
+            </span>
+          </div>
+        </div>
+      ))}
+
+      <!-- 6th Special Invitation Card -->
+      <div class="bg-[#1B3322] text-[#FAF9F6] rounded-2xl p-6 sm:p-8 border border-[#c9a832]/30 flex flex-col justify-between shadow-md relative overflow-hidden group">
+        <div class="absolute -right-8 -bottom-8 text-white/[0.04] text-9xl font-serif select-none pointer-events-none" aria-hidden="true">
+          ✦
+        </div>
+        <div class="relative z-10 space-y-4">
+          <span class="text-xs font-mono uppercase tracking-widest text-[#c9a832] font-bold block">
+            Your Mountain Sanctuary
+          </span>
+          <h3 class="font-display text-2xl font-bold text-white leading-snug">
+            Ready to unplug and breathe the pine air?
+          </h3>
+          <p class="text-xs sm:text-sm text-[#FAF9F6]/80 font-light leading-relaxed">
+            Reserve your room or private villa directly with our resident team. Enjoy 15–20% direct booking privileges, seasonal pahadi breakfast, and flexible mountain check-in.
+          </p>
+        </div>
+
+        <div class="relative z-10 mt-6 pt-4 border-t border-white/15">
+          <a
+            href={whatsappStoryLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#c9a832] hover:bg-[#d8b73f] text-[#1B3322] font-bold text-xs sm:text-sm rounded-xl transition-all shadow-sm focus-ring"
+            onclick="if(typeof window.trackAdsConversion==='function'){window.trackAdsConversion('generate_lead','booking','slow_living_whatsapp');}"
+          >
+            <!-- WhatsApp Official Icon -->
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.1 1.523 5.823L0 24l6.344-1.498A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.792 9.792 0 01-5.002-1.374l-.359-.213-3.765.889.953-3.676-.234-.376A9.794 9.794 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/>
+            </svg>
+            <span>Plan with Mountain Concierge</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

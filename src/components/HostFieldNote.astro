@@ -1,0 +1,80 @@
+---
+import { RESORT_CONTACT, generateWhatsAppLink } from '../data';
+
+interface Props {
+  className?: string;
+}
+
+const { className = "" } = Astro.props;
+const whatsappHostLink = generateWhatsAppLink("Hi Gaurav! I am planning a stay at Whispering Pines Ramgarh and would love to speak with the resident team about room options and direct rates.");
+---
+
+<section class={`py-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto ${className}`}>
+  <div class="relative bg-[#FBF9F5] border border-[#E6E0D6] rounded-2xl p-6 sm:p-10 shadow-sm overflow-hidden">
+    <!-- Subtle Botanical Watermark Glyph -->
+    <div class="absolute -right-6 -bottom-8 text-[#1B3322]/[0.03] select-none text-9xl font-serif pointer-events-none" aria-hidden="true">
+      ✦
+    </div>
+
+    <div class="relative z-10 flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+      <!-- Host Avatar & Verified Badge -->
+      <div class="flex flex-col items-center md:items-start shrink-0 text-center md:text-left">
+        <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#1B3322] border-2 border-[#c9a832] text-[#FAF9F6] flex items-center justify-center font-display font-bold text-xl sm:text-2xl shadow-md">
+          GP
+        </div>
+        <div class="mt-3 inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#1B3322]/10 rounded-full text-[11px] font-mono font-semibold text-[#1B3322] uppercase tracking-wider">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#25D366]"></span>
+          Verified Host On-Site
+        </div>
+      </div>
+
+      <!-- Narrative & Human Touch -->
+      <div class="space-y-4 flex-1">
+        <div class="flex flex-wrap items-baseline gap-2">
+          <span class="text-xs font-mono uppercase tracking-widest text-[#C27847] font-bold">
+            Human Hospitality • Malla Ramgarh Ridge
+          </span>
+        </div>
+
+        <h3 class="font-display text-2xl sm:text-3xl font-bold text-[#1B3322] leading-snug">
+          “We care for this ridge as our home, not a corporate hotel.”
+        </h3>
+
+        <p class="text-[#2C3330] font-sans text-sm sm:text-base leading-relaxed font-light text-pretty">
+          When you drive up to Whispering Pines, the city rush immediately fades into quiet pine breezes. 
+          If you want a steaming kettle of adrak chai at 6:15 AM to watch the first sunrise pink light illuminate Nanda Devi, or need honest local advice on the quietest trail through the fruit orchards, our resident hosting team is right here with you on the grounds.
+        </p>
+
+        <p class="text-[#2C3330] font-sans text-sm sm:text-base leading-relaxed font-light text-pretty">
+          No automated chatbots, no call centers. Just genuine mountain hospitality, home-cooked pahadi comfort food, and unscripted care from arrival to departure.
+        </p>
+
+        <!-- Signature & WhatsApp Touchpoint -->
+        <div class="pt-4 border-t border-[#E6E0D6] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div class="font-display font-semibold text-[#1B3322] text-base">
+              Gaurav Pandey &amp; The Resident Team
+            </div>
+            <div class="text-xs text-[#2C3330]/70 font-sans">
+              Director, Casa De Bello • On-site Host at Whispering Pines Ramgarh
+            </div>
+          </div>
+
+          <a
+            href={whatsappHostLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2.5 px-5 py-2.5 bg-[#1B3322] hover:bg-[#2A4832] text-[#FAF9F6] text-xs sm:text-sm font-medium rounded-xl border border-[#c9a832]/30 transition-all shadow-sm hover:shadow-md shrink-0 focus-ring"
+            onclick="if(typeof window.trackAdsConversion==='function'){window.trackAdsConversion('generate_lead','booking','host_field_note_whatsapp');}"
+          >
+            <!-- WhatsApp Official Icon -->
+            <svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.1 1.523 5.823L0 24l6.344-1.498A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.792 9.792 0 01-5.002-1.374l-.359-.213-3.765.889.953-3.676-.234-.376A9.794 9.794 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/>
+            </svg>
+            <span>Ask a Question on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

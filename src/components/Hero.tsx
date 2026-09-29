@@ -58,7 +58,7 @@ export default function Hero({ optimizedImage, optimizedMobileImage }: HeroProps
         
         {/* Sub-copy block */}
         <p id="speakable-hero-intro" className="max-w-2xl mx-auto text-lg sm:text-xl text-[#FAF9F6]/90 font-sans font-light leading-relaxed mb-10 drop-shadow-md">
-          Looking for the best resort in Ramgarh? Experience a premium mountain getaway near Nainital & Mukteshwar at Whispering Pines by Casa De Bello (formerly Clarks Exotica). Enjoy private fruit orchards, cozy fireplace rooms, and breathtaking 180° Himalayan panoramas. Book direct on WhatsApp for our best price guaranteed.
+          Experience pure mountain relaxation at Whispering Pines by Casa De Bello in Ramgarh. Enjoy unobstructed 180° Himalayan snow peak views from all rooms, rich multi-cuisine & authentic Kumaoni dining, private fruit orchards, and cozy fireplace living. Book direct on WhatsApp for our best price guaranteed.
         </p>
 
         {/* Highlight Quick Badges */}

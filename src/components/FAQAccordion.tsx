@@ -6,7 +6,7 @@ import { CONTACT_FAQS } from "../data";
 export default function FAQAccordion({ 
   faqs = CONTACT_FAQS, 
   title = "Stay Details & Frequently Asked Questions", 
-  description = "Everything you need to know about direct booking discounts, 180° Himalayan views, fresh food dining, pet policies, driving directions from Delhi, and our seamless WhatsApp booking concierge." 
+  description = "Everything you need to know about direct booking discounts, 180° Himalayan views, fresh food dining, pet policies, driving directions from Delhi, and our direct WhatsApp booking concierge." 
 }: { 
   faqs?: FAQItem[],
   title?: string,
