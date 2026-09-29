@@ -368,60 +368,68 @@ export const RESORT_SERVICES: ResortService[] = [
 
 export const LOCAL_EXPERIENCES: LocalExperience[] = [
   {
+    id: "kainchi-dham-ashram",
+    title: "Kainchi Dham Neem Karoli Baba Ashram",
+    distance: "18 km (45-min Drive)",
+    description: "The revered spiritual sanctuary of Neem Karoli Baba along the river valley. A sacred pilgrimage site attracting devotees and seekers from around the world.",
+    tag: "Spiritual Pilgrimage",
+    image: "/images/Local-Sight-Himalayan-Excursions/kainchi-dham-mukteshwar.webp"
+  },
+  {
     id: "mukteshwar-temple",
-    title: "Mukteshwar Dham temple",
+    title: "Mukteshwar Dham Temple & Himalayan Peaks",
     distance: "25 km (45-min Drive)",
-    description: "A 350-year-old historic Shiva temple perched atop a grand rocky hill, providing deep peace and views of the Trishul and Nanda Devi peaks.",
+    description: "A 350-year-old historic Shiva temple perched atop a grand rocky hill, providing deep peace and 180° views of the Trishul and Nanda Devi peaks.",
     tag: "Spiritual & Majestic",
-    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=800"
+    image: "/images/Local-Sight-Himalayan-Excursions/nanda-devi-peak-view-mukteshwar.webp"
   },
   {
     id: "chauli-ki-jali",
     title: "Chauli Ki Jali Rocks",
     distance: "25 km (45-min Drive)",
-    description: "A massive cliff formation next to Mukteshwar temple. Incredible spot for paragliding, rock climbing, and watching dramatic orange sunsets.",
+    description: "A massive cliff formation next to Mukteshwar temple. Incredible spot for rock climbing and watching dramatic orange Himalayan sunsets.",
     tag: "Adventure & Vistas",
-    image: "https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&q=80&w=800"
+    image: "/images/Local-Sight-Himalayan-Excursions/chauli-ki-jali-mukteshwar.webp"
   },
   {
     id: "bhalu-gaad-falls",
-    title: "Bhalu Gaad stream Falls",
+    title: "Bhalu Gaad Stream & Waterfall",
     distance: "12 km (20-min Drive)",
-    description: "A scenic natural waterfall. A spectacular 2km trek through shallow pine canopies and wild shrubs brings you to a gorgeous hidden pool.",
+    description: "A pristine natural waterfall. A scenic 2 km trek through shallow pine canopies and wild flora brings you to a crystal-clear hidden pool.",
     tag: "Nature Trekking",
-    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=800"
+    image: "/images/Local-Sight-Himalayan-Excursions/bhalugaad-waterfall-mukteshwar.webp"
   },
   {
     id: "orchard-walks",
     title: "Malla Ramgarh Fruit Orchards",
     distance: "0.5 km (Walk)",
-    description: "Ramgarh is the 'Fruit Bowl of Kumaon'. Stroll through pathways filled with plums, peaches, apples, and apricots in full blossom.",
+    description: "Ramgarh is the 'Fruit Bowl of Kumaon'. Stroll through pathways filled with plums, peaches, apples, and apricots in seasonal full blossom.",
     tag: "Bespoke Leisure",
-    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=800"
+    image: "/images/Local-Sight-Himalayan-Excursions/malla-ramgarh-fruit-orchards.webp"
   },
   {
     id: "stargazing-whispering-pines",
     title: "Stargazing under Himalayan Skies",
     distance: "On-site (Terrace)",
-    description: "The clear mountain air at Whispering Pines Resort offers pristine views of the night sky. Enjoy a guided stargazing session right from our terrace.",
+    description: "The clear mountain air at Whispering Pines Resort offers pristine views of the night sky, constellations, and the Milky Way right from our ridge terrace.",
     tag: "Night Sky",
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=800"
+    image: "/images/Local-Sight-Himalayan-Excursions/himalayan-stargazing.webp"
   },
   {
     id: "nature-trail-mountain-walk",
-    title: "Nature Trail & Mountain Walk",
+    title: "Pine Forest Nature Trails & Village Walk",
     distance: "On-site Access",
-    description: "Explore the beautiful pine and oak forests surrounding Whispering Pines. Take a guided walk through the Ramgarh village to experience local Kumaoni life and discover hidden nature trails.",
+    description: "Explore the serene deodar cedar and oak forests surrounding Whispering Pines. Take a quiet morning walk through Ramgarh village to experience local Kumaoni life.",
     tag: "Nature Walk",
-    image: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&q=80&w=800"
+    image: "/images/Local-Sight-Himalayan-Excursions/pine-forest-nature-trails.webp"
   },
   {
     id: "guided-treks-nature-retreats",
     title: "Guided Treks & Nature Retreats",
     distance: "Nearby Trails",
-    description: "Embark on curated nature retreats and guided trekking experiences through scenic Himalayan trails near Mukteshwar, designed for both beginners and seasoned adventurers. Personally hosted and guided by Harsh & Priyanka.",
+    description: "Curated nature retreats and guided trekking experiences through scenic Himalayan trails near Mukteshwar, designed for beginners and seasoned adventurers.",
     tag: "Adventure",
-    image: "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&q=80&w=800"
+    image: "/images/Local-Sight-Himalayan-Excursions/guided-trekking-retreats.webp"
   },
   {
     id: "curated-bonfire-bbq",
@@ -429,7 +437,7 @@ export const LOCAL_EXPERIENCES: LocalExperience[] = [
     distance: "On-site",
     description: "Experience clear-sky stargazing and curated outdoor bonfires & barbeque at Whispering Pines Resort. Book direct for complimentary winter camping access and hot local Kumaoni snacks.",
     tag: "Evening Leisure",
-    image: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&q=80&w=800"
+    image: "/images/Local-Sight-Himalayan-Excursions/himalayan-stargazing.webp"
   },
   {
     id: "group-yoga-sessions",
