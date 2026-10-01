@@ -58,9 +58,14 @@ export const BLOG_POSTS: BlogPostData[] = [
       <div className="space-y-8 text-[#2C3531]">
         {/* Author EEAT Banner */}
         <div className="bg-[#1B3322]/5 p-6 rounded-2xl border border-[#1B3322]/10 flex flex-col md:flex-row items-center gap-4">
-          <div className="w-16 h-16 rounded-full bg-[#1B3322] text-[#c9a832] flex items-center justify-center text-xl font-bold border border-[#c9a832] shrink-0">
-            GP
-          </div>
+          <img
+            src="/images/Gaurav-pandey-casa-de-bello.webp"
+            alt="Gaurav Pandey — Director of Casa De Bello Pvt Ltd"
+            className="w-16 h-16 rounded-full object-cover border-2 border-[#c9a832] shrink-0 shadow-sm"
+            width="64"
+            height="64"
+            loading="lazy"
+          />
           <div>
             <div className="text-xs font-semibold text-[#c9a832] uppercase tracking-wider">Author & Verified Host</div>
             <h4 className="text-base font-bold text-[#1B3322]">Gaurav Pandey — Director of Casa De Bello Pvt Ltd</h4>
@@ -616,9 +621,14 @@ export const BLOG_POSTS: BlogPostData[] = [
       <div className="space-y-8 text-[#2C3531]">
         {/* Author E-E-A-T Banner */}
         <div className="bg-[#1B3322]/5 p-6 rounded-2xl border border-[#1B3322]/10 flex flex-col md:flex-row items-center gap-4">
-          <div className="w-16 h-16 rounded-full bg-[#1B3322] text-[#c9a832] flex items-center justify-center text-xl font-bold border border-[#c9a832] shrink-0">
-            GP
-          </div>
+          <img
+            src="/images/Gaurav-pandey-casa-de-bello.webp"
+            alt="Gaurav Pandey — Director of Casa De Bello Pvt Ltd"
+            className="w-16 h-16 rounded-full object-cover border-2 border-[#c9a832] shrink-0 shadow-sm"
+            width="64"
+            height="64"
+            loading="lazy"
+          />
           <div>
             <div className="text-xs font-semibold text-[#c9a832] uppercase tracking-wider">Author & Verified Host</div>
             <h4 className="text-base font-bold text-[#1B3322]">Gaurav Pandey — Director, Casa De Bello Pvt Ltd</h4>
@@ -919,9 +929,14 @@ export const BLOG_POSTS: BlogPostData[] = [
         {/* Author E-E-A-T Banner */}
         <div className="bg-[#1B3322]/5 p-6 rounded-2xl border border-[#1B3322]/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex flex-col md:flex-row items-center gap-4">
-            <div className="w-16 h-16 rounded-full bg-[#1B3322] text-[#c9a832] flex items-center justify-center text-xl font-bold border border-[#c9a832] shrink-0">
-              GP
-            </div>
+            <img
+              src="/images/Gaurav-pandey-casa-de-bello.webp"
+              alt="Gaurav Pandey — Director of Casa De Bello Pvt Ltd"
+              className="w-16 h-16 rounded-full object-cover border-2 border-[#c9a832] shrink-0 shadow-sm"
+              width="64"
+              height="64"
+              loading="lazy"
+            />
             <div>
               <div className="text-xs font-semibold text-[#c9a832] uppercase tracking-wider">Author & Verified Host</div>
               <h4 className="text-base font-bold text-[#1B3322]">Gaurav Pandey — Director of Casa De Bello Pvt Ltd</h4>
@@ -1583,9 +1598,14 @@ export const BLOG_POSTS: BlogPostData[] = [
       <div className="space-y-8 text-[#2C3531]">
         {/* Author E-E-A-T Banner */}
         <div className="bg-[#1B3322]/5 p-6 rounded-2xl border border-[#1B3322]/10 flex flex-col md:flex-row items-center gap-4">
-          <div className="w-16 h-16 rounded-full bg-[#1B3322] text-[#c9a832] flex items-center justify-center text-xl font-bold border border-[#c9a832] shrink-0">
-            GP
-          </div>
+          <img
+            src="/images/Gaurav-pandey-casa-de-bello.webp"
+            alt="Gaurav Pandey — Director of Casa De Bello Pvt Ltd"
+            className="w-16 h-16 rounded-full object-cover border-2 border-[#c9a832] shrink-0 shadow-sm"
+            width="64"
+            height="64"
+            loading="lazy"
+          />
           <div>
             <div className="text-xs font-semibold text-[#c9a832] uppercase tracking-wider">Author & Verified Host</div>
             <h4 className="text-base font-bold text-[#1B3322]">Gaurav Pandey — Director of Casa De Bello Pvt Ltd</h4>

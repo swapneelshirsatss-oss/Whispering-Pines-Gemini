@@ -144,9 +144,14 @@ export default function BlogCarousel() {
 
                     <div className="pt-4 border-t border-gray-100 flex items-center justify-between mt-auto">
                       <div className="flex items-center gap-2">
-                        <div className="w-7 h-7 rounded-full bg-[#1B3322] text-[#c9a832] flex items-center justify-center font-bold text-[10px] border border-[#c9a832]">
-                          GP
-                        </div>
+                        <img
+                          src="/images/Gaurav-pandey-casa-de-bello.webp"
+                          alt="Gaurav Pandey"
+                          className="w-7 h-7 rounded-full object-cover border border-[#c9a832] shrink-0"
+                          width="28"
+                          height="28"
+                          loading="lazy"
+                        />
                         <span className="text-xs font-semibold text-[#1B3322]">Gaurav Pandey</span>
                       </div>
 

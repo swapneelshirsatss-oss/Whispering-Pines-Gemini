@@ -66,6 +66,7 @@ const blogPostingSchema = {
     "@type": "Person",
     "name": "Gaurav Pandey",
     "jobTitle": "Director of Casa De Bello Pvt Ltd",
+    "image": "https://whisperingpinesresort.in/images/Gaurav-pandey-casa-de-bello.webp",
     "description": "Traveller Host, Hospitality Entrepreneur, and Director at Casa De Bello Pvt Ltd.",
     "url": "https://casadebello.com/",
     "sameAs": ["https://casadebello.com/"]
@@ -301,11 +302,16 @@ const jsonLdSchemas = [
     {/* Main Article Content Container */}
     <main class="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-10">
 
-      {/* Author EEAT Banner */}
+      <!-- Author EEAT Banner -->
       <div class="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm flex flex-col md:flex-row items-center gap-5">
-        <div class="w-16 h-16 rounded-full bg-[#1B3322] text-[#c9a832] flex items-center justify-center text-xl font-bold border-2 border-[#c9a832] shrink-0 shadow-inner">
-          GP
-        </div>
+        <img
+          src="/images/Gaurav-pandey-casa-de-bello.webp"
+          alt="Gaurav Pandey — Managing Director of Casa De Bello Pvt Ltd and Verified Host at Whispering Pines Resort"
+          class="w-16 h-16 rounded-full object-cover border-2 border-[#c9a832] shrink-0 shadow-md"
+          width="64"
+          height="64"
+          loading="lazy"
+        />
         <div class="space-y-1 text-center md:text-left">
           <div class="text-xs font-bold text-[#c9a832] uppercase tracking-wider">Author & Verified Property Host</div>
           <h2 class="text-base font-bold text-[#1B3322]">Gaurav Pandey — Managing Director, Casa De Bello Pvt Ltd</h2>

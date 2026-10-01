@@ -39,6 +39,7 @@ const schemaData = {
       "@type": "Person",
       name: "Gaurav Pandey",
       jobTitle: "Director, Casa De Bello Pvt Ltd",
+      image: "https://whisperingpinesresort.in/images/Gaurav-pandey-casa-de-bello.webp",
     },
   })),
 };
@@ -144,9 +145,14 @@ const remainingPosts = BLOG_POSTS.slice(1);
 
               <div class="pt-6 mt-6 border-t border-gray-100 flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                  <div class="w-9 h-9 rounded-full bg-[#1B3322] text-[#c9a832] flex items-center justify-center font-bold text-xs border border-[#c9a832]">
-                    GP
-                  </div>
+                  <img
+                    src="/images/Gaurav-pandey-casa-de-bello.webp"
+                    alt="Gaurav Pandey"
+                    class="w-9 h-9 rounded-full object-cover border border-[#c9a832] shrink-0"
+                    width="36"
+                    height="36"
+                    loading="lazy"
+                  />
                   <div class="text-xs">
                     <p class="font-bold text-[#1B3322]">Gaurav Pandey</p>
                     <p class="text-gray-500 font-light">Casa De Bello Host</p>
