@@ -50,11 +50,7 @@ export default function Navbar({ children }: NavbarProps) {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-[#1B3322]/98 backdrop-blur-md shadow-lg border-b border-[#FAF9F6]/10 py-3"
-          : "bg-[#1B3322]/95 backdrop-blur-md shadow-md border-b border-[#FAF9F6]/10 py-3.5"
-      }`}
+      className="fixed top-0 left-0 w-full z-50 bg-[#1B3322]/98 backdrop-blur-md shadow-md border-b border-[#FAF9F6]/10 py-3.5"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -90,7 +86,7 @@ export default function Navbar({ children }: NavbarProps) {
                     : "text-[#FAF9F6]/90 hover:text-[#c9a832]"
                 }`}
               >
-                {link.highlight && <span class="w-1.5 h-1.5 rounded-full bg-[#c9a832] animate-pulse"></span>}
+                {link.highlight && <span className="w-1.5 h-1.5 rounded-full bg-[#c9a832]"></span>}
                 {link.name}
               </a>
             ))}

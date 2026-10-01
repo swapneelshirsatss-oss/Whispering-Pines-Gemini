@@ -45,7 +45,7 @@ export default function AmenitiesList({
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-mono tracking-widest text-[#c9a832] uppercase block mb-2 animate-pulse">
+          <span className="text-xs font-mono tracking-widest text-[#c9a832] uppercase block mb-2">
             Bespoke Guest Comforts
           </span>
           {isH1 ? (

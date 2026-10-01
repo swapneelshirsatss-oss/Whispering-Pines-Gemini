@@ -43,7 +43,7 @@ export default function AboutSection({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Intro Grid */}
         <div 
-          className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center animate-fade-in"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
         >
           {/* Narrative - Left */}
           <div className="lg:col-span-7 space-y-6">

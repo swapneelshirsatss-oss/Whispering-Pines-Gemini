@@ -255,7 +255,7 @@ const jsonLdSchemas = [
     
     {/* Hero Banner Header */}
     <header class="relative bg-[#1B3322] text-white pt-28 pb-16 px-4 sm:px-6 lg:px-8 border-b border-[#c9a832]/20 overflow-hidden">
-      <div class="absolute inset-0 z-0 opacity-25">
+      <div class="absolute inset-0 z-0 opacity-20">
         <img 
           src={ogImageUrl}
           alt={ogAltText}
@@ -265,15 +265,19 @@ const jsonLdSchemas = [
           height="800"
         />
       </div>
+      {/* Multi-layered dark forest scrims for supreme typography legibility */}
+      <div class="absolute inset-0 bg-gradient-to-t from-[#1B3322] via-[#1B3322]/75 to-[#1B3322]/85 pointer-events-none" />
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1B3322]/80 via-[#1B3322]/50 to-[#1B3322]/90 pointer-events-none" />
+
       <div class="relative z-10 max-w-4xl mx-auto text-center space-y-4">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#c9a832]/10 border border-[#c9a832]/30 text-[#c9a832] text-xs font-mono uppercase tracking-widest">
-          <span class="w-2 h-2 rounded-full bg-[#c9a832] animate-pulse"></span>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1B3322]/90 border border-[#c9a832]/40 text-[#c9a832] text-xs font-mono uppercase tracking-widest shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-[#c9a832]"></span>
           Official 2026 Transition Guide
         </div>
-        <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold font-display tracking-tight text-white leading-tight">
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold font-display tracking-tight text-white leading-tight drop-shadow-[0_2px_14px_rgba(0,0,0,0.7)]">
           Clarks Exotica Resort Ramgarh Mukteshwar — Now Whispering Pines by Casa De Bello
         </h1>
-        <p class="text-base sm:text-lg text-gray-200 font-light max-w-2xl mx-auto leading-relaxed">
+        <p class="text-base sm:text-lg text-gray-200 font-light max-w-2xl mx-auto leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
           Same iconic address on the Bhowali-Ramgarh-Mukteshwar Road. Fully upgraded with a brand-new swimming pool, 3-BHK private villa, 150 Mbps fiber Wi-Fi, and 180° Nanda Devi snow views.
         </p>
         
