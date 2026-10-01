@@ -1,0 +1,925 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CorporateInquiryForm from '../components/CorporateInquiryForm';
+import { 
+  Building2, 
+  MapPin, 
+  Phone, 
+  Mail,
+  Users, 
+  Calendar, 
+  Mountain, 
+  CheckCircle2, 
+  ArrowUpRight, 
+  ChevronDown, 
+  Clock, 
+  ShieldCheck, 
+  Wifi, 
+  Utensils, 
+  Car, 
+  Briefcase,
+  Flame, 
+  Presentation,
+  Compass, 
+  Star,
+  Sparkles,
+  Award,
+  Layers,
+  FileText,
+  Trees
+} from 'lucide-react';
+import { RESORT_CONTACT } from '../data';
+
+// Value Pillars Data (Section 2)
+const VALUE_PILLARS = [
+  {
+    num: "01",
+    title: "100% Confidentiality & Private Buyout",
+    description: "Reserve all 25 rooms, the private villa, lawns, and dining halls exclusively for your team. Zero outside tourists or distractions.",
+    icon: ShieldCheck
+  },
+  {
+    num: "02",
+    title: "Enterprise 150 Mbps Fiber Wi-Fi",
+    description: "High-speed, low-latency connectivity across indoor and outdoor spaces for hybrid meetings, global town halls, and remote sprints.",
+    icon: Wifi
+  },
+  {
+    num: "03",
+    title: "180° Himalayan Peak Backdrop",
+    description: "Fresh mountain air and unobstructed views of Nanda Devi and Trishul stimulate clarity, reduce burnout, and foster creative problem-solving.",
+    icon: Mountain
+  },
+  {
+    num: "04",
+    title: "Standalone Leadership Villa",
+    description: "A 3-bedroom Alpine Villa with a stone fireplace living room functioning as an executive boardroom and VIP accommodation for founders and CXOs.",
+    icon: Building2
+  },
+  {
+    num: "05",
+    title: "Versatile Work & Breakout Settings",
+    description: "Smoothly transition from indoor AV-equipped conference sessions to open-air lawn town halls and poolside brainstorming circles.",
+    icon: Layers
+  },
+  {
+    num: "06",
+    title: "Transparent Corporate Billing",
+    description: "Comprehensive package inclusions, corporate GST input-credit invoicing, and dedicated on-ground management.",
+    icon: FileText
+  }
+];
+
+// Meeting Spaces & Capacities (Section 3)
+const WORKSPACES = [
+  {
+    id: "conference-lounge",
+    name: "Pine View Conference Lounge",
+    setting: "Heated Indoor Hall",
+    capacity: "50–70 Delegates",
+    bestFor: "Annual Reviews, Keynote Presentations & Strategy Workshops",
+    description: "Fully acoustic-balanced indoor venue equipped with high-definition projection, wireless collar mics, modular seating, and natural pine vistas.",
+    image: "/images/banquest-hall-in-resort.avif",
+    alt: "Pine View Conference Lounge meeting and seminar setup at Whispering Pines Resort"
+  },
+  {
+    id: "peak-lawn",
+    name: "Panoramic Nanda Devi Lawn",
+    setting: "2,200 Sq. Ft. Peak Lawn",
+    capacity: "70–100 Delegates",
+    bestFor: "All-Hands Town Halls, Morning Mindfulness, Evening Networking Bonfires",
+    description: "Manicured open-air ridge lawn framed by the snow-capped Himalayan peaks of Nanda Devi and Trishul. Perfect for grand all-hands gatherings.",
+    image: "/images/destination-wedding/weddings-uttarkahnd-in-himalaya.avif",
+    alt: "Panoramic Nanda Devi Lawn outdoor corporate gathering space at Whispering Pines Resort"
+  },
+  {
+    id: "villa-boardroom",
+    name: "The Alpine Villa Boardroom",
+    setting: "Stone Fireplace Living Suite",
+    capacity: "12–18 Delegates",
+    bestFor: "CXO Roundtables, Board of Directors Meetings & Founder Huddles",
+    description: "Exclusive residential boardroom inside the 3-BHK Alpine Villa. Features private lounge seating, natural wood interiors, and executive privacy.",
+    image: "/images/villa-for-families-in-mukteshwar.avif",
+    alt: "The Alpine Villa Boardroom executive living suite with stone fireplace"
+  },
+  {
+    id: "poolside-deck",
+    name: "Pine Poolside Deck",
+    setting: "Sunlit Deck in Pine Forest",
+    capacity: "30–50 Delegates",
+    bestFor: "Product Design Breakouts, Sundowner Cocktails & Team Icebreakers",
+    description: "Relaxed open deck sheltered by deodar and pine trees. Ideal for informal design sprints, agile standups, and evening networking receptions.",
+    image: "/images/best-resort-in-ramgarh.avif",
+    alt: "Pine Poolside Deck for corporate breakout sessions and evening sundowners"
+  }
+];
+
+// Curated MICE & Team-Building Experiences (Section 4)
+const EXPERIENCES = [
+  {
+    num: "01",
+    title: "Open-Air Strategy Sprints",
+    description: "Conduct group discussions in fresh pine air with whiteboards and mobile presentation setups.",
+    icon: Presentation,
+    tag: "FOCUS & STRATEGY"
+  },
+  {
+    num: "02",
+    title: "Lawn Team Challenges",
+    description: "Spacious lawns for outbound training, trust activities, and structured team-building exercises.",
+    icon: Users,
+    tag: "TEAM DYNAMICS"
+  },
+  {
+    num: "03",
+    title: "Guided Pine Forest Treks",
+    description: "Rejuvenating morning guided walks through oak and pine trails to reset mental clarity.",
+    icon: Trees,
+    tag: "ACTIVE WELLNESS"
+  },
+  {
+    num: "04",
+    title: "Evening Bonfire & Live BBQ",
+    description: "Starlit networking around fire pits with live grills, acoustic music, and unpolluted night skies.",
+    icon: Flame,
+    tag: "NETWORKING & CAMARADERIE"
+  },
+  {
+    num: "05",
+    title: "Spiritual & Cultural Outings",
+    description: "Short team visits to Neem Karoli Baba Ashram at Kainchi Dham (45 mins) or Mukteshwar Dham (25 km).",
+    icon: Compass,
+    tag: "KUMAON EXCURSIONS"
+  }
+];
+
+// Dedicated Support for HR & Event Leads (Section 5)
+const HR_SUPPORT = [
+  {
+    num: "01",
+    title: "Single Point of Contact",
+    description: "Dedicated Casa De Bello corporate concierge coordinating timelines, AV checks, and guest needs.",
+    icon: Briefcase
+  },
+  {
+    num: "02",
+    title: "Complete AV & Tech Provision",
+    description: "High-definition projection screens, wireless collar/handheld mics, flip charts, and power backup.",
+    icon: Sparkles
+  },
+  {
+    num: "03",
+    title: "Flexible All-Day Dining",
+    description: "Continuous tea/coffee/snack stations during work hours, wholesome multi-cuisine buffets, and late-night snacks.",
+    icon: Utensils
+  },
+  {
+    num: "04",
+    title: "Station & Airport Transit",
+    description: "Managed private transfers from Kathgodam Station (70 km / 2.5 hrs) and Pantnagar Airport (105 km / 3.5 hrs).",
+    icon: Car
+  },
+  {
+    num: "05",
+    title: "Welcome Hamper Placement",
+    description: "In-room delivery of customized corporate welcome notes, schedules, and gift kits prior to arrival.",
+    icon: Award
+  }
+];
+
+// Sample 2N/3D Itinerary (Section 6)
+const ITINERARY_DAYS = [
+  {
+    day: "Day 01",
+    theme: "Arrival & Alignment",
+    highlight: "Welcome drinks, executive keynote & starlit sundowner BBQ",
+    events: [
+      { time: "12:00 PM", title: "Arrivals & Check-in", desc: "Welcome herbal drinks, luggage room delivery, and executive hamper check-in." },
+      { time: "01:30 PM", title: "Welcome Luncheon", desc: "Multi-cuisine buffet spread at Pine View Restaurant with mountain view seating." },
+      { time: "03:30 PM", title: "Opening Keynote & Strategy Session", desc: "AV-equipped conference session in Pine View Lounge or Nanda Devi Lawn." },
+      { time: "07:30 PM", title: "Sundowner BBQ & Fire Pit Networking", desc: "Live barbecue grills, acoustic mountain music, and team conversations under starry skies." }
+    ]
+  },
+  {
+    day: "Day 02",
+    theme: "Deep Work & Synergy",
+    highlight: "Morning forest walks, intensive sprints & annual gala dinner",
+    events: [
+      { time: "07:30 AM", title: "Guided Pine Forest Walk", desc: "Morning nature trail through deodar forests to invigorate focus and alertness." },
+      { time: "09:00 AM", title: "Energizing Breakfast Buffet", desc: "Pahadi fresh fruit bar, continental breakfast, and specialty coffee bar." },
+      { time: "10:00 AM", title: "Core Workshops & Breakout Sprints", desc: "Split team sprints across the Alpine Boardroom and poolside breakout circles." },
+      { time: "03:00 PM", title: "Team-Building Lawn Challenges", desc: "Structured outdoor collaboration challenges and trust activities on the peak lawn." },
+      { time: "07:30 PM", title: "Annual Awards & Gala Dinner", desc: "Curated celebration banquet, recognitions, and music at the conference hall." }
+    ]
+  },
+  {
+    day: "Day 03",
+    theme: "Reflect & Depart",
+    highlight: "Closing town hall, panoramic group photograph & scenic departures",
+    events: [
+      { time: "08:30 AM", title: "Farewell Breakfast", desc: "Leisurely family-style breakfast buffet with hot mountain breakfast favorites." },
+      { time: "10:00 AM", title: "Closing Town Hall & Action Items", desc: "Final alignment huddle, team takeaways, and roadmaps for the upcoming quarters." },
+      { time: "12:00 PM", title: "Group Photo facing Nanda Devi & Departure", desc: "Executive team photo against snow peaks and managed private coach transit to station/airport." }
+    ]
+  }
+];
+
+// Rich JSON-LD Structured Data
+const corporateSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Hotel", "EventVenue"],
+      "@id": "https://whisperingpinesresort.in/corporate-offsite-resort-mukteshwar/#venue",
+      "name": "Whispering Pines Resort by Casa De Bello - Executive Corporate Retreats Mukteshwar",
+      "url": "https://whisperingpinesresort.in/corporate-offsite-resort-mukteshwar/",
+      "image": "https://whisperingpinesresort.in/images/banquest-hall-in-resort.avif",
+      "telephone": "+917505029696",
+      "priceRange": "₹₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road",
+        "addressLocality": "Mukteshwar",
+        "addressRegion": "Nainital, Uttarakhand",
+        "postalCode": "263137",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 29.4262052,
+        "longitude": 79.5506314
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "388",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "maximumAttendeeCapacity": 70,
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "100% Confidential Estate Buyout for Up to 70 Delegates", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "150 Mbps Enterprise Fiber Wi-Fi", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "2,200 Sq. Ft. Peak-Facing Wedding & Conference Lawn", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Dedicated Heated Indoor Conference Lounge", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Standalone 3-BHK Alpine Executive Leadership Villa", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Corporate GST Input-Credit Billing", "value": true }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Corporate Offsite & MICE Retreat Packages",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Full Estate Corporate Buyout",
+              "description": "Exclusive booking of all 25 luxury rooms and private villa for complete company privacy up to 70 delegates."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "MICE Conference & AV Packages",
+              "description": "High-definition projection screens, wireless mics, continuous work-hour snack bars, and dedicated concierge."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://whisperingpinesresort.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://whisperingpinesresort.in/resort-services-ramgarh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Corporate Offsite Resort Mukteshwar",
+          "item": "https://whisperingpinesresort.in/corporate-offsite-resort-mukteshwar/"
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Executive Corporate Retreats in Mukteshwar | Whispering Pines Resort"
+  description="Plan executive corporate offsites and MICE leadership retreats at Whispering Pines Resort Mukteshwar. 150 Mbps fiber Wi-Fi, 100% confidential buyout up to 70 delegates, and 180° Nanda Devi snow peaks."
+  canonical="/corporate-offsite-resort-mukteshwar/"
+  image="/images/banquest-hall-in-resort.avif"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(corporateSchema)} />
+  </Fragment>
+
+  <div class="relative w-full bg-[#FAF9F6] text-[#2C3531] overflow-x-hidden selection:bg-[#C9A832] selection:text-[#1B3322]">
+    
+    {/* ========================================================================= */}
+    {/* [SECTION 1: HERO HEADER] */}
+    {/* ========================================================================= */}
+    <header class="relative min-h-[90vh] flex items-center justify-center bg-[#1B3322] text-[#FAF9F6] pt-16 pb-20 sm:pb-24 overflow-hidden border-b border-[#C9A832]/20">
+      {/* Background Imagery with Subtle Vignette */}
+      <div class="absolute inset-0 z-0">
+        <img
+          src="/images/Whispering-pines-balcony-view-nanital.avif"
+          alt="180 degree panoramic Himalayan snow peak views from Whispering Pines Resort for corporate retreats"
+          class="w-full h-full object-cover object-center filter brightness-[0.42] scale-105 transition-transform duration-1000 ease-out"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1B3322] via-[#1B3322]/65 to-[#1B3322]/80" />
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-[#1B3322]/40 to-[#1B3322]/90 pointer-events-none" />
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Eyebrow Badge */}
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#FAF9F6]/10 backdrop-blur-md border border-[#C9A832]/35 mb-8">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#C9A832] animate-pulse"></span>
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-[#C9A832] font-semibold">
+            MICE · LEADERSHIP RETREATS · TEAM OFFSITES
+          </span>
+        </div>
+
+        {/* Main Title (H1) */}
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-normal text-[#FAF9F6] tracking-tight leading-[1.1] mb-6 max-w-4xl mx-auto text-balance">
+          Executive Corporate Retreats in Mukteshwar
+        </h1>
+
+        {/* Editorial Gold Hairline Rule */}
+        <div class="w-20 h-[1.5px] bg-[#C9A832] mx-auto mb-6 opacity-80" />
+
+        {/* Sub-headline */}
+        <p class="font-sans text-base sm:text-lg lg:text-xl text-[#FAF9F6]/85 font-light leading-relaxed max-w-3xl mx-auto mb-10 text-pretty">
+          Elevate strategic thinking, team synergy, and leadership alignment at 1,780 metres. Set amidst peaceful pine forests with 180° panoramic views of Nanda Devi and Trishul snow peaks, Whispering Pines Resort offers boutique 4-star hospitality, dedicated conference spaces, 150 Mbps enterprise fiber Wi-Fi, and exclusive estate buyouts for up to 70 delegates.
+        </p>
+
+        {/* CTA Buttons */}
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mb-14">
+          {/* Primary CTA: WhatsApp */}
+          <a
+            href="https://wa.me/917505029696?text=Hi%20Casa%20De%20Bello!%20I%20am%20inquiring%20about%20an%20Executive%20Corporate%20Offsite%20%2F%20MICE%20Retreat%20at%20Whispering%20Pines%20Resort."
+            target="_blank"
+            rel="noopener noreferrer"
+            onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'generate_lead', event_category: 'corporate', event_label: 'hero_whatsapp_click' });"
+            class="w-full sm:w-auto btn-shimmer inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-mono text-xs uppercase tracking-[0.16em] font-semibold transition-all duration-300 shadow-luxury-md hover:scale-[1.02]"
+          >
+            <Phone className="w-4 h-4 fill-current shrink-0" />
+            <span>Inquire on WhatsApp (+91-7505029696)</span>
+          </a>
+
+          {/* Secondary CTA: Scroll to Lead Form */}
+          <a
+            href="#corporate-inquiry"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-[#FAF9F6]/10 hover:bg-[#FAF9F6]/20 text-[#FAF9F6] border border-[#FAF9F6]/25 font-mono text-xs uppercase tracking-[0.16em] font-semibold transition-all duration-300 backdrop-blur-sm"
+          >
+            <span>Download Offsite Proposal</span>
+            <ArrowUpRight className="w-4 h-4 text-[#C9A832]" />
+          </a>
+        </div>
+
+        {/* Trust Indicators Bar (4 Key Metrics) */}
+        <div class="border-t border-[#FAF9F6]/15 pt-8 mt-4">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-left sm:text-center">
+            {/* Metric 1 */}
+            <div class="space-y-1">
+              <span class="font-mono text-xl sm:text-2xl font-normal text-[#C9A832] block tnum">
+                100% Private
+              </span>
+              <p class="font-sans text-xs text-[#FAF9F6]/80 leading-snug">
+                Confidential Estate Buyout (Up to 70 Delegates)
+              </p>
+            </div>
+
+            {/* Metric 2 */}
+            <div class="space-y-1 sm:border-l sm:border-[#FAF9F6]/15 sm:pl-4">
+              <span class="font-mono text-xl sm:text-2xl font-normal text-[#C9A832] block tnum">
+                150 Mbps
+              </span>
+              <p class="font-sans text-xs text-[#FAF9F6]/80 leading-snug">
+                Enterprise Fiber Wi-Fi Across All Areas
+              </p>
+            </div>
+
+            {/* Metric 3 */}
+            <div class="space-y-1 sm:border-l sm:border-[#FAF9F6]/15 sm:pl-4">
+              <span class="font-mono text-xl sm:text-2xl font-normal text-[#C9A832] block tnum">
+                2,200 Sq. Ft.
+              </span>
+              <p class="font-sans text-xs text-[#FAF9F6]/80 leading-snug">
+                Panoramic Himalayan Peak Lawn
+              </p>
+            </div>
+
+            {/* Metric 4 */}
+            <div class="space-y-1 sm:border-l sm:border-[#FAF9F6]/15 sm:pl-4">
+              <div class="flex items-center sm:justify-center gap-1 text-[#C9A832]">
+                <Star className="w-4 h-4 fill-current text-[#C9A832]" />
+                <span class="font-mono text-xl sm:text-2xl font-normal text-[#C9A832] tnum">
+                  4.6 / 5
+                </span>
+              </div>
+              <p class="font-sans text-xs text-[#FAF9F6]/80 leading-snug">
+                Rated on Google (388+ Verified Reviews)
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    {/* ========================================================================= */}
+    {/* [SECTION 2: WHY CHOOSE WHISPERING PINES?] */}
+    {/* ========================================================================= */}
+    <section class="py-24 sm:py-32 bg-[#FAF9F6] border-b border-[#1B3322]/10" id="why-choose-us">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <div class="max-w-3xl mb-16 sm:mb-20">
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-[#C27847] font-semibold block mb-3">
+            PURPOSE-BUILT RETREATS
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-normal text-[#1B3322] leading-tight text-balance mb-4">
+            An Inspiring Mountain Setting for Strategic Focus
+          </h2>
+          <div class="w-16 h-[1.5px] bg-[#C9A832] mb-6" />
+          <p class="font-sans text-base sm:text-lg text-[#2C3531]/80 font-light leading-relaxed">
+            Break away from standard hotel ballrooms. Whispering Pines combines peaceful Himalayan isolation with executive infrastructure, giving leadership teams the headspace to align, innovate, and recharge.
+          </p>
+        </div>
+
+        {/* 6 Value Pillars (3x2 Grid) */}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {VALUE_PILLARS.map((pillar) => {
+            const Icon = pillar.icon;
+            return (
+              <div class="bg-white rounded-2xl border border-[#E8E5DF] p-7 sm:p-8 flex flex-col justify-between hover:border-[#1B3322]/30 shadow-luxury-sm hover:shadow-luxury-md transition-all duration-300 group hover:-translate-y-1">
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between">
+                    <div class="w-10 h-10 rounded-full bg-[#1B3322]/5 flex items-center justify-center text-[#1B3322] group-hover:bg-[#1B3322] group-hover:text-[#FAF9F6] transition-colors">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <span class="font-mono text-xs text-[#C9A832] font-semibold">
+                      {pillar.num}
+                    </span>
+                  </div>
+
+                  <h3 class="font-display text-xl sm:text-2xl font-normal text-[#1B3322] leading-snug">
+                    {pillar.title}
+                  </h3>
+
+                  <p class="font-sans text-xs sm:text-sm text-[#2C3531]/80 font-light leading-relaxed">
+                    {pillar.description}
+                  </p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-[#1B3322]/10 flex items-center gap-2 text-[11px] font-mono text-[#1B3322]/70">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#C9A832]"></span>
+                  <span>Casa De Bello Executive Standard</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+      </div>
+    </section>
+
+    {/* ========================================================================= */}
+    {/* [SECTION 3: MEETING SPACES & CAPACITIES] */}
+    {/* ========================================================================= */}
+    <section class="py-24 sm:py-32 bg-[#FBF9F5] border-b border-[#1B3322]/10" id="workspaces">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-[#C27847] font-semibold block mb-3">
+            WORKSPACES
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-normal text-[#1B3322] leading-tight text-balance">
+            Venues Configured for Productive Sessions
+          </h2>
+          <div class="w-16 h-[1.5px] bg-[#C9A832] mx-auto mt-4 mb-4" />
+          <p class="font-sans text-sm sm:text-base text-[#2C3531]/75 font-light leading-relaxed">
+            From climate-controlled presentation suites and executive villa boardrooms to high-altitude lawn town halls, discover agile workspaces built for high-performance teams.
+          </p>
+        </div>
+
+        {/* 4 Clean Cards */}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+          {WORKSPACES.map((space) => (
+            <article class="bg-white rounded-2xl border border-[#E8E5DF] overflow-hidden shadow-luxury-sm hover:shadow-luxury-md transition-all duration-300 flex flex-col group">
+              {/* Space Real Image Header */}
+              <div class="relative h-64 sm:h-72 overflow-hidden bg-[#1B3322]/5">
+                <img
+                  src={space.image}
+                  alt={space.alt}
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent opacity-70" />
+                
+                {/* Setting Tag Badge */}
+                <div class="absolute top-4 left-4">
+                  <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-[#1B3322] font-semibold border border-white/40 shadow-xs">
+                    {space.setting}
+                  </span>
+                </div>
+
+                {/* Capacity Badge */}
+                <div class="absolute bottom-4 right-4">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1B3322]/90 backdrop-blur-md text-[11px] font-mono text-[#FAF9F6] font-medium border border-white/20">
+                    <Users className="w-3.5 h-3.5 text-[#C9A832]" />
+                    <span>{space.capacity}</span>
+                  </span>
+                </div>
+              </div>
+
+              {/* Space Details */}
+              <div class="p-6 sm:p-8 flex-grow flex flex-col justify-between space-y-5">
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between">
+                    <span class="font-mono text-xs uppercase tracking-widest text-[#C27847] font-semibold">
+                      EXECUTIVE WORKSPACE
+                    </span>
+                    <span class="text-xs font-mono text-[#2C3531]/50 tnum">
+                      Cap: {space.capacity}
+                    </span>
+                  </div>
+
+                  <h3 class="font-display text-2xl font-normal text-[#1B3322] group-hover:text-[#2A4832] transition-colors">
+                    {space.name}
+                  </h3>
+
+                  <div class="p-3 rounded-xl bg-[#FAF9F6] border border-[#1B3322]/10 text-xs font-mono text-[#1B3322]">
+                    <strong class="text-[#C27847]">Best For:</strong> {space.bestFor}
+                  </div>
+
+                  <p class="font-sans text-sm text-[#2C3531]/80 font-light leading-relaxed">
+                    {space.description}
+                  </p>
+                </div>
+
+                <div class="pt-4 border-t border-[#1B3322]/10 flex items-center justify-between">
+                  <span class="text-xs font-mono text-[#1B3322] font-medium flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#C9A832]"></span>
+                    AV & Fiber Wi-Fi Ready
+                  </span>
+                  <a
+                    href="#corporate-inquiry"
+                    class="text-xs font-mono uppercase tracking-wider text-[#1B3322] hover:text-[#C27847] font-semibold inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform"
+                  >
+                    <span>Reserve Space</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+    {/* ========================================================================= */}
+    {/* [SECTION 4: CURATED MICE & TEAM-BUILDING EXPERIENCES] */}
+    {/* ========================================================================= */}
+    <section class="py-24 sm:py-32 bg-[#FAF9F6] border-b border-[#1B3322]/10" id="team-building">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <div class="max-w-3xl mb-16 sm:mb-20">
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-[#C27847] font-semibold block mb-3">
+            TEAM SYNERGY
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-normal text-[#1B3322] leading-tight text-balance mb-4">
+            Reconnect, Recharge & Build Together
+          </h2>
+          <div class="w-16 h-[1.5px] bg-[#C9A832] mb-6" />
+          <p class="font-sans text-base sm:text-lg text-[#2C3531]/80 font-light leading-relaxed">
+            Modern high-performance teams bond through meaningful shared experiences. From morning nature immersion to fire pit networking, explore activities tailored to your company's rhythm.
+          </p>
+        </div>
+
+        {/* 5 Curated Features in a Structured Layout */}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {EXPERIENCES.map((exp) => {
+            const Icon = exp.icon;
+            return (
+              <div class="bg-white rounded-2xl border border-[#E8E5DF] p-7 sm:p-8 flex flex-col justify-between hover:border-[#1B3322]/30 shadow-luxury-sm hover:shadow-luxury-md transition-all duration-300 group hover:-translate-y-1">
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#FAF9F6] text-[10px] font-mono uppercase tracking-wider text-[#C27847] font-semibold border border-[#1B3322]/10">
+                      {exp.tag}
+                    </span>
+                    <span class="font-mono text-xs text-[#C9A832] font-semibold">
+                      {exp.num}
+                    </span>
+                  </div>
+
+                  <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-[#1B3322]/5 flex items-center justify-center text-[#1B3322] group-hover:bg-[#1B3322] group-hover:text-[#FAF9F6] transition-colors shrink-0">
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <h3 class="font-display text-lg sm:text-xl font-normal text-[#1B3322] leading-snug">
+                      {exp.title}
+                    </h3>
+                  </div>
+
+                  <p class="font-sans text-xs sm:text-sm text-[#2C3531]/80 font-light leading-relaxed">
+                    {exp.description}
+                  </p>
+                </div>
+
+                <div class="pt-5 mt-4 border-t border-[#1B3322]/10 flex items-center justify-between text-xs font-mono text-[#1B3322]">
+                  <span class="text-[#C27847] font-medium">Curated on-ground</span>
+                  <a
+                    href="#corporate-inquiry"
+                    class="hover:text-[#C27847] inline-flex items-center gap-1"
+                  >
+                    <span>Add to Itinerary</span>
+                    <ArrowUpRight className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+      </div>
+    </section>
+
+    {/* ========================================================================= */}
+    {/* [SECTION 5: DEDICATED SUPPORT FOR HR & EVENT LEADS] */}
+    {/* ========================================================================= */}
+    <section class="py-24 sm:py-32 bg-[#FBF9F5] border-b border-[#1B3322]/10" id="hr-support">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <div class="max-w-3xl mb-16 sm:mb-20">
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-[#C27847] font-semibold block mb-3">
+            SEAMLESS COORDINATION
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-normal text-[#1B3322] leading-tight text-balance mb-4">
+            Effortless Planning for Event Organizers
+          </h2>
+          <div class="w-16 h-[1.5px] bg-[#C9A832] mb-6" />
+          <p class="font-sans text-base sm:text-lg text-[#2C3531]/80 font-light leading-relaxed">
+            We handle the heavy operational lifting so HR leaders, Executive Assistants, and founders can participate fully in sessions rather than troubleshooting logistics.
+          </p>
+        </div>
+
+        {/* Minimalist Editorial Index Table */}
+        <div class="divide-y divide-[#1B3322]/10 border-y border-[#1B3322]/10">
+          {HR_SUPPORT.map((item) => {
+            const Icon = item.icon;
+            return (
+              <div class="py-7 sm:py-8 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start hover:bg-white/80 transition-colors group px-2 sm:px-4 rounded-xl">
+                {/* Number / Badge */}
+                <div class="md:col-span-2 flex items-center gap-3">
+                  <span class="font-mono text-xs uppercase tracking-widest text-[#C27847] font-semibold">
+                    {item.num} / HR DESK
+                  </span>
+                </div>
+
+                {/* Title & Icon */}
+                <div class="md:col-span-4 flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-full bg-[#1B3322]/5 flex items-center justify-center text-[#1B3322] shrink-0 group-hover:bg-[#1B3322] group-hover:text-[#FAF9F6] transition-colors">
+                    <Icon className="w-4 h-4" />
+                  </div>
+                  <h3 class="font-display text-lg sm:text-xl font-normal text-[#1B3322] leading-snug">
+                    {item.title}
+                  </h3>
+                </div>
+
+                {/* Narrative Description */}
+                <div class="md:col-span-6">
+                  <p class="font-sans text-sm sm:text-base text-[#2C3531]/80 font-light leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Corporate Trust Banner */}
+        <div class="mt-14 p-6 sm:p-8 rounded-2xl bg-white border border-[#E8E5DF] shadow-luxury-sm flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div class="space-y-1 text-center sm:text-left">
+            <span class="font-mono text-xs uppercase tracking-wider text-[#C27847] font-semibold block">
+              CORPORATE AUDIT COMPLIANCE
+            </span>
+            <p class="font-display text-xl sm:text-2xl text-[#1B3322]">
+              GST Input Credit & Direct Company Invoicing
+            </p>
+            <p class="font-sans text-xs sm:text-sm text-[#2C3531]/75">
+              Transparent itemized quotation, corporate vendor registration, and purchase order support.
+            </p>
+          </div>
+          <div class="shrink-0">
+            <a
+              href="mailto:booking@whisperingpinesresort.in?subject=Corporate%20Vendor%20Onboarding%20%26%20Offsite%20Proposal"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#1B3322] hover:bg-[#2A4832] text-[#FAF9F6] font-mono text-xs uppercase tracking-wider font-semibold transition-all shadow-sm"
+            >
+              <Mail className="w-4 h-4 text-[#C9A832]" />
+              <span>Email Corporate Desk</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {/* ========================================================================= */}
+    {/* [SECTION 6: SAMPLE 2N/3D RETREAT ITINERARY] */}
+    {/* ========================================================================= */}
+    <section class="py-24 sm:py-32 bg-[#1B3322] text-[#FAF9F6] border-b border-[#C9A832]/20 relative overflow-hidden" id="itinerary">
+      {/* Ambient Glow */}
+      <div class="absolute top-0 right-0 w-96 h-96 bg-[#C9A832]/5 blur-3xl pointer-events-none" />
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Section Header */}
+        <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-[#C9A832] font-semibold block mb-3">
+            CURATED TIMELINE
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-normal text-[#FAF9F6] leading-tight text-balance">
+            Sample 3-Day Executive Retreat Flow
+          </h2>
+          <div class="w-16 h-[1.5px] bg-[#C9A832] mx-auto mt-4 mb-4 opacity-80" />
+          <p class="font-sans text-sm sm:text-base text-[#FAF9F6]/80 font-light leading-relaxed">
+            A balanced 2-night, 3-day itinerary structured for deep strategic focus, high-impact collaboration, and unhurried Himalayan relaxation.
+          </p>
+        </div>
+
+        {/* 3-Day Timeline Cards */}
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {ITINERARY_DAYS.map((dayPlan) => (
+            <div class="bg-[#FAF9F6]/5 rounded-2xl border border-[#FAF9F6]/10 p-6 sm:p-8 flex flex-col justify-between hover:border-[#C9A832]/40 transition-colors backdrop-blur-sm group">
+              <div class="space-y-6">
+                <div class="flex items-center justify-between pb-4 border-b border-[#FAF9F6]/15">
+                  <span class="font-mono text-xs uppercase tracking-widest text-[#C9A832] font-semibold">
+                    {dayPlan.day}
+                  </span>
+                  <span class="font-mono text-[11px] text-[#FAF9F6]/60 border border-[#FAF9F6]/15 px-2.5 py-0.5 rounded-full">
+                    2N/3D Retreat
+                  </span>
+                </div>
+
+                <div>
+                  <h3 class="font-display text-2xl font-normal text-[#FAF9F6] mb-1">
+                    {dayPlan.theme}
+                  </h3>
+                  <p class="font-display italic text-xs text-[#C9A832]">
+                    {dayPlan.highlight}
+                  </p>
+                </div>
+
+                {/* Event Schedule List */}
+                <div class="space-y-4">
+                  {dayPlan.events.map((evt) => (
+                    <div class="flex items-start gap-3 text-xs">
+                      <span class="font-mono text-[#C9A832] font-semibold shrink-0 pt-0.5 w-16">
+                        {evt.time}
+                      </span>
+                      <div class="space-y-0.5">
+                        <strong class="font-medium text-[#FAF9F6] block">
+                          {evt.title}
+                        </strong>
+                        <p class="font-sans text-[#FAF9F6]/70 leading-relaxed font-light">
+                          {evt.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div class="pt-6 mt-6 border-t border-[#FAF9F6]/10 flex items-center justify-between text-[11px] font-mono text-[#C9A832]">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#C9A832]"></span>
+                  Customizable timing
+                </span>
+                <a
+                  href="#corporate-inquiry"
+                  class="text-[#FAF9F6]/70 hover:text-[#C9A832] transition-colors inline-flex items-center gap-1 uppercase tracking-wider text-[10px]"
+                >
+                  <span>Request Flow</span>
+                  <ArrowUpRight className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+    {/* ========================================================================= */}
+    {/* [SECTION 7: INQUIRY FORM & CORPORATE CONTACT] */}
+    {/* ========================================================================= */}
+    <section class="py-24 sm:py-32 bg-[#FAF9F6]" id="corporate-inquiry-section">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-[#C27847] font-semibold block mb-3">
+            CONNECT WITH CORPORATE DESK
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-normal text-[#1B3322] leading-tight text-balance">
+            Plan Your Corporate Retreat
+          </h2>
+          <div class="w-16 h-[1.5px] bg-[#C9A832] mx-auto mt-4 mb-4" />
+          <p class="font-sans text-sm sm:text-base text-[#2C3531]/75 font-light leading-relaxed">
+            Connect directly with our corporate planning desk to check available dates or request a customized proposal with GST billing.
+          </p>
+        </div>
+
+        {/* Interactive React Inquiry Form Component */}
+        <CorporateInquiryForm client:visible />
+
+        {/* Direct Contact Box (Verbatim Information) */}
+        <div class="mt-14 p-8 sm:p-10 rounded-2xl bg-white border border-[#E8E5DF] shadow-luxury-sm">
+          <div class="text-center mb-8">
+            <span class="font-mono text-xs uppercase tracking-widest text-[#C27847] font-semibold block mb-1">
+              DIRECT DESK ASSISTANCE
+            </span>
+            <h3 class="font-display text-2xl font-normal text-[#1B3322]">
+              Whispering Pines Resort by Casa De Bello
+            </h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm font-sans">
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <Phone className="w-5 h-5 text-[#C9A832] shrink-0 mt-0.5" />
+                <div>
+                  <strong class="font-mono text-xs uppercase tracking-wider text-[#1B3322] block mb-0.5">
+                    WhatsApp / Direct Calling
+                  </strong>
+                  <a href="tel:+917505029696" class="font-mono text-sm text-[#1B3322] hover:text-[#C27847] font-medium">
+                    +91-7505029696 (075050 29696)
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <Mail className="w-5 h-5 text-[#C9A832] shrink-0 mt-0.5" />
+                <div>
+                  <strong class="font-mono text-xs uppercase tracking-wider text-[#1B3322] block mb-0.5">
+                    Corporate Inquiries & GST Desk
+                  </strong>
+                  <a href="mailto:booking@whisperingpinesresort.in" class="font-mono text-sm text-[#1B3322] hover:text-[#C27847]">
+                    booking@whisperingpinesresort.in
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <Building2 className="w-5 h-5 text-[#C9A832] shrink-0 mt-0.5" />
+                <div>
+                  <strong class="font-mono text-xs uppercase tracking-wider text-[#1B3322] block mb-0.5">
+                    Official Website
+                  </strong>
+                  <a href="https://whisperingpinesresort.in/" class="font-mono text-sm text-[#1B3322] hover:text-[#C27847]">
+                    https://whisperingpinesresort.in/
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-[#C9A832] shrink-0 mt-0.5" />
+                <div>
+                  <strong class="font-mono text-xs uppercase tracking-wider text-[#1B3322] block mb-0.5">
+                    Property Location & Altitude
+                  </strong>
+                  <p class="text-xs text-[#2C3531]/80 leading-relaxed">
+                    House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Uttarakhand 263137 (1,780m elevation)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</Layout>
