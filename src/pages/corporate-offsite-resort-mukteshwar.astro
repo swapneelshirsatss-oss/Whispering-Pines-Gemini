@@ -331,38 +331,39 @@ const corporateSchema = {
     {/* [SECTION 1: HERO HEADER] */}
     {/* ========================================================================= */}
     <header class="relative min-h-[90vh] flex items-center justify-center bg-[#1B3322] text-[#FAF9F6] pt-16 pb-20 sm:pb-24 overflow-hidden border-b border-[#C9A832]/20">
-      {/* Background Imagery with Subtle Vignette */}
+      {/* Background Imagery with High-Contrast Editorial Vignette */}
       <div class="absolute inset-0 z-0">
         <img
           src="/images/Whispering-pines-balcony-view-nanital.avif"
           alt="180 degree panoramic Himalayan snow peak views from Whispering Pines Resort for corporate retreats"
-          class="w-full h-full object-cover object-center filter brightness-[0.42] scale-105 transition-transform duration-1000 ease-out"
+          class="w-full h-full object-cover object-center filter brightness-[0.28]"
           loading="eager"
           fetchpriority="high"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#1B3322] via-[#1B3322]/65 to-[#1B3322]/80" />
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-[#1B3322]/40 to-[#1B3322]/90 pointer-events-none" />
+        {/* Multi-layered dark forest scrims for razor-sharp typography contrast */}
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1B3322] via-[#1B3322]/75 to-[#1B3322]/85" />
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1B3322]/85 via-[#1B3322]/60 to-[#1B3322]/95 pointer-events-none" />
       </div>
 
       <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Eyebrow Badge */}
-        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#FAF9F6]/10 backdrop-blur-md border border-[#C9A832]/35 mb-8">
-          <span class="w-1.5 h-1.5 rounded-full bg-[#C9A832] animate-pulse"></span>
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#1B3322]/80 backdrop-blur-md border border-[#C9A832]/45 mb-8 shadow-sm">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#C9A832]"></span>
           <span class="font-mono text-xs uppercase tracking-[0.2em] text-[#C9A832] font-semibold">
             MICE · LEADERSHIP RETREATS · TEAM OFFSITES
           </span>
         </div>
 
-        {/* Main Title (H1) */}
-        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-normal text-[#FAF9F6] tracking-tight leading-[1.1] mb-6 max-w-4xl mx-auto text-balance">
+        {/* Main Title (H1) with Optical Drop Shadow */}
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-normal text-[#FAF9F6] tracking-tight leading-[1.1] mb-6 max-w-4xl mx-auto text-balance drop-shadow-[0_2px_14px_rgba(0,0,0,0.7)]">
           Executive Corporate Retreats in Mukteshwar
         </h1>
 
         {/* Editorial Gold Hairline Rule */}
-        <div class="w-20 h-[1.5px] bg-[#C9A832] mx-auto mb-6 opacity-80" />
+        <div class="w-20 h-[1.5px] bg-[#C9A832] mx-auto mb-6 opacity-90 shadow-xs" />
 
-        {/* Sub-headline */}
-        <p class="font-sans text-base sm:text-lg lg:text-xl text-[#FAF9F6]/85 font-light leading-relaxed max-w-3xl mx-auto mb-10 text-pretty">
+        {/* Sub-headline with High-Contrast Legibility */}
+        <p class="font-sans text-base sm:text-lg lg:text-xl text-[#FAF9F6]/95 font-light leading-relaxed max-w-3xl mx-auto mb-10 text-pretty drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
           Elevate strategic thinking, team synergy, and leadership alignment at 1,780 metres. Set amidst peaceful pine forests with 180° panoramic views of Nanda Devi and Trishul snow peaks, Whispering Pines Resort offers boutique 4-star hospitality, dedicated conference spaces, 150 Mbps enterprise fiber Wi-Fi, and exclusive estate buyouts for up to 70 delegates.
         </p>
 
