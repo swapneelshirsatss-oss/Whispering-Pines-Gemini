@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Phone, Menu, X, ArrowUpRight } from 'lucide-react';
+import { Phone, Menu, X, ArrowUpRight, ChevronDown } from 'lucide-react';
 import { trackAdsConversion } from "../utils/analytics";
 
 const PHONE_DISPLAY = "075050 29696";
@@ -10,8 +10,23 @@ interface NavbarProps {
   children?: React.ReactNode;
 }
 
+interface NavSubItem {
+  name: string;
+  desc: string;
+  href: string;
+  badge?: string;
+}
+
+interface NavLink {
+  name: string;
+  href: string;
+  highlight?: boolean;
+  dropdown?: NavSubItem[];
+}
+
 export default function Navbar({ children }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,8 +41,31 @@ export default function Navbar({ children }: NavbarProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const desktopNavLinks = [
+  const desktopNavLinks: NavLink[] = [
     { name: "Stay & Villas", href: "/suites-cottages-ramgarh-resort/" },
+    {
+      name: "Services",
+      href: "/resort-services-ramgarh/",
+      dropdown: [
+        {
+          name: "Weddings",
+          desc: "Himalayan lawns & private buyout celebrations",
+          href: "/destination-wedding-uttarakhand/",
+          badge: "Up to 100 Pax"
+        },
+        {
+          name: "Conferences",
+          desc: "Executive retreats, offsites & MICE facilities",
+          href: "/corporate-offsite-resort-mukteshwar/",
+          badge: "AV & Wi-Fi"
+        },
+        {
+          name: "All Resort Services",
+          desc: "Dining, bonfires, guided tours & transit",
+          href: "/resort-services-ramgarh/",
+        }
+      ]
+    },
     { name: "Amenities", href: "/resort-amenities-mukteshwar/" },
     { name: "Gallery", href: "/gallery/" },
     { name: "VIP Privileges", href: "/book-now/", highlight: true },
@@ -36,6 +74,15 @@ export default function Navbar({ children }: NavbarProps) {
 
   const mobileNavLinks = [
     { name: "Stay & Villas", href: "/suites-cottages-ramgarh-resort/" },
+    {
+      name: "Services",
+      href: "/resort-services-ramgarh/",
+      dropdown: [
+        { name: "💍 Weddings & Celebrations", href: "/destination-wedding-uttarakhand/" },
+        { name: "💼 Conferences & Offsites", href: "/corporate-offsite-resort-mukteshwar/" },
+        { name: "⚡ All Resort Services", href: "/resort-services-ramgarh/" },
+      ]
+    },
     { name: "Amenities", href: "/resort-amenities-mukteshwar/" },
     { name: "Gallery", href: "/gallery/" },
     { name: "About Us", href: "/about-whispering-pines-resort-ramgarh/" },
@@ -59,37 +106,81 @@ export default function Navbar({ children }: NavbarProps) {
             {children}
           </a>
 
-          {/* Desktop Navigation Links — Streamlined & Clean (5 Items) */}
-          <div className="hidden md:flex items-center space-x-4 lg:space-x-7">
-            {desktopNavLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                data-astro-prefetch="hover"
-                onClick={(e) => {
-                  if (link.href === '/book-now/') {
-                    trackAdsConversion("generate_lead", "booking", "nav_vip_privileges");
-                  }
-                  if (link.href.startsWith('/#') && window.location.pathname === '/') {
-                    e.preventDefault();
-                    const id = link.href.replace('/#', '');
-                    const element = document.getElementById(id);
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' });
-                      window.history.pushState(null, '', link.href);
+          {/* Desktop Navigation Links with Services Dropdown */}
+          <div className="hidden md:flex items-center space-x-3.5 lg:space-x-6">
+            {desktopNavLinks.map((link) => {
+              if (link.dropdown) {
+                return (
+                  <div key={link.name} className="relative group">
+                    <a
+                      href={link.href}
+                      data-astro-prefetch="hover"
+                      className="text-xs lg:text-sm font-medium tracking-wide transition-all duration-200 text-[#FAF9F6]/90 group-hover:text-[#c9a832] flex items-center gap-1 py-1"
+                    >
+                      {link.name}
+                      <ChevronDown className="w-3.5 h-3.5 text-[#c9a832]/80 group-hover:rotate-180 transition-transform duration-200" />
+                    </a>
+                    {/* Dropdown Menu */}
+                    <div className="absolute top-full -left-3 pt-2 w-72 opacity-0 translate-y-1 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-200 z-50">
+                      <div className="bg-[#142619] border border-[#FAF9F6]/15 rounded-xl shadow-2xl p-2 backdrop-blur-xl divide-y divide-white/5">
+                        {link.dropdown.map((subItem) => (
+                          <a
+                            key={subItem.name}
+                            href={subItem.href}
+                            data-astro-prefetch="hover"
+                            className="block px-3.5 py-2.5 rounded-lg hover:bg-white/10 transition-colors group/item"
+                          >
+                            <div className="flex items-center justify-between">
+                              <span className="text-xs font-semibold text-white group-hover/item:text-[#c9a832] transition-colors">
+                                {subItem.name}
+                              </span>
+                              {subItem.badge && (
+                                <span className="text-[10px] font-mono font-medium px-2 py-0.5 rounded bg-[#c9a832]/20 text-[#c9a832] border border-[#c9a832]/30">
+                                  {subItem.badge}
+                                </span>
+                              )}
+                            </div>
+                            <p className="text-[11px] text-[#FAF9F6]/65 mt-0.5 font-light leading-snug">
+                              {subItem.desc}
+                            </p>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  data-astro-prefetch="hover"
+                  onClick={(e) => {
+                    if (link.href === '/book-now/') {
+                      trackAdsConversion("generate_lead", "booking", "nav_vip_privileges");
                     }
-                  }
-                }}
-                className={`text-xs lg:text-sm font-medium tracking-wide transition-all duration-200 ${
-                  link.highlight
-                    ? "text-[#c9a832] font-semibold flex items-center gap-1.5 bg-[#c9a832]/10 hover:bg-[#c9a832]/20 px-3 py-1.5 rounded border border-[#c9a832]/35 shadow-sm"
-                    : "text-[#FAF9F6]/90 hover:text-[#c9a832]"
-                }`}
-              >
-                {link.highlight && <span className="w-1.5 h-1.5 rounded-full bg-[#c9a832]"></span>}
-                {link.name}
-              </a>
-            ))}
+                    if (link.href.startsWith('/#') && window.location.pathname === '/') {
+                      e.preventDefault();
+                      const id = link.href.replace('/#', '');
+                      const element = document.getElementById(id);
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                        window.history.pushState(null, '', link.href);
+                      }
+                    }
+                  }}
+                  className={`text-xs lg:text-sm font-medium tracking-wide transition-all duration-200 ${
+                    link.highlight
+                      ? "text-[#c9a832] font-semibold flex items-center gap-1.5 bg-[#c9a832]/10 hover:bg-[#c9a832]/20 px-3 py-1.5 rounded border border-[#c9a832]/35 shadow-sm"
+                      : "text-[#FAF9F6]/90 hover:text-[#c9a832]"
+                  }`}
+                >
+                  {link.highlight && <span className="w-1.5 h-1.5 rounded-full bg-[#c9a832]"></span>}
+                  {link.name}
+                </a>
+              );
+            })}
           </div>
 
           {/* Contact CTAs */}
@@ -152,60 +243,92 @@ export default function Navbar({ children }: NavbarProps) {
             <span>✨ Direct Booking VIP Privileges</span>
             <span className="text-[10px] font-normal lowercase bg-[#c9a832]/20 px-2 py-0.5 rounded">save 15%</span>
           </a>
-          {mobileNavLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              target={link.external ? "_blank" : undefined}
-              rel={link.external ? "noopener noreferrer" : undefined}
-              data-astro-prefetch={link.external ? undefined : "hover"}
-              onClick={(e) => {
-                if (link.href.startsWith('/#') && window.location.pathname === '/') {
-                  e.preventDefault();
-                  const id = link.href.replace('/#', '');
-                  const element = document.getElementById(id);
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                    window.history.pushState(null, '', link.href);
+          {mobileNavLinks.map((link) => {
+            if (link.dropdown) {
+              return (
+                <div key={link.name} className="border-b border-[#FAF9F6]/10 pb-1">
+                  <button
+                    type="button"
+                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                    className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-[#FAF9F6]/95 hover:text-[#c9a832] hover:bg-[#FAF9F6]/5 rounded-sm transition-colors text-left"
+                  >
+                    <span>{link.name}</span>
+                    <ChevronDown className={`w-4 h-4 text-[#c9a832] transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} />
+                  </button>
+                  {mobileServicesOpen && (
+                    <div className="pl-4 pr-2 pb-2 space-y-1 bg-black/20 rounded-md">
+                      {link.dropdown.map((sub) => (
+                        <a
+                          key={sub.name}
+                          href={sub.href}
+                          data-astro-prefetch="hover"
+                          onClick={() => setIsOpen(false)}
+                          className="block px-3 py-2 text-sm text-[#FAF9F6]/90 hover:text-[#c9a832] rounded transition-colors"
+                        >
+                          {sub.name}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            }
+
+            return (
+              <a
+                key={link.name}
+                href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
+                data-astro-prefetch={link.external ? undefined : "hover"}
+                onClick={(e) => {
+                  if (link.href.startsWith('/#') && window.location.pathname === '/') {
+                    e.preventDefault();
+                    const id = link.href.replace('/#', '');
+                    const element = document.getElementById(id);
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                      window.history.pushState(null, '', link.href);
+                    }
                   }
-                }
-                setIsOpen(false);
-              }}
-              className={`block px-4 py-3 text-base font-medium rounded-sm transition-colors ${link.external
-                  ? "text-[#c9a832] font-semibold hover:bg-[#FAF9F6]/5"
-                  : "text-[#FAF9F6]/95 hover:text-[#c9a832] hover:bg-[#FAF9F6]/5"
-                }`}
-            >
-              {link.name}
-            </a>
-          ))}
+                  setIsOpen(false);
+                }}
+                className={`block px-4 py-3 text-base font-medium rounded-sm transition-colors ${link.external
+                    ? "text-[#c9a832] font-semibold hover:bg-[#FAF9F6]/5"
+                    : "text-[#FAF9F6]/95 hover:text-[#c9a832] hover:bg-[#FAF9F6]/5"
+                  }`}
+              >
+                {link.name}
+              </a>
+            );
+          })}
 
           {/* Quick Persona Chips */}
           <div className="pt-3 pb-1 border-t border-[#FAF9F6]/10">
             <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#c9a832] block px-4 mb-2 font-semibold">
-              Curated Stays & Groups
+              Curated Stays &amp; Celebrations
             </span>
             <div className="grid grid-cols-2 gap-2 px-4 text-xs font-mono">
+              <a
+                href="/destination-wedding-uttarakhand/"
+                onClick={() => setIsOpen(false)}
+                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors text-center"
+              >
+                💍 Weddings (100 Pax)
+              </a>
+              <a
+                href="/corporate-offsite-resort-mukteshwar/"
+                onClick={() => setIsOpen(false)}
+                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors text-center"
+              >
+                💼 Conferences &amp; MICE
+              </a>
               <a
                 href="/private-villas-near-nainital/"
                 onClick={() => setIsOpen(false)}
                 className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors text-center"
               >
                 🏡 3-BHK Villa (10 Pax)
-              </a>
-              <a
-                href="/about-whispering-pines-resort-ramgarh/"
-                onClick={() => setIsOpen(false)}
-                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors text-center"
-              >
-                🏔️ 180° Views (All Rooms)
-              </a>
-              <a
-                href="/resort-amenities-mukteshwar/"
-                onClick={() => setIsOpen(false)}
-                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors text-center"
-              >
-                🐾 Pet-Friendly Lawns
               </a>
               <a
                 href="/clarks-exotica-resort-ramgarh-mukteshwar/"
