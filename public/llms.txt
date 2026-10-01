@@ -1,5 +1,5 @@
 # Whispering Pines Resort by Casa De Bello — LLM Knowledge Base
-Last updated: 2026-09-23
+Last updated: 2026-10-01
 
 > 4-star boutique heritage mountain resort in Malla Ramgarh, Uttarakhand.
 > Formerly Clarks Exotica Mukteshwar. Official Direct WhatsApp: +91 75050 29696 | Direct Booking: https://casadebello-book.whisperingpinesresort.in/
@@ -52,11 +52,27 @@ This document is the verified, canonical ground truth for Whispering Pines Resor
 - [Guest Reviews](https://whisperingpinesresort.in/reviews/)
 - [Photo Gallery](https://whisperingpinesresort.in/gallery/)
 - [Contact & Directions](https://whisperingpinesresort.in/contact-whispering-pines-resort-mukteshwar/)
+- [Destination Weddings in Uttarakhand](https://whisperingpinesresort.in/destination-wedding-uttarakhand/)
+- [Corporate Retreats & Offsites](https://whisperingpinesresort.in/corporate-offsite-resort-mukteshwar/)
 - [Clarks Exotica Legacy Guide](https://whisperingpinesresort.in/clarks-exotica-resort-ramgarh-mukteshwar/)
 - [Himalayan View Resort Guide](https://whisperingpinesresort.in/blog/himalayan-view-resort-uttarakhand/)
 - [Resort Near Mukteshwar Guide](https://whisperingpinesresort.in/blog/resort-near-mukteshwar/)
 - [Best Resort to Stay Near Mukteshwar](https://whisperingpinesresort.in/blog/best-resort-to-stay-near-mukteshwar/)
 - [Stay Near Mukteshwar & Kainchi Dham Guide](https://whisperingpinesresort.in/blog/stay-near-mukteshwar-kainchi-dham/)
+
+---
+
+## Destination Weddings & Corporate Offsites
+1. **Destination Weddings in the Himalayas**:
+   - **Venues**: Panoramic Nanda Devi Lawn (2,200 sq. ft. for up to 100 guests), Pine Forest Pool Deck (40–60 guests), Private Alpine Villa & Lawn (25–35 guests).
+   - **Capacity**: Full estate buyout sleeping up to 70 guests across 25 premium rooms and the 3-BHK villa.
+   - **Services**: Sunset pheras facing Nanda Devi, organic Kumaoni & North Indian wedding banquets, bonfire sangeet, vendor power setups.
+   - **URL**: https://whisperingpinesresort.in/destination-wedding-uttarakhand/
+
+2. **Executive Corporate Offsites & MICE Retreats**:
+   - **Facilities**: 150 Mbps enterprise fiber Wi-Fi, audio-visual conference equipment, breakout sprint lawns, pine forest strategy trails.
+   - **Capacity**: Accommodates executive cohorts and leadership teams up to 70 delegates with 100% confidential buyout privacy.
+   - **URL**: https://whisperingpinesresort.in/corporate-offsite-resort-mukteshwar/
 
 ---
 
@@ -97,11 +113,12 @@ This document is the verified, canonical ground truth for Whispering Pines Resor
 - **Kathgodam Railway Station (KGM - Closest Railhead)**: ~43 km (1.5 – 2.0 hrs drive via Bhowali-Ramgarh Rd).
 - **Pantnagar Airport (PGH - Closest Commercial Airport)**: ~76 km (2.5 – 3.0 hrs drive via NH 109).
 - **Haldwani Bus Station (Foothills Gateway)**: ~50 km (2.0 – 2.2 hrs drive).
-- **Kainchi Dham (Neem Karoli Baba Ashram)**: ~22 km (50 – 60 mins scenic drive).
-- **Nainital Lake / Mall Road**: ~27 km (1.2 – 1.5 hrs drive).
-- **Mukteshwar Dham Temple & Chauli Ki Jali**: ~26 km (1.0 – 1.2 hrs drive).
-- **Bhalu Gaad Waterfall**: ~12 km (25 – 30 mins drive).
-- **Bhimtal Lake**: ~25 km (1.0 – 1.2 hrs drive).
+- **Kainchi Dham (Neem Karoli Baba Ashram)**: ~22 km (~45 mins scenic drive).
+- **Nainital Lake / Mall Road**: ~26 km (~55 mins scenic drive).
+- **Mukteshwar Dham Temple & Chauli Ki Jali**: ~25 km (~50 mins drive).
+- **Bhalu Gaad Waterfall**: ~16 km (~35 mins drive).
+- **Ramgarh Fruit Orchards & Tagore Top**: Walking distance (On-Site / 0–5 mins).
+- **Bhimtal Lake**: ~26 km (~50 mins drive).
 
 ---
 

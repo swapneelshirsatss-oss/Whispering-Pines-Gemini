@@ -54,5 +54,3 @@ Allow: /
 # Primary XML Sitemaps (Indexed & Categorized)
 Sitemap: https://whisperingpinesresort.in/sitemap.xml
 Sitemap: https://whisperingpinesresort.in/sitemap-index.xml
-Sitemap: https://whisperingpinesresort.in/sitemap-website.xml
-Sitemap: https://whisperingpinesresort.in/sitemap-blog.xml

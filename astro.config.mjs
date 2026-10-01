@@ -116,6 +116,7 @@ export default defineConfig({
     }),
     sitemap({
       lastmod: new Date(),
+      filter: (page) => !page.includes('/corporate-retreats-mukteshwar'),
     }),
     masterSitemap(),
     indexNowIntegration(),
