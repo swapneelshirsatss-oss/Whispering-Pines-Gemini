@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "indexnow": "node scripts/submit-indexnow.mjs"
+    "indexnow": "node scripts/submit-indexnow.mjs",
+    "package": "astro build && node scripts/package-deploy.mjs"
   },
   "dependencies": {
     "@astrojs/partytown": "^2.1.7",

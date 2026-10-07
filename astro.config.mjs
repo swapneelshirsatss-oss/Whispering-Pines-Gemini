@@ -117,6 +117,9 @@ function cspScriptHashes() {
             hashes.add(`'sha256-${createHash('sha256').update(body, 'utf8').digest('base64')}'`);
           }
         }
+        if (hashes.size === 0) {
+          throw new Error('[csp-script-hashes] No inline scripts found; refusing to write an empty script-src.');
+        }
         const value = [...hashes].sort().join(' ');
         for (const name of ['_headers', '.htaccess']) {
           const target = path.join(distDir, name);
@@ -125,6 +128,13 @@ function cspScriptHashes() {
           if (!src.includes(TOKEN)) continue;
           fs.writeFileSync(target, src.replaceAll(TOKEN, value));
           console.log(`[csp-script-hashes] Wrote ${hashes.size} inline script hashes to ${name}`);
+        }
+        // Fail the build rather than ship a policy that would block every script
+        for (const name of ['_headers', '.htaccess']) {
+          const target = path.join(distDir, name);
+          if (fs.existsSync(target) && fs.readFileSync(target, 'utf8').includes(TOKEN)) {
+            throw new Error(`[csp-script-hashes] ${TOKEN} is still present in dist/${name}.`);
+          }
         }
       }
     }
