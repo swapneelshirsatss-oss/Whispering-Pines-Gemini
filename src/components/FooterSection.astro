@@ -333,7 +333,7 @@ const currentYear = new Date().getFullYear();
           {/* 3. Official Phone Number (Strict GBP Match: 075050 29696) */}
           <a
             href={`tel:${RESORT_CONTACT.phoneTel || '+917505029696'}`}
-            onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'phone_call_click', event_category: 'engagement', event_label: 'footer_phone_call' });"
+            data-track-dl='{"event":"phone_call_click","event_category":"engagement","event_label":"footer_phone_call"}'
             class="flex items-center hover:text-[#c9a832] transition-colors group"
             itemprop="telephone"
             title="Call Whispering Pines Direct Concierge: 075050 29696"

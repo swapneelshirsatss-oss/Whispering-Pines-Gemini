@@ -69,7 +69,7 @@ const whatsappHostLink = generateWhatsAppLink("Hi Gaurav! I am planning a stay a
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center gap-2.5 px-5 py-2.5 bg-[#1B3322] hover:bg-[#2A4832] text-[#FAF9F6] text-xs sm:text-sm font-medium rounded-xl border border-[#c9a832]/30 transition-all shadow-sm hover:shadow-md shrink-0 focus-ring"
-            onclick="if(typeof window.trackAdsConversion==='function'){window.trackAdsConversion('generate_lead','booking','host_field_note_whatsapp');}"
+            data-track-fn="trackAdsConversion" data-track-args='["generate_lead","booking","host_field_note_whatsapp"]'
           >
             <!-- WhatsApp Official Icon -->
             <svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

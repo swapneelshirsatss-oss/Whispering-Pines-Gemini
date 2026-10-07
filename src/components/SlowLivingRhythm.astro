@@ -154,7 +154,7 @@ const whatsappStoryLink = generateWhatsAppLink("Hi! I am planning a sightseeing 
             target="_blank"
             rel="noopener noreferrer"
             class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#c9a832] hover:bg-[#d8b73f] text-[#1B3322] font-bold text-xs sm:text-sm rounded-xl transition-all shadow-sm focus-ring"
-            onclick="if(typeof window.trackAdsConversion==='function'){window.trackAdsConversion('generate_lead','booking','slow_living_whatsapp');}"
+            data-track-fn="trackAdsConversion" data-track-args='["generate_lead","booking","slow_living_whatsapp"]'
           >
             <!-- WhatsApp Official Icon -->
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
