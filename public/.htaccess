@@ -62,7 +62,7 @@
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/avif "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 day"
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
   ExpiresByType font/ttf "access plus 1 year"
@@ -89,8 +89,13 @@
     Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
   </FilesMatch>
 
-  <FilesMatch "\.(ico|jpe?g|png|gif|webp|avif|swf|css|js|svg|woff|woff2)$">
+  <FilesMatch "\.(ico|jpe?g|png|gif|webp|avif|swf|css|js|woff|woff2)$">
     Header set Cache-Control "max-age=31536000, public, immutable"
+  </FilesMatch>
+
+  # Unhashed SVGs (logo.svg, favicon.svg) change occasionally - revalidate daily
+  <FilesMatch "\.svg$">
+    Header set Cache-Control "max-age=86400, public, must-revalidate"
   </FilesMatch>
 </IfModule>
 

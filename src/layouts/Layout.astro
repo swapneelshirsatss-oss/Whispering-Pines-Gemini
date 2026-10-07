@@ -26,16 +26,18 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) for Google Ads -->
+    <!-- Google tag (gtag.js) -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-18455442099"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'AW-18455442099', {
+
+      gtag('set', {
         'allow_enhanced_conversions': true,
         'conversion_linker': true
       });
+      gtag('config', 'AW-18455442099');
       // Google Ads Phone Call Conversion Tracking
       gtag('config', 'AW-18455442099/Vc_dCNLMo_UcEN7JhfND', {
         'phone_conversion_number': '7505029696'

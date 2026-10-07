@@ -97,8 +97,8 @@ const schemaData = [
 ---
 
 <Layout 
-  title={`${post.title} | Whispering Pines Resort Mukteshwar`}
-  description={post.excerpt}
+  title={post.seoTitle ?? `${post.title} | Whispering Pines Resort Mukteshwar`}
+  description={post.seoDescription ?? post.excerpt}
   image={post.imageUrl}
 >
   <Fragment slot="head">

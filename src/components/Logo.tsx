@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId } from "react";
 
 interface LogoProps {
   className?: string;
@@ -6,75 +6,172 @@ interface LogoProps {
 }
 
 export default function Logo({ className = "", iconOnly = false }: LogoProps) {
-  return (
-    <div className={`flex items-center space-x-3 text-[#c9a832] ${className}`}>
-      {/* High-Fidelity SVG Replication of the Luxury Gold Crest */}
+  const rawId = useId();
+  const safeId = rawId.replace(/[^a-zA-Z0-9-_]/g, "");
+  const goldId = `gold-${safeId}`;
+  const petalId = `petal-${safeId}`;
+  const innerPetalId = `innerPetal-${safeId}`;
+  const titleId = `title-${safeId}`;
+
+  if (iconOnly) {
+    return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 200 200"
-        className="w-10 h-10 hover:scale-105 transition-transform duration-300"
+        viewBox="-150 -150 300 300"
+        className={`w-10 h-10 hover:scale-105 transition-transform duration-300 ${className}`}
         fill="none"
+        role="img"
+        aria-label="Whispering Pines Resort Crest"
       >
         <defs>
-          {/* Gold Gradients */}
-          <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#DFBA73" />
-            <stop offset="40%" stopColor="#FFF2D4" />
-            <stop offset="60%" stopColor="#c9a832" />
-            <stop offset="100%" stopColor="#9E7D46" />
-          </linearGradient>
-          
-          <linearGradient id="goldGradientLight" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#c9a832" />
-            <stop offset="50%" stopColor="#FFF2D4" />
-            <stop offset="100%" stopColor="#A88E62" />
+          <linearGradient id={goldId} x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stopColor="#FFF0BE" />
+            <stop offset=".35" stopColor="#E5C36B" />
+            <stop offset=".65" stopColor="#B78B28" />
+            <stop offset="1" stopColor="#F8E3A3" />
           </linearGradient>
 
-          {/* 3D Bevel & Drop Shadow Filter */}
-          <filter id="bevel" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur in="SourceAlpha" stdDeviation="0.5" result="blur" />
-            <feOffset dx="0.5" dy="0.5" result="offsetGlow" />
-            <feSpecularLighting in="blur" surfaceScale="2" specularConstant="0.8" specularExponent="20" lightingColor="#FFF2D4" result="specOut">
-              <fePointLight x="-50" y="-50" z="50" />
-            </feSpecularLighting>
-            <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut" />
-            <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint" />
-            <feDropShadow in="litPaint" dx="0" dy="1" stdDeviation="1" floodColor="#000" floodOpacity="0.4" />
-          </filter>
-
-          {/* Base geometric component (Top Petal Quadrant) */}
-          <g id="petal">
-            {/* Outer large leaf */}
-            <path d="M 100,15 A 50,50 0 0,1 100,100 A 50,50 0 0,1 100,15 Z" />
-            
-            {/* Inner small leaf */}
-            <path d="M 100,55 A 27,27 0 0,1 100,100 A 27,27 0 0,1 100,55 Z" />
-            
-            {/* Central bisecting line */}
-            <line x1="100" y1="15" x2="100" y2="55" />
-          </g>
+          <path
+            id={petalId}
+            d="M0,0 C-61,-32 -62,-90 0,-137 C62,-90 61,-32 0,0Z"
+          />
+          <path
+            id={innerPetalId}
+            d="M0,0 C-30,-20 -30,-52 0,-77 C30,-52 30,-20 0,0Z"
+          />
         </defs>
 
-        {/* Rendering the 4 symmetrical quadrants with the Bevel Filter & Gold Stroke */}
-        <g filter="url(#bevel)" fill="none" stroke="url(#goldGradient)" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round">
-          <use href="#petal" />
-          <use href="#petal" transform="rotate(90 100 100)" />
-          <use href="#petal" transform="rotate(180 100 100)" />
-          <use href="#petal" transform="rotate(270 100 100)" />
+        <g
+          fill="none"
+          stroke={`url(#${goldId})`}
+          strokeWidth="8"
+          strokeLinejoin="round"
+        >
+          <use href={`#${petalId}`} />
+          <use href={`#${petalId}`} transform="rotate(90)" />
+          <use href={`#${petalId}`} transform="rotate(180)" />
+          <use href={`#${petalId}`} transform="rotate(270)" />
+
+          <g strokeWidth="6">
+            <use href={`#${innerPetalId}`} />
+            <use href={`#${innerPetalId}`} transform="rotate(90)" />
+            <use href={`#${innerPetalId}`} transform="rotate(180)" />
+            <use href={`#${innerPetalId}`} transform="rotate(270)" />
+          </g>
         </g>
       </svg>
+    );
+  }
 
-      {/* Typography from Logo */}
-      {!iconOnly && (
-        <div className="flex flex-col select-none">
-          <span className="font-display text-base font-bold tracking-[0.16em] leading-none text-[#FAF9F6]">
-            WHISPERING PINES
-          </span>
-          <span className="text-[9px] font-mono tracking-[0.34em] font-medium text-[#c9a832] uppercase mt-1">
-            By Casa De Bello
-          </span>
-        </div>
-      )}
-    </div>
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 300"
+      className={`h-9 sm:h-10 md:h-11 lg:h-12 w-auto max-w-[220px] sm:max-w-[260px] md:max-w-[290px] select-none hover:opacity-95 transition-opacity duration-300 ${className}`}
+      role="img"
+      aria-labelledby={titleId}
+    >
+      <title id={titleId}>Whispering Pines Resort by Casa De Bello — Ramgarh</title>
+
+      <defs>
+        <linearGradient id={goldId} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#FFF0BE" />
+          <stop offset=".35" stopColor="#E5C36B" />
+          <stop offset=".65" stopColor="#B78B28" />
+          <stop offset="1" stopColor="#F8E3A3" />
+        </linearGradient>
+
+        <path
+          id={petalId}
+          d="M0,0 C-61,-32 -62,-90 0,-137 C62,-90 61,-32 0,0Z"
+        />
+        <path
+          id={innerPetalId}
+          d="M0,0 C-30,-20 -30,-52 0,-77 C30,-52 30,-20 0,0Z"
+        />
+      </defs>
+
+      {/* Transparent background; intended for dark backgrounds */}
+
+      <g
+        transform="translate(140 150) scale(.82)"
+        fill="none"
+        stroke={`url(#${goldId})`}
+        strokeWidth="8"
+        strokeLinejoin="round"
+      >
+        <use href={`#${petalId}`} />
+        <use href={`#${petalId}`} transform="rotate(90)" />
+        <use href={`#${petalId}`} transform="rotate(180)" />
+        <use href={`#${petalId}`} transform="rotate(270)" />
+
+        <g strokeWidth="6">
+          <use href={`#${innerPetalId}`} />
+          <use href={`#${innerPetalId}`} transform="rotate(90)" />
+          <use href={`#${innerPetalId}`} transform="rotate(180)" />
+          <use href={`#${innerPetalId}`} transform="rotate(270)" />
+        </g>
+      </g>
+
+      <path
+        d="M285,45 V255"
+        stroke={`url(#${goldId})`}
+        strokeWidth="2"
+      />
+
+      <g
+        textAnchor="middle"
+        fontFamily="Georgia, 'Times New Roman', serif"
+      >
+        <text
+          x="745"
+          y="68"
+          fill="#FFF9E9"
+          fontSize="25"
+          letterSpacing="4"
+        >
+          WHISPERING PINES RESORT
+        </text>
+
+        <text
+          x="745"
+          y="106"
+          fill="#E8CB80"
+          fontSize="23"
+          fontStyle="italic"
+        >
+          by
+        </text>
+
+        {/* Dominant brand */}
+        <text
+          x="745"
+          y="184"
+          fill={`url(#${goldId})`}
+          fontSize="78"
+          fontWeight="bold"
+          letterSpacing="3"
+        >
+          CASA DE BELLO
+        </text>
+
+        <path
+          d="M510,214 H980"
+          fill="none"
+          stroke={`url(#${goldId})`}
+          strokeWidth="1.5"
+        />
+
+        <text
+          x="749"
+          y="252"
+          fill="#FFF9E9"
+          fontSize="18"
+          letterSpacing="8"
+        >
+          RAMGARH
+        </text>
+      </g>
+    </svg>
   );
 }

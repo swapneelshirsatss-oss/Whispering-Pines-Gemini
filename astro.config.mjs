@@ -5,7 +5,6 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import react from '@astrojs/react';
-import partytown from '@astrojs/partytown';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
@@ -109,11 +108,6 @@ export default defineConfig({
   },
   integrations: [
     react(),
-    partytown({
-      config: {
-        forward: ['dataLayer.push', 'gtag'],
-      },
-    }),
     sitemap({
       lastmod: new Date(),
       filter: (page) => !page.includes('/corporate-retreats-mukteshwar'),

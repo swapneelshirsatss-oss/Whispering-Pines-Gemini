@@ -5,6 +5,10 @@ export type BlogPostData = {
   slug: string;
   title: string;
   excerpt: string;
+  /** Optional SERP <title> override (~60 chars). Falls back to `${title} | Whispering Pines Resort Mukteshwar`. */
+  seoTitle?: string;
+  /** Optional meta description override (~160 chars). Falls back to `excerpt`. */
+  seoDescription?: string;
   date: string;
   readTime: string;
   imageUrl: string;
@@ -185,6 +189,8 @@ export const BLOG_POSTS: BlogPostData[] = [
     id: 1,
     slug: "clarks-exotica-transition",
     title: "A New Era of Himalayan Luxury: Clarks Exotica Transitions to Whispering Pines Resort Mukteshwar",
+    seoTitle: "Clarks Exotica Is Now Whispering Pines Resort, Ramgarh",
+    seoDescription: "Clarks Exotica near Mukteshwar is now Whispering Pines Resort by Casa De Bello: same Malla Ramgarh location, upgraded rooms and 180° Himalayan views.",
     excerpt: "The breathtaking Malla Ramgarh sanctuary you previously knew as Clarks Exotica near Mukteshwar has officially evolved. We are proud to announce our comprehensive rebranding and property upgrade to Whispering Pines Resort, now operating exclusively under the premium hospitality management of Casa De Bello (https://casadebello.com/).",
     date: "June 27, 2026",
     readTime: "4 min read",
@@ -233,6 +239,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     id: 2,
     slug: "ramgarh-fruit-bowl-of-kumaon",
     title: "Why Ramgarh is the Fruit Bowl of Kumaon: Complete Orchard & Travel Guide (2026)",
+    seoTitle: "Why Ramgarh Is the Fruit Bowl of Kumaon (2026 Guide)",
     excerpt: "Discover why Ramgarh is called the Fruit Bowl of Kumaon. Learn about peach, apple, plum & apricot harvest seasons, history, and stay in active orchards.",
     date: "August 3, 2026",
     readTime: "12 min read",
@@ -556,6 +563,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     id: 3,
     slug: "winter-in-the-himalayas",
     title: "Winter in the Himalayas: What to Expect",
+    seoTitle: "Winter in the Himalayas: What to Expect | Whispering Pines",
     excerpt: "From crisp snowy mornings to cozy bonfires, here's everything you need to know about visiting during the winter months.",
     date: "January 10, 2026",
     readTime: "6 min read",
@@ -613,6 +621,8 @@ export const BLOG_POSTS: BlogPostData[] = [
     id: 4,
     slug: "resort-near-nainital",
     title: "Resort near Nainital for Families, Couples and Tourists — 2026 Guide",
+    seoTitle: "Resort near Nainital for Families & Couples (2026 Guide)",
+    seoDescription: "Resort near Nainital for families and couples: Whispering Pines in Ramgarh offers 180° Himalayan views from every room, a pool and private villas.",
     excerpt: "Looking for the best resort near Nainital for families, couples and tourists? Whispering Pines by Casa De Bello in Ramgarh offers 180° Himalayan views, pool, 22 luxury units, private villas & 150 Mbps Wi-Fi.",
     date: "August 5, 2026",
     readTime: "12 min read",
@@ -920,6 +930,8 @@ export const BLOG_POSTS: BlogPostData[] = [
     id: 5,
     slug: "resort-stay-near-kainchi-dham",
     title: "Resorts Near Kainchi Dham Ashram Neem Karoli Baba | Whispering Pines (2026 Guide)",
+    seoTitle: "Resorts Near Kainchi Dham Ashram | Whispering Pines",
+    seoDescription: "Senior-friendly resort near Kainchi Dham Ashram: ground-floor rooms, wheelchair access, a private villa and Himalayan views, 45 minutes away. Book direct.",
     excerpt: "Looking for a senior-friendly 4-star resort hotel near Kainchi Dham Ashram Neem Karoli Baba? Whispering Pines offers ground floor hotel rooms, wheelchair access, private villa, peak views, & 45-min drive to Ashram. Save 20% direct.",
     date: "August 6, 2026",
     readTime: "16 min read",
@@ -1478,6 +1490,8 @@ export const BLOG_POSTS: BlogPostData[] = [
     id: 6,
     slug: "best-resort-to-stay-near-mukteshwar",
     title: "Best Resort to Stay near Mukteshwar: Where Mountain Silence Meets Luxury — Whispering Pines by Casa De Bello (2026 Guide)",
+    seoTitle: "Best Resort to Stay near Mukteshwar | Whispering Pines",
+    seoDescription: "Whispering Pines in Ramgarh, near Mukteshwar: 180° Himalayan views from every room, a private villa, pool and Kumaoni dining. Book direct on WhatsApp.",
     excerpt: "Best resort to stay near Mukteshwar — Whispering Pines in Ramgarh offers 180° Himalayan views, private villa, pool, 150 Mbps Wi-Fi & Kumaoni dining. Book direct on WhatsApp. Best price guaranteed.",
     date: "August 12, 2026",
     readTime: "16 min read",
