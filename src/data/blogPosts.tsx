@@ -95,7 +95,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         </p>
 
         <div className="my-6">
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/images/Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp" 
             alt="Resort near Mukteshwar for Families, Couples & Workations — Whispering Pines by Casa De Bello" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
@@ -113,7 +113,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         </ul>
 
         <div className="my-6">
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.webp" 
             alt="Why Many Travellers Choose Resort Near Mukteshwar Instead of Staying Inside the Town" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
@@ -122,7 +122,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         </div>
 
         <div className="my-6">
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/images/What-Makes-Our-resort-Villas-Different-From-Regular-Homestays-Near-Mukteshwar-uttarkhand.webp" 
             alt="What Makes Our Resort Villas Different From Regular Homestays Near Mukteshwar" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
@@ -267,7 +267,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         </p>
 
         <div className="my-6">
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.webp"  
             alt="Why Ramgarh is the Fruit Bowl of Kumaon — Whispering Pines Resort by Casa De Bello, Malla Ramgarh 2026" 
             className="w-full h-auto max-h-[850px] object-contain rounded-2xl border border-[#EAE8E3] bg-white p-2" 
@@ -604,7 +604,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         </ul>
 
         <div className="my-6">
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/images/What-Makes-Our-resort-Villas-Different-From-Regular-Homestays-Near-Mukteshwar-uttarkhand.avif" 
             alt="Winter Stone Villa Stay at Whispering Pines" 
             className="w-full h-80 object-cover rounded-xl border border-[#EAE8E3]" 
@@ -669,7 +669,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         {/* Primary Mandatory Image 1 */}
         <div className="my-6">
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/images/Resort_near-nainital-for-families.avif" 
             alt="Resort near Nainital for Families, Couples and Tourists — Whispering Pines by Casa De Bello" 
             className="w-full h-80 sm:h-96 object-cover rounded-2xl border border-[#EAE8E3] shadow-md" 
@@ -727,7 +727,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         {/* Mandatory Image 2 */}
         <div className="my-6">
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/images/Why-choose-whispering-pines-casa-de-bell-near-nainital.avif" 
             alt="Why Choose Whispering Pines as Your Resort near Nainital" 
             className="w-full h-80 sm:h-96 object-cover rounded-2xl border border-[#EAE8E3] shadow-md" 
@@ -880,7 +880,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         {/* Mandatory Image 3 */}
         <div className="my-6">
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/images/Things-to-do-near-nainital.avif" 
             alt="Things to Do Near Nainital from Whispering Pines Resort" 
             className="w-full h-80 sm:h-96 object-cover rounded-2xl border border-[#EAE8E3] shadow-md" 
@@ -970,7 +970,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           </div>
           <div className="shrink-0 pt-2 md:pt-0">
             <a href="http://www.blogadda.com" target="_blank" rel="noopener noreferrer" title="Visit BlogAdda.com to discover Indian blogs">
-              <img src="https://www.blogadda.com/images/blogadda.png" width="80" height="15" className="border-0 inline-block" alt="Visit BlogAdda.com to discover Indian blogs" />
+              <img loading="lazy" decoding="async" src="https://www.blogadda.com/images/blogadda.png" width="80" height="15" className="border-0 inline-block" alt="Visit BlogAdda.com to discover Indian blogs" />
             </a>
           </div>
         </div>
@@ -1002,7 +1002,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         {/* Header Image */}
         <div className="my-6">
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/images/blog-resort-near-kainchi-dham-image/resorts-near-kainchi-dham-ashram-neem-karoli-baba-Whispering-Pines-2026.avif" 
             alt="Resorts Near Kainchi Dham Ashram Neem Karoli Baba — Whispering Pines Resort Hotel by Casa De Bello, Malla Ramgarh 2026 Guide" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
@@ -1053,7 +1053,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         {/* Image 2 */}
         <div className="my-6">
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/images/blog-resort-near-kainchi-dham-image/What-makes-resort-best-stay-near-kainchi-dham.avif" 
             alt="What Makes Whispering Pines the Best Stay Near Kainchi Dham Ashram" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
@@ -1103,7 +1103,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         {/* Image 3 */}
         <div className="my-6">
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/images/blog-resort-near-kainchi-dham-image/Why-whispering-pines-resort-Is-One-of-the-Best-resort-hotel-Near-Kainchi-Dham.avif" 
             alt="Why Whispering Pines Resort Is One of the Best Resort Hotels Near Kainchi Dham" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
@@ -1195,7 +1195,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         {/* Image 4 */}
         <div className="my-6">
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/images/blog-resort-near-kainchi-dham-image/resort-near-kainchidham-hotel-dinig-choices.avif" 
             alt="Pure Veg, Satvik & Kumaoni Dining Choices at Whispering Pines Resort Hotel Near Kainchi Dham" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
@@ -1331,7 +1331,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         {/* Image 5 */}
         <div className="my-6">
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/images/blog-resort-near-kainchi-dham-image/Map-for-excursion-near-kainchi-dham.avif" 
             alt="Map for Excursions and Driving Routes Near Kainchi Dham Ashram and Whispering Pines Resort" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
@@ -1787,7 +1787,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         {/* Hero Image 1 */}
         <div className="my-6">
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/images/Best-resort-to-stay/Why-Whispering-Pines-is-the-Best-Resort-to-Stay-near-Mukteshwar.avif" 
             alt="Best resort to stay near Mukteshwar for families couples pet owners workcation — Whispering Pines Casa De Bello Ramgarh" 
             className="w-full h-80 sm:h-96 object-cover rounded-2xl border border-[#EAE8E3] shadow-md" 
@@ -1900,7 +1900,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         {/* Image 2 */}
         <div className="my-6">
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/images/Best-resort-to-stay/best-resort-to-stay-near-mukteshwar-whispering-pines-casa-de-bello-mukteshwar-2026.avif" 
             alt="Accommodation at the best resort to stay near Mukteshwar — villa suite family room cottage Whispering Pines Ramgarh" 
             className="w-full h-80 sm:h-96 object-cover rounded-2xl border border-[#EAE8E3] shadow-md" 
@@ -2017,7 +2017,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         {/* Image 3 */}
         <div className="my-6">
-          <img 
+          <img loading="lazy" decoding="async" 
             src="/images/balcony-view-from-resort-near-mukteshwar.avif" 
             alt="Farm-to-table dining at the best resort to stay near Mukteshwar — Kumaoni cuisine Whispering Pines Ramgarh" 
             className="w-full h-80 sm:h-96 object-cover rounded-2xl border border-[#EAE8E3] shadow-md" 
