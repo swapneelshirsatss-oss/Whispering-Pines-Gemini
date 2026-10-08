@@ -13,7 +13,7 @@ import {
   FileText,
   Briefcase
 } from "lucide-react";
-import { trackAdsConversion } from "../utils/analytics";
+import { trackFormConversion } from "../utils/analytics";
 
 interface CorporateFormData {
   companyName: string;
@@ -82,14 +82,8 @@ Looking forward to receiving the customized corporate offsite proposal.`;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting || submitted) return;
     setIsSubmitting(true);
-
-    // Track conversion in Google Ads / GTM
-    trackAdsConversion("generate_lead", "corporate", "corporate_offsite_proposal_submission", {
-      phone_number: formData.phone,
-      method: "corporate_proposal_form",
-      conversion_type: "whatsapp",
-    });
 
     const waText = constructWhatsAppMessage(formData);
     const waUrl = `https://wa.me/917505029696?text=${encodeURIComponent(waText)}`;
@@ -97,6 +91,12 @@ Looking forward to receiving the customized corporate offsite proposal.`;
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
+
+      // Conversion fires here, once the submission has actually succeeded
+      trackFormConversion("corporate_offsite_proposal_submission", {
+        phone_number: formData.phone,
+        method: "corporate_proposal_form",
+      });
 
       // Open WhatsApp in a new tab so organizer communicates directly with the corporate desk
       if (typeof window !== "undefined") {

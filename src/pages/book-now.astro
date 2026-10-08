@@ -114,89 +114,11 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
       ]
     })} />
 
-    <!-- Google Ads Conversion Mapping & Session Attribution Engine -->
-    <script is:inline>
-      (function() {
-        var ADS_ID = 'AW-18455442099';
-        var ADS_PHONE = 'AW-18455442099/Vc_dCNLMo_UcEN7JhfND';
-
-        // 1. Session-Level Attribution Store
-        try {
-          var params = new URLSearchParams(window.location.search);
-          var gclid = params.get('gclid') || params.get('gbraid') || params.get('wbraid');
-          var utmSource = params.get('utm_source');
-          var utmCampaign = params.get('utm_campaign');
-          var utmMedium = params.get('utm_medium');
-          var utmContent = params.get('utm_content');
-
-          if (gclid || utmSource || utmCampaign) {
-            var attribution = {
-              gclid: gclid || '',
-              utm_source: utmSource || '',
-              utm_campaign: utmCampaign || '',
-              utm_medium: utmMedium || '',
-              utm_content: utmContent || '',
-              timestamp: Date.now()
-            };
-            sessionStorage.setItem('wpr_ads_attribution', JSON.stringify(attribution));
-          }
-        } catch (e) {}
-
-        // 2. Global Universal Conversion Dispatcher
-        window.trackBookingConversion = function(action, category, label, extra) {
-          extra = extra || {};
-          window.dataLayer = window.dataLayer || [];
-
-          // Enrich with stored attribution if available
-          try {
-            var rawAttr = sessionStorage.getItem('wpr_ads_attribution');
-            if (rawAttr) {
-              var saved = JSON.parse(rawAttr);
-              if (saved.gclid && !extra.gclid) extra.gclid = saved.gclid;
-              if (saved.utm_source && !extra.utm_source) extra.utm_source = saved.utm_source;
-              if (saved.utm_campaign && !extra.utm_campaign) extra.utm_campaign = saved.utm_campaign;
-            }
-          } catch (e) {}
-
-          var payload = Object.assign({
-            event: action,
-            event_category: category || 'booking',
-            event_label: label || 'direct_booking',
-          }, extra);
-
-          // Push to GTM dataLayer
-          window.dataLayer.push(payload);
-
-          // Dispatch to Google Tag (gtag)
-          if (typeof window.gtag === 'function') {
-            window.gtag('event', action, payload);
-
-            if (action === 'generate_lead') {
-              window.gtag('event', 'conversion', {
-                send_to: ADS_ID,
-                value: extra.value,
-                currency: extra.currency || (extra.value ? 'INR' : undefined),
-                transaction_id: 'lead_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7)
-              });
-            } else if (action === 'phone_call_click') {
-              window.gtag('event', 'conversion', {
-                send_to: ADS_PHONE,
-                phone_conversion_number: extra.phone_number || '7505029696'
-              });
-            } else if (action === 'begin_checkout') {
-              window.gtag('event', 'conversion', {
-                send_to: ADS_ID,
-                value: extra.value,
-                currency: extra.currency || (extra.value ? 'INR' : undefined)
-              });
-            }
-          }
-        };
-
-        // Backward compatibility alias
-        window.trackAdsConversion = window.trackBookingConversion;
-      })();
-    </script>
+    <!--
+      Conversion dispatch and the gclid/UTM attribution store both live site-wide now:
+      /js/conversions.js (loaded from Layout.astro) owns window.trackBookingConversion,
+      and Layout.astro's gtag block owns sessionStorage['wpr_ads_attribution'].
+    -->
   </Fragment>
 
   <!-- =========================================================================

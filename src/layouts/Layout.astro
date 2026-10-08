@@ -156,6 +156,9 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
     <link rel="preconnect" href="https://news.google.com" />
     <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 
+    <!-- Google Ads conversion dispatcher (single source of truth, one conversion per action) -->
+    <script is:inline defer src="/js/conversions.js"></script>
+
     <!-- Delegated data-track-* click tracking (no inline onclick handlers, CSP-safe) -->
     <script is:inline defer src="/js/click-tracking.js"></script>
 
