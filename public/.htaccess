@@ -37,6 +37,12 @@
   RewriteRule ^images/villa[\s%20]+in[\s%20]+nanital\.avif$ https://whisperingpinesresort.in/images/villa_in_nanital.avif [R=301,L]
   RewriteRule ^_astro/stay-near-kainchi-dham\..*\.avif$ https://whisperingpinesresort.in/images/stay-near-kainchi-dham.avif [R=301,L]
 
+  # Renamed away from spaces, ampersands and a double extension (broke og:image previews)
+  RewriteRule ^images/Best-resort-to-stay/Why-Whispering-Pines[\s%20]+-is-the-Best-Resort-to-Stay-near-Mukteshwar\.avif$ https://whisperingpinesresort.in/images/Best-resort-to-stay/Why-Whispering-Pines-is-the-Best-Resort-to-Stay-near-Mukteshwar.avif [R=301,L]
+  RewriteRule ^images/Best-Stay-Near-Mukteshwar-&-Kainchi-Dham\.avif$ https://whisperingpinesresort.in/images/Best-Stay-Near-Mukteshwar-and-Kainchi-Dham.avif [R=301,L]
+  RewriteRule ^images/Himalayan-View-Resort-in-Uttarakhand/Himalayan-View[\s%20]+Resort-Uttarakhand[\s%20]+with-Private-Villa\.avif$ https://whisperingpinesresort.in/images/Himalayan-View-Resort-in-Uttarakhand/Himalayan-View-Resort-Uttarakhand-with-Private-Villa.avif [R=301,L]
+  RewriteRule ^images/Himalayan-View-Resort-in-Uttarakhand/Nanda-Devi-the-Best-Himalayan-View-Resort-in-Uttarakhand\.png[\s%20]+\(2026\)\.avif$ https://whisperingpinesresort.in/images/Himalayan-View-Resort-in-Uttarakhand/Nanda-Devi-the-Best-Himalayan-View-Resort-in-Uttarakhand-2026.avif [R=301,L]
+
   # 4. Force trailing slash ONLY on directory/page URIs (excluding static files and URIs with trailing slash)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_URI} !\.(xml|txt|html|js|css|svg|png|jpg|jpeg|webp|avif|ico|json|woff|woff2)$ [NC]

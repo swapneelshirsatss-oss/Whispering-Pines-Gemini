@@ -100,7 +100,9 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
       <meta name="robots" content="index, follow" />
     )}
     
-    <link rel="canonical" href={canonicalURL.href} />
+    {/* A noindex page should not also declare a canonical: the two are conflicting signals
+        and Google may follow the canonical and ignore the noindex. */}
+    {!noindex && <link rel="canonical" href={canonicalURL.href} />}
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
