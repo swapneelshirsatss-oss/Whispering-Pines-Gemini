@@ -12,6 +12,13 @@ export type BlogPostData = {
   date: string;
   readTime: string;
   imageUrl: string;
+  /**
+   * og:image / schema image override, 1200x630 WebP in /images/og/.
+   * Required whenever `imageUrl` is AVIF: Facebook, WhatsApp and LinkedIn crawlers cannot
+   * decode AVIF, so those pages share with no preview image. Generate with
+   * `node scripts/make-og-images.mjs`. Falls back to `imageUrl` when unset.
+   */
+  ogImage?: string;
   customUrl?: string;
   content?: React.ReactNode;
   faqSchema?: any;
@@ -27,7 +34,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     excerpt: "Looking for a stay near Mukteshwar and Kainchi Dham? Discover Whispering Pines by Casa De Bello in Ramgarh with Himalayan views, villas, dining, Wi-Fi and more.",
     date: "September 23, 2026",
     readTime: "15 min read",
-    imageUrl: "/images/Best-Stay-Near-Mukteshwar-&-Kainchi-Dham.avif"
+    imageUrl: "/images/Best-Stay-Near-Mukteshwar-and-Kainchi-Dham.avif"
   },
   {
     id: 11,
@@ -195,6 +202,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     date: "June 27, 2026",
     readTime: "4 min read",
     imageUrl: "/images/Whispering-pines-balcony-view-nanital.avif",
+    ogImage: "/images/og/clarks-exotica-transition.webp",
     content: (
       <div className="space-y-6 text-[#2C3531]">
         <p className="text-lg text-gray-700 leading-relaxed font-light">
@@ -568,6 +576,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     date: "January 10, 2026",
     readTime: "6 min read",
     imageUrl: "/images/What-Makes-Our-resort-Villas-Different-From-Regular-Homestays-Near-Mukteshwar-uttarkhand.avif",
+    ogImage: "/images/og/winter-in-the-himalayas.webp",
     content: (
       <div className="space-y-6 text-[#2C3531]">
         <p className="text-lg text-gray-700 leading-relaxed font-light">
@@ -627,6 +636,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     date: "August 5, 2026",
     readTime: "12 min read",
     imageUrl: "/images/Resort_near-nainital-for-families.avif",
+    ogImage: "/images/og/resort-near-nainital.webp",
     content: (
       <div className="space-y-8 text-[#2C3531]">
         {/* Author E-E-A-T Banner */}
@@ -936,6 +946,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     date: "August 6, 2026",
     readTime: "16 min read",
     imageUrl: "/images/blog-resort-near-kainchi-dham-image/resorts-near-kainchi-dham-ashram-neem-karoli-baba-2026.avif",
+    ogImage: "/images/og/resort-stay-near-kainchi-dham.webp",
     content: (
       <div className="space-y-8 text-[#2C3531]">
         {/* Author E-E-A-T Banner */}
@@ -1495,7 +1506,8 @@ export const BLOG_POSTS: BlogPostData[] = [
     excerpt: "Best resort to stay near Mukteshwar — Whispering Pines in Ramgarh offers 180° Himalayan views, private villa, pool, 150 Mbps Wi-Fi & Kumaoni dining. Book direct on WhatsApp. Best price guaranteed.",
     date: "August 12, 2026",
     readTime: "16 min read",
-    imageUrl: "/images/Best-resort-to-stay/Why-Whispering-Pines -is-the-Best-Resort-to-Stay-near-Mukteshwar.avif",
+    imageUrl: "/images/Best-resort-to-stay/Why-Whispering-Pines-is-the-Best-Resort-to-Stay-near-Mukteshwar.avif",
+    ogImage: "/images/og/best-resort-to-stay-near-mukteshwar.webp",
     faqSchema: {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -1776,7 +1788,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         {/* Hero Image 1 */}
         <div className="my-6">
           <img 
-            src="/images/Best-resort-to-stay/Why-Whispering-Pines -is-the-Best-Resort-to-Stay-near-Mukteshwar.avif" 
+            src="/images/Best-resort-to-stay/Why-Whispering-Pines-is-the-Best-Resort-to-Stay-near-Mukteshwar.avif" 
             alt="Best resort to stay near Mukteshwar for families couples pet owners workcation — Whispering Pines Casa De Bello Ramgarh" 
             className="w-full h-80 sm:h-96 object-cover rounded-2xl border border-[#EAE8E3] shadow-md" 
           />
