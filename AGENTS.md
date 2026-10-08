@@ -117,6 +117,8 @@ Whenever updating `public/.htaccess` or `public/_headers`:
   - Google Tag Assistant (`tagmanager.google.com`, `*.googletagmanager.com`)
   - Google endpoints (`www.google.com`, `*.google.com`, `www.google.co.in`, `*.google.co.in`)
   - **Google Website Call Metrics & Static Assets (`https://www.gstatic.com`, `https://*.gstatic.com`)**: Required for Google Ads dynamic telephone call tracking (`wcm/loader.js`). Missing this results in `script-src-elem` CSP blocks and breaks phone call conversion reporting.
+- **`connect-src` Must Carry `*.doubleclick.net`**: `td.doubleclick.net` is called by the Ads tag at runtime and was once allowed in `frame-src` only, which silently refused the request. Listing the wildcard in `connect-src` covers `td.`, `ad.`, `stats.g.` and `googleads.g.` together.
+- **Do Not Narrow `img-src` To Google Hosts**: `img-src` must keep its broad `https:` token. The OTA badges load from `promos.makemytrip.com` and `www.blogadda.com`, so an allowlist of Google hosts blanks out visible content.
 - **HTML Cache Revalidation Invariant**: Always ensure `text/html` has `max-age=0, no-cache, no-store, must-revalidate`. Never allow global `ExpiresDefault` to apply 30-day caching to HTML files, ensuring that new deployments and header updates take effect without edge CDN lag.
 - **Dual-Header Synchronization**: Maintain exact 1-to-1 directive parity between `public/.htaccess` and `public/_headers`.
 
@@ -138,11 +140,20 @@ Whenever designing or refactoring direct booking pages, room cards, or conversio
 - **Dynamic Payload Synchronization**: Ensure the client-side JavaScript calculator updates the pre-filled WhatsApp message payload across `#btn-whatsapp-submit`, `#mobile-sticky-whatsapp`, and `#desktop-floating-whatsapp` simultaneously.
 - **Conversion Measurement Invariant**: Every WhatsApp CTA click must fire `generate_lead` / `trackAdsConversion` to Google Ads and Google Tag Manager.
 - **Google Ads Conversion Mapping Standards**:
+  - **Single Dispatcher**: `public/js/conversions.js` is the only place that sends a Google Ads conversion. It is loaded once site-wide from `Layout.astro` and owns `window.trackBookingConversion` / `window.trackAdsConversion`. Never define a second dispatcher in a page or component — `book-now.astro` used to carry one and it raced the React copy for ownership of the global.
   - **Account ID**: `AW-18455442099` initialized with `allow_enhanced_conversions: true` and `conversion_linker: true`.
-  - **Phone Call Conversion Action**: `AW-18455442099/Vc_dCNLMo_UcEN7JhfND` mapped to phone number `7505029696`.
-  - **Lead Conversion Mapping**: WhatsApp inquiries dispatch `generate_lead` + `conversion` (`AW-18455442099`) with dynamic estimated room value and currency `INR` for Smart Bidding / Target ROAS.
-  - **Booking Engine Conversion Mapping**: BookingJini clicks dispatch `begin_checkout` + `conversion` (`AW-18455442099`).
-  - **Attribution Persistence**: Capture `gclid`, `gbraid`, `wbraid`, and UTM parameters into `sessionStorage` on landing page arrival so attribution is preserved throughout the session and injected into WhatsApp payloads.
+  - **Never send to a bare account ID**: `send_to` must always be `AW-18455442099/<LABEL>`. Sending to `AW-18455442099` alone registers against no conversion action and silently reports nothing — this was the cause of the unreliable 2026 conversion data.
+  - **Conversion Actions**: `call` → `Vc_dCNLMo_UcEN7JhfND` (live). `form`, `whatsapp` and `booking` are placeholders (`__FORM_CONVERSION_LABEL__` etc.) until the actions are created in Google Ads. A label still containing `__` sends the GA4 event but deliberately skips the conversion.
+  - **One Conversion Per Action**: The dispatcher dedupes per conversion kind over a 2s window, so a React `onClick` and the delegated `tel:`/WhatsApp listener cannot both count one click. Rely on that rather than adding your own guard.
+  - **Forms Fire On Success Only**: An enquiry form must call `trackFormConversion` after the submission has succeeded, never at the top of `handleSubmit` and never on button click.
+  - **Attribution Persistence**: Capture `gclid`, `gbraid`, `wbraid`, and UTM parameters into `sessionStorage` on landing page arrival so attribution is preserved throughout the session and injected into WhatsApp payloads. `Layout.astro` owns this store; the dispatcher reads it.
+
+## Google Tag Manager Container (GTM-PL8FVLPX)
+
+The container is managed in the GTM UI, not in this repo. Audited 2026-10-08 by reading the public container JS:
+- **GA4 `G-7XZLK47P92` exists only in GTM.** There is no `G-` measurement ID anywhere in this codebase, so removing the GTM snippet from `Layout.astro` would kill analytics outright. Keep it.
+- **GTM reports Google Ads to `AW-18226439390`, a different account from the `AW-18455442099` used in code.** `18226439390` is the legacy ID. Conversions are therefore split across two accounts; confirm which account is live before changing either side.
+- A *Google Ads Conversion Tracking* tag (`18226439390` / `XkgfCJDMo8ocEN7JhfND`) fires on the **All Pages** trigger, counting a conversion on every page load. This is the bogus "page-load conversion on /about" — the container has no URL conditions at all, so it fires everywhere. It must be paused in the GTM UI; it cannot be fixed from this repo.
 
 ## Git & Version Control Rules
 
