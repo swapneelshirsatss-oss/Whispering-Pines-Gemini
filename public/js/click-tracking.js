@@ -10,6 +10,9 @@ document.addEventListener('click', function (e) {
       if (typeof window[fn] === 'function') {
         window[fn].apply(window, JSON.parse(el.getAttribute('data-track-args') || '[]'));
       }
+    } else if (/^tel:|wa\.me|whatsapp\.com/.test(el.getAttribute('href') || '')) {
+      // conversions.js already pushes this event for tel:/WhatsApp links; pushing it here too
+      // would put two identical events in the dataLayer for one click.
     } else {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push(JSON.parse(el.getAttribute('data-track-dl')));

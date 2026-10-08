@@ -83,7 +83,9 @@ Please confirm availability and share direct booking privileges.`;
   };
 
   const handleEngineBookingClick = () => {
-    trackAdsConversion("generate_lead", "booking", "engine_form_booking");
+    trackAdsConversion("begin_checkout", "booking", "engine_form_booking", {
+      conversion_type: "bookingjini",
+    });
   };
 
   return (

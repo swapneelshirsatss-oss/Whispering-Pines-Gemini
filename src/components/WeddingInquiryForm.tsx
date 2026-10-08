@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Calendar, Users, Phone, Mail, User, MessageSquare, Send, CheckCircle2, ShieldCheck, Sparkles, ArrowRight } from "lucide-react";
-import { trackAdsConversion } from "../utils/analytics";
+import { trackFormConversion } from "../utils/analytics";
 
 interface WeddingFormData {
   fullName: string;
@@ -43,14 +43,8 @@ I look forward to discussing the bridal villa allocation and customized wedding 
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting || submitted) return;
     setIsSubmitting(true);
-
-    // Track conversion in Google Ads / GTM
-    trackAdsConversion("generate_lead", "wedding", "wedding_proposal_submission", {
-      phone_number: formData.phone,
-      method: "proposal_form",
-      conversion_type: "whatsapp",
-    });
 
     const waText = constructWhatsAppMessage(formData);
     const waUrl = `https://wa.me/917505029696?text=${encodeURIComponent(waText)}`;
@@ -58,6 +52,12 @@ I look forward to discussing the bridal villa allocation and customized wedding 
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
+
+      // Conversion fires here, once the submission has actually succeeded
+      trackFormConversion("wedding_proposal_submission", {
+        phone_number: formData.phone,
+        method: "proposal_form",
+      });
 
       // Open WhatsApp in a new tab so guest communicates directly with the wedding team
       if (typeof window !== "undefined") {

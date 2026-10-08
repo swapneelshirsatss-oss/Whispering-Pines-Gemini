@@ -1,7 +1,9 @@
 /**
- * Google Ads & GTM Conversion Tracking Utility
- * Google Ads Account: AW-18455442099
- * Phone Call Conversion: AW-18455442099/Vc_dCNLMo_UcEN7JhfND
+ * Google Ads & GTM conversion tracking for the React islands.
+ *
+ * The dispatcher itself lives in public/js/conversions.js, loaded once from Layout.astro, so a
+ * click handled here and the same click seen by its delegated tel:/WhatsApp listener count once.
+ * Google Ads account: AW-18455442099. Conversion labels are configured in that file.
  */
 
 export interface ConversionExtraParams {
@@ -18,9 +20,24 @@ export interface ConversionExtraParams {
   [key: string]: any;
 }
 
-export const GOOGLE_ADS_ID = 'AW-18455442099';
-export const GOOGLE_ADS_PHONE_CONVERSION = 'AW-18455442099/Vc_dCNLMo_UcEN7JhfND';
+export type ConversionKind = 'call' | 'form' | 'whatsapp' | 'booking';
 
+export const GOOGLE_ADS_ID = 'AW-18455442099';
+
+/** Fires one Google Ads conversion for a completed user action. */
+export const fireConversion = (kind: ConversionKind, extra?: ConversionExtraParams) => {
+  if (typeof window === 'undefined') return;
+  (window as any).wprFireConversion?.(kind, extra);
+};
+
+/** Call only after an enquiry/booking form has submitted successfully. */
+export const trackFormConversion = (label: string, extra?: ConversionExtraParams) =>
+  fireConversion('form', { event_category: 'lead', event_label: label, ...extra });
+
+/**
+ * Legacy (action, category, label, extra) signature kept for the existing call sites; it maps the
+ * action onto a conversion kind, or sends a plain GA4 event when the action is not a conversion.
+ */
 export const trackAdsConversion = (
   action: string,
   category: string = 'booking',
@@ -28,57 +45,5 @@ export const trackAdsConversion = (
   extra?: ConversionExtraParams
 ) => {
   if (typeof window === 'undefined') return;
-
-  const win = window as any;
-  const payload: Record<string, any> = {
-    event: action,
-    event_category: category,
-    event_label: label || 'direct_booking',
-    ...extra,
-  };
-
-  // 1. Push to Google Tag Manager dataLayer
-  win.dataLayer = win.dataLayer || [];
-  win.dataLayer.push(payload);
-
-  // 2. Dispatch to Google Tag (gtag.js)
-  if (typeof win.gtag === 'function') {
-    // Standard GA4 / Google Tag event
-    win.gtag('event', action, {
-      event_category: category,
-      event_label: label,
-      value: extra?.value,
-      currency: extra?.currency || (extra?.value ? 'INR' : undefined),
-      ...extra,
-    });
-
-    // Dedicated Google Ads Conversion Action Mapping
-    if (action === 'generate_lead') {
-      win.gtag('event', 'conversion', {
-        send_to: GOOGLE_ADS_ID,
-        value: extra?.value,
-        currency: extra?.currency || 'INR',
-        transaction_id: 'lead_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7),
-      });
-    } else if (action === 'phone_call_click') {
-      win.gtag('event', 'conversion', {
-        send_to: GOOGLE_ADS_PHONE_CONVERSION,
-        phone_conversion_number: extra?.phone_number || '7505029696',
-      });
-    } else if (action === 'begin_checkout') {
-      win.gtag('event', 'conversion', {
-        send_to: GOOGLE_ADS_ID,
-        value: extra?.value,
-        currency: extra?.currency || 'INR',
-      });
-    }
-  }
+  (window as any).trackBookingConversion?.(action, category, label, extra);
 };
-
-// Global browser window attachment for inline HTML/Astro onclick handlers
-if (typeof window !== 'undefined') {
-  (window as any).trackAdsConversion = trackAdsConversion;
-  (window as any).trackBookingConversion = trackAdsConversion;
-}
-
-
