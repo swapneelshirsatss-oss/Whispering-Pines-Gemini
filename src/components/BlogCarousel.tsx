@@ -1,8 +1,31 @@
 import React, { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, ArrowRight, Clock, Calendar } from "lucide-react";
-import { BLOG_POSTS, type BlogPostData } from "../data/blogPosts";
 
-export default function BlogCarousel() {
+/**
+ * Only the card fields, declared locally on purpose.
+ *
+ * This component is a client island, so anything it imports is bundled into the
+ * browser payload. Importing BLOG_POSTS from ../data/blogPosts pulled that whole
+ * 175 KB module — every article body, FAQ and schema block — into the homepage
+ * JS to render ten thumbnails. The page passes these fields in as props instead,
+ * so the article bodies stay on the server. Do not import blogPosts here.
+ */
+export type BlogCardData = {
+  id: number;
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  readTime: string;
+  imageUrl: string;
+  customUrl?: string;
+};
+
+interface BlogCarouselProps {
+  posts: BlogCardData[];
+}
+
+export default function BlogCarousel({ posts }: BlogCarouselProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -94,7 +117,7 @@ export default function BlogCarousel() {
           className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-6 pt-2 -mx-4 px-4 sm:mx-0 sm:px-0"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {BLOG_POSTS.map((post: BlogPostData) => {
+          {posts.map((post: BlogCardData) => {
             const articleUrl = post.customUrl || `/blog/${post.slug}/`;
             return (
               <div
