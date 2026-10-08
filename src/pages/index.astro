@@ -15,6 +15,7 @@ import BookingInteractiveForm from "../components/BookingInteractiveForm";
 import OTABadges from "../components/OTABadges.astro";
 import TestimonialList from "../components/TestimonialList";
 import BlogCarousel from "../components/BlogCarousel";
+import { BLOG_CARDS } from "../data/blogPosts";
 import FAQAccordion from "../components/FAQAccordion";
 import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
@@ -87,7 +88,7 @@ const roomImages = {
       <TestimonialList client:visible />
 
       {/* Blog & Travel Guides Carousel */}
-      <BlogCarousel client:visible />
+      <BlogCarousel posts={BLOG_CARDS} client:visible />
 
       {/* FAQ Accordion panel */}
       <FAQAccordion client:visible />

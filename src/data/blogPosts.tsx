@@ -2298,3 +2298,24 @@ export const BLOG_POSTS: BlogPostData[] = [
   }
 ];
 
+/**
+ * Card-sized projection of BLOG_POSTS, for passing to client islands as props.
+ *
+ * Spreading a whole BlogPostData into an island would serialize `content`,
+ * `faqSchema` and `extraSchemas` into the page HTML, so only list the fields a
+ * card actually renders. Keep in sync with BlogCardData in
+ * components/BlogCarousel.tsx. Import this from .astro frontmatter only.
+ */
+export const BLOG_CARDS = BLOG_POSTS.map(
+  ({ id, slug, title, excerpt, date, readTime, imageUrl, customUrl }) => ({
+    id,
+    slug,
+    title,
+    excerpt,
+    date,
+    readTime,
+    imageUrl,
+    customUrl,
+  })
+);
+
