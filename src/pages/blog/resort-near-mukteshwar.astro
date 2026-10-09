@@ -43,8 +43,8 @@ const geoPlaceSchema = {
   "geoContains": [
     { "@type": "Place", "name": "Mukteshwar Dham Temple", "distance": "25 km" },
     { "@type": "Place", "name": "Kainchi Dham Neem Karoli Baba Ashram", "distance": "22 km" },
-    { "@type": "Place", "name": "Bhalu Gaad Waterfall", "distance": "12 km" },
-    { "@type": "Place", "name": "Nainital Lake", "distance": "35 km" }
+    { "@type": "Place", "name": "Bhalu Gaad Waterfall", "distance": "16 km (~35 mins)" },
+    { "@type": "Place", "name": "Nainital Lake", "distance": "26 km" }
   ]
 };
 
@@ -190,7 +190,7 @@ const faqSchema = {
       "name": "How do I book at the best price guaranteed?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Booking directly via WhatsApp (+91-7505029696) or phone saves up to 20% compared to MakeMyTrip, Booking.com, or Goibibo by bypassing 15-25% OTA commissions. Direct guests also enjoy priority room upgrades and flexible check-in times."
+        "text": "Booking directly via WhatsApp (+91-7505029696) or phone saves flat 25% compared to MakeMyTrip, Booking.com, or Goibibo by bypassing 25% OTA commissions. Direct guests also enjoy priority room upgrades and flexible check-in times."
       }
     },
     {
@@ -319,7 +319,7 @@ const faqSchema = {
         <div class="my-8 bg-[#1B3322] text-white p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 border-l-4 border-[#c9a832]">
           <div>
             <h4 class="font-bold text-lg text-white">Direct WhatsApp Booking Guarantee</h4>
-            <p class="text-xs sm:text-sm text-gray-300 font-light">Save up to 20% by skipping online travel agency commissions. Instant confirmation & direct front desk support.</p>
+            <p class="text-xs sm:text-sm text-gray-300 font-light">Save flat 25% by skipping online travel agency commissions. Instant confirmation & direct front desk support.</p>
           </div>
           <a 
             href={generateWhatsAppLink("Resort near Mukteshwar Booking Inquiry")} 
@@ -803,7 +803,7 @@ const faqSchema = {
             <ul class="space-y-3 text-xs sm:text-sm text-gray-700 font-light">
               <li><strong>07:00 AM:</strong> Guided morning walk through Malla Ramgarh peach & apple orchards.</li>
               <li><strong>09:00 AM:</strong> Paratha & continental breakfast at the resort restaurant.</li>
-              <li><strong>10:30 AM:</strong> Short drive to Bhalu Gaad Waterfall (12 km) for a 2 km pine canopy trek.</li>
+              <li><strong>10:30 AM:</strong> Short drive to Bhalu Gaad Waterfall (16 km) for a 2 km pine canopy trek.</li>
               <li><strong>02:00 PM:</strong> Visit Kainchi Dham Ashram (Neem Karoli Baba Ashram) for evening prayers.</li>
               <li><strong>06:00 PM:</strong> Return to resort for quiet dinner or live acoustic music evening.</li>
             </ul>
@@ -874,7 +874,7 @@ const faqSchema = {
               <h3 class="text-base font-bold text-[#1B3322]">3. Bhalu Gaad Waterfall Trek</h3>
               <p class="text-xs sm:text-sm text-gray-600 font-light">Natural waterfall pool hidden inside a lush pine forest. Gentle 2 km trek suitable for families.</p>
             </div>
-            <span class="bg-[#1B3322]/10 text-[#1B3322] font-semibold text-xs px-3 py-1 rounded-full shrink-0">12 km (20-min drive)</span>
+            <span class="bg-[#1B3322]/10 text-[#1B3322] font-semibold text-xs px-3 py-1 rounded-full shrink-0">16 km (35-min drive)</span>
           </div>
 
           <div class="bg-white p-5 rounded-xl border border-[#EAE8E3] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
@@ -916,7 +916,7 @@ const faqSchema = {
             <h3 class="font-bold text-[#1B3322]">By Road (Self Drive / Taxi)</h3>
             <p class="text-gray-600 font-light leading-relaxed">
               NH9 route from Delhi/NCR via Moradabad → Rampur → Haldwani → Bhowali → Malla Ramgarh.<br/>
-              <strong>Distance:</strong> ~320 km | <strong>Drive Time:</strong> 6–7.5 hours.
+              <strong>Distance:</strong> ~340 km | <strong>Drive Time:</strong> 6.5–7.5 hours.
             </p>
           </div>
 
@@ -924,7 +924,7 @@ const faqSchema = {
             <div class="text-2xl">🚂</div>
             <h3 class="font-bold text-[#1B3322]">By Train</h3>
             <p class="text-gray-600 font-light leading-relaxed">
-              Nearest Railhead: <strong>Kathgodam Railway Station</strong> (~45 km / 1 hr 15 min drive).<br/>
+              Nearest Railhead: <strong>Kathgodam Railway Station</strong> (~43 km / 1.5 hr drive via Bhowali Rd).<br/>
               Daily trains from Delhi: Kathgodam Shatabdi, Ranikhet Express. Resort cab pickup available.
             </p>
           </div>
@@ -933,7 +933,7 @@ const faqSchema = {
             <div class="text-2xl">✈️</div>
             <h3 class="font-bold text-[#1B3322]">By Air</h3>
             <p class="text-gray-600 font-light leading-relaxed">
-              Nearest Airport: <strong>Pantnagar Airport (PGH)</strong> (~75 km / 2 hr drive).<br/>
+              Nearest Airport: <strong>Pantnagar Airport (PGH)</strong> (~76 km / 2.5 hr drive via NH 109).<br/>
               Direct flights from Delhi, Mumbai, Bengaluru. Airport pickup arranged via front desk.
             </p>
           </div>
@@ -942,7 +942,7 @@ const faqSchema = {
         <div class="bg-white p-6 rounded-2xl border border-[#EAE8E3] text-center space-y-2">
           <h4 class="font-bold text-[#1B3322]">Exact Property Location Address</h4>
           <p class="text-xs sm:text-sm text-gray-600 font-light">
-            Whispering Pines Resort by Casa De Bello, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137
+            Whispering Pines Resort by Casa De Bello, House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Ramgarh, Nainital, Uttarakhand 263137
           </p>
           <a href="/contact-whispering-pines-resort-mukteshwar/" class="inline-block text-xs font-semibold text-[#c9a832] hover:underline pt-1">
             View Interactive Google Map & Directions →

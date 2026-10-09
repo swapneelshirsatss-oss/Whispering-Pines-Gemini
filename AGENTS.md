@@ -130,7 +130,7 @@ Whenever refactoring or adding links to header navigation:
 ## Direct Booking & WhatsApp CRO Standards
 
 Whenever designing or refactoring direct booking pages, room cards, or conversion CTAs:
-- **WhatsApp Visual Dominance**: All primary direct booking buttons must use authentic WhatsApp green (`#25D366` hover `#1EBE5D`), an animated concentric pulse ring, and explicit direct saving microcopy (*"Save 15–20% Direct • ⚡ < 5m reply"*).
+- **WhatsApp Visual Dominance**: All primary direct booking buttons must use authentic WhatsApp green (`#25D366` hover `#1EBE5D`), an animated concentric pulse ring, and explicit direct saving microcopy (*"Save Flat 25% Direct • ⚡ < 5m reply"*).
 - **Multi-Viewport Availability**:
   - **Desktop**: Maintain the persistent floating WhatsApp concierge pill at `bottom-6 right-6 z-50 hidden md:flex`.
   - **Mobile**: Maintain the mobile sticky bottom bar with WhatsApp highlighted as the hero CTA.
@@ -143,6 +143,27 @@ Whenever designing or refactoring direct booking pages, room cards, or conversio
   - **Lead Conversion Mapping**: WhatsApp inquiries dispatch `generate_lead` + `conversion` (`AW-18455442099`) with dynamic estimated room value and currency `INR` for Smart Bidding / Target ROAS.
   - **Booking Engine Conversion Mapping**: BookingJini clicks dispatch `begin_checkout` + `conversion` (`AW-18455442099`).
   - **Attribution Persistence**: Capture `gclid`, `gbraid`, `wbraid`, and UTM parameters into `sessionStorage` on landing page arrival so attribution is preserved throughout the session and injected into WhatsApp payloads.
+
+## Canonical Entity & Geographic Ground-Truth Invariants (AEO / GEO Fact Parity)
+
+All copy, metadata, structured data, calculator models, and LLM text files must strictly maintain the following facts with zero deviations:
+- **Canonical Address**: `House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, District Nainital, Uttarakhand 263137`
+- **Direct Booking Discount**: Flat `25%` (Zero OTA commission; $P_{OTA} = \frac{P_{direct}}{0.75}$)
+- **Official Booking Engines**: `https://casadebello-book.whisperingpinesresort.in/` (whitelabel) / `https://whisperingpinesresort.bookingjini.in/`
+- **Google Verified Rating**: `4.6★ (388 verified Google reviews)` (Never say generic "400+")
+- **Total Capacity & Inventory**: `25 premium rooms` + `1 standalone 3-BHK private alpine villa` (Sleeps up to 70 residential guests; outdoor lawn events & weddings up to 100 guests)
+- **Room Categories**: `3-BHK Private Alpine Villa`, `Deluxe Skylight Suite`, `Family Twin Room`, `Executive Cedar Suite` (Avoid calling them "stone cottages" or "homestays")
+- **Wi-Fi**: Dedicated `150 Mbps Enterprise Fiber Wi-Fi` across all rooms, lawns, and desks (Never say "ambient Wi-Fi")
+- **Amenities**: On-site `Pine Forest Swimming Pool` at 1,780m, working organic fruit orchards, wood-fired fireplaces, bonfire pits, pet-friendly lawns
+- **Key Distances & Transit Times**:
+  - **Kainchi Dham (Neem Karoli Baba Ashram)**: `22 km (~45 mins drive)`
+  - **Bhalu Gaad Waterfall**: `16 km (~35 mins drive)`
+  - **Mukteshwar Dham Temple & Chauli Ki Jali**: `25 km (~45-50 mins drive)`
+  - **Nainital Mall Road**: `26 km (~55 mins drive)`
+  - **Bhimtal Lake**: `26 km (~50 mins drive)`
+  - **Kathgodam Railway Station (KGM)**: `43 km (~1.5 hours drive via Bhowali Rd)`
+  - **Pantnagar Airport (PGH)**: `76 km (~2.5 hours drive via NH 109)`
+  - **Delhi / NCR**: `~340 km (6.5 to 7.5 hours drive via NH 9)`
 
 ## Git & Version Control Rules
 

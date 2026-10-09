@@ -44,7 +44,7 @@ const geoPlaceSchema = {
   "@context": "https://schema.org",
   "@type": "Place",
   "name": "Whispering Pines Resort — Malla Ramgarh, Uttarakhand",
-  "description": "Boutique 4-star mountain sanctuary positioned at 1,780 metres in Malla Ramgarh along the Bhowali-Ramgarh-Mukteshwar corridor, 18 km from Kainchi Dham Ashram and 25 km from Mukteshwar Dham.",
+  "description": "Boutique 4-star mountain sanctuary positioned at 1,780 metres in Malla Ramgarh along the Bhowali-Ramgarh-Mukteshwar corridor, 22 km from Kainchi Dham Ashram and 25 km from Mukteshwar Dham.",
   "hasMap": "https://maps.google.com/?cid=8386667112972057918",
   "geo": {
     "@type": "GeoCoordinates",
@@ -53,9 +53,9 @@ const geoPlaceSchema = {
     "elevation": "1780"
   },
   "geoContains": [
-    { "@type": "Place", "name": "Kainchi Dham Neem Karoli Baba Ashram", "distance": "18 km (~45 mins drive)" },
+    { "@type": "Place", "name": "Kainchi Dham Neem Karoli Baba Ashram", "distance": "22 km (~45 mins drive)" },
     { "@type": "Place", "name": "Mukteshwar Dham Temple & Chauli Ki Jali", "distance": "25 km (~45 mins drive)" },
-    { "@type": "Place", "name": "Bhalu Gaad Waterfall", "distance": "12 km (~25 mins drive)" },
+    { "@type": "Place", "name": "Bhalu Gaad Waterfall", "distance": "16 km (~35 mins drive)" },
     { "@type": "Place", "name": "Malla Ramgarh Fruit Orchards", "distance": "0.5 km (walking distance)" }
   ]
 };
@@ -89,13 +89,13 @@ const resortSchema = {
   "@context": "https://schema.org",
   "@type": ["Resort", "Hotel", "LodgingBusiness"],
   "name": "Whispering Pines Resort by Casa De Bello",
-  "description": "Boutique mountain resort with 22 rooms, private 3-BHK villa, farm-to-table dining, and 180° Himalayan views at 1,780 metres in Malla Ramgarh near Mukteshwar and Kainchi Dham.",
+  "description": "Boutique mountain resort with 25 rooms, private 3-BHK villa, farm-to-table dining, and 180° Himalayan views at 1,780 metres in Malla Ramgarh near Mukteshwar and Kainchi Dham.",
   "url": "https://whisperingpinesresort.in",
   "telephone": "+91-7505029696",
   "email": "booking@whisperingpinesresort.in",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+    "streetAddress": "House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
     "addressLocality": "Ramgarh",
     "addressRegion": "Uttarakhand",
     "postalCode": "263137",
@@ -123,7 +123,7 @@ const faqSchema = {
       "name": "How far is Kainchi Dham from Whispering Pines?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Kainchi Dham (Neem Karoli Baba Ashram) is approximately 18 km from Whispering Pines by Casa De Bello — about 40 to 45 minutes by road along the scenic Bhowali-Ramgarh route. Our front desk helps arrange morning cab departures for darshan."
+        "text": "Kainchi Dham (Neem Karoli Baba Ashram) is approximately 22 km from Whispering Pines by Casa De Bello — about 45 minutes by road along the scenic Bhowali-Ramgarh route. Our front desk helps arrange morning cab departures for darshan."
       }
     },
     {
@@ -225,7 +225,7 @@ const faqSchema = {
 
         <!-- Subheading / Geographic Highlights -->
         <p class="text-base sm:text-xl text-gray-200 font-light max-w-3xl mx-auto leading-relaxed text-pretty">
-          Malla Ramgarh Ridge · 1,780m Altitude · 180° Nanda Devi Panorama · 18 km to Kainchi Dham · 4.6★ Google Verified
+          Malla Ramgarh Ridge · 1,780m Altitude · 180° Nanda Devi Panorama · 22 km to Kainchi Dham · 4.6★ Google Verified
         </p>
 
         <!-- Primary Conversion Actions -->
@@ -243,7 +243,7 @@ const faqSchema = {
             href="/book-now/"
             class="inline-flex items-center gap-2 px-6 py-3.5 bg-white/10 hover:bg-white/15 border border-white/25 text-white font-medium text-sm rounded-xl transition-all backdrop-blur-sm"
           >
-            Direct Booking Privileges (Save 20%)
+            Direct Booking Privileges (Save Flat 25%)
           </a>
         </div>
 
@@ -293,7 +293,7 @@ const faqSchema = {
         </div>
         <figcaption class="mt-3.5 flex items-center justify-center gap-2 text-xs sm:text-sm text-gray-600 font-light text-center px-4">
           <span class="w-1.5 h-1.5 rounded-full bg-[#c9a832] shrink-0"></span>
-          <span><strong>Strategic Ridge Base:</strong> Whispering Pines in Malla Ramgarh — 18 km to Kainchi Dham Ashram & 25 km to Mukteshwar Dham.</span>
+          <span><strong>Strategic Ridge Base:</strong> Whispering Pines in Malla Ramgarh — 22 km to Kainchi Dham Ashram & 25 km to Mukteshwar Dham.</span>
         </figcaption>
       </figure>
 
@@ -304,7 +304,7 @@ const faqSchema = {
           <h2 class="text-lg font-bold text-white">Direct Guide: Best Stay Near Mukteshwar and Kainchi Dham</h2>
         </div>
         <p class="text-gray-200 text-sm sm:text-base leading-relaxed font-light text-pretty">
-          For travellers planning a trip covering both <strong class="text-white">Kainchi Dham Ashram</strong> and <strong class="text-white">Mukteshwar</strong>, the quiet fruit bowl ridge of <a href="/blog/ramgarh-fruit-bowl-of-kumaon/" class="text-[#c9a832] underline underline-offset-2">Malla Ramgarh</a> offers the most practical and peaceful base. <strong class="text-white"><a href="/" class="text-white underline underline-offset-2">Whispering Pines Resort by Casa De Bello</a></strong> sits at 1,780 metres elevation, located roughly <strong>18 km (~45 mins) from Kainchi Dham</strong> and <strong>25 km (~45 mins) from Mukteshwar</strong>. With 22 boutique units (including Super Deluxe rooms, Family Twin suites, and a standalone 3-BHK villa), 180° unobstructed Nanda Devi Himalayan views, on-site Kumaoni dining, pet-friendly lawns, and 150 Mbps fiber Wi-Fi, it avoids the highway noise and tourist crowding of town centers while keeping regional sights easily accessible.
+          For travellers planning a trip covering both <strong class="text-white">Kainchi Dham Ashram</strong> and <strong class="text-white">Mukteshwar</strong>, the quiet fruit bowl ridge of <a href="/blog/ramgarh-fruit-bowl-of-kumaon/" class="text-[#c9a832] underline underline-offset-2">Malla Ramgarh</a> offers the most practical and peaceful base. <strong class="text-white"><a href="/" class="text-white underline underline-offset-2">Whispering Pines Resort by Casa De Bello</a></strong> sits at 1,780 metres elevation, located roughly <strong>22 km (~45 mins) from Kainchi Dham</strong> and <strong>25 km (~45 mins) from Mukteshwar</strong>. With 25 premium rooms and a standalone 3-BHK private villa, 180° unobstructed Nanda Devi Himalayan views, on-site Kumaoni dining, pet-friendly lawns, and 150 Mbps fiber Wi-Fi, it avoids the highway noise and tourist crowding of town centers while keeping regional sights easily accessible.
         </p>
       </section>
 
@@ -476,7 +476,7 @@ const faqSchema = {
           One of the primary reasons pilgrims and spiritual travellers choose Whispering Pines is its comfortable connectivity to <strong>Kainchi Dham Ashram</strong>, the sacred seat of <strong>Neem Karoli Baba</strong>.
         </p>
         <p class="text-base leading-relaxed text-gray-700 font-light mb-5 text-pretty">
-          The ashram is approximately <strong>18 km away</strong> via the scenic Bhowali-Ramgarh road. Under standard morning driving conditions, the journey takes around <strong>40 to 45 minutes</strong>.
+          The ashram is approximately <strong>22 km away</strong> via the scenic Bhowali-Ramgarh road. Under standard morning driving conditions, the journey takes around <strong>45 minutes</strong>.
         </p>
         <p class="text-base leading-relaxed text-gray-700 font-light mb-6 text-pretty">
           For devotees, visiting Kainchi Dham is rarely just another tourist checkbox. It is an intentional, deeply spiritual pilgrimage. Staying in Ramgarh allows you to depart early in the morning before traffic accumulates on the lower highway, attend morning darshan and aarti in calm contemplation, and return to a peaceful hillside retreat away from crowded tour buses. Explore our dedicated <a href="/blog/resort-stay-near-kainchi-dham/" class="text-[#1B3322] font-semibold underline decoration-[#c9a832] decoration-2 underline-offset-2">Kainchi Dham Travel Guide</a> for complete ashram etiquette and darshan tips.
@@ -544,7 +544,7 @@ const faqSchema = {
             </div>
             <h3 class="text-lg font-bold text-[#1B3322] mb-2">Morning Darshan at Neem Karoli Baba Ashram</h3>
             <p class="text-sm text-gray-700 font-light leading-relaxed">
-              Leave early (around 7:30 AM) for the 18 km drive to Kainchi Dham to experience peaceful morning darshan. Spend undisturbed time by the temple riverside, collect prasad, and absorb the serene ashram energy. In the afternoon, explore local tea stalls and fruit stalls around Bhowali before returning to the resort and quiet lawns.
+              Leave early (around 7:30 AM) for the 22 km drive to Kainchi Dham to experience peaceful morning darshan. Spend undisturbed time by the temple riverside, collect prasad, and absorb the serene ashram energy. In the afternoon, explore local tea stalls and fruit stalls around Bhowali before returning to the resort and quiet lawns.
             </p>
           </div>
 
@@ -554,7 +554,7 @@ const faqSchema = {
             </div>
             <h3 class="text-lg font-bold text-[#1B3322] mb-2">Temples, Waterfalls & Himalayan Horizons</h3>
             <p class="text-sm text-gray-700 font-light leading-relaxed">
-              Head up the ridge toward Mukteshwar (25 km). Visit the ancient Mukteshwar Dham Shiva temple, walk out onto the dramatic cliffs of Chauli Ki Jali for panoramic valley drops, and stop by Bhalu Gaad Waterfall (12 km from resort) for a refreshing forest hike. Return in the evening for stargazing under crystal-clear mountain skies.
+              Head up the ridge toward Mukteshwar (25 km). Visit the ancient Mukteshwar Dham Shiva temple, walk out onto the dramatic cliffs of Chauli Ki Jali for panoramic valley drops, and stop by Bhalu Gaad Waterfall (16 km from resort) for a refreshing forest hike. Return in the evening for stargazing under crystal-clear mountain skies.
             </p>
           </div>
         </div>
@@ -592,7 +592,7 @@ const faqSchema = {
           <span class="inline-block px-3 py-1 bg-[#c9a832] text-[#1B3322] text-xs font-bold rounded-full uppercase tracking-wider">Direct Booking Privilege</span>
           <h3 class="text-xl sm:text-2xl font-bold text-white">Planning Your Trip to Mukteshwar & Kainchi Dham?</h3>
           <p class="text-sm text-gray-200 font-light max-w-xl">
-            Save up to 20% compared to OTA platforms. Get priority room upgrades, flexible check-in, and instant cab coordination directly via our WhatsApp concierge.
+            Save flat 25% compared to OTA platforms. Get priority room upgrades, flexible check-in, and instant cab coordination directly via our WhatsApp concierge.
           </p>
         </div>
         <a
@@ -618,7 +618,7 @@ const faqSchema = {
           <div class="bg-white p-5 rounded-xl border border-[#EAE8E3] shadow-sm">
             <h4 class="font-bold text-[#1B3322] text-base mb-2">🌊 Bhalu Gaad Waterfall</h4>
             <p class="text-xs text-gray-600 font-light leading-relaxed">
-              <strong>~12 km away</strong>. A hidden 60-foot waterfall reached via a picturesque 1.5 km forest trail alongside bubbling mountain streams. Perfect for nature lovers and families.
+              <strong>~16 km away</strong>. A hidden 60-foot waterfall reached via a picturesque 1.5 km forest trail alongside bubbling mountain streams. Perfect for nature lovers and families.
             </p>
           </div>
           <div class="bg-white p-5 rounded-xl border border-[#EAE8E3] shadow-sm">
@@ -864,8 +864,8 @@ const faqSchema = {
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 my-6">
           <div class="bg-white p-4 rounded-xl border border-[#EAE8E3] text-center shadow-sm">
             <div class="text-xs text-gray-500 uppercase font-semibold">Kainchi Dham Ashram</div>
-            <div class="text-xl font-bold text-[#1B3322] mt-1">~18 km</div>
-            <div class="text-xs text-gray-600 font-light mt-1">~40–45 mins drive</div>
+            <div class="text-xl font-bold text-[#1B3322] mt-1">~22 km</div>
+            <div class="text-xs text-gray-600 font-light mt-1">~45 mins drive</div>
           </div>
           <div class="bg-white p-4 rounded-xl border border-[#EAE8E3] text-center shadow-sm">
             <div class="text-xs text-gray-500 uppercase font-semibold">Mukteshwar Town</div>
@@ -874,8 +874,8 @@ const faqSchema = {
           </div>
           <div class="bg-white p-4 rounded-xl border border-[#EAE8E3] text-center shadow-sm">
             <div class="text-xs text-gray-500 uppercase font-semibold">Bhalu Gaad Waterfall</div>
-            <div class="text-xl font-bold text-[#1B3322] mt-1">~12 km</div>
-            <div class="text-xs text-gray-600 font-light mt-1">~25 mins drive</div>
+            <div class="text-xl font-bold text-[#1B3322] mt-1">~16 km</div>
+            <div class="text-xs text-gray-600 font-light mt-1">~35 mins drive</div>
           </div>
           <div class="bg-white p-4 rounded-xl border border-[#EAE8E3] text-center shadow-sm">
             <div class="text-xs text-gray-500 uppercase font-semibold">Kathgodam Railhead</div>
@@ -916,7 +916,7 @@ const faqSchema = {
               <span class="shrink-0 text-[#c9a832] group-open:rotate-45 transition-transform text-xl leading-none">+</span>
             </summary>
             <div class="px-6 pb-5 text-sm text-gray-600 font-light leading-relaxed border-t border-[#EAE8E3] pt-4">
-              Kainchi Dham (Neem Karoli Baba Ashram) is approximately 18 km from Whispering Pines by Casa De Bello — about 40 to 45 minutes by road along the scenic Bhowali-Ramgarh route. Our front desk helps arrange morning cab departures for darshan.
+              Kainchi Dham (Neem Karoli Baba Ashram) is approximately 22 km from Whispering Pines by Casa De Bello — about 45 minutes by road along the scenic Bhowali-Ramgarh route. Our front desk helps arrange morning cab departures for darshan.
             </div>
           </details>
 
@@ -1018,7 +1018,7 @@ const faqSchema = {
       <section class="bg-[#1B3322] rounded-2xl p-8 text-center text-white border border-[#c9a832]/30 shadow-xl">
         <h3 class="text-xl sm:text-2xl font-bold mb-2">Reserve Your Mountain Sanctuary Direct</h3>
         <p class="text-gray-300 text-sm font-light max-w-2xl mx-auto mb-6 leading-relaxed">
-          22 boutique rooms · Standalone 3-BHK villa · 180° Nanda Devi snow peaks · Farm-to-table dining · 150 Mbps Wi-Fi · 18 km to Kainchi Dham · Save up to 20% by booking directly on WhatsApp.
+          25 premium rooms · Standalone 3-BHK villa · 180° Nanda Devi snow peaks · Farm-to-table dining · 150 Mbps Wi-Fi · 22 km to Kainchi Dham · Save flat 25% by booking directly on WhatsApp.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
           <a

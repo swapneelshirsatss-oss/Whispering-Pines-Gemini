@@ -19,13 +19,13 @@ export const RESORT_CONTACT = {
   whatsapp: "https://wa.me/917505029696",
   email: "booking@whisperingpinesresort.in",
   domain: "https://whisperingpinesresort.in/",
-  streetAddress: "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd",
-  addressLocality: "Mukteshwar",
+  streetAddress: "House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd",
+  addressLocality: "Ramgarh, Mukteshwar",
   addressRegion: "Nainital, Uttarakhand",
   postalCode: "263137",
   addressCountry: "IN",
-  location: "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
-  address: "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+  location: "House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, District Nainital, Uttarakhand 263137",
+  address: "House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, District Nainital, Uttarakhand 263137",
   geoCoordinates: "29.4262052, 79.5506314",
   latitude: 29.4262052,
   longitude: 79.5506314,
@@ -36,14 +36,14 @@ export const RESORT_CONTACT = {
   rating: {
     value: "4.6",
     ratingValue: 4.6,
-    reviewCount: "400+",
-    reviewCountNumeric: 420,
+    reviewCount: "388",
+    reviewCountNumeric: 388,
     source: "Google Reviews",
     ratingUrl: "https://maps.google.com/?cid=8386667112972057918"
   },
-  otaDisparityCallout: "Save 15–20% Direct vs OTAs (Zero Middleman Commission)",
+  otaDisparityCallout: "Save Flat 25% Direct vs OTAs (Zero Middleman Commission)",
   directPerks: [
-    "Best Rate Guarantee (Save 15–20% vs MakeMyTrip/Booking.com)",
+    "Best Rate Guarantee (Save Flat 25% vs MakeMyTrip/Booking.com)",
     "Guaranteed 180° Himalayan Snow Peak View Allocation",
     "Complimentary Evening Bonfire Wood Setup",
     "Flexible Check-In / Check-Out Timings Upon Availability",
@@ -139,8 +139,8 @@ export const ROOMS_INVENTORY: RoomOption[] = [
     capacity: "Up to 9-10 Adults",
     bedType: "3 Grand King Bedrooms + Premium Loft",
     pricePerNight: 15999,
-    otaPricePerNight: 19999,
-    directSavings: "Save ₹4,000 (20%) Direct",
+    otaPricePerNight: 21332,
+    directSavings: "Save ₹5,333 (25%) Direct",
     maxOccupancy: 10,
     minOccupancy: 1,
     bedrooms: 3,
@@ -170,8 +170,8 @@ export const ROOMS_INVENTORY: RoomOption[] = [
     capacity: "2-3 Adults",
     bedType: "1 Grand Bed + Cozy Daybed",
     pricePerNight: 6499,
-    otaPricePerNight: 7999,
-    directSavings: "Save ₹1,500 (19%) Direct",
+    otaPricePerNight: 8665,
+    directSavings: "Save ₹2,166 (25%) Direct",
     maxOccupancy: 3,
     minOccupancy: 1,
     bedrooms: 1,
@@ -183,7 +183,7 @@ export const ROOMS_INVENTORY: RoomOption[] = [
     directPerks: [
       "Top-floor cathedral ceiling with glass skylights for star-gazing",
       "Private cedar pine deck overlooking snow peaks",
-      "Save 19% Direct vs MakeMyTrip & OTAs",
+      "Save Flat 25% Direct vs MakeMyTrip & OTAs",
       "Complimentary welcome mountain high tea"
     ],
     amenities: [
@@ -200,8 +200,8 @@ export const ROOMS_INVENTORY: RoomOption[] = [
     capacity: "2 Adults",
     bedType: "1 Premium Double Bed",
     pricePerNight: 4999,
-    otaPricePerNight: 5999,
-    directSavings: "Save ₹1,000 (17%) Direct",
+    otaPricePerNight: 6665,
+    directSavings: "Save ₹1,666 (25%) Direct",
     maxOccupancy: 3,
     minOccupancy: 1,
     bedrooms: 1,
@@ -214,7 +214,7 @@ export const ROOMS_INVENTORY: RoomOption[] = [
       "Direct ground-floor lawn & private fruit orchard access",
       "Exposed old-stone brick archways & geo-heater warmth",
       "Safe enclosed open lawn space for children & dogs",
-      "Save 17% Direct vs OTA platforms"
+      "Save Flat 25% Direct vs OTA platforms"
     ],
     amenities: [
       "180° Himalayan Ridge Views & Direct Orchard Lawn Access",
@@ -225,13 +225,13 @@ export const ROOMS_INVENTORY: RoomOption[] = [
   },
   {
     id: "cedar-room",
-    name: "Group Cottage Booking — Ramgarh's Best Rate for Large Families",
+    name: "Executive Cedar Suite — Ramgarh's Best Rate for Families & Groups",
     subtitle: "Premium Comfort Infused with Pine Aromatics",
     capacity: "2 Adults",
     bedType: "1 Premium Double Bed",
     pricePerNight: 3999,
-    otaPricePerNight: 4799,
-    directSavings: "Save ₹800 (17%) Direct",
+    otaPricePerNight: 5332,
+    directSavings: "Save ₹1,333 (25%) Direct",
     maxOccupancy: 2,
     minOccupancy: 1,
     bedrooms: 1,
@@ -244,7 +244,7 @@ export const ROOMS_INVENTORY: RoomOption[] = [
       "Cedar wood pine finish infused with forest aromatics",
       "High-capacity heaters for cozy Himalayan winters",
       "Most economical direct mountain escape rate",
-      "Save 17% Direct vs Booking.com"
+      "Save Flat 25% Direct vs Booking.com"
     ],
     amenities: [
       "180° Himalayan Snow Peak Views from Private Windows",
@@ -277,13 +277,23 @@ export const GENERAL_AMENITIES = [
     ]
   },
   {
-    title: "Pure Mountain Relaxation & Leisure — Quiet Pine Solitude & Fresh Air",
-    icon: "Heart",
-    description: "Designed for restorative rest, slow mountain living, and peaceful relaxation away from city noise, with ambient Wi-Fi available for your peace of mind.",
+    title: "150 Mbps High-Speed Fiber Wi-Fi — Enterprise Connectivity Across Estate",
+    icon: "Wifi",
+    description: "Stay effortlessly connected with dedicated 150 Mbps high-speed fiber Wi-Fi covering all 25 rooms, suites, the private villa, outdoor lawns, and work desks.",
     features: [
-      "Peaceful Orchard Lawns & Relaxation Nooks in the Pine Canopy",
-      "Restorative Slow Living Built for Complete Mental Rejuvenation",
-      "Reliable Ambient Wi-Fi Across All Rooms & Lawns"
+      "150 Mbps Dedicated High-Speed Fiber Internet Across All Rooms & Lawns",
+      "Seamless Video Calling & Remote Work Connectivity in Mountain Silence",
+      "Uninterrupted Silent Generator Power Backup for Round-the-Clock Uptime"
+    ]
+  },
+  {
+    title: "Pine Forest Swimming Pool — High-Altitude Mountain Dip",
+    icon: "Waves",
+    description: "One of the very few resorts near Mukteshwar with an on-site swimming pool, surrounded by pine forests and organic fruit orchards at 1,780 metres altitude.",
+    features: [
+      "Open-Air Mountain Swimming Pool with Forest & Himalayan Ridge Views",
+      "Sun Lounger Pool Deck for Alpine Relaxation & Afternoon Leisure",
+      "Crystal-Clear Mountain Water Surrounded by Peach & Apple Orchards"
     ]
   },
   {
@@ -370,7 +380,7 @@ export const LOCAL_EXPERIENCES: LocalExperience[] = [
   {
     id: "kainchi-dham-ashram",
     title: "Kainchi Dham Neem Karoli Baba Ashram",
-    distance: "18 km (45-min Drive)",
+    distance: "22 km (~45-min Drive)",
     description: "The revered spiritual sanctuary of Neem Karoli Baba along the river valley. A sacred pilgrimage site attracting devotees and seekers from around the world.",
     tag: "Spiritual Pilgrimage",
     image: "/images/Local-Sight-Himalayan-Excursions/kainchi-dham-mukteshwar.webp"
@@ -394,7 +404,7 @@ export const LOCAL_EXPERIENCES: LocalExperience[] = [
   {
     id: "bhalu-gaad-falls",
     title: "Bhalu Gaad Stream & Waterfall",
-    distance: "12 km (20-min Drive)",
+    distance: "16 km (~35-min Drive)",
     description: "A pristine natural waterfall. A scenic 2 km trek through shallow pine canopies and wild flora brings you to a crystal-clear hidden pool.",
     tag: "Nature Trekking",
     image: "/images/Local-Sight-Himalayan-Excursions/bhalugaad-waterfall-mukteshwar.webp"
@@ -583,7 +593,7 @@ export const CONTACT_FAQS: FAQItem[] = [
   {
     category: "Location & Transit",
     question: "How far is Whispering Pines Resort from Delhi and how do I reach it?",
-    answer: "Whispering Pines Resort is approximately 6 to 8 hours drive from Delhi, Gurugram and Noida via NH9 and NH309. The nearest railhead is Kathgodam, approximately 40 minutes from the resort. The nearest airport is Pantnagar, approximately 55 minutes away. The resort is located on the Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh, Uttarakhand 263137. The reservations team at +91-7505029696 can coordinate airport and station pickup on request."
+    answer: "Whispering Pines Resort is approximately 6.5 to 7.5 hours drive (~340 km) from Delhi, Gurugram and Noida via NH9 and Bhowali Rd. The nearest railhead is Kathgodam Railway Station (KGM), approximately 43 km (~1.5 hours drive) from the resort. The nearest airport is Pantnagar Airport (PGH), approximately 76 km (~2.5 hours drive) via NH 109. The resort is located at House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, District Nainital, Uttarakhand 263137. The reservations team at +91-7505029696 can coordinate airport and station pickup on request."
   },
   {
     category: "Rooms & Villa",
@@ -593,7 +603,7 @@ export const CONTACT_FAQS: FAQItem[] = [
   {
     category: "Booking & Pricing",
     question: "Can I book Whispering Pines Resort directly without MakeMyTrip or Booking.com?",
-    answer: "Yes. Direct booking via WhatsApp at +91-7505029696 is the best way to reserve at Whispering Pines Resort and guarantees the lowest available rate — saving up to 20 percent compared to OTA platforms like MakeMyTrip, Goibibo and Booking.com. Direct guests also receive priority room upgrades, flexible check-in timing and exclusive retention discounts on return stays. Payment is accepted via secure UPI, Credit Card and Net Banking."
+    answer: "Yes. Direct booking via WhatsApp at +91-7505029696 is the best way to reserve at Whispering Pines Resort and guarantees the lowest available rate — saving flat 25 percent compared to OTA platforms like MakeMyTrip, Goibibo and Booking.com. Direct guests also receive priority room upgrades, flexible check-in timing and exclusive retention discounts on return stays. Payment is accepted via secure UPI, Credit Card and Net Banking."
   },
   {
     category: "Rooms & Villa",
@@ -613,7 +623,7 @@ export const CONTACT_FAQS: FAQItem[] = [
   {
     category: "Booking & Pricing",
     question: "Does Whispering Pines Resort offer better rates than MakeMyTrip or Goibibo?",
-    answer: "Yes. Whispering Pines Resort guarantees the best available rate on direct WhatsApp bookings at +91-7505029696 — saving guests up to 20 percent versus rates listed on MakeMyTrip, Goibibo and Booking.com. OTA platforms charge the resort a commission of 15 to 25 percent which is passed on to the guest in the listed price. Direct bookings eliminate this markup entirely and additionally include priority room upgrade eligibility, flexible check-in and exclusive past-guest retention rates on return visits."
+    answer: "Yes. Whispering Pines Resort guarantees the best available rate on direct WhatsApp bookings at +91-7505029696 — saving guests a flat 25 percent versus rates listed on MakeMyTrip, Goibibo and Booking.com. OTA platforms charge the resort a commission of 25 percent which is passed on to the guest in the listed price. Direct bookings eliminate this markup entirely and additionally include priority room upgrade eligibility, flexible check-in and exclusive past-guest retention rates on return visits."
   },
   {
     category: "Rooms & Villa",
@@ -663,12 +673,12 @@ export const CONTACT_FAQS: FAQItem[] = [
   {
     category: "Rooms & Villa",
     question: "How many rooms does Whispering Pines Resort have and can it accommodate a corporate group?",
-    answer: "Whispering Pines Resort has 25 premium rooms plus a standalone private villa sleeping up to 10 additional guests — giving a total group accommodation capacity of 35 or more guests. The property is well-suited for executive offsites and leadership retreats with a dedicated conference and banquet hall accommodating up to 30 delegates, ambient Wi-Fi, projector and whiteboard setup, and fully customisable corporate catering menus. Group booking and corporate retreat packages are available on direct inquiry via WhatsApp at +91-7505029696."
+    answer: "Whispering Pines Resort features 25 premium rooms plus a standalone private 3-BHK alpine villa sleeping up to 10 additional guests — giving a total residential buyout capacity of up to 70 sleeping guests. The property is well-suited for executive offsites and leadership retreats with a dedicated conference and banquet hall accommodating up to 30 delegates, 150 Mbps enterprise fiber Wi-Fi, audio-visual setups, and custom catering menus. For outdoor destination weddings and celebrations on the Nanda Devi lawn, the resort accommodates up to 100 event guests. Group booking and retreat packages are available via WhatsApp at +91-7505029696."
   },
   {
     category: "Rooms & Villa",
     question: "What happened to Clarks Exotica Mukteshwar and is it still open?",
-    answer: "Clarks Exotica Mukteshwar has been upgraded and relaunched as Whispering Pines Resort by Casa De Bello. The property continues to operate at the same iconic Bhowali-Ramgarh-Mukteshwar Road address in Malla Ramgarh, Uttarakhand under new Casa De Bello management. The resort is fully open and has been significantly upgraded with a new private villa, enhanced stone cottage architecture, swimming pool, diverse multi-cuisine dining, and personalised boutique hospitality. Past Clarks Exotica guests receive exclusive returning-guest rates on direct WhatsApp booking at +91-7505029696."
+    answer: "Clarks Exotica Mukteshwar has been upgraded and relaunched as Whispering Pines Resort by Casa De Bello. The property continues to operate at the same iconic Bhowali-Ramgarh-Mukteshwar Road address in Malla Ramgarh, Uttarakhand under new Casa De Bello management. The resort is fully open and has been significantly upgraded with a new private villa, enhanced luxury suites, pine forest swimming pool, diverse multi-cuisine dining, 150 Mbps fiber Wi-Fi, and personalised boutique hospitality. Past Clarks Exotica guests receive exclusive returning-guest rates on direct WhatsApp booking at +91-7505029696."
   }
 ];
 

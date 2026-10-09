@@ -44,7 +44,7 @@ const geoPlaceSchema = {
   "geoContains": [
     { "@type": "Place", "name": "Mukteshwar Dham Temple", "distance": "25 km" },
     { "@type": "Place", "name": "Kainchi Dham Neem Karoli Baba Ashram", "distance": "22 km" },
-    { "@type": "Place", "name": "Bhalu Gaad Waterfall", "distance": "12 km" },
+    { "@type": "Place", "name": "Bhalu Gaad Waterfall", "distance": "16 km (~35 mins)" },
     { "@type": "Place", "name": "Nainital Mall Road", "distance": "26 km" }
   ]
 };
@@ -119,8 +119,8 @@ const resortLocalBusinessSchema = {
   "image": ogImageUrl,
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
-    "addressLocality": "Mukteshwar",
+    "streetAddress": "House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+    "addressLocality": "Ramgarh, Mukteshwar",
     "addressRegion": "Uttarakhand",
     "postalCode": "263137",
     "addressCountry": "IN"
@@ -220,7 +220,7 @@ const faqSchema = {
       "name": "How do I book at the best price?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Book directly via WhatsApp at +91-7505029696. Save up to 20% versus OTA platforms. Returning Clarks Exotica guests receive additional exclusive rates — mention your history with the property when you message."
+        "text": "Book directly via WhatsApp at +91-7505029696. Save flat 25% versus OTA platforms. Returning Clarks Exotica guests receive additional exclusive rates — mention your history with the property when you message."
       }
     }
   ]
@@ -328,7 +328,7 @@ const jsonLdSchemas = [
           Quick Executive Summary for Travellers
         </h2>
         <p class="text-sm text-gray-800 leading-relaxed font-normal">
-          <strong>Clarks Exotica Resort Ramgarh Mukteshwar</strong> is now operating as <strong><a href="/" class="text-[#1B3322] font-bold underline">Whispering Pines Resort by Casa De Bello</a></strong>. The property maintains its exact geographical address in Malla Ramgarh on the Bhowali-Ramgarh-Mukteshwar Road (Uttarakhand 263137), offering unchanged 180° Himalayan views of Nanda Devi and Trishul. Under Casa De Bello management, it features a brand-new pine forest swimming pool, a 3-BHK standalone private villa, 150 Mbps fiber Wi-Fi, Kumaoni stone cottage architecture, and direct WhatsApp reservations at +91-7505029696.
+          <strong>Clarks Exotica Resort Ramgarh Mukteshwar</strong> is now operating as <strong><a href="/" class="text-[#1B3322] font-bold underline">Whispering Pines Resort by Casa De Bello</a></strong>. The property maintains its exact geographical address in Malla Ramgarh on the Bhowali-Ramgarh-Mukteshwar Road (Uttarakhand 263137), offering unchanged 180° Himalayan views of Nanda Devi and Trishul. Under Casa De Bello management, it features a brand-new pine forest swimming pool, a 3-BHK standalone private villa, 150 Mbps fiber Wi-Fi, enhanced luxury suites, and direct WhatsApp reservations at +91-7505029696.
         </p>
       </section>
 
@@ -360,7 +360,7 @@ const jsonLdSchemas = [
 
         {/* Direct WhatsApp Callout Banner */}
         <div class="bg-[#1B3322] text-white p-6 rounded-2xl text-center space-y-3 my-8 shadow-md border border-[#c9a832]/30">
-          <h3 class="text-xl font-bold text-white">Returning Clarks Exotica Guests — Save 20% Direct</h3>
+          <h3 class="text-xl font-bold text-white">Returning Clarks Exotica Guests — Save Flat 25% Direct</h3>
           <p class="text-xs text-gray-300 max-w-xl mx-auto">
             Book Direct on WhatsApp: <strong>+91-7505029696</strong> — Returning Clarks Exotica Guests Receive Exclusive Retention Rates & Best Price Guarantee versus MakeMyTrip or Booking.com.
           </p>
@@ -387,7 +387,7 @@ const jsonLdSchemas = [
           The property has now been taken over, fully renovated, and elevated under <strong>Casa De Bello</strong> — a boutique hospitality brand focused on curated mountain experiences. The new identity is <strong>Whispering Pines Resort by Casa De Bello.</strong>
         </p>
         <p class="text-gray-700 leading-relaxed font-light">
-          This is not a rebranding in the marketing sense. It is a genuine physical and operational upgrade — new stone cottage architecture, a brand-new <a href="/resort-amenities-mukteshwar/" class="text-[#1B3322] font-semibold underline">swimming pool</a>, enhanced room interiors, a standalone <a href="/private-villas-near-nainital/" class="text-[#1B3322] font-semibold underline">private villa</a> added to the property, 150 Mbps enterprise fiber optic Wi-Fi installed across the estate, and a completely new management team focused on personalised boutique hospitality.
+          This is not a rebranding in the marketing sense. It is a genuine physical and operational upgrade — enhanced luxury suite architecture, a brand-new <a href="/resort-amenities-mukteshwar/" class="text-[#1B3322] font-semibold underline">swimming pool</a>, upgraded room interiors, a standalone <a href="/private-villas-near-nainital/" class="text-[#1B3322] font-semibold underline">private villa</a> added to the property, 150 Mbps enterprise fiber optic Wi-Fi installed across the estate, and a completely new management team focused on personalised boutique hospitality.
         </p>
         <p class="text-gray-700 leading-relaxed font-light font-semibold text-[#1B3322]">
           The Clarks Exotica name is no longer operational at this address. Whispering Pines Resort by Casa De Bello is the property you are looking for.
@@ -443,7 +443,7 @@ const jsonLdSchemas = [
               </tr>
               <tr class="hover:bg-[#FAF9F6]">
                 <td class="p-3.5 font-medium">Kathgodam railway connectivity</td>
-                <td class="p-3.5">✅ Same — 40 minutes from Kathgodam station</td>
+                <td class="p-3.5">✅ Same — 43 km (~1.5 hours) from Kathgodam station</td>
               </tr>
             </tbody>
           </table>
@@ -502,7 +502,7 @@ const jsonLdSchemas = [
 
         <div class="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-2">
           <h3 class="font-bold text-[#1B3322] text-lg flex items-center gap-2">
-            <span>🏔️</span> Enhanced Stone Cottage Architecture
+            <span>🏔️</span> Enhanced Alpine Suite Architecture
           </h3>
           <p class="text-xs text-gray-600 font-light leading-relaxed">
             The rooms have been renovated with enhanced Kumaoni stone masonry, solid cedar pine wood interiors, and in-room radiator heating and geo-heaters. The character of the original property has been preserved and deepened — not stripped away in favour of generic hotel aesthetics.
@@ -512,7 +512,7 @@ const jsonLdSchemas = [
         {/* Highlighted CTA */}
         <div class="bg-[#1B3322]/5 p-5 rounded-xl border border-[#1B3322]/10 text-center space-y-2">
           <p class="text-xs font-bold text-[#1B3322] uppercase tracking-wider">Book Direct on WhatsApp: +91-7505029696</p>
-          <p class="text-xs text-gray-600">Best Price Guaranteed. Save 20% vs MakeMyTrip and Booking.com.</p>
+          <p class="text-xs text-gray-600">Best Price Guaranteed. Save 25% vs MakeMyTrip and Booking.com.</p>
         </div>
       </section>
 
@@ -757,7 +757,7 @@ const jsonLdSchemas = [
             <tbody class="divide-y divide-[#EAE8E3] text-gray-700">
               <tr class="hover:bg-[#FAF9F6]"><td class="p-3 font-medium">Mukteshwar Dham Temple</td><td class="p-3">25 km</td><td class="p-3">45 minutes</td></tr>
               <tr class="hover:bg-[#FAF9F6]"><td class="p-3 font-medium">Kainchi Dham — Neem Karoli Baba Ashram</td><td class="p-3">22 km</td><td class="p-3">45 minutes</td></tr>
-              <tr class="hover:bg-[#FAF9F6]"><td class="p-3 font-medium">Bhalu Gaad Waterfall</td><td class="p-3">12 km</td><td class="p-3">20 minutes</td></tr>
+              <tr class="hover:bg-[#FAF9F6]"><td class="p-3 font-medium">Bhalu Gaad Waterfall</td><td class="p-3">16 km</td><td class="p-3">35 minutes</td></tr>
               <tr class="hover:bg-[#FAF9F6]"><td class="p-3 font-medium">Chauli Ki Jali Cliff</td><td class="p-3">25 km</td><td class="p-3">45 minutes</td></tr>
               <tr class="hover:bg-[#FAF9F6]"><td class="p-3 font-medium">Nainital Mall Road and Naini Lake</td><td class="p-3">26 km</td><td class="p-3">45 minutes</td></tr>
               <tr class="hover:bg-[#FAF9F6]"><td class="p-3 font-medium">Bhimtal Lake</td><td class="p-3">18 km</td><td class="p-3">35 minutes</td></tr>
@@ -779,7 +779,7 @@ const jsonLdSchemas = [
               <strong>Kainchi Dham (22 km):</strong> Neem Karoli Baba Ashram. Cab coordination and pure vegetarian/Satvik breakfast available.
             </div>
             <div class="p-3 bg-[#FAF9F6] rounded-xl border border-[#EAE8E3]">
-              <strong>Bhalu Gaad Waterfall (12 km):</strong> 2 km pine canopy trek to natural waterfall. Guided treks coordinated.
+              <strong>Bhalu Gaad Waterfall (16 km):</strong> 2 km pine canopy trek to natural waterfall. Guided treks coordinated.
             </div>
             <div class="p-3 bg-[#FAF9F6] rounded-xl border border-[#EAE8E3]">
               <strong>Chauli Ki Jali (25 km):</strong> Dramatic cliffs, paragliding, rock climbing, and sunset viewpoints.
@@ -817,16 +817,16 @@ const jsonLdSchemas = [
           <div class="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-2">
             <h3 class="font-bold text-[#1B3322] text-sm">🚘 By Road from Delhi/NCR</h3>
             <p class="text-xs text-gray-600 font-light">NH9 via Moradabad → Rampur → Haldwani → Bhowali → Ramgarh → Malla Ramgarh.</p>
-            <p class="text-xs text-gray-500">Distance: ~320 km | Drive time: 6–8 hours.</p>
+            <p class="text-xs text-gray-500">Distance: ~340 km | Drive time: 6.5–7.5 hours via NH 9.</p>
           </div>
           <div class="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-2">
             <h3 class="font-bold text-[#1B3322] text-sm">🚆 By Train</h3>
-            <p class="text-xs text-gray-600 font-light">Nearest railhead: Kathgodam Station (~40 minutes). Key trains: Ranikhet Express, Kathgodam Shatabdi.</p>
+            <p class="text-xs text-gray-600 font-light">Nearest railhead: Kathgodam Station (~43 km, 1.5 hours drive). Key trains: Ranikhet Express, Kathgodam Shatabdi.</p>
             <p class="text-xs text-gray-500">Resort cab pickup available on WhatsApp request.</p>
           </div>
           <div class="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-2">
             <h3 class="font-bold text-[#1B3322] text-sm">✈️ By Air</h3>
-            <p class="text-xs text-gray-600 font-light">Nearest airport: Pantnagar Airport (~55 minutes).</p>
+            <p class="text-xs text-gray-600 font-light">Nearest airport: Pantnagar Airport (~76 km, 2.5 hours drive via NH 109).</p>
             <p class="text-xs text-gray-500">Resort cab pickup from Pantnagar available on prior booking.</p>
           </div>
         </div>
@@ -842,7 +842,7 @@ const jsonLdSchemas = [
           Direct Booking — Returning Clarks Exotica Guests
         </h2>
         <p class="text-gray-700 leading-relaxed font-light">
-          Every direct WhatsApp booking at Whispering Pines saves up to 20% compared to MakeMyTrip, Booking.com, and Goibibo — OTA platforms add 15–25% commission which is reflected in their listed prices. Direct booking eliminates this entirely.
+          Every direct WhatsApp booking at Whispering Pines saves flat 25% compared to MakeMyTrip, Booking.com, and Goibibo — OTA platforms add 25% commission which is reflected in their listed prices. Direct booking eliminates this entirely.
         </p>
         <p class="text-gray-700 font-semibold text-[#1B3322]">
           Returning Clarks Exotica guests receive exclusive retention rates on direct WhatsApp booking — ask for the returning guest rate when you message.
@@ -873,7 +873,7 @@ const jsonLdSchemas = [
             rel="noopener noreferrer" 
             class="inline-block px-8 py-3.5 bg-[#c9a832] text-[#1B3322] font-bold text-sm rounded-xl hover:bg-yellow-400 transition-all shadow-md"
           >
-            WhatsApp +91-7505029696 — Save 20% Direct Rate
+            WhatsApp +91-7505029696 — Save Flat 25% Direct Rate
           </a>
         </div>
       </section>

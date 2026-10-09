@@ -64,7 +64,7 @@ export default function BookingInteractiveForm({
     setCheckOut(formatDateStr(dayAfter));
   }, []);
 
-  const estimatedOtaCost = Math.round(totalCost * 1.18);
+  const estimatedOtaCost = Math.round(totalCost / 0.75);
   const directSavings = estimatedOtaCost - totalCost;
 
   // Dynamic WhatsApp pre-filled inquiry text
@@ -221,7 +221,7 @@ Please confirm availability and share direct booking privileges.`;
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="w-3.5 h-3.5 text-[#1B3322] shrink-0" />
-                  <span>15% Dining Privilege at Restaurant</span>
+                  <span>25% Dining Privilege at Restaurant</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="w-3.5 h-3.5 text-[#1B3322] shrink-0" />

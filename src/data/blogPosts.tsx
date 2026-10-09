@@ -164,7 +164,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         </div>
 
         <div className="bg-[#1B3322] text-white p-6 rounded-xl text-center space-y-4 my-8">
-          <h3 className="text-xl font-bold">Book Direct on WhatsApp & Save 20%</h3>
+          <h3 className="text-xl font-bold">Book Direct on WhatsApp & Save Flat 25%</h3>
           <p className="text-xs text-gray-300">Skip online travel agency commissions. Instant reservation response from our front desk.</p>
           <a 
             href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20near%20Mukteshwar." 
@@ -270,7 +270,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         </div>
 
         <div className="bg-[#1B3322] text-white p-6 rounded-xl text-center space-y-3">
-          <h3 className="text-xl font-bold">Book Direct on WhatsApp & Save 20%</h3>
+          <h3 className="text-xl font-bold">Book Direct on WhatsApp & Save Flat 25%</h3>
           <p className="text-xs text-gray-300">Skip OTA commissions. Instant front desk response within 5 minutes.</p>
           <a 
             href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20in%20Ramgarh." 
@@ -515,7 +515,7 @@ export const BLOG_POSTS: BlogPostData[] = [
               <li><strong>07:00 AM:</strong> Early morning birdwatching walk along forest paths.</li>
               <li><strong>09:00 AM:</strong> Fresh paratha breakfast at the resort restaurant.</li>
               <li><strong>10:30 AM:</strong> Drive to Mukteshwar Dham Temple (25 km / 45 mins) and Chauli Ki Jali cliffs.</li>
-              <li><strong>02:00 PM:</strong> Excursion to Bhalu Gaad Waterfall (12 km) for a gentle pine forest trek.</li>
+              <li><strong>02:00 PM:</strong> Excursion to Bhalu Gaad Waterfall (16 km) for a gentle pine forest trek.</li>
               <li><strong>06:00 PM:</strong> Return to the resort for a quiet dinner overlooking lighted mountain valleys.</li>
             </ul>
           </div>
@@ -523,9 +523,9 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">How to Reach Malla Ramgarh</h2>
         <ul className="list-disc pl-6 space-y-2 text-gray-700 text-sm font-light">
-          <li><strong>By Road from Delhi/NCR:</strong> NH9 route via Moradabad ➔ Rampur ➔ Haldwani ➔ Bhowali ➔ Malla Ramgarh. Total distance: ~320 km | Drive time: 6–7.5 hours.</li>
-          <li><strong>By Train:</strong> Nearest railhead: Kathgodam Railway Station (~40 km / 1 hr drive). Daily trains from Delhi include Kathgodam Shatabdi and Ranikhet Express.</li>
-          <li><strong>By Air:</strong> Nearest airport: Pantnagar Airport (PGH) (~75 km / 2 hr drive) with direct flights from Delhi, Mumbai, and Bengaluru.</li>
+          <li><strong>By Road from Delhi/NCR:</strong> NH9 route via Moradabad ➔ Rampur ➔ Haldwani ➔ Bhowali ➔ Malla Ramgarh. Total distance: ~340 km | Drive time: 6.5–7.5 hours.</li>
+          <li><strong>By Train:</strong> Nearest railhead: Kathgodam Railway Station (~43 km / 1.5 hr drive via Bhowali Rd). Daily trains from Delhi include Kathgodam Shatabdi and Ranikhet Express.</li>
+          <li><strong>By Air:</strong> Nearest airport: Pantnagar Airport (PGH) (~76 km / 2.5 hr drive via NH 109) with direct flights from Delhi, Mumbai, and Bengaluru.</li>
         </ul>
 
         <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Frequently Asked Questions</h2>
@@ -623,7 +623,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     title: "Resort near Nainital for Families, Couples and Tourists — 2026 Guide",
     seoTitle: "Resort near Nainital for Families & Couples (2026 Guide)",
     seoDescription: "Resort near Nainital for families and couples: Whispering Pines in Ramgarh offers 180° Himalayan views from every room, a pool and private villas.",
-    excerpt: "Looking for the best resort near Nainital for families, couples and tourists? Whispering Pines by Casa De Bello in Ramgarh offers 180° Himalayan views, pool, 22 luxury units, private villas & 150 Mbps Wi-Fi.",
+    excerpt: "Looking for the best resort near Nainital for families, couples and tourists? Whispering Pines by Casa De Bello in Ramgarh offers 180° Himalayan views, pool, 25 premium rooms, private villas & 150 Mbps Wi-Fi.",
     date: "August 5, 2026",
     readTime: "12 min read",
     imageUrl: "/images/Resort_near-nainital-for-families.avif",
@@ -653,7 +653,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div className="text-xs font-bold text-[#c9a832] uppercase tracking-widest">AEO Direct Answer Summary</div>
           <h2 className="text-xl font-bold text-[#1B3322]">Resort near Nainital for Families, Couples and Tourists — 2026 Guide</h2>
           <p className="text-sm text-gray-700 leading-relaxed font-light">
-            <strong>Whispering Pines Resort by Casa De Bello</strong> (formerly <a href="/blog/clarks-exotica-transition/" className="text-[#1B3322] font-semibold underline">Clarks Exotica Mukteshwar Road</a>) is a 4-star mountain resort near Nainital for families, couples and tourists, situated at Malla Ramgarh on the Bhowali-Ramgarh-Mukteshwar Road (altitude: 1,780 metres). Located just 45 minutes from Nainital Lake, Mall Road, and <a href="/things-to-do-near-mukteshwar/" className="text-[#c9a832] underline">Kainchi Dham</a>, the property features 22 upgraded units—including <a href="/suites-cottages-ramgarh-resort/" className="text-[#1B3322] font-semibold underline">Super Deluxe Suites, step-free Family Twin Rooms</a>, and 5 standalone <a href="/private-villas-near-nainital/" className="text-[#1B3322] font-semibold underline">Private Villas sleeping up to 10 guests</a>. On-site amenities include an <a href="/resort-amenities-mukteshwar/" className="text-[#c9a832] underline">outdoor pine forest swimming pool</a>, a 2,200 sq ft panoramic Himalayan lawn, 150 Mbps fiber Wi-Fi, and private fruit orchards. Guests enjoy 180° unobstructed views of Nanda Devi and Trishul snow peaks (explore our <a href="/gallery/" className="text-[#c9a832] underline">photo gallery</a>). Direct WhatsApp bookings (<a href="https://wa.me/917505029696" target="_blank" rel="noopener noreferrer" className="text-[#c9a832] underline font-semibold">+91-7505029696</a>) save 20% over online travel agency portals.
+            <strong>Whispering Pines Resort by Casa De Bello</strong> (formerly <a href="/blog/clarks-exotica-transition/" className="text-[#1B3322] font-semibold underline">Clarks Exotica Mukteshwar Road</a>) is a 4-star mountain resort near Nainital for families, couples and tourists, situated at Malla Ramgarh on the Bhowali-Ramgarh-Mukteshwar Road (altitude: 1,780 metres). Located just 45 minutes from Nainital Lake, Mall Road, and <a href="/things-to-do-near-mukteshwar/" className="text-[#c9a832] underline">Kainchi Dham</a>, the property features 25 premium rooms—including <a href="/suites-cottages-ramgarh-resort/" className="text-[#1B3322] font-semibold underline">Super Deluxe Suites, step-free Family Twin Rooms</a>, and a standalone <a href="/private-villas-near-nainital/" className="text-[#1B3322] font-semibold underline">Private Villa sleeping up to 10 guests</a>. On-site amenities include an <a href="/resort-amenities-mukteshwar/" className="text-[#c9a832] underline">outdoor pine forest swimming pool</a>, a 2,200 sq ft panoramic Himalayan lawn, 150 Mbps fiber Wi-Fi, and private fruit orchards. Guests enjoy 180° unobstructed views of Nanda Devi and Trishul snow peaks (explore our <a href="/gallery/" className="text-[#c9a832] underline">photo gallery</a>). Direct WhatsApp bookings (<a href="https://wa.me/917505029696" target="_blank" rel="noopener noreferrer" className="text-[#c9a832] underline font-semibold">+91-7505029696</a>) save flat 25% over online travel agency portals.
           </p>
         </div>
 
@@ -676,8 +676,8 @@ export const BLOG_POSTS: BlogPostData[] = [
             <div><strong>Exact Geo-Coordinates:</strong> 29.4264111° N, 79.5505355° E</div>
             <div><strong>Mountain Elevation:</strong> 1,780 metres (5,840 feet) above sea level</div>
             <div><strong>Verified Peak Line-of-Sight:</strong> 180° unobstructed panorama of Nanda Devi (7,816m), Trishul (7,120m), Panchachuli Range, and Nanda Ghunti</div>
-            <div><strong>Proximity Matrix:</strong> 18 km to Kainchi Dham / Neem Karoli Baba Ashram (25-min drive), 25 km to Mukteshwar Dham (45-min drive), 26 km to Nainital Mall Road & Naini Lake (45-min drive), 12 km to Bhalu Gaad Waterfall (20-min drive)</div>
-            <div><strong>Drive-To Corridor:</strong> 310 km from Delhi NCR via NH9 + NH309 (6.5 to 7.5 hours); 40 minutes from Kathgodam Railway Station; 55 minutes from Pantnagar Airport (PGH)</div>
+            <div><strong>Proximity Matrix:</strong> 22 km to Kainchi Dham / Neem Karoli Baba Ashram (~45-min drive), 25 km to Mukteshwar Dham (45-min drive), 26 km to Nainital Mall Road & Naini Lake (45-min drive), 16 km to Bhalu Gaad Waterfall (35-min drive)</div>
+            <div><strong>Drive-To Corridor:</strong> 340 km from Delhi NCR via NH9 (6.5 to 7.5 hours); 43 km (~1.5 hours) from Kathgodam Railway Station; 76 km (~2.5 hours) from Pantnagar Airport (PGH)</div>
             <div><strong>Verified Trust Signals:</strong> 4.6★ Rating from 388 Google Reviews (read <a href="/reviews/" className="text-[#c9a832] underline font-semibold">verified guest reviews</a>)</div>
           </div>
         </div>
@@ -779,7 +779,7 @@ export const BLOG_POSTS: BlogPostData[] = [
               <tr className="bg-gray-50">
                 <td className="p-3 font-semibold">Direct Tariff Value</td>
                 <td className="p-3 text-red-600">Fixed portal prices with OTA markup</td>
-                <td className="p-3 font-semibold text-emerald-700">20% direct discount via WhatsApp (+91-7505029696)</td>
+                <td className="p-3 font-semibold text-emerald-700">Flat 25% direct discount via WhatsApp (+91-7505029696)</td>
               </tr>
             </tbody>
           </table>
@@ -866,7 +866,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-[#c9a832] font-semibold">Direct WhatsApp Bookings (+91-7505029696) receive an instant 20% discount on all published tariffs.</p>
+        <p className="text-xs text-[#c9a832] font-semibold">Direct WhatsApp Bookings (+91-7505029696) receive an instant flat 25% discount on all published tariffs.</p>
 
         {/* Mandatory Image 3 */}
         <div className="my-6">
@@ -883,8 +883,8 @@ export const BLOG_POSTS: BlogPostData[] = [
         <ul className="list-disc pl-6 space-y-3 text-gray-700 font-light">
           <li><strong>Mukteshwar Dham Temple (25 km / 45-min drive):</strong> 350-year-old Shiva temple perched at 2,286m with 360° snow peak views. See details in our <a href="/things-to-do-near-mukteshwar/" className="text-[#1B3322] font-semibold underline">local sights guide</a>.</li>
           <li><strong>Chauli Ki Jali Cliff Rocks (25 km / 45-min drive):</strong> Famous rock climbing, paragliding, and sunset viewpoint.</li>
-          <li><strong>Bhalu Gaad Waterfall Trek (12 km / 20-min drive):</strong> 60-foot natural waterfall with clear plunge pool, suitable for families.</li>
-          <li><strong>Kainchi Dham — Neem Karoli Baba Ashram (18 km / 25-min drive):</strong> World-famous spiritual center visited by global devotees.</li>
+          <li><strong>Bhalu Gaad Waterfall Trek (16 km / 35-min drive):</strong> 60-foot natural waterfall with clear plunge pool, suitable for families.</li>
+          <li><strong>Kainchi Dham — Neem Karoli Baba Ashram (22 km / 45-min drive):</strong> World-famous spiritual center visited by global devotees.</li>
           <li><strong>Malla Ramgarh Fruit Orchards (0.5 km / Walking distance):</strong> Active peach, plum, apple, and apricot orchards directly outside the resort gate. Read our <a href="/blog/ramgarh-fruit-bowl-of-kumaon/" className="text-[#1B3322] font-semibold underline">Ramgarh fruit bowl guide</a>.</li>
         </ul>
 
@@ -901,7 +901,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#1B3322] mb-1">Q3. How far is the resort from Kainchi Dham?</h3>
-            <p className="text-xs text-gray-600 font-light">Whispering Pines is situated just 18 km (a 25 to 30-minute drive) from Kainchi Dham Ashram.</p>
+            <p className="text-xs text-gray-600 font-light">Whispering Pines is situated 22 km (~45-minute drive) from Kainchi Dham Ashram.</p>
           </div>
         </div>
 
@@ -932,7 +932,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     title: "Resorts Near Kainchi Dham Ashram Neem Karoli Baba | Whispering Pines (2026 Guide)",
     seoTitle: "Resorts Near Kainchi Dham Ashram | Whispering Pines",
     seoDescription: "Senior-friendly resort near Kainchi Dham Ashram: ground-floor rooms, wheelchair access, a private villa and Himalayan views, 45 minutes away. Book direct.",
-    excerpt: "Looking for a senior-friendly 4-star resort hotel near Kainchi Dham Ashram Neem Karoli Baba? Whispering Pines offers ground floor hotel rooms, wheelchair access, private villa, peak views, & 45-min drive to Ashram. Save 20% direct.",
+    excerpt: "Looking for a senior-friendly 4-star resort hotel near Kainchi Dham Ashram Neem Karoli Baba? Whispering Pines offers ground floor hotel rooms, wheelchair access, private villa, peak views, & 45-min drive to Ashram. Save flat 25% direct.",
     date: "August 6, 2026",
     readTime: "16 min read",
     imageUrl: "/images/blog-resort-near-kainchi-dham-image/resorts-near-kainchi-dham-ashram-neem-karoli-baba-2026.avif",
@@ -968,7 +968,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="bg-[#FAF9F6] p-6 rounded-2xl border-l-4 border-[#c9a832] shadow-sm space-y-3">
           <div className="text-xs font-bold uppercase tracking-wider text-[#c9a832]">AEO Direct Answer Summary</div>
           <p className="text-base text-gray-700 leading-relaxed font-light">
-            <a href="/" className="text-[#1B3322] font-semibold underline">Whispering Pines Resort</a> by Casa De Bello is a senior-friendly 4-star <strong>resort hotel</strong> located in Malla Ramgarh, Uttarakhand, situated a peaceful 45-minute drive (22 km) from Kainchi Dham Ashram (Shri Neem Karoli Baba Ashram). Set at an altitude of 1,780 metres, this luxury resort hotel features ground-floor step-free hotel rooms, on-site wheelchair accessibility for elderly pilgrims, a 3-bedroom private villa sleeping up to 8–10 guests, 180° Himalayan peak views, a pine forest pool, pure vegetarian/Satvik dining, and 150 Mbps Wi-Fi. It is designed to accommodate multi-generational family yatras and hotel guests comfortably. <a href="https://whisperingpinesresort.bookingjini.in/" target="_blank" rel="noopener noreferrer" className="text-[#1B3322] font-semibold underline">Reserve your stay direct for 20% discount</a>.
+            <a href="/" className="text-[#1B3322] font-semibold underline">Whispering Pines Resort</a> by Casa De Bello is a senior-friendly 4-star <strong>resort hotel</strong> located in Malla Ramgarh, Uttarakhand, situated a peaceful 45-minute drive (22 km) from Kainchi Dham Ashram (Shri Neem Karoli Baba Ashram). Set at an altitude of 1,780 metres, this luxury resort hotel features ground-floor step-free hotel rooms, on-site wheelchair accessibility for elderly pilgrims, a 3-bedroom private villa sleeping up to 8–10 guests, 180° Himalayan peak views, a pine forest pool, pure vegetarian/Satvik dining, and 150 Mbps Wi-Fi. It is designed to accommodate multi-generational family yatras and hotel guests comfortably. <a href="https://casadebello-book.whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" className="text-[#1B3322] font-semibold underline">Reserve your stay direct for flat 25% discount</a>.
           </p>
         </div>
 
@@ -983,8 +983,8 @@ export const BLOG_POSTS: BlogPostData[] = [
             <li><strong>Peak Line-of-Sight:</strong> 180° direct views of Nanda Devi & Trishul</li>
             <li><strong>Distance to Kainchi Dham Ashram:</strong> 22 km (~45-minute scenic drive)</li>
             <li><strong>Distance to Mukteshwar Dham:</strong> 25 km (45-minute drive)</li>
-            <li><strong>Distance to Bhalu Gaad Waterfall:</strong> 12 km (20-minute drive)</li>
-            <li><strong>Distance to Kathgodam Station:</strong> 45 km (~40–50 minutes)</li>
+            <li><strong>Distance to Bhalu Gaad Waterfall:</strong> 16 km (~35-minute drive)</li>
+            <li><strong>Distance to Kathgodam Station:</strong> 43 km (~1.5 hours)</li>
             <li><strong>Verified Guest Rating:</strong> <a href="/reviews/" className="text-[#c9a832] font-semibold underline">4.6★ from 388 Google reviews</a></li>
           </ul>
         </div>
@@ -1001,7 +1001,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         {/* WhatsApp Banner */}
         <div className="bg-[#1B3322] text-white p-6 rounded-xl text-center space-y-3">
-          <h3 className="text-xl font-bold">Book Direct on WhatsApp & Save Up to 20% vs OTAs</h3>
+          <h3 className="text-xl font-bold">Book Direct on WhatsApp & Save Flat 25% vs OTAs</h3>
           <p className="text-xs text-gray-300">Skip third-party commissions. Instant reservation response from our front desk team.</p>
           <a 
             href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20near%20Kainchi%20Dham." 
@@ -1304,8 +1304,8 @@ export const BLOG_POSTS: BlogPostData[] = [
                                          | 25 km (45 Mins)
                                          |
 [ Kainchi Dham Ashram ] <------- [ WHISPERING PINES ] -------> [ Bhalu Gaad Waterfall ]
-(Neem Karoli Baba)    22 km      [   RESORT HOTEL   ]  12 km  (Forest Trail & Cascades)
-  (45-Min Scenic Drive)          [ (Malla Ramgarh)  ] (20 Mins)
+(Neem Karoli Baba)    22 km      [   RESORT HOTEL   ]  16 km  (Forest Trail & Cascades)
+  (45-Min Scenic Drive)          [ (Malla Ramgarh)  ] (35 Mins)
                                          |
                                          | 20 km (40 Mins)
                                          v
@@ -1349,8 +1349,8 @@ export const BLOG_POSTS: BlogPostData[] = [
               </tr>
               <tr className="bg-yellow-50/50">
                 <td className="p-3 font-semibold">Bhalu Gaad Waterfall</td>
-                <td className="p-3 font-bold text-[#1B3322]">12 km</td>
-                <td className="p-3 font-bold text-[#1B3322]">20 Mins</td>
+                <td className="p-3 font-bold text-[#1B3322]">16 km</td>
+                <td className="p-3 font-bold text-[#1B3322]">35 Mins</td>
                 <td className="p-3">9:00 AM – 3:00 PM</td>
                 <td className="p-3">Light 1.5 km forest trek, natural mountain pool, bird watching.</td>
               </tr>
@@ -1377,8 +1377,8 @@ export const BLOG_POSTS: BlogPostData[] = [
               </tr>
               <tr className="bg-yellow-50/50">
                 <td className="p-3 font-semibold">Kathgodam Railway Station</td>
-                <td className="p-3 font-bold text-[#1B3322]">45 km</td>
-                <td className="p-3 font-bold text-[#1B3322]">45–50 Mins</td>
+                <td className="p-3 font-bold text-[#1B3322]">43 km</td>
+                <td className="p-3 font-bold text-[#1B3322]">~1.5 Hours</td>
                 <td className="p-3">Any Time</td>
                 <td className="p-3">Primary rail gateway for trains from Delhi, Lucknow, and Dehradun.</td>
               </tr>
@@ -1401,7 +1401,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             <h3 className="font-bold text-[#1B3322] text-lg mb-2">Day 2: Alpine Nature & Heritage</h3>
             <ul className="text-xs text-gray-600 space-y-2 list-disc pl-4">
               <li><strong>Morning:</strong> Visit Mukteshwar Dham Temple (25 km / 45 mins) and explore Chauli Ki Jali cliff for panoramic views of the Himalayas.</li>
-              <li><strong>Afternoon:</strong> Embark on the light <a href="/things-to-do-near-mukteshwar/" className="text-[#1B3322] font-semibold underline">Bhalu Gaad waterfall trek</a> (12 km / 20 mins) for forest streams.</li>
+              <li><strong>Afternoon:</strong> Embark on the light <a href="/things-to-do-near-mukteshwar/" className="text-[#1B3322] font-semibold underline">Bhalu Gaad waterfall trek</a> (16 km / 35 mins) for forest streams.</li>
               <li><strong>Evening:</strong> Return to Whispering Pines for a dip in the pine forest swimming pool and a private dinner on the lawn.</li>
             </ul>
           </div>
@@ -1480,7 +1480,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             rel="noopener noreferrer" 
             className="inline-block px-8 py-3.5 bg-[#c9a832] text-[#1B3322] font-bold text-sm rounded-xl hover:bg-yellow-400 transition-all shadow-md transform hover:-translate-y-0.5"
           >
-            WhatsApp +91-7505029696 — Save 20% Direct
+            WhatsApp +91-7505029696 — Save Flat 25% Direct
           </a>
         </div>
       </div>
@@ -1569,7 +1569,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           "name": "How do I book at the best price?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Book directly via WhatsApp at +91-7505029696 to save up to 20% versus OTA platforms. Direct guests also receive priority room upgrades, flexible check-in and checkout, exclusive return-guest rates, and instant 5-minute response."
+            "text": "Book directly via WhatsApp at +91-7505029696 to save a flat 25% versus OTA platforms. Direct guests also receive priority room upgrades, flexible check-in and checkout, exclusive return-guest rates, and instant 5-minute response."
           }
         },
         {
@@ -1577,7 +1577,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           "name": "Is this the same as Clarks Exotica Mukteshwar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Whispering Pines by Casa De Bello is the upgraded successor to Clarks Exotica on the Mukteshwar Road in Ramgarh. Same iconic Bhowali-Ramgarh-Mukteshwar Road address — now with stone cottage architecture enhanced, Casa De Bello management, swimming pool, private villa, and 150 Mbps Wi-Fi."
+            "text": "Yes. Whispering Pines by Casa De Bello is the upgraded successor to Clarks Exotica on the Mukteshwar Road in Ramgarh. Same iconic Bhowali-Ramgarh-Mukteshwar Road address — now with enhanced luxury suite and villa architecture, Casa De Bello management, swimming pool, private villa, and 150 Mbps Wi-Fi."
           }
         }
       ]
@@ -1644,14 +1644,14 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <div className="bg-[#1B3322] text-white p-6 rounded-2xl text-center space-y-3 shadow-md border border-[#c9a832]/30 my-6">
           <h3 className="text-xl font-bold text-white">Book Direct on WhatsApp: +91-7505029696 — Best Price Guaranteed</h3>
-          <p className="text-xs text-gray-300">Save 20% vs OTAs like MakeMyTrip, Booking.com & Goibibo. Instant front desk response within 5 minutes.</p>
+          <p className="text-xs text-gray-300">Save flat 25% vs OTAs like MakeMyTrip, Booking.com & Goibibo. Instant front desk response within 5 minutes.</p>
           <a 
             href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20near%20Mukteshwar." 
             target="_blank" 
             rel="noopener noreferrer" 
             className="inline-block px-8 py-3.5 bg-[#c9a832] text-[#1B3322] font-bold text-xs rounded-full hover:bg-yellow-400 transition-all uppercase tracking-wider shadow-md"
           >
-            WhatsApp +91-7505029696 — Save 20% Direct
+            WhatsApp +91-7505029696 — Save Flat 25% Direct
           </a>
         </div>
 
@@ -1761,7 +1761,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <h3 className="text-xl font-bold text-[#1B3322] mt-6 mb-3">Formerly Clarks Exotica — Now Elevated Under Casa De Bello</h3>
         <p className="text-gray-700 leading-relaxed font-light">
-          Whispering Pines Resort is the upgraded successor to Clarks Exotica on the Mukteshwar Road (read our <a href="/blog/clarks-exotica-transition/" className="text-[#1B3322] font-semibold underline">Clarks Exotica transition guide</a>). The same iconic Bhowali-Ramgarh-Mukteshwar Road address that generations of Delhi NCR families knew and loved — now with Casa De Bello management, enhanced stone cottage architecture, a private villa, and amenities the original property never offered.
+          Whispering Pines Resort is the upgraded successor to Clarks Exotica on the Mukteshwar Road (read our <a href="/blog/clarks-exotica-transition/" className="text-[#1B3322] font-semibold underline">Clarks Exotica transition guide</a>). The same iconic Bhowali-Ramgarh-Mukteshwar Road address that generations of Delhi NCR families knew and loved — now with Casa De Bello management, enhanced luxury suite architecture, a private villa, and amenities the original property never offered.
         </p>
         <p className="text-gray-700 leading-relaxed font-light">
           Returning Clarks Exotica guests consistently say the location is exactly as they remembered it — but everything else has been meaningfully elevated.
@@ -1837,7 +1837,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <ul className="list-disc pl-6 space-y-2 text-gray-700 font-light">
           <li><strong>Mukteshwar Dham:</strong> 25 km — approximately 45 minutes by road</li>
           <li><strong>Kainchi Dham (Neem Karoli Baba Ashram):</strong> 22 km — approximately 45 minutes by road</li>
-          <li><strong>Bhalu Gaad Waterfall:</strong> 12 km — approximately 20 minutes by road</li>
+          <li><strong>Bhalu Gaad Waterfall:</strong> 16 km — approximately 35 minutes by road</li>
           <li><strong>Nainital Mall Road and Naini Lake:</strong> 26 km — approximately 45 minutes by road (read our <a href="/blog/resort-near-nainital/" className="text-[#1B3322] font-semibold underline">resort near Nainital guide</a>)</li>
           <li><strong>In-house travel desk:</strong> Coordinates all cab arrangements and early morning darshan departures</li>
           <li><strong>Satvik food:</strong> Pure vegetarian and Satvik meal options available for pilgrims visiting Kainchi Dham and Mukteshwar Dham</li>
@@ -2072,7 +2072,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           Our travel desk manages the entire cab and timing coordination — including early morning arrivals before peak darshan hours. Pure vegetarian and Satvik breakfast provided before departure on request.
         </p>
 
-        <h3 className="text-xl font-bold text-[#1B3322] mt-6 mb-3">Bhalu Gaad Waterfall Trek — 12 km (20-minute Drive)</h3>
+        <h3 className="text-xl font-bold text-[#1B3322] mt-6 mb-3">Bhalu Gaad Waterfall Trek — 16 km (35-minute Drive)</h3>
         <p className="text-gray-700 leading-relaxed font-light">
           A hidden 2 km pine canopy trek through three distinct forest zones to a natural waterfall and plunge pool — suitable for families, children, and first-time trekkers. Himalayan bulbuls, kalij pheasants, and forest eagles are regularly spotted along the stream corridor.
         </p>
@@ -2115,7 +2115,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             <h3 className="font-bold text-[#1B3322] text-base mb-1">🚗 By Road from Delhi/NCR</h3>
             <p className="text-xs text-gray-600 font-light leading-relaxed">
               NH9 via Moradabad → Rampur → Haldwani → Bhowali → Ramgarh → Malla Ramgarh<br />
-              Total distance: approximately 320 km | Drive time: 6–8 hours<br />
+              Total distance: approximately 340 km | Drive time: 6.5–7.5 hours<br />
               Gurugram via NH48: Same route from Haldwani onwards.<br />
               Noida and Faridabad: NH9 via Hapur and Moradabad.
             </p>
@@ -2123,7 +2123,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#1B3322] text-base mb-1">🚆 By Train</h3>
             <p className="text-xs text-gray-600 font-light leading-relaxed">
-              Nearest railhead: Kathgodam Station — approximately 40 minutes from the resort.<br />
+              Nearest railhead: Kathgodam Station — approximately 43 km (~1.5 hours) from the resort.<br />
               Key trains from Delhi: Ranikhet Express (overnight), Kathgodam Shatabdi (morning).<br />
               Resort cab pickup from Kathgodam available on prior WhatsApp booking.
             </p>
@@ -2131,7 +2131,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#1B3322] text-base mb-1">✈️ By Air</h3>
             <p className="text-xs text-gray-600 font-light leading-relaxed">
-              Nearest airport: Pantnagar Airport — approximately 55 minutes from the resort.<br />
+              Nearest airport: Pantnagar Airport — approximately 76 km (~2.5 hours) from the resort.<br />
               Connections from Delhi, Mumbai, and Bengaluru.<br />
               Resort cab pickup from Pantnagar available on prior booking.
             </p>
@@ -2144,7 +2144,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         {/* Section 8 */}
         <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Direct Booking — Best Price Guaranteed</h2>
         <p className="text-gray-700 leading-relaxed font-light">
-          <strong>Pro-Tip for 2026:</strong> Skip the online travel portals. Booking directly via WhatsApp at <a href="https://wa.me/917505029696" target="_blank" rel="noopener noreferrer" className="text-[#c9a832] font-bold underline">+91-7505029696</a> guarantees the best available price — saving up to 20% compared to MakeMyTrip, Booking.com, and Goibibo. OTA platforms add a 15–25% commission to every listed price. Direct booking eliminates this entirely.
+          <strong>Pro-Tip for 2026:</strong> Skip the online travel portals. Booking directly via WhatsApp at <a href="https://wa.me/917505029696" target="_blank" rel="noopener noreferrer" className="text-[#c9a832] font-bold underline">+91-7505029696</a> guarantees the best available price — saving a flat 25% compared to MakeMyTrip, Booking.com, and Goibibo. OTA platforms add a 25% commission markup to every listed price. Direct booking eliminates this entirely.
         </p>
 
         <p className="text-sm font-semibold text-[#1B3322] mb-2">Direct booking benefits at the best resort near Mukteshwar:</p>
@@ -2225,13 +2225,13 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#1B3322] text-base mb-1">Q9. How do I book at the best price?</h3>
             <p className="text-xs text-gray-600 font-light leading-relaxed">
-              Book directly via WhatsApp at +91-7505029696 to save up to 20% versus OTA platforms. Direct guests also receive priority room upgrades, flexible check-in and checkout, exclusive return-guest rates, and instant 5-minute response.
+              Book directly via WhatsApp at +91-7505029696 to save a flat 25% versus OTA platforms. Direct guests also receive priority room upgrades, flexible check-in and checkout, exclusive return-guest rates, and instant 5-minute response.
             </p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#1B3322] text-base mb-1">Q10. Is this the same as Clarks Exotica Mukteshwar?</h3>
             <p className="text-xs text-gray-600 font-light leading-relaxed">
-              Yes. Whispering Pines by Casa De Bello is the upgraded successor to Clarks Exotica on the Mukteshwar Road in Ramgarh. Same iconic Bhowali-Ramgarh-Mukteshwar Road address — now with stone cottage architecture enhanced, Casa De Bello management, swimming pool, private villa, and 150 Mbps Wi-Fi.
+              Yes. Whispering Pines by Casa De Bello is the upgraded successor to Clarks Exotica on the Mukteshwar Road in Ramgarh. Same iconic Bhowali-Ramgarh-Mukteshwar Road address — now with enhanced luxury suite architecture, Casa De Bello management, swimming pool, private villa, and 150 Mbps Wi-Fi.
             </p>
           </div>
         </div>
@@ -2290,7 +2290,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             rel="noopener noreferrer" 
             className="inline-block px-8 py-3.5 bg-[#c9a832] text-[#1B3322] font-bold text-sm rounded-xl hover:bg-yellow-400 transition-all shadow-md transform hover:-translate-y-0.5"
           >
-            WhatsApp +91-7505029696 — Save 20% Best Price Guaranteed
+            WhatsApp +91-7505029696 — Save Flat 25% Best Price Guaranteed
           </a>
         </div>
       </div>

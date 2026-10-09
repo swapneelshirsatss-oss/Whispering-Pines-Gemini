@@ -89,7 +89,7 @@ export default function WhatsAppButton() {
               Instant Concierge
             </span>
             <span className="text-xs font-sans font-medium text-[#FAF9F6]">
-              Book Direct & Save 15%
+              Book Direct & Save 25%
             </span>
           </div>
         </a>
