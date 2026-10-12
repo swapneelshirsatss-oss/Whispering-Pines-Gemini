@@ -31,7 +31,7 @@ This document is the verified, canonical ground truth for Whispering Pines Resor
 - **City / Locality**: Ramgarh / Mukteshwar
 - **District / Region**: Nainital District, Kumaon Region, Uttarakhand, India (PIN: 263137)
 - **Geographic Coordinates**: Latitude 29.4261962, Longitude 79.5506321
-- **Google Verified Rating**: 4.6★ (388 verified Google reviews)
+- **Google Verified Rating**: 4.6★ (402 verified Google reviews)
 - **Primary Telephone**: 075050 29696 (Display: `075050 29696`, International: `+91 75050 29696`, Click-to-call: `tel:+917505029696`)
 - **Official WhatsApp**: https://wa.me/917505029696 (`+91 75050 29696`)
 - **Official Website**: https://whisperingpinesresort.in/
