@@ -45,7 +45,7 @@ const schemaData = [
     "headline": post.title,
     "image": [post.imageUrl.startsWith("http") ? post.imageUrl : `https://whisperingpinesresort.in${post.imageUrl}`],
     "datePublished": new Date(post.date).toISOString(),
-    "dateModified": new Date(post.date).toISOString(),
+    "dateModified": new Date(post.updatedDate ?? post.date).toISOString(),
     "description": post.excerpt,
     "url": `https://whisperingpinesresort.in/blog/${post.slug}/`,
     "author": {
@@ -137,6 +137,12 @@ const schemaData = [
               </svg>
               {post.date}
             </span>
+            {post.updatedDate && (
+              <>
+                <span>•</span>
+                <span>Updated {post.updatedDate}</span>
+              </>
+            )}
             <span>•</span>
             <span class="inline-flex items-center gap-1">
               <svg class="w-3.5 h-3.5 text-[#c9a832]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
