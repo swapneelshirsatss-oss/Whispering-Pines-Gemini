@@ -10,6 +10,8 @@ export type BlogPostData = {
   /** Optional meta description override (~160 chars). Falls back to `excerpt`. */
   seoDescription?: string;
   date: string;
+  /** Optional last-updated date (same format as `date`). Feeds schema `dateModified` and the "Updated" label. */
+  updatedDate?: string;
   readTime: string;
   imageUrl: string;
   customUrl?: string;
@@ -929,13 +931,70 @@ export const BLOG_POSTS: BlogPostData[] = [
   {
     id: 5,
     slug: "resort-stay-near-kainchi-dham",
-    title: "Resorts Near Kainchi Dham Ashram Neem Karoli Baba | Whispering Pines (2026 Guide)",
-    seoTitle: "Resorts Near Kainchi Dham Ashram | Whispering Pines",
-    seoDescription: "Senior-friendly resort near Kainchi Dham Ashram: ground-floor rooms, wheelchair access, a private villa and Himalayan views, 45 minutes away. Book direct.",
-    excerpt: "Looking for a senior-friendly 4-star resort hotel near Kainchi Dham Ashram Neem Karoli Baba? Whispering Pines offers ground floor hotel rooms, wheelchair access, private villa, peak views, & 45-min drive to Ashram. Save flat 25% direct.",
+    title: "Best Hotel & Resort Near Kainchi Dham: Where to Stay (2026 Guide)",
+    seoTitle: "Best Hotel & Resort Near Kainchi Dham | Whispering Pines",
+    seoDescription: "Hotel & resort near Kainchi Dham: 22 km, about 45 min via Bhowali. 4-star stay with Himalayan views, pool, villa and 25+ car parking. Save 25% direct.",
+    excerpt: "Where to stay near Kainchi Dham Ashram (Neem Karoli Baba): a senior-friendly 4-star resort hotel 22 km away in Malla Ramgarh, compared with highway and Bhowali stays. Darshan plan, parking for 25+ cars, and a flat 25% off when you book direct.",
     date: "August 6, 2026",
-    readTime: "16 min read",
+    updatedDate: "October 12, 2026",
+    readTime: "18 min read",
     imageUrl: "/images/blog-resort-near-kainchi-dham-image/resorts-near-kainchi-dham-ashram-neem-karoli-baba-2026.avif",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Whispering Pines the best 4-star resort hotel near Kainchi Dham Ashram Neem Karoli Baba?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whispering Pines Resort Hotel is a top-rated 4-star resort hotel near Kainchi Dham Ashram. Located in Malla Ramgarh (22 km / 45-minute drive), it offers 180° Himalayan views, ground-floor step-free hotel rooms, pure veg/Satvik dining, a pine forest pool, 150 Mbps Wi-Fi, and a 4.6 star Google rating across 388 reviews." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Whispering Pines Resort Hotel suitable for senior citizen pilgrims?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer ground-floor hotel rooms with step-free access to gardens and dining areas. Wheelchair facilities are available on-site, and house staff is present to assist elderly guests with mobility and luggage." }
+        },
+        {
+          "@type": "Question",
+          "name": "What facilities are included in the Private Villa for Kainchi Dham visitors?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The private villa accommodates up to 8–10 guests and includes 2 premium valley-view bedrooms with private balconies, 1 cozy bedroom with an attached bath (3 washrooms total), a spacious living hall, a fully functional kitchenette, a large open terrace, private parking, Smart TV, 150 Mbps Wi-Fi, and daily housekeeping services." }
+        },
+        {
+          "@type": "Question",
+          "name": "What time should we leave the resort to visit Kainchi Dham Ashram?",
+          "acceptedAnswer": { "@type": "Answer", "text": "We strongly recommend leaving Whispering Pines Resort Hotel by 7:30 AM. Parking near Kainchi Dham is highly restricted due to daily pilgrim rushes. Leaving early allows you to secure a convenient parking spot before peak morning Yatra traffic builds up." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we get pure vegetarian or Satvik food at the resort hotel?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our kitchen prepares freshly cooked pure vegetarian and Satvik meals (without onion and garlic) upon prior request for Kainchi Dham devotees." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there self-cooking facilities available in the Private Villa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The private villa features a fully functional kitchenette with cookware, utensils, a refrigerator, and an electric kettle, allowing families to prepare their own tea, snacks, or simple home-style meals." }
+        },
+        {
+          "@type": "Question",
+          "name": "Was Whispering Pines previously known as Clarks Exotica?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The property was formerly known as Clarks Exotica Mukteshwar. It is now operated under upgraded hospitality management by Casa De Bello as Whispering Pines Resort Hotel." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you stay inside Kainchi Dham Ashram?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Kainchi Dham is a temple and ashram, not a hotel, and its rooms cannot be booked online or through travel sites. Most visitors plan a day visit and stay nearby. Whispering Pines in Malla Ramgarh is 22 km away, so you can reach the Ashram for morning darshan and return to a comfortable room." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there parking at the resort for guests driving to Kainchi Dham?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whispering Pines has private on-site parking for 25+ cars, so you never have to hunt for space beside a crowded highway. Tell the front desk your arrival time and vehicle type when you book, and leave early for darshan, because parking near the Ashram itself is limited." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get the best rate for a hotel near Kainchi Dham?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Book direct. Rates at Whispering Pines change with the season, and direct bookings are always a flat 25% below the OTA rate for the same dates, with a best price guarantee. Send your dates and guest count on WhatsApp at +91-7505029696 for a confirmed quote." }
+        }
+      ]
+    },
     content: (
       <div className="space-y-8 text-[#2C3531]">
         {/* Author E-E-A-T Banner */}
@@ -966,9 +1025,12 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         {/* AEO Direct Answer Summary */}
         <div className="bg-[#FAF9F6] p-6 rounded-2xl border-l-4 border-[#c9a832] shadow-sm space-y-3">
-          <div className="text-xs font-bold uppercase tracking-wider text-[#c9a832]">AEO Direct Answer Summary</div>
+          <h2 className="text-xs font-bold uppercase tracking-wider text-[#c9a832]">Best Hotel Near Kainchi Dham: The Quick Answer</h2>
           <p className="text-base text-gray-700 leading-relaxed font-light">
-            <a href="/" className="text-[#1B3322] font-semibold underline">Whispering Pines Resort</a> by Casa De Bello is a senior-friendly 4-star <strong>resort hotel</strong> located in Malla Ramgarh, Uttarakhand, situated a peaceful 45-minute drive (22 km) from Kainchi Dham Ashram (Shri Neem Karoli Baba Ashram). Set at an altitude of 1,780 metres, this luxury resort hotel features ground-floor step-free hotel rooms, on-site wheelchair accessibility for elderly pilgrims, a 3-bedroom private villa sleeping up to 8–10 guests, 180° Himalayan peak views, a pine forest pool, pure vegetarian/Satvik dining, and 150 Mbps Wi-Fi. It is designed to accommodate multi-generational family yatras and hotel guests comfortably. <a href="https://casadebello-book.whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" className="text-[#1B3322] font-semibold underline">Reserve your stay direct for flat 25% discount</a>.
+            <strong>The best hotel near Kainchi Dham for a calm stay is <a href="/" className="text-[#1B3322] underline">Whispering Pines Resort</a> by Casa De Bello, a 4-star resort hotel in Malla Ramgarh, 22 km and a 45-minute drive from the Ashram via Bhowali. It suits families, senior pilgrims and couples who want morning darshan, then quiet rooms and Nanda Devi views.</strong>
+          </p>
+          <p className="text-base text-gray-700 leading-relaxed font-light">
+            At 1,780 metres, the resort has ground-floor step-free rooms, wheelchair support for elderly pilgrims, a 3-bedroom private villa for up to 10 guests, pure vegetarian and Satvik dining, a pine forest pool, 150 Mbps Wi-Fi and private parking for 25+ cars. If walking to the Ashram gate matters more than anything else, stay in Kainchi or Bhowali instead. <a href="https://casadebello-book.whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" className="text-[#1B3322] font-semibold underline">Reserve direct for a flat 25% discount</a>.
           </p>
         </div>
 
@@ -1012,6 +1074,53 @@ export const BLOG_POSTS: BlogPostData[] = [
             WhatsApp +91-7505029696 — Best Price Guaranteed
           </a>
         </div>
+
+        {/* Where to Stay (question-led section) */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Where to Stay If Visiting Kainchi Dham?</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          You have three practical choices, and the right one depends on how you want to spend the rest of the day. Stay beside the highway if a short walk to the gate is the priority. Stay in Malla Ramgarh if you want darshan in the morning and a quiet ridge by evening.
+        </p>
+        <div className="overflow-x-auto rounded-xl border border-[#EAE8E3] my-6">
+          <table className="w-full text-left text-xs sm:text-sm">
+            <thead className="bg-[#1B3322] text-white">
+              <tr>
+                <th className="p-3">Where You Stay</th>
+                <th className="p-3">Distance to the Ashram</th>
+                <th className="p-3">Noise & Parking</th>
+                <th className="p-3">Best For</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[#EAE8E3]">
+              <tr>
+                <td className="p-3 font-semibold">Beside the highway at Kainchi</td>
+                <td className="p-3">Walking distance</td>
+                <td className="p-3">Busiest on weekends and festival days, limited parking</td>
+                <td className="p-3">Quick darshan stops, tight budgets, early queue starters</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Bhowali junction</td>
+                <td className="p-3">A short drive</td>
+                <td className="p-3">Junction traffic and market noise</td>
+                <td className="p-3">Travellers who want shops, taxis and food stops close by</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">Whispering Pines, Malla Ramgarh</td>
+                <td className="p-3 font-semibold text-[#1B3322]">22 km, about 45 minutes via Bhowali</td>
+                <td className="p-3 font-semibold text-[#1B3322]">Quiet pine forest, private parking for 25+ cars</td>
+                <td className="p-3 font-semibold text-[#1B3322]">Families, senior pilgrims, couples and groups who want rest after darshan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-gray-500 font-light">Drive times change with junction traffic, so add a buffer on weekends and festival days.</p>
+
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Are There Any 4-Star Hotels Near Kainchi Dham?</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Very few. Stays right beside the Ashram are mostly budget lodges and guesthouses, so travellers who want 4-star facilities usually base themselves a short drive away. Whispering Pines Resort is a 4-star resort hotel in Malla Ramgarh, 22 km from Kainchi Dham, with a pool, a multi-cuisine restaurant, 24/7 in-room dining and a private villa.
+        </p>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Whichever hotel you choose, ask four questions before you book: Is hot water reliable in winter? Is there power backup? Where will you park? Are there ground-floor rooms for elderly family members?
+        </p>
 
         {/* Senior-Friendly Section */}
         <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Senior-Friendly & Accessible Living for Kainchi Dham Pilgrims</h2>
@@ -1111,14 +1220,14 @@ export const BLOG_POSTS: BlogPostData[] = [
             <thead className="bg-[#1B3322] text-white">
               <tr>
                 <th className="p-3">Feature / Criteria</th>
-                <th className="p-3">Standard Kainchi / Bhowali Market Hotel</th>
+                <th className="p-3">Typical Stay Beside the Highway or Bhowali Market</th>
                 <th className="p-3">Whispering Pines Resort Hotel (Malla Ramgarh)</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#EAE8E3]">
               <tr>
                 <td className="p-3 font-semibold">GMB Category & Standards</td>
-                <td className="p-3">Basic guesthouse / lodge</td>
+                <td className="p-3">Mostly budget lodges and guesthouses</td>
                 <td className="p-3 font-semibold text-[#1B3322]">4-Star Resort Hotel with full amenities</td>
               </tr>
               <tr className="bg-yellow-50/50">
@@ -1133,22 +1242,22 @@ export const BLOG_POSTS: BlogPostData[] = [
               </tr>
               <tr className="bg-yellow-50/50">
                 <td className="p-3 font-semibold">Himalayan Peak Views</td>
-                <td className="p-3">Obstructed by adjacent buildings / none</td>
+                <td className="p-3">Often limited by nearby buildings</td>
                 <td className="p-3 font-semibold text-[#1B3322]">180° unobstructed Nanda Devi & Trishul views</td>
               </tr>
               <tr>
                 <td className="p-3 font-semibold">Parking & Access</td>
                 <td className="p-3">Limited street parking, narrow alleyways</td>
-                <td className="p-3 font-semibold text-[#1B3322]">Dedicated private hotel parking for cars & traveler buses</td>
+                <td className="p-3 font-semibold text-[#1B3322]">Private on-site parking for 25+ cars</td>
               </tr>
               <tr className="bg-yellow-50/50">
                 <td className="p-3 font-semibold">Dining Flexibility</td>
-                <td className="p-3">Basic roadside menus</td>
+                <td className="p-3">Varies by property</td>
                 <td className="p-3 font-semibold text-[#1B3322]">Pure Veg, Satvik & Kumaoni options on request</td>
               </tr>
               <tr>
                 <td className="p-3 font-semibold">Pool & Outdoor Space</td>
-                <td className="p-3">No outdoor grounds or swimming facilities</td>
+                <td className="p-3">Outdoor grounds and pools are rare</td>
                 <td className="p-3 font-semibold text-[#1B3322]">Outdoor pine forest pool, bonfire pit, private orchards</td>
               </tr>
               <tr className="bg-yellow-50/50">
@@ -1164,6 +1273,38 @@ export const BLOG_POSTS: BlogPostData[] = [
             </tbody>
           </table>
         </div>
+
+        {/* Price section (question-led) */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Nearest Hotel Price Near Kainchi Dham</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Budget rooms beside the Ashram usually cost less per night than a resort. The difference buys a quieter night, a Himalayan view, a pool, and a base you can stay in for more than one night. At Whispering Pines, room rates change with the season and the room type, ranging from about ₹3,000 to ₹16,000 a night, with the private villa at the top of that range.
+        </p>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Online travel agencies charge hotels a commission, and that cost sits inside the price you see. Book direct and you get a flat 25% off the OTA rate for the same dates, plus a best price guarantee. For example, a room listed at ₹8,000 a night on an OTA costs ₹6,000 direct, which saves ₹6,000 over a three-night stay.
+        </p>
+        <div className="bg-[#FAF9F6] p-5 rounded-xl border-l-4 border-[#c9a832] my-4">
+          <p className="text-sm text-gray-700 font-light">
+            <strong>Get today's rate:</strong> send your dates and guest count on <a href="https://wa.me/917505029696?text=Hi!%20Please%20share%20your%20direct%20rate%20for%20my%20Kainchi%20Dham%20trip." target="_blank" rel="noopener noreferrer" className="text-[#1B3322] font-semibold underline">WhatsApp +91-7505029696</a> or check live availability on the <a href="https://casadebello-book.whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" className="text-[#1B3322] font-semibold underline">direct booking page</a>.
+          </p>
+        </div>
+
+        {/* Ashram stay section (question-led) */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">How to Stay Inside Kainchi Dham Ashram?</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Kainchi Dham is a temple and ashram, not a hotel, and rooms inside it cannot be booked online or through travel sites. Rules for devotees can change, so check directly with the Ashram before you plan around a stay there, and be careful with anyone who offers a paid "Ashram stay".
+        </p>
+        <p className="text-gray-700 leading-relaxed font-light">
+          What works for most families is a day visit: sleep nearby, arrive early for darshan, and spend the rest of the day somewhere comfortable. The darshan plan further down shows how to do this from Ramgarh.
+        </p>
+
+        {/* Dharamshala section (question-led) */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Free Dharamshala Near Kainchi Dham</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Simple dharamshala-style rooms operate around Kainchi and Bhowali, usually free or on a donation basis. Facilities are basic and availability is first come, first served, so they suit solo devotees on a tight budget who can arrive early and take what is free.
+        </p>
+        <p className="text-gray-700 leading-relaxed font-light">
+          If you travel with children or elderly parents, need reliable hot water, or want a confirmed room before you set out, a hotel is the safer choice.
+        </p>
 
         {/* Flexible Dining Section */}
         <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Flexible Dining Options: Pure Veg, Satvik & Authentic Kumaoni Cuisine</h2>
@@ -1386,6 +1527,23 @@ export const BLOG_POSTS: BlogPostData[] = [
           </table>
         </div>
 
+        {/* Darshan plan (step-by-step) */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">How to Plan Your Kainchi Dham Darshan From Ramgarh</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          The drive is easy to plan around if you start early. Here is the morning our front desk suggests to most guests.
+        </p>
+        <ol className="list-decimal pl-6 space-y-3 text-gray-700 font-light">
+          <li><strong>The night before:</strong> tell the front desk your departure time and ask for an early breakfast or a flask of ginger-tulsi tea.</li>
+          <li><strong>Leave by 7:30 AM:</strong> this beats most of the morning traffic on the Bhowali stretch. If you want to attend the morning aarti, leave earlier and drive slowly in winter, when it is still dark.</li>
+          <li><strong>Park early:</strong> parking near the Ashram is limited and fills quickly, especially on weekends. Share cars where you can.</li>
+          <li><strong>Allow 2 to 3 hours:</strong> for darshan, prasad and a quiet walk by the Kosi river.</li>
+          <li><strong>Head back by late morning:</strong> you avoid the late-morning build-up and reach Ramgarh in time for a relaxed lunch.</li>
+          <li><strong>Afternoon and evening:</strong> an orchard walk, the pine forest pool, and the bonfire after dark. Skip the drive back for evening aarti unless you are comfortable on mountain roads at night.</li>
+        </ol>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Plan extra time on summer weekends and around 15 June, the Ashram's foundation day Bhandara, when queues can run for hours. For the quietest darshan, choose a weekday outside the summer peak.
+        </p>
+
         {/* 2-Day Itinerary */}
         <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Exploring Nearby Attractions: Suggested 2-Day Itinerary</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
@@ -1437,6 +1595,18 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#1B3322] text-base mb-1">Q7. Was Whispering Pines previously known as Clarks Exotica?</h3>
             <p className="text-xs text-gray-600 font-light">Yes. The property was formerly known as Clarks Exotica Mukteshwar. It is now operated under upgraded hospitality management by Casa De Bello as Whispering Pines Resort Hotel.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-base mb-1">Q8. Can you stay inside Kainchi Dham Ashram?</h3>
+            <p className="text-xs text-gray-600 font-light">Kainchi Dham is a temple and ashram, not a hotel, and its rooms cannot be booked online or through travel sites. Most visitors plan a day visit and stay nearby. Whispering Pines in Malla Ramgarh is 22 km away, so you can reach the Ashram for morning darshan and return to a comfortable room.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-base mb-1">Q9. Is there parking at the resort for guests driving to Kainchi Dham?</h3>
+            <p className="text-xs text-gray-600 font-light">Yes. Whispering Pines has private on-site parking for 25+ cars, so you never have to hunt for space beside a crowded highway. Tell the front desk your arrival time and vehicle type when you book, and leave early for darshan, because parking near the Ashram itself is limited.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-base mb-1">Q10. How do I get the best rate for a hotel near Kainchi Dham?</h3>
+            <p className="text-xs text-gray-600 font-light">Book direct. Rates at Whispering Pines change with the season, and direct bookings are always a flat 25% below the OTA rate for the same dates, with a best price guarantee. Send your dates and guest count on WhatsApp at +91-7505029696 for a confirmed quote.</p>
           </div>
         </div>
 
