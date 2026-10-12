@@ -169,7 +169,10 @@ export default defineConfig({
     react(),
     sitemap({
       lastmod: new Date(),
-      filter: (page) => !page.includes('/corporate-retreats-mukteshwar'),
+      filter: (page) =>
+        !page.includes('/corporate-retreats-mukteshwar') &&
+        !page.includes('/book-direct') &&
+        !page.includes('/404'),
     }),
     masterSitemap(),
     cspScriptHashes(),

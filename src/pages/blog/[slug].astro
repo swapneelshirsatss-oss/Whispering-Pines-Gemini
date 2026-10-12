@@ -23,20 +23,6 @@ const relatedPosts = BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 3);
 const schemaData = [
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
-    "alternateName": [
-      "Whispering Pines Resort by Casa De Bello",
-      "Whispering Pines Resort Mukteshwar",
-      "Whispering Pines Resort near Mukteshwar",
-      "Whispering Pines by Casa De Bello",
-      "Casa De Bello Mukteshwar - ramgarh",
-      "Casa De Bello Mukteshwar - Ramgarh"
-    ],
-    "url": "https://whisperingpinesresort.in/"
-  },
-  {
-    "@context": "https://schema.org",
     "@type": "BlogPosting",
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -76,6 +62,7 @@ const schemaData = [
     "telephone": "+91-7505029696",
     "url": "https://whisperingpinesresort.in/",
     "priceRange": "₹3000 - ₹15999",
+    "hasMap": "https://maps.google.com/?cid=8386667112972057918",
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": 29.42641,
@@ -84,11 +71,18 @@ const schemaData = [
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+      "streetAddress": "House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
       "addressLocality": "Mukteshwar",
       "addressRegion": "Uttarakhand",
       "postalCode": "263137",
       "addressCountry": "IN"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "reviewCount": "388",
+      "bestRating": "5",
+      "worstRating": "1"
     }
   },
   ...(post.faqSchema ? [post.faqSchema] : []),

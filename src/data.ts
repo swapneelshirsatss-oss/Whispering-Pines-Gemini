@@ -53,7 +53,7 @@ export const RESORT_CONTACT = {
     delhiNcrDrive: "340 km (~6.5 – 7.5 hrs via NH 9)",
     kathgodamRailhead: "43 km (~1.5 hrs)",
     pantnagarAirport: "76 km (~2.5 hrs)",
-    kainchiDham: "35 km (~60 mins)",
+    kainchiDham: "22 km (~45 mins drive)",
     mukteshwarDham: "25 km (~45 mins)"
   },
   socials: {
