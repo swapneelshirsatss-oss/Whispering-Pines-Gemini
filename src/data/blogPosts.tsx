@@ -22,6 +22,540 @@ export type BlogPostData = {
 
 export const BLOG_POSTS: BlogPostData[] = [
   {
+    id: 13,
+    slug: "destination-wedding-uttarakhand-cost",
+    title: "Destination Wedding in Uttarakhand Cost: What 50 to 100 Guests Really Spend in 2026-27",
+    seoTitle: "Destination Wedding in Uttarakhand Cost: 2026-27 Guide",
+    seoDescription: "Destination wedding in Uttarakhand cost for 2026-27: rooms, food per plate, decor and photography for 50-100 guests, and how to stay under 10 lakhs.",
+    excerpt: "What a destination wedding in Uttarakhand really costs in 2026-27: room and per-plate rates, a worked budget for 70 guests, whether 10 lakhs is enough, the cheapest months and regions, and what a full resort buyout at Whispering Pines includes.",
+    date: "October 13, 2026",
+    readTime: "12 min read",
+    imageUrl: "/images/destination-wedding/destination-weddings-uttarkahnd.avif",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a destination wedding in Uttarakhand cost for 100 guests?",
+          "acceptedAnswer": { "@type": "Answer", "text": "For 100 guests over two nights at a mid-range resort, plan for roughly ₹9 lakh to ₹15 lakh. Published budgets put 75 guests at ₹7 lakh to ₹11 lakh, and each extra guest adds about ₹8,000 to ₹15,000 for a room share, meals and transport. A peak weekend or premium décor takes it higher." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 10 lakhs enough for a destination wedding in Uttarakhand?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It can be, for about 60 to 75 guests over two nights. You would need a shoulder month like March or October, a weekday, a standard buffet and local vendors. A November weekend, premium live counters or a photographer flown in from Delhi usually pushes the total past ₹10 lakh." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which is the cheapest place for a destination wedding in Uttarakhand?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Lansdowne is usually the cheapest, with resort rooms around 30 to 40 percent below similar Jim Corbett properties. Rishikesh works well for smaller groups of 40 to 60. Ramgarh and Mukteshwar suit families who want one resort for the whole wedding, which saves on shuttles between hotels." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best month for a destination wedding in Uttarakhand?",
+          "acceptedAnswer": { "@type": "Answer", "text": "March, April, October and early November give clear skies and comfortable days, and March and October are 15 to 25 percent cheaper than the November and February peak. Skip July and August, when monsoon rain can close hill roads, and plan heaters for evening functions from December to February." }
+        },
+        {
+          "@type": "Question",
+          "name": "How many guests can Whispering Pines host for a wedding?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Whispering Pines sleeps up to 70 guests across 25 rooms and a 3-bedroom villa, and the Nanda Devi-facing lawn holds up to 100 for the ceremony and reception. The whole property is reserved for your wedding, and you can use our partner vendors or bring your own." }
+        }
+      ]
+    },
+    content: (
+      <div className="space-y-8 text-[#2C3531]">
+        {/* Author E-E-A-T Banner */}
+        <div className="bg-[#1B3322]/5 p-6 rounded-2xl border border-[#1B3322]/10 flex flex-col md:flex-row items-center gap-4">
+          <img
+            src="/images/Gaurav-pandey-casa-de-bello.webp"
+            alt="Gaurav Pandey, Director of Casa De Bello Pvt Ltd"
+            className="w-16 h-16 rounded-full object-cover border-2 border-[#c9a832] shrink-0 shadow-sm"
+            width="64"
+            height="64"
+            loading="lazy"
+          />
+          <div>
+            <div className="text-xs font-semibold text-[#c9a832] uppercase tracking-wider">Written by</div>
+            <h4 className="text-base font-bold text-[#1B3322]">Gaurav Pandey, Director of Casa De Bello Pvt Ltd</h4>
+            <p className="text-xs text-gray-600 font-light mt-1">
+              Hospitality entrepreneur behind <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="text-[#c9a832] underline">Casa De Bello Pvt Ltd</a> and Whispering Pines Resort in Malla Ramgarh. Cost ranges reviewed for the 2026-27 wedding season (October 2026 to September 2027). Whispering Pines quotes come from our reservations team.
+            </p>
+          </div>
+        </div>
+
+        {/* Quick Answer */}
+        <div className="bg-[#FAF9F6] p-6 rounded-2xl border-l-4 border-[#c9a832] shadow-sm space-y-3">
+          <h2 className="text-xs font-bold uppercase tracking-wider text-[#c9a832]">Destination Wedding in Uttarakhand Cost in 2026-27: The Quick Answer</h2>
+          <p className="text-base text-gray-700 leading-relaxed font-light">
+            <strong>A destination wedding in Uttarakhand for 70 to 100 guests over two nights usually costs about ₹7 lakh to ₹17 lakh at a mid-range hill resort in 2026-27. Rooms and food make up most of the bill. The month matters most: March and October run 15 to 25 percent cheaper than November.</strong>
+          </p>
+          <p className="text-base text-gray-700 leading-relaxed font-light">
+            Big floral themes, a celebrity photographer or a long guest list push you above that range. A small wedding of 30 to 40 people can come in well below it.
+          </p>
+        </div>
+
+        <p className="text-lg leading-relaxed text-gray-700 font-light">
+          Every wedding plan starts with the same three questions at the dining table: how many people, which month, and what will it cost? Venues rarely answer the last one in public, so it is hard to tell whether a hill wedding is even realistic for your family.
+        </p>
+        <p className="text-lg leading-relaxed text-gray-700 font-light">
+          So here is the breakdown we would want if we were planning a wedding ourselves. Every line uses rates that planners and venues publish for Uttarakhand, and we show the maths, so you can swap in your own guest count and see where you land.
+        </p>
+
+        <div className="my-6">
+          <img
+            src="/images/destination-wedding/wedding-cake-cutting-ceremony.webp"
+            alt="Wedding cake cutting ceremony at Whispering Pines Resort, Ramgarh, Uttarakhand"
+            className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]"
+            loading="lazy"
+          />
+          <p className="text-xs text-center text-gray-500 mt-2">Cake cutting at a wedding celebration at Whispering Pines.</p>
+        </div>
+
+        {/* Cost by item */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">What a Destination Wedding in Uttarakhand Costs in 2026-27, Item by Item</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          These are the ranges published for mid-range resorts across Uttarakhand. Use them to sense-check a quote, not as a quote.
+        </p>
+        <div className="overflow-x-auto rounded-xl border border-[#EAE8E3] my-6">
+          <table className="w-full text-left text-xs sm:text-sm">
+            <thead className="bg-[#1B3322] text-white">
+              <tr>
+                <th className="p-3">Cost item</th>
+                <th className="p-3">Typical range</th>
+                <th className="p-3">What moves the price</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[#EAE8E3]">
+              <tr>
+                <td className="p-3 font-semibold">Rooms (mid-tier resort)</td>
+                <td className="p-3">₹7,000 to ₹9,000 per room per night on a March weekday; ₹12,000 to ₹15,000 on a November weekend</td>
+                <td className="p-3">Month, weekday or weekend, full buyout or part booking</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Food, standard buffet</td>
+                <td className="p-3">₹800 to ₹1,000 per guest per meal</td>
+                <td className="p-3">Veg or non-veg, number of dishes</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">Food, premium live counters</td>
+                <td className="p-3">₹2,500 to ₹4,000 per guest per meal</td>
+                <td className="p-3">Live stations, imported ingredients</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Décor (two functions)</td>
+                <td className="p-3">₹1 lakh to ₹1.8 lakh; themed décor from ₹3 lakh per function</td>
+                <td className="p-3">Fresh or artificial flowers, mandap style</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">Photography</td>
+                <td className="p-3">₹50,000 to ₹70,000 for a local photographer (full day); ₹80,000 to ₹1.2 lakh from Delhi, plus ₹25,000 to ₹40,000 travel and stay</td>
+                <td className="p-3">Team size, video, drone</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">DJ and music</td>
+                <td className="p-3">₹40,000 to ₹60,000 for two evenings</td>
+                <td className="p-3">Sound system, live artists</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">Guest transport from Delhi</td>
+                <td className="p-3">₹50,000 to ₹70,000</td>
+                <td className="p-3">Coaches or tempo travellers</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Generator backup</td>
+                <td className="p-3">₹15,000 to ₹25,000 per night</td>
+                <td className="p-3">Only if the venue's backup does not cover event lighting</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-gray-500 font-light">
+          Sources: <a href="https://www.snazzytrips.in/post/destination-wedding-in-uttarakhand-under-10-lakhs" target="_blank" rel="noopener noreferrer" className="underline">SnazzyTrips</a> and <a href="https://exploringwings.in/budget-destination-wedding-in-uttarakhand/" target="_blank" rel="noopener noreferrer" className="underline">Exploring Wings</a>, checked 13 October 2026 for the 2026-27 season.
+        </p>
+
+        {/* Sample budget */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">A Real-World Budget: 70 Guests, Two Nights, One Resort</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Here is the maths for a full buyout of a 26-key hill resort (25 rooms plus a villa), with 70 guests, two nights and six meals. It uses the ranges above. Treat it as a worked example, not a Whispering Pines quote.
+        </p>
+        <div className="overflow-x-auto rounded-xl border border-[#EAE8E3] my-6">
+          <table className="w-full text-left text-xs sm:text-sm">
+            <thead className="bg-[#1B3322] text-white">
+              <tr>
+                <th className="p-3">Line item</th>
+                <th className="p-3">Lower end (March weekday, buffet)</th>
+                <th className="p-3">Upper end (November weekend, mixed counters)</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[#EAE8E3]">
+              <tr>
+                <td className="p-3 font-semibold">Rooms: 26 keys × 2 nights</td>
+                <td className="p-3">₹3.64 lakh (at ₹7,000)</td>
+                <td className="p-3">₹6.24 lakh (at ₹12,000)</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Food: 70 guests × 6 meals</td>
+                <td className="p-3">₹3.36 lakh (at ₹800)</td>
+                <td className="p-3">₹6.30 lakh (at ₹1,500)</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">Décor, 2 to 3 functions</td>
+                <td className="p-3">₹1.00 lakh</td>
+                <td className="p-3">₹1.80 lakh</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Photography</td>
+                <td className="p-3">₹0.50 lakh</td>
+                <td className="p-3">₹1.20 lakh</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">DJ and music</td>
+                <td className="p-3">₹0.40 lakh</td>
+                <td className="p-3">₹0.60 lakh</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Transport from Delhi</td>
+                <td className="p-3">₹0.50 lakh</td>
+                <td className="p-3">₹0.70 lakh</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">Generator, extra staff, bonfire</td>
+                <td className="p-3">₹0.30 lakh</td>
+                <td className="p-3">₹0.50 lakh</td>
+              </tr>
+              <tr className="bg-[#1B3322]/5">
+                <td className="p-3 font-bold text-[#1B3322]">Total</td>
+                <td className="p-3 font-bold text-[#1B3322]">₹9.70 lakh</td>
+                <td className="p-3 font-bold text-[#1B3322]">₹17.34 lakh</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Look at the first two rows. Rooms and food are about 70 percent of the bill at both ends, so that is where any real saving has to come from. Shaving ₹20,000 off the DJ will not change much.
+        </p>
+
+        <div className="bg-[#1B3322] text-white p-6 rounded-xl text-center space-y-3">
+          <h3 className="text-xl font-bold">Want the real figure for your dates?</h3>
+          <p className="text-xs text-gray-300">Our reservations team prices every wedding on the dates, guest count and services you choose.</p>
+          <a
+            href="https://wa.me/917505029696?text=Hi!%20We%20are%20planning%20a%20destination%20wedding%20at%20Whispering%20Pines.%20Our%20dates%20and%20guest%20count%20are%3A"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 bg-[#25D366] text-white font-bold text-sm rounded-lg hover:bg-[#1EBE5D] transition-all"
+          >
+            WhatsApp +91-7505029696 for a wedding quote
+          </a>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+          <figure>
+            <img
+              src="/images/destination-wedding/weddings-uttarkahnd-in-himalaya.avif"
+              alt="Guest seating under a draped wedding canopy on the lawn at Whispering Pines Resort"
+              className="w-full h-96 object-cover rounded-xl border border-[#EAE8E3]"
+              loading="lazy"
+            />
+            <figcaption className="text-xs text-center text-gray-500 mt-2">Guest seating under the canopy on the wedding lawn.</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/images/destination-wedding/best-destination-weddings.avif"
+              alt="Reception dinner table under a draped canopy at Whispering Pines, Ramgarh"
+              className="w-full h-96 object-cover rounded-xl border border-[#EAE8E3]"
+              loading="lazy"
+            />
+            <figcaption className="text-xs text-center text-gray-500 mt-2">A reception table laid out for dinner.</figcaption>
+          </figure>
+        </div>
+
+        {/* Under 10 lakhs */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Can You Do a Destination Wedding in Uttarakhand Under 10 Lakhs?</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Yes, but only if you take the lower end of almost every line. For 70 guests over two nights, the worked example lands at about ₹9.7 lakh with a shoulder-season weekday, a standard buffet and local vendors. Add a weekend, a third function or a Delhi photographer and you are past ₹10 lakh quickly.
+        </p>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Other published budgets point the same way. SnazzyTrips puts 75 guests at ₹7 lakh to ₹9.5 lakh in Lansdowne and ₹7.5 lakh to ₹11 lakh in Jim Corbett in March or October, and reckons each guest above 75 adds ₹8,000 to ₹15,000. Exploring Wings estimates ₹6.5 lakh to ₹10 lakh for 100 guests over two days at budget-friendly venues.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">And Under 5 Lakhs?</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Not for 70 or more guests at a resort. Under ₹5 lakh works for an intimate wedding. Take 35 guests for one night: 14 keys at ₹7,000 is about ₹0.98 lakh, three meals at ₹900 is about ₹0.95 lakh, and simple décor, a local photographer and extras add roughly ₹1.3 lakh. That is about ₹3.2 lakh in total. A second night takes it to around ₹5.2 lakh.
+        </p>
+
+        {/* Region and season */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">How the Cost Changes by Region and Season</h2>
+        <div className="overflow-x-auto rounded-xl border border-[#EAE8E3] my-6">
+          <table className="w-full text-left text-xs sm:text-sm">
+            <thead className="bg-[#1B3322] text-white">
+              <tr>
+                <th className="p-3">Region</th>
+                <th className="p-3">Cost position</th>
+                <th className="p-3">Watch out for</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[#EAE8E3]">
+              <tr>
+                <td className="p-3 font-semibold">Lansdowne</td>
+                <td className="p-3">Cheapest: rooms about 30 to 40 percent below comparable Corbett resorts</td>
+                <td className="p-3">Fewer large resorts</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Jim Corbett</td>
+                <td className="p-3">Mid to high: March and October run 15 to 25 percent below the November and February peak</td>
+                <td className="p-3">Safari add-ons for 75 guests cost ₹50,000 to ₹80,000</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">Rishikesh</td>
+                <td className="p-3">Good value for 40 to 60 guests</td>
+                <td className="p-3">Larger groups often split across two properties, adding ₹80,000 to ₹1.2 lakh in transport</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Nainital town</td>
+                <td className="p-3">Lake-view hotels in a busy tourist town</td>
+                <td className="p-3">Weekend traffic and limited parking for guest cars</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">Ramgarh and Mukteshwar</td>
+                <td className="p-3">Quieter ridge resorts in Nainital district, where one property can hold the whole wedding</td>
+                <td className="p-3">A longer drive from the plains and cold nights from December to February</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-gray-500 font-light">
+          Lansdowne, Corbett and Rishikesh figures: <a href="https://www.snazzytrips.in/post/destination-wedding-in-uttarakhand-under-10-lakhs" target="_blank" rel="noopener noreferrer" className="underline">SnazzyTrips</a>.
+        </p>
+        <p className="text-gray-700 leading-relaxed font-light">
+          The month matters more than the region. On 30 rooms for two nights, picking March over November saves ₹1.8 lakh to ₹3.6 lakh on rooms alone. And please avoid July and August: monsoon rain and landslides can close hill roads, and an outdoor ceremony needs a backup plan you would rather not use.
+        </p>
+
+        <h3 className="text-xl font-bold text-[#1B3322] mt-6 mb-3">2026-27 Wedding Season Calendar for the Kumaon Hills</h3>
+        <div className="overflow-x-auto rounded-xl border border-[#EAE8E3] my-6">
+          <table className="w-full text-left text-xs sm:text-sm">
+            <thead className="bg-[#1B3322] text-white">
+              <tr>
+                <th className="p-3">Months</th>
+                <th className="p-3">What to expect</th>
+                <th className="p-3">Cost position</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[#EAE8E3]">
+              <tr>
+                <td className="p-3 font-semibold">October 2026</td>
+                <td className="p-3">Clear skies and the sharpest Himalayan views after the monsoon</td>
+                <td className="p-3">Shoulder: about 15 to 25 percent below peak</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">November 2026</td>
+                <td className="p-3">Cool, dry days and cold nights</td>
+                <td className="p-3">Peak</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">December 2026 to January 2027</td>
+                <td className="p-3">Cold evenings; outdoor functions need heaters</td>
+                <td className="p-3">Varies; ask for winter dates</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">February 2027</td>
+                <td className="p-3">Crisp, clear days</td>
+                <td className="p-3">Peak</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">March to April 2027</td>
+                <td className="p-3">Mild days and flowering orchards</td>
+                <td className="p-3">Shoulder: about 15 to 25 percent below peak</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">May to June 2027</td>
+                <td className="p-3">Summer holiday rush in the hill stations</td>
+                <td className="p-3">High demand; book early</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">July to August 2027</td>
+                <td className="p-3">Monsoon rain and possible road closures</td>
+                <td className="p-3">Not recommended for outdoor weddings</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">September 2027</td>
+                <td className="p-3">The monsoon tails off late in the month</td>
+                <td className="p-3">Shoulder once the roads settle</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-gray-500 font-light">
+          Peak and shoulder months follow the SnazzyTrips cost data. Weather notes are general guidance for the Kumaon hills. Share your preferred 2026-27 dates with our reservations team to see the price for that week.
+        </p>
+
+        <div className="my-6">
+          <img
+            src="/images/destination-wedding/wedding-in-nainital.avif"
+            alt="Draped wedding canopy on the lawn at Whispering Pines Resort with the Kumaon hills behind"
+            className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]"
+            loading="lazy"
+          />
+          <p className="text-xs text-center text-gray-500 mt-2">A draped canopy over the lawn, with the hills behind it.</p>
+        </div>
+
+        {/* Ways to save */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Seven Ways to Bring the Cost Down</h2>
+        <ol className="list-decimal pl-6 space-y-3 text-gray-700 font-light">
+          <li><strong>Pick a shoulder month.</strong> March, April, late September and October usually price 15 to 25 percent below November and February.</li>
+          <li><strong>Get married on a weekday.</strong> Weekends cost the most, and a Thursday wedding also dodges the weekend tourist traffic on hill roads.</li>
+          <li><strong>Keep everyone under one roof.</strong> A full buyout means no shuttles between hotels, and the lawn, dining room and pool are yours alone.</li>
+          <li><strong>Merge mehendi and sangeet.</strong> One evening instead of two saves ₹80,000 to ₹1.2 lakh on décor and ₹50,000 to ₹80,000 on catering, according to SnazzyTrips.</li>
+          <li><strong>Hire local vendors.</strong> Photographers from Haldwani or Ramnagar charge ₹50,000 to ₹70,000 a day, with no travel or hotel bill on top.</li>
+          <li><strong>Let the view do the work.</strong> A Himalayan backdrop needs far less floral décor than a banquet hall.</li>
+          <li><strong>Lock the guest list early.</strong> Every extra guest adds a room share, six meals and a seat on the bus.</li>
+        </ol>
+
+        {/* What WP includes */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">What a Wedding at Whispering Pines Includes</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Whispering Pines Resort by Casa De Bello sits at 1,780 metres in Malla Ramgarh, Nainital district, looking straight at Nanda Devi and Trishul. For a wedding, we close the whole property to outside guests, so it is just your families on the lawns, in the dining room and around the pool.
+        </p>
+        <div className="overflow-x-auto rounded-xl border border-[#EAE8E3] my-6">
+          <table className="w-full text-left text-xs sm:text-sm">
+            <thead className="bg-[#1B3322] text-white">
+              <tr>
+                <th className="p-3">What you get</th>
+                <th className="p-3">Detail</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[#EAE8E3]">
+              <tr>
+                <td className="p-3 font-semibold">Rooms</td>
+                <td className="p-3">25 rooms plus a standalone 3-bedroom villa, sleeping up to 70 guests</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Ceremony lawn</td>
+                <td className="p-3">2,200 sq ft lawn facing the snow peaks, for up to 100 guests</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">Vendors</td>
+                <td className="p-3">Our empanelled partners, or bring your own decorator, photographer and DJ</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Food</td>
+                <td className="p-3">Multi-cuisine kitchen, with Jain, non-spicy and kids' menus on request</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold">Getting here from Delhi</td>
+                <td className="p-3">About 340 km, 6.5 to 7.5 hours by road; Kathgodam station 43 km; Pantnagar airport 76 km</td>
+              </tr>
+              <tr className="bg-yellow-50/50">
+                <td className="p-3 font-semibold">Price</td>
+                <td className="p-3">Quoted per wedding by our reservations team, based on your dates, guest count and services</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-gray-700 leading-relaxed font-light">
+          See the lawn, the villa and the venue layout on our <a href="/destination-wedding-uttarakhand/" className="text-[#1B3322] font-semibold underline">destination wedding in Uttarakhand</a> page.
+        </p>
+
+        <div className="my-6">
+          <img
+            src="/images/destination-wedding/destination-wedding-nainital-place.avif"
+            alt="Reception tables and red carpet under the wedding canopy at Whispering Pines, Ramgarh, Nainital district"
+            className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]"
+            loading="lazy"
+          />
+          <p className="text-xs text-center text-gray-500 mt-2">Reception tables set under the canopy, with the valley beyond.</p>
+        </div>
+
+        {/* Two-night plan */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">A Two-Night Wedding Plan That Keeps Costs in Check</h2>
+        <ol className="list-decimal pl-6 space-y-3 text-gray-700 font-light">
+          <li><strong>Day 1, afternoon:</strong> guests arrive from Delhi and Kathgodam, check in, and gather for a combined haldi and mehendi on the villa lawn.</li>
+          <li><strong>Day 1, evening:</strong> sangeet around a bonfire with the DJ, then dinner.</li>
+          <li><strong>Day 2, morning:</strong> a slow breakfast, orchard walks and the pool.</li>
+          <li><strong>Day 2, golden hour:</strong> pheras on the Nanda Devi lawn, then the reception dinner outdoors.</li>
+          <li><strong>Day 3, morning:</strong> breakfast and checkout, with time to reach Delhi before dark.</li>
+        </ol>
+        <p className="text-gray-700 leading-relaxed font-light">
+          That is three functions, two nights and six meals, the same shape as the worked budget above.
+        </p>
+
+        {/* Honest trade-offs */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">What to Know Before You Book a Hill Wedding</h2>
+        <ul className="list-disc pl-6 space-y-3 text-gray-700 font-light">
+          <li><strong>Guest limit:</strong> we sleep 70 and seat 100 at the ceremony. A bigger list means a second hotel and extra transport.</li>
+          <li><strong>Cold nights:</strong> from December to February, outdoor evening functions need heaters, and elderly relatives will want warm layers.</li>
+          <li><strong>Monsoon:</strong> July and August bring heavy rain and the odd road closure, so we do not recommend them for outdoor weddings.</li>
+          <li><strong>The last stretch:</strong> the road up from Bhowali is a proper mountain road. Plan guest arrivals in daylight.</li>
+        </ul>
+
+        {/* FAQ */}
+        <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-base mb-1">How much does a destination wedding in Uttarakhand cost for 100 guests?</h3>
+            <p className="text-sm text-gray-600 font-light">For 100 guests over two nights at a mid-range resort, plan for roughly ₹9 lakh to ₹15 lakh. Published budgets put 75 guests at ₹7 lakh to ₹11 lakh, and each extra guest adds about ₹8,000 to ₹15,000 for a room share, meals and transport. A peak weekend or premium décor takes it higher.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-base mb-1">Is 10 lakhs enough for a destination wedding in Uttarakhand?</h3>
+            <p className="text-sm text-gray-600 font-light">It can be, for about 60 to 75 guests over two nights. You would need a shoulder month like March or October, a weekday, a standard buffet and local vendors. A November weekend, premium live counters or a photographer flown in from Delhi usually pushes the total past ₹10 lakh.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-base mb-1">Which is the cheapest place for a destination wedding in Uttarakhand?</h3>
+            <p className="text-sm text-gray-600 font-light">Lansdowne is usually the cheapest, with resort rooms around 30 to 40 percent below similar Jim Corbett properties. Rishikesh works well for smaller groups of 40 to 60. Ramgarh and Mukteshwar suit families who want one resort for the whole wedding, which saves on shuttles between hotels.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-base mb-1">What is the best month for a destination wedding in Uttarakhand?</h3>
+            <p className="text-sm text-gray-600 font-light">March, April, October and early November give clear skies and comfortable days, and March and October are 15 to 25 percent cheaper than the November and February peak. Skip July and August, when monsoon rain can close hill roads, and plan heaters for evening functions from December to February.</p>
+          </div>
+          <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#1B3322] text-base mb-1">How many guests can Whispering Pines host for a wedding?</h3>
+            <p className="text-sm text-gray-600 font-light">Whispering Pines sleeps up to 70 guests across 25 rooms and a 3-bedroom villa, and the Nanda Devi-facing lawn holds up to 100 for the ceremony and reception. The whole property is reserved for your wedding, and you can use our partner vendors or bring your own.</p>
+          </div>
+        </div>
+
+        {/* Internal links */}
+        <div className="bg-[#FAF9F6] p-6 rounded-2xl border border-[#EAE8E3] space-y-4 my-8">
+          <h4 className="text-sm font-bold text-[#1B3322] uppercase tracking-wider">Plan Your Wedding at Whispering Pines</h4>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
+            <a href="/destination-wedding-uttarakhand/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-bold hover:border-[#c9a832] transition-colors shadow-sm">
+              Destination Wedding Venue and Lawn
+            </a>
+            <a href="/private-villas-near-nainital/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+              The 3-Bedroom Bridal Villa
+            </a>
+            <a href="/suites-cottages-ramgarh-resort/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+              Rooms for Your Guests
+            </a>
+            <a href="/resort-amenities-mukteshwar/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+              Pool and Resort Amenities
+            </a>
+            <a href="/blog/resort-stay-near-kainchi-dham/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+              Add a Kainchi Dham Darshan
+            </a>
+            <a href="/contact-whispering-pines-resort-mukteshwar/" className="p-3 bg-white rounded-lg border border-[#EAE8E3] text-[#1B3322] font-semibold hover:border-[#c9a832] transition-colors shadow-sm">
+              Directions and Contact
+            </a>
+          </div>
+        </div>
+
+        {/* Final CTA */}
+        <div className="bg-[#1B3322] text-white p-8 rounded-2xl text-center space-y-4 my-8 shadow-lg border border-[#c9a832]/30">
+          <h3 className="text-2xl font-bold text-white">Get Your 2026-27 Wedding Quote</h3>
+          <p className="text-sm text-gray-300 max-w-xl mx-auto">
+            In the 2026-27 season, a 70-guest, two-night hill wedding in Uttarakhand costs roughly ₹10 lakh to ₹17 lakh, and under ₹10 lakh is possible with a shoulder-season weekday, one property and local vendors. Fix your guest list and month first, then send them to us.
+          </p>
+          <a
+            href="https://wa.me/917505029696?text=Hi!%20We%20are%20planning%20a%20destination%20wedding%20at%20Whispering%20Pines.%20Our%20dates%20and%20guest%20count%20are%3A"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-3.5 bg-[#c9a832] text-[#1B3322] font-bold text-sm rounded-xl hover:bg-yellow-400 transition-all shadow-md"
+          >
+            WhatsApp +91-7505029696 with your dates
+          </a>
+        </div>
+      </div>
+    )
+  },
+  {
     id: 12,
     slug: "stay-near-mukteshwar-kainchi-dham",
     customUrl: "/blog/stay-near-mukteshwar-kainchi-dham/",
