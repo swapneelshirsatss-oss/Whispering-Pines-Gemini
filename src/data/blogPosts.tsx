@@ -252,20 +252,20 @@ export const BLOG_POSTS: BlogPostData[] = [
           <figure>
             <img
               src="/images/destination-wedding/weddings-uttarkahnd-in-himalaya.avif"
-              alt="The 2,200 sq ft Nanda Devi-facing wedding lawn at Whispering Pines Resort"
+              alt="Guest seating under a draped wedding canopy on the lawn at Whispering Pines Resort"
               className="w-full h-96 object-cover rounded-xl border border-[#EAE8E3]"
               loading="lazy"
             />
-            <figcaption className="text-xs text-center text-gray-500 mt-2">The 2,200 sq ft lawn faces the snow peaks.</figcaption>
+            <figcaption className="text-xs text-center text-gray-500 mt-2">Guest seating under the canopy on the wedding lawn.</figcaption>
           </figure>
           <figure>
             <img
               src="/images/destination-wedding/best-destination-weddings.avif"
-              alt="Open-air wedding reception dinner under the night sky at Whispering Pines, Ramgarh"
+              alt="Reception dinner table under a draped canopy at Whispering Pines, Ramgarh"
               className="w-full h-96 object-cover rounded-xl border border-[#EAE8E3]"
               loading="lazy"
             />
-            <figcaption className="text-xs text-center text-gray-500 mt-2">Reception dinners move outdoors on clear nights.</figcaption>
+            <figcaption className="text-xs text-center text-gray-500 mt-2">A reception table laid out for dinner.</figcaption>
           </figure>
         </div>
 
@@ -391,11 +391,11 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="my-6">
           <img
             src="/images/destination-wedding/wedding-in-nainital.avif"
-            alt="Haldi and mehendi celebration among the orchards at Whispering Pines Resort near Nainital"
+            alt="Draped wedding canopy on the lawn at Whispering Pines Resort with the Kumaon hills behind"
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]"
             loading="lazy"
           />
-          <p className="text-xs text-center text-gray-500 mt-2">A combined haldi and mehendi saves a full function's décor and catering.</p>
+          <p className="text-xs text-center text-gray-500 mt-2">A draped canopy over the lawn, with the hills behind it.</p>
         </div>
 
         {/* Ways to save */}
@@ -458,11 +458,11 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="my-6">
           <img
             src="/images/destination-wedding/destination-wedding-nainital-place.avif"
-            alt="Whispering Pines Resort reserved for a private wedding buyout in Ramgarh, Nainital district"
+            alt="Reception tables and red carpet under the wedding canopy at Whispering Pines, Ramgarh, Nainital district"
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]"
             loading="lazy"
           />
-          <p className="text-xs text-center text-gray-500 mt-2">With a full buyout, the whole estate is reserved for the wedding party.</p>
+          <p className="text-xs text-center text-gray-500 mt-2">Reception tables set under the canopy, with the valley beyond.</p>
         </div>
 
         {/* Two-night plan */}
