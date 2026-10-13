@@ -170,7 +170,7 @@ const schemaData = [
         <div class="w-full h-64 sm:h-96 md:h-[480px] overflow-hidden rounded-2xl border border-gray-100 shadow-inner bg-gray-100">
           <img 
             src={post.imageUrl} 
-            alt={post.title} 
+            alt={post.imageAlt ?? post.title} 
             class="w-full h-full object-cover"
             loading="eager"
             fetchpriority="high"

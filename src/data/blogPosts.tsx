@@ -14,6 +14,7 @@ export type BlogPostData = {
   updatedDate?: string;
   readTime: string;
   imageUrl: string;
+  imageAlt?: string;
   customUrl?: string;
   content?: React.ReactNode;
   faqSchema?: any;
@@ -31,6 +32,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     date: "October 13, 2026",
     readTime: "12 min read",
     imageUrl: "/images/destination-wedding/destination-weddings-uttarkahnd.avif",
+    imageAlt: "Wedding mandap on the Nanda Devi view lawn at Whispering Pines Resort, Ramgarh, Uttarakhand",
     faqSchema: {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -238,14 +240,22 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="bg-[#1B3322] text-white p-6 rounded-xl text-center space-y-3">
           <h3 className="text-xl font-bold">Want the real figure for your dates?</h3>
           <p className="text-xs text-gray-300">Our reservations team prices every wedding on the dates, guest count and services you choose.</p>
-          <a
-            href="https://wa.me/917505029696?text=Hi!%20We%20are%20planning%20a%20destination%20wedding%20at%20Whispering%20Pines.%20Our%20dates%20and%20guest%20count%20are%3A"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-[#25D366] text-white font-bold text-sm rounded-lg hover:bg-[#1EBE5D] transition-all"
-          >
-            WhatsApp +91-7505029696 for a wedding quote
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
+            <a
+              href="/destination-wedding-uttarakhand/"
+              className="inline-block px-5 py-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-sm rounded-lg transition-all"
+            >
+              Ask for a Whispering Pines wedding quote →
+            </a>
+            <a
+              href="https://wa.me/917505029696?text=Hi!%20We%20are%20planning%20a%20destination%20wedding%20at%20Whispering%20Pines.%20Our%20dates%20and%20guest%20count%20are%3A"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-5 py-3 bg-[#25D366] text-white font-bold text-sm rounded-lg hover:bg-[#1EBE5D] transition-all"
+            >
+              WhatsApp +91-7505029696
+            </a>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
@@ -452,7 +462,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           </table>
         </div>
         <p className="text-gray-700 leading-relaxed font-light">
-          See the lawn, the villa and the venue layout on our <a href="/destination-wedding-uttarakhand/" className="text-[#1B3322] font-semibold underline">destination wedding in Uttarakhand</a> page.
+          <a href="/destination-wedding-uttarakhand/" className="text-[#1B3322] font-semibold underline">See the wedding venue, lawn and villa</a> or WhatsApp +91-7505029696 with your dates and guest count for a custom quote.
         </p>
 
         <div className="my-6">
@@ -541,16 +551,24 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="bg-[#1B3322] text-white p-8 rounded-2xl text-center space-y-4 my-8 shadow-lg border border-[#c9a832]/30">
           <h3 className="text-2xl font-bold text-white">Get Your 2026-27 Wedding Quote</h3>
           <p className="text-sm text-gray-300 max-w-xl mx-auto">
-            In the 2026-27 season, a 70-guest, two-night hill wedding in Uttarakhand costs roughly ₹10 lakh to ₹17 lakh, and under ₹10 lakh is possible with a shoulder-season weekday, one property and local vendors. Fix your guest list and month first, then send them to us.
+            In the 2026-27 season, a 70-guest, two-night hill wedding in Uttarakhand costs roughly ₹10 lakh to ₹17 lakh, and under ₹10 lakh is possible with a shoulder-season weekday, one property and local vendors. When you are ready for real numbers, send us your dates and guest count. <a href="/destination-wedding-uttarakhand/" className="text-[#c9a832] font-semibold underline">Request a wedding quote</a> or WhatsApp the wedding desk on +91-7505029696.
           </p>
-          <a
-            href="https://wa.me/917505029696?text=Hi!%20We%20are%20planning%20a%20destination%20wedding%20at%20Whispering%20Pines.%20Our%20dates%20and%20guest%20count%20are%3A"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-3.5 bg-[#c9a832] text-[#1B3322] font-bold text-sm rounded-xl hover:bg-yellow-400 transition-all shadow-md"
-          >
-            WhatsApp +91-7505029696 with your dates
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+            <a
+              href="https://wa.me/917505029696?text=Hi!%20We%20are%20planning%20a%20destination%20wedding%20at%20Whispering%20Pines.%20Our%20dates%20and%20guest%20count%20are%3A"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3.5 bg-[#c9a832] text-[#1B3322] font-bold text-sm rounded-xl hover:bg-yellow-400 transition-all shadow-md"
+            >
+              WhatsApp +91-7505029696 with your dates
+            </a>
+            <a
+              href="/destination-wedding-uttarakhand/"
+              className="inline-block px-8 py-3.5 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-sm rounded-xl transition-all"
+            >
+              Request a wedding quote →
+            </a>
+          </div>
         </div>
       </div>
     )
