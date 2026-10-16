@@ -86,61 +86,6 @@ function indexNowIntegration() {
   };
 }
 
-/**
- * Replaces the __CSP_SCRIPT_HASHES__ token in dist/_headers and dist/.htaccess with the SHA-256
- * hashes of every executable inline <script> in the built HTML, so script-src needs no 'unsafe-inline'.
- * @returns {import('astro').AstroIntegration}
- */
-function cspScriptHashes() {
-  const TOKEN = '__CSP_SCRIPT_HASHES__';
-  /** @type {(dir: string) => string[]} */
-  const listHtml = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap((e) => {
-    const full = path.join(dir, e.name);
-    if (e.isDirectory()) return listHtml(full);
-    return e.name.endsWith('.html') ? [full] : [];
-  });
-
-  return {
-    name: 'csp-script-hashes',
-    hooks: {
-      'astro:build:done': async ({ dir }) => {
-        const { createHash } = await import('node:crypto');
-        const distDir = fileURLToPath(dir);
-        const hashes = new Set();
-        for (const file of listHtml(distDir)) {
-          const html = fs.readFileSync(file, 'utf8');
-          for (const [, attrs, body] of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)) {
-            if (/\bsrc\s*=/i.test(attrs) || !body) continue;
-            const type = attrs.match(/\btype\s*=\s*["']?([^"'\s>]+)/i)?.[1]?.toLowerCase();
-            // Data blocks (JSON-LD etc.) are not executed, so CSP does not apply to them
-            if (type && !['module', 'text/javascript', 'application/javascript'].includes(type)) continue;
-            hashes.add(`'sha256-${createHash('sha256').update(body, 'utf8').digest('base64')}'`);
-          }
-        }
-        if (hashes.size === 0) {
-          throw new Error('[csp-script-hashes] No inline scripts found; refusing to write an empty script-src.');
-        }
-        const value = [...hashes].sort().join(' ');
-        for (const name of ['_headers', '.htaccess']) {
-          const target = path.join(distDir, name);
-          if (!fs.existsSync(target)) continue;
-          const src = fs.readFileSync(target, 'utf8');
-          if (!src.includes(TOKEN)) continue;
-          fs.writeFileSync(target, src.replaceAll(TOKEN, value));
-          console.log(`[csp-script-hashes] Wrote ${hashes.size} inline script hashes to ${name}`);
-        }
-        // Fail the build rather than ship a policy that would block every script
-        for (const name of ['_headers', '.htaccess']) {
-          const target = path.join(distDir, name);
-          if (fs.existsSync(target) && fs.readFileSync(target, 'utf8').includes(TOKEN)) {
-            throw new Error(`[csp-script-hashes] ${TOKEN} is still present in dist/${name}.`);
-          }
-        }
-      }
-    }
-  };
-}
-
 // https://astro.build/config
 export default defineConfig({
   site: 'https://whisperingpinesresort.in',
@@ -175,7 +120,6 @@ export default defineConfig({
         !page.includes('/404'),
     }),
     masterSitemap(),
-    cspScriptHashes(),
     indexNowIntegration(),
   ],
   image: {

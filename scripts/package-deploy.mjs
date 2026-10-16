@@ -19,9 +19,12 @@ for (const name of ['.htaccess', '_headers']) {
   if (!fs.existsSync(file)) fail(`dist/${name} is missing. Run a build first.`);
   const text = fs.readFileSync(file, 'utf8');
   if (text.includes('__CSP_SCRIPT_HASHES__')) fail(`dist/${name} still has the CSP hash placeholder.`);
-  const scriptSrc = text.match(/script-src [^;"]*/)?.[0] ?? '';
-  if (!scriptSrc.includes("'sha256-")) fail(`dist/${name} script-src has no inline script hashes.`);
-  if (/unsafe-(inline|eval)/.test(scriptSrc)) fail(`dist/${name} script-src allows unsafe-inline/unsafe-eval.`);
+  const csp = text.match(/Content-Security-Policy:? "?([^"\r\n]+)/i)?.[1] ?? '';
+  if (!csp.includes('googletagmanager.com')) fail(`dist/${name} CSP is missing googletagmanager.com.`);
+  if (!csp.includes('googleadservices.com')) fail(`dist/${name} CSP is missing googleadservices.com.`);
+  if (!csp.includes('gstatic.com')) fail(`dist/${name} CSP is missing gstatic.com.`);
+  if (!csp.includes('tagassistant.google.com')) fail(`dist/${name} CSP is missing tagassistant.google.com.`);
+  if (!csp.includes("'unsafe-inline'")) fail(`dist/${name} CSP is missing 'unsafe-inline' required by GTM and Google Ads.`);
 }
 
 fs.rmSync(zip, { force: true });
