@@ -132,6 +132,16 @@ Whenever designing or refactoring direct booking pages, room cards, or conversio
   - **Booking Engine Conversion Mapping**: BookingJini clicks dispatch `begin_checkout` + `conversion` (`AW-18455442099`).
   - **Attribution Persistence**: Capture `gclid`, `gbraid`, `wbraid`, and UTM parameters into `sessionStorage` on landing page arrival so attribution is preserved throughout the session and injected into WhatsApp payloads.
 
+## Google Tag Manager (GTM) & Tag Hygiene Standards
+
+Whenever updating `<head>`, `Layout.astro`, landing page templates, or analytics integrations:
+- **GTM Container Singleton Invariant**: Google Tag Manager container `GTM-PL8FVLPX` must appear **strictly once** across the entire document.
+  - **`<head>` Placement**: Position the `<script>` container snippet as the **very first element** inside `<head>`, before any auxiliary scripts or stylesheets.
+  - **`<body>` Placement**: Position the `<noscript>` fallback iframe **immediately after the opening `<body>` tag** with zero intervening elements.
+- **Strict Prohibition of Hardcoded `gtag.js`**: NEVER insert hardcoded Google tag loaders (`https://www.googletagmanager.com/gtag/js?id=AW-...` or `id=G-...`) or hardcoded `gtag('config', 'AW-...')` calls into HTML, Astro layouts, or standalone landing pages. All Google Ads and GA4 tags are managed exclusively inside the GTM container (`GTM-PL8FVLPX`) to prevent duplicate "Container Loaded" events and double-counted conversions.
+- **Decoupled Session Attribution**: The session-level attribution store (capturing `gclid`, `gbraid`, `wbraid`, and UTMs into `sessionStorage['wpr_ads_attribution']`) must execute independently without re-injecting or re-initializing Google Tag scripts.
+- **Client-Side Event Dispatching**: Conversion helpers (`trackAdsConversion`, `trackBookingConversion`) must dispatch events into `window.dataLayer` (`window.dataLayer.push(...)`) for GTM to process, only falling back to `window.gtag` if already instantiated by GTM.
+
 ## Git & Version Control Rules
 
 - **No Auto-Commit or Auto-Push**: Do NOT perform automatic git commits or git pushes (`git commit`, `git push`). Make all code edits directly in project files and present them for review. Only commit or push to Git when explicitly requested by the user.
