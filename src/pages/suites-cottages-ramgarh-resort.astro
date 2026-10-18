@@ -5,6 +5,7 @@ import RoomInventoryList from "../components/RoomInventoryList";
 import BookingInteractiveForm from "../components/BookingInteractiveForm";
 import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
+import DirectVsOtaTable from "../components/DirectVsOtaTable.astro";
 ---
 
 <Layout 
@@ -20,6 +21,14 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
         isH1={true}
         client:visible
       />
+      
+      {/* Direct vs OTA Booking Comparison */}
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <DirectVsOtaTable
+          title="Direct Booking Advantage vs Third-Party OTAs"
+          subtitle="Reserve directly through our official website or WhatsApp concierge to unlock flat 20% savings, guaranteed 180° Nanda Devi balcony upgrades, and zero pet fees."
+        />
+      </section>
       
       {/* Featured Travel Guides Section */}
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

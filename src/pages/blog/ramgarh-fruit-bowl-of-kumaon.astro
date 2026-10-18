@@ -1,0 +1,419 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogShareBar from '../../components/BlogShareBar.astro';
+import DirectVsOtaTable from '../../components/DirectVsOtaTable.astro';
+
+const pageTitle = "Ramgarh Uttarakhand Travel Guide | 4-Star Orchard Resort";
+const pageDescription = "Discover why Ramgarh is called the Fruit Bowl of Kumaon. Learn about peach, apple, plum & apricot harvest seasons, history, and stay in active orchards at Whispering Pines 4-Star Resort.";
+const canonicalUrl = "https://whisperingpinesresort.in/blog/ramgarh-fruit-bowl-of-kumaon/";
+const ogImageUrl = "https://whisperingpinesresort.in/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.webp";
+const ogAltText = "Why Ramgarh is the Fruit Bowl of Kumaon — Whispering Pines Resort by Casa De Bello, Malla Ramgarh";
+
+const breadcrumbs = [
+  { name: "Home", item: "https://whisperingpinesresort.in/" },
+  { name: "Blog", item: "https://whisperingpinesresort.in/blog/" },
+  { name: "Ramgarh Fruit Bowl Guide", item: canonicalUrl }
+];
+
+const ramgarhFaqs = [
+  {
+    question: "Why is Ramgarh called the Fruit Bowl of Kumaon?",
+    answer: "Ramgarh is called the Fruit Bowl of Kumaon because its 1,780-metre elevation, sunny ridgelines, and nutrient-dense mountain soil produce extensive harvests of high-grade peaches, apples, plums, apricots, and pears introduced during British colonial horticulture in the late 1800s."
+  },
+  {
+    question: "What is the best month to visit fruit orchards in Ramgarh?",
+    answer: "The best months are May to July for ripe peaches, plums, and apricots, and August to September for fresh apples and pears. Spring (April–May) offers blooming pink and white orchard blossoms across the valley, while October to November brings crisp air and golden autumn foliage."
+  },
+  {
+    question: "Can guests stay directly inside working fruit orchards at Whispering Pines?",
+    answer: "Yes. Whispering Pines Resort by Casa De Bello is situated directly within private peach, plum, and apple orchards in Malla Ramgarh. Guests step out of their rooms directly into fruit tree lawns commanding 180° unobstructed Nanda Devi Himalayan views."
+  }
+];
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
+  "headline": "Why Ramgarh is the Fruit Bowl of Kumaon: Complete Orchard & Travel Guide (2026)",
+  "description": pageDescription,
+  "image": { "@type": "ImageObject", "url": ogImageUrl, "width": 1200, "height": 675 },
+  "datePublished": "2026-08-03T10:00:00+05:30",
+  "dateModified": "2026-09-23T10:00:00+05:30",
+  "author": {
+    "@type": "Person",
+    "name": "Gaurav Pandey",
+    "jobTitle": "Director, Casa De Bello Pvt Ltd",
+    "url": "https://casadebello.com/",
+    "sameAs": ["https://casadebello.com/"]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Whispering Pines Resort by Casa De Bello",
+    "url": "https://whisperingpinesresort.in",
+    "logo": { "@type": "ImageObject", "url": "https://whisperingpinesresort.in/logo.svg" }
+  },
+  "keywords": "Ramgarh Fruit Bowl of Kumaon, Ramgarh Uttarakhand Travel Guide, Orchards in Ramgarh, Best Resort in Ramgarh, Whispering Pines Ramgarh, Peaches and Apples Ramgarh, Malla Ramgarh Stays"
+};
+
+const resortSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Resort", "Hotel", "LodgingBusiness"],
+  "name": "Whispering Pines Resort by Casa De Bello",
+  "description": "4-star boutique orchard resort in Malla Ramgarh offering 25 rooms, a 3-BHK Alpine Villa, 180° Himalayan views, private fruit orchards, pine pool, and 150 Mbps fiber Wi-Fi.",
+  "url": "https://whisperingpinesresort.in",
+  "telephone": "+91-7505029696",
+  "email": "booking@whisperingpinesresort.in",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+    "addressLocality": "Ramgarh",
+    "addressRegion": "Uttarakhand",
+    "postalCode": "263137",
+    "addressCountry": "IN"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": "29.4264111", "longitude": "79.5505355" },
+  "hasMap": "https://maps.google.com/?cid=8386667112972057918",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "402", "bestRating": "5", "worstRating": "1" },
+  "priceRange": "₹3,000 – ₹15,999"
+};
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} breadcrumbs={breadcrumbs} faqs={ramgarhFaqs}>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href={ogImageUrl} fetchpriority="high" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:alt" content={ogAltText} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="article:published_time" content="2026-08-03T10:00:00+05:30" />
+    <meta property="article:modified_time" content="2026-09-23T10:00:00+05:30" />
+    <meta property="article:author" content="Gaurav Pandey — Director, Casa De Bello Pvt Ltd" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(resortSchema)} />
+  </Fragment>
+
+  <article class="bg-[#FAF9F6] text-[#2C3531] font-sans antialiased selection:bg-[#c9a832] selection:text-[#1B3322]">
+    
+    <!-- HERO HEADER -->
+    <header class="relative bg-gradient-to-b from-[#132619] via-[#1B3322] to-[#162a1c] text-white pt-16 pb-20 px-4 sm:px-6 lg:px-8 border-b border-[#c9a832]/25 overflow-hidden">
+      <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-[#c9a832]/12 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+      
+      <div class="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+        <div class="inline-flex items-center gap-2 bg-[#c9a832]/15 border border-[#c9a832]/35 rounded-full px-4 py-1.5 text-xs sm:text-sm font-medium text-[#c9a832] backdrop-blur-sm shadow-sm">
+          <span>✦ Ramgarh Orchard Heritage Guide — 2026 Edition</span>
+        </div>
+
+        <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#FAF9F6] leading-[1.15]">
+          Why Ramgarh Is the Fruit Bowl of Kumaon: Complete Travel & Orchard Guide
+        </h1>
+
+        <p class="text-base sm:text-lg md:text-xl text-gray-200 font-light max-w-3xl mx-auto leading-relaxed">
+          The history, seasonal harvest calendars, famous orchard walks, and why discerning travellers choose Malla Ramgarh over crowded hill towns.
+        </p>
+
+        <!-- E-E-A-T AUTHOR & VERIFICATION STRIP -->
+        <div class="mt-6 inline-flex flex-col sm:flex-row items-center gap-3.5 bg-black/35 border border-white/15 rounded-2xl px-5 py-3 text-left backdrop-blur-md max-w-xl mx-auto">
+          <img
+            src="/images/Gaurav-pandey-casa-de-bello.webp"
+            alt="Gaurav Pandey"
+            class="w-11 h-11 rounded-full object-cover border border-[#c9a832] shrink-0 shadow-inner"
+            width="44"
+            height="44"
+            loading="lazy"
+          />
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold text-[#c9a832] uppercase tracking-wider">Written by Verified Host</span>
+              <span class="text-[11px] text-gray-300 font-light">• Updated September 23, 2026</span>
+            </div>
+            <div class="text-sm text-white font-medium">
+              Gaurav Pandey · Director, Casa De Bello Pvt Ltd
+            </div>
+            <div class="text-xs text-gray-300 font-light mt-0.5">
+              Resident hospitality host living on-site along the Malla Ramgarh orchard corridor.
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 space-y-12">
+      
+      <!-- HERO IMAGE -->
+      <figure class="rounded-3xl overflow-hidden border border-[#EAE8E3] bg-white p-3 shadow-md">
+        <img
+          src={ogImageUrl}
+          alt={ogAltText}
+          width="1200"
+          height="675"
+          class="w-full h-auto object-cover rounded-2xl"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <figcaption class="mt-3 text-xs text-center text-gray-500 font-light">
+          Active peach, plum, and apple orchards surrounding Whispering Pines Resort in Malla Ramgarh, Uttarakhand.
+        </figcaption>
+      </figure>
+
+      <!-- INTRODUCTION SECTION -->
+      <section class="prose prose-lg max-w-none text-[#2C3531] space-y-5">
+        <p class="text-lg sm:text-xl leading-relaxed text-gray-800 font-light first-letter:float-left first-letter:text-5xl sm:first-letter:text-6xl first-letter:font-serif first-letter:font-bold first-letter:text-[#c9a832] first-letter:mr-3.5 first-letter:leading-none">
+          Travelling through the quiet mountain winding roads of Malla Ramgarh in Uttarakhand reveals endless terraced slopes filled with fruit-bearing trees. Long before commercial hill stations became crowded tourist hubs, this serene region earned a famous reputation across Northern India.
+        </p>
+        <p class="text-base sm:text-lg leading-relaxed text-gray-700 font-light">
+          Understanding <strong>why Ramgarh is the Fruit Bowl of Kumaon</strong> comes down to a unique combination of colonial history, rich soil, ideal mountain elevation, and perfect weather conditions that allow temperate stone fruits to flourish unlike anywhere else in the Central Himalayas.
+        </p>
+        <p class="text-base sm:text-lg leading-relaxed text-gray-700 font-light">
+          <a href="/about-whispering-pines-resort-ramgarh/" class="text-[#1B3322] font-semibold underline">Whispering Pines Resort by Casa De Bello</a> is positioned directly inside private peach, plum, and apple orchards in Malla Ramgarh at 1,780 metres altitude. Featuring 25 premium rooms, a standalone <a href="/private-villas-near-nainital/" class="text-[#1B3322] font-semibold underline">private 3-BHK villa</a>, an outdoor pine swimming pool, 150 Mbps fiber Wi-Fi, and unobstructed 180° views of Nanda Devi and Trishul peaks, it offers guests an immersive stay experience in the heart of Kumaon's orchard country.
+        </p>
+      </section>
+
+      <!-- TASK 4 REQUIREMENT: RENDER DIRECT VS OTA TABLE RIGHT AFTER INTRODUCTION -->
+      <DirectVsOtaTable
+        title="Stay in Ramgarh Orchards: Book Direct vs Third-Party Portals"
+        subtitle="Skip OTA middleman markups. Book directly with host Gaurav Pandey for guaranteed 20% savings, 180° Himalayan balcony views, and complimentary orchard tour walks."
+        className="my-10"
+      />
+
+      <!-- SHARE BAR -->
+      <BlogShareBar
+        title={pageTitle}
+        url={canonicalUrl}
+        description={pageDescription}
+        label="Planning an orchard getaway? Share this guide with friends or family"
+        className="my-8"
+      />
+
+      <!-- CORE CONTENT: WHY RAMGARH IS THE FRUIT BOWL -->
+      <section class="space-y-6">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-[#1B3322]">
+          Why is Ramgarh Called the Fruit Bowl of Kumaon?
+        </h2>
+        <p class="text-gray-700 leading-relaxed font-light text-base sm:text-lg">
+          Understanding why Ramgarh is the Fruit Bowl of Kumaon requires looking at four specific geographic and historical factors that set this region apart from other Himalayan valleys:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+          <div class="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-2">
+            <h3 class="font-display font-bold text-lg text-[#1B3322]">1. The Ideal Himalayan Microclimate & Elevation</h3>
+            <p class="text-sm text-gray-600 font-light leading-relaxed">
+              Ramgarh sits along a high ridge at 1,780 metres above sea level. This altitude provides the exact "chilling hours" required during winter for temperate fruit trees to break dormancy. At the same time, the ridgeline position ensures maximum sunlight exposure throughout spring and summer without the heavy fog that traps moisture in lower river valleys.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-2">
+            <h3 class="font-display font-bold text-lg text-[#1B3322]">2. British Colonial Horticultural History</h3>
+            <p class="text-sm text-gray-600 font-light leading-relaxed">
+              During the late 1800s, British settlers recognized Ramgarh's agricultural potential. British officers brought English apple saplings, Royal Delicious cuttings, and European peach varieties from Derbyshire to plant across Talla and Malla Ramgarh. The success of these early orchards transformed Ramgarh into Kumaon's primary fruit production hub.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-2">
+            <h3 class="font-display font-bold text-lg text-[#1B3322]">3. Natural Soil Quality & Ridge Drainage</h3>
+            <p class="text-sm text-gray-600 font-light leading-relaxed">
+              The terraced slopes of Ramgarh feature well-drained, nutrient-dense mountain soil rich in organic matter. Rainwater drains naturally down the valley slopes, preventing root rot while keeping orchard soils continuously nourished throughout the monsoon.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm space-y-2">
+            <h3 class="font-display font-bold text-lg text-[#1B3322]">4. Literary Inspiration in the Orchards</h3>
+            <p class="text-sm text-gray-600 font-light leading-relaxed">
+              Famous figures like Nobel laureate Rabindranath Tagore and renowned Hindi poet Mahadevi Verma chose Ramgarh specifically for its quiet orchard atmosphere. Tagore composed parts of Gitanjali at Tagore Top, surrounded by blooming plum and peach trees in Malla Ramgarh.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEASONAL HARVEST CALENDAR TABLE -->
+      <section class="space-y-6">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-[#1B3322]">
+          Ramgarh Seasonal Fruit Harvest Calendar
+        </h2>
+        <p class="text-gray-700 leading-relaxed font-light text-base">
+          The fruit season in Ramgarh spans six months from spring to early autumn. Each month highlights different fruits ripening across the valley:
+        </p>
+
+        <div class="overflow-x-auto rounded-2xl border border-[#EAE8E3] shadow-sm bg-white">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-[#1B3322] text-white">
+              <tr>
+                <th class="p-4 font-display">Season & Months</th>
+                <th class="p-4 font-display">Fruits Harvested</th>
+                <th class="p-4 font-display">Landscape Experience</th>
+                <th class="p-4 font-display">Best For Visitors</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#EAE8E3]">
+              <tr class="hover:bg-[#FAF9F6]/50">
+                <td class="p-4 font-semibold text-[#1B3322]">Spring (April – May)</td>
+                <td class="p-4">Apricots, Kafal Berries, Early Cherries</td>
+                <td class="p-4">Pink & white orchard blossoms, mild sun</td>
+                <td class="p-4">Nature walks, blossom photography, quiet stays</td>
+              </tr>
+              <tr class="bg-yellow-50/40 hover:bg-yellow-50/70">
+                <td class="p-4 font-semibold text-[#1B3322]">Early Summer (June – July)</td>
+                <td class="p-4">Peaches (Victoria, Alexander), Plums</td>
+                <td class="p-4">Lush green trees loaded with ripe fruit</td>
+                <td class="p-4">Fresh fruit tasting, family holidays, orchard walks</td>
+              </tr>
+              <tr class="hover:bg-[#FAF9F6]/50">
+                <td class="p-4 font-semibold text-[#1B3322]">Late Summer (August – Sept)</td>
+                <td class="p-4">Apples (Early Sun, Royal Delicious), Pears</td>
+                <td class="p-4">Red & golden apple trees, harvest activity</td>
+                <td class="p-4">Orchard tours, cider tasting, fruit picking</td>
+              </tr>
+              <tr class="bg-yellow-50/40 hover:bg-yellow-50/70">
+                <td class="p-4 font-semibold text-[#1B3322]">Autumn (October – Nov)</td>
+                <td class="p-4">Dried fruit preserves, Fresh Pears</td>
+                <td class="p-4">Clear skies, golden foliage, peak mountain views</td>
+                <td class="p-4">Himalayan view-gazing, crisp air, workations</td>
+              </tr>
+              <tr class="hover:bg-[#FAF9F6]/50">
+                <td class="p-4 font-semibold text-[#1B3322]">Winter (Dec – March)</td>
+                <td class="p-4">Dormant trees, Rhododendron (Buransh) blooms</td>
+                <td class="p-4">Snow-capped peak visibility, wood fires</td>
+                <td class="p-4">Winter bonfires, cozy staycations, stargazing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 5 MAJOR FRUITS GROWN -->
+      <section class="space-y-6">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-[#1B3322]">
+          The 5 Major Fruits Grown in Ramgarh Orchards
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm">
+            <h3 class="font-display font-bold text-lg text-[#1B3322] mb-1">🍑 1. Peaches (Ramgarh Aroo)</h3>
+            <span class="text-xs font-mono font-semibold text-[#c9a832] uppercase block mb-2">Harvest: June to July</span>
+            <p class="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+              Juicy, sweet, and aromatic with thin velvety skin. Celebrated varieties like Alexander and Victoria thrive along Malla Ramgarh's sunny terraced slopes.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm">
+            <h3 class="font-display font-bold text-lg text-[#1B3322] mb-1">🍎 2. Himalayan Apples</h3>
+            <span class="text-xs font-mono font-semibold text-[#c9a832] uppercase block mb-2">Harvest: August to September</span>
+            <p class="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+              Crisp, sweet, and bursting with high juice content. Royal Delicious, Golden Delicious, and Red Delicious apples cover the upper ridges of Malla Ramgarh.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm">
+            <h3 class="font-display font-bold text-lg text-[#1B3322] mb-1">🫐 3. Mountain Plums</h3>
+            <span class="text-xs font-mono font-semibold text-[#c9a832] uppercase block mb-2">Harvest: Late May to July</span>
+            <p class="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+              Tart, sweet, and loaded with antioxidants. Dark red Centtnosa and Golden plums grow densely throughout the area, perfect for organic artisan jams.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm">
+            <h3 class="font-display font-bold text-lg text-[#1B3322] mb-1">🍊 4. Apricots (Khumani)</h3>
+            <span class="text-xs font-mono font-semibold text-[#c9a832] uppercase block mb-2">Harvest: May to June</span>
+            <p class="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+              Delicate, sweet-sour, and fragrant. Eaten fresh off the tree or sun-dried for winter storage, with seeds cold-pressed into organic apricot oil.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-[#EAE8E3] shadow-sm md:col-span-2">
+            <h3 class="font-display font-bold text-lg text-[#1B3322] mb-1">🍐 5. Pears (Babu Gosha & Hill Pear)</h3>
+            <span class="text-xs font-mono font-semibold text-[#c9a832] uppercase block mb-2">Harvest: August to October</span>
+            <p class="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+              Soft, buttery texture with subtle natural honey sweetness. Babu Gosha pears thrive in Ramgarh's mountain drainage and are highly prized across Northern India.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOP EXPERIENCES -->
+      <section class="space-y-6">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-[#1B3322]">
+          Top 5 Orchard Experiences at Whispering Pines Resort
+        </h2>
+        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-[#EAE8E3] shadow-sm">
+          <ul class="space-y-4 text-sm sm:text-base text-gray-700 font-light">
+            <li class="flex items-start gap-3">
+              <span class="text-[#c9a832] font-bold text-lg shrink-0">✦</span>
+              <span><strong>Guided Orchard Walks:</strong> Stroll through working peach, plum, and apple trees directly from your cottage room doorstep.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-[#c9a832] font-bold text-lg shrink-0">✦</span>
+              <span><strong>Fresh Fruit Tasting:</strong> Sample tree-ripened organic fruit picked straight from the branch during harvest season.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-[#c9a832] font-bold text-lg shrink-0">✦</span>
+              <span><strong>Artisanal Mountain Preserves:</strong> Taste and purchase small-batch, chemical-free fruit squashes and jams crafted by local women's cooperatives.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-[#c9a832] font-bold text-lg shrink-0">✦</span>
+              <span><strong>Blossom Photography:</strong> Capture breathtaking pink and white fruit blossoms framed against the 180° snow peaks of Nanda Devi and Trishul in April and May.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-[#c9a832] font-bold text-lg shrink-0">✦</span>
+              <span><strong>Starlit Bonfire Dinners:</strong> Enjoy nightly wood-fired barbecues and slow-cooked Kumaoni curries under the clear Himalayan night sky.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- FAQS ACCORDION -->
+      <section class="space-y-6">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-[#1B3322]">
+          Frequently Asked Questions
+        </h2>
+        <div class="space-y-4">
+          {ramgarhFaqs.map((faq) => (
+            <div class="bg-white rounded-2xl p-6 border border-[#EAE8E3] shadow-sm space-y-2">
+              <h3 class="font-display font-bold text-base sm:text-lg text-[#1B3322]">
+                {faq.question}
+              </h3>
+              <p class="text-sm text-gray-600 font-light leading-relaxed">
+                {faq.answer}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- CALLOUT BANNER -->
+      <section class="bg-gradient-to-br from-[#1B3322] via-[#24422D] to-[#1B3322] text-white rounded-3xl p-8 sm:p-12 text-center space-y-5 border border-[#c9a832]/30 shadow-xl">
+        <span class="text-xs font-mono uppercase tracking-widest text-[#c9a832] font-bold">
+          ✦ Direct Privilege
+        </span>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white max-w-xl mx-auto leading-snug">
+          Experience Ramgarh Orchards at Whispering Pines Resort
+        </h2>
+        <p class="text-sm sm:text-base text-gray-200 font-light max-w-2xl mx-auto leading-relaxed">
+          Book directly with our on-site team to save a flat 20% compared to third-party OTA portals, enjoy guaranteed 180° Nanda Devi balcony rooms, and relax in serene fruit orchards.
+        </p>
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="https://wa.me/917505029696?text=Hi!%20I%20want%20to%20claim%20the%2020%25%20Direct%20Booking%20Discount%20at%20Whispering%20Pines%20Resort."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-3.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-sm rounded-full shadow-lg transition-all transform hover:scale-105"
+          >
+            💬 Claim 20% Off on WhatsApp
+          </a>
+          <a
+            href="https://whisperingpinesresort.bookingjini.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-3.5 bg-[#c9a832] hover:bg-[#b09228] text-[#1B3322] font-bold text-sm rounded-full shadow-md transition-all transform hover:scale-105"
+          >
+            ⚡ Official Booking Engine
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </article>
+</Layout>

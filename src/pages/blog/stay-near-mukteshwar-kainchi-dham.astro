@@ -2,9 +2,10 @@
 import Layout from '../../layouts/Layout.astro';
 import { RESORT_CONTACT, generateWhatsAppLink } from '../../data';
 import BlogShareBar from '../../components/BlogShareBar.astro';
+import DirectVsOtaTable from '../../components/DirectVsOtaTable.astro';
 
-const pageTitle = "Stay Near Mukteshwar & Kainchi Dham | Whispering Pines";
-const pageDescription = "Looking for a stay near Mukteshwar and Kainchi Dham? Discover Whispering Pines by Casa De Bello in Ramgarh with Himalayan views, villas, dining, Wi-Fi and more.";
+const pageTitle = "4-Star Resort Near Kainchi Dham (45 Mins) | Save 20% Direct";
+const pageDescription = "Stay 45 mins (22 km) from Neem Karoli Baba Ashram at Whispering Pines 4-Star Resort, Ramgarh. 180° Himalayan views, pine pool & parking. Save 20% direct!";
 const canonicalUrl = "https://whisperingpinesresort.in/blog/stay-near-mukteshwar-kainchi-dham/";
 const ogImageUrl = "https://whisperingpinesresort.in/images/Best-Stay-Near-Mukteshwar-&-Kainchi-Dham.avif";
 const ogAltText = "Whispering Pines Resort by Casa De Bello in Malla Ramgarh — peaceful mountain stay near Mukteshwar and Kainchi Dham";
@@ -114,72 +115,23 @@ const resortSchema = {
     { "@type": "LocationFeatureSpecification", "name": "Farm-to-Table Kumaoni & Multi-Cuisine Restaurant", "value": true }
   ]
 };
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How far is Kainchi Dham from Whispering Pines?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Kainchi Dham (Neem Karoli Baba Ashram) is approximately 22 km from Whispering Pines by Casa De Bello — about 45 minutes by road along the scenic Bhowali-Ramgarh route. Our front desk helps arrange morning cab departures for darshan."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Whispering Pines a good stay near Mukteshwar for families?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The resort features multiple family-focused accommodations, including 4 Family Twin rooms with double beds and a standalone 3-bedroom private villa sleeping up to 10 guests. It also offers ground-floor step-free access for elders, enclosed lawns, safe play areas, and freshly cooked custom meals for kids."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Whispering Pines pet-friendly?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Whispering Pines by Casa De Bello is 100% pet-friendly. Your four-legged companions can stay with you in designated cottages and enjoy wide, enclosed orchard lawns with mountain walking trails."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How far is Mukteshwar from Whispering Pines?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The main town of Mukteshwar and attractions like Mukteshwar Dham Temple and Chauli Ki Jali are approximately 25 km away — roughly a 45-minute drive on the Bhowali-Ramgarh-Mukteshwar Road."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is there reliable Wi-Fi at Whispering Pines for workations?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Whispering Pines provides 150 Mbps enterprise fiber Wi-Fi coverage across all rooms, dining zones, and outdoor lawns, supported by dual industrial backup generators so power cuts do not interrupt your video calls."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is there an on-site restaurant at Whispering Pines?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The property features a full-service farm-to-table dining setup serving fresh North Indian, continental comfort food, and curated local Kumaoni specialties using regional mountain ingredients."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I stay at Whispering Pines while visiting Kainchi Dham?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Positioning yourself in Malla Ramgarh allows you to visit Kainchi Dham for morning aarti and darshan without dealing with highway traffic and crowded commercial town strips, returning to peaceful mountain ridge silence in the evening."
-      }
-    }
-  ]
-};
+const kainchiFaqs = [
+  {
+    question: "How far is Whispering Pines Resort from Kainchi Dham Ashram?",
+    answer: "Whispering Pines Resort in Malla Ramgarh is located approximately 22 km (~45 minutes drive) from Neem Karoli Baba Ashram at Kainchi Dham via the scenic Bhowali-Ramgarh corridor, offering peaceful mountain lodging away from highway traffic."
+  },
+  {
+    question: "What amenities does Whispering Pines Resort offer for pilgrims and families?",
+    answer: "The resort features 25 premium rooms and a standalone 3-BHK Alpine Villa (sleeping up to 10 guests) with 180° unobstructed Nanda Devi Himalayan views, pure vegetarian and Kumaoni dining, on-site pine pool, 150 Mbps Wi-Fi, and secure parking."
+  },
+  {
+    question: "How do I claim the 20% direct booking discount at Whispering Pines?",
+    answer: "Guests save 20% direct (with zero OTA portal markups) by booking directly through WhatsApp (+91-7505029696) or the official resort booking engine, receiving instant host confirmation and flexible check-in privileges."
+  }
+];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} breadcrumbs={breadcrumbs} faqs={kainchiFaqs}>
   <Fragment slot="head">
     <link rel="preload" as="image" href="/images/Best-Stay-Near-Mukteshwar-&-Kainchi-Dham.avif" fetchpriority="high" type="image/avif" />
     <meta property="og:type" content="article" />
@@ -201,7 +153,6 @@ const faqSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(geoPlaceSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(resortSchema)} />
-    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   </Fragment>
 
   <article class="bg-[#FAF9F6] text-[#2C3531] font-sans antialiased selection:bg-[#c9a832] selection:text-[#1B3322]">
@@ -299,15 +250,22 @@ const faqSchema = {
       </figure>
 
       <!-- AEO DIRECT ANSWER SUMMARY -->
-      <section class="aeo-direct-answer bg-[#1B3322] text-white rounded-2xl p-6 sm:p-8 border-l-4 border-[#c9a832] mb-12 shadow-lg">
+      <section class="aeo-direct-answer bg-[#1B3322] text-white rounded-2xl p-6 sm:p-8 border-l-4 border-[#c9a832] mb-8 shadow-lg">
         <div class="flex items-start gap-3 mb-3">
           <span class="text-[#c9a832] text-xl">◆</span>
-          <h2 class="text-lg font-bold text-white">Direct Guide: Best Stay Near Mukteshwar and Kainchi Dham</h2>
+          <h2 class="text-lg font-bold text-white">Direct Guide: Best 4-Star Stay Near Mukteshwar and Kainchi Dham</h2>
         </div>
         <p class="text-gray-200 text-sm sm:text-base leading-relaxed font-light text-pretty">
-          For travellers planning a trip covering both <strong class="text-white">Kainchi Dham Ashram</strong> and <strong class="text-white">Mukteshwar</strong>, the quiet fruit bowl ridge of <a href="/blog/ramgarh-fruit-bowl-of-kumaon/" class="text-[#c9a832] underline underline-offset-2">Malla Ramgarh</a> offers the most practical and peaceful base. <strong class="text-white"><a href="/" class="text-white underline underline-offset-2">Whispering Pines Resort by Casa De Bello</a></strong> sits at 1,780 metres elevation, located roughly <strong>22 km (~45 mins) from Kainchi Dham</strong> and <strong>25 km (~45 mins) from Mukteshwar</strong>. With 25 premium rooms and a standalone 3-BHK private villa, 180° unobstructed Nanda Devi Himalayan views, on-site Kumaoni dining, pet-friendly lawns, and 150 Mbps fiber Wi-Fi, it avoids the highway noise and tourist crowding of town centers while keeping regional sights easily accessible.
+          Whispering Pines Resort by Casa De Bello is a 4-star mountain resort located 22 km (45 mins) from Kainchi Dham Ashram at 1,780m in Malla Ramgarh, offering 25 rooms, a 10-guest private villa, secure parking, and 20% direct savings with instant host confirmation and scenic Himalayan views.
         </p>
       </section>
+
+      <!-- DIRECT VS OTA COMPARISON TABLE -->
+      <DirectVsOtaTable
+        title="Kainchi Dham Stay: Book Direct vs Third-Party Portals"
+        subtitle="Reserve directly with host Gaurav Pandey for priority 180° Nanda Devi balcony rooms, zero OTA markups, and dedicated morning ashram cab assistance."
+        className="mb-12"
+      />
 
       <!-- TABLE OF CONTENTS -->
       <nav class="bg-[#1B3322]/5 p-6 rounded-2xl border border-[#1B3322]/10 mb-12" aria-label="Table of Contents">

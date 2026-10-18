@@ -5,6 +5,7 @@ import SpeakableSchema from '../components/SpeakableSchema.astro';
 import Navbar from '../components/Navbar.tsx';
 import FooterSection from '../components/FooterSection.astro';
 import Logo from '../components/Logo.astro';
+import StickyDirectBookingBar from '../components/StickyDirectBookingBar.astro';
 
 interface Props {
   title: string;
@@ -13,9 +14,10 @@ interface Props {
   noindex?: boolean;
   canonical?: string;
   breadcrumbs?: BreadcrumbItem[];
+  faqs?: Array<{ question: string; answer: string }>;
 }
 
-const { title, description, image, noindex = false, canonical, breadcrumbs } = Astro.props;
+const { title, description, image, noindex = false, canonical, breadcrumbs, faqs } = Astro.props;
 const siteBase = 'https://whisperingpinesresort.in';
 const rawPathname = canonical || Astro.url.pathname;
 const pathname = (!rawPathname.endsWith('/') && !rawPathname.includes('.')) ? `${rawPathname}/` : rawPathname;
@@ -143,6 +145,21 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
     <!-- Delegated data-track-* click tracking (no inline onclick handlers, CSP-safe) -->
     <script is:inline defer src="/js/click-tracking.js"></script>
 
+    {faqs && faqs.length > 0 && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      })} />
+    )}
+
     <slot name="head" />
   </head>
   <body class="bg-[#FAF9F6] text-[#2C3531]">
@@ -162,5 +179,7 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
 
       <FooterSection />
     </div>
+
+    <StickyDirectBookingBar />
   </body>
 </html>

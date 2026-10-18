@@ -792,8 +792,9 @@ export const BLOG_POSTS: BlogPostData[] = [
   {
     id: 2,
     slug: "ramgarh-fruit-bowl-of-kumaon",
+    customUrl: "/blog/ramgarh-fruit-bowl-of-kumaon/",
     title: "Why Ramgarh is the Fruit Bowl of Kumaon: Complete Orchard & Travel Guide (2026)",
-    seoTitle: "Why Ramgarh Is the Fruit Bowl of Kumaon (2026 Guide)",
+    seoTitle: "Ramgarh Uttarakhand Travel Guide | 4-Star Orchard Resort",
     excerpt: "Discover why Ramgarh is called the Fruit Bowl of Kumaon. Learn about peach, apple, plum & apricot harvest seasons, history, and stay in active orchards.",
     date: "August 3, 2026",
     readTime: "12 min read",
@@ -1484,9 +1485,9 @@ export const BLOG_POSTS: BlogPostData[] = [
     id: 5,
     slug: "resort-stay-near-kainchi-dham",
     title: "Best Hotel & Resort Near Kainchi Dham: Where to Stay (2026 Guide)",
-    seoTitle: "Best Hotel & Resort Near Kainchi Dham | Whispering Pines",
-    seoDescription: "Hotel & resort near Kainchi Dham: 22 km, about 45 min via Bhowali. 4-star stay with Himalayan views, pool, villa and 25+ car parking. Save 25% direct.",
-    excerpt: "Where to stay near Kainchi Dham Ashram (Neem Karoli Baba): a senior-friendly 4-star resort hotel 22 km away in Malla Ramgarh, compared with highway and Bhowali stays. Darshan plan, parking for 25+ cars, and a flat 25% off when you book direct.",
+    seoTitle: "4-Star Resort Near Kainchi Dham (45 Mins) | Save 20% Direct",
+    seoDescription: "Stay 45 mins (22 km) from Neem Karoli Baba Ashram at Whispering Pines 4-Star Resort, Ramgarh. 180° Himalayan views, pine pool & parking. Save 20% direct!",
+    excerpt: "Where to stay near Kainchi Dham Ashram (Neem Karoli Baba): a senior-friendly 4-star resort hotel 22 km away in Malla Ramgarh, compared with highway and Bhowali stays. Darshan plan, parking for 25+ cars, and a flat 20% off when you book direct.",
     date: "August 6, 2026",
     updatedDate: "October 12, 2026",
     readTime: "18 min read",
@@ -1577,12 +1578,9 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         {/* AEO Direct Answer Summary */}
         <div className="bg-[#FAF9F6] p-6 rounded-2xl border-l-4 border-[#c9a832] shadow-sm space-y-3">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-[#c9a832]">Best Hotel Near Kainchi Dham: The Quick Answer</h2>
+          <h2 className="text-xs font-bold uppercase tracking-wider text-[#c9a832]">Best 4-Star Resort Near Kainchi Dham: The Quick Answer</h2>
           <p className="text-base text-gray-700 leading-relaxed font-light">
-            <strong>The best hotel near Kainchi Dham for a calm stay is <a href="/" className="text-[#1B3322] underline">Whispering Pines Resort</a> by Casa De Bello, a 4-star resort hotel in Malla Ramgarh, 22 km and a 45-minute drive from the Ashram via Bhowali. It suits families, senior pilgrims and couples who want morning darshan, then quiet rooms and Nanda Devi views.</strong>
-          </p>
-          <p className="text-base text-gray-700 leading-relaxed font-light">
-            At 1,780 metres, the resort has ground-floor step-free rooms, wheelchair support for elderly pilgrims, a 3-bedroom private villa for up to 10 guests, pure vegetarian and Satvik dining, a pine forest pool, 150 Mbps Wi-Fi and private parking for 25+ cars. If walking to the Ashram gate matters more than anything else, stay in Kainchi or Bhowali instead. <a href="https://casadebello-book.whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" className="text-[#1B3322] font-semibold underline">Reserve direct for a flat 25% discount</a>.
+            Whispering Pines Resort by Casa De Bello is a 4-star mountain resort located 22 km (45 mins) from Kainchi Dham Ashram at 1,780m in Malla Ramgarh, offering 25 rooms, a 10-guest private villa, secure parking, and 20% direct savings with instant host confirmation and scenic Himalayan views.
           </p>
         </div>
 

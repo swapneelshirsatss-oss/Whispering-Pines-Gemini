@@ -1,0 +1,218 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+  className?: string;
+}
+
+const {
+  title = "Book Direct vs Third-Party Travel Portals",
+  subtitle = "Skip third-party OTA commissions. When you book directly with Whispering Pines Resort by Casa De Bello, you get guaranteed best rates, priority room selection, and personal host hospitality.",
+  className = ""
+} = Astro.props;
+
+const comparisonRows = [
+  {
+    feature: "Room & Villa Tariff",
+    icon: "tag",
+    direct: "Save 20% Direct (Zero Commission Markup)",
+    directNote: "Best rate guarantee — no middleman markups",
+    directPositive: true,
+    ota: "18%–25% portal commission + taxes",
+    otaNote: "Inflated base tariffs to cover aggregator fees",
+    otaPositive: false,
+  },
+  {
+    feature: "View & Room Upgrade",
+    icon: "mountain",
+    direct: "Priority 180° Nanda Devi & Trishul Balcony Upgrade",
+    directNote: "Allocated directly by our resident host Gaurav Pandey",
+    directPositive: true,
+    ota: "Standard unguaranteed room",
+    otaNote: "Assigned randomly on check-in based on remaining slots",
+    otaPositive: false,
+  },
+  {
+    feature: "Pet Policy & Perks",
+    icon: "paw",
+    direct: "100% Pet-Friendly (₹0 Pet Fee) + Flexible Check-In",
+    directNote: "Direct host coordination & dedicated orchard lawn access",
+    directPositive: true,
+    ota: "Strict portal rules & add-on fees",
+    otaNote: "Pet surcharge fees and inflexible check-in windows",
+    otaPositive: false,
+  },
+];
+---
+
+<div class={`w-full max-w-5xl mx-auto my-8 ${className}`}>
+  <div class="bg-white rounded-3xl border border-[#EAE8E3] shadow-[0_4px_24px_rgba(27,51,34,0.06)] overflow-hidden transition-all duration-300 hover:shadow-[0_8px_32px_rgba(27,51,34,0.1)]">
+    
+    <!-- Header Section -->
+    <div class="bg-gradient-to-br from-[#1B3322] via-[#24422D] to-[#1B3322] p-6 sm:p-8 md:p-10 text-white relative overflow-hidden">
+      <!-- Ambient Glow Accent -->
+      <div class="absolute -top-24 -right-24 w-72 h-72 bg-[#c9a832]/15 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+      
+      <div class="relative z-10 text-center max-w-2xl mx-auto space-y-3">
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-wider bg-[#c9a832]/20 text-[#c9a832] border border-[#c9a832]/40 backdrop-blur-sm">
+          ✦ Direct Guest Privilege
+        </span>
+        <h3 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-[#FAF9F6] tracking-tight leading-snug">
+          {title}
+        </h3>
+        <p class="text-sm sm:text-base text-gray-200 font-sans font-light leading-relaxed">
+          {subtitle}
+        </p>
+      </div>
+    </div>
+
+    <!-- Comparison Table (Desktop & Tablet) -->
+    <div class="hidden md:block overflow-x-auto">
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="border-b border-[#EAE8E3] text-sm">
+            <th class="py-5 px-6 font-display font-semibold text-[#1B3322] w-1/3 bg-[#FAF9F6]/60">
+              Comparison Feature
+            </th>
+            <th class="py-5 px-6 font-display font-bold text-white bg-[#1B3322] w-1/3 relative shadow-sm">
+              <div class="flex items-center justify-between">
+                <span>Official Direct Booking</span>
+                <span class="text-[10px] font-mono uppercase bg-[#c9a832] text-[#1B3322] px-2 py-0.5 rounded-full font-bold">
+                  Recommended
+                </span>
+              </div>
+            </th>
+            <th class="py-5 px-6 font-display font-semibold text-gray-500 w-1/3 bg-[#FAF9F6]/40">
+              Third-Party OTAs (MMT / Booking / Goibibo)
+            </th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-[#EAE8E3] text-sm">
+          {comparisonRows.map((row) => (
+            <tr class="hover:bg-[#FAF9F6]/40 transition-colors">
+              <td class="py-5 px-6 align-top">
+                <span class="font-semibold text-[#1B3322] block text-base font-display">
+                  {row.feature}
+                </span>
+              </td>
+              <td class="py-5 px-6 align-top bg-[#1B3322]/[0.03] border-x border-[#1B3322]/10">
+                <div class="flex items-start gap-2.5">
+                  <div class="w-5 h-5 rounded-full bg-[#25D366]/15 text-[#1B3322] flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
+                    ✓
+                  </div>
+                  <div>
+                    <span class="font-bold text-[#1B3322] block leading-snug">
+                      {row.direct}
+                    </span>
+                    <span class="text-xs text-gray-500 font-light mt-1 block">
+                      {row.directNote}
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td class="py-5 px-6 align-top text-gray-600 bg-white">
+                <div class="flex items-start gap-2.5">
+                  <div class="w-5 h-5 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
+                    ✕
+                  </div>
+                  <div>
+                    <span class="font-medium text-gray-700 block leading-snug">
+                      {row.ota}
+                    </span>
+                    <span class="text-xs text-gray-400 font-light mt-1 block">
+                      {row.otaNote}
+                    </span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Comparison Cards (Mobile-First View) -->
+    <div class="md:hidden divide-y divide-[#EAE8E3]">
+      {comparisonRows.map((row) => (
+        <div class="p-5 space-y-3.5">
+          <div class="font-display font-bold text-base text-[#1B3322] flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#c9a832]"></span>
+            <span>{row.feature}</span>
+          </div>
+
+          <!-- Direct Advantage Card -->
+          <div class="bg-[#1B3322]/5 border border-[#1B3322]/15 rounded-2xl p-4 relative overflow-hidden">
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-[#1B3322] flex items-center gap-1.5">
+                <span class="text-[#25D366]">✓</span> Official Direct
+              </span>
+              <span class="text-[9px] font-mono font-bold uppercase bg-[#c9a832] text-[#1B3322] px-2 py-0.5 rounded-full">
+                Save 20%
+              </span>
+            </div>
+            <p class="font-bold text-sm text-[#1B3322] leading-snug">
+              {row.direct}
+            </p>
+            <p class="text-xs text-gray-600 font-light mt-1">
+              {row.directNote}
+            </p>
+          </div>
+
+          <!-- OTA Drawback Card -->
+          <div class="bg-gray-50 border border-gray-200/80 rounded-2xl p-4">
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-[11px] font-mono font-semibold uppercase tracking-wider text-gray-500 flex items-center gap-1.5">
+                <span class="text-red-500 font-bold">✕</span> Third-Party OTAs
+              </span>
+            </div>
+            <p class="font-medium text-sm text-gray-700 leading-snug">
+              {row.ota}
+            </p>
+            <p class="text-xs text-gray-400 font-light mt-1">
+              {row.otaNote}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Dual Conversion Action Bar Below Table -->
+    <div class="bg-[#FAF9F6] border-t border-[#EAE8E3] p-5 sm:p-7 md:p-8">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-2xl mx-auto">
+        <!-- Button 1: WhatsApp Direct Booking -->
+        <a
+          href="https://wa.me/917505029696?text=Hi!%20I%20want%20to%20claim%20the%2020%25%20Direct%20Booking%20Discount%20at%20Whispering%20Pines%20Resort."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-sans font-bold text-sm sm:text-base rounded-full shadow-[0_4px_16px_rgba(37,211,102,0.3)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.4)] transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 text-center"
+          title="Claim 20% Direct Booking Discount on WhatsApp"
+        >
+          <svg class="w-5 h-5 shrink-0 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.1 1.523 5.823L0 24l6.344-1.498A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.792 9.792 0 01-5.002-1.374l-.359-.213-3.765.889.953-3.676-.234-.376A9.794 9.794 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/>
+          </svg>
+          <span>Claim 20% Off on WhatsApp</span>
+        </a>
+
+        <!-- Button 2: Native Booking Engine -->
+        <a
+          href="https://whisperingpinesresort.bookingjini.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#1B3322] hover:bg-[#2A4832] text-[#c9a832] hover:text-[#e0c250] border border-[#c9a832]/50 font-sans font-bold text-sm sm:text-base rounded-full shadow-md transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 text-center"
+          title="Open Official Native Booking Engine"
+        >
+          <span>⚡ Instant Booking Engine</span>
+          <svg class="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+      </div>
+      
+      <p class="text-center text-[11px] text-gray-500 font-light mt-3">
+        🔒 Direct host confirmation • 100% price match guarantee • Zero cancellation dispute hassles
+      </p>
+    </div>
+
+  </div>
+</div>
