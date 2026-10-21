@@ -1,246 +1,162 @@
-# UI & Graphics Upgrade Plan — Whispering Pines Resort
+# Look, Feel & Design Plan — Whispering Pines Resort
 
-**Status:** Phases 0 and 1 shipped; Phase 2 next
-**Date:** 2026-10-21
-**Scope:** 74 source files, 21,819 lines, 137 image assets
-**Goal:** Premium, minimal, free of generative-design tells — without losing SEO or conversions
-
----
-
-## 1. The finding that reframes the job
-
-This site is not missing a design system. It **has** one — and uses it zero times.
-
-`src/styles/global.css` defines twelve colour tokens in an `@theme` block. Every one of them has **0 usages** across the codebase. Instead there are **4,199 hardcoded hex literals** spanning **75 distinct colours**.
-
-```
---color-brand-green     0 uses        #1b3322   1,325 raw uses
---color-brand-gold      0 uses        #c9a832   1,168 raw uses
---color-brand-cream     0 uses        #faf9f6     423 raw uses
---color-earth-*  (6)    0 uses        + 71 other colours
-```
-
-So the work is not "add a design system." It is **make the existing one real and delete the drift.** That reframing matters because it turns most of this plan into mechanical find-and-replace with a compiler to catch mistakes, rather than subjective redesign.
-
-The second finding is the one you can actually *see*, and it explains why the site reads as machine-made rather than expensive.
+**Status:** Phases 0–1 shipped. Phases 2–6 pending approval.
+**Updated:** 2026-10-21
+**Method:** static analysis of 74 source files (21,819 lines) plus a real-browser review of four live pages at 1280px.
 
 ---
 
-## 2. Audit results
+## 1. Where the site stands now
 
-### 2.1 Colour — no system in practice
+Three passes have shipped on branch `refactor/remove-ai-slop-tier1`:
+
+| | What changed | Evidence |
+|---|---|---|
+| **Decoration strip** | Shimmer sweep, gold glow, 16 pulsing dots, 82 hover-grow classes, gradient headlines, badge chrome | −178 lines |
+| **Colour system** | One palette replacing two; acid `#c9a832` → a four-tone brass split by surface; green family moved to hue 165° and deepened | 2,793 substitutions |
+| **Graphics** | Scrims switched from brand-green to near-neutral and eased; hero image un-masked; 17 hard divider bars → fading rules | Photography now keeps its own colour |
+
+Two accessibility failures were fixed along the way that pre-dated this work: gold text on cream was **2.18:1**, and cream text on gold fills was **2.68:1**. Both were below AA on every page they appeared.
+
+**The colour and graphics layer is now in good shape.** What remains is typography, geometry, and — the big one — page composition.
+
+---
+
+## 2. What the live pages actually look like
+
+Static analysis cannot tell you a page feels cheap. These are observations from the rendered site.
+
+### 2.1 `/resort-amenities-mukteshwar/` — the clearest problem on the site
+
+Eight identical cards, on a **fully green background**, with **zero photography**. Each card is an icon in a rounded box, a Playfair heading wrapping to three or four lines, and three bullet points.
+
+Three things are wrong at once:
+
+1. **A resort is selling a pool, a fireplace and an orchard using clip-art icons and bullet points.** This is the single largest gap between what the property is and how the page reads. Luxury hospitality sells with photographs.
+2. **Card soup.** Eight boxes of identical weight means nothing is more important than anything else, so the eye has nowhere to land.
+3. **No tonal relief.** The whole section is green with no cream, which is exactly the over-green balance flagged during review.
+
+### 2.2 `/suites-cottages-ramgarh-resort/`
+
+- The price sits on the photograph as a **discount sticker** — `₹15,999/night`, struck-through `₹21,332`, and a green `Save ₹5,333 (25%)` pill. This is OTA grammar. A luxury property states a rate; it does not shout a saving over its own hero image.
+- The eyebrow — *"COMPLETE ALPINE LUXURY WITH PRIVATE ORCHARD & FIREPLACE"* — wraps to **two lines of monospace caps**. An eyebrow is three or four words.
+- The H1 runs to **five lines** at display size, with awkward breaks.
+- Spec rows (`UP TO 9–10 ADULTS`, `3 GRAND KING BEDROOMS + PREMIUM LOFT`) are monospace caps — the site's default voice, and the wrong one.
+
+### 2.3 `/gallery/`
+
+- **Three images were broken**, rendering alt text on blank cards. Fixed in `bb9baeb`.
+- Every tile carries a category pill (`Rooms & Suites`, `Dining & Restaurant`). Labels on every photograph is catalogue behaviour, not gallery behaviour.
+- Heavy corner radius (`rounded-xl` / `2xl`) makes photographs read as app widgets rather than prints.
+- **Grading is visibly inconsistent** — one interior is cool blue, the next is warm orange. This confirms the shoot-to-shoot variance suspected earlier; it is now observed, not inferred.
+
+### 2.4 Shared chrome
+
+The header and the sticky booking bar are in good shape after the recent passes. The sticky bar is dense but legible and earns its space.
+
+---
+
+## 3. The numbers that remain
 
 | Metric | Now | Target |
 |---|---|---|
-| Distinct hex colours | **75** | 6 core + 3 functional |
-| Hardcoded hex occurrences | **4,199** | ~0 (tokens only) |
-| Design tokens actually used | **0 of 12** | all |
+| `font-mono` uses | **433** | ~40 (numerals only) |
+| `font-sans` uses | 162 | the body voice |
+| `uppercase` | **377** | under 60 |
+| **`text-xs`** | **775** | under 40 |
+| Font sizes in use | 12 | 6 |
+| Border radii | 10 (963 uses) | 2 |
+| Shadows | 9 (448 uses) | 2 |
+| `py-*` values | 20 | 4 |
+| `backdrop-blur` | 47 | ~2 |
+| Inline `<svg>` | 77 + lucide | one icon set |
 
-Two parallel palettes (`brand-*` and `earth-*`) both define a cream, a dark and a green. That guarantees drift even if tokens were adopted.
-
-Drift hotspots — `blogPosts.tsx` (644 raw hexes), `book-now.astro` (440), `himalayan-view-resort-uttarakhand.astro` (347).
-
-### 2.2 Typography — monospace is the house voice
-
-| Typeface | Uses |
-|---|---|
-| **`font-mono`** | **433** |
-| `font-display` | 203 |
-| `font-sans` | 162 |
-
-Monospace is used **more than the body and display faces combined.** Alongside it: **377 `uppercase`** and **371 letterspacing** utilities. JetBrains Mono in letterspaced caps is the single most recognisable generative-design tell, and it reads technical — the opposite of hospitality.
-
-The size distribution is worse:
-
-| Size | Uses |
-|---|---|
-| **`text-xs`** | **775** |
-| `text-sm` | 443 |
-| `text-base` | 225 |
-| everything else (9 sizes) | 773 |
-
-**`text-xs` is the most common text size on the entire site**, used 3.4× more than body copy. Luxury reads as generous type and whitespace; this site is built from tiny uppercase labels. Twelve sizes in use means no scale.
-
-### 2.3 Geometry — no rhythm
-
-- **Border radius:** 10 distinct values, 963 uses. `rounded-xl` (269), `rounded-full` (264), `rounded-2xl` (182) all used heavily and interchangeably. Pill-shaped everything is a layout fingerprint.
-- **Vertical spacing:** 20 distinct `py-*` values. No modular scale.
-- **Elevation:** 9 shadow variants, 448 uses — `shadow-sm` alone 240×. Four of them are the custom `shadow-luxury-*` set, barely used (31 total).
-
-### 2.4 Decoration
-
-- **34** `bg-gradient-to-*`, **28** `from-[hex]`, **24** `via-[hex]`
-- **47** `backdrop-blur` — glassmorphism as a default, not a choice
-- Already removed in the shipped Tier 1 pass: shimmer sweep, gold glow, 16 pulsing dots, 82 hover-grow classes
-
-### 2.5 Components
-
-- **71** distinct `lucide-react` icons (199 imports) **plus 77 hand-written inline `<svg>`** — two parallel icon systems, inconsistent stroke weight and sizing
-- **3 duplicate components** maintained in two formats: `Breadcrumbs`, `DistanceTransitMatrix`, `Logo` (each `.astro` + `.tsx`)
-- **2 dead files:** `FAQSchemaContact.astro`, `Logo.tsx` — never imported
-
-### 2.6 Graphics
-
-- **135 image files, 11.9 MB total.** Format discipline is good: 114 AVIF, 15 WebP.
-- Two outliers at **844 KB each** — `Whispering-pines-balcony-view-nanital.webp` and `public/og-image.webp`
-- The brand mark itself is strong: clean SVG, gold on green, scales well. **Keep it untouched.**
+**`text-xs` is still the most-used text size on the site**, 3.4× more common than body copy, and monospace is still used more than the body and display faces combined. Letterspaced mono caps at 12px is the generative-design signature. Nothing else on this list matters as much.
 
 ---
 
-## 3. Design direction
+## 4. Direction
 
-Three principles, each falsifiable against the audit numbers above.
+**Subtraction, not decoration.** Every shipped win so far has been a deletion. The hero improved by removing scrims, not adding effects.
 
-**1. Subtraction, not decoration.** Every "premium" signal currently on the site is something *added* — gold glow, shimmer, gradient text, glass pills. Actual luxury is what's removed. The Tier 1 pass was a net **−178 lines** and visibly improved the hero.
+**Photographs are the product.** The property has 137 images and an orchard, a pool and a Himalayan view. Icons and bullet points should never stand where a photograph could.
 
-**2. Let the photograph carry it.** The hero image was at `opacity-40` under three scrims — a dark green rectangle where a Himalayan view should be. Photography is the most expensive asset here and should be the loudest element on every page.
+**Facts out-perform adjectives.** `1,780 m`, `Nanda Devi and Trishul`, `150 Mbps`, `apple, peach and plum` — all true, all already written, all more persuasive than *spectacular* or *crystal-clear*.
 
-**3. Facts out-perform adjectives.** `1,780 m`, `Nanda Devi and Trishul`, `apple, peach and plum`, `150 Mbps` are more persuasive than *curated*, *bespoke* or *breathtaking* — and they are already true.
-
----
-
-## 4. The target system
-
-### 4.1 Colour — 6 tokens
-
-| Token | Hex | Role |
-|---|---|---|
-| `pine` | `#0E2C21` | Primary dark, headers, footers |
-| `pine-deep` | `#10261D` | Dropdowns, over-dark layering |
-| `cream` | `#FAF9F6` | Page ground |
-| `ink` | `#2C3531` | Body text |
-| `brass` | `#B0966D` | Accent on **dark** surfaces — 4.81:1 on pine |
-| `brass-light` | `#C4A77D` | Hover on dark — 5.94:1 on pine |
-| `brass-ink` | `#7A6038` | Accent text on **light** surfaces — 5.61:1 on cream |
-| `brass-line` | `#8A6F4A` | Decorative rules and borders only, never text |
-| `sand` | `#E6E0D6` | Hairlines, dividers |
-
-**Green revision (shipped).** The original pine `#1B3322` sat **74°** from the brass in OKLCH hue — the awkward middle, too far apart to read as harmony and too close to read as deliberate contrast, which is why the brass looked flat on it. The ground was also fairly grey (chroma 0.043). It was moved to hue 165° and deepened proportionally, giving `#0E2C21`: an **88°** gap, and brass contrast up from 4.81:1 to **5.30:1**. All 21 tones in the green family were shifted together, preserving each one's lightness and chroma, so no tone was left behind at the old hue. Google's brand greens and the WhatsApp green were excluded as fixed-meaning colours.
-
-Functional only, never decorative: `#25D366` WhatsApp, `#C27847` terracotta (call), one error red.
-
-**The gold change is the biggest single visual upgrade in this document.** `#c9a832` is an acid yellow-gold that reads costume-jewellery at the sizes it's used (1,168 occurrences).
-
-**Correction to an earlier draft of this plan:** it proposed a single replacement, `#A6875D`. Contrast testing proved that wrong — `#A6875D` scores **4.05:1** on pine and fails AA for normal text. Worse, no *single* accent can pass AA against both pine (`#1B3322`) and cream (`#FAF9F6`); the two grounds sit too far apart in luminance for any one colour to clear 4.5:1 on both. The accent therefore **must** split by surface, which is why the table above has four entries rather than one.
-
-This also fixes a pre-existing failure: `#c9a832` on cream scores **2.18:1**, so every gold eyebrow label on a light section was already below AA.
-
-Merge `brand-*` and `earth-*` into one set. Delete the loser.
-
-### 4.2 Type — 6 steps, two faces
-
-| Step | Size | Use |
-|---|---|---|
-| Display | `clamp(2.5rem, 5vw, 4.5rem)` | Page H1 |
-| H2 | `clamp(1.75rem, 3vw, 2.75rem)` | Section heads |
-| H3 | `1.25rem` | Card titles |
-| Body | **`1.0625rem`** | All paragraphs |
-| Small | `0.875rem` | Captions, meta |
-| Micro | `0.75rem` | Legal only — **hard cap ~40 uses** |
-
-Rules:
-- **Mono for numerals only** — tariffs, distances, phone numbers. Target: **433 → ~40**. Use the existing `.tnum` class.
-- **Buttons and eyebrows move to Inter** with letterspacing, not JetBrains Mono.
-- **`uppercase` 377 → under 60.** Caps for eyebrow labels only, never body or buttons.
-- `text-xs` **775 → under 40.**
-
-This is the highest-impact change in the document and the largest diff. It deserves its own commit.
-
-### 4.3 Geometry
-
-- **Radius: 2 values.** `4px` for cards, panels, buttons. `9999px` for genuine pills only (tags, the WhatsApp FAB). Everything else → `4px`. From 10 values to 2.
-- **Spacing: a 4-step scale** — `py-16` / `py-24` / `py-32` for sections, `py-3` for controls. From 20 values to 4.
-- **Elevation: 2 values.** A hairline border (`sand`) is the default separator; one soft shadow for genuinely floating elements (sticky bar, dropdown). Delete `shadow-luxury-lg`, `shadow-inner`, `shadow-2xl`. From 9 to 2.
-- **Gradients: hero scrim only.** 34 → ~2. **`backdrop-blur` 47 → ~2** (sticky bar, nav on scroll).
-
-### 4.4 Icons
-
-Pick **lucide-react only**, `1.5px` stroke, two sizes (16/20). Convert the 77 inline SVGs — except the brand mark, the WhatsApp glyph and the Google "G", which must stay literal for recognition. Audit the 71 imported icons down to roughly 20; icon variety is itself a drift signal.
-
-### 4.5 Photography
-
-The system work above is mechanical. This is where judgement is needed, and it's what will actually make the site feel expensive.
-
-- **One grade across all 137 images.** Currently they vary in warmth and contrast because they come from different shoots. A single consistent grade — slightly cool shadows, warm highlights, restrained saturation — binds the set.
-- **Three aspect ratios, no more:** `16:9` hero, `4:5` portrait (rooms), `1:1` grid.
-- **Stop overlaying photographs.** Tints, `mix-blend-multiply` and scrims should exist only where type sits on the image.
-- **Art-direct the hero per breakpoint** — the 16:9 desktop crop loses the peaks on a phone. The `LazyImage` component already supports `mobileSrc`.
-- **Compress the two 844 KB outliers** to AVIF at ~150 KB. The OG image does not need 844 KB.
-- **Replace icon-in-a-circle with photography or type.** Decorative icon badges are a template signal; a resort has real pictures.
-
-### 4.6 Motion
-
-Already largely cleaned. Target state: opacity and 2–4px translate only, `200ms`, one easing curve. Keep the `group-hover:scale-105` photo zoom (24 uses) — a slow zoom on photography is editorial. Keep `prefers-reduced-motion`.
+**One voice.** Playfair Display for display, Inter for everything read, monospace for numbers only. The UI dataset ranks Playfair + Inter first for luxury hospitality, so the pairing stays; only its misuse goes.
 
 ---
 
-## 5. Phased plan
+## 5. Phases
 
-Ordered by **leverage ÷ risk**. Each phase is one commit, independently revertable.
+Re-ordered by **felt impact**, not by size. This differs from the previous draft: page composition has moved ahead of geometry, because the amenities page costs more credibility than ten inconsistent corner radii.
 
 | # | Phase | Scale | Risk | SEO |
 |---|---|---|---|---|
-| ✅ 0 | Decoration strip + copy *(shipped)* | −178 lines | — | verified 0 impact |
-| ✅ 1 | **Colour tokenisation + brass** *(shipped)* | 1,243 edits | Low | verified 0 impact |
-| 2 | **Typography** | ~1,200 edits | Medium | None |
-| 3 | Geometry — radius, spacing, elevation | ~1,900 edits | Low | None |
-| 4 | Components — dedupe, icons, dead code | ~90 edits | Low | None |
-| 5 | **Photography & graphics** | 137 assets | Low | Positive |
-| 6 | Motion polish | ~40 edits | Low | None |
+| ✅ 0 | Decoration + copy | −178 lines | — | verified nil |
+| ✅ 1 | Colour, green, graphics | 2,793 edits | Low | verified nil |
+| **2** | **Typography** | ~1,200 edits | Medium | None |
+| **3** | **Page composition** | 3–4 templates | Medium | Headings must be preserved |
+| 4 | Geometry | ~1,900 edits | Low | None |
+| 5 | Photography | 137 assets | Low | Positive |
+| 6 | Components & icons | ~90 edits | Low | None |
 
-### Phase 1 — Colour *(start here)*
-Map all 75 hexes to the 6 tokens, swap `#c9a832` → `#A6875D`, merge the duplicate palettes, replace literals with Tailwind token classes. Purely mechanical, scriptable, verifiable by diffing rendered CSS. **Biggest visible change for the least judgement.**
+### Phase 2 — Typography *(do first)*
+Mono to numerals only, the 6-step scale applied, `text-xs` collapsed, `uppercase` cut to eyebrows. Touches ~1,200 call sites. **Needs a screenshot pass per template** — this is the one phase where the build passing proves nothing.
 
-### Phase 2 — Typography *(biggest impact, biggest diff)*
-Purge mono to numerals, apply the 6-step scale, collapse `text-xs`. Touches ~1,200 call sites. Needs a visual pass per template afterwards — this is the one phase where a screenshot review is mandatory.
+### Phase 3 — Page composition *(biggest felt gain)*
+- **Amenities:** replace the eight-card grid with photography. Four to six amenities, each a real image with a short caption. Alternate cream and green sections for tonal rhythm.
+- **Suites:** take the price off the image. State the rate in the body, once, as a fact. Shorten the eyebrow to three words. Cap the H1 at two lines.
+- **Gallery:** drop the per-tile category pills, reduce the radius, let the grid breathe.
 
-### Phase 3 — Geometry
-Radius 10→2, spacing 20→4, shadows 9→2, gradients 34→2, backdrop-blur 47→2.
-
-### Phase 4 — Components
-Delete `FAQSchemaContact.astro` and `Logo.tsx`. Resolve the three `.astro`/`.tsx` twins to one each. Unify icons.
+### Phase 4 — Geometry
+Radius 10→2, spacing 20→4, shadows 9→2, `backdrop-blur` 47→2.
 
 ### Phase 5 — Photography
-Grade pass, aspect-ratio normalisation, compress the two outliers, art-direct the hero. Hand work, but the highest *felt* quality gain.
+One grade across all 137 images. Three aspect ratios. Compress the two 844 KB outliers. Art-direct the hero per breakpoint.
 
-### Phase 6 — Motion
-Final consistency pass.
+### Phase 6 — Components & icons
+One icon set at one stroke weight; convert the 77 inline SVGs except the brand marks. Resolve the three `.astro`/`.tsx` component twins. Delete the two dead files.
 
 ---
 
 ## 6. Guardrails
 
-Carried forward from the shipped work, where two near-misses were caught only by diffing:
+Carried from the shipped work, where each of these caught a real mistake:
 
-1. **Never touch SEO surfaces.** Title, meta description, canonical, H1–H3, `alt`, JSON-LD, anchor text, slugs. Strings that *look* like plain arrays can render as `<h3>` — three in `SEOServicesContent.astro` did. A blog `excerpt:` feeds `BlogPosting.description`.
-2. **Verify by diffing rendered output, not by reading source.** The method: extract all 1,452 SEO surfaces from the 30-page build before and after, and diff. Non-negotiable for every phase.
-3. **Never reword a genuine guest review.** Three real quotes live in `reviewBody` schema and `book-now.astro`.
-4. **Never invent a fact.** Per client profile §3. Every number must trace to the profile or existing copy.
-5. **One phase per commit**, on a branch, with a build between each.
+1. **Never touch SEO surfaces** — title, meta, canonical, H1–H3, `alt`, JSON-LD, anchor text, slugs. Strings that look like plain arrays can render as `<h3>`; a blog `excerpt:` feeds `BlogPosting.description`. Both were caught only by diffing.
+2. **Verify by diffing rendered output.** Extract all ~1,450 SEO surfaces from the 30-page build before and after, and compare. Non-negotiable.
+3. **Measure contrast, don't assume it.** The original single-brass recommendation in this document failed AA and was only caught by testing. No single accent can pass on both pine and cream.
+4. **Protect fixed-meaning colours** — Google's brand hexes, WhatsApp green, the terracotta call CTA. An automated pass swept the Google review mark into the green family once.
+5. **Never reword a genuine guest review**, and never invent a fact.
+6. **Crawl for broken images after asset work.** Three were live on `/gallery/`.
+7. **One phase per commit**, on a branch, with a build between each.
 
 ---
 
-## 7. What *not* to do
+## 7. What not to do
 
-- **Don't redesign the layout.** The information architecture is sound. This is a materials-and-typography problem, not a structure problem.
-- **Don't touch the logo.** It's the strongest asset on the site.
-- **Don't add a component library, CSS-in-JS, or an animation library.** Everything here is deletion and token substitution.
-- **Don't chase the 17 slop words in code comments.** Invisible to users and crawlers.
-- **Don't do Phases 1 and 2 in one commit.** ~5,400 edits is unreviewable; a bad diff would be unbisectable.
+- **Don't redesign the information architecture.** It is sound. This is a materials, typography and composition problem.
+- **Don't touch the logo.** It is the strongest asset on the site.
+- **Don't change the typeface pairing.** Playfair + Inter is already the right answer; only its application is wrong.
+- **Don't add a component library, CSS-in-JS, or an animation library.**
+- **Don't combine Phases 2 and 4.** ~3,100 edits in one commit is unreviewable and unbisectable.
 
 ---
 
 ## 8. Open questions
 
-1. **Brass over gold** — `#A6875D` replacing `#c9a832` is the single biggest visual shift here. Approve before Phase 1 begins.
-2. **Photography source** — is there a master library to re-grade from, or are the 137 web assets all that exist? Determines whether Phase 5 is a grade pass or a reshoot brief.
-3. **Blog templates in scope?** `blogPosts.tsx` alone holds 644 raw hexes. Including it roughly doubles Phases 1–3.
-4. **Review dates** — needed to finish attributing the genuine testimonials.
+1. **Photography for the amenities page** — are there existing shots of the pool, fireplace, orchard and dining room good enough to carry a redesign? Phase 3 depends on this answer more than on anything else.
+2. **Master image library** — is there an ungraded original set, or are the 137 web assets all that exist? Decides whether Phase 5 is a grade pass or a reshoot brief.
+3. **Printed collateral** — the green moved 13° in hue. If signage or print exists, check a sample before launch.
+4. **Review dates** — still needed to finish attributing the genuine testimonials.
 
 ---
 
 ## 9. Recommendation
 
-Run **Phase 1 next**. It is the largest visible gain for the least judgement, carries no SEO exposure, is fully scriptable, and the brass swap alone will change how the site feels more than anything else on this list.
+**Phase 2 next, then Phase 3.**
 
-Phase 2 is the one that structurally removes the generative-design signature — but it wants Phase 1 landed and reviewed first.
+Typography is what structurally removes the machine-made signature, and it unblocks composition work: there is no point rebuilding the amenities page while card titles are still set in a display serif that wraps to four lines.
+
+Phase 3 is where the site stops looking like a template and starts looking like a resort — but it needs an answer to question 1 first.
