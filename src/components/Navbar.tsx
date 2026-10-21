@@ -78,9 +78,9 @@ export default function Navbar({ children }: NavbarProps) {
       name: "Services",
       href: "/resort-services-ramgarh/",
       dropdown: [
-        { name: "💍 Weddings & Celebrations", href: "/destination-wedding-uttarakhand/" },
-        { name: "💼 Conferences & Offsites", href: "/corporate-offsite-resort-mukteshwar/" },
-        { name: "⚡ All Resort Services", href: "/resort-services-ramgarh/" },
+        { name: "Weddings & Celebrations", href: "/destination-wedding-uttarakhand/" },
+        { name: "Conferences & Offsites", href: "/corporate-offsite-resort-mukteshwar/" },
+        { name: "All Resort Services", href: "/resort-services-ramgarh/" },
       ]
     },
     { name: "Amenities", href: "/resort-amenities-mukteshwar/" },
@@ -304,37 +304,37 @@ export default function Navbar({ children }: NavbarProps) {
 
           {/* Quick Persona Chips */}
           <div className="pt-3 pb-1 border-t border-[#FAF9F6]/10">
-            <span className="text-[10px] font-sans uppercase tracking-[0.2em] text-[#7A6038] block px-4 mb-2 font-semibold">
+            <span className="text-[10px] font-sans uppercase tracking-[0.1em] text-[#B0966D] block px-4 mb-2 font-semibold">
               Stays &amp; Celebrations
             </span>
             <div className="grid grid-cols-2 gap-2 px-4 text-xs font-sans">
               <a
                 href="/destination-wedding-uttarakhand/"
                 onClick={() => setIsOpen(false)}
-                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors text-center"
+                className="flex items-center justify-center min-h-[44px] px-3 py-2.5 rounded-sm bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors text-center leading-snug"
               >
-                💍 Weddings (100 Pax)
+                Weddings (100 Pax)
               </a>
               <a
                 href="/corporate-offsite-resort-mukteshwar/"
                 onClick={() => setIsOpen(false)}
-                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors text-center"
+                className="flex items-center justify-center min-h-[44px] px-3 py-2.5 rounded-sm bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors text-center leading-snug"
               >
-                💼 Conferences &amp; MICE
+                Conferences &amp; MICE
               </a>
               <a
                 href="/private-villas-near-nainital/"
                 onClick={() => setIsOpen(false)}
-                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors text-center"
+                className="flex items-center justify-center min-h-[44px] px-3 py-2.5 rounded-sm bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors text-center leading-snug"
               >
-                🏡 3-BHK Villa (10 Pax)
+                3-BHK Villa (10 Pax)
               </a>
               <a
                 href="/clarks-exotica-resort-ramgarh-mukteshwar/"
                 onClick={() => setIsOpen(false)}
-                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors text-center"
+                className="flex items-center justify-center min-h-[44px] px-3 py-2.5 rounded-sm bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors text-center leading-snug"
               >
-                🌲 Clarks Exotica Guests
+                Clarks Exotica Guests
               </a>
             </div>
           </div>
