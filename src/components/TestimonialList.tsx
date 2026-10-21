@@ -100,7 +100,7 @@ export default function TestimonialList({ layout = "carousel", testimonials = FA
               onClick={() => scroll('left')}
               disabled={!canScrollLeft}
               className={`p-2 rounded-full bg-[#FAF9F6] text-[#1B3322] shadow-lg transition-all ${
-                !canScrollLeft ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#c9a832] hover:text-[#FAF9F6] hover:scale-110'
+                !canScrollLeft ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#c9a832] hover:text-[#FAF9F6] '
               }`}
               aria-label="Previous review"
             >
@@ -113,7 +113,7 @@ export default function TestimonialList({ layout = "carousel", testimonials = FA
               onClick={() => scroll('right')}
               disabled={!canScrollRight}
               className={`p-2 rounded-full bg-[#FAF9F6] text-[#1B3322] shadow-lg transition-all ${
-                !canScrollRight ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#c9a832] hover:text-[#FAF9F6] hover:scale-110'
+                !canScrollRight ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#c9a832] hover:text-[#FAF9F6] '
               }`}
               aria-label="Next review"
             >

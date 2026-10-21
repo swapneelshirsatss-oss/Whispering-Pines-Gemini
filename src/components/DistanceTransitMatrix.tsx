@@ -313,7 +313,7 @@ export default function DistanceTransitMatrix({
               href="https://wa.me/917505029696?text=Hi!%20I'm%20planning%20my%20trip%20to%20Whispering%20Pines%20Resort%20and%20would%20like%20to%20arrange%20a%20cab%20pick-up."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-mono text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-lg shadow-md transition-all transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-mono text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-lg shadow-md transition-all transform"
             >
               <span>Arrange Cab on WhatsApp</span>
               <ArrowUpRight className="w-4 h-4" />
