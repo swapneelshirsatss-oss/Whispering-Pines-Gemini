@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import GalleryGrid from "../components/GalleryGrid";
 import SEOGalleryContent from "../components/SEOGalleryContent.astro";
-import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
 import GallerySchema from "../components/GallerySchema.astro";
 ---
@@ -19,7 +18,6 @@ import GallerySchema from "../components/GallerySchema.astro";
       <GalleryGrid client:visible />
       <SEOGalleryContent />
     </main>
-    <WhatsAppButton client:idle />
     <RecentBookingNotification client:idle />
   </div>
 </Layout>

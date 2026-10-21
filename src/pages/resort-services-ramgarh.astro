@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import ServicesSection from "../components/ServicesSection.astro";
 import SEOServicesContent from "../components/SEOServicesContent.astro";
-import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
@@ -55,8 +54,6 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
 
       <SEOServicesContent />
     </main>
-
-    <WhatsAppButton client:idle />
     <RecentBookingNotification client:idle />
   </div>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({

@@ -1,7 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Breadcrumbs from "../../components/Breadcrumbs";
-import WhatsAppButton from "../../components/WhatsAppButton";
 import { BLOG_POSTS } from "../../data/blogPosts.tsx";
 
 const pageTitle = "Himalayan Travel Blog & Guides | Whispering Pines Resort";
@@ -279,7 +278,5 @@ const remainingPosts = BLOG_POSTS.slice(1);
         </div>
       </section>
     </main>
-
-    <WhatsAppButton client:idle />
   </div>
 </Layout>

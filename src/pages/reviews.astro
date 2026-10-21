@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import ReviewsHeader from "../components/ReviewsHeader.astro";
 import TestimonialList from "../components/TestimonialList";
-import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
@@ -72,8 +71,6 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
         <TestimonialList layout="grid" client:visible />
       </div>
     </main>
-
-    <WhatsAppButton client:idle />
     <RecentBookingNotification client:idle />
   </div>
 </Layout>

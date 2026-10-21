@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import RoomInventoryList from "../components/RoomInventoryList";
 import BookingInteractiveForm from "../components/BookingInteractiveForm";
-import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
 import DirectVsOtaTable from "../components/DirectVsOtaTable.astro";
 ---
@@ -53,8 +52,6 @@ import DirectVsOtaTable from "../components/DirectVsOtaTable.astro";
         </div>
       </div>
     </main>
-
-    <WhatsAppButton client:idle />
     <RecentBookingNotification client:idle />
   </div>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({
