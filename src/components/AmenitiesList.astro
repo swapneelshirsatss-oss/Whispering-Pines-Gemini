@@ -1,18 +1,6 @@
 ---
-import { Compass, Flame, Wifi, UtensilsCrossed, Heart, Car, Sparkles, Trees, Waves, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { GENERAL_AMENITIES } from "../data";
-
-const iconMap: Record<string, any> = {
-  Compass,
-  Flame,
-  Wifi,
-  UtensilsCrossed,
-  Heart,
-  Car,
-  Sparkles,
-  Trees,
-  Waves
-};
 
 interface Props {
   hideLink?: boolean;
@@ -29,93 +17,139 @@ const {
 } = Astro.props;
 
 const useH1 = isH1 || asH1;
+
+/**
+ * Only amenities we can actually show get a photograph. The pool, the stone
+ * fireplace and the pet lawns have no image in the library, so they are stated
+ * as specifications rather than illustrated with stock-style icons.
+ */
+const PHOTOS: Record<string, { src: string; alt: string }> = {
+  "180° Himalayan Panoramas — Snow Peaks From ALL Rooms & Balconies": {
+    src: "/images/View-from-resort-mukteshwar.avif",
+    alt: "Sunrise over a sea of cloud and Himalayan ridgelines seen from Whispering Pines Resort, Malla Ramgarh",
+  },
+  "Multi-Cuisine Dining & Wide Food Variety — Kumaoni Specialties & Live BBQ": {
+    src: "/images/Restaurant-cafe-ramgarh.avif",
+    alt: "Dining room at Whispering Pines Resort in Ramgarh with a long shared wooden table and cedar panelling",
+  },
+  "Bonfire Pits, Pine Forest Trails & Fruit Orchards": {
+    src: "/images/Local-Sight-Himalayan-Excursions/malla-ramgarh-fruit-orchards.avif",
+    alt: "Ripening peaches on the branch in the working fruit orchards at Malla Ramgarh",
+  },
+  "Expansive Scenic Event Lawn & Viewpoint Deck": {
+    src: "/images/lounge-area-inwhispering-pines-resort-by-casa-de-bello.avif",
+    alt: "Covered viewpoint deck with wicker seating looking across the valley at dawn, Whispering Pines Resort",
+  },
+};
+
+const featured = GENERAL_AMENITIES.filter((a) => PHOTOS[a.title]);
+const specs = GENERAL_AMENITIES.filter((a) => !PHOTOS[a.title]);
 ---
-<section id="amenities" class="py-20 lg:py-28 bg-[#1B3322] text-[#FAF9F6] cv-auto">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
+<section id="amenities" class="bg-[#FAF9F6] text-[#2C3531] cv-auto">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+
     {/* Section Header */}
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <span class="text-xs font-mono tracking-widest text-[#c9a832] uppercase block mb-2">
+    <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+      <span class="text-xs font-sans tracking-[0.1em] text-[#7A6038] uppercase block mb-3">
         Guest Comforts
       </span>
       {useH1 ? (
         <>
-          <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#FAF9F6]">
+          <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-[#0E2C21]">
             {title}
           </h1>
-          <h2 class="font-display text-xl sm:text-2xl font-bold text-[#c9a832] mt-4 mb-4">
+          <p class="font-display text-xl sm:text-2xl text-[#7A6038] mt-4">
             What Sets Us Apart — Amenities No Other Resort Near Mukteshwar Offers
-          </h2>
+          </p>
         </>
       ) : (
-        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#FAF9F6]">
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-[#0E2C21]">
           {title}
         </h2>
       )}
-      <div class="w-16 h-[2px] bg-[#c9a832] mx-auto mt-4 mb-6" />
-      <p class="text-sm sm:text-base text-[#FAF9F6]/85 font-sans leading-relaxed">
+      <div class="w-16 rule-brass mx-auto mt-5 mb-6" />
+      <p class="text-base text-[#2C3531]/85 font-sans leading-relaxed">
         Experience premium, rustic estate hospitality inside a private gated preserve. As the <strong>best resort near mukteshwar</strong>, we provide everything required to turn a mountain retreat into a deeply relaxing, comfortable, and warm sanctuary built for an authentic Himalayan escape with 180° snow peak views from all rooms and delicious homestyle food.
       </p>
     </div>
 
-    {/* Grid Box */}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-      {GENERAL_AMENITIES.map((amenity) => {
-        const IconComponent = iconMap[amenity.icon] || Compass;
-        return (
-          <div class="bg-[#FAF9F6]/5 hover:bg-[#FAF9F6]/10 border border-[#FAF9F6]/10 hover:border-[#c9a832]/30 p-6 sm:p-8 rounded-sm hover:shadow-2xl transition-all duration-300 group">
-            {/* Visual Icon Container */}
-            <div class="w-12 h-12 bg-[#FAF9F6]/10 group-hover:bg-[#c9a832] rounded-sm flex items-center justify-center mb-6 transition-all duration-300">
-              <IconComponent className="w-6 h-6 text-[#c9a832] group-hover:text-[#1B3322] transition-colors duration-300" />
-            </div>
-            
-            {/* Title */}
-            <h2 class="text-lg font-display font-semibold text-[#FAF9F6] mb-3">
+    {/* Photograph-led amenities: alternating editorial rows */}
+    <div class="space-y-16 lg:space-y-24">
+      {featured.map((amenity, i) => (
+        <article class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+          <div class={`lg:col-span-7 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
+            <img
+              src={PHOTOS[amenity.title].src}
+              alt={PHOTOS[amenity.title].alt}
+              loading="lazy"
+              decoding="async"
+              class="w-full aspect-[4/3] object-cover rounded-sm"
+            />
+          </div>
+          <div class={`lg:col-span-5 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+            <h3 class="font-display text-2xl sm:text-3xl font-semibold text-[#0E2C21] leading-snug">
               {amenity.title}
-            </h2>
-            
-            {/* Description fallback */}
-            {!amenity.features && (
-              <p class="text-xs sm:text-sm text-[#FAF9F6]/80 font-sans leading-relaxed">
-                {amenity.description}
-              </p>
-            )}
-
-            {/* Feature List (H3 sub-headers) */}
-            {amenity.features && (
-              <div class="mt-4 space-y-3">
+            </h3>
+            <div class="w-12 rule-brass-left mt-4 mb-5" />
+            {amenity.features ? (
+              <ul class="space-y-3">
                 {amenity.features.map((feature) => (
-                  <div class="flex items-start text-xs text-[#FAF9F6]/85">
-                    <span class="w-1.5 h-1.5 bg-[#c9a832] rounded-full mr-2.5 mt-1.5 shrink-0" />
-                    <h3 class="font-sans font-light leading-relaxed">{feature}</h3>
-                  </div>
+                  <li class="flex items-start text-sm text-[#2C3531]/85 font-sans leading-relaxed">
+                    <span class="w-1 h-1 bg-[#7A6038] rounded-full mr-3 mt-2 shrink-0" />
+                    <span>{feature}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
+            ) : (
+              <p class="text-sm text-[#2C3531]/85 font-sans leading-relaxed">{amenity.description}</p>
             )}
           </div>
-        );
-      })}
+        </article>
+      ))}
     </div>
+  </div>
 
-    {/* Quick Highlights bottom note */}
-    <div class="mt-16 bg-[#FAF9F6]/5 border border-[#FAF9F6]/10 rounded-sm p-6 text-center max-w-4xl mx-auto">
-      <p class="text-xs sm:text-sm font-sans italic text-[#FAF9F6]/90">
-        "At Whispering Pines, our power grid is fully safeguarded by high-capacity quiet energy generators. 
-        Coupled with double stable water pumping channels, our remote mountain stay remains entirely insulated from high altitude outages."
-      </p>
-    </div>
-
-    {!hideLink && (
-      <div class="mt-16 text-center">
-        <a
-          href="/resort-amenities-mukteshwar/"
-          class="inline-flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 bg-transparent border border-[#c9a832] text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] font-mono text-[11px] sm:text-xs font-semibold uppercase tracking-widest transition-colors duration-300 rounded-sm group"
-        >
-          View All Amenities
-          <ArrowRight className="w-4 h-4 ml-3 transition-transform duration-300 group-hover:translate-x-1" />
-        </a>
+  {/* Everything else, stated plainly. One green band for tonal rhythm. */}
+  <div class="bg-[#0E2C21] text-[#FAF9F6]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <span class="text-xs font-sans tracking-[0.1em] text-[#B0966D] uppercase block mb-10 text-center">
+        Also on the estate
+      </span>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12">
+        {specs.map((amenity) => (
+          <div class="py-6 border-t border-[#FAF9F6]/15">
+            <h3 class="font-display text-lg text-[#FAF9F6] leading-snug mb-3">
+              {amenity.title}
+            </h3>
+            {amenity.features ? (
+              <ul class="space-y-2">
+                {amenity.features.map((feature) => (
+                  <li class="text-sm text-[#FAF9F6]/80 font-sans font-light leading-relaxed">{feature}</li>
+                ))}
+              </ul>
+            ) : (
+              <p class="text-sm text-[#FAF9F6]/80 font-sans font-light leading-relaxed">{amenity.description}</p>
+            )}
+          </div>
+        ))}
       </div>
-    )}
 
+      <p class="mt-14 text-sm font-sans text-[#FAF9F6]/75 leading-relaxed max-w-3xl mx-auto text-center">
+        Our power grid is safeguarded by high-capacity quiet generators, and double water pumping
+        channels keep supply steady, so the estate stays insulated from high-altitude outages.
+      </p>
+
+      {!hideLink && (
+        <div class="mt-12 text-center">
+          <a
+            href="/resort-amenities-mukteshwar/"
+            class="inline-flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 bg-transparent border border-[#8A6F4A] text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#0E2C21] font-sans text-[11px] sm:text-xs font-semibold uppercase tracking-[0.1em] transition-colors duration-300 rounded-sm group"
+          >
+            View All Amenities
+            <ArrowRight className="w-4 h-4 ml-3 transition-transform duration-300 group-hover:translate-x-1" />
+          </a>
+        </div>
+      )}
+    </div>
   </div>
 </section>

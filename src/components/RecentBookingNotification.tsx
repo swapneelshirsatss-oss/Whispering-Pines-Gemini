@@ -46,7 +46,7 @@ export default function RecentBookingNotification() {
 
   return (
     <aside
-      className="fixed bottom-24 md:bottom-6 left-3 sm:left-6 z-40 w-[calc(100%-1.5rem)] max-w-xs bg-[#1B3322] text-[#FAF9F6] rounded-lg border border-[#c9a832]/40 shadow-luxury-lg p-4 pointer-events-auto animate-fade-in-up"
+      className="fixed bottom-24 md:bottom-6 left-3 sm:left-6 z-40 w-[calc(100%-1.5rem)] max-w-xs bg-[#0E2C21] text-[#FAF9F6] rounded-sm border border-[#B0966D]/40 shadow-md p-4 pointer-events-auto animate-fade-in-up"
       aria-label="Direct booking offer"
     >
       <button
@@ -57,7 +57,7 @@ export default function RecentBookingNotification() {
         <X className="w-3.5 h-3.5" />
       </button>
 
-      <span className="inline-flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider font-semibold text-[#1B3322] bg-[#c9a832] px-2 py-0.5 rounded-sm">
+      <span className="inline-flex items-center gap-1 text-[10px] font-sans uppercase tracking-wider font-semibold text-[#0E2C21] bg-[#B0966D] px-2 py-0.5 rounded-sm">
         Direct Rate
       </span>
 
@@ -74,14 +74,14 @@ export default function RecentBookingNotification() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleWhatsAppClick}
-          className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] active:scale-[0.98] text-white rounded-md py-2.5 px-3 text-xs font-mono font-bold uppercase tracking-wider shadow-md transition-all"
+          className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] active:scale-[0.98] text-white rounded-sm py-2.5 px-3 text-xs font-sans font-bold uppercase tracking-wider shadow-md transition-all"
         >
           Book Now on WhatsApp
           <ArrowUpRight className="w-3.5 h-3.5" />
         </a>
         <a
           href="/book-now/"
-          className="text-center text-[10px] font-mono uppercase tracking-wider text-[#c9a832] hover:text-[#FAF9F6] underline underline-offset-2 transition-colors"
+          className="text-center text-[10px] font-sans uppercase tracking-wider text-[#7A6038] hover:text-[#FAF9F6] underline underline-offset-2 transition-colors"
         >
           See all direct booking perks →
         </a>

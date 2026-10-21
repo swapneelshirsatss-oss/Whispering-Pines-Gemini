@@ -10,23 +10,23 @@ import { RESORT_CONTACT, BOOKING_ENGINE_URL } from "../data";
   description="The page you are looking for could not be found. Return to Whispering Pines Resort homepage or explore our luxury suites and cottages in Malla Ramgarh."
   noindex={true}
 >
-  <div class="relative w-full min-h-[80vh] bg-[#FAF9F6] text-[#2C3531] flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 selection:bg-[#c9a832] selection:text-[#1B3322]">
+  <div class="relative w-full min-h-[80vh] bg-[#FAF9F6] text-[#0E2C21] flex items-center justify-center py-20 lg:py-28 px-4 sm:px-6 lg:px-8 selection:bg-[#B0966D] selection:text-[#0E2C21]">
     <div class="max-w-3xl w-full text-center space-y-8 animate-fade-in">
       
       {/* Visual Badge */}
-      <div class="inline-flex items-center space-x-2 bg-[#1B3322]/5 border border-[#1B3322]/10 px-4 py-2 rounded-full">
-        <Compass className="w-4 h-4 text-[#c9a832]" />
-        <span class="text-xs font-mono uppercase tracking-[0.2em] text-[#1B3322] font-semibold">
+      <div class="inline-flex items-center space-x-2 bg-[#0E2C21]/5 border border-[#0E2C21]/10 px-4 py-2 rounded-full">
+        <Compass className="w-4 h-4 text-[#B0966D]" />
+        <span class="text-xs font-mono uppercase tracking-[0.2em] text-[#0E2C21] font-semibold">
           404 • Lost in the Pines
         </span>
       </div>
 
       {/* Hero Headline */}
-      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#1B3322] leading-tight">
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#0E2C21] leading-tight">
         Lost in the Kumaoni Hills?
       </h1>
 
-      <div class="w-16 h-[2px] bg-[#c9a832] mx-auto" />
+      <div class="w-16 rule-brass-left mx-auto" />
 
       {/* Description */}
       <p class="text-base sm:text-lg text-[#2C3531]/80 font-sans max-w-xl mx-auto leading-relaxed">
@@ -37,28 +37,28 @@ import { RESORT_CONTACT, BOOKING_ENGINE_URL } from "../data";
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
         <a 
           href="/" 
-          class="w-full sm:w-auto inline-flex items-center justify-center bg-[#1B3322] hover:bg-[#1B3322]/90 text-[#FAF9F6] font-mono text-xs font-semibold uppercase tracking-widest px-8 py-3.5 rounded-sm transition-all duration-300 shadow-md group"
+          class="w-full sm:w-auto inline-flex items-center justify-center bg-[#0E2C21] hover:bg-[#0E2C21]/90 text-[#FAF9F6] font-sans text-xs font-semibold uppercase tracking-[0.1em] px-8 py-3.5 rounded-sm transition-all duration-300 shadow-md group"
         >
-          <Home className="w-4 h-4 mr-2 text-[#c9a832]" />
+          <Home className="w-4 h-4 mr-2 text-[#B0966D]" />
           Return to Home
         </a>
 
         <a 
           href="/suites-cottages-ramgarh-resort/" 
-          class="w-full sm:w-auto inline-flex items-center justify-center bg-[#FAF9F6] hover:bg-white text-[#1B3322] border border-[#1B3322]/20 font-mono text-xs font-semibold uppercase tracking-widest px-8 py-3.5 rounded-sm transition-all duration-300 shadow-sm"
+          class="w-full sm:w-auto inline-flex items-center justify-center bg-[#FAF9F6] hover:bg-white text-[#0E2C21] border border-[#0E2C21]/20 font-sans text-xs font-semibold uppercase tracking-[0.1em] px-8 py-3.5 rounded-sm transition-all duration-300 shadow-sm"
         >
           Explore Suites & Villas
         </a>
       </div>
 
       {/* Direct Contact Option */}
-      <div class="pt-8 border-t border-[#1B3322]/10 max-w-md mx-auto">
-        <p class="text-xs text-[#2C3531]/70 mb-2 font-mono">
+      <div class="pt-8 border-t border-[#0E2C21]/10 max-w-md mx-auto">
+        <p class="text-xs text-[#2C3531]/70 mb-2 font-sans">
           Need immediate assistance with a reservation?
         </p>
         <a 
           href={`tel:${RESORT_CONTACT.phoneTel || '+917505029696'}`} 
-          class="inline-flex items-center text-xs font-mono font-semibold tracking-wider text-[#c9a832] hover:text-[#1B3322] transition-colors"
+          class="inline-flex items-center text-xs font-sans font-semibold text-[#7A6038] hover:text-[#0E2C21] transition-colors"
         >
           <Phone className="w-3.5 h-3.5 mr-1.5" />
           Call Direct Concierge: {RESORT_CONTACT.phoneDisplay}

@@ -26,8 +26,8 @@ export default function Logo({ className = "", iconOnly = false }: LogoProps) {
         <defs>
           <linearGradient id={goldId} x1="0" y1="0" x2="1" y2="1">
             <stop offset="0" stopColor="#FFF0BE" />
-            <stop offset=".35" stopColor="#E5C36B" />
-            <stop offset=".65" stopColor="#B78B28" />
+            <stop offset=".35" stopColor="#C4A77D" />
+            <stop offset=".65" stopColor="#7A6038" />
             <stop offset="1" stopColor="#F8E3A3" />
           </linearGradient>
 
@@ -76,8 +76,8 @@ export default function Logo({ className = "", iconOnly = false }: LogoProps) {
       <defs>
         <linearGradient id={goldId} x1="0" y1="0" x2="1" y2="1">
           <stop offset="0" stopColor="#FFF0BE" />
-          <stop offset=".35" stopColor="#E5C36B" />
-          <stop offset=".65" stopColor="#B78B28" />
+          <stop offset=".35" stopColor="#C4A77D" />
+          <stop offset=".65" stopColor="#7A6038" />
           <stop offset="1" stopColor="#F8E3A3" />
         </linearGradient>
 
@@ -136,7 +136,7 @@ export default function Logo({ className = "", iconOnly = false }: LogoProps) {
         <text
           x="745"
           y="106"
-          fill="#E8CB80"
+          fill="#C4A77D"
           fontSize="23"
           fontStyle="italic"
         >

@@ -34,13 +34,13 @@ export default function FAQAccordion({
         
         {/* Header Block */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-mono tracking-widest text-[#c9a832] uppercase block mb-2 font-semibold">
+          <span className="text-xs font-sans tracking-[0.1em] text-[#7A6038] uppercase block mb-2 font-semibold">
             Answering Your Questions
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1B3322]">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#0E2C21]">
             {title}
           </h2>
-          <div className="w-16 h-[2px] bg-[#c9a832] mx-auto mt-4 mb-6" />
+          <div className="w-16 rule-brass-left mx-auto mt-4 mb-6" />
           <p className="text-sm text-[#2C3531]/80 font-sans leading-relaxed">
             {description}
           </p>
@@ -57,8 +57,8 @@ export default function FAQAccordion({
               }}
               className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-300 ${
                 activeCategory === "all"
-                  ? "bg-[#1B3322] text-[#FAF9F6] shadow-sm font-bold"
-                  : "bg-white text-[#2C3531]/75 border border-[#2C3531]/15 hover:border-[#1B3322] hover:text-[#1B3322]"
+                  ? "bg-[#0E2C21] text-[#FAF9F6] shadow-sm font-bold"
+                  : "bg-white text-[#2C3531]/75 border border-[#2C3531]/15 hover:border-[#0E2C21] hover:text-[#0E2C21]"
               }`}
             >
               All Questions ({faqs.length})
@@ -73,8 +73,8 @@ export default function FAQAccordion({
                 }}
                 className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-300 ${
                   activeCategory === cat
-                    ? "bg-[#1B3322] text-[#FAF9F6] shadow-sm font-bold"
-                    : "bg-white text-[#2C3531]/75 border border-[#2C3531]/15 hover:border-[#1B3322] hover:text-[#1B3322]"
+                    ? "bg-[#0E2C21] text-[#FAF9F6] shadow-sm font-bold"
+                    : "bg-white text-[#2C3531]/75 border border-[#2C3531]/15 hover:border-[#0E2C21] hover:text-[#0E2C21]"
                 }`}
               >
                 {cat}
@@ -90,20 +90,20 @@ export default function FAQAccordion({
             return (
               <article
                 key={idx}
-                className="bg-white border rounded-sm border-[#2C3531]/10 overflow-hidden transition-all duration-300 hover:border-[#c9a832]/40 shadow-xs"
+                className="bg-white border rounded-sm border-[#2C3531]/10 overflow-hidden transition-all duration-300 hover:border-[#8A6F4A]/40 shadow-xs"
               >
                 {/* FAQ Header Click Trigger Button */}
                 <button
                   type="button"
                   onClick={() => toggleFAQ(idx)}
-                  className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-sans focus:outline-none focus:bg-[#1B3322]/5"
+                  className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-sans focus:outline-none focus:bg-[#0E2C21]/5"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-display font-bold text-[#1B3322] text-base sm:text-lg flex items-center">
-                    <HelpCircle className="w-5 h-5 text-[#c9a832] mr-3 shrink-0" />
+                  <span className="font-display font-bold text-[#0E2C21] text-base sm:text-lg flex items-center">
+                    <HelpCircle className="w-5 h-5 text-[#B0966D] mr-3 shrink-0" />
                     <span>{faq.question}</span>
                   </span>
-                  <span className="text-[#c9a832] shrink-0">
+                  <span className="text-[#B0966D] shrink-0">
                     {isOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
                   </span>
                 </button>
@@ -114,7 +114,7 @@ export default function FAQAccordion({
                     isOpen ? "max-h-[1000px] border-t border-[#2C3531]/5 p-5 sm:p-6 bg-[#FAF9F6]/40" : "max-h-0"
                   }`}
                 >
-                  <p className="speakable-faq-answer text-xs sm:text-sm text-[#2C3531]/95 font-sans leading-relaxed">
+                  <p className="speakable-faq-answer text-sm sm:text-sm text-[#2C3531]/95 font-sans leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

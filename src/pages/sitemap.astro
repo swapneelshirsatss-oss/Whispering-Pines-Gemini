@@ -102,13 +102,13 @@ const sitemapLinks = [
       {/* Header Block */}
       <div class="text-center mb-16 border-b border-[#2C3531]/10 pb-12">
         <span
-          class="text-xs font-mono tracking-widest text-[#c9a832] uppercase flex items-center justify-center mb-3"
+          class="text-xs font-sans tracking-[0.1em] text-[#7A6038] uppercase flex items-center justify-center mb-3"
         >
           <Link className="w-4 h-4 mr-2" />
           Website Directory
         </span>
         <h1
-          class="font-display text-4xl sm:text-5xl font-bold text-[#1B3322] mb-6"
+          class="font-display text-4xl sm:text-5xl font-bold text-[#0E2C21] mb-6"
         >
           Sitemap
         </h1>
@@ -124,8 +124,8 @@ const sitemapLinks = [
         {
           sitemapLinks.map((section) => (
             <div>
-              <h2 class="font-display text-2xl font-bold text-[#1B3322] mb-6 flex items-center">
-                <div class="w-6 h-[2px] bg-[#c9a832] mr-3" />
+              <h2 class="font-display text-2xl font-bold text-[#0E2C21] mb-6 flex items-center">
+                <div class="w-6 h-[2px] bg-[#B0966D] mr-3" />
                 {section.category}
               </h2>
               <ul class="space-y-4">
@@ -133,9 +133,9 @@ const sitemapLinks = [
                   <li>
                     <a
                       href={link.url}
-                      class="text-[#2C3531]/80 font-sans hover:text-[#c9a832] transition-colors flex items-center group"
+                      class="text-[#2C3531]/80 font-sans hover:text-[#7A6038] transition-colors flex items-center group"
                     >
-                      <span class="w-1.5 h-1.5 rounded-full bg-[#c9a832]/30 group-hover:bg-[#c9a832] mr-3 transition-colors" />
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#B0966D]/30 group-hover:bg-[#B0966D] mr-3 transition-colors" />
                       {link.name}
                     </a>
                   </li>

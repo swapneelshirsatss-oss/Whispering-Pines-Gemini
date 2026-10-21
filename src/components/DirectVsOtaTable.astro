@@ -46,15 +46,15 @@ const comparisonRows = [
 ---
 
 <div class={`w-full max-w-5xl mx-auto my-8 ${className}`}>
-  <div class="bg-white rounded-3xl border border-[#EAE8E3] shadow-[0_4px_24px_rgba(27,51,34,0.06)] overflow-hidden transition-all duration-300 hover:shadow-[0_8px_32px_rgba(27,51,34,0.1)]">
+  <div class="bg-white rounded-sm border border-[#EAE8E3] shadow-[0_4px_24px_rgba(14, 44, 33,0.06)] overflow-hidden transition-all duration-300 hover:shadow-[0_8px_32px_rgba(14, 44, 33,0.1)]">
     
     <!-- Header Section -->
-    <div class="bg-gradient-to-br from-[#1B3322] via-[#24422D] to-[#1B3322] p-6 sm:p-8 md:p-10 text-white relative overflow-hidden">
+    <div class="bg-gradient-to-br from-[#0E2C21] via-[#133A2B] to-[#0E2C21] p-6 sm:p-8 md:p-10 text-white relative overflow-hidden">
       <!-- Ambient Glow Accent -->
-      <div class="absolute -top-24 -right-24 w-72 h-72 bg-[#c9a832]/15 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+      <div class="absolute -top-24 -right-24 w-72 h-72 bg-[#B0966D]/15 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
       
       <div class="relative z-10 text-center max-w-2xl mx-auto space-y-3">
-        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-wider bg-[#c9a832]/20 text-[#c9a832] border border-[#c9a832]/40 backdrop-blur-sm">
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-sans font-semibold uppercase tracking-wider bg-[#B0966D]/20 text-[#C4A77D] border border-[#8A6F4A]/40 backdrop-blur-sm">
           ✦ Direct Guest Privilege
         </span>
         <h3 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-[#FAF9F6] tracking-tight leading-snug">
@@ -71,13 +71,13 @@ const comparisonRows = [
       <table class="w-full text-left border-collapse">
         <thead>
           <tr class="border-b border-[#EAE8E3] text-sm">
-            <th class="py-5 px-6 font-display font-semibold text-[#1B3322] w-1/3 bg-[#FAF9F6]/60">
+            <th class="py-5 px-6 font-display font-semibold text-[#0E2C21] w-1/3 bg-[#FAF9F6]/60">
               Comparison Feature
             </th>
-            <th class="py-5 px-6 font-display font-bold text-white bg-[#1B3322] w-1/3 relative shadow-sm">
+            <th class="py-5 px-6 font-display font-bold text-white bg-[#0E2C21] w-1/3 relative shadow-sm">
               <div class="flex items-center justify-between">
                 <span>Official Direct Booking</span>
-                <span class="text-[10px] font-mono uppercase bg-[#c9a832] text-[#1B3322] px-2 py-0.5 rounded-full font-bold">
+                <span class="text-[10px] font-sans uppercase bg-[#B0966D] text-[#0E2C21] px-2 py-0.5 rounded-full font-bold">
                   Recommended
                 </span>
               </div>
@@ -91,17 +91,17 @@ const comparisonRows = [
           {comparisonRows.map((row) => (
             <tr class="hover:bg-[#FAF9F6]/40 transition-colors">
               <td class="py-5 px-6 align-top">
-                <span class="font-semibold text-[#1B3322] block text-base font-display">
+                <span class="font-semibold text-[#0E2C21] block text-base font-display">
                   {row.feature}
                 </span>
               </td>
-              <td class="py-5 px-6 align-top bg-[#1B3322]/[0.03] border-x border-[#1B3322]/10">
+              <td class="py-5 px-6 align-top bg-[#0E2C21]/[0.03] border-x border-[#0E2C21]/10">
                 <div class="flex items-start gap-2.5">
-                  <div class="w-5 h-5 rounded-full bg-[#25D366]/15 text-[#1B3322] flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
+                  <div class="w-5 h-5 rounded-full bg-[#25D366]/15 text-[#0E2C21] flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
                     ✓
                   </div>
                   <div>
-                    <span class="font-bold text-[#1B3322] block leading-snug">
+                    <span class="font-bold text-[#0E2C21] block leading-snug">
                       {row.direct}
                     </span>
                     <span class="text-xs text-gray-500 font-light mt-1 block">
@@ -135,22 +135,22 @@ const comparisonRows = [
     <div class="md:hidden divide-y divide-[#EAE8E3]">
       {comparisonRows.map((row) => (
         <div class="p-5 space-y-3.5">
-          <div class="font-display font-bold text-base text-[#1B3322] flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-[#c9a832]"></span>
+          <div class="font-display font-bold text-base text-[#0E2C21] flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#B0966D]"></span>
             <span>{row.feature}</span>
           </div>
 
           <!-- Direct Advantage Card -->
-          <div class="bg-[#1B3322]/5 border border-[#1B3322]/15 rounded-2xl p-4 relative overflow-hidden">
+          <div class="bg-[#0E2C21]/5 border border-[#0E2C21]/15 rounded-sm p-4 relative overflow-hidden">
             <div class="flex items-center justify-between gap-2 mb-2">
-              <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-[#1B3322] flex items-center gap-1.5">
+              <span class="text-[11px] font-sans font-bold uppercase tracking-wider text-[#0E2C21] flex items-center gap-1.5">
                 <span class="text-[#25D366]">✓</span> Official Direct
               </span>
-              <span class="text-[9px] font-mono font-bold uppercase bg-[#c9a832] text-[#1B3322] px-2 py-0.5 rounded-full">
+              <span class="text-[9px] font-sans font-bold uppercase bg-[#B0966D] text-[#0E2C21] px-2 py-0.5 rounded-full">
                 Save 25%
               </span>
             </div>
-            <p class="font-bold text-sm text-[#1B3322] leading-snug">
+            <p class="font-bold text-sm text-[#0E2C21] leading-snug">
               {row.direct}
             </p>
             <p class="text-xs text-gray-600 font-light mt-1">
@@ -159,9 +159,9 @@ const comparisonRows = [
           </div>
 
           <!-- OTA Drawback Card -->
-          <div class="bg-gray-50 border border-gray-200/80 rounded-2xl p-4">
+          <div class="bg-gray-50 border border-gray-200/80 rounded-sm p-4">
             <div class="flex items-center justify-between gap-2 mb-2">
-              <span class="text-[11px] font-mono font-semibold uppercase tracking-wider text-gray-500 flex items-center gap-1.5">
+              <span class="text-[11px] font-sans font-semibold uppercase tracking-wider text-gray-500 flex items-center gap-1.5">
                 <span class="text-red-500 font-bold">✕</span> Third-Party OTAs
               </span>
             </div>
@@ -184,7 +184,7 @@ const comparisonRows = [
           href="https://wa.me/917505029696?text=Hi!%20I%20want%20to%20claim%20the%2025%25%20Direct%20Booking%20Discount%20at%20Whispering%20Pines%20Resort."
           target="_blank"
           rel="noopener noreferrer"
-          class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-sans font-bold text-sm sm:text-base rounded-full shadow-[0_4px_16px_rgba(37,211,102,0.3)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.4)] transition-all duration-300 transform active:translate-y-0 text-center"
+          class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-sans font-bold text-sm sm:text-base rounded-full shadow-[0_4px_16px_rgba(10,18,15,0.26)] hover:shadow-[0_6px_20px_rgba(10,18,15,0.26)] transition-all duration-300 transform active:translate-y-0 text-center"
           title="Claim 25% Direct Booking Discount on WhatsApp"
         >
           <svg class="w-5 h-5 shrink-0 fill-current" viewBox="0 0 24 24" aria-hidden="true">
@@ -199,10 +199,10 @@ const comparisonRows = [
           href="https://casadebello-book.whisperingpinesresort.in/"
           target="_blank"
           rel="noopener noreferrer"
-          class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#1B3322] hover:bg-[#2A4832] text-[#c9a832] hover:text-[#e0c250] border border-[#c9a832]/50 font-sans font-bold text-sm sm:text-base rounded-full shadow-md transition-all duration-300 transform active:translate-y-0 text-center"
+          class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#0E2C21] hover:bg-[#193F30] text-[#B0966D] hover:text-[#C4A77D] border border-[#B0966D]/50 font-sans font-bold text-sm sm:text-base rounded-full shadow-md transition-all duration-300 transform active:translate-y-0 text-center"
           title="Open Official Native Booking Engine"
         >
-          <span>⚡ Instant Booking Engine</span>
+          <span>Instant Booking Engine</span>
           <svg class="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
           </svg>
@@ -210,7 +210,7 @@ const comparisonRows = [
       </div>
       
       <p class="text-center text-[11px] text-gray-500 font-light mt-3">
-        🔒 Direct host confirmation • 100% price match guarantee • Zero cancellation dispute hassles
+        Direct host confirmation • 100% price match guarantee • Zero cancellation dispute hassles
       </p>
     </div>
 
