@@ -97,7 +97,7 @@ export default function Navbar({ children }: NavbarProps) {
 
   return (
     <nav
-      className="fixed top-0 left-0 w-full z-50 bg-[#1B3322]/98 backdrop-blur-md shadow-md border-b border-[#FAF9F6]/10 py-3.5"
+      className="sticky top-0 left-0 w-full z-50 bg-[#1B3322] border-b border-[#FAF9F6]/10 py-3.5"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -172,11 +172,10 @@ export default function Navbar({ children }: NavbarProps) {
                   }}
                   className={`text-xs lg:text-sm font-medium tracking-wide transition-all duration-200 ${
                     link.highlight
-                      ? "text-[#c9a832] font-semibold flex items-center gap-1.5 bg-[#c9a832]/10 hover:bg-[#c9a832]/20 px-3 py-1.5 rounded border border-[#c9a832]/35 shadow-sm"
+                      ? "text-[#c9a832] font-semibold hover:text-[#FAF9F6]"
                       : "text-[#FAF9F6]/90 hover:text-[#c9a832]"
                   }`}
                 >
-                  {link.highlight && <span className="w-1.5 h-1.5 rounded-full bg-[#c9a832]"></span>}
                   {link.name}
                 </a>
               );
@@ -240,7 +239,7 @@ export default function Navbar({ children }: NavbarProps) {
             onClick={() => setIsOpen(false)}
             className="flex items-center justify-between p-3 rounded bg-[#c9a832]/15 border border-[#c9a832]/40 text-[#c9a832] font-mono text-xs tracking-wider uppercase font-bold mb-3 hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors"
           >
-            <span>✨ Direct Booking VIP Privileges</span>
+            <span>Direct Booking VIP Privileges</span>
             <span className="text-[10px] font-normal lowercase bg-[#c9a832]/20 px-2 py-0.5 rounded">save 25%</span>
           </a>
           {mobileNavLinks.map((link) => {
