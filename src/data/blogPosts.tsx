@@ -1678,7 +1678,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           Pilgrimages to Shri Neem Karoli Baba Ashram often involve multi-generational families traveling with elderly parents and grandparents. For senior citizens who find staircase climbing difficult, choosing an accessible <strong>resort hotel</strong> is critical to ensuring a restful journey.
         </p>
 
-        <pre className="bg-[#0E2C21] text-[#EAE8E3] p-4 sm:p-6 rounded-xl overflow-x-auto text-xs font-mono my-6 leading-relaxed">
+        <pre className="bg-[#0E2C21] text-[#EAE8E3] p-4 sm:p-6 rounded-xl overflow-x-auto text-xs font-sans my-6 leading-relaxed">
 {`                   [ Whispering Pines Resort Hotel Senior & Family Care ]
                                              |
          +-----------------------------------+-----------------------------------+
@@ -1862,7 +1862,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           Food is an important part of every journey, especially for visitors traveling to spiritual destinations like Kainchi Dham. Many devotees prefer simple vegetarian meals, home-cooked food, or Satvik dining during their visit. This is one reason why our guests appreciate the dining flexibility at Whispering Pines Resort Hotel by Casa De Bello.
         </p>
 
-        <pre className="bg-[#0E2C21] text-[#EAE8E3] p-4 sm:p-6 rounded-xl overflow-x-auto text-xs font-mono my-6 leading-relaxed">
+        <pre className="bg-[#0E2C21] text-[#EAE8E3] p-4 sm:p-6 rounded-xl overflow-x-auto text-xs font-sans my-6 leading-relaxed">
 {`                   [ Whispering Pines Resort Hotel Dining Choices ]
                                            |
          +---------------------------------+---------------------------------+
@@ -1914,7 +1914,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           The private villa layout at Whispering Pines is structured specifically for families visiting Kainchi Dham together, offering balance between togetherness, privacy, and full hotel service support.
         </p>
 
-        <pre className="bg-[#0E2C21] text-[#EAE8E3] p-4 sm:p-6 rounded-xl overflow-x-auto text-xs font-mono my-6 leading-relaxed">
+        <pre className="bg-[#0E2C21] text-[#EAE8E3] p-4 sm:p-6 rounded-xl overflow-x-auto text-xs font-sans my-6 leading-relaxed">
 {`                           [ Private Villa Layout ]
                                       |
          +----------------------------+----------------------------+
@@ -1984,7 +1984,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         {/* Map & Distance Matrix */}
         <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">🗺️ Tourist Route & Distance Map Guide</h2>
 
-        <pre className="bg-[#0E2C21] text-[#EAE8E3] p-4 sm:p-6 rounded-xl overflow-x-auto text-xs font-mono my-6 leading-relaxed">
+        <pre className="bg-[#0E2C21] text-[#EAE8E3] p-4 sm:p-6 rounded-xl overflow-x-auto text-xs font-sans my-6 leading-relaxed">
 {`========================================================================================
                       KUMAON HIMALAYAS TOURIST HUB & ROUTE MAP
 ========================================================================================

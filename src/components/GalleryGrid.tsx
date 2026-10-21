@@ -113,7 +113,7 @@ export default function GalleryGrid() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Header Block */}
       <div className="text-center max-w-3xl mx-auto mb-10 animate-fade-in">
-        <span className="text-xs font-mono tracking-widest text-[#B0966D] uppercase flex items-center justify-center mb-3">
+        <span className="text-xs font-sans tracking-[0.1em] text-[#B0966D] uppercase flex items-center justify-center mb-3">
           <ImageIcon className="w-4 h-4 mr-2" />
           Visual Journey
         </span>
@@ -158,10 +158,10 @@ export default function GalleryGrid() {
 
       {/* Filter Info Subtitle */}
       <div className="flex items-center justify-between border-b border-[#EAE8E3] pb-4 mb-8">
-        <span className="text-xs font-mono uppercase tracking-wider text-[#2C3531]/60">
+        <span className="text-xs font-sans uppercase tracking-wider text-[#2C3531]/60">
           Showing {filteredImages.length} {filteredImages.length === 1 ? "Image" : "Images"}
         </span>
-        <span className="text-xs font-mono text-[#7A6038] flex items-center gap-1">
+        <span className="text-xs font-sans text-[#7A6038] flex items-center gap-1">
           <Sparkles className="w-3.5 h-3.5" /> Click any photo for lightbox view
         </span>
       </div>
@@ -183,7 +183,7 @@ export default function GalleryGrid() {
             />
             {/* Category Tag Badge */}
             <div className="absolute top-3 left-3 z-10 opacity-90 group-hover:opacity-100 transition-opacity">
-              <span className="bg-[#0E2C21]/85 text-[#B0966D] text-[10px] font-mono font-semibold px-2.5 py-1 rounded-sm backdrop-blur-sm shadow-md border border-[#B0966D]/30">
+              <span className="bg-[#0E2C21]/85 text-[#B0966D] text-[10px] font-sans font-semibold px-2.5 py-1 rounded-sm backdrop-blur-sm shadow-md border border-[#B0966D]/30">
                 {img.categoryLabel}
               </span>
             </div>
@@ -192,7 +192,7 @@ export default function GalleryGrid() {
               <span className="text-[#FAF9F6] font-display text-sm sm:text-base leading-snug drop-shadow-md mb-2">
                 {img.alt}
               </span>
-              <span className="text-[11px] font-mono text-[#B0966D] flex items-center gap-1">
+              <span className="text-[11px] font-sans text-[#B0966D] flex items-center gap-1">
                 <Maximize2 className="w-3 h-3" /> View High-Res Photo
               </span>
             </div>
@@ -242,7 +242,7 @@ export default function GalleryGrid() {
               className="max-h-[70vh] w-auto max-w-full object-contain rounded-lg shadow-2xl mb-4 border border-white/10"
             />
             <div className="text-center max-w-2xl space-y-2">
-              <span className="inline-block bg-[#B0966D] text-[#0E2C21] text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+              <span className="inline-block bg-[#B0966D] text-[#0E2C21] text-[10px] font-sans font-bold uppercase tracking-wider px-3 py-1 rounded-full">
                 {filteredImages[lightboxIndex].categoryLabel} ({lightboxIndex + 1} of {filteredImages.length})
               </span>
               <p className="text-white font-display text-base sm:text-xl font-medium leading-relaxed drop-shadow-md">

@@ -77,7 +77,7 @@ export default function TestimonialList({ layout = "carousel", testimonials = FA
         
         {/* Header Block */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <span className="text-xs font-mono tracking-widest text-[#B0966D] uppercase block mb-2">
+          <span className="text-xs font-sans tracking-[0.1em] text-[#B0966D] uppercase block mb-2">
             Shared Memories
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#FAF9F6]">

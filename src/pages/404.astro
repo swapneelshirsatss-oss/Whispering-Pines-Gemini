@@ -37,7 +37,7 @@ import { RESORT_CONTACT, BOOKING_ENGINE_URL } from "../data";
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
         <a 
           href="/" 
-          class="w-full sm:w-auto inline-flex items-center justify-center bg-[#0E2C21] hover:bg-[#0E2C21]/90 text-[#FAF9F6] font-mono text-xs font-semibold uppercase tracking-widest px-8 py-3.5 rounded-sm transition-all duration-300 shadow-md group"
+          class="w-full sm:w-auto inline-flex items-center justify-center bg-[#0E2C21] hover:bg-[#0E2C21]/90 text-[#FAF9F6] font-sans text-xs font-semibold uppercase tracking-[0.1em] px-8 py-3.5 rounded-sm transition-all duration-300 shadow-md group"
         >
           <Home className="w-4 h-4 mr-2 text-[#B0966D]" />
           Return to Home
@@ -45,7 +45,7 @@ import { RESORT_CONTACT, BOOKING_ENGINE_URL } from "../data";
 
         <a 
           href="/suites-cottages-ramgarh-resort/" 
-          class="w-full sm:w-auto inline-flex items-center justify-center bg-[#FAF9F6] hover:bg-white text-[#0E2C21] border border-[#0E2C21]/20 font-mono text-xs font-semibold uppercase tracking-widest px-8 py-3.5 rounded-sm transition-all duration-300 shadow-sm"
+          class="w-full sm:w-auto inline-flex items-center justify-center bg-[#FAF9F6] hover:bg-white text-[#0E2C21] border border-[#0E2C21]/20 font-sans text-xs font-semibold uppercase tracking-[0.1em] px-8 py-3.5 rounded-sm transition-all duration-300 shadow-sm"
         >
           Explore Suites & Villas
         </a>
@@ -53,12 +53,12 @@ import { RESORT_CONTACT, BOOKING_ENGINE_URL } from "../data";
 
       {/* Direct Contact Option */}
       <div class="pt-8 border-t border-[#0E2C21]/10 max-w-md mx-auto">
-        <p class="text-xs text-[#2C3531]/70 mb-2 font-mono">
+        <p class="text-xs text-[#2C3531]/70 mb-2 font-sans">
           Need immediate assistance with a reservation?
         </p>
         <a 
           href={`tel:${RESORT_CONTACT.phoneTel || '+917505029696'}`} 
-          class="inline-flex items-center text-xs font-mono font-semibold tracking-wider text-[#7A6038] hover:text-[#0E2C21] transition-colors"
+          class="inline-flex items-center text-xs font-sans font-semibold text-[#7A6038] hover:text-[#0E2C21] transition-colors"
         >
           <Phone className="w-3.5 h-3.5 mr-1.5" />
           Call Direct Concierge: {RESORT_CONTACT.phoneDisplay}

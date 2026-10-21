@@ -80,7 +80,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
             </div>
 
             <div className="space-y-3 max-w-lg mx-auto">
-              <span className="font-mono text-xs text-[#B0966D] uppercase tracking-[0.2em] font-semibold block">
+              <span className="font-sans text-xs text-[#B0966D] uppercase tracking-[0.2em] font-semibold block">
                 Inquiry Received · Priority Allocation
               </span>
               <h3 className="font-display text-2xl sm:text-3xl font-medium text-[#0E2C21]">
@@ -95,7 +95,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
             <div className="bg-[#FAF9F6] border border-[#8A6F4A]/30 rounded-xl p-5 max-w-md mx-auto text-left flex items-start gap-3.5">
               <Sparkles className="w-5 h-5 text-[#7A6038] shrink-0 mt-0.5" />
               <div>
-                <span className="font-mono text-[11px] uppercase tracking-wider text-[#0E2C21] font-bold block mb-1">
+                <span className="font-sans text-[11px] uppercase tracking-wider text-[#0E2C21] font-bold block mb-1">
                   Host Direct Perks Applied
                 </span>
                 <p className="text-xs text-[#2C3531]/80 leading-relaxed">
@@ -109,7 +109,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
                 href={`https://wa.me/917505029696?text=${encodeURIComponent(constructWhatsAppMessage(formData))}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-mono uppercase tracking-widest font-semibold transition-all duration-300 shadow-sm"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-sans uppercase tracking-[0.1em] font-semibold transition-all duration-300 shadow-sm"
               >
                 <span>Chat on WhatsApp Directly</span>
                 <ArrowRight className="w-4 h-4" />
@@ -118,7 +118,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
               <button
                 type="button"
                 onClick={() => setSubmitted(false)}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-full border border-[#0E2C21]/20 hover:border-[#0E2C21] text-[#0E2C21] text-xs font-mono uppercase tracking-widest font-semibold transition-all duration-200"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-full border border-[#0E2C21]/20 hover:border-[#0E2C21] text-[#0E2C21] text-xs font-sans uppercase tracking-[0.1em] font-semibold transition-all duration-200"
               >
                 Submit Another Request
               </button>
@@ -129,7 +129,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
               {/* Full Name */}
               <div className="space-y-2">
-                <label htmlFor="fullName" className="block text-xs font-mono uppercase tracking-wider text-[#0E2C21] font-semibold">
+                <label htmlFor="fullName" className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                   Full Name <span className="text-[#C27847]">*</span>
                 </label>
                 <div className="relative">
@@ -151,7 +151,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
 
               {/* Mobile / WhatsApp Number */}
               <div className="space-y-2">
-                <label htmlFor="phone" className="block text-xs font-mono uppercase tracking-wider text-[#0E2C21] font-semibold">
+                <label htmlFor="phone" className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                   Mobile / WhatsApp Number <span className="text-[#C27847]">*</span>
                 </label>
                 <div className="relative">
@@ -166,14 +166,14 @@ I look forward to discussing the bridal villa allocation and customized wedding 
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+91 98765 43210"
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-lg text-sm text-[#2C3531] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-colors font-mono"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-lg text-sm text-[#2C3531] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-colors font-sans"
                   />
                 </div>
               </div>
 
               {/* Email Address */}
               <div className="space-y-2">
-                <label htmlFor="email" className="block text-xs font-mono uppercase tracking-wider text-[#0E2C21] font-semibold">
+                <label htmlFor="email" className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                   Email Address <span className="text-[#C27847]">*</span>
                 </label>
                 <div className="relative">
@@ -195,7 +195,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
 
               {/* Tentative Wedding Date */}
               <div className="space-y-2">
-                <label htmlFor="weddingDate" className="block text-xs font-mono uppercase tracking-wider text-[#0E2C21] font-semibold">
+                <label htmlFor="weddingDate" className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                   Tentative Wedding Date <span className="text-[#C27847]">*</span>
                 </label>
                 <div className="relative">
@@ -209,7 +209,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
                     required
                     value={formData.weddingDate}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-lg text-sm text-[#2C3531] focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-colors font-mono"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-lg text-sm text-[#2C3531] focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-colors font-sans"
                   />
                 </div>
               </div>
@@ -217,7 +217,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
 
             {/* Estimated Guest Count */}
             <div className="space-y-2">
-              <label htmlFor="guestCount" className="block text-xs font-mono uppercase tracking-wider text-[#0E2C21] font-semibold">
+              <label htmlFor="guestCount" className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                 Estimated Guest Count <span className="text-[#C27847]">*</span>
               </label>
               <div className="relative">
@@ -243,7 +243,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
 
             {/* Message / Specific Requirements */}
             <div className="space-y-2">
-              <label htmlFor="message" className="block text-xs font-mono uppercase tracking-wider text-[#0E2C21] font-semibold">
+              <label htmlFor="message" className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                 Message / Specific Requirements
               </label>
               <div className="relative">
@@ -272,7 +272,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full inline-flex items-center justify-center gap-3 py-4 px-8 rounded-full bg-[#0E2C21] hover:bg-[#193F30] text-[#FAF9F6] text-xs sm:text-sm font-mono uppercase tracking-[0.18em] font-semibold transition-all duration-300 shadow-luxury-md focus-ring disabled:opacity-70 cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-3 py-4 px-8 rounded-full bg-[#0E2C21] hover:bg-[#193F30] text-[#FAF9F6] text-xs sm:text-sm font-sans uppercase tracking-[0.1em] font-semibold transition-all duration-300 shadow-luxury-md focus-ring disabled:opacity-70 cursor-pointer"
               >
                 {isSubmitting ? (
                   <span>Preparing Custom Proposal...</span>
@@ -286,7 +286,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
             </div>
 
             {/* Under-CTA Trust Reassurance */}
-            <div className="flex flex-wrap items-center justify-center gap-6 pt-2 text-[11px] text-[#2C3531]/65 font-mono">
+            <div className="flex flex-wrap items-center justify-center gap-6 pt-2 text-[11px] text-[#2C3531]/65 font-sans">
               <span className="flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#0E2C21]" />
                 100% Private Estate Buyout

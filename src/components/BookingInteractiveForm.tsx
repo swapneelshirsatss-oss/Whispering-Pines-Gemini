@@ -92,7 +92,7 @@ Please confirm availability and share direct booking privileges.`;
         
         {/* Header Block */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-mono tracking-widest text-[#B0966D] uppercase block mb-2 font-semibold">
+          <span className="text-xs font-sans tracking-[0.1em] text-[#B0966D] uppercase block mb-2 font-semibold">
             Direct Reservation Estimator
           </span>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-[#0E2C21]">
@@ -126,7 +126,7 @@ Please confirm availability and share direct booking privileges.`;
             
             {/* Input Room */}
             <div className="space-y-2">
-              <label htmlFor="room-select" className="text-[11px] font-mono uppercase tracking-wider text-[#2C3531]/70 block font-semibold">
+              <label htmlFor="room-select" className="text-[11px] font-sans uppercase tracking-wider text-[#2C3531]/70 block font-semibold">
                 Select Suite / Villa Category
               </label>
               <div className="relative">
@@ -151,7 +151,7 @@ Please confirm availability and share direct booking privileges.`;
             {/* Input Dates Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <label htmlFor="checkin-date" className="text-[11px] font-mono uppercase tracking-wider text-[#2C3531]/70 block font-semibold flex items-center">
+                <label htmlFor="checkin-date" className="text-[11px] font-sans uppercase tracking-wider text-[#2C3531]/70 block font-semibold flex items-center">
                   <Calendar className="w-4 h-4 text-[#7A6038] mr-1" />
                   Check-In
                 </label>
@@ -165,7 +165,7 @@ Please confirm availability and share direct booking privileges.`;
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="checkout-date" className="text-[11px] font-mono uppercase tracking-wider text-[#2C3531]/70 block font-semibold flex items-center">
+                <label htmlFor="checkout-date" className="text-[11px] font-sans uppercase tracking-wider text-[#2C3531]/70 block font-semibold flex items-center">
                   <Calendar className="w-4 h-4 text-[#7A6038] mr-1" />
                   Check-Out
                 </label>
@@ -181,7 +181,7 @@ Please confirm availability and share direct booking privileges.`;
 
             {/* Input Guest Counts dropdown */}
             <div className="space-y-2">
-              <label htmlFor="guests-count" className="text-[11px] font-mono uppercase tracking-wider text-[#2C3531]/70 block font-semibold flex items-center">
+              <label htmlFor="guests-count" className="text-[11px] font-sans uppercase tracking-wider text-[#2C3531]/70 block font-semibold flex items-center">
                 <Users className="w-4 h-4 text-[#7A6038] mr-1" />
                 Number of Guests
               </label>
@@ -207,7 +207,7 @@ Please confirm availability and share direct booking privileges.`;
 
             {/* Inclusions VIP List */}
             <div className="pt-2 border-t border-[#0E2C21]/10 space-y-2">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#7A6038] font-semibold block">
+              <span className="text-[11px] font-sans uppercase tracking-wider text-[#7A6038] font-semibold block">
                 Direct Booking VIP Inclusions:
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#2C3531]/80">
@@ -238,7 +238,7 @@ Please confirm availability and share direct booking privileges.`;
                 <h3 className="font-display text-xl sm:text-2xl font-medium text-[#FAF9F6]">
                   Reservation Summary
                 </h3>
-                <span className="bg-[#B0966D]/20 text-[#C4A77D] border border-[#8A6F4A]/30 text-[10px] font-mono uppercase px-2 py-0.5 rounded">
+                <span className="bg-[#B0966D]/20 text-[#C4A77D] border border-[#8A6F4A]/30 text-[10px] font-sans uppercase px-2 py-0.5 rounded">
                   Best Rate
                 </span>
               </div>
@@ -252,27 +252,27 @@ Please confirm availability and share direct booking privileges.`;
                 
                 <div className="flex justify-between border-b border-[#FAF9F6]/5 pb-3">
                   <span className="text-[#FAF9F6]/60">Duration</span>
-                  <span className="font-mono text-[#FAF9F6]">{nights} night{nights > 1 ? "s" : ""}</span>
+                  <span className="font-sans text-[#FAF9F6]">{nights} night{nights > 1 ? "s" : ""}</span>
                 </div>
                 <div className="flex justify-between border-b border-[#FAF9F6]/5 pb-3">
                   <span className="text-[#FAF9F6]/60">Party Size</span>
-                  <span className="font-mono text-[#FAF9F6]">{guestsCount}</span>
+                  <span className="font-sans text-[#FAF9F6]">{guestsCount}</span>
                 </div>
               </div>
 
               {/* Price Transparency & OTA Comparison Display */}
               <div className="mt-6 p-4 rounded bg-[#FAF9F6]/5 border border-[#FAF9F6]/10">
                 <div className="flex justify-between items-baseline mb-1">
-                  <span className="text-[10px] uppercase font-mono tracking-wider text-[#FAF9F6]/60">
+                  <span className="text-[10px] uppercase font-sans tracking-wider text-[#FAF9F6]/60">
                     Est. OTA Platform Price:
                   </span>
-                  <span className="text-xs font-mono line-through text-[#FAF9F6]/50">
+                  <span className="text-xs font-sans line-through text-[#FAF9F6]/50">
                     ₹{estimatedOtaCost.toLocaleString("en-IN")}
                   </span>
                 </div>
 
                 <div className="flex justify-between items-baseline">
-                  <span className="text-xs uppercase font-mono tracking-wider text-[#7A6038] font-semibold flex items-center gap-1">
+                  <span className="text-xs uppercase font-sans tracking-wider text-[#7A6038] font-semibold flex items-center gap-1">
                     <Sparkles className="w-3 h-3" />
                     Direct Booking Rate:
                   </span>
@@ -281,7 +281,7 @@ Please confirm availability and share direct booking privileges.`;
                   </div>
                 </div>
 
-                <div className="mt-2 pt-2 border-t border-[#FAF9F6]/10 flex items-center justify-between text-[11px] font-mono text-[#7A6038]">
+                <div className="mt-2 pt-2 border-t border-[#FAF9F6]/10 flex items-center justify-between text-[11px] font-sans text-[#7A6038]">
                   <span>Direct Savings Guarantee:</span>
                   <span className="font-bold">~₹{directSavings.toLocaleString("en-IN")} Saved</span>
                 </div>
@@ -295,7 +295,7 @@ Please confirm availability and share direct booking privileges.`;
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleWhatsAppBookingClick}
-                className="w-full bg-[#25D366] hover:bg-[#20ba59] text-white font-mono text-center text-xs font-bold uppercase tracking-wider py-4 px-6 rounded shadow-xl flex items-center justify-center transition-all duration-300 transform active:scale-[0.99] group"
+                className="w-full bg-[#25D366] hover:bg-[#20ba59] text-white font-sans text-center text-xs font-bold uppercase tracking-wider py-4 px-6 rounded shadow-xl flex items-center justify-center transition-all duration-300 transform active:scale-[0.99] group"
               >
                 <MessageCircle className="w-4 h-4 mr-2 fill-current" />
                 <span>Reserve on WhatsApp (Best Rate)</span>
@@ -306,14 +306,14 @@ Please confirm availability and share direct booking privileges.`;
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleEngineBookingClick}
-                className="w-full bg-transparent hover:bg-white/10 text-[#FAF9F6] border border-[#FAF9F6]/25 font-mono text-center text-[10px] font-semibold uppercase tracking-wider py-2.5 px-4 rounded flex items-center justify-center transition-colors"
+                className="w-full bg-transparent hover:bg-white/10 text-[#FAF9F6] border border-[#FAF9F6]/25 font-sans text-center text-[10px] font-semibold uppercase tracking-wider py-2.5 px-4 rounded flex items-center justify-center transition-colors"
               >
                 <span>Or Book via Direct Engine</span>
                 <ArrowUpRight className="w-3.5 h-3.5 ml-1.5 opacity-70" />
               </a>
 
               <div className="text-center pt-1">
-                <span className="text-[9px] uppercase font-mono tracking-wider text-[#FAF9F6]/50">
+                <span className="text-[9px] uppercase font-sans tracking-wider text-[#FAF9F6]/50">
                   Zero hidden fees • Instant front-desk confirmation
                 </span>
               </div>

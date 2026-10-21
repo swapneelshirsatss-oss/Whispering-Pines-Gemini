@@ -135,7 +135,7 @@ export default function Navbar({ children }: NavbarProps) {
                                 {subItem.name}
                               </span>
                               {subItem.badge && (
-                                <span className="text-[10px] font-mono font-medium px-2 py-0.5 rounded bg-[#B0966D]/20 text-[#C4A77D] border border-[#8A6F4A]/30">
+                                <span className="text-[10px] font-sans font-medium px-2 py-0.5 rounded bg-[#B0966D]/20 text-[#C4A77D] border border-[#8A6F4A]/30">
                                   {subItem.badge}
                                 </span>
                               )}
@@ -187,7 +187,7 @@ export default function Navbar({ children }: NavbarProps) {
             <a
               href={`tel:${PHONE_TEL}`}
               onClick={() => trackAdsConversion("phone_call_click", "engagement", "header_phone_call")}
-              className="flex items-center text-[11px] font-mono tracking-wider text-[#FAF9F6]/85 hover:text-[#7A6038] transition-colors"
+              className="flex items-center text-[11px] font-sans text-[#FAF9F6]/85 hover:text-[#7A6038] transition-colors"
               title="Call Whispering Pines Direct Front Desk: 075050 29696"
             >
               <Phone className="w-3.5 h-3.5 mr-1.5 text-[#7A6038]" />
@@ -198,7 +198,7 @@ export default function Navbar({ children }: NavbarProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleNavBookingClick}
-              className="bg-[#B0966D] hover:bg-[#FAF9F6] text-[#0E2C21] hover:text-[#0E2C21] text-[10px] font-mono font-bold uppercase tracking-[0.18em] px-5 py-2.5 rounded-sm flex items-center transition-all duration-300 shadow-luxury-sm"
+              className="bg-[#B0966D] hover:bg-[#FAF9F6] text-[#0E2C21] hover:text-[#0E2C21] text-[10px] font-sans font-bold uppercase tracking-[0.1em] px-5 py-2.5 rounded-sm flex items-center transition-all duration-300 shadow-luxury-sm"
             >
               <span>Book Stay</span>
               <ArrowUpRight className="w-3.5 h-3.5 ml-1.5 opacity-80" />
@@ -212,7 +212,7 @@ export default function Navbar({ children }: NavbarProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleNavBookingClick}
-              className="bg-[#B0966D] text-[#0E2C21] text-[10px] font-mono font-bold uppercase tracking-wider px-3.5 py-2 rounded-sm flex items-center shadow-md active:scale-95 transition-transform"
+              className="bg-[#B0966D] text-[#0E2C21] text-[10px] font-sans font-bold uppercase tracking-wider px-3.5 py-2 rounded-sm flex items-center shadow-md active:scale-95 transition-transform"
             >
               Book Stay
             </a>
@@ -237,7 +237,7 @@ export default function Navbar({ children }: NavbarProps) {
           <a
             href="/book-now/"
             onClick={() => setIsOpen(false)}
-            className="flex items-center justify-between p-3 rounded bg-[#B0966D]/15 border border-[#8A6F4A]/40 text-[#C4A77D] font-mono text-xs tracking-wider uppercase font-bold mb-3 hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors"
+            className="flex items-center justify-between p-3 rounded bg-[#B0966D]/15 border border-[#8A6F4A]/40 text-[#C4A77D] font-sans text-xs tracking-wider uppercase font-bold mb-3 hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors"
           >
             <span>Direct Booking VIP Privileges</span>
             <span className="text-[10px] font-normal lowercase bg-[#B0966D]/20 px-2 py-0.5 rounded">save 25%</span>
@@ -304,10 +304,10 @@ export default function Navbar({ children }: NavbarProps) {
 
           {/* Quick Persona Chips */}
           <div className="pt-3 pb-1 border-t border-[#FAF9F6]/10">
-            <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#7A6038] block px-4 mb-2 font-semibold">
+            <span className="text-[10px] font-sans uppercase tracking-[0.2em] text-[#7A6038] block px-4 mb-2 font-semibold">
               Stays &amp; Celebrations
             </span>
-            <div className="grid grid-cols-2 gap-2 px-4 text-xs font-mono">
+            <div className="grid grid-cols-2 gap-2 px-4 text-xs font-sans">
               <a
                 href="/destination-wedding-uttarakhand/"
                 onClick={() => setIsOpen(false)}
@@ -343,7 +343,7 @@ export default function Navbar({ children }: NavbarProps) {
             <a
               href={`tel:${PHONE_TEL}`}
               onClick={() => trackAdsConversion("phone_call_click", "engagement", "mobile_phone_call")}
-              className="flex items-center text-base font-mono text-[#FAF9F6]/85 p-2 -ml-2"
+              className="flex items-center text-base font-sans text-[#FAF9F6]/85 p-2 -ml-2"
             >
               <Phone className="w-5 h-5 mr-3 text-[#7A6038]" />
               {PHONE_DISPLAY} <span className="text-xs text-[#FAF9F6]/50 ml-2">(+91 75050 29696)</span>
@@ -365,7 +365,7 @@ export default function Navbar({ children }: NavbarProps) {
 
             {/* Google Preferred Source Button in Mobile Menu */}
             <div className="pt-2 flex flex-col items-center">
-              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#7A6038] block mb-2 font-semibold text-center">
+              <span className="text-[10px] font-sans uppercase tracking-[0.2em] text-[#7A6038] block mb-2 font-semibold text-center">
                 Google Preferred Source
               </span>
               <div

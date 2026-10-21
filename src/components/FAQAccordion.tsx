@@ -34,7 +34,7 @@ export default function FAQAccordion({
         
         {/* Header Block */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-mono tracking-widest text-[#7A6038] uppercase block mb-2 font-semibold">
+          <span className="text-xs font-sans tracking-[0.1em] text-[#7A6038] uppercase block mb-2 font-semibold">
             Answering Your Questions
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#0E2C21]">

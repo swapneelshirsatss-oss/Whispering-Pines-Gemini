@@ -61,7 +61,7 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
         {/* Header Block with Navigation Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="space-y-3 max-w-2xl">
-            <span className="text-xs font-mono text-[#7A6038] uppercase tracking-[0.25em] font-semibold block">
+            <span className="text-xs font-sans text-[#7A6038] uppercase tracking-[0.1em] font-semibold block">
               Himalayan Journal & Travel Guides
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold font-display text-[#0E2C21]">

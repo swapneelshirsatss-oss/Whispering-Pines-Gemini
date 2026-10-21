@@ -207,7 +207,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-center sm:text-left">
       <!-- Left: Prestigious Status -->
       <div class="flex items-center gap-2 mx-auto sm:mx-0">
-        <span class="inline-flex items-center gap-1.5 text-[#B0966D] font-mono uppercase tracking-[0.2em] text-[10px] font-bold">
+        <span class="inline-flex items-center gap-1.5 text-[#B0966D] font-sans uppercase tracking-[0.2em] text-[10px] font-bold">
           <span class="w-2 h-2 rounded-full bg-[#B0966D]"></span>
           Direct Resident Privilege
         </span>
@@ -219,7 +219,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
 
       <!-- Right: Direct WhatsApp & Phone Desk -->
       <div class="flex items-center gap-2.5 sm:gap-3 mx-auto sm:mx-0">
-        <span class="hidden lg:inline-flex items-center gap-1.5 text-[11px] text-[#FAF7F2]/75 font-mono">
+        <span class="hidden lg:inline-flex items-center gap-1.5 text-[11px] text-[#FAF7F2]/75 font-sans">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
           Host Desk Active Now
         </span>
@@ -228,7 +228,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           target="_blank"
           rel="noopener noreferrer"
           data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","top_ribbon_whatsapp",{"conversion_type":"whatsapp"}]'
-          class="inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-mono text-[11px] font-bold px-3 py-1 rounded-full shadow-sm active:scale-95 transition-all"
+          class="inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-sans text-[11px] font-bold px-3 py-1 rounded-full shadow-sm active:scale-95 transition-all"
           title="Chat directly on WhatsApp with front desk"
         >
           <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -239,7 +239,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
         <a
           href={`tel:${RESORT_PHONE_TEL}`}
           data-track-fn="trackBookingConversion" data-track-args='["phone_call_click","engagement","top_ribbon_phone_call",{"conversion_type":"phone","phone_number":"7505029696"}]'
-          class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-[#7A6038] hover:text-[#FAF7F2] transition-colors underline decoration-[#7A6038]/50 underline-offset-4"
+          class="inline-flex items-center gap-1.5 font-sans text-xs font-bold text-[#7A6038] hover:text-[#FAF7F2] transition-colors underline decoration-[#7A6038]/50 underline-offset-4"
         >
           <svg class="w-3.5 h-3.5 text-[#7A6038]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -318,7 +318,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
 
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-[#FAF7F2]/10 pb-4 mb-4">
           <div>
-            <span class="text-[10px] font-mono uppercase tracking-[0.2em] text-[#FAF7F2]/60 block">Third-Party Portals (MakeMyTrip / Agoda)</span>
+            <span class="text-[10px] font-sans uppercase tracking-[0.2em] text-[#FAF7F2]/60 block">Third-Party Portals (MakeMyTrip / Agoda)</span>
             <span class="text-sm line-through text-[#FAF7F2]/50 font-sans">₹3,499 – ₹18,999 + taxes & platform surcharges</span>
           </div>
           <span class="bg-red-500/15 text-red-300 border border-red-500/30 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded">
@@ -328,13 +328,13 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
 
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <div>
-            <span class="text-[10px] font-mono uppercase tracking-[0.2em] text-[#C4A77D] font-bold block">Direct Host Resident Rate (WhatsApp / Call)</span>
+            <span class="text-[10px] font-sans uppercase tracking-[0.2em] text-[#C4A77D] font-bold block">Direct Host Resident Rate (WhatsApp / Call)</span>
             <div class="flex items-baseline gap-2 mt-0.5">
               <span class="text-2xl sm:text-3xl font-bold font-sans text-white">From ₹2,799 / night</span>
-              <span class="text-xs text-[#FAF7F2]/70 font-mono">all-inclusive</span>
+              <span class="text-xs text-[#FAF7F2]/70 font-sans">all-inclusive</span>
             </div>
           </div>
-          <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-mono font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-md flex items-center gap-1.5 shadow-md">
+          <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-sans font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-md flex items-center gap-1.5 shadow-md">
             <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
             Save ~₹700 to ₹3,200 Direct
           </span>
@@ -404,7 +404,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
       
       <!-- Section Header: Select Your Himalayan Residence -->
       <div class="text-center max-w-4xl mx-auto mb-16">
-        <span class="text-xs font-mono font-bold tracking-[0.25em] text-[#7A6038] uppercase block mb-3">
+        <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#7A6038] uppercase block mb-3">
           Properties Managed by Casa De Bello Hospitality
         </span>
         <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[#03110B] leading-tight text-balance">
@@ -436,7 +436,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                 180° Snow Panorama • 1,780m
               </div>
               <div class="absolute bottom-4 left-4 right-4 text-white">
-                <span class="text-[10px] font-mono uppercase tracking-widest text-[#7A6038] block mb-0.5 font-bold">Himalayan Panorama &amp; Orchard Estate</span>
+                <span class="text-[10px] font-sans uppercase tracking-[0.1em] text-[#7A6038] block mb-0.5 font-bold">Himalayan Panorama &amp; Orchard Estate</span>
                 <h3 class="font-display text-xl sm:text-2xl font-bold text-white leading-tight">
                   Mukteshwar: Whispering Pines Resort By Casa De Bello
                 </h3>
@@ -469,7 +469,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
 
               <!-- Available Room Options (Clean, Simple, No Rates) -->
               <div class="mb-5 pb-5 border-b border-gray-100">
-                <span class="text-[10px] font-mono uppercase tracking-wider text-[#7A6038] font-bold block mb-2.5">
+                <span class="text-[10px] font-sans uppercase tracking-wider text-[#7A6038] font-bold block mb-2.5">
                   Available Residence Options:
                 </span>
                 <div class="space-y-2">
@@ -478,21 +478,21 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                       <strong class="text-xs text-[#03110B] block">3-BHK Alpine Villa</strong>
                       <span class="text-[11px] text-[#44564E]">Fireplace &amp; Orchard Lawn</span>
                     </div>
-                    <span class="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 8–10</span>
+                    <span class="text-[10px] font-sans bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 8–10</span>
                   </div>
                   <div class="p-2.5 rounded-xl bg-[#FAF8F5] border border-gray-100 flex items-center justify-between">
                     <div>
                       <strong class="text-xs text-[#03110B] block">Deluxe Skylight Suite</strong>
                       <span class="text-[11px] text-[#44564E]">Stargazing Roof &amp; Balcony</span>
                     </div>
-                    <span class="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 2–3</span>
+                    <span class="text-[10px] font-sans bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 2–3</span>
                   </div>
                   <div class="p-2.5 rounded-xl bg-[#FAF8F5] border border-gray-100 flex items-center justify-between">
                     <div>
                       <strong class="text-xs text-[#03110B] block">Family Twin Orchard Room</strong>
                       <span class="text-[11px] text-[#44564E]">Ground Floor Ease • Twin Beds</span>
                     </div>
-                    <span class="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 4</span>
+                    <span class="text-[10px] font-sans bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 4</span>
                   </div>
                 </div>
               </div>
@@ -500,10 +500,10 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               <!-- Direct Privilege Box -->
               <div class="bg-[#FAF7F2] border border-[#8A6F4A]/30 rounded-xl p-3 mb-6 flex items-center justify-between">
                 <div>
-                  <span class="text-[10px] font-mono uppercase tracking-wider text-[#7A6038] font-bold block">Direct Host Privilege</span>
+                  <span class="text-[10px] font-sans uppercase tracking-wider text-[#7A6038] font-bold block">Direct Host Privilege</span>
                   <span class="text-xs text-[#03110B] font-semibold">Best Rate Guaranteed • Free Tea Basket</span>
                 </div>
-                <span class="bg-[#B0966D] text-[#03110B] font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded font-bold">
+                <span class="bg-[#B0966D] text-[#03110B] font-sans text-[10px] uppercase tracking-wider px-2 py-0.5 rounded font-bold">
                   Direct Perks
                 </span>
               </div>
@@ -516,7 +516,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               href="#accommodations"
               data-hotel-jump="mukteshwar"
               data-track-fn="trackBookingConversion" data-track-args='["calculate_quote","engagement","jump_to_mukteshwar",{"hotel":"Whispering Pines Mukteshwar"}]'
-              class="hotel-jump-btn flex-1 bg-[#051E14] hover:bg-[#0B3123] text-[#FAF7F2] font-mono text-xs font-bold uppercase tracking-wider py-3 px-3 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1"
+              class="hotel-jump-btn flex-1 bg-[#051E14] hover:bg-[#0B3123] text-[#FAF7F2] font-sans text-xs font-bold uppercase tracking-wider py-3 px-3 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1"
             >
               <span>Explore Rooms</span>
               <span>↓</span>
@@ -526,7 +526,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               target="_blank"
               rel="noopener noreferrer"
               data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","property_mukteshwar_whatsapp",{"hotel":"Whispering Pines Mukteshwar","conversion_type":"whatsapp","value":3500,"currency":"INR"}]'
-              class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-mono text-xs font-bold uppercase tracking-wider py-3 px-4 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1.5"
+              class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-sans text-xs font-bold uppercase tracking-wider py-3 px-4 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1.5"
             >
               <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
               <span>WhatsApp</span>
@@ -551,7 +551,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                 9 km (15 Mins) to Ashram • Kehelkwira
               </div>
               <div class="absolute bottom-4 left-4 right-4 text-white">
-                <span class="text-[10px] font-mono uppercase tracking-widest text-emerald-300 block mb-0.5 font-bold">Spiritual Pilgrimage &amp; Valley Retreat</span>
+                <span class="text-[10px] font-sans uppercase tracking-[0.1em] text-emerald-300 block mb-0.5 font-bold">Spiritual Pilgrimage &amp; Valley Retreat</span>
                 <h3 class="font-display text-xl sm:text-2xl font-bold text-white leading-tight">
                   Casa De Bello Resort- Kainchi Dham
                 </h3>
@@ -584,7 +584,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
 
               <!-- Available Room Options (Clean, Simple, No Rates) -->
               <div class="mb-5 pb-5 border-b border-gray-100">
-                <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-800 font-bold block mb-2.5">
+                <span class="text-[10px] font-sans uppercase tracking-wider text-emerald-800 font-bold block mb-2.5">
                   Available Residence Options:
                 </span>
                 <div class="space-y-2">
@@ -593,14 +593,14 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                       <strong class="text-xs text-[#03110B] block">Super Deluxe Valley Room</strong>
                       <span class="text-[11px] text-[#44564E]">Private Balcony • King Bed</span>
                     </div>
-                    <span class="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 2–3</span>
+                    <span class="text-[10px] font-sans bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 2–3</span>
                   </div>
                   <div class="p-2.5 rounded-xl bg-emerald-50/40 border border-emerald-100 flex items-center justify-between">
                     <div>
                       <strong class="text-xs text-[#03110B] block">Executive Valley View Suite</strong>
                       <span class="text-[11px] text-[#44564E]">Panoramic Valley View • Lounge Area</span>
                     </div>
-                    <span class="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 2–4</span>
+                    <span class="text-[10px] font-sans bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 2–4</span>
                   </div>
                 </div>
               </div>
@@ -608,10 +608,10 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               <!-- Direct Privilege Box -->
               <div class="bg-emerald-50/70 border border-emerald-200/80 rounded-xl p-3 mb-6 flex items-center justify-between">
                 <div>
-                  <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-800 font-bold block">Direct Host Privilege</span>
+                  <span class="text-[10px] font-sans uppercase tracking-wider text-emerald-800 font-bold block">Direct Host Privilege</span>
                   <span class="text-xs text-[#03110B] font-semibold">Best Rate Guaranteed • Ashram Assistance</span>
                 </div>
-                <span class="bg-emerald-600 text-white font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded font-bold">
+                <span class="bg-emerald-600 text-white font-sans text-[10px] uppercase tracking-wider px-2 py-0.5 rounded font-bold">
                   Direct Perks
                 </span>
               </div>
@@ -624,7 +624,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               href="#accommodations"
               data-hotel-jump="kainchi"
               data-track-fn="trackBookingConversion" data-track-args='["calculate_quote","engagement","jump_to_kainchi",{"hotel":"Casa De Bello Kainchi Dham"}]'
-              class="hotel-jump-btn flex-1 bg-emerald-900 hover:bg-emerald-800 text-white font-mono text-xs font-bold uppercase tracking-wider py-3 px-3 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1"
+              class="hotel-jump-btn flex-1 bg-emerald-900 hover:bg-emerald-800 text-white font-sans text-xs font-bold uppercase tracking-wider py-3 px-3 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1"
             >
               <span>Explore Rooms</span>
               <span>↓</span>
@@ -634,7 +634,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               target="_blank"
               rel="noopener noreferrer"
               data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","property_kainchi_whatsapp",{"hotel":"Casa De Bello Kainchi Dham","conversion_type":"whatsapp","value":2799,"currency":"INR"}]'
-              class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-mono text-xs font-bold uppercase tracking-wider py-3 px-4 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1.5"
+              class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-sans text-xs font-bold uppercase tracking-wider py-3 px-4 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1.5"
             >
               <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
               <span>WhatsApp</span>
@@ -659,7 +659,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                 3.3 km (6 Mins) to Ashram • Niglat Malla
               </div>
               <div class="absolute bottom-4 left-4 right-4 text-white">
-                <span class="text-[10px] font-mono uppercase tracking-widest text-amber-300 block mb-0.5 font-bold">Closest Pilgrim Haven &amp; Pure Veg Kitchen</span>
+                <span class="text-[10px] font-sans uppercase tracking-[0.1em] text-amber-300 block mb-0.5 font-bold">Closest Pilgrim Haven &amp; Pure Veg Kitchen</span>
                 <h3 class="font-display text-xl sm:text-2xl font-bold text-white leading-tight">
                   Anurra Hotel- Kaincho Dham
                 </h3>
@@ -692,7 +692,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
 
               <!-- Available Room Options (Clean, Simple, No Rates) -->
               <div class="mb-5 pb-5 border-b border-gray-100">
-                <span class="text-[10px] font-mono uppercase tracking-wider text-amber-800 font-bold block mb-2.5">
+                <span class="text-[10px] font-sans uppercase tracking-wider text-amber-800 font-bold block mb-2.5">
                   Available Residence Options:
                 </span>
                 <div class="space-y-2">
@@ -701,14 +701,14 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                       <strong class="text-xs text-[#03110B] block">Deluxe Hill View Room</strong>
                       <span class="text-[11px] text-[#44564E]">Private Balcony • King Bed</span>
                     </div>
-                    <span class="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 2–3</span>
+                    <span class="text-[10px] font-sans bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 2–3</span>
                   </div>
                   <div class="p-2.5 rounded-xl bg-amber-50/40 border border-amber-100 flex items-center justify-between">
                     <div>
                       <strong class="text-xs text-[#03110B] block">Grand Valley Family Room</strong>
                       <span class="text-[11px] text-[#44564E]">Spacious Bedding • Pure Veg Meals</span>
                     </div>
-                    <span class="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 3–4</span>
+                    <span class="text-[10px] font-sans bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">Sleeps 3–4</span>
                   </div>
                 </div>
               </div>
@@ -716,10 +716,10 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               <!-- Direct Privilege Box -->
               <div class="bg-amber-50/70 border border-amber-200/80 rounded-xl p-3 mb-6 flex items-center justify-between">
                 <div>
-                  <span class="text-[10px] font-mono uppercase tracking-wider text-amber-800 font-bold block">Direct Host Privilege</span>
+                  <span class="text-[10px] font-sans uppercase tracking-wider text-amber-800 font-bold block">Direct Host Privilege</span>
                   <span class="text-xs text-[#03110B] font-semibold">Best Rate Guaranteed • Ashram Assistance</span>
                 </div>
-                <span class="bg-amber-600 text-white font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded font-bold">
+                <span class="bg-amber-600 text-white font-sans text-[10px] uppercase tracking-wider px-2 py-0.5 rounded font-bold">
                   Direct Perks
                 </span>
               </div>
@@ -732,7 +732,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               href="#accommodations"
               data-hotel-jump="anurra"
               data-track-fn="trackBookingConversion" data-track-args='["calculate_quote","engagement","jump_to_anurra",{"hotel":"Anurra Hotel Kainchi Dham"}]'
-              class="hotel-jump-btn flex-1 bg-[#2C1810] hover:bg-[#3D2317] text-white font-mono text-xs font-bold uppercase tracking-wider py-3 px-3 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1"
+              class="hotel-jump-btn flex-1 bg-[#2C1810] hover:bg-[#3D2317] text-white font-sans text-xs font-bold uppercase tracking-wider py-3 px-3 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1"
             >
               <span>Explore Rooms</span>
               <span>↓</span>
@@ -742,7 +742,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               target="_blank"
               rel="noopener noreferrer"
               data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","property_anurra_whatsapp",{"hotel":"Anurra Hotel Kainchi Dham","conversion_type":"whatsapp","value":3199,"currency":"INR"}]'
-              class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-mono text-xs font-bold uppercase tracking-wider py-3 px-4 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1.5"
+              class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-sans text-xs font-bold uppercase tracking-wider py-3 px-4 rounded-xl text-center transition-all shadow-md flex items-center justify-center gap-1.5"
             >
               <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
               <span>WhatsApp</span>
@@ -759,7 +759,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           <p class="font-sans text-sm text-[#151E1A] leading-relaxed mb-4">
             "We drove up from Delhi for a long weekend. Our biggest worry was finding clean beds and hot water in the morning. Both were 10/10. The staff even held our room without advance when we got delayed in Haldwani traffic. The morning view from the balcony is breathtaking."
           </p>
-          <footer class="flex items-center justify-between text-xs text-[#44564E] font-mono pt-3 border-t border-gray-100">
+          <footer class="flex items-center justify-between text-xs text-[#44564E] font-sans pt-3 border-t border-gray-100">
             <span class="font-bold text-[#03110B]">— Rohit & Neha M., Gurugram</span>
             <span>Family Road Trip • Verified Google Review</span>
           </footer>
@@ -770,7 +770,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           <p class="font-sans text-sm text-[#151E1A] leading-relaxed mb-4">
             "I saw the listing on MakeMyTrip, but decided to call their desk directly. They offered a rate 25% lower than the app, gave us a complimentary hot tea basket, and let us check in early at 10 AM. Wi-Fi was fast enough for a full day of remote client video calls."
           </p>
-          <footer class="flex items-center justify-between text-xs text-[#44564E] font-mono pt-3 border-t border-gray-100">
+          <footer class="flex items-center justify-between text-xs text-[#44564E] font-sans pt-3 border-t border-gray-100">
             <span class="font-bold text-[#03110B]">— Vikram S., Noida</span>
             <span>Workcation Stay • Verified Google Review</span>
           </footer>
@@ -787,7 +787,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-10">
-        <span class="text-xs font-mono font-bold tracking-[0.25em] text-[#C4A77D] uppercase block mb-3">
+        <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#C4A77D] uppercase block mb-3">
           Secondary Room Selection
         </span>
         <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight">
@@ -804,28 +804,28 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
         <button
           type="button"
           data-tab="all"
-          class="property-tab-btn active px-5 py-2.5 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-all bg-[#B0966D] text-[#03110B] shadow-lg cursor-pointer"
+          class="property-tab-btn active px-5 py-2.5 rounded-full font-sans text-xs font-bold uppercase tracking-wider transition-all bg-[#B0966D] text-[#03110B] shadow-lg cursor-pointer"
         >
           All Residences (6)
         </button>
         <button
           type="button"
           data-tab="mukteshwar"
-          class="property-tab-btn px-5 py-2.5 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-all bg-[#062116] hover:bg-[#053323] text-[#FAF7F2] border border-[#B0966D]/40 cursor-pointer"
+          class="property-tab-btn px-5 py-2.5 rounded-full font-sans text-xs font-bold uppercase tracking-wider transition-all bg-[#062116] hover:bg-[#053323] text-[#FAF7F2] border border-[#B0966D]/40 cursor-pointer"
         >
           Mukteshwar: Whispering Pines (3)
         </button>
         <button
           type="button"
           data-tab="kainchi"
-          class="property-tab-btn px-5 py-2.5 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-all bg-[#062116] hover:bg-[#053323] text-[#FAF7F2] border border-emerald-500/40 cursor-pointer"
+          class="property-tab-btn px-5 py-2.5 rounded-full font-sans text-xs font-bold uppercase tracking-wider transition-all bg-[#062116] hover:bg-[#053323] text-[#FAF7F2] border border-emerald-500/40 cursor-pointer"
         >
           Casa De Bello Resort - Kainchi Dham (1)
         </button>
         <button
           type="button"
           data-tab="anurra"
-          class="property-tab-btn px-5 py-2.5 rounded-full font-mono text-xs font-bold uppercase tracking-wider transition-all bg-[#062116] hover:bg-[#053323] text-[#FAF7F2] border border-amber-500/40 cursor-pointer"
+          class="property-tab-btn px-5 py-2.5 rounded-full font-sans text-xs font-bold uppercase tracking-wider transition-all bg-[#062116] hover:bg-[#053323] text-[#FAF7F2] border border-amber-500/40 cursor-pointer"
         >
           Anurra Hotel - Kaincho Dham (2)
         </button>
@@ -843,21 +843,21 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"
             />
-            <div class="absolute top-3 left-3 bg-[#03110B]/90 backdrop-blur-md border border-[#B0966D]/40 text-[#C4A77D] font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+            <div class="absolute top-3 left-3 bg-[#03110B]/90 backdrop-blur-md border border-[#B0966D]/40 text-[#C4A77D] font-sans text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
               Mukteshwar: Whispering Pines Resort By Casa De Bello
             </div>
-            <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-mono text-xs font-bold px-2.5 py-0.5 rounded">
+            <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-sans text-xs font-bold px-2.5 py-0.5 rounded">
               Sleeps 8 to 10
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
             <div>
-              <span class="text-[10px] font-mono text-[#C4A77D]/90 uppercase tracking-widest block mb-1">Malla Ramgarh • Signature Standalone Cottage</span>
+              <span class="text-[10px] font-sans text-[#C4A77D]/90 uppercase tracking-[0.1em] block mb-1">Malla Ramgarh • Signature Standalone Cottage</span>
               <h3 class="font-display text-2xl font-semibold text-white mb-2">3-BHK Private Alpine Villa</h3>
               <p class="text-xs text-[#FAF7F2]/75 leading-relaxed mb-4">
                 Standalone Himalayan stone &amp; pine cottage. Features a private living room fireplace, private orchard lawn, 3 grand en-suite baths, and dedicated chef service for family retreats.
               </p>
-              <div class="flex flex-wrap gap-2 text-[11px] font-mono text-[#C4A77D] mb-6">
+              <div class="flex flex-wrap gap-2 text-[11px] font-sans text-[#C4A77D] mb-6">
                 <span class="bg-[#03110B] px-2.5 py-1 rounded border border-[#B0966D]/25">Private Fireplace</span>
                 <span class="bg-[#03110B] px-2.5 py-1 rounded border border-[#B0966D]/25">Orchard Lawn</span>
                 <span class="bg-[#03110B] px-2.5 py-1 rounded border border-[#B0966D]/25">3 En-Suite Baths</span>
@@ -866,10 +866,10 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
             <div class="pt-4 border-t border-[#FAF7F2]/10 flex flex-col gap-3">
               <div class="flex items-center justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
+                  <span class="text-[10px] font-sans text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
                   <span class="font-sans text-base sm:text-lg font-bold text-white">Best Direct Rate Guaranteed</span>
                 </div>
-                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
+                <span class="text-[10px] font-sans text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
                   Zero Platform Fees
                 </span>
               </div>
@@ -879,7 +879,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track-fn="trackBookingConversion" data-track-args='["begin_checkout","booking","room_card_bookingjini",{"conversion_type":"bookingjini"}]'
-                  class="bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
+                  class="bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-bold font-sans text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
                 >
                   <span>Book Online</span>
                   <svg class="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -889,7 +889,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","room_villa_whatsapp",{"room":"3-BHK Alpine Villa","hotel":"Whispering Pines Mukteshwar","value":14999,"currency":"INR"}]'
-                  class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
+                  class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-sans text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
                 >
                   <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                   <span>WhatsApp</span>
@@ -908,21 +908,21 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"
             />
-            <div class="absolute top-3 left-3 bg-[#03110B]/90 backdrop-blur-md border border-[#B0966D]/40 text-[#C4A77D] font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+            <div class="absolute top-3 left-3 bg-[#03110B]/90 backdrop-blur-md border border-[#B0966D]/40 text-[#C4A77D] font-sans text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
               Mukteshwar: Whispering Pines Resort By Casa De Bello
             </div>
-            <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-mono text-xs font-bold px-2.5 py-0.5 rounded">
+            <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-sans text-xs font-bold px-2.5 py-0.5 rounded">
               Sleeps 2 to 3
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
             <div>
-              <span class="text-[10px] font-mono text-[#C4A77D]/90 uppercase tracking-widest block mb-1">Malla Ramgarh • Romantic Stargazing Suite</span>
+              <span class="text-[10px] font-sans text-[#C4A77D]/90 uppercase tracking-[0.1em] block mb-1">Malla Ramgarh • Romantic Stargazing Suite</span>
               <h3 class="font-display text-2xl font-semibold text-white mb-2">Deluxe Skylight Mountain Suite</h3>
               <p class="text-xs text-[#FAF7F2]/75 leading-relaxed mb-4">
                 Cedar pine panels, private stargazing glass ceiling, and private valley-view balcony overlooking Nanda Devi. The quintessential romantic Himalayan sanctuary.
               </p>
-              <div class="flex flex-wrap gap-2 text-[11px] font-mono text-[#C4A77D] mb-6">
+              <div class="flex flex-wrap gap-2 text-[11px] font-sans text-[#C4A77D] mb-6">
                 <span class="bg-[#03110B] px-2.5 py-1 rounded border border-[#B0966D]/25">Stargazing Glass Roof</span>
                 <span class="bg-[#03110B] px-2.5 py-1 rounded border border-[#B0966D]/25">Valley Balcony</span>
                 <span class="bg-[#03110B] px-2.5 py-1 rounded border border-[#B0966D]/25">King Bed</span>
@@ -931,10 +931,10 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
             <div class="pt-4 border-t border-[#FAF7F2]/10 flex flex-col gap-3">
               <div class="flex items-center justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
+                  <span class="text-[10px] font-sans text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
                   <span class="font-sans text-base sm:text-lg font-bold text-white">Best Direct Rate Guaranteed</span>
                 </div>
-                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
+                <span class="text-[10px] font-sans text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
                   Zero Platform Fees
                 </span>
               </div>
@@ -944,7 +944,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track-fn="trackBookingConversion" data-track-args='["begin_checkout","booking","room_card_bookingjini",{"conversion_type":"bookingjini"}]'
-                  class="bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
+                  class="bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-bold font-sans text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
                 >
                   <span>Book Online</span>
                   <svg class="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -954,7 +954,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","room_suite_whatsapp",{"room":"Deluxe Skylight Mountain Suite","hotel":"Whispering Pines Mukteshwar","value":3499,"currency":"INR"}]'
-                  class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
+                  class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-sans text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
                 >
                   <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                   <span>WhatsApp</span>
@@ -973,21 +973,21 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"
             />
-            <div class="absolute top-3 left-3 bg-[#03110B]/90 backdrop-blur-md border border-[#B0966D]/40 text-[#C4A77D] font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+            <div class="absolute top-3 left-3 bg-[#03110B]/90 backdrop-blur-md border border-[#B0966D]/40 text-[#C4A77D] font-sans text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
               Mukteshwar: Whispering Pines Resort By Casa De Bello
             </div>
-            <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-mono text-xs font-bold px-2.5 py-0.5 rounded">
+            <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-sans text-xs font-bold px-2.5 py-0.5 rounded">
               Sleeps 4 Guests
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
             <div>
-              <span class="text-[10px] font-mono text-[#C4A77D]/90 uppercase tracking-widest block mb-1">Malla Ramgarh • Ground Floor Garden Ease</span>
+              <span class="text-[10px] font-sans text-[#C4A77D]/90 uppercase tracking-[0.1em] block mb-1">Malla Ramgarh • Ground Floor Garden Ease</span>
               <h3 class="font-display text-2xl font-semibold text-white mb-2">Family Twin Orchard Room</h3>
               <p class="text-xs text-[#FAF7F2]/75 leading-relaxed mb-4">
                 Ground-floor garden access with zero steep stairs, perfectly suited for elderly parents and young kids. Features twin double beds, garden sit-out, and quick access to dining.
               </p>
-              <div class="flex flex-wrap gap-2 text-[11px] font-mono text-[#C4A77D] mb-6">
+              <div class="flex flex-wrap gap-2 text-[11px] font-sans text-[#C4A77D] mb-6">
                 <span class="bg-[#03110B] px-2.5 py-1 rounded border border-[#B0966D]/25">Ground Floor Level</span>
                 <span class="bg-[#03110B] px-2.5 py-1 rounded border border-[#B0966D]/25">Twin Double Beds</span>
                 <span class="bg-[#03110B] px-2.5 py-1 rounded border border-[#B0966D]/25">Garden Sit-out</span>
@@ -996,10 +996,10 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
             <div class="pt-4 border-t border-[#FAF7F2]/10 flex flex-col gap-3">
               <div class="flex items-center justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
+                  <span class="text-[10px] font-sans text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
                   <span class="font-sans text-base sm:text-lg font-bold text-white">Best Direct Rate Guaranteed</span>
                 </div>
-                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
+                <span class="text-[10px] font-sans text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
                   Zero Platform Fees
                 </span>
               </div>
@@ -1009,7 +1009,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track-fn="trackBookingConversion" data-track-args='["begin_checkout","booking","room_card_bookingjini",{"conversion_type":"bookingjini"}]'
-                  class="bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
+                  class="bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-bold font-sans text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
                 >
                   <span>Book Online</span>
                   <svg class="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -1019,7 +1019,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","room_family_whatsapp",{"room":"Family Twin Orchard Room","hotel":"Whispering Pines Mukteshwar","value":3999,"currency":"INR"}]'
-                  class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
+                  class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-sans text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
                 >
                   <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                   <span>WhatsApp</span>
@@ -1038,17 +1038,17 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"
             />
-            <div class="absolute top-3 left-3 bg-[#03110B]/90 backdrop-blur-md border border-emerald-400/50 text-emerald-300 font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full flex items-center gap-1.5">
+            <div class="absolute top-3 left-3 bg-[#03110B]/90 backdrop-blur-md border border-emerald-400/50 text-emerald-300 font-sans text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
               Casa De Bello Resort- Kainchi Dham (15 Mins to Ashram)
             </div>
-            <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-mono text-xs font-bold px-2.5 py-0.5 rounded">
+            <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-sans text-xs font-bold px-2.5 py-0.5 rounded">
               Sleeps 2 to 3
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
             <div>
-              <span class="text-[10px] font-mono text-[#C4A77D] uppercase tracking-widest font-bold block mb-1">Kehelkwira, Bhowali • 9 km (15 Mins) to Neem Karoli Baba Ashram</span>
+              <span class="text-[10px] font-sans text-[#C4A77D] uppercase tracking-[0.1em] font-bold block mb-1">Kehelkwira, Bhowali • 9 km (15 Mins) to Neem Karoli Baba Ashram</span>
               <h3 class="font-display text-2xl font-semibold text-white mb-2">Super Deluxe Valley Room</h3>
               <p class="text-xs text-[#FAF7F2]/75 leading-relaxed mb-4">
                 Quiet pine-valley cottage located in Kehelkwira, Bhowali. Features a private valley-facing balcony, plush king bed, Smart TV, 24/7 geyser hot water, and high-speed Wi-Fi. The ideal stay for Neem Karoli Baba Ashram devotees and lake circuit tours.
@@ -1062,10 +1062,10 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
             <div class="pt-4 border-t border-[#FAF7F2]/10 flex flex-col gap-3">
               <div class="flex items-center justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
+                  <span class="text-[10px] font-sans text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
                   <span class="font-sans text-base sm:text-lg font-bold text-white">Best Direct Rate Guaranteed</span>
                 </div>
-                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
+                <span class="text-[10px] font-sans text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
                   Zero Platform Fees
                 </span>
               </div>
@@ -1075,7 +1075,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track-fn="trackBookingConversion" data-track-args='["begin_checkout","booking","room_card_bookingjini",{"conversion_type":"bookingjini"}]'
-                  class="bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
+                  class="bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-bold font-sans text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
                 >
                   <span>Book Online</span>
                   <svg class="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -1085,7 +1085,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","room_kainchi_whatsapp",{"room":"Super Deluxe Valley Room","hotel":"Casa De Bello Kainchi Dham","value":2799,"currency":"INR"}]'
-                  class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
+                  class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-sans text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
                 >
                   <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                   <span>WhatsApp</span>
@@ -1104,17 +1104,17 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"
             />
-            <div class="absolute top-3 left-3 bg-[#03110B]/90 backdrop-blur-md border border-amber-400/50 text-amber-300 font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full flex items-center gap-1.5">
+            <div class="absolute top-3 left-3 bg-[#03110B]/90 backdrop-blur-md border border-amber-400/50 text-amber-300 font-sans text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
               Anurra Hotel- Kaincho Dham (3.3 km to Ashram)
             </div>
-            <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-mono text-xs font-bold px-2.5 py-0.5 rounded">
+            <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-sans text-xs font-bold px-2.5 py-0.5 rounded">
               Sleeps 2 to 3
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
             <div>
-              <span class="text-[10px] font-mono text-[#C4A77D] uppercase tracking-widest font-bold block mb-1">Niglat Malla, Kainchi Dham • 3.3 km to Ashram</span>
+              <span class="text-[10px] font-sans text-[#C4A77D] uppercase tracking-[0.1em] font-bold block mb-1">Niglat Malla, Kainchi Dham • 3.3 km to Ashram</span>
               <h3 class="font-display text-2xl font-semibold text-white mb-2">Deluxe Hill View Room with Balcony</h3>
               <p class="text-xs text-[#FAF7F2]/75 leading-relaxed mb-4">
                 Tranquil hill-facing sanctuary with private balcony and river-valley breezes. Features plush king bed, dedicated workspace, 24/7 hot water geyser, and ultra-fast 250+ Mbps Wi-Fi for pilgrim convenience.
@@ -1128,10 +1128,10 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
             <div class="pt-4 border-t border-[#FAF7F2]/10 flex flex-col gap-3">
               <div class="flex items-center justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
+                  <span class="text-[10px] font-sans text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
                   <span class="font-sans text-base sm:text-lg font-bold text-white">Best Direct Rate Guaranteed</span>
                 </div>
-                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
+                <span class="text-[10px] font-sans text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
                   Zero Platform Fees
                 </span>
               </div>
@@ -1141,7 +1141,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track-fn="trackBookingConversion" data-track-args='["begin_checkout","booking","room_card_bookingjini",{"conversion_type":"bookingjini"}]'
-                  class="bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
+                  class="bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-bold font-sans text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
                 >
                   <span>Book Online</span>
                   <svg class="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -1151,7 +1151,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","room_anurra_deluxe_whatsapp",{"room":"Deluxe Hill View Room","hotel":"Anurra Hotel Kainchi Dham","value":3199,"currency":"INR"}]'
-                  class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
+                  class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-sans text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
                 >
                   <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                   <span>WhatsApp</span>
@@ -1170,22 +1170,22 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"
             />
-            <div class="absolute top-3 left-3 bg-[#03110B]/90 backdrop-blur-md border border-amber-400/50 text-amber-300 font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full flex items-center gap-1.5">
+            <div class="absolute top-3 left-3 bg-[#03110B]/90 backdrop-blur-md border border-amber-400/50 text-amber-300 font-sans text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
               Anurra Hotel- Kaincho Dham (3.3 km to Ashram)
             </div>
-            <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-mono text-xs font-bold px-2.5 py-0.5 rounded">
+            <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-sans text-xs font-bold px-2.5 py-0.5 rounded">
               Sleeps 3 to 4
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
             <div>
-              <span class="text-[10px] font-mono text-[#C4A77D] uppercase tracking-widest font-bold block mb-1">Niglat Malla, Kainchi Dham • Family Pilgrim Suite</span>
+              <span class="text-[10px] font-sans text-[#C4A77D] uppercase tracking-[0.1em] font-bold block mb-1">Niglat Malla, Kainchi Dham • Family Pilgrim Suite</span>
               <h3 class="font-display text-2xl font-semibold text-white mb-2">Grand Valley Family Room</h3>
               <p class="text-xs text-[#FAF7F2]/75 leading-relaxed mb-4">
                 Generously proportioned family setup designed for devotee families visiting Kainchi Dham Ashram. Features multiple plush bedding options, mountain balcony, 100% pure veg room service, and hot water.
               </p>
-              <div class="flex flex-wrap gap-2 text-[11px] font-mono text-[#C4A77D] mb-6">
+              <div class="flex flex-wrap gap-2 text-[11px] font-sans text-[#C4A77D] mb-6">
                 <span class="bg-[#03110B] px-2.5 py-1 rounded border border-[#B0966D]/25">Pure Veg Dining</span>
                 <span class="bg-[#03110B] px-2.5 py-1 rounded border border-[#B0966D]/25">Valley Balcony</span>
                 <span class="bg-[#03110B] px-2.5 py-1 rounded border border-[#B0966D]/25">Family Bedding</span>
@@ -1194,10 +1194,10 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
             <div class="pt-4 border-t border-[#FAF7F2]/10 flex flex-col gap-3">
               <div class="flex items-center justify-between">
                 <div>
-                  <span class="text-[10px] font-mono text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
+                  <span class="text-[10px] font-sans text-[#FAF7F2]/60 uppercase block">Direct Resident Privilege</span>
                   <span class="font-sans text-base sm:text-lg font-bold text-white">Best Direct Rate Guaranteed</span>
                 </div>
-                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
+                <span class="text-[10px] font-sans text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-md">
                   Zero Platform Fees
                 </span>
               </div>
@@ -1207,7 +1207,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track-fn="trackBookingConversion" data-track-args='["begin_checkout","booking","room_card_bookingjini",{"conversion_type":"bookingjini"}]'
-                  class="bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
+                  class="bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-bold font-sans text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
                 >
                   <span>Book Online</span>
                   <svg class="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -1217,7 +1217,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","room_anurra_family_whatsapp",{"room":"Grand Valley Family Room","hotel":"Anurra Hotel Kainchi Dham","value":3999,"currency":"INR"}]'
-                  class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-mono text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
+                  class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-sans text-[11px] uppercase tracking-wider py-2.5 px-3 rounded-md shadow-md transition-all flex items-center justify-center gap-1 text-center"
                 >
                   <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                   <span>WhatsApp</span>
@@ -1239,7 +1239,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-mono font-bold tracking-[0.25em] text-[#C4A77D] uppercase block mb-3">
+        <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#C4A77D] uppercase block mb-3">
           Transparent Price Architecture
         </span>
         <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight">
@@ -1257,9 +1257,9 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           <table class="w-full text-left text-sm font-sans">
             <thead>
               <tr class="border-b border-[#FAF7F2]/15 bg-[#020B07]">
-                <th class="p-5 font-mono text-xs uppercase tracking-wider text-[#FAF7F2]/60 w-1/3">Privilege / Service</th>
-                <th class="p-5 font-mono text-xs uppercase tracking-wider text-red-300/80 w-1/3">Booking on OTAs (MMT / Agoda)</th>
-                <th class="p-5 font-mono text-xs uppercase tracking-wider text-[#C4A77D] bg-[#07261B] w-1/3">Whispering Pines Direct Sanctuary</th>
+                <th class="p-5 font-sans text-xs uppercase tracking-wider text-[#FAF7F2]/60 w-1/3">Privilege / Service</th>
+                <th class="p-5 font-sans text-xs uppercase tracking-wider text-red-300/80 w-1/3">Booking on OTAs (MMT / Agoda)</th>
+                <th class="p-5 font-sans text-xs uppercase tracking-wider text-[#C4A77D] bg-[#07261B] w-1/3">Whispering Pines Direct Sanctuary</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-[#FAF7F2]/10">
@@ -1305,7 +1305,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           target="_blank"
           rel="noopener noreferrer"
           data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","ota_matrix_whatsapp",{"conversion_type":"whatsapp","value":3500,"currency":"INR"}]'
-          class="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-mono font-bold text-xs uppercase tracking-[0.18em] py-4 px-8 rounded-lg shadow-[0_8px_30px_rgba(37,211,102,0.4)] transition-all active:scale-[0.98] ring-2 ring-white/20"
+          class="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-sans font-bold text-xs uppercase tracking-[0.1em] py-4 px-8 rounded-lg shadow-[0_8px_30px_rgba(37,211,102,0.4)] transition-all active:scale-[0.98] ring-2 ring-white/20"
         >
           <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
@@ -1327,7 +1327,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <!-- Text & Route Matrix - Left -->
         <div class="lg:col-span-7 space-y-6">
-          <span class="text-xs font-mono font-bold tracking-[0.25em] text-[#7A6038] uppercase block">
+          <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#7A6038] uppercase block">
             Highway Connected • Zero Off-Roading
           </span>
           <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#03110B] leading-tight text-balance">
@@ -1341,25 +1341,25 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           <!-- Transit Breakdown List -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
             <div class="border border-[#151E1A]/10 bg-white p-5 rounded-xl shadow-sm">
-              <span class="font-mono text-xs text-[#7A6038] uppercase font-bold block mb-1">From Nainital</span>
+              <span class="font-sans text-xs text-[#7A6038] uppercase font-bold block mb-1">From Nainital</span>
               <strong class="text-lg text-[#03110B] block">45 Minutes (26 km)</strong>
               <span class="text-xs text-[#44564E]">Smooth scenic drive via Bhowali fruit market</span>
             </div>
 
             <div class="border border-[#151E1A]/10 bg-white p-5 rounded-xl shadow-sm">
-              <span class="font-mono text-xs text-[#7A6038] uppercase font-bold block mb-1">From Kainchi Dham</span>
+              <span class="font-sans text-xs text-[#7A6038] uppercase font-bold block mb-1">From Kainchi Dham</span>
               <strong class="text-lg text-[#03110B] block">45 Minutes (22 km)</strong>
               <span class="text-xs text-[#44564E]">Neem Karoli Baba Ashram pilgrimage corridor</span>
             </div>
 
             <div class="border border-[#151E1A]/10 bg-white p-5 rounded-xl shadow-sm">
-              <span class="font-mono text-xs text-[#7A6038] uppercase font-bold block mb-1">From Kathgodam (KGM)</span>
+              <span class="font-sans text-xs text-[#7A6038] uppercase font-bold block mb-1">From Kathgodam (KGM)</span>
               <strong class="text-lg text-[#03110B] block">1 hr 30 mins (43 km)</strong>
               <span class="text-xs text-[#44564E]">Nearest railway station (prepaid cabs available)</span>
             </div>
 
             <div class="border border-[#151E1A]/10 bg-white p-5 rounded-xl shadow-sm">
-              <span class="font-mono text-xs text-[#7A6038] uppercase font-bold block mb-1">From Mukteshwar Dham</span>
+              <span class="font-sans text-xs text-[#7A6038] uppercase font-bold block mb-1">From Mukteshwar Dham</span>
               <strong class="text-lg text-[#03110B] block">45–50 Minutes (25 km)</strong>
               <span class="text-xs text-[#44564E]">Chauli Ki Jali & ancient Shiva temple</span>
             </div>
@@ -1380,7 +1380,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               loading="lazy"
             />
             <div class="p-2">
-              <span class="text-[10px] font-mono text-[#7A6038] uppercase tracking-wider font-bold">Paved Highway Frontage</span>
+              <span class="text-[10px] font-sans text-[#7A6038] uppercase tracking-wider font-bold">Paved Highway Frontage</span>
               <h3 class="font-display text-lg font-semibold text-[#03110B]">Private Level Drive-In</h3>
               <p class="text-xs text-[#44564E] mt-1">Gated security and level parking right outside your room. No carrying heavy luggage down steep mountain stairways.</p>
             </div>
@@ -1394,7 +1394,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               loading="lazy"
             />
             <div class="p-2">
-              <span class="text-[10px] font-mono text-[#7A6038] uppercase tracking-wider font-bold">Pahadi Flavours</span>
+              <span class="text-[10px] font-sans text-[#7A6038] uppercase tracking-wider font-bold">Pahadi Flavours</span>
               <h3 class="font-display text-lg font-semibold text-[#03110B]">Cooked Fresh to Order</h3>
               <p class="text-xs text-[#44564E] mt-1">Enjoy piping hot Kumaoni dal, pahadi aloo ke gutke, fresh tawa rotis, and pure Himalayan honey.</p>
             </div>
@@ -1412,7 +1412,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="text-xs font-mono font-bold tracking-[0.25em] text-[#C4A77D] uppercase block mb-3">
+        <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#C4A77D] uppercase block mb-3">
           Direct Concierge Reservation
         </span>
         <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white leading-tight">
@@ -1460,7 +1460,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           <!-- Dates Grid -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label for="calc-checkin" class="block font-mono text-xs uppercase tracking-wider text-[#FAF7F2]/70 mb-2">
+              <label for="calc-checkin" class="block font-sans text-xs uppercase tracking-wider text-[#FAF7F2]/70 mb-2">
                 Check-In Date
               </label>
               <input
@@ -1471,7 +1471,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               />
             </div>
             <div>
-              <label for="calc-checkout" class="block font-mono text-xs uppercase tracking-wider text-[#FAF7F2]/70 mb-2">
+              <label for="calc-checkout" class="block font-sans text-xs uppercase tracking-wider text-[#FAF7F2]/70 mb-2">
                 Check-Out Date
               </label>
               <input
@@ -1485,7 +1485,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
 
           <!-- Guests Selector -->
           <div>
-            <label for="calc-guests" class="block font-mono text-xs uppercase tracking-wider text-[#FAF7F2]/70 mb-2">
+            <label for="calc-guests" class="block font-sans text-xs uppercase tracking-wider text-[#FAF7F2]/70 mb-2">
               Number of Guests &amp; Children
             </label>
             <select
@@ -1503,21 +1503,21 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           <!-- Selected Property & Direct Privilege Display (Clean & Un-complex) -->
           <div class="p-6 bg-[#020B07] border border-[#B0966D]/30 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <span class="text-[10px] font-mono text-[#C4A77D] uppercase tracking-widest font-semibold block">Selected Hotel &amp; Residence</span>
+              <span class="text-[10px] font-sans text-[#C4A77D] uppercase tracking-[0.1em] font-semibold block">Selected Hotel &amp; Residence</span>
               <div class="flex flex-col gap-1 mt-1">
-                <span id="calc-display-hotel" class="text-xs sm:text-sm font-mono text-emerald-400 font-bold">Mukteshwar: Whispering Pines Resort By Casa De Bello</span>
+                <span id="calc-display-hotel" class="text-xs sm:text-sm font-sans text-emerald-400 font-bold">Mukteshwar: Whispering Pines Resort By Casa De Bello</span>
                 <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
                   <span id="calc-display-room" class="text-xl sm:text-2xl font-bold text-[#FAF7F2]">Deluxe Skylight Mountain Suite</span>
                   <span id="calc-display-nights" class="text-xs text-[#FAF7F2]/70 font-mono">1 night stay</span>
                 </div>
               </div>
-              <span class="text-xs text-emerald-400 font-mono mt-1.5 flex items-center gap-1.5">
+              <span class="text-xs text-emerald-400 font-sans mt-1.5 flex items-center gap-1.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
                 Direct Resident Privilege: Guaranteed best direct tariff &amp; priority room allocation
               </span>
             </div>
 
-            <div class="text-left sm:text-right text-xs font-mono text-[#FAF7F2]/70 shrink-0">
+            <div class="text-left sm:text-right text-xs font-sans text-[#FAF7F2]/70 shrink-0">
               <span class="block text-[#C4A77D] font-bold">Zero Platform Fees</span>
               <span>Reserve dates directly via WhatsApp</span>
             </div>
@@ -1558,7 +1558,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               <a
                 href={`tel:${RESORT_PHONE_TEL}`}
                 data-track-fn="trackBookingConversion" data-track-args='["phone_call_click","engagement","calculator_phone_call",{"conversion_type":"phone","phone_number":"7505029696"}]'
-                class="inline-flex items-center gap-1.5 text-xs font-mono text-[#FAF7F2]/75 hover:text-[#7A6038] transition-colors"
+                class="inline-flex items-center gap-1.5 text-xs font-sans text-[#FAF7F2]/75 hover:text-[#7A6038] transition-colors"
               >
                 <svg class="w-3.5 h-3.5 text-[#7A6038]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -1568,7 +1568,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
             </div>
           </div>
 
-          <div class="text-center text-[11px] text-[#FAF7F2]/65 font-mono pt-2">
+          <div class="text-center text-[11px] text-[#FAF7F2]/65 font-sans pt-2">
             ⚡ Front desk replies in under 5 minutes on WhatsApp with room walkthrough videos & verified payment QR.
           </div>
 
@@ -1585,7 +1585,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="text-xs font-mono font-bold tracking-[0.25em] text-[#7A6038] uppercase block mb-2">
+        <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#7A6038] uppercase block mb-2">
           Frequently Answered Inquiries
         </span>
         <h2 class="font-display text-3xl font-semibold text-[#03110B]">
@@ -1663,7 +1663,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
       target="_blank"
       rel="noopener noreferrer"
       data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","mobile_sticky_whatsapp",{"conversion_type":"whatsapp"}]'
-      class="flex-1 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-mono text-[11px] font-bold uppercase tracking-wider py-3.5 px-2 rounded-lg text-center flex items-center justify-center gap-1.5 shadow-[0_4px_16px_rgba(37,211,102,0.4)] active:scale-95 transition-all ring-2 ring-white/25 relative overflow-hidden"
+      class="flex-1 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-sans text-[11px] font-bold uppercase tracking-wider py-3.5 px-2 rounded-lg text-center flex items-center justify-center gap-1.5 shadow-[0_4px_16px_rgba(37,211,102,0.4)] active:scale-95 transition-all ring-2 ring-white/25 relative overflow-hidden"
     >
       <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
@@ -1677,7 +1677,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
       target="_blank"
       rel="noopener noreferrer"
       data-track-fn="trackBookingConversion" data-track-args='["begin_checkout","booking","mobile_sticky_bookingjini",{"conversion_type":"bookingjini"}]'
-      class="bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-mono text-[11px] font-bold uppercase tracking-wider py-3.5 px-3 rounded-lg text-center flex items-center justify-center gap-1 shadow-md active:scale-95 transition-all shrink-0"
+      class="bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-sans text-[11px] font-bold uppercase tracking-wider py-3.5 px-3 rounded-lg text-center flex items-center justify-center gap-1 shadow-md active:scale-95 transition-all shrink-0"
     >
       <span>Book Online</span>
       <svg class="w-3.5 h-3.5 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -1712,7 +1712,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
 
       <!-- Text Details -->
       <div class="flex flex-col text-left pr-1.5">
-        <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-[#03110B] bg-white/90 px-1.5 py-0.5 rounded w-fit mb-0.5">
+        <span class="text-[10px] font-sans font-bold uppercase tracking-[0.1em] text-[#03110B] bg-white/90 px-1.5 py-0.5 rounded w-fit mb-0.5">
           Save 25% Direct
         </span>
         <span class="text-xs font-sans font-bold text-white flex items-center gap-1">

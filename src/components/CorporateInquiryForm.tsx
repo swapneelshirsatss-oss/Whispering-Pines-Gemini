@@ -119,7 +119,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
             </div>
 
             <div className="space-y-3 max-w-lg mx-auto">
-              <span className="font-mono text-xs text-[#B0966D] uppercase tracking-[0.2em] font-semibold block">
+              <span className="font-sans text-xs text-[#B0966D] uppercase tracking-[0.2em] font-semibold block">
                 Corporate Inquiry Received · Dedicated Account Desk
               </span>
               <h3 className="font-display text-2xl sm:text-3xl font-medium text-[#0E2C21]">
@@ -134,7 +134,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
             <div className="bg-[#FAF9F6] border border-[#8A6F4A]/30 rounded-xl p-5 max-w-md mx-auto text-left flex items-start gap-3.5">
               <ShieldCheck className="w-5 h-5 text-[#7A6038] shrink-0 mt-0.5" />
               <div>
-                <span className="font-mono text-[11px] uppercase tracking-wider text-[#0E2C21] font-bold block mb-1">
+                <span className="font-sans text-[11px] uppercase tracking-wider text-[#0E2C21] font-bold block mb-1">
                   B2B Corporate Guarantees
                 </span>
                 <p className="text-xs text-[#2C3531]/75 leading-relaxed">
@@ -150,14 +150,14 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                 href={`https://wa.me/917505029696?text=${encodeURIComponent(constructWhatsAppMessage(formData))}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-mono text-xs uppercase tracking-wider font-semibold transition-all shadow-sm"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-sans text-xs uppercase tracking-wider font-semibold transition-all shadow-sm"
               >
                 <span>Continue on WhatsApp</span>
               </a>
               <button
                 type="button"
                 onClick={() => setSubmitted(false)}
-                className="w-full sm:w-auto px-6 py-3 rounded-full border border-[#0E2C21]/20 hover:border-[#0E2C21] font-mono text-xs uppercase tracking-wider text-[#0E2C21] transition-colors"
+                className="w-full sm:w-auto px-6 py-3 rounded-full border border-[#0E2C21]/20 hover:border-[#0E2C21] font-sans text-xs uppercase tracking-wider text-[#0E2C21] transition-colors"
               >
                 Modify Proposal Request
               </button>
@@ -168,7 +168,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
               {/* Company Name */}
               <div className="space-y-2">
-                <label className="block text-xs font-mono uppercase tracking-wider text-[#0E2C21] font-semibold">
+                <label className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                   Company / Organization Name <span className="text-[#C27847]">*</span>
                 </label>
                 <div className="relative">
@@ -189,7 +189,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
 
               {/* Organizer Full Name */}
               <div className="space-y-2">
-                <label className="block text-xs font-mono uppercase tracking-wider text-[#0E2C21] font-semibold">
+                <label className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                   Organizer Full Name <span className="text-[#C27847]">*</span>
                 </label>
                 <div className="relative">
@@ -210,7 +210,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
 
               {/* Work Email */}
               <div className="space-y-2">
-                <label className="block text-xs font-mono uppercase tracking-wider text-[#0E2C21] font-semibold">
+                <label className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                   Work Email <span className="text-[#C27847]">*</span>
                 </label>
                 <div className="relative">
@@ -231,7 +231,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
 
               {/* Mobile / WhatsApp Number */}
               <div className="space-y-2">
-                <label className="block text-xs font-mono uppercase tracking-wider text-[#0E2C21] font-semibold">
+                <label className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                   Mobile / WhatsApp Number <span className="text-[#C27847]">*</span>
                 </label>
                 <div className="relative">
@@ -252,7 +252,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
 
               {/* Preferred Dates */}
               <div className="space-y-2">
-                <label className="block text-xs font-mono uppercase tracking-wider text-[#0E2C21] font-semibold">
+                <label className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                   Preferred Dates (Tentative) <span className="text-[#C27847]">*</span>
                 </label>
                 <div className="relative">
@@ -272,7 +272,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
 
               {/* Estimated Delegate Count */}
               <div className="space-y-2">
-                <label className="block text-xs font-mono uppercase tracking-wider text-[#0E2C21] font-semibold">
+                <label className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                   Estimated Delegate Count <span className="text-[#C27847]">*</span>
                 </label>
                 <div className="relative">
@@ -295,7 +295,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
 
             {/* Event Requirements (Checkboxes) */}
             <div className="space-y-3">
-              <label className="block text-xs font-mono uppercase tracking-wider text-[#0E2C21] font-semibold">
+              <label className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                 Event Requirements (Select all that apply)
               </label>
               <div className="flex flex-wrap gap-2.5 sm:gap-3">
@@ -326,7 +326,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
 
             {/* Additional Notes */}
             <div className="space-y-2">
-              <label className="block text-xs font-mono uppercase tracking-wider text-[#0E2C21] font-semibold">
+              <label className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                 Specific Itinerary or AV Needs (Optional)
               </label>
               <textarea
@@ -344,7 +344,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full sm:flex-1 py-4 px-8 rounded-full bg-[#0E2C21] hover:bg-[#193F30] text-[#FAF9F6] font-mono text-xs uppercase tracking-[0.16em] font-semibold transition-all duration-300 shadow-luxury-sm hover:shadow-luxury-md flex items-center justify-center gap-3 cursor-pointer disabled:opacity-70"
+                className="w-full sm:flex-1 py-4 px-8 rounded-full bg-[#0E2C21] hover:bg-[#193F30] text-[#FAF9F6] font-sans text-xs uppercase tracking-[0.1em] font-semibold transition-all duration-300 shadow-luxury-sm hover:shadow-luxury-md flex items-center justify-center gap-3 cursor-pointer disabled:opacity-70"
               >
                 {isSubmitting ? (
                   <span>Generating Proposal...</span>
@@ -360,7 +360,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                 href={`https://wa.me/917505029696?text=${encodeURIComponent(constructWhatsAppMessage(formData))}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-[#FAF9F6] hover:bg-[#FAF9F6]/80 text-[#0E2C21] border border-[#0E2C21]/20 font-mono text-xs uppercase tracking-wider font-semibold transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-[#FAF9F6] hover:bg-[#FAF9F6]/80 text-[#0E2C21] border border-[#0E2C21]/20 font-sans text-xs uppercase tracking-wider font-semibold transition-all"
               >
                 <span>Instant WhatsApp Desk</span>
               </a>
