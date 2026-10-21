@@ -36,7 +36,7 @@ export default function WeddingInquiryForm() {
 • Email: ${data.email || "Not provided"}
 • Tentative Wedding Date: ${data.weddingDate || "To be decided"}
 • Estimated Guests: ${data.guestCount}
-• Special Requirements: ${data.message || "Please share availability, buyout packages, and bespoke culinary options."}
+• Special Requirements: ${data.message || "Please share availability, buyout packages, and custom culinary options."}
 
 I look forward to discussing the bridal villa allocation and customized wedding proposal.`;
   };

@@ -306,7 +306,7 @@ export default function Navbar({ children }: NavbarProps) {
           {/* Quick Persona Chips */}
           <div className="pt-3 pb-1 border-t border-[#FAF9F6]/10">
             <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#c9a832] block px-4 mb-2 font-semibold">
-              Curated Stays &amp; Celebrations
+              Stays &amp; Celebrations
             </span>
             <div className="grid grid-cols-2 gap-2 px-4 text-xs font-mono">
               <a

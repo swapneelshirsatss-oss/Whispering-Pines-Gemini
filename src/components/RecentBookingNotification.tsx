@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { X, Sparkles, ArrowUpRight } from "lucide-react";
+import { X, ArrowUpRight } from "lucide-react";
 import { trackAdsConversion } from "../utils/analytics";
 
 /**
@@ -12,7 +12,7 @@ import { trackAdsConversion } from "../utils/analytics";
 const OFFER_DISCOUNT = "25%";
 
 const WHATSAPP_MESSAGE =
-  `Hi Whispering Pines Resort! I'd like to book a stay and claim today's ${OFFER_DISCOUNT} direct booking discount. Please share availability.`;
+  `Hi Whispering Pines Resort! I'd like to book a stay at the ${OFFER_DISCOUNT} direct rate. Please share availability.`;
 
 const WHATSAPP_LINK = `https://wa.me/917505029696?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
@@ -58,15 +58,14 @@ export default function RecentBookingNotification() {
       </button>
 
       <span className="inline-flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider font-semibold text-[#1B3322] bg-[#c9a832] px-2 py-0.5 rounded-sm">
-        <Sparkles className="w-2.5 h-2.5" />
-        Today Only
+        Direct Rate
       </span>
 
       <p className="mt-2.5 font-display text-lg font-bold leading-snug pr-4">
-        Book Now &amp; Get {OFFER_DISCOUNT} Off
+        {OFFER_DISCOUNT} Below OTA Rates
       </p>
       <p className="mt-1 text-[11px] text-[#FAF9F6]/75 leading-relaxed">
-        Book direct with the resort to claim your discount.
+        Same dates, same rooms — booked through us instead of a travel portal.
       </p>
 
       <div className="mt-3.5 flex flex-col gap-2">
