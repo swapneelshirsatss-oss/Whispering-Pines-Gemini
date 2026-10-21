@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import AmenitiesList from "../components/AmenitiesList.astro";
 import SEOAmenitiesContent from "../components/SEOAmenitiesContent.astro";
-import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
 ---
 
@@ -18,8 +17,6 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
       <AmenitiesList hideLink={true} asH1={true} title="Resort Amenities & Property Highlights" />
       <SEOAmenitiesContent />
     </main>
-
-    <WhatsAppButton client:idle />
     <RecentBookingNotification client:idle />
   </div>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({

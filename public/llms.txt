@@ -35,7 +35,7 @@ This document is the verified, canonical ground truth for Whispering Pines Resor
 - **Primary Telephone**: 075050 29696 (Display: `075050 29696`, International: `+91 75050 29696`, Click-to-call: `tel:+917505029696`)
 - **Official WhatsApp**: https://wa.me/917505029696 (`+91 75050 29696`)
 - **Official Website**: https://whisperingpinesresort.in/
-- **Official Direct Booking Engine**: https://casadebello-book.whisperingpinesresort.in/ (BookingJini Engine: https://whisperingpinesresort.bookingjini.in/)
+- **Official Direct Booking Engine**: https://casadebello-book.whisperingpinesresort.in/
 - **Google Maps Profile (CID Link)**: https://maps.google.com/?cid=8386667112972057918
 - **Google Travel Listing**: https://www.google.com/travel/hotels/entity/ChgIvvqZseCp27F0GgwvZy8xaGR6ejNrcDcQAQ
 - **TripAdvisor Listing**: https://www.tripadvisor.in/Hotel_Review-g1049689-d34470070-Reviews-Whispering_Pines_Resort_Mukteshwar-Ramgarh_Nainital_District_Uttarakhand.html

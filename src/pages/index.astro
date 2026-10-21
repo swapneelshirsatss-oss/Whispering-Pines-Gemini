@@ -17,7 +17,6 @@ import TestimonialList from "../components/TestimonialList";
 import BlogCarousel from "../components/BlogCarousel";
 import { BLOG_CARDS } from "../data/blogPosts";
 import FAQAccordion from "../components/FAQAccordion";
-import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
 
 import { getImage } from "astro:assets";
@@ -94,8 +93,6 @@ const roomImages = {
       <FAQAccordion client:visible />
     </main>
 
-    {/* Floating WhatsApp Button */}
-    <WhatsAppButton client:idle />
 
     {/* Social Proof Popup */}
     <RecentBookingNotification client:idle />

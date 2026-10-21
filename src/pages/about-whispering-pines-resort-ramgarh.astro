@@ -4,7 +4,6 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
 import AboutSection from "../components/AboutSection.astro";
 import HostFieldNote from "../components/HostFieldNote.astro";
 import SEOAboutContent from "../components/SEOAboutContent.astro";
-import WhatsAppButton from "../components/WhatsAppButton";
 import RecentBookingNotification from "../components/RecentBookingNotification";
 
 import balconyViewImg from "../assets/images/Whispering-pines-balcony-view-nanital.avif?url";
@@ -31,8 +30,6 @@ const villaUrl = new URL(villaImg, siteBase).href;
       <HostFieldNote className="my-8" />
       <SEOAboutContent />
     </main>
-    
-    <WhatsAppButton client:idle />
     <RecentBookingNotification client:idle />
   </div>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({
