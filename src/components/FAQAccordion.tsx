@@ -37,7 +37,7 @@ export default function FAQAccordion({
           <span className="text-xs font-mono tracking-widest text-[#7A6038] uppercase block mb-2 font-semibold">
             Answering Your Questions
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1B3322]">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#0E2C21]">
             {title}
           </h2>
           <div className="w-16 h-[2px] bg-[#B0966D] mx-auto mt-4 mb-6" />
@@ -57,8 +57,8 @@ export default function FAQAccordion({
               }}
               className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-300 ${
                 activeCategory === "all"
-                  ? "bg-[#1B3322] text-[#FAF9F6] shadow-sm font-bold"
-                  : "bg-white text-[#2C3531]/75 border border-[#2C3531]/15 hover:border-[#1B3322] hover:text-[#1B3322]"
+                  ? "bg-[#0E2C21] text-[#FAF9F6] shadow-sm font-bold"
+                  : "bg-white text-[#2C3531]/75 border border-[#2C3531]/15 hover:border-[#0E2C21] hover:text-[#0E2C21]"
               }`}
             >
               All Questions ({faqs.length})
@@ -73,8 +73,8 @@ export default function FAQAccordion({
                 }}
                 className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-300 ${
                   activeCategory === cat
-                    ? "bg-[#1B3322] text-[#FAF9F6] shadow-sm font-bold"
-                    : "bg-white text-[#2C3531]/75 border border-[#2C3531]/15 hover:border-[#1B3322] hover:text-[#1B3322]"
+                    ? "bg-[#0E2C21] text-[#FAF9F6] shadow-sm font-bold"
+                    : "bg-white text-[#2C3531]/75 border border-[#2C3531]/15 hover:border-[#0E2C21] hover:text-[#0E2C21]"
                 }`}
               >
                 {cat}
@@ -96,10 +96,10 @@ export default function FAQAccordion({
                 <button
                   type="button"
                   onClick={() => toggleFAQ(idx)}
-                  className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-sans focus:outline-none focus:bg-[#1B3322]/5"
+                  className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-sans focus:outline-none focus:bg-[#0E2C21]/5"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-display font-bold text-[#1B3322] text-base sm:text-lg flex items-center">
+                  <span className="font-display font-bold text-[#0E2C21] text-base sm:text-lg flex items-center">
                     <HelpCircle className="w-5 h-5 text-[#B0966D] mr-3 shrink-0" />
                     <span>{faq.question}</span>
                   </span>

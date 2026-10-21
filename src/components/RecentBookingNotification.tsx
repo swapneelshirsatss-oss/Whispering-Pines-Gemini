@@ -46,7 +46,7 @@ export default function RecentBookingNotification() {
 
   return (
     <aside
-      className="fixed bottom-24 md:bottom-6 left-3 sm:left-6 z-40 w-[calc(100%-1.5rem)] max-w-xs bg-[#1B3322] text-[#FAF9F6] rounded-lg border border-[#B0966D]/40 shadow-luxury-lg p-4 pointer-events-auto animate-fade-in-up"
+      className="fixed bottom-24 md:bottom-6 left-3 sm:left-6 z-40 w-[calc(100%-1.5rem)] max-w-xs bg-[#0E2C21] text-[#FAF9F6] rounded-lg border border-[#B0966D]/40 shadow-luxury-lg p-4 pointer-events-auto animate-fade-in-up"
       aria-label="Direct booking offer"
     >
       <button
@@ -57,7 +57,7 @@ export default function RecentBookingNotification() {
         <X className="w-3.5 h-3.5" />
       </button>
 
-      <span className="inline-flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider font-semibold text-[#1B3322] bg-[#B0966D] px-2 py-0.5 rounded-sm">
+      <span className="inline-flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider font-semibold text-[#0E2C21] bg-[#B0966D] px-2 py-0.5 rounded-sm">
         Direct Rate
       </span>
 

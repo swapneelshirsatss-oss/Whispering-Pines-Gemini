@@ -117,7 +117,7 @@ export default function GalleryGrid() {
           <ImageIcon className="w-4 h-4 mr-2" />
           Visual Journey
         </span>
-        <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1B3322] mb-5">
+        <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0E2C21] mb-5">
           A Glimpse into Paradise
         </h1>
         <div className="w-20 h-[2px] bg-[#B0966D] mx-auto mb-5" />
@@ -139,14 +139,14 @@ export default function GalleryGrid() {
               }}
               className={`px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 flex items-center gap-2 shadow-sm ${
                 isActive
-                  ? "bg-[#1B3322] text-[#B0966D] ring-2 ring-[#B0966D]/50 shadow-md transform -translate-y-0.5"
-                  : "bg-white text-[#2C3531] hover:bg-[#1B3322]/10 hover:text-[#1B3322] border border-[#EAE8E3]"
+                  ? "bg-[#0E2C21] text-[#B0966D] ring-2 ring-[#B0966D]/50 shadow-md transform -translate-y-0.5"
+                  : "bg-white text-[#2C3531] hover:bg-[#0E2C21]/10 hover:text-[#0E2C21] border border-[#EAE8E3]"
               }`}
             >
               <span>{tab.label}</span>
               <span
                 className={`px-2 py-0.5 rounded-full text-[10px] font-mono font-semibold ${
-                  isActive ? "bg-[#B0966D] text-[#1B3322]" : "bg-gray-100 text-gray-600"
+                  isActive ? "bg-[#B0966D] text-[#0E2C21]" : "bg-gray-100 text-gray-600"
                 }`}
               >
                 {tab.count}
@@ -183,12 +183,12 @@ export default function GalleryGrid() {
             />
             {/* Category Tag Badge */}
             <div className="absolute top-3 left-3 z-10 opacity-90 group-hover:opacity-100 transition-opacity">
-              <span className="bg-[#1B3322]/85 text-[#B0966D] text-[10px] font-mono font-semibold px-2.5 py-1 rounded-sm backdrop-blur-sm shadow-md border border-[#B0966D]/30">
+              <span className="bg-[#0E2C21]/85 text-[#B0966D] text-[10px] font-mono font-semibold px-2.5 py-1 rounded-sm backdrop-blur-sm shadow-md border border-[#B0966D]/30">
                 {img.categoryLabel}
               </span>
             </div>
             {/* Hover Caption Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1B3322]/90 via-[#1B3322]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0E2C21]/90 via-[#0E2C21]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
               <span className="text-[#FAF9F6] font-display text-sm sm:text-base leading-snug drop-shadow-md mb-2">
                 {img.alt}
               </span>
@@ -242,7 +242,7 @@ export default function GalleryGrid() {
               className="max-h-[70vh] w-auto max-w-full object-contain rounded-lg shadow-2xl mb-4 border border-white/10"
             />
             <div className="text-center max-w-2xl space-y-2">
-              <span className="inline-block bg-[#B0966D] text-[#1B3322] text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+              <span className="inline-block bg-[#B0966D] text-[#0E2C21] text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full">
                 {filteredImages[lightboxIndex].categoryLabel} ({lightboxIndex + 1} of {filteredImages.length})
               </span>
               <p className="text-white font-display text-base sm:text-xl font-medium leading-relaxed drop-shadow-md">

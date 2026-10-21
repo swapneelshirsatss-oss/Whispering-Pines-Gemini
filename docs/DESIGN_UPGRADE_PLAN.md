@@ -105,8 +105,8 @@ Three principles, each falsifiable against the audit numbers above.
 
 | Token | Hex | Role |
 |---|---|---|
-| `pine` | `#1B3322` | Primary dark, headers, footers |
-| `pine-deep` | `#142619` | Dropdowns, over-dark layering |
+| `pine` | `#0E2C21` | Primary dark, headers, footers |
+| `pine-deep` | `#10261D` | Dropdowns, over-dark layering |
 | `cream` | `#FAF9F6` | Page ground |
 | `ink` | `#2C3531` | Body text |
 | `brass` | `#B0966D` | Accent on **dark** surfaces — 4.81:1 on pine |
@@ -114,6 +114,8 @@ Three principles, each falsifiable against the audit numbers above.
 | `brass-ink` | `#7A6038` | Accent text on **light** surfaces — 5.61:1 on cream |
 | `brass-line` | `#8A6F4A` | Decorative rules and borders only, never text |
 | `sand` | `#E6E0D6` | Hairlines, dividers |
+
+**Green revision (shipped).** The original pine `#1B3322` sat **74°** from the brass in OKLCH hue — the awkward middle, too far apart to read as harmony and too close to read as deliberate contrast, which is why the brass looked flat on it. The ground was also fairly grey (chroma 0.043). It was moved to hue 165° and deepened proportionally, giving `#0E2C21`: an **88°** gap, and brass contrast up from 4.81:1 to **5.30:1**. All 21 tones in the green family were shifted together, preserving each one's lightness and chroma, so no tone was left behind at the old hue. Google's brand greens and the WhatsApp green were excluded as fixed-meaning colours.
 
 Functional only, never decorative: `#25D366` WhatsApp, `#C27847` terracotta (call), one error red.
 

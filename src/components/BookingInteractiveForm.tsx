@@ -87,7 +87,7 @@ Please confirm availability and share direct booking privileges.`;
   };
 
   return (
-    <section id="book-form" className="py-20 lg:py-28 bg-[#1B3322]/5 relative">
+    <section id="book-form" className="py-20 lg:py-28 bg-[#0E2C21]/5 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
@@ -95,11 +95,11 @@ Please confirm availability and share direct booking privileges.`;
           <span className="text-xs font-mono tracking-widest text-[#B0966D] uppercase block mb-2 font-semibold">
             Direct Reservation Estimator
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-[#1B3322]">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-[#0E2C21]">
             {title}
           </h2>
           {features && (
-            <div className="mt-6 mb-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center justify-center max-w-3xl mx-auto border-y border-[#1B3322]/10 py-6">
+            <div className="mt-6 mb-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center justify-center max-w-3xl mx-auto border-y border-[#0E2C21]/10 py-6">
               {features.map((feat, idx) => (
                 <div key={idx} className="flex items-center justify-center text-xs text-[#2C3531]/80">
                   <span className="w-1.5 h-1.5 bg-[#B0966D] rounded-full mr-2.5 shrink-0" />
@@ -115,11 +115,11 @@ Please confirm availability and share direct booking privileges.`;
         </div>
 
         {/* Dynamic Booking Planner Box */}
-        <div className="bg-white rounded-lg overflow-hidden shadow-luxury-lg border border-[#1B3322]/10 grid grid-cols-1 lg:grid-cols-12 gap-0">
+        <div className="bg-white rounded-lg overflow-hidden shadow-luxury-lg border border-[#0E2C21]/10 grid grid-cols-1 lg:grid-cols-12 gap-0">
           
           {/* Interactive Inputs Form - Left */}
           <form className="p-6 sm:p-10 lg:col-span-7 space-y-6" onSubmit={(e) => e.preventDefault()}>
-            <h3 className="font-display text-xl font-bold text-[#1B3322] flex items-center">
+            <h3 className="font-display text-xl font-bold text-[#0E2C21] flex items-center">
               <Home className="w-5 h-5 text-[#7A6038] mr-2" />
               1. Customize Your Stay
             </h3>
@@ -134,7 +134,7 @@ Please confirm availability and share direct booking privileges.`;
                   id="room-select"
                   value={selectedRoomId}
                   onChange={(e) => setSelectedRoomId(e.target.value)}
-                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded py-3 pl-3.5 pr-8 text-[13px] font-medium text-[#1B3322] focus:outline-none transition-colors appearance-none cursor-pointer"
+                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded py-3 pl-3.5 pr-8 text-[13px] font-medium text-[#0E2C21] focus:outline-none transition-colors appearance-none cursor-pointer"
                 >
                   {FORM_ROOM_OPTIONS.map((room) => (
                     <option key={room.id} value={room.id}>
@@ -160,7 +160,7 @@ Please confirm availability and share direct booking privileges.`;
                   id="checkin-date"
                   value={checkIn}
                   onChange={(e) => setCheckIn(e.target.value)}
-                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded py-2.5 px-3 text-[13px] font-medium text-[#1B3322] focus:outline-none transition-colors cursor-pointer"
+                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded py-2.5 px-3 text-[13px] font-medium text-[#0E2C21] focus:outline-none transition-colors cursor-pointer"
                 />
               </div>
 
@@ -174,7 +174,7 @@ Please confirm availability and share direct booking privileges.`;
                   id="checkout-date"
                   value={checkOut}
                   onChange={(e) => setCheckOut(e.target.value)}
-                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded py-2.5 px-3 text-[13px] font-medium text-[#1B3322] focus:outline-none transition-colors cursor-pointer"
+                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded py-2.5 px-3 text-[13px] font-medium text-[#0E2C21] focus:outline-none transition-colors cursor-pointer"
                 />
               </div>
             </div>
@@ -190,7 +190,7 @@ Please confirm availability and share direct booking privileges.`;
                   id="guests-count"
                   value={guestsCount}
                   onChange={(e) => setGuestsCount(e.target.value)}
-                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded py-2.5 pl-3.5 pr-8 text-[13px] font-medium text-[#1B3322] focus:outline-none transition-colors appearance-none cursor-pointer"
+                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded py-2.5 pl-3.5 pr-8 text-[13px] font-medium text-[#0E2C21] focus:outline-none transition-colors appearance-none cursor-pointer"
                 >
                   <option value="1 Adult">1 Adult</option>
                   <option value="2 Adults">2 Adults (Couple)</option>
@@ -206,25 +206,25 @@ Please confirm availability and share direct booking privileges.`;
             </div>
 
             {/* Inclusions VIP List */}
-            <div className="pt-2 border-t border-[#1B3322]/10 space-y-2">
+            <div className="pt-2 border-t border-[#0E2C21]/10 space-y-2">
               <span className="text-[11px] font-mono uppercase tracking-wider text-[#7A6038] font-semibold block">
                 Direct Booking VIP Inclusions:
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#2C3531]/80">
                 <div className="flex items-center gap-2">
-                  <Check className="w-3.5 h-3.5 text-[#1B3322] shrink-0" />
+                  <Check className="w-3.5 h-3.5 text-[#0E2C21] shrink-0" />
                   <span>Complimentary Evening Bonfire</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Check className="w-3.5 h-3.5 text-[#1B3322] shrink-0" />
+                  <Check className="w-3.5 h-3.5 text-[#0E2C21] shrink-0" />
                   <span>Guided Fruit Orchard Nature Walk</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Check className="w-3.5 h-3.5 text-[#1B3322] shrink-0" />
+                  <Check className="w-3.5 h-3.5 text-[#0E2C21] shrink-0" />
                   <span>25% Dining Privilege at Restaurant</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Check className="w-3.5 h-3.5 text-[#1B3322] shrink-0" />
+                  <Check className="w-3.5 h-3.5 text-[#0E2C21] shrink-0" />
                   <span>Priority Early Check-In (Subject to slot)</span>
                 </div>
               </div>
@@ -232,7 +232,7 @@ Please confirm availability and share direct booking privileges.`;
           </form>
 
           {/* Reservation Request Summary Panel - Right */}
-          <div className="bg-[#1B3322] text-[#FAF9F6] p-6 sm:p-10 lg:col-span-5 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-[#FAF9F6]/10 relative">
+          <div className="bg-[#0E2C21] text-[#FAF9F6] p-6 sm:p-10 lg:col-span-5 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-[#FAF9F6]/10 relative">
             <div>
               <div className="flex items-center justify-between border-b border-[#FAF9F6]/10 pb-4 mb-6">
                 <h3 className="font-display text-xl sm:text-2xl font-medium text-[#FAF9F6]">

@@ -9,9 +9,9 @@
      SURFACES  — one palette. The former brand-* / earth-* split
      defined two creams, two darks and two greens, which guaranteed drift.
      --------------------------------------------------------------- */
-  --color-pine: #1B3322;          /* primary dark: nav, footer, hero ground */
-  --color-pine-light: #2A4832;    /* hover on pine */
-  --color-pine-deep: #142619;     /* dropdowns, layering over pine */
+  --color-pine: #0E2C21;          /* primary dark: nav, footer, hero ground */
+  --color-pine-light: #193F30;    /* hover on pine */
+  --color-pine-deep: #0A2118;     /* dropdowns, layering over pine */
   --color-cream: #FAF9F6;         /* page ground */
   --color-ink: #2C3531;           /* body text on cream */
   --color-sand: #E6E0D6;          /* hairlines, dividers, card borders */

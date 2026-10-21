@@ -97,7 +97,7 @@ export default function Navbar({ children }: NavbarProps) {
 
   return (
     <nav
-      className="sticky top-0 left-0 w-full z-50 bg-[#1B3322] border-b border-[#FAF9F6]/10 py-3.5"
+      className="sticky top-0 left-0 w-full z-50 bg-[#0E2C21] border-b border-[#FAF9F6]/10 py-3.5"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -122,7 +122,7 @@ export default function Navbar({ children }: NavbarProps) {
                     </a>
                     {/* Dropdown Menu */}
                     <div className="absolute top-full -left-3 pt-2 w-72 opacity-0 translate-y-1 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-200 z-50">
-                      <div className="bg-[#142619] border border-[#FAF9F6]/15 rounded-xl shadow-2xl p-2 backdrop-blur-xl divide-y divide-white/5">
+                      <div className="bg-[#0A2118] border border-[#FAF9F6]/15 rounded-xl shadow-2xl p-2 backdrop-blur-xl divide-y divide-white/5">
                         {link.dropdown.map((subItem) => (
                           <a
                             key={subItem.name}
@@ -198,7 +198,7 @@ export default function Navbar({ children }: NavbarProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleNavBookingClick}
-              className="bg-[#B0966D] hover:bg-[#FAF9F6] text-[#1B3322] hover:text-[#1B3322] text-[10px] font-mono font-bold uppercase tracking-[0.18em] px-5 py-2.5 rounded-sm flex items-center transition-all duration-300 shadow-luxury-sm"
+              className="bg-[#B0966D] hover:bg-[#FAF9F6] text-[#0E2C21] hover:text-[#0E2C21] text-[10px] font-mono font-bold uppercase tracking-[0.18em] px-5 py-2.5 rounded-sm flex items-center transition-all duration-300 shadow-luxury-sm"
             >
               <span>Book Stay</span>
               <ArrowUpRight className="w-3.5 h-3.5 ml-1.5 opacity-80" />
@@ -212,7 +212,7 @@ export default function Navbar({ children }: NavbarProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleNavBookingClick}
-              className="bg-[#B0966D] text-[#1B3322] text-[10px] font-mono font-bold uppercase tracking-wider px-3.5 py-2 rounded-sm flex items-center shadow-md active:scale-95 transition-transform"
+              className="bg-[#B0966D] text-[#0E2C21] text-[10px] font-mono font-bold uppercase tracking-wider px-3.5 py-2 rounded-sm flex items-center shadow-md active:scale-95 transition-transform"
             >
               Book Stay
             </a>
@@ -229,7 +229,7 @@ export default function Navbar({ children }: NavbarProps) {
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-[#1B3322]/98 backdrop-blur-xl border-b border-[#FAF9F6]/10 shadow-2xl transition-all duration-300 ease-in-out z-40 ${isOpen ? "opacity-100 max-h-screen py-5" : "opacity-0 max-h-0 overflow-hidden"
+        className={`md:hidden absolute top-full left-0 w-full bg-[#0E2C21]/98 backdrop-blur-xl border-b border-[#FAF9F6]/10 shadow-2xl transition-all duration-300 ease-in-out z-40 ${isOpen ? "opacity-100 max-h-screen py-5" : "opacity-0 max-h-0 overflow-hidden"
           }`}
       >
         <div className="px-4 pt-1 pb-4 space-y-2">
@@ -237,7 +237,7 @@ export default function Navbar({ children }: NavbarProps) {
           <a
             href="/book-now/"
             onClick={() => setIsOpen(false)}
-            className="flex items-center justify-between p-3 rounded bg-[#B0966D]/15 border border-[#8A6F4A]/40 text-[#C4A77D] font-mono text-xs tracking-wider uppercase font-bold mb-3 hover:bg-[#B0966D] hover:text-[#1B3322] transition-colors"
+            className="flex items-center justify-between p-3 rounded bg-[#B0966D]/15 border border-[#8A6F4A]/40 text-[#C4A77D] font-mono text-xs tracking-wider uppercase font-bold mb-3 hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors"
           >
             <span>Direct Booking VIP Privileges</span>
             <span className="text-[10px] font-normal lowercase bg-[#B0966D]/20 px-2 py-0.5 rounded">save 25%</span>
@@ -311,28 +311,28 @@ export default function Navbar({ children }: NavbarProps) {
               <a
                 href="/destination-wedding-uttarakhand/"
                 onClick={() => setIsOpen(false)}
-                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#1B3322] transition-colors text-center"
+                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors text-center"
               >
                 💍 Weddings (100 Pax)
               </a>
               <a
                 href="/corporate-offsite-resort-mukteshwar/"
                 onClick={() => setIsOpen(false)}
-                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#1B3322] transition-colors text-center"
+                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors text-center"
               >
                 💼 Conferences &amp; MICE
               </a>
               <a
                 href="/private-villas-near-nainital/"
                 onClick={() => setIsOpen(false)}
-                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#1B3322] transition-colors text-center"
+                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors text-center"
               >
                 🏡 3-BHK Villa (10 Pax)
               </a>
               <a
                 href="/clarks-exotica-resort-ramgarh-mukteshwar/"
                 onClick={() => setIsOpen(false)}
-                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#1B3322] transition-colors text-center"
+                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors text-center"
               >
                 🌲 Clarks Exotica Guests
               </a>
@@ -357,7 +357,7 @@ export default function Navbar({ children }: NavbarProps) {
                 setIsOpen(false);
                 handleNavBookingClick();
               }}
-              className="w-full text-center bg-[#B0966D] text-[#1B3322] font-bold uppercase tracking-wider py-3.5 rounded-sm flex items-center justify-center transition-colors shadow-md active:scale-95"
+              className="w-full text-center bg-[#B0966D] text-[#0E2C21] font-bold uppercase tracking-wider py-3.5 rounded-sm flex items-center justify-center transition-colors shadow-md active:scale-95"
             >
               Instant Booking (WhatsApp)
               <ArrowUpRight className="w-5 h-5 ml-1.5" />

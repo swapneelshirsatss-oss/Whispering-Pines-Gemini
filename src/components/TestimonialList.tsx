@@ -72,7 +72,7 @@ export default function TestimonialList({ layout = "carousel", testimonials = FA
   };
 
   return (
-    <section id="reviews" className="py-20 lg:py-28 bg-[#1B3322] border-t border-[#1B3322] overflow-hidden cv-auto">
+    <section id="reviews" className="py-20 lg:py-28 bg-[#0E2C21] border-t border-[#0E2C21] overflow-hidden cv-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
@@ -99,7 +99,7 @@ export default function TestimonialList({ layout = "carousel", testimonials = FA
             <button
               onClick={() => scroll('left')}
               disabled={!canScrollLeft}
-              className={`p-2 rounded-full bg-[#FAF9F6] text-[#1B3322] shadow-lg transition-all ${
+              className={`p-2 rounded-full bg-[#FAF9F6] text-[#0E2C21] shadow-lg transition-all ${
                 !canScrollLeft ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#B0966D] hover:text-[#FAF9F6] '
               }`}
               aria-label="Previous review"
@@ -112,7 +112,7 @@ export default function TestimonialList({ layout = "carousel", testimonials = FA
             <button
               onClick={() => scroll('right')}
               disabled={!canScrollRight}
-              className={`p-2 rounded-full bg-[#FAF9F6] text-[#1B3322] shadow-lg transition-all ${
+              className={`p-2 rounded-full bg-[#FAF9F6] text-[#0E2C21] shadow-lg transition-all ${
                 !canScrollRight ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#B0966D] hover:text-[#FAF9F6] '
               }`}
               aria-label="Next review"
@@ -208,7 +208,7 @@ export default function TestimonialList({ layout = "carousel", testimonials = FA
             href="https://maps.google.com/?cid=8386667112972057918" // This is the gmapsLink from data.ts
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 bg-white px-6 py-3 rounded-sm text-sm font-semibold text-[#1B3322] hover:bg-[#f1f1f1] transition-colors shadow-lg"
+            className="inline-flex items-center space-x-2 bg-white px-6 py-3 rounded-sm text-sm font-semibold text-[#0E2C21] hover:bg-[#f1f1f1] transition-colors shadow-lg"
           >
             <svg viewBox="0 0 24 24" className="w-5 h-5 text-[#4285F4] fill-current">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
