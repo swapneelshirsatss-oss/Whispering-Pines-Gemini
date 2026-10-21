@@ -51,7 +51,7 @@ export default function RoomInventoryList({
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-mono tracking-widest text-[#c9a832] uppercase block mb-2">
+          <span className="text-xs font-mono tracking-widest text-[#7A6038] uppercase block mb-2">
             Sanctuaries of Slumber
           </span>
           {isH1 ? (
@@ -68,7 +68,7 @@ export default function RoomInventoryList({
               {title}
             </h2>
           )}
-          <div className="w-16 h-[2px] bg-[#c9a832] mx-auto mb-6" />
+          <div className="w-16 h-[2px] bg-[#B0966D] mx-auto mb-6" />
           <p className="text-sm sm:text-base text-[#2C3531]/80 font-sans leading-relaxed">
             Meticulously paneled with local Kumaoni pine and cedar timbers, each suite is an expansive private refuge engineered for absolute serenity. Secure your <strong>Ramgarh resort booking</strong> directly to avoid third-party commissions. Whether you need a private villa for a multi-generational holiday or a deluxe skylight attic suite for a couple's retreat, Whispering Pines by Casa De Bello is the premier <strong>family resort Nainital</strong> visitors recommend for high-altitude peace and genuine local hospitality.
           </p>
@@ -113,13 +113,13 @@ export default function RoomInventoryList({
                 {/* Special Tags */}
                 <div className="absolute top-4 left-4 flex flex-col gap-1.5 z-10">
                   {room.featured && (
-                    <div className="bg-[#1B3322] text-[#FAF9F6] text-[10px] uppercase font-mono tracking-[0.2em] px-3.5 py-1.5 rounded-sm shadow-md border border-[#c9a832]/40 font-bold">
+                    <div className="bg-[#1B3322] text-[#FAF9F6] text-[10px] uppercase font-mono tracking-[0.2em] px-3.5 py-1.5 rounded-sm shadow-md border border-[#B0966D]/40 font-bold">
                       Signature Villa
                     </div>
                   )}
                   {room.pricePerNight && (
                     <div className="bg-[#FAF9F6]/95 backdrop-blur-md text-[#1B3322] text-[11px] font-mono font-bold px-3 py-1.5 rounded-sm shadow-md flex items-center flex-wrap gap-1.5 border border-[#1B3322]/10">
-                      <Sparkles className="w-3 h-3 text-[#c9a832]" />
+                      <Sparkles className="w-3 h-3 text-[#7A6038]" />
                       <span className="tnum">₹{room.pricePerNight.toLocaleString("en-IN")}/night</span>
                       {room.otaPricePerNight && (
                         <span className="line-through text-gray-400 font-normal text-[10px] tnum">
@@ -140,7 +140,7 @@ export default function RoomInventoryList({
               <div className="lg:col-span-5 flex flex-col justify-center space-y-6 lg:pr-8">
                 <div>
                   <div className="mb-4">
-                    <p className="text-[10px] font-mono text-[#c9a832] uppercase tracking-[0.2em] mb-2 font-semibold">
+                    <p className="text-[10px] font-mono text-[#7A6038] uppercase tracking-[0.2em] mb-2 font-semibold">
                       {room.subtitle}
                     </p>
                     <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1B3322] leading-tight">
@@ -148,7 +148,7 @@ export default function RoomInventoryList({
                     </h2>
                   </div>
                   
-                  <div className="w-12 h-[1px] bg-[#c9a832] mb-6" />
+                  <div className="w-12 h-[1px] bg-[#B0966D] mb-6" />
                   <p className="text-sm text-[#2C3531]/80 leading-relaxed mb-6 font-sans font-light">
                     {room.description}
                   </p>
@@ -156,11 +156,11 @@ export default function RoomInventoryList({
                   {/* Badges Bar */}
                   <div className="flex flex-wrap gap-4 sm:gap-8 mb-6 text-[11px] text-[#2C3531]/75 font-mono uppercase tracking-wider">
                     <span className="flex items-center">
-                      <Users className="w-3.5 h-3.5 mr-2 text-[#c9a832]" />
+                      <Users className="w-3.5 h-3.5 mr-2 text-[#7A6038]" />
                       {room.capacity}
                     </span>
                     <span className="flex items-center">
-                      <Bed className="w-3.5 h-3.5 mr-2 text-[#c9a832]" />
+                      <Bed className="w-3.5 h-3.5 mr-2 text-[#7A6038]" />
                       {room.bedType}
                     </span>
                   </div>
@@ -188,7 +188,7 @@ export default function RoomInventoryList({
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2.5">
                       {room.amenities.slice(0, 4).map((item, idx) => (
                         <div key={idx} className="flex items-center text-xs text-[#2C3531]/80">
-                          <div className="w-1.5 h-1.5 bg-[#c9a832] rounded-full mr-2.5 shrink-0" />
+                          <div className="w-1.5 h-1.5 bg-[#B0966D] rounded-full mr-2.5 shrink-0" />
                           <h3 className="font-sans font-light leading-snug">{item}</h3>
                         </div>
                       ))}
@@ -216,7 +216,7 @@ export default function RoomInventoryList({
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={handleRoomBookingClick}
-                    className="inline-flex items-center text-[#1B3322] hover:text-[#c9a832] font-mono text-[11px] font-semibold uppercase tracking-wider px-3 py-3 transition-colors duration-300 group/btn"
+                    className="inline-flex items-center text-[#1B3322] hover:text-[#B0966D] font-mono text-[11px] font-semibold uppercase tracking-wider px-3 py-3 transition-colors duration-300 group/btn"
                   >
                     <span>Check Web Engine</span>
                     <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform duration-300 group-hover/btn:translate-x-1" />
@@ -231,7 +231,7 @@ export default function RoomInventoryList({
           <div className="mt-16 text-center">
             <a
               href="/suites-cottages-ramgarh-resort/"
-              className="inline-flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 bg-transparent border border-[#c9a832] text-[#1B3322] hover:bg-[#c9a832] hover:text-[#FAF9F6] font-mono text-[11px] sm:text-xs font-semibold uppercase tracking-widest transition-colors duration-300 rounded-sm group"
+              className="inline-flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 bg-transparent border border-[#8A6F4A] text-[#1B3322] hover:bg-[#B0966D] hover:text-[#1B3322] font-mono text-[11px] sm:text-xs font-semibold uppercase tracking-widest transition-colors duration-300 rounded-sm group"
             >
               View All Accommodation Details
               <ArrowRight className="w-4 h-4 ml-3 transition-transform duration-300 group-hover:translate-x-1" />

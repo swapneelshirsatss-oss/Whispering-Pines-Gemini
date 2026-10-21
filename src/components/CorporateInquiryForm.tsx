@@ -110,7 +110,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
       {/* Editorial Container with Subtle Border & Shadow */}
       <div className="bg-white border border-[#E8E5DF] rounded-2xl p-6 sm:p-10 lg:p-12 shadow-luxury-md relative overflow-hidden">
         {/* Decorative Golden Top Accent */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#1B3322] via-[#C9A832] to-[#1B3322]" />
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#1B3322] via-[#B0966D] to-[#1B3322]" />
 
         {submitted ? (
           <div className="py-10 text-center space-y-6 animate-fade-in">
@@ -119,7 +119,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
             </div>
 
             <div className="space-y-3 max-w-lg mx-auto">
-              <span className="font-mono text-xs text-[#C9A832] uppercase tracking-[0.2em] font-semibold block">
+              <span className="font-mono text-xs text-[#B0966D] uppercase tracking-[0.2em] font-semibold block">
                 Corporate Inquiry Received · Dedicated Account Desk
               </span>
               <h3 className="font-display text-2xl sm:text-3xl font-medium text-[#1B3322]">
@@ -131,8 +131,8 @@ Looking forward to receiving the customized corporate offsite proposal.`;
             </div>
 
             {/* Corporate Perks Guarantee Banner */}
-            <div className="bg-[#FAF9F6] border border-[#C9A832]/30 rounded-xl p-5 max-w-md mx-auto text-left flex items-start gap-3.5">
-              <ShieldCheck className="w-5 h-5 text-[#C9A832] shrink-0 mt-0.5" />
+            <div className="bg-[#FAF9F6] border border-[#8A6F4A]/30 rounded-xl p-5 max-w-md mx-auto text-left flex items-start gap-3.5">
+              <ShieldCheck className="w-5 h-5 text-[#7A6038] shrink-0 mt-0.5" />
               <div>
                 <span className="font-mono text-[11px] uppercase tracking-wider text-[#1B3322] font-bold block mb-1">
                   B2B Corporate Guarantees
@@ -182,7 +182,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                     value={formData.companyName}
                     onChange={handleChange}
                     placeholder="e.g. Acme Technologies Pvt Ltd"
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#1B3322]/15 rounded-xl text-sm text-[#1B3322] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#C9A832] focus:ring-1 focus:ring-[#C9A832] transition-all"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#1B3322]/15 rounded-xl text-sm text-[#1B3322] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all"
                   />
                 </div>
               </div>
@@ -203,7 +203,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                     value={formData.organizerName}
                     onChange={handleChange}
                     placeholder="e.g. Vikram Sharma (Head of People / EA)"
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#1B3322]/15 rounded-xl text-sm text-[#1B3322] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#C9A832] focus:ring-1 focus:ring-[#C9A832] transition-all"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#1B3322]/15 rounded-xl text-sm text-[#1B3322] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all"
                   />
                 </div>
               </div>
@@ -224,7 +224,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                     value={formData.workEmail}
                     onChange={handleChange}
                     placeholder="vikram@company.com"
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#1B3322]/15 rounded-xl text-sm text-[#1B3322] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#C9A832] focus:ring-1 focus:ring-[#C9A832] transition-all"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#1B3322]/15 rounded-xl text-sm text-[#1B3322] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all"
                   />
                 </div>
               </div>
@@ -245,7 +245,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="e.g. +91 98765 43210"
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#1B3322]/15 rounded-xl text-sm text-[#1B3322] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#C9A832] focus:ring-1 focus:ring-[#C9A832] transition-all"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#1B3322]/15 rounded-xl text-sm text-[#1B3322] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all"
                   />
                 </div>
               </div>
@@ -265,7 +265,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                     required
                     value={formData.preferredDate}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#1B3322]/15 rounded-xl text-sm text-[#1B3322] focus:outline-none focus:border-[#C9A832] focus:ring-1 focus:ring-[#C9A832] transition-all"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#1B3322]/15 rounded-xl text-sm text-[#1B3322] focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all"
                   />
                 </div>
               </div>
@@ -283,7 +283,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                     name="delegateCount"
                     value={formData.delegateCount}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#1B3322]/15 rounded-xl text-sm text-[#1B3322] focus:outline-none focus:border-[#C9A832] focus:ring-1 focus:ring-[#C9A832] transition-all appearance-none cursor-pointer"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#1B3322]/15 rounded-xl text-sm text-[#1B3322] focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all appearance-none cursor-pointer"
                   >
                     <option value="15-30">15 – 30 Delegates (Executive Sprints / CXO)</option>
                     <option value="30-50">30 – 50 Delegates (Mid-size Team Offsite)</option>
@@ -313,7 +313,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                       }`}
                     >
                       <span className={`w-3.5 h-3.5 rounded-sm border flex items-center justify-center text-[10px] ${
-                        isChecked ? "bg-[#C9A832] border-[#C9A832] text-[#1B3322]" : "border-[#2C3531]/30"
+                        isChecked ? "bg-[#B0966D] border-[#8A6F4A] text-[#1B3322]" : "border-[#2C3531]/30"
                       }`}>
                         {isChecked && "✓"}
                       </span>
@@ -335,7 +335,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                 value={formData.notes}
                 onChange={handleChange}
                 placeholder="Share any special team-building activities, dietary restrictions, flight/train transfer requirements, or executive villa preferences..."
-                className="w-full p-4 bg-[#FAF9F6] border border-[#1B3322]/15 rounded-xl text-sm text-[#1B3322] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#C9A832] focus:ring-1 focus:ring-[#C9A832] transition-all resize-none"
+                className="w-full p-4 bg-[#FAF9F6] border border-[#1B3322]/15 rounded-xl text-sm text-[#1B3322] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all resize-none"
               ></textarea>
             </div>
 
@@ -351,7 +351,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                 ) : (
                   <>
                     <span>Request Corporate Proposal</span>
-                    <Send className="w-4 h-4 text-[#C9A832]" />
+                    <Send className="w-4 h-4 text-[#B0966D]" />
                   </>
                 )}
               </button>

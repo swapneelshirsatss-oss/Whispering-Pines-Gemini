@@ -28,13 +28,13 @@ const HeadingTag = asH1 ? "h1" : "h2";
     
     {/* Section Header */}
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <span class="text-xs font-mono tracking-widest text-[#c9a832] uppercase block mb-2">
+      <span class="text-xs font-mono tracking-widest text-[#7A6038] uppercase block mb-2">
         Premium Resort Services
       </span>
       <HeadingTag class="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1B3322]">
         {title}
       </HeadingTag>
-      <div class="w-16 h-[2px] bg-[#c9a832] mx-auto mt-4 mb-6" />
+      <div class="w-16 h-[2px] bg-[#B0966D] mx-auto mt-4 mb-6" />
       <p class="text-sm sm:text-base text-[#2C3531]/80 font-sans leading-relaxed">
         Whether you are planning a quiet mountain weekend or an extended family <strong>stay in Ramgarh</strong>, our resident team takes care of every detail—from steaming pahadi chai delivered to your balcony to local trail guidance, bonfires, and on-demand travel assistance as a trusted <strong>family resort near Nainital</strong>.
       </p>
@@ -45,10 +45,10 @@ const HeadingTag = asH1 ? "h1" : "h2";
       {RESORT_SERVICES.map((service) => {
         const IconComponent = iconMap[service.icon] || Sparkles;
         return (
-          <div class="bg-white hover:bg-[#1B3322]/5 border border-[#2C3531]/10 hover:border-[#c9a832]/50 p-6 sm:p-8 rounded-sm hover:shadow-xl transition-all duration-300 group">
+          <div class="bg-white hover:bg-[#1B3322]/5 border border-[#2C3531]/10 hover:border-[#B0966D]/50 p-6 sm:p-8 rounded-sm hover:shadow-xl transition-all duration-300 group">
             {/* Visual Icon Container */}
-            <div class="w-12 h-12 bg-[#1B3322]/5 group-hover:bg-[#c9a832] rounded-sm flex items-center justify-center mb-6 transition-all duration-300">
-              <IconComponent className="w-6 h-6 text-[#c9a832] group-hover:text-[#1B3322] transition-colors duration-300" />
+            <div class="w-12 h-12 bg-[#1B3322]/5 group-hover:bg-[#B0966D] rounded-sm flex items-center justify-center mb-6 transition-all duration-300">
+              <IconComponent className="w-6 h-6 text-[#7A6038] group-hover:text-[#1B3322] transition-colors duration-300" />
             </div>
             
             {/* Title */}
@@ -69,7 +69,7 @@ const HeadingTag = asH1 ? "h1" : "h2";
       <div class="mt-16 text-center">
         <a
           href="/resort-services-ramgarh/"
-          class="inline-flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 bg-transparent border border-[#c9a832] text-[#1B3322] hover:bg-[#c9a832] hover:text-[#FAF9F6] font-mono text-[11px] sm:text-xs font-semibold uppercase tracking-widest transition-colors duration-300 rounded-sm group"
+          class="inline-flex items-center justify-center px-8 py-3 sm:px-10 sm:py-4 bg-transparent border border-[#8A6F4A] text-[#1B3322] hover:bg-[#B0966D] hover:text-[#1B3322] font-mono text-[11px] sm:text-xs font-semibold uppercase tracking-widest transition-colors duration-300 rounded-sm group"
         >
           View All Services
           <ArrowRight class="w-4 h-4 ml-3 transition-transform duration-300 group-hover:translate-x-1" />

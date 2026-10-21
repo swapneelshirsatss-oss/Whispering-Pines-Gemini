@@ -77,13 +77,13 @@ export default function TestimonialList({ layout = "carousel", testimonials = FA
         
         {/* Header Block */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <span className="text-xs font-mono tracking-widest text-[#c9a832] uppercase block mb-2">
+          <span className="text-xs font-mono tracking-widest text-[#B0966D] uppercase block mb-2">
             Shared Memories
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#FAF9F6]">
             What Our Guests Cherish
           </h2>
-          <div className="w-16 h-[2px] bg-[#c9a832] mx-auto mt-4 mb-6" />
+          <div className="w-16 h-[2px] bg-[#B0966D] mx-auto mt-4 mb-6" />
           <p className="text-sm text-[#FAF9F6]/80 font-sans leading-relaxed">
             Read certified guest reviews from actual families and remote professionals who made 
             Malla Ramgarh's Whispering Pines their home.
@@ -100,7 +100,7 @@ export default function TestimonialList({ layout = "carousel", testimonials = FA
               onClick={() => scroll('left')}
               disabled={!canScrollLeft}
               className={`p-2 rounded-full bg-[#FAF9F6] text-[#1B3322] shadow-lg transition-all ${
-                !canScrollLeft ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#c9a832] hover:text-[#FAF9F6] '
+                !canScrollLeft ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#B0966D] hover:text-[#FAF9F6] '
               }`}
               aria-label="Previous review"
             >
@@ -113,7 +113,7 @@ export default function TestimonialList({ layout = "carousel", testimonials = FA
               onClick={() => scroll('right')}
               disabled={!canScrollRight}
               className={`p-2 rounded-full bg-[#FAF9F6] text-[#1B3322] shadow-lg transition-all ${
-                !canScrollRight ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#c9a832] hover:text-[#FAF9F6] '
+                !canScrollRight ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#B0966D] hover:text-[#FAF9F6] '
               }`}
               aria-label="Next review"
             >

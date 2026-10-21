@@ -5,9 +5,9 @@ import Logo from "./Logo.astro";
 
 const currentYear = new Date().getFullYear();
 ---
-<footer class="bg-[#1B3322] text-[#FAF9F6] pt-16 pb-12 border-t border-[#c9a832]/20 relative overflow-hidden">
+<footer class="bg-[#1B3322] text-[#FAF9F6] pt-16 pb-12 border-t border-[#B0966D]/20 relative overflow-hidden">
   {/* Ambient Background Gradient Glow */}
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-[#c9a832]/5 blur-3xl pointer-events-none"></div>
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-[#B0966D]/5 blur-3xl pointer-events-none"></div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     
@@ -20,11 +20,11 @@ const currentYear = new Date().getFullYear();
       <div class="space-y-4 text-left">
         <Logo />
         <div class="space-y-1.5">
-          <span class="text-xs font-mono text-[#c9a832] uppercase tracking-[0.18em] block font-semibold">
+          <span class="text-xs font-mono text-[#7A6038] uppercase tracking-[0.18em] block font-semibold">
             Casa De Bello • Whispering Pines
           </span>
-          <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#FAF9F6]/5 border border-[#c9a832]/30 text-[10px] font-mono text-[#c9a832]">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#c9a832]"></span>
+          <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#FAF9F6]/5 border border-[#8A6F4A]/30 text-[10px] font-mono text-[#7A6038]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#B0966D]"></span>
             Resort Near Mukteshwar & Nainital (1,780m)
           </span>
         </div>
@@ -34,7 +34,7 @@ const currentYear = new Date().getFullYear();
         </p>
 
         <div class="pt-0.5 space-y-1">
-          <div class="flex items-center gap-1.5 text-[11px] text-[#c9a832] font-semibold">
+          <div class="flex items-center gap-1.5 text-[11px] text-[#7A6038] font-semibold">
             <span>★ Top-Rated Resort Near Mukteshwar & Nainital</span>
           </div>
           <p class="text-[10px] text-[#FAF9F6]/65 leading-tight">
@@ -45,7 +45,7 @@ const currentYear = new Date().getFullYear();
         {/* Social Icons */}
         {RESORT_CONTACT.socials && (
           <div class="pt-1">
-            <span class="text-[10px] font-mono uppercase tracking-[0.15em] text-[#c9a832] block mb-2 font-semibold">
+            <span class="text-[10px] font-mono uppercase tracking-[0.15em] text-[#7A6038] block mb-2 font-semibold">
               Official Channels
             </span>
             <div class="flex items-center space-x-2">
@@ -54,7 +54,7 @@ const currentYear = new Date().getFullYear();
                   href={RESORT_CONTACT.socials.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="w-7 h-7 rounded-full bg-[#FAF9F6]/5 hover:bg-[#c9a832] text-[#FAF9F6] hover:text-[#1B3322] border border-[#FAF9F6]/15 hover:border-[#c9a832] transition-all duration-300 flex items-center justify-center shadow-sm"
+                  class="w-7 h-7 rounded-full bg-[#FAF9F6]/5 hover:bg-[#B0966D] text-[#FAF9F6] hover:text-[#1B3322] border border-[#FAF9F6]/15 hover:border-[#8A6F4A] transition-all duration-300 flex items-center justify-center shadow-sm"
                   aria-label="Facebook"
                   title="Follow Whispering Pines on Facebook"
                 >
@@ -68,7 +68,7 @@ const currentYear = new Date().getFullYear();
                   href={RESORT_CONTACT.socials.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="w-7 h-7 rounded-full bg-[#FAF9F6]/5 hover:bg-[#c9a832] text-[#FAF9F6] hover:text-[#1B3322] border border-[#FAF9F6]/15 hover:border-[#c9a832] transition-all duration-300 flex items-center justify-center shadow-sm"
+                  class="w-7 h-7 rounded-full bg-[#FAF9F6]/5 hover:bg-[#B0966D] text-[#FAF9F6] hover:text-[#1B3322] border border-[#FAF9F6]/15 hover:border-[#8A6F4A] transition-all duration-300 flex items-center justify-center shadow-sm"
                   aria-label="Instagram"
                   title="Follow Whispering Pines on Instagram"
                 >
@@ -82,7 +82,7 @@ const currentYear = new Date().getFullYear();
                   href={RESORT_CONTACT.socials.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="w-7 h-7 rounded-full bg-[#FAF9F6]/5 hover:bg-[#c9a832] text-[#FAF9F6] hover:text-[#1B3322] border border-[#FAF9F6]/15 hover:border-[#c9a832] transition-all duration-300 flex items-center justify-center shadow-sm"
+                  class="w-7 h-7 rounded-full bg-[#FAF9F6]/5 hover:bg-[#B0966D] text-[#FAF9F6] hover:text-[#1B3322] border border-[#FAF9F6]/15 hover:border-[#8A6F4A] transition-all duration-300 flex items-center justify-center shadow-sm"
                   aria-label="YouTube"
                   title="Subscribe to Whispering Pines on YouTube"
                 >
@@ -96,7 +96,7 @@ const currentYear = new Date().getFullYear();
                   href={RESORT_CONTACT.socials.tripadvisor}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="w-7 h-7 rounded-full bg-[#FAF9F6]/5 hover:bg-[#c9a832] text-[#FAF9F6] hover:text-[#1B3322] border border-[#FAF9F6]/15 hover:border-[#c9a832] transition-all duration-300 flex items-center justify-center shadow-sm"
+                  class="w-7 h-7 rounded-full bg-[#FAF9F6]/5 hover:bg-[#B0966D] text-[#FAF9F6] hover:text-[#1B3322] border border-[#FAF9F6]/15 hover:border-[#8A6F4A] transition-all duration-300 flex items-center justify-center shadow-sm"
                   aria-label="TripAdvisor"
                   title="Review Whispering Pines on TripAdvisor"
                 >
@@ -109,7 +109,7 @@ const currentYear = new Date().getFullYear();
 
             {/* Google Preferred Source Button */}
             <div class="pt-3">
-              <span class="text-[10px] font-mono uppercase tracking-[0.18em] text-[#c9a832] block mb-1.5 font-semibold">
+              <span class="text-[10px] font-mono uppercase tracking-[0.18em] text-[#7A6038] block mb-1.5 font-semibold">
                 Google Preferred Source
               </span>
               <div 
@@ -128,56 +128,56 @@ const currentYear = new Date().getFullYear();
       {/* COLUMN 2: Stays & Accommodations Near Mukteshwar & Nainital */}
       {/* ========================================================================= */}
       <div class="space-y-4">
-        <h4 class="text-xs font-mono uppercase tracking-[0.2em] text-[#c9a832] font-semibold border-b border-[#c9a832]/30 pb-2 inline-block">
+        <h4 class="text-xs font-mono uppercase tracking-[0.2em] text-[#7A6038] font-semibold border-b border-[#8A6F4A]/30 pb-2 inline-block">
           Stays & Accommodations
         </h4>
         <nav aria-label="Accommodations Silo Links" class="space-y-2 text-xs font-sans text-[#FAF9F6]/80 pt-1">
-          <a href="/suites-cottages-ramgarh-resort/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/suites-cottages-ramgarh-resort/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Luxury Suites Near Mukteshwar</span>
           </a>
-          <a href="/private-villas-near-nainital/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/private-villas-near-nainital/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>3-BHK Villa Near Nainital (10 Pax)</span>
           </a>
-          <a href="/suites-cottages-ramgarh-resort/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/suites-cottages-ramgarh-resort/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Mountain Cottages Near Mukteshwar</span>
           </a>
-          <a href="/suites-cottages-ramgarh-resort/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/suites-cottages-ramgarh-resort/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Family Attic Suites Near Nainital</span>
           </a>
-          <a href="/suites-cottages-ramgarh-resort/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/suites-cottages-ramgarh-resort/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Heated Winter Rooms in Ramgarh</span>
           </a>
-          <a href="/resort-amenities-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/resort-amenities-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Orchard Lawn Rooms Near Mukteshwar</span>
           </a>
-          <a href="/resort-amenities-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/resort-amenities-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Pet-Friendly Resort Near Nainital</span>
           </a>
-          <a href="/about-whispering-pines-resort-ramgarh/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/about-whispering-pines-resort-ramgarh/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Workcation Resort Near Mukteshwar</span>
           </a>
-          <a href="/resort-amenities-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/resort-amenities-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Outdoor Swimming Pool & Lawns</span>
           </a>
-          <a href="/resort-services-ramgarh/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/resort-services-ramgarh/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Dining & In-Room Resort Services</span>
           </a>
-          <a href="/destination-wedding-uttarakhand/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group font-medium text-[#c9a832]">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/destination-wedding-uttarakhand/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group font-medium text-[#7A6038]">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Destination Weddings in Uttarakhand</span>
           </a>
-          <a href="/corporate-offsite-resort-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group font-medium text-[#c9a832]">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/corporate-offsite-resort-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group font-medium text-[#7A6038]">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Corporate Retreats & MICE Offsites</span>
           </a>
         </nav>
@@ -187,52 +187,52 @@ const currentYear = new Date().getFullYear();
       {/* COLUMN 3: Guides & Sights Near Mukteshwar & Nainital */}
       {/* ========================================================================= */}
       <div class="space-y-4">
-        <h4 class="text-xs font-mono uppercase tracking-[0.2em] text-[#c9a832] font-semibold border-b border-[#c9a832]/30 pb-2 inline-block">
+        <h4 class="text-xs font-mono uppercase tracking-[0.2em] text-[#7A6038] font-semibold border-b border-[#8A6F4A]/30 pb-2 inline-block">
           Guides & Discovery
         </h4>
         <nav aria-label="Travel Guides & Regional Sights Silo Links" class="space-y-2 text-xs font-sans text-[#FAF9F6]/80 pt-1">
-          <a href="/blog/resort-near-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/blog/resort-near-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Resort Near Mukteshwar (2026 Guide)</span>
           </a>
-          <a href="/blog/resort-near-nainital/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/blog/resort-near-nainital/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Resort Near Nainital Travel Guide</span>
           </a>
-          <a href="/blog/himalayan-view-resort-uttarakhand/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/blog/himalayan-view-resort-uttarakhand/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Himalayan View Resort Uttarakhand</span>
           </a>
-          <a href="/things-to-do-near-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/things-to-do-near-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Things to Do in Mukteshwar & Nainital</span>
           </a>
-          <a href="/blog/resort-stay-near-kainchi-dham/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/blog/resort-stay-near-kainchi-dham/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Resort Stay Near Kainchi Dham Ashram</span>
           </a>
-          <a href="/blog/ramgarh-fruit-bowl-of-kumaon/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/blog/ramgarh-fruit-bowl-of-kumaon/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Ramgarh Fruit Bowl Heritage Guide</span>
           </a>
-          <a href="/blog/winter-in-the-himalayas/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/blog/winter-in-the-himalayas/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Winter Snow Peaks & Fireplace Stays</span>
           </a>
-          <a href="/blog/destination-wedding-uttarakhand-cost/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/blog/destination-wedding-uttarakhand-cost/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Uttarakhand Wedding Cost Guide (2026-27)</span>
           </a>
-          <a href="/gallery/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/gallery/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Resort Photo Gallery (180° Views)</span>
           </a>
-          <a href="/reviews/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/reviews/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Resort Reviews & Ratings (4.6★)</span>
           </a>
-          <a href="/blog/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#c9a832] transition-colors group font-medium text-[#c9a832]">
-            <span class="w-1 h-1 bg-[#c9a832] rounded-full transition-transform"></span>
+          <a href="/blog/" data-astro-prefetch="hover" class="flex items-center gap-2 hover:text-[#7A6038] transition-colors group font-medium text-[#7A6038]">
+            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
             <span>Browse All Mukteshwar Guides →</span>
           </a>
         </nav>
@@ -242,38 +242,38 @@ const currentYear = new Date().getFullYear();
       {/* COLUMN 4: Feeder Corridors & Transit to Resort Near Mukteshwar */}
       {/* ========================================================================= */}
       <div class="space-y-4">
-        <h4 class="text-xs font-mono uppercase tracking-[0.2em] text-[#c9a832] font-semibold border-b border-[#c9a832]/30 pb-2 inline-block">
+        <h4 class="text-xs font-mono uppercase tracking-[0.2em] text-[#7A6038] font-semibold border-b border-[#8A6F4A]/30 pb-2 inline-block">
           Drive-To Hubs (6–8h)
         </h4>
         
         {/* Primary Feeder Cities */}
         <div class="space-y-1.5 text-xs text-[#FAF9F6]/80 pt-1 font-sans">
-          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block hover:text-[#c9a832] transition-colors group leading-snug">
-            🚗 <strong class="text-[#FAF9F6] group-hover:text-[#c9a832]">Delhi to Resort Near Mukteshwar:</strong> 340 km • 6.5h
+          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block hover:text-[#7A6038] transition-colors group leading-snug">
+            🚗 <strong class="text-[#FAF9F6] group-hover:text-[#7A6038]">Delhi to Resort Near Mukteshwar:</strong> 340 km • 6.5h
           </a>
-          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block hover:text-[#c9a832] transition-colors group leading-snug">
-            🚗 <strong class="text-[#FAF9F6] group-hover:text-[#c9a832]">Gurugram to Resort Near Nainital:</strong> 360 km • 7.0h
+          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block hover:text-[#7A6038] transition-colors group leading-snug">
+            🚗 <strong class="text-[#FAF9F6] group-hover:text-[#7A6038]">Gurugram to Resort Near Nainital:</strong> 360 km • 7.0h
           </a>
-          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block hover:text-[#c9a832] transition-colors group leading-snug">
-            🚗 <strong class="text-[#FAF9F6] group-hover:text-[#c9a832]">Noida to Resort Near Mukteshwar:</strong> 330 km • 6.0h
+          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block hover:text-[#7A6038] transition-colors group leading-snug">
+            🚗 <strong class="text-[#FAF9F6] group-hover:text-[#7A6038]">Noida to Resort Near Mukteshwar:</strong> 330 km • 6.0h
           </a>
-          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block hover:text-[#c9a832] transition-colors group leading-snug">
-            🚗 <strong class="text-[#FAF9F6] group-hover:text-[#c9a832]">Ghaziabad & Meerut to Ramgarh:</strong> 310 km • 5.5h
+          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block hover:text-[#7A6038] transition-colors group leading-snug">
+            🚗 <strong class="text-[#FAF9F6] group-hover:text-[#7A6038]">Ghaziabad & Meerut to Ramgarh:</strong> 310 km • 5.5h
           </a>
-          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block hover:text-[#c9a832] transition-colors group leading-snug">
-            🚗 <strong class="text-[#FAF9F6] group-hover:text-[#c9a832]">Faridabad & Agra Expressway:</strong> 370 km • 7.5h
+          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block hover:text-[#7A6038] transition-colors group leading-snug">
+            🚗 <strong class="text-[#FAF9F6] group-hover:text-[#7A6038]">Faridabad & Agra Expressway:</strong> 370 km • 7.5h
           </a>
-          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block hover:text-[#c9a832] transition-colors group leading-snug">
-            🚗 <strong class="text-[#FAF9F6] group-hover:text-[#c9a832]">Lucknow to Resort Near Mukteshwar:</strong> 380 km • 7.5h
+          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block hover:text-[#7A6038] transition-colors group leading-snug">
+            🚗 <strong class="text-[#FAF9F6] group-hover:text-[#7A6038]">Lucknow to Resort Near Mukteshwar:</strong> 380 km • 7.5h
           </a>
-          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block hover:text-[#c9a832] transition-colors group leading-snug">
-            🚗 <strong class="text-[#FAF9F6] group-hover:text-[#c9a832]">Chandigarh to Mukteshwar / Nainital:</strong> 420 km • 8.5h
+          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block hover:text-[#7A6038] transition-colors group leading-snug">
+            🚗 <strong class="text-[#FAF9F6] group-hover:text-[#7A6038]">Chandigarh to Mukteshwar / Nainital:</strong> 420 km • 8.5h
           </a>
         </div>
 
         {/* Transit Hubs & Secondary Metros */}
         <div class="pt-2.5 border-t border-[#FAF9F6]/10 space-y-1 text-[11px] text-[#FAF9F6]/75">
-          <span class="text-[10px] font-mono uppercase tracking-[0.15em] text-[#c9a832] block font-semibold">
+          <span class="text-[10px] font-mono uppercase tracking-[0.15em] text-[#7A6038] block font-semibold">
             Rail & Air Gateways
           </span>
           <p class="leading-relaxed">
@@ -290,8 +290,8 @@ const currentYear = new Date().getFullYear();
       {/* COLUMN 5: Verified GBP Entity, NAP & Direct Booking Silo */}
       {/* ========================================================================= */}
       <div class="space-y-4">
-        <h4 class="text-xs font-mono uppercase tracking-[0.2em] text-[#c9a832] font-semibold border-b border-[#c9a832]/30 pb-2 inline-flex items-center gap-1.5">
-          <ShieldCheck className="w-3.5 h-3.5 text-[#c9a832]" />
+        <h4 class="text-xs font-mono uppercase tracking-[0.2em] text-[#7A6038] font-semibold border-b border-[#8A6F4A]/30 pb-2 inline-flex items-center gap-1.5">
+          <ShieldCheck className="w-3.5 h-3.5 text-[#7A6038]" />
           <span>Verified Resort NAP</span>
         </h4>
 
@@ -318,14 +318,14 @@ const currentYear = new Date().getFullYear();
             href={RESORT_CONTACT.gmapsCid}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-start hover:text-[#c9a832] transition-colors group"
+            class="flex items-start hover:text-[#7A6038] transition-colors group"
             title="View verified Google Maps location (CID: 8386667112972057918)"
             itemprop="address"
             itemscope
             itemtype="https://schema.org/PostalAddress"
           >
-            <MapPin className="w-3.5 h-3.5 text-[#c9a832] mr-2 shrink-0 mt-0.5 transition-transform" />
-            <span class="leading-relaxed text-[11px] text-[#FAF9F6]/90 group-hover:text-[#c9a832]">
+            <MapPin className="w-3.5 h-3.5 text-[#7A6038] mr-2 shrink-0 mt-0.5 transition-transform" />
+            <span class="leading-relaxed text-[11px] text-[#FAF9F6]/90 group-hover:text-[#7A6038]">
               <span itemprop="streetAddress">Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd</span>,{' '}
               <span itemprop="addressLocality">Mukteshwar</span>,{' '}
               <span itemprop="addressRegion">Nainital, Uttarakhand</span>{' '}
@@ -338,11 +338,11 @@ const currentYear = new Date().getFullYear();
           <a
             href={`tel:${RESORT_CONTACT.phoneTel || '+917505029696'}`}
             data-track-dl='{"event":"phone_call_click","event_category":"engagement","event_label":"footer_phone_call"}'
-            class="flex items-center hover:text-[#c9a832] transition-colors group"
+            class="flex items-center hover:text-[#7A6038] transition-colors group"
             itemprop="telephone"
             title="Call Whispering Pines Direct Concierge: 075050 29696"
           >
-            <Phone className="w-3.5 h-3.5 text-[#c9a832] mr-2 shrink-0 transition-transform" />
+            <Phone className="w-3.5 h-3.5 text-[#7A6038] mr-2 shrink-0 transition-transform" />
             <div class="flex items-center gap-1.5 flex-wrap">
               <span class="font-mono tracking-wide font-semibold text-xs">075050 29696</span>
               <span class="text-[10px] font-mono text-[#FAF9F6]/60">(+91 75050 29696)</span>
@@ -352,11 +352,11 @@ const currentYear = new Date().getFullYear();
           {/* 4. Official Email */}
           <a
             href={`mailto:${RESORT_CONTACT.email}`}
-            class="flex items-center hover:text-[#c9a832] transition-colors group"
+            class="flex items-center hover:text-[#7A6038] transition-colors group"
             itemprop="email"
             title="Email Whispering Pines Reservations"
           >
-            <Mail className="w-3.5 h-3.5 text-[#c9a832] mr-2 shrink-0 transition-transform" />
+            <Mail className="w-3.5 h-3.5 text-[#7A6038] mr-2 shrink-0 transition-transform" />
             <span class="text-[11px] truncate">{RESORT_CONTACT.email}</span>
           </a>
 
@@ -366,7 +366,7 @@ const currentYear = new Date().getFullYear();
               href={RESORT_CONTACT.googleTravel}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-[#FAF9F6]/5 hover:bg-[#FAF9F6]/10 border border-[#FAF9F6]/15 hover:border-[#c9a832] text-[10px] text-[#FAF9F6] transition-all group shadow-sm"
+              class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-[#FAF9F6]/5 hover:bg-[#FAF9F6]/10 border border-[#FAF9F6]/15 hover:border-[#8A6F4A] text-[10px] text-[#FAF9F6] transition-all group shadow-sm"
               title="View Whispering Pines Resort on Google Travel & Google Hotels"
             >
               <svg class="w-3 h-3 text-[#4285F4] shrink-0" viewBox="0 0 24 24" fill="currentColor">
@@ -378,7 +378,7 @@ const currentYear = new Date().getFullYear();
               href={RESORT_CONTACT.gmapsCid}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#FAF9F6]/5 hover:bg-[#FAF9F6]/10 border border-[#FAF9F6]/15 hover:border-[#c9a832] text-[10px] text-[#FAF9F6] transition-all shadow-sm"
+              class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#FAF9F6]/5 hover:bg-[#FAF9F6]/10 border border-[#FAF9F6]/15 hover:border-[#8A6F4A] text-[10px] text-[#FAF9F6] transition-all shadow-sm"
               title="Verified Google Business Profile Rating (402 Reviews)"
             >
               <span class="text-amber-400 font-bold">★ 4.6</span>
@@ -392,7 +392,7 @@ const currentYear = new Date().getFullYear();
               href="https://casadebello-book.whisperingpinesresort.in/"
               target="_blank"
               rel="noopener noreferrer"
-              class="w-full inline-flex items-center justify-center gap-1.5 bg-[#c9a832] hover:bg-[#FAF9F6] text-[#1B3322] font-mono text-xs font-bold uppercase tracking-wider px-3.5 py-2.5 rounded shadow-md transition-all transform text-center"
+              class="w-full inline-flex items-center justify-center gap-1.5 bg-[#B0966D] hover:bg-[#FAF9F6] text-[#1B3322] font-mono text-xs font-bold uppercase tracking-wider px-3.5 py-2.5 rounded shadow-md transition-all transform text-center"
             >
               <span>WhatsApp Booking</span>
               <ArrowUpRight className="w-3.5 h-3.5 shrink-0" />
@@ -406,15 +406,15 @@ const currentYear = new Date().getFullYear();
     {/* Estate Map Full Width Row */}
     <div class="py-8 border-b border-[#FAF9F6]/10">
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
-        <h4 class="text-xs font-mono uppercase tracking-[0.2em] text-[#c9a832] font-semibold flex items-center gap-2">
-          <MapPin className="w-3.5 h-3.5 text-[#c9a832]" /> 
+        <h4 class="text-xs font-mono uppercase tracking-[0.2em] text-[#7A6038] font-semibold flex items-center gap-2">
+          <MapPin className="w-3.5 h-3.5 text-[#7A6038]" /> 
           <span>Estate Map & Verified Google Business Profile (GBP)</span>
         </h4>
         <span class="text-[11px] font-mono text-[#FAF9F6]/60">
           Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Uttarakhand 263137 • GPS: 29.4262° N, 79.5506° E
         </span>
       </div>
-      <div class="w-full h-56 sm:h-72 rounded-xl overflow-hidden shadow-xl border border-[#c9a832]/20">
+      <div class="w-full h-56 sm:h-72 rounded-xl overflow-hidden shadow-xl border border-[#8A6F4A]/20">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3475.0886542866456!2d79.5506314!3d29.4262052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0a3285f1c95a9%3A0x74636d4e06267d3e!2sWhispering%20Pines%20Resort%20by%20casa%20de%20bello!5e0!3m2!1sen!2sin!4v1784812384641!5m2!1sen!2sin" 
           width="100%" 
@@ -429,15 +429,15 @@ const currentYear = new Date().getFullYear();
       </div>
       <div class="pt-3 flex flex-wrap items-center justify-between gap-3 text-xs text-[#FAF9F6]/70">
         <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-[#c9a832]"></span>
+          <span class="w-2 h-2 rounded-full bg-[#B0966D]"></span>
           <span class="font-mono text-[11px]">Altitude: 1,780m • 180° Nanda Devi & Trishul Himalayan Views</span>
         </div>
         <div class="flex items-center gap-4 text-[11px] font-mono">
-          <a href={RESORT_CONTACT.gmapsLink} target="_blank" rel="noopener noreferrer" class="hover:text-[#c9a832] transition-colors underline flex items-center gap-1">
+          <a href={RESORT_CONTACT.gmapsLink} target="_blank" rel="noopener noreferrer" class="hover:text-[#7A6038] transition-colors underline flex items-center gap-1">
             <span>Get Directions (Google Maps)</span>
             <ArrowUpRight className="w-3 h-3" />
           </a>
-          <a href={RESORT_CONTACT.gmapsCid} target="_blank" rel="noopener noreferrer" class="hover:text-[#c9a832] transition-colors underline flex items-center gap-1">
+          <a href={RESORT_CONTACT.gmapsCid} target="_blank" rel="noopener noreferrer" class="hover:text-[#7A6038] transition-colors underline flex items-center gap-1">
             <span>Google Business Profile (CID)</span>
             <ArrowUpRight className="w-3 h-3" />
           </a>
@@ -448,23 +448,23 @@ const currentYear = new Date().getFullYear();
     {/* Footer Bottom Copyrights & Legal Panel */}
     <div class="pt-8 flex flex-col lg:flex-row items-center justify-between gap-6 text-xs font-sans text-[#FAF9F6]/65 text-center lg:text-left">
       <div class="space-y-2">
-        <p>© {currentYear} Whispering Pines Resort by Casa De Bello. Operated by <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#c9a832] transition-colors">Casa De Bello - Luxury Resort Hotel in Mukteshwar, Nainital</a>.</p>
+        <p>© {currentYear} Whispering Pines Resort by Casa De Bello. Operated by <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#7A6038] transition-colors">Casa De Bello - Luxury Resort Hotel in Mukteshwar, Nainital</a>.</p>
         <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-[11px] font-sans">
-          <a href="/privacy-policy/" data-astro-prefetch="hover" class="hover:text-[#c9a832] transition-colors">Privacy Policy</a>
+          <a href="/privacy-policy/" data-astro-prefetch="hover" class="hover:text-[#7A6038] transition-colors">Privacy Policy</a>
           <span class="text-[#FAF9F6]/30">•</span>
-          <a href="/terms/" data-astro-prefetch="hover" class="hover:text-[#c9a832] transition-colors">Terms & Conditions</a>
+          <a href="/terms/" data-astro-prefetch="hover" class="hover:text-[#7A6038] transition-colors">Terms & Conditions</a>
           <span class="text-[#FAF9F6]/30">•</span>
-          <a href="/sitemap/" data-astro-prefetch="hover" class="hover:text-[#c9a832] transition-colors">Sitemap</a>
+          <a href="/sitemap/" data-astro-prefetch="hover" class="hover:text-[#7A6038] transition-colors">Sitemap</a>
           <span class="text-[#FAF9F6]/30">•</span>
-          <a href="https://casadebello.whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" class="text-[#c9a832] hover:text-[#FAF9F6] transition-colors font-medium">Casa De Bello Edition</a>
+          <a href="https://casadebello.whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" class="text-[#7A6038] hover:text-[#FAF9F6] transition-colors font-medium">Casa De Bello Edition</a>
         </div>
         <p class="text-[11px] text-[#FAF9F6]/70 pt-0.5">
-          Website Developed by <a href="https://growguest.in/" target="_blank" rel="noopener" class="text-[#c9a832] hover:underline transition-colors font-medium">Growguest</a>
+          Website Developed by <a href="https://growguest.in/" target="_blank" rel="noopener" class="text-[#7A6038] hover:underline transition-colors font-medium">Growguest</a>
         </p>
       </div>
 
       <div class="text-center lg:text-right space-y-1">
-        <p class="font-mono text-xs text-[#c9a832]">
+        <p class="font-mono text-xs text-[#7A6038]">
           Official Domain: <a href={RESORT_CONTACT.domain} class="hover:underline text-[#FAF9F6]">{RESORT_CONTACT.domain.replace("https://", "")}</a>
         </p>
         <p class="text-[10px] text-[#FAF9F6]/40 font-mono">Conversion Optimized WhatsApp Direct Reservations</p>

@@ -92,7 +92,7 @@ Please confirm availability and share direct booking privileges.`;
         
         {/* Header Block */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-mono tracking-widest text-[#c9a832] uppercase block mb-2 font-semibold">
+          <span className="text-xs font-mono tracking-widest text-[#B0966D] uppercase block mb-2 font-semibold">
             Direct Reservation Estimator
           </span>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-[#1B3322]">
@@ -102,13 +102,13 @@ Please confirm availability and share direct booking privileges.`;
             <div className="mt-6 mb-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center justify-center max-w-3xl mx-auto border-y border-[#1B3322]/10 py-6">
               {features.map((feat, idx) => (
                 <div key={idx} className="flex items-center justify-center text-xs text-[#2C3531]/80">
-                  <span className="w-1.5 h-1.5 bg-[#c9a832] rounded-full mr-2.5 shrink-0" />
+                  <span className="w-1.5 h-1.5 bg-[#B0966D] rounded-full mr-2.5 shrink-0" />
                   <h3 className="font-sans font-light leading-relaxed">{feat}</h3>
                 </div>
               ))}
             </div>
           )}
-          <div className="w-16 h-[2px] bg-[#c9a832] mx-auto mt-4 mb-6" />
+          <div className="w-16 h-[2px] bg-[#B0966D] mx-auto mt-4 mb-6" />
           <p className="text-sm sm:text-base text-[#2C3531]/80 font-sans leading-relaxed">
             Customize your stay dates and preferred accommodation below. When booking direct on WhatsApp or our official portal, you eliminate third-party commissions, lock in guaranteed best rates, and receive complimentary bonfire & orchard privileges.
           </p>
@@ -120,7 +120,7 @@ Please confirm availability and share direct booking privileges.`;
           {/* Interactive Inputs Form - Left */}
           <form className="p-6 sm:p-10 lg:col-span-7 space-y-6" onSubmit={(e) => e.preventDefault()}>
             <h3 className="font-display text-xl font-bold text-[#1B3322] flex items-center">
-              <Home className="w-5 h-5 text-[#c9a832] mr-2" />
+              <Home className="w-5 h-5 text-[#7A6038] mr-2" />
               1. Customize Your Stay
             </h3>
             
@@ -134,7 +134,7 @@ Please confirm availability and share direct booking privileges.`;
                   id="room-select"
                   value={selectedRoomId}
                   onChange={(e) => setSelectedRoomId(e.target.value)}
-                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#c9a832] rounded py-3 pl-3.5 pr-8 text-[13px] font-medium text-[#1B3322] focus:outline-none transition-colors appearance-none cursor-pointer"
+                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded py-3 pl-3.5 pr-8 text-[13px] font-medium text-[#1B3322] focus:outline-none transition-colors appearance-none cursor-pointer"
                 >
                   {FORM_ROOM_OPTIONS.map((room) => (
                     <option key={room.id} value={room.id}>
@@ -152,7 +152,7 @@ Please confirm availability and share direct booking privileges.`;
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <label htmlFor="checkin-date" className="text-[11px] font-mono uppercase tracking-wider text-[#2C3531]/70 block font-semibold flex items-center">
-                  <Calendar className="w-4 h-4 text-[#c9a832] mr-1" />
+                  <Calendar className="w-4 h-4 text-[#7A6038] mr-1" />
                   Check-In
                 </label>
                 <input
@@ -160,13 +160,13 @@ Please confirm availability and share direct booking privileges.`;
                   id="checkin-date"
                   value={checkIn}
                   onChange={(e) => setCheckIn(e.target.value)}
-                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#c9a832] rounded py-2.5 px-3 text-[13px] font-medium text-[#1B3322] focus:outline-none transition-colors cursor-pointer"
+                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded py-2.5 px-3 text-[13px] font-medium text-[#1B3322] focus:outline-none transition-colors cursor-pointer"
                 />
               </div>
 
               <div className="space-y-2">
                 <label htmlFor="checkout-date" className="text-[11px] font-mono uppercase tracking-wider text-[#2C3531]/70 block font-semibold flex items-center">
-                  <Calendar className="w-4 h-4 text-[#c9a832] mr-1" />
+                  <Calendar className="w-4 h-4 text-[#7A6038] mr-1" />
                   Check-Out
                 </label>
                 <input
@@ -174,7 +174,7 @@ Please confirm availability and share direct booking privileges.`;
                   id="checkout-date"
                   value={checkOut}
                   onChange={(e) => setCheckOut(e.target.value)}
-                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#c9a832] rounded py-2.5 px-3 text-[13px] font-medium text-[#1B3322] focus:outline-none transition-colors cursor-pointer"
+                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded py-2.5 px-3 text-[13px] font-medium text-[#1B3322] focus:outline-none transition-colors cursor-pointer"
                 />
               </div>
             </div>
@@ -182,7 +182,7 @@ Please confirm availability and share direct booking privileges.`;
             {/* Input Guest Counts dropdown */}
             <div className="space-y-2">
               <label htmlFor="guests-count" className="text-[11px] font-mono uppercase tracking-wider text-[#2C3531]/70 block font-semibold flex items-center">
-                <Users className="w-4 h-4 text-[#c9a832] mr-1" />
+                <Users className="w-4 h-4 text-[#7A6038] mr-1" />
                 Number of Guests
               </label>
               <div className="relative">
@@ -190,7 +190,7 @@ Please confirm availability and share direct booking privileges.`;
                   id="guests-count"
                   value={guestsCount}
                   onChange={(e) => setGuestsCount(e.target.value)}
-                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#c9a832] rounded py-2.5 pl-3.5 pr-8 text-[13px] font-medium text-[#1B3322] focus:outline-none transition-colors appearance-none cursor-pointer"
+                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded py-2.5 pl-3.5 pr-8 text-[13px] font-medium text-[#1B3322] focus:outline-none transition-colors appearance-none cursor-pointer"
                 >
                   <option value="1 Adult">1 Adult</option>
                   <option value="2 Adults">2 Adults (Couple)</option>
@@ -207,7 +207,7 @@ Please confirm availability and share direct booking privileges.`;
 
             {/* Inclusions VIP List */}
             <div className="pt-2 border-t border-[#1B3322]/10 space-y-2">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#c9a832] font-semibold block">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#7A6038] font-semibold block">
                 Direct Booking VIP Inclusions:
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#2C3531]/80">
@@ -238,7 +238,7 @@ Please confirm availability and share direct booking privileges.`;
                 <h3 className="font-display text-xl sm:text-2xl font-medium text-[#FAF9F6]">
                   Reservation Summary
                 </h3>
-                <span className="bg-[#c9a832]/20 text-[#c9a832] border border-[#c9a832]/30 text-[10px] font-mono uppercase px-2 py-0.5 rounded">
+                <span className="bg-[#B0966D]/20 text-[#C4A77D] border border-[#8A6F4A]/30 text-[10px] font-mono uppercase px-2 py-0.5 rounded">
                   Best Rate
                 </span>
               </div>
@@ -272,7 +272,7 @@ Please confirm availability and share direct booking privileges.`;
                 </div>
 
                 <div className="flex justify-between items-baseline">
-                  <span className="text-xs uppercase font-mono tracking-wider text-[#c9a832] font-semibold flex items-center gap-1">
+                  <span className="text-xs uppercase font-mono tracking-wider text-[#7A6038] font-semibold flex items-center gap-1">
                     <Sparkles className="w-3 h-3" />
                     Direct Booking Rate:
                   </span>
@@ -281,7 +281,7 @@ Please confirm availability and share direct booking privileges.`;
                   </div>
                 </div>
 
-                <div className="mt-2 pt-2 border-t border-[#FAF9F6]/10 flex items-center justify-between text-[11px] font-mono text-[#c9a832]">
+                <div className="mt-2 pt-2 border-t border-[#FAF9F6]/10 flex items-center justify-between text-[11px] font-mono text-[#7A6038]">
                   <span>Direct Savings Guarantee:</span>
                   <span className="font-bold">~₹{directSavings.toLocaleString("en-IN")} Saved</span>
                 </div>

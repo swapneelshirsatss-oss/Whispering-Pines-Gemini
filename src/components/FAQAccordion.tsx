@@ -34,13 +34,13 @@ export default function FAQAccordion({
         
         {/* Header Block */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-mono tracking-widest text-[#c9a832] uppercase block mb-2 font-semibold">
+          <span className="text-xs font-mono tracking-widest text-[#7A6038] uppercase block mb-2 font-semibold">
             Answering Your Questions
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1B3322]">
             {title}
           </h2>
-          <div className="w-16 h-[2px] bg-[#c9a832] mx-auto mt-4 mb-6" />
+          <div className="w-16 h-[2px] bg-[#B0966D] mx-auto mt-4 mb-6" />
           <p className="text-sm text-[#2C3531]/80 font-sans leading-relaxed">
             {description}
           </p>
@@ -90,7 +90,7 @@ export default function FAQAccordion({
             return (
               <article
                 key={idx}
-                className="bg-white border rounded-sm border-[#2C3531]/10 overflow-hidden transition-all duration-300 hover:border-[#c9a832]/40 shadow-xs"
+                className="bg-white border rounded-sm border-[#2C3531]/10 overflow-hidden transition-all duration-300 hover:border-[#8A6F4A]/40 shadow-xs"
               >
                 {/* FAQ Header Click Trigger Button */}
                 <button
@@ -100,10 +100,10 @@ export default function FAQAccordion({
                   aria-expanded={isOpen}
                 >
                   <span className="font-display font-bold text-[#1B3322] text-base sm:text-lg flex items-center">
-                    <HelpCircle className="w-5 h-5 text-[#c9a832] mr-3 shrink-0" />
+                    <HelpCircle className="w-5 h-5 text-[#B0966D] mr-3 shrink-0" />
                     <span>{faq.question}</span>
                   </span>
-                  <span className="text-[#c9a832] shrink-0">
+                  <span className="text-[#B0966D] shrink-0">
                     {isOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
                   </span>
                 </button>

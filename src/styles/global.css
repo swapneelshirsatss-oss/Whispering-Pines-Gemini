@@ -5,20 +5,55 @@
   --font-display: "Playfair Display", Georgia, serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
   
-  --color-brand-green: #1B3322;
-  --color-brand-green-light: #2A4832;
-  --color-brand-gold: #c9a832;
-  --color-brand-gold-dark: #A6875D;
-  --color-brand-cream: #FAF9F6;
-  --color-brand-dark: #2C3531;
+  /* ---------------------------------------------------------------
+     SURFACES  — one palette. The former brand-* / earth-* split
+     defined two creams, two darks and two greens, which guaranteed drift.
+     --------------------------------------------------------------- */
+  --color-pine: #1B3322;          /* primary dark: nav, footer, hero ground */
+  --color-pine-light: #2A4832;    /* hover on pine */
+  --color-pine-deep: #142619;     /* dropdowns, layering over pine */
+  --color-cream: #FAF9F6;         /* page ground */
+  --color-ink: #2C3531;           /* body text on cream */
+  --color-sand: #E6E0D6;          /* hairlines, dividers, card borders */
 
-  /* Anurra & Maati Living Earth & Linen Palette */
-  --color-earth-linen: #FBF9F5;
-  --color-earth-limewash: #F7F4EC;
-  --color-earth-sandstone: #E6E0D6;
-  --color-earth-terracotta: #C27847;
-  --color-earth-charcoal: #2C3330;
-  --color-earth-pine: #1E3A2F;
+  /* ---------------------------------------------------------------
+     BRASS — replaces #c9a832, an acid yellow that reads costume
+     jewellery and fails WCAG AA on cream (2.18:1).
+
+     No single accent can pass AA against BOTH pine and cream, so the
+     accent is split by surface. Always pick by background:
+       on pine  -> --color-brass      4.81:1  AA
+       on cream -> --color-brass-ink  5.61:1  AA
+     --color-brass-line is decorative only (borders, rules). Never text.
+     --------------------------------------------------------------- */
+  --color-brass: #B0966D;
+  --color-brass-light: #C4A77D;   /* hover on pine; 5.94:1 */
+  --color-brass-ink: #7A6038;
+  --color-brass-line: #8A6F4A;
+
+  /* FUNCTIONAL — fixed meanings, never decorative */
+  --color-whatsapp: #25D366;
+  --color-whatsapp-dark: #1EBE5D;
+  --color-call: #C27847;          /* terracotta, phone CTA */
+  --color-call-dark: #B06A3C;
+
+  /* ---------------------------------------------------------------
+     TYPE SCALE — 6 steps. Pairing is Playfair Display + Inter, which
+     the UI dataset ranks first for luxury/editorial/hospitality.
+     Mono is for NUMERALS ONLY (tariffs, distances, phone numbers);
+     it is not a UI voice. Body is 17px, not 12px.
+     --------------------------------------------------------------- */
+  --text-display: clamp(2.5rem, 5vw, 4.5rem);
+  --text-h2: clamp(1.75rem, 3vw, 2.75rem);
+  --text-h3: 1.25rem;
+  --text-body: 1.0625rem;         /* 17px */
+  --text-small: 0.875rem;         /* 14px */
+  --text-micro: 0.75rem;          /* 12px — legal/meta only */
+
+  /* GEOMETRY — 2 radii, 1 shadow. */
+  --radius-base: 4px;
+  --radius-pill: 9999px;
+  --shadow-float: 0 8px 28px -6px rgba(27, 51, 34, 0.18);
 
   --animate-fade-in: fade-in 0.2s ease-out;
   --animate-fade-in-up: fade-in-up 0.2s ease-out;
@@ -124,7 +159,7 @@ p {
   outline-offset: 2px;
 }
 .focus-ring:focus-visible {
-  outline: 2px solid var(--color-brand-gold);
+  outline: 2px solid var(--color-brass);
   outline-offset: 2px;
 }
 
@@ -162,7 +197,7 @@ p {
   font-size: 3.5rem;
   line-height: 0.85;
   font-weight: 700;
-  color: var(--color-brand-green);
+  color: var(--color-pine);
   padding-right: 0.6rem;
   padding-top: 0.2rem;
 }

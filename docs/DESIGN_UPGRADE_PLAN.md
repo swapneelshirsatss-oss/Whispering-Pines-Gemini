@@ -1,6 +1,6 @@
 # UI & Graphics Upgrade Plan — Whispering Pines Resort
 
-**Status:** Draft for approval
+**Status:** Phases 0 and 1 shipped; Phase 2 next
 **Date:** 2026-10-21
 **Scope:** 74 source files, 21,819 lines, 137 image assets
 **Goal:** Premium, minimal, free of generative-design tells — without losing SEO or conversions
@@ -109,12 +109,19 @@ Three principles, each falsifiable against the audit numbers above.
 | `pine-deep` | `#142619` | Dropdowns, over-dark layering |
 | `cream` | `#FAF9F6` | Page ground |
 | `ink` | `#2C3531` | Body text |
-| `brass` | `#A6875D` | Accent — **replaces `#c9a832`** |
+| `brass` | `#B0966D` | Accent on **dark** surfaces — 4.81:1 on pine |
+| `brass-light` | `#C4A77D` | Hover on dark — 5.94:1 on pine |
+| `brass-ink` | `#7A6038` | Accent text on **light** surfaces — 5.61:1 on cream |
+| `brass-line` | `#8A6F4A` | Decorative rules and borders only, never text |
 | `sand` | `#E6E0D6` | Hairlines, dividers |
 
 Functional only, never decorative: `#25D366` WhatsApp, `#C27847` terracotta (call), one error red.
 
-**The gold change is the biggest single visual upgrade in this document.** `#c9a832` is an acid yellow-gold that reads costume-jewellery at the sizes it's used (1,168 occurrences). `#A6875D` — already defined in your CSS as `--color-brand-gold-dark` — is a credible brass. One token, site-wide effect.
+**The gold change is the biggest single visual upgrade in this document.** `#c9a832` is an acid yellow-gold that reads costume-jewellery at the sizes it's used (1,168 occurrences).
+
+**Correction to an earlier draft of this plan:** it proposed a single replacement, `#A6875D`. Contrast testing proved that wrong — `#A6875D` scores **4.05:1** on pine and fails AA for normal text. Worse, no *single* accent can pass AA against both pine (`#1B3322`) and cream (`#FAF9F6`); the two grounds sit too far apart in luminance for any one colour to clear 4.5:1 on both. The accent therefore **must** split by surface, which is why the table above has four entries rather than one.
+
+This also fixes a pre-existing failure: `#c9a832` on cream scores **2.18:1**, so every gold eyebrow label on a light section was already below AA.
 
 Merge `brand-*` and `earth-*` into one set. Delete the loser.
 
@@ -172,7 +179,7 @@ Ordered by **leverage ÷ risk**. Each phase is one commit, independently reverta
 | # | Phase | Scale | Risk | SEO |
 |---|---|---|---|---|
 | ✅ 0 | Decoration strip + copy *(shipped)* | −178 lines | — | verified 0 impact |
-| 1 | **Colour tokenisation + brass** | ~4,199 edits | Low | None |
+| ✅ 1 | **Colour tokenisation + brass** *(shipped)* | 1,243 edits | Low | verified 0 impact |
 | 2 | **Typography** | ~1,200 edits | Medium | None |
 | 3 | Geometry — radius, spacing, elevation | ~1,900 edits | Low | None |
 | 4 | Components — dedupe, icons, dead code | ~90 edits | Low | None |

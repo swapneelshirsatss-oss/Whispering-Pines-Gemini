@@ -115,10 +115,10 @@ export default function Navbar({ children }: NavbarProps) {
                     <a
                       href={link.href}
                       data-astro-prefetch="hover"
-                      className="text-xs lg:text-sm font-medium tracking-wide transition-all duration-200 text-[#FAF9F6]/90 group-hover:text-[#c9a832] flex items-center gap-1 py-1"
+                      className="text-xs lg:text-sm font-medium tracking-wide transition-all duration-200 text-[#FAF9F6]/90 group-hover:text-[#B0966D] flex items-center gap-1 py-1"
                     >
                       {link.name}
-                      <ChevronDown className="w-3.5 h-3.5 text-[#c9a832]/80 group-hover:rotate-180 transition-transform duration-200" />
+                      <ChevronDown className="w-3.5 h-3.5 text-[#B0966D]/80 group-hover:rotate-180 transition-transform duration-200" />
                     </a>
                     {/* Dropdown Menu */}
                     <div className="absolute top-full -left-3 pt-2 w-72 opacity-0 translate-y-1 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-200 z-50">
@@ -131,11 +131,11 @@ export default function Navbar({ children }: NavbarProps) {
                             className="block px-3.5 py-2.5 rounded-lg hover:bg-white/10 transition-colors group/item"
                           >
                             <div className="flex items-center justify-between">
-                              <span className="text-xs font-semibold text-white group-hover/item:text-[#c9a832] transition-colors">
+                              <span className="text-xs font-semibold text-white group-hover/item:text-[#7A6038] transition-colors">
                                 {subItem.name}
                               </span>
                               {subItem.badge && (
-                                <span className="text-[10px] font-mono font-medium px-2 py-0.5 rounded bg-[#c9a832]/20 text-[#c9a832] border border-[#c9a832]/30">
+                                <span className="text-[10px] font-mono font-medium px-2 py-0.5 rounded bg-[#B0966D]/20 text-[#C4A77D] border border-[#8A6F4A]/30">
                                   {subItem.badge}
                                 </span>
                               )}
@@ -172,8 +172,8 @@ export default function Navbar({ children }: NavbarProps) {
                   }}
                   className={`text-xs lg:text-sm font-medium tracking-wide transition-all duration-200 ${
                     link.highlight
-                      ? "text-[#c9a832] font-semibold hover:text-[#FAF9F6]"
-                      : "text-[#FAF9F6]/90 hover:text-[#c9a832]"
+                      ? "text-[#7A6038] font-semibold hover:text-[#FAF9F6]"
+                      : "text-[#FAF9F6]/90 hover:text-[#7A6038]"
                   }`}
                 >
                   {link.name}
@@ -187,10 +187,10 @@ export default function Navbar({ children }: NavbarProps) {
             <a
               href={`tel:${PHONE_TEL}`}
               onClick={() => trackAdsConversion("phone_call_click", "engagement", "header_phone_call")}
-              className="flex items-center text-[11px] font-mono tracking-wider text-[#FAF9F6]/85 hover:text-[#c9a832] transition-colors"
+              className="flex items-center text-[11px] font-mono tracking-wider text-[#FAF9F6]/85 hover:text-[#7A6038] transition-colors"
               title="Call Whispering Pines Direct Front Desk: 075050 29696"
             >
-              <Phone className="w-3.5 h-3.5 mr-1.5 text-[#c9a832]" />
+              <Phone className="w-3.5 h-3.5 mr-1.5 text-[#7A6038]" />
               {PHONE_DISPLAY}
             </a>
             <a
@@ -198,7 +198,7 @@ export default function Navbar({ children }: NavbarProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleNavBookingClick}
-              className="bg-[#c9a832] hover:bg-[#FAF9F6] text-[#1B3322] hover:text-[#1B3322] text-[10px] font-mono font-bold uppercase tracking-[0.18em] px-5 py-2.5 rounded-sm flex items-center transition-all duration-300 shadow-luxury-sm"
+              className="bg-[#B0966D] hover:bg-[#FAF9F6] text-[#1B3322] hover:text-[#1B3322] text-[10px] font-mono font-bold uppercase tracking-[0.18em] px-5 py-2.5 rounded-sm flex items-center transition-all duration-300 shadow-luxury-sm"
             >
               <span>Book Stay</span>
               <ArrowUpRight className="w-3.5 h-3.5 ml-1.5 opacity-80" />
@@ -212,13 +212,13 @@ export default function Navbar({ children }: NavbarProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleNavBookingClick}
-              className="bg-[#c9a832] text-[#1B3322] text-[10px] font-mono font-bold uppercase tracking-wider px-3.5 py-2 rounded-sm flex items-center shadow-md active:scale-95 transition-transform"
+              className="bg-[#B0966D] text-[#1B3322] text-[10px] font-mono font-bold uppercase tracking-wider px-3.5 py-2 rounded-sm flex items-center shadow-md active:scale-95 transition-transform"
             >
               Book Stay
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-[#FAF9F6] hover:text-[#c9a832] p-2 focus:outline-none -mr-2"
+              className="text-[#FAF9F6] hover:text-[#7A6038] p-2 focus:outline-none -mr-2"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
@@ -237,10 +237,10 @@ export default function Navbar({ children }: NavbarProps) {
           <a
             href="/book-now/"
             onClick={() => setIsOpen(false)}
-            className="flex items-center justify-between p-3 rounded bg-[#c9a832]/15 border border-[#c9a832]/40 text-[#c9a832] font-mono text-xs tracking-wider uppercase font-bold mb-3 hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors"
+            className="flex items-center justify-between p-3 rounded bg-[#B0966D]/15 border border-[#8A6F4A]/40 text-[#C4A77D] font-mono text-xs tracking-wider uppercase font-bold mb-3 hover:bg-[#B0966D] hover:text-[#1B3322] transition-colors"
           >
             <span>Direct Booking VIP Privileges</span>
-            <span className="text-[10px] font-normal lowercase bg-[#c9a832]/20 px-2 py-0.5 rounded">save 25%</span>
+            <span className="text-[10px] font-normal lowercase bg-[#B0966D]/20 px-2 py-0.5 rounded">save 25%</span>
           </a>
           {mobileNavLinks.map((link) => {
             if (link.dropdown) {
@@ -249,10 +249,10 @@ export default function Navbar({ children }: NavbarProps) {
                   <button
                     type="button"
                     onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                    className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-[#FAF9F6]/95 hover:text-[#c9a832] hover:bg-[#FAF9F6]/5 rounded-sm transition-colors text-left"
+                    className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-[#FAF9F6]/95 hover:text-[#7A6038] hover:bg-[#FAF9F6]/5 rounded-sm transition-colors text-left"
                   >
                     <span>{link.name}</span>
-                    <ChevronDown className={`w-4 h-4 text-[#c9a832] transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} />
+                    <ChevronDown className={`w-4 h-4 text-[#7A6038] transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} />
                   </button>
                   {mobileServicesOpen && (
                     <div className="pl-4 pr-2 pb-2 space-y-1 bg-black/20 rounded-md">
@@ -262,7 +262,7 @@ export default function Navbar({ children }: NavbarProps) {
                           href={sub.href}
                           data-astro-prefetch="hover"
                           onClick={() => setIsOpen(false)}
-                          className="block px-3 py-2 text-sm text-[#FAF9F6]/90 hover:text-[#c9a832] rounded transition-colors"
+                          className="block px-3 py-2 text-sm text-[#FAF9F6]/90 hover:text-[#7A6038] rounded transition-colors"
                         >
                           {sub.name}
                         </a>
@@ -293,8 +293,8 @@ export default function Navbar({ children }: NavbarProps) {
                   setIsOpen(false);
                 }}
                 className={`block px-4 py-3 text-base font-medium rounded-sm transition-colors ${link.external
-                    ? "text-[#c9a832] font-semibold hover:bg-[#FAF9F6]/5"
-                    : "text-[#FAF9F6]/95 hover:text-[#c9a832] hover:bg-[#FAF9F6]/5"
+                    ? "text-[#7A6038] font-semibold hover:bg-[#FAF9F6]/5"
+                    : "text-[#FAF9F6]/95 hover:text-[#7A6038] hover:bg-[#FAF9F6]/5"
                   }`}
               >
                 {link.name}
@@ -304,35 +304,35 @@ export default function Navbar({ children }: NavbarProps) {
 
           {/* Quick Persona Chips */}
           <div className="pt-3 pb-1 border-t border-[#FAF9F6]/10">
-            <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#c9a832] block px-4 mb-2 font-semibold">
+            <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#7A6038] block px-4 mb-2 font-semibold">
               Stays &amp; Celebrations
             </span>
             <div className="grid grid-cols-2 gap-2 px-4 text-xs font-mono">
               <a
                 href="/destination-wedding-uttarakhand/"
                 onClick={() => setIsOpen(false)}
-                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors text-center"
+                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#1B3322] transition-colors text-center"
               >
                 💍 Weddings (100 Pax)
               </a>
               <a
                 href="/corporate-offsite-resort-mukteshwar/"
                 onClick={() => setIsOpen(false)}
-                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors text-center"
+                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#1B3322] transition-colors text-center"
               >
                 💼 Conferences &amp; MICE
               </a>
               <a
                 href="/private-villas-near-nainital/"
                 onClick={() => setIsOpen(false)}
-                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors text-center"
+                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#1B3322] transition-colors text-center"
               >
                 🏡 3-BHK Villa (10 Pax)
               </a>
               <a
                 href="/clarks-exotica-resort-ramgarh-mukteshwar/"
                 onClick={() => setIsOpen(false)}
-                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#c9a832] hover:text-[#1B3322] transition-colors text-center"
+                className="p-2 rounded bg-[#FAF9F6]/5 text-[#FAF9F6] hover:bg-[#B0966D] hover:text-[#1B3322] transition-colors text-center"
               >
                 🌲 Clarks Exotica Guests
               </a>
@@ -345,7 +345,7 @@ export default function Navbar({ children }: NavbarProps) {
               onClick={() => trackAdsConversion("phone_call_click", "engagement", "mobile_phone_call")}
               className="flex items-center text-base font-mono text-[#FAF9F6]/85 p-2 -ml-2"
             >
-              <Phone className="w-5 h-5 mr-3 text-[#c9a832]" />
+              <Phone className="w-5 h-5 mr-3 text-[#7A6038]" />
               {PHONE_DISPLAY} <span className="text-xs text-[#FAF9F6]/50 ml-2">(+91 75050 29696)</span>
             </a>
 
@@ -357,7 +357,7 @@ export default function Navbar({ children }: NavbarProps) {
                 setIsOpen(false);
                 handleNavBookingClick();
               }}
-              className="w-full text-center bg-[#c9a832] text-[#1B3322] font-bold uppercase tracking-wider py-3.5 rounded-sm flex items-center justify-center transition-colors shadow-md active:scale-95"
+              className="w-full text-center bg-[#B0966D] text-[#1B3322] font-bold uppercase tracking-wider py-3.5 rounded-sm flex items-center justify-center transition-colors shadow-md active:scale-95"
             >
               Instant Booking (WhatsApp)
               <ArrowUpRight className="w-5 h-5 ml-1.5" />
@@ -365,7 +365,7 @@ export default function Navbar({ children }: NavbarProps) {
 
             {/* Google Preferred Source Button in Mobile Menu */}
             <div className="pt-2 flex flex-col items-center">
-              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#c9a832] block mb-2 font-semibold text-center">
+              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#7A6038] block mb-2 font-semibold text-center">
                 Google Preferred Source
               </span>
               <div
