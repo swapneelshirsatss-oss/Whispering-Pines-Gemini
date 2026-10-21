@@ -108,7 +108,7 @@ Please confirm availability and share direct booking privileges.`;
               ))}
             </div>
           )}
-          <div className="w-16 h-[2px] bg-[#B0966D] mx-auto mt-4 mb-6" />
+          <div className="w-16 rule-brass-left mx-auto mt-4 mb-6" />
           <p className="text-sm sm:text-base text-[#2C3531]/80 font-sans leading-relaxed">
             Customize your stay dates and preferred accommodation below. When booking direct on WhatsApp or our official portal, you eliminate third-party commissions, lock in guaranteed best rates, and receive complimentary bonfire & orchard privileges.
           </p>

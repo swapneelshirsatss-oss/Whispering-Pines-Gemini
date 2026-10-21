@@ -73,7 +73,7 @@ export default function DistanceTransitMatrix({
             <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0E2C21] tracking-tight">
               {title}
             </h2>
-            <div className="w-16 h-[2px] bg-[#B0966D] mx-auto my-3.5"></div>
+            <div className="w-16 rule-brass-left mx-auto my-3.5"></div>
             <p className="text-sm sm:text-base text-gray-600 font-sans leading-relaxed">
               {subtitle}
             </p>

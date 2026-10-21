@@ -68,7 +68,7 @@ export default function RoomInventoryList({
               {title}
             </h2>
           )}
-          <div className="w-16 h-[2px] bg-[#B0966D] mx-auto mb-6" />
+          <div className="w-16 rule-brass-left mx-auto mb-6" />
           <p className="text-sm sm:text-base text-[#2C3531]/80 font-sans leading-relaxed">
             Meticulously paneled with local Kumaoni pine and cedar timbers, each suite is an expansive private refuge engineered for absolute serenity. Secure your <strong>Ramgarh resort booking</strong> directly to avoid third-party commissions. Whether you need a private villa for a multi-generational holiday or a deluxe skylight attic suite for a couple's retreat, Whispering Pines by Casa De Bello is the premier <strong>family resort Nainital</strong> visitors recommend for high-altitude peace and genuine local hospitality.
           </p>

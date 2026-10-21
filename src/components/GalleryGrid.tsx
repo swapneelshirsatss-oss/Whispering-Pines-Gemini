@@ -188,7 +188,7 @@ export default function GalleryGrid() {
               </span>
             </div>
             {/* Hover Caption Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0E2C21]/90 via-[#0E2C21]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+            <div className="absolute inset-0 scrim-caption opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
               <span className="text-[#FAF9F6] font-display text-sm sm:text-base leading-snug drop-shadow-md mb-2">
                 {img.alt}
               </span>

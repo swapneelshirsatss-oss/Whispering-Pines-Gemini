@@ -40,7 +40,7 @@ export default function FAQAccordion({
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#0E2C21]">
             {title}
           </h2>
-          <div className="w-16 h-[2px] bg-[#B0966D] mx-auto mt-4 mb-6" />
+          <div className="w-16 rule-brass-left mx-auto mt-4 mb-6" />
           <p className="text-sm text-[#2C3531]/80 font-sans leading-relaxed">
             {description}
           </p>

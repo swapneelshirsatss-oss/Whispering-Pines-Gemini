@@ -83,7 +83,7 @@ export default function TestimonialList({ layout = "carousel", testimonials = FA
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#FAF9F6]">
             What Our Guests Cherish
           </h2>
-          <div className="w-16 h-[2px] bg-[#B0966D] mx-auto mt-4 mb-6" />
+          <div className="w-16 rule-brass-left mx-auto mt-4 mb-6" />
           <p className="text-sm text-[#FAF9F6]/80 font-sans leading-relaxed">
             Read certified guest reviews from actual families and remote professionals who made 
             Malla Ramgarh's Whispering Pines their home.
