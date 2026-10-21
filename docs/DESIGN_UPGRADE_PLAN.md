@@ -105,9 +105,33 @@ Re-ordered by **felt impact**, not by size. This differs from the previous draft
 Mono to numerals only, the 6-step scale applied, `text-xs` collapsed, `uppercase` cut to eyebrows. Touches ~1,200 call sites. **Needs a screenshot pass per template** — this is the one phase where the build passing proves nothing.
 
 ### Phase 3 — Page composition *(biggest felt gain)*
-- **Amenities:** replace the eight-card grid with photography. Four to six amenities, each a real image with a short caption. Alternate cream and green sections for tonal rhythm.
+- **Amenities:** replace the eight-card grid with a two-tier structure. **Tier one** is four photograph-led amenities that we can actually evidence — views, dining, orchard, terrace — each a full-bleed image with a short caption, alternating cream and green for tonal rhythm. **Tier two** is everything else (Wi-Fi, pet policy, parking, power, pool) as one compact specification list, no cards and no icons. This removes the card soup and stops claiming things we cannot show.
 - **Suites:** take the price off the image. State the rate in the body, once, as a fact. Shorten the eyebrow to three words. Cap the H1 at two lines.
 - **Gallery:** drop the per-tile category pills, reduce the radius, let the grid breathe.
+
+---
+
+## 5a. Photography audit (reviewed at full size, 2026-10-21)
+
+| Amenity claimed on the page | Asset | Verdict |
+|---|---|---|
+| Fruit orchards | `malla-ramgarh-fruit-orchards.avif` | **Excellent.** Ripe peaches on the branch. Editorial quality. |
+| 180° Himalayan views | `View-from-resort-mukteshwar.avif` | **Best image on the site.** Sunrise over a sea of cloud. |
+| Terrace / lounge | `lounge-area-inwhispering-pines...avif` | Strong. Wicker seating, stone column, dawn ridgeline. |
+| Multi-cuisine dining | `Restaurant-cafe-ramgarh.avif`, `Private-Dining-Area-...avif` | Usable. Both run cool/blue and are visually busy. |
+| Banquet / events | `banquest-hall-in-resort.avif` | Good. Warm, well lit. |
+| **Swimming pool** | — | **No photograph exists.** |
+| **Stone fireplace** | — | **No photograph exists.** |
+| **Bonfire pits** | — | **No photograph exists.** |
+| Pet-friendly, parking, power | — | None, and none needed. |
+
+Two consequences.
+
+**The site is advertising a pool, a stone fireplace and bonfire pits with no evidence of any of them.** For a property at this price point that is a credibility gap, not a design one. It is the shortest shot list in this document and the highest return: four or five frames.
+
+**The best photograph on the site is not on the homepage.** `View-from-resort-mukteshwar.avif` — sunrise above a cloud sea — is materially stronger than the balcony shot currently carrying the hero. Swapping it is a one-line change in `index.astro`.
+
+The grading inconsistency is now confirmed at full size: the orchard is saturated and warm, both dining rooms are cool blue, the view is warm orange, the banquet hall is amber. Five images, five looks. This is the whole case for Phase 5.
 
 ### Phase 4 — Geometry
 Radius 10→2, spacing 20→4, shadows 9→2, `backdrop-blur` 47→2.
@@ -146,7 +170,7 @@ Carried from the shipped work, where each of these caught a real mistake:
 
 ## 8. Open questions
 
-1. **Photography for the amenities page** — are there existing shots of the pool, fireplace, orchard and dining room good enough to carry a redesign? Phase 3 depends on this answer more than on anything else.
+1. ~~Photography for the amenities page~~ — **answered, see §5a.** Orchard, dining, terrace and views are covered and strong. Pool, fireplace and bonfire have **no photograph at all**.
 2. **Master image library** — is there an ungraded original set, or are the 137 web assets all that exist? Decides whether Phase 5 is a grade pass or a reshoot brief.
 3. **Printed collateral** — the green moved 13° in hue. If signage or print exists, check a sample before launch.
 4. **Review dates** — still needed to finish attributing the genuine testimonials.
