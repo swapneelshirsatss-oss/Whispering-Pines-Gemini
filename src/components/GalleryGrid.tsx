@@ -122,7 +122,7 @@ export default function GalleryGrid() {
         </h1>
         <div className="w-20 h-[2px] bg-[#c9a832] mx-auto mb-5" />
         <p className="text-[17px] sm:text-lg text-[#2C3531]/80 font-sans leading-relaxed">
-          Explore the tranquil corners, grand alpine architecture, and breathtaking panoramic views that make Whispering Pines the best resort in Ramgarh near Mukteshwar.
+          Explore the tranquil corners, grand alpine architecture, and the panoramic views that make Whispering Pines the best resort in Ramgarh near Mukteshwar.
         </p>
       </div>
 

@@ -175,6 +175,27 @@ All copy, metadata, structured data, calculator models, and LLM text files must 
   - **Pantnagar Airport (PGH)**: `76 km (~2.5 hours drive via NH 109)`
   - **Delhi / NCR**: `~340 km (6.5 to 7.5 hours drive via NH 9)`
 
+## Sticky Direct Booking Bar & Universal Tracking Standards
+
+Whenever maintaining or refactoring bottom conversion bars or global tracking:
+- **Sticky Bar Placement**: Ensure `<StickyDirectBookingBar />` remains mounted globally right before `</body>` in `Layout.astro`.
+- **Mobile Body Padding Invariant**: The sticky bar must enforce `padding-bottom: 68px` on `document.body` for viewports under 768px (via both CSS media query and JavaScript resize handler) so sticky bars never obscure footer text or interactive links.
+- **Dynamic WhatsApp Page Attribution**: The sticky WhatsApp button (`#sticky-direct-wa-btn`) must dynamically append the current `window.location.pathname` to the WhatsApp pre-filled text upon page load, allowing on-site hosts to trace which page converted the guest.
+- **Universal Delegated Click Tracking**: Maintain delegated click listeners for:
+  - `a[href*="wa.me"]`, `a[href*="whatsapp.com"]` -> dispatches `whatsapp_chat_click` (`lead_generation`)
+  - `a[href^="tel:"]` -> dispatches `phone_call_click` (`phone_conversion`)
+  - `a[href*="bookingjini.in"]`, `a[href*="/book-now"]` -> dispatches `booking_engine_click` (`ecommerce`)
+  Dispatches synchronously to both `window.dataLayer` (GTM container `GTM-PL8FVLPX`) and `window.gtag` without inline `onclick` attributes.
+
+## Dynamic FAQPage Schema Standards in Layout
+
+- **Optional `faqs` Prop**: `Layout.astro` accepts an optional `faqs?: Array<{ question: string; answer: string }>` prop and automatically renders a valid Schema.org `FAQPage` JSON-LD block inside `<head>`.
+- **No Schema Duplication**: When passing `faqs` to `<Layout faqs={...}>`, never insert a manual `<script type="application/ld+json">` for `FAQPage` in child page `<Fragment slot="head">`. This prevents duplicate schema errors in Google Rich Results.
+
+## Astro Component Editing Invariants
+
+- **Frontmatter Delimiter Preservation**: Always preserve the opening `---` fence at line 1 of any `.astro` file when performing code edits. Omitting the opening `---` causes Vite/Astro to parse frontmatter JavaScript as JSX/HTML template, throwing fatal compiler errors (`Expected } but found :`).
+
 ## Git & Version Control Rules
 
 - **No Auto-Commit or Auto-Push**: Do NOT perform automatic git commits or git pushes (`git commit`, `git push`). Make all code edits directly in project files and present them for review. Only commit or push to Git when explicitly requested by the user.

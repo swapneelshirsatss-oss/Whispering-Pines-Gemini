@@ -41,4 +41,14 @@ This skill governs all content creation, blog writing, schema generation, and bo
   - **Universal Conversion Dispatcher**: Use `window.trackBookingConversion(action, category, label, extra)` across all CTAs to ensure synchronous dispatch to both Google Ads and GTM (`GTM-PL8FVLPX`).
   - **WhatsApp Attribution Tagging**: Automatically inject `sessionStorage` attribution into WhatsApp payloads so front desk staff can trace ad campaigns directly.
 
+## 6. Direct vs OTA CRO Directives & Comparison Standards
+- **Direct Booking Advantage Representation**: Whenever publishing high-intent pillar guides, accommodation overviews, or travel guides, integrate the `<DirectVsOtaTable />` component to highlight the 3 core direct perks:
+  1. **Tariff**: Flat 20% Direct Savings (Zero OTA portal commission markup).
+  2. **Room Allocation**: Priority 180° unobstructed Nanda Devi & Trishul balcony view upgrade.
+  3. **Perks & Hospitality**: 100% Pet-friendly (₹0 pet surcharge) and flexible check-in coordinated directly with resident host Gaurav Pandey.
+- **Placement Guidelines**:
+  - On room and suite pages: Place `<DirectVsOtaTable />` immediately following the room inventory card list.
+  - On pillar travel guides: Place `<DirectVsOtaTable />` right after the AEO direct answer block or editorial introduction.
+- **Dedicated Pillar Route Architecture**: When a blog guide requires custom interactive Astro components (e.g. `DirectVsOtaTable.astro`), instantiate a dedicated page at `src/pages/blog/<slug>.astro` and define `customUrl: "/blog/<slug>/"` in `src/data/blogPosts.tsx` so `[slug].astro` avoids route conflicts.
+
 

@@ -752,7 +752,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     content: (
       <div className="space-y-6 text-[#2C3531]">
         <p className="text-lg text-gray-700 leading-relaxed font-light">
-          The breathtaking Malla Ramgarh sanctuary you previously knew as Clarks Exotica near Mukteshwar has officially evolved. We are proud to announce our comprehensive rebranding and property upgrade to <strong>Whispering Pines Resort</strong>, now operating exclusively under the premium hospitality management of <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="text-[#c9a832] hover:underline font-semibold">Casa De Bello</a>.
+          The Malla Ramgarh sanctuary you previously knew as Clarks Exotica near Mukteshwar has officially evolved. We are proud to announce our comprehensive rebranding and property upgrade to <strong>Whispering Pines Resort</strong>, now operating exclusively under the premium hospitality management of <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="text-[#c9a832] hover:underline font-semibold">Casa De Bello</a>.
         </p>
 
         <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">What This Transition Means for Our Guests</h2>
@@ -761,7 +761,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         </p>
         <ul className="list-disc pl-6 text-gray-600 space-y-2 font-light">
           <li><strong>Frictionless Service:</strong> Direct-to-guest operational model ensuring rapid response times and personalized itinerary planning.</li>
-          <li><strong>Enhanced Corporate Offsite Capabilities:</strong> Upgraded 150 Mbps fiber Wi-Fi infrastructure and dedicated event spaces for seamless retreats.</li>
+          <li><strong>Enhanced Corporate Offsite Capabilities:</strong> Upgraded 150 Mbps fiber Wi-Fi infrastructure and dedicated event spaces for retreats.</li>
           <li><strong>Private Villa & Pool Amenities:</strong> Introduction of a 3-bedroom private villa and outdoor swimming pool surrounded by pine forest.</li>
         </ul>
 
@@ -1126,7 +1126,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     content: (
       <div className="space-y-6 text-[#2C3531]">
         <p className="text-lg text-gray-700 leading-relaxed font-light">
-          Winter in the Kumaon Himalayas is a magical season. Between November and February, the air in Malla Ramgarh becomes crystal clear, offering the sharpest, most breathtaking 180° views of the snow-capped Nanda Devi, Trishul, and Panchachuli peaks.
+          Winter in the Kumaon Himalayas is a magical season. Between November and February, the air in Malla Ramgarh becomes crystal clear, offering the sharpest 180° views of the snow-capped Nanda Devi, Trishul, and Panchachuli peaks.
         </p>
 
         <h2 className="text-2xl font-bold text-[#1B3322] mt-8 mb-4">Why Winter is the Best Season for Himalayan Peak Views</h2>
@@ -1485,9 +1485,9 @@ export const BLOG_POSTS: BlogPostData[] = [
     id: 5,
     slug: "resort-stay-near-kainchi-dham",
     title: "Best Hotel & Resort Near Kainchi Dham: Where to Stay (2026 Guide)",
-    seoTitle: "4-Star Resort Near Kainchi Dham (45 Mins) | Save 20% Direct",
-    seoDescription: "Stay 45 mins (22 km) from Neem Karoli Baba Ashram at Whispering Pines 4-Star Resort, Ramgarh. 180° Himalayan views, pine pool & parking. Save 20% direct!",
-    excerpt: "Where to stay near Kainchi Dham Ashram (Neem Karoli Baba): a senior-friendly 4-star resort hotel 22 km away in Malla Ramgarh, compared with highway and Bhowali stays. Darshan plan, parking for 25+ cars, and a flat 20% off when you book direct.",
+    seoTitle: "4-Star Resort Near Kainchi Dham (45 Mins) | Save 25% Direct",
+    seoDescription: "Stay 45 mins (22 km) from Neem Karoli Baba Ashram at Whispering Pines 4-Star Resort, Ramgarh. 180° Himalayan views, pine pool & parking. Save 25% direct!",
+    excerpt: "Where to stay near Kainchi Dham Ashram (Neem Karoli Baba): a senior-friendly 4-star resort hotel 22 km away in Malla Ramgarh, compared with highway and Bhowali stays. Darshan plan, parking for 25+ cars, and a flat 25% off when you book direct.",
     date: "August 6, 2026",
     updatedDate: "October 12, 2026",
     readTime: "18 min read",
@@ -1580,7 +1580,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="bg-[#FAF9F6] p-6 rounded-2xl border-l-4 border-[#c9a832] shadow-sm space-y-3">
           <h2 className="text-xs font-bold uppercase tracking-wider text-[#c9a832]">Best 4-Star Resort Near Kainchi Dham: The Quick Answer</h2>
           <p className="text-base text-gray-700 leading-relaxed font-light">
-            Whispering Pines Resort by Casa De Bello is a 4-star mountain resort located 22 km (45 mins) from Kainchi Dham Ashram at 1,780m in Malla Ramgarh, offering 25 rooms, a 10-guest private villa, secure parking, and 20% direct savings with instant host confirmation and scenic Himalayan views.
+            Whispering Pines Resort by Casa De Bello is a 4-star mountain resort located 22 km (45 mins) from Kainchi Dham Ashram at 1,780m in Malla Ramgarh, offering 25 rooms, a 10-guest private villa, secure parking, and 25% direct savings with instant host confirmation and scenic Himalayan views.
           </p>
         </div>
 
@@ -2474,7 +2474,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         </p>
         <ul className="list-disc pl-6 space-y-2 text-gray-700 font-light">
           <li><strong>150 Mbps fiber optic:</strong> Full property coverage outdoors and indoors</li>
-          <li><strong>High-bandwidth work:</strong> Video calls, cloud uploads, streaming — all seamless at altitude</li>
+          <li><strong>High-bandwidth work:</strong> Video calls, cloud uploads, streaming — all stable at altitude</li>
           <li><strong>Workcation leader:</strong> Consistently rated the best workcation resort near Mukteshwar by remote working guests</li>
           <li><strong>Extended stay packages:</strong> Available on direct WhatsApp booking</li>
         </ul>
@@ -2613,7 +2613,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             alt="Accommodation at the best resort to stay near Mukteshwar — villa suite family room cottage Whispering Pines Ramgarh" 
             className="w-full h-80 sm:h-96 object-cover rounded-2xl border border-[#EAE8E3] shadow-md" 
           />
-          <p className="text-xs text-center text-gray-500 mt-2">Bespoke stone and cedar wood accommodation options at Whispering Pines Resort in Malla Ramgarh.</p>
+          <p className="text-xs text-center text-gray-500 mt-2">Stone and cedar wood accommodation options at Whispering Pines Resort in Malla Ramgarh.</p>
         </div>
 
         <p className="text-gray-700 leading-relaxed font-light">
