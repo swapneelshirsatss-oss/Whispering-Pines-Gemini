@@ -98,7 +98,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
                 <span className="font-sans text-[11px] uppercase tracking-wider text-[#0E2C21] font-bold block mb-1">
                   Host Direct Perks Applied
                 </span>
-                <p className="text-xs text-[#2C3531]/80 leading-relaxed">
+                <p className="text-sm text-[#2C3531]/80 leading-relaxed">
                   Direct inquiries receive priority bridal villa allocation and a complimentary on-site menu tasting session.
                 </p>
               </div>
@@ -262,7 +262,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
             {/* Host Perks Callout */}
             <div className="bg-[#FAF9F6] border border-[#8A6F4A]/25 rounded-xl p-4 flex items-start gap-3">
               <Sparkles className="w-4 h-4 text-[#7A6038] shrink-0 mt-0.5" />
-              <p className="text-xs text-[#2C3531]/90 leading-relaxed font-sans">
+              <p className="text-sm text-[#2C3531]/90 leading-relaxed font-sans">
                 <strong className="text-[#0E2C21] font-semibold">Host Perks Privilege:</strong> Direct inquiries receive priority bridal villa allocation and a complimentary on-site menu tasting session.
               </p>
             </div>

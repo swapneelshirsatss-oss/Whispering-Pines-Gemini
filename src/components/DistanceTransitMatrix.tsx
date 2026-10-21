@@ -303,7 +303,7 @@ export default function DistanceTransitMatrix({
             <h3 className="font-display text-xl sm:text-2xl font-bold text-[#FAF9F6]">
               Need a Pick-Up from Kathgodam, Pantnagar or Delhi?
             </h3>
-            <p className="text-xs sm:text-sm text-[#FAF9F6]/80 max-w-2xl">
+            <p className="text-sm sm:text-sm text-[#FAF9F6]/80 max-w-2xl">
               Whispering Pines Resort arranges trusted mountain drivers with clean commercial vehicles (Innova Crysta, Ertiga, Swift Dzire) directly to our gates in Malla Ramgarh.
             </p>
           </div>

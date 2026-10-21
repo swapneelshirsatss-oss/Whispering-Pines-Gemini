@@ -79,7 +79,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div>
             <div className="text-xs font-semibold text-[#B0966D] uppercase tracking-wider">Written by</div>
             <h4 className="text-base font-bold text-[#0E2C21]">Gaurav Pandey, Director of Casa De Bello Pvt Ltd</h4>
-            <p className="text-xs text-gray-600 font-light mt-1">
+            <p className="text-sm text-gray-600 font-light mt-1">
               Hospitality entrepreneur behind <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="text-[#B0966D] underline">Casa De Bello Pvt Ltd</a> and Whispering Pines Resort in Malla Ramgarh. Cost ranges reviewed for the 2026-27 wedding season (October 2026 to September 2027). Whispering Pines quotes come from our reservations team.
             </p>
           </div>
@@ -110,7 +110,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]"
             loading="lazy"
           />
-          <p className="text-xs text-center text-gray-500 mt-2">Cake cutting at a wedding celebration at Whispering Pines.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">Cake cutting at a wedding celebration at Whispering Pines.</p>
         </div>
 
         {/* Cost by item */}
@@ -171,7 +171,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-500 font-light">
+        <p className="text-sm text-gray-500 font-light">
           Sources: <a href="https://www.snazzytrips.in/post/destination-wedding-in-uttarakhand-under-10-lakhs" target="_blank" rel="noopener noreferrer" className="underline">SnazzyTrips</a> and <a href="https://exploringwings.in/budget-destination-wedding-in-uttarakhand/" target="_blank" rel="noopener noreferrer" className="underline">Exploring Wings</a>, checked 13 October 2026 for the 2026-27 season.
         </p>
 
@@ -239,7 +239,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <div className="bg-[#0E2C21] text-white p-6 rounded-xl text-center space-y-3">
           <h3 className="text-xl font-bold">Want the real figure for your dates?</h3>
-          <p className="text-xs text-gray-300">Our reservations team prices every wedding on the dates, guest count and services you choose.</p>
+          <p className="text-sm text-gray-300">Our reservations team prices every wedding on the dates, guest count and services you choose.</p>
           <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
             <a
               href="/destination-wedding-uttarakhand/"
@@ -394,7 +394,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-500 font-light">
+        <p className="text-sm text-gray-500 font-light">
           Peak and shoulder months follow the SnazzyTrips cost data. Weather notes are general guidance for the Kumaon hills. Share your preferred 2026-27 dates with our reservations team to see the price for that week.
         </p>
 
@@ -405,7 +405,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]"
             loading="lazy"
           />
-          <p className="text-xs text-center text-gray-500 mt-2">A draped canopy over the lawn, with the hills behind it.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">A draped canopy over the lawn, with the hills behind it.</p>
         </div>
 
         {/* Ways to save */}
@@ -472,7 +472,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]"
             loading="lazy"
           />
-          <p className="text-xs text-center text-gray-500 mt-2">Reception tables set under the canopy, with the valley beyond.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">Reception tables set under the canopy, with the valley beyond.</p>
         </div>
 
         {/* Two-night plan */}
@@ -627,7 +627,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div>
             <div className="text-xs font-semibold text-[#B0966D] uppercase tracking-wider">Author & Verified Host</div>
             <h4 className="text-base font-bold text-[#0E2C21]">Gaurav Pandey — Director of Casa De Bello Pvt Ltd</h4>
-            <p className="text-xs text-gray-600 font-light mt-1">
+            <p className="text-sm text-gray-600 font-light mt-1">
               Traveller host & hospitality entrepreneur leading <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="text-[#B0966D] underline">Casa De Bello Pvt Ltd</a>. Elevation: 1,780m Malla Ramgarh ridge near Mukteshwar.
             </p>
           </div>
@@ -647,7 +647,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             alt="Resort near Mukteshwar for Families, Couples & Workations — Whispering Pines by Casa De Bello" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
           />
-          <p className="text-xs text-center text-gray-500 mt-2">180° Himalayan views of Nanda Devi and Trishul from Whispering Pines balconies.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">180° Himalayan views of Nanda Devi and Trishul from Whispering Pines balconies.</p>
         </div>
 
         <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">Why Choose Whispering Pines as Your Resort near Mukteshwar?</h2>
@@ -665,7 +665,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             alt="Why Many Travellers Choose Resort Near Mukteshwar Instead of Staying Inside the Town" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
           />
-          <p className="text-xs text-center text-gray-500 mt-2">Tranquil fruit orchard and mountain valley corridor of Malla Ramgarh near Mukteshwar.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">Tranquil fruit orchard and mountain valley corridor of Malla Ramgarh near Mukteshwar.</p>
         </div>
 
         <div className="my-6">
@@ -674,26 +674,26 @@ export const BLOG_POSTS: BlogPostData[] = [
             alt="What Makes Our Resort Villas Different From Regular Homestays Near Mukteshwar" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
           />
-          <p className="text-xs text-center text-gray-500 mt-2">What makes Casa De Bello resort villas different from regular homestays in Kumaon.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">What makes Casa De Bello resort villas different from regular homestays in Kumaon.</p>
         </div>
 
         <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">Tailored Stays for Families, Couples & Workations</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] mb-2">👨‍👩‍👧‍👦 For Families</h3>
-            <p className="text-xs text-gray-600">Ground floor rooms, step-free access, safe enclosed gardens, and customized kid meals.</p>
+            <p className="text-sm text-gray-600">Ground floor rooms, step-free access, safe enclosed gardens, and customized kid meals.</p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] mb-2">👩‍❤️‍👨 For Couples</h3>
-            <p className="text-xs text-gray-600">Attic Skylight Suite with glass roof star-gazing and private cedar balconies.</p>
+            <p className="text-sm text-gray-600">Attic Skylight Suite with glass roof star-gazing and private cedar balconies.</p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] mb-2">💻 For Workations</h3>
-            <p className="text-xs text-gray-600">150 Mbps fiber Wi-Fi, quiet work desks, and discounted 7-to-30-day extended stay rates.</p>
+            <p className="text-sm text-gray-600">150 Mbps fiber Wi-Fi, quiet work desks, and discounted 7-to-30-day extended stay rates.</p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] mb-2">🐾 Pet Friendly</h3>
-            <p className="text-xs text-gray-600">100% pet friendly with zero extra pet fees and direct pine trail access.</p>
+            <p className="text-sm text-gray-600">100% pet friendly with zero extra pet fees and direct pine trail access.</p>
           </div>
         </div>
 
@@ -719,7 +719,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <div className="bg-[#0E2C21] text-white p-6 rounded-xl text-center space-y-4 my-8">
           <h3 className="text-xl font-bold">Book Direct on WhatsApp & Save Flat 25%</h3>
-          <p className="text-xs text-gray-300">Skip online travel agency commissions. Instant reservation response from our front desk.</p>
+          <p className="text-sm text-gray-300">Skip online travel agency commissions. Instant reservation response from our front desk.</p>
           <a 
             href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20near%20Mukteshwar." 
             target="_blank" 
@@ -776,7 +776,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <div className="bg-[#0E2C21] text-white p-6 rounded-xl text-center space-y-4 my-8">
           <h3 className="text-xl font-bold">Skip the Booking Engines. Secure Your Direct Upgrade.</h3>
-          <p className="text-xs text-gray-300">Contact our front desk directly to claim your returning guest rate.</p>
+          <p className="text-sm text-gray-300">Contact our front desk directly to claim your returning guest rate.</p>
           <a 
             href="https://wa.me/917505029696?text=Hi!%20I'm%20a%20returning%20Clarks%20Exotica%20guest%20inquiring%20about%20retention%20rates." 
             target="_blank" 
@@ -821,12 +821,12 @@ export const BLOG_POSTS: BlogPostData[] = [
             width={1200}
             height={675}
           />
-          <p className="text-xs text-center text-gray-500 mt-2">Malla Ramgarh Fruit Orchards near Mukteshwar, Uttarakhand.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">Malla Ramgarh Fruit Orchards near Mukteshwar, Uttarakhand.</p>
         </div>
 
         <div className="bg-[#0E2C21] text-white p-6 rounded-xl text-center space-y-3">
           <h3 className="text-xl font-bold">Book Direct on WhatsApp & Save Flat 25%</h3>
-          <p className="text-xs text-gray-300">Skip OTA commissions. Instant front desk response within 5 minutes.</p>
+          <p className="text-sm text-gray-300">Skip OTA commissions. Instant front desk response within 5 minutes.</p>
           <a 
             href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20in%20Ramgarh." 
             target="_blank" 
@@ -931,31 +931,31 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] mb-1">🍑 1. Peaches (Ramgarh Aroo)</h3>
             <p className="text-xs text-[#7A6038] font-semibold mb-2">Harvest: June to July</p>
-            <p className="text-xs text-gray-600 leading-relaxed">Juicy, sweet, and aromatic with thin skin. Varieties like Alexander and Victoria thrive along Malla Ramgarh's sunny terraced slopes.</p>
+            <p className="text-sm text-gray-600 leading-relaxed">Juicy, sweet, and aromatic with thin skin. Varieties like Alexander and Victoria thrive along Malla Ramgarh's sunny terraced slopes.</p>
           </div>
 
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] mb-1">🍎 2. Himalayan Apples</h3>
             <p className="text-xs text-[#7A6038] font-semibold mb-2">Harvest: August to September</p>
-            <p className="text-xs text-gray-600 leading-relaxed">Crisp, sweet, and high in juice content. Royal Delicious, Golden Delicious, and Red Delicious apples cover the upper ridges of Malla Ramgarh.</p>
+            <p className="text-sm text-gray-600 leading-relaxed">Crisp, sweet, and high in juice content. Royal Delicious, Golden Delicious, and Red Delicious apples cover the upper ridges of Malla Ramgarh.</p>
           </div>
 
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] mb-1">🫐 3. Plums</h3>
             <p className="text-xs text-[#7A6038] font-semibold mb-2">Harvest: Late May to July</p>
-            <p className="text-xs text-gray-600 leading-relaxed">Tart, sweet, and rich in antioxidants. Dark red Centtnosa and Golden plums grow densely throughout the area, perfect for organic jams.</p>
+            <p className="text-sm text-gray-600 leading-relaxed">Tart, sweet, and rich in antioxidants. Dark red Centtnosa and Golden plums grow densely throughout the area, perfect for organic jams.</p>
           </div>
 
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] mb-1">🍊 4. Apricots (Khumani)</h3>
             <p className="text-xs text-[#7A6038] font-semibold mb-2">Harvest: May to June</p>
-            <p className="text-xs text-gray-600 leading-relaxed">Delicate, sweet-sour, and highly fragrant. Eaten fresh off the tree or sun-dried for winter storage, with seeds processed for organic apricot oil.</p>
+            <p className="text-sm text-gray-600 leading-relaxed">Delicate, sweet-sour, and highly fragrant. Eaten fresh off the tree or sun-dried for winter storage, with seeds processed for organic apricot oil.</p>
           </div>
 
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3] md:col-span-2">
             <h3 className="font-bold text-[#0E2C21] mb-1">🍐 5. Pears (Babu Gosha & Hill Pear)</h3>
             <p className="text-xs text-[#7A6038] font-semibold mb-2">Harvest: August to October</p>
-            <p className="text-xs text-gray-600 leading-relaxed">Soft, buttery texture with subtle natural sweetness. Babu Gosha pears thrive in Ramgarh's climate and are popular across Northern India.</p>
+            <p className="text-sm text-gray-600 leading-relaxed">Soft, buttery texture with subtle natural sweetness. Babu Gosha pears thrive in Ramgarh's climate and are popular across Northern India.</p>
           </div>
         </div>
 
@@ -1101,7 +1101,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <div className="bg-[#0E2C21] text-white p-6 rounded-xl text-center space-y-4 my-8">
           <h3 className="text-xl font-bold">Reserve Your Stay in Kumaon's Fruit Country</h3>
-          <p className="text-xs text-gray-300">House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, Uttarakhand 263137</p>
+          <p className="text-sm text-gray-300">House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, Uttarakhand 263137</p>
           <a 
             href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20in%20Ramgarh." 
             target="_blank" 
@@ -1159,7 +1159,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <div className="bg-[#0E2C21] text-white p-6 rounded-xl text-center space-y-3">
           <h3 className="font-bold text-white">Experience Winter Warmth in the Mountains</h3>
-          <p className="text-xs text-gray-300">Book your winter retreat at Whispering Pines with complimentary fireplace setup on arrival.</p>
+          <p className="text-sm text-gray-300">Book your winter retreat at Whispering Pines with complimentary fireplace setup on arrival.</p>
           <a 
             href="https://wa.me/917505029696?text=Hi!%20I'm%20inquiring%20about%20winter%20stay%20packages%20at%20Whispering%20Pines." 
             target="_blank" 
@@ -1197,7 +1197,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div>
             <div className="text-xs font-semibold text-[#B0966D] uppercase tracking-wider">Author & Verified Host</div>
             <h4 className="text-base font-bold text-[#0E2C21]">Gaurav Pandey — Director, Casa De Bello Pvt Ltd</h4>
-            <p className="text-xs text-gray-600 font-light mt-1">
+            <p className="text-sm text-gray-600 font-light mt-1">
               As a seasoned hospitality director and native Kumaon travel advocate, Gaurav Pandey oversees <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="text-[#B0966D] underline font-semibold">Casa De Bello Pvt Ltd</a>. Having hosted thousands of multi-generational families, honeymooners, and digital nomads across Uttarakhand, Gaurav curates Whispering Pines Resort to combine high-altitude Himalayan tranquility with 4-star infrastructure, 150 Mbps fiber connectivity, authentic farm-to-table dining, and direct-booking transparency.
             </p>
           </div>
@@ -1219,7 +1219,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             alt="Resort near Nainital for Families, Couples and Tourists — Whispering Pines by Casa De Bello" 
             className="w-full h-80 sm:h-96 object-cover rounded-2xl border border-[#EAE8E3] shadow-md" 
           />
-          <p className="text-xs text-center text-gray-500 mt-2">Whispering Pines Resort by Casa De Bello — Premier 4-star mountain resort near Nainital for families, couples and tourists.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">Whispering Pines Resort by Casa De Bello — Premier 4-star mountain resort near Nainital for families, couples and tourists.</p>
         </div>
 
         {/* GEO Entity Matrix */}
@@ -1277,7 +1277,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             alt="Why Choose Whispering Pines as Your Resort near Nainital" 
             className="w-full h-80 sm:h-96 object-cover rounded-2xl border border-[#EAE8E3] shadow-md" 
           />
-          <p className="text-xs text-center text-gray-500 mt-2">180° Himalayan views, pine forest swimming pool, and stone architecture at Whispering Pines Resort near Nainital.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">180° Himalayan views, pine forest swimming pool, and stone architecture at Whispering Pines Resort near Nainital.</p>
         </div>
 
         {/* Feature Comparison Table */}
@@ -1345,25 +1345,25 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
           <div className="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm">
             <h3 className="text-lg font-bold text-[#0E2C21] mb-2">👨‍👩‍👧‍👦 For Families with Children and Seniors</h3>
-            <p className="text-xs text-gray-600 font-light leading-relaxed">
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
               Ground-floor <a href="/suites-cottages-ramgarh-resort/" className="text-[#0E2C21] underline font-semibold">Family Twin Rooms</a> offer step-free access to peach and apple orchards where kids run freely and seniors stroll comfortably. Nightly bonfires, acoustic music, and starlit outdoor evenings.
             </p>
           </div>
           <div className="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm">
             <h3 className="text-lg font-bold text-[#0E2C21] mb-2">👩‍❤️‍👨 For Couples and Honeymooners</h3>
-            <p className="text-xs text-gray-600 font-light leading-relaxed">
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
               Deluxe Skylight Suites feature glass ceiling panels above the bed for stargazing under clear mountain skies, cozy wood-burning stone fireplaces (see <a href="/blog/winter-in-the-himalayas/" className="text-[#0E2C21] underline font-semibold">winter in the Himalayas guide</a>), and private sun balconies framing deep pine valleys.
             </p>
           </div>
           <div className="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm">
             <h3 className="text-lg font-bold text-[#0E2C21] mb-2">💻 For Remote Workers & Digital Nomads</h3>
-            <p className="text-xs text-gray-600 font-light leading-relaxed">
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
               Enterprise 150 Mbps fiber Wi-Fi across all rooms, lawns, and orchards with dual generator backup and ergonomic workspaces for video calls and streaming. Explore our full <a href="/resort-services-ramgarh/" className="text-[#0E2C21] underline font-semibold">resort services & dining</a>.
             </p>
           </div>
           <div className="bg-white p-5 rounded-2xl border border-[#EAE8E3] shadow-sm">
             <h3 className="text-lg font-bold text-[#0E2C21] mb-2">🐶 For Pet Owners</h3>
-            <p className="text-xs text-gray-600 font-light leading-relaxed">
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
               100% pet-welcoming resort with large enclosed garden lawns, direct pine forest walking trails, and zero extra pet charges (check <a href="/resort-amenities-mukteshwar/" className="text-[#0E2C21] underline font-semibold">resort amenities</a>).
             </p>
           </div>
@@ -1421,7 +1421,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-[#7A6038] font-semibold">Direct WhatsApp Bookings (+91-7505029696) receive an instant flat 25% discount on all published tariffs.</p>
+        <p className="text-sm text-[#7A6038] font-semibold">Direct WhatsApp Bookings (+91-7505029696) receive an instant flat 25% discount on all published tariffs.</p>
 
         {/* Mandatory Image 3 */}
         <div className="my-6">
@@ -1430,7 +1430,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             alt="Things to Do Near Nainital from Whispering Pines Resort" 
             className="w-full h-80 sm:h-96 object-cover rounded-2xl border border-[#EAE8E3] shadow-md" 
           />
-          <p className="text-xs text-center text-gray-500 mt-2">Explore Kainchi Dham, Mukteshwar Dham, and Bhalu Gaad waterfall from Whispering Pines Resort near Nainital.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">Explore Kainchi Dham, Mukteshwar Dham, and Bhalu Gaad waterfall from Whispering Pines Resort near Nainital.</p>
         </div>
 
         {/* Things to Do Section */}
@@ -1448,22 +1448,22 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="space-y-4">
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] mb-1">Q1. Is Whispering Pines the best resort near Nainital for families, couples and tourists?</h3>
-            <p className="text-xs text-gray-600 font-light">Yes. Rated 4.6★ from 402 verified Google reviews (see <a href="/reviews/" className="text-[#7A6038] underline font-semibold">guest reviews</a>), Whispering Pines Resort by Casa De Bello is widely recognized as a top-rated resort near Nainital for families, couples and tourists. It offers a pine forest pool, 180° Nanda Devi views, 5 <a href="/private-villas-near-nainital/" className="text-[#0E2C21] underline">Premium Private Villas</a>, 150 Mbps Wi-Fi, and pet-friendly fruit orchards.</p>
+            <p className="text-sm text-gray-600 font-light">Yes. Rated 4.6★ from 402 verified Google reviews (see <a href="/reviews/" className="text-[#7A6038] underline font-semibold">guest reviews</a>), Whispering Pines Resort by Casa De Bello is widely recognized as a top-rated resort near Nainital for families, couples and tourists. It offers a pine forest pool, 180° Nanda Devi views, 5 <a href="/private-villas-near-nainital/" className="text-[#0E2C21] underline">Premium Private Villas</a>, 150 Mbps Wi-Fi, and pet-friendly fruit orchards.</p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] mb-1">Q2. How far is Whispering Pines Resort from Nainital Mall Road?</h3>
-            <p className="text-xs text-gray-600 font-light">The resort is located 26 km from Nainital Mall Road, taking approximately 45 minutes by car via the smooth Bhowali-Ramgarh road. View map and directions on our <a href="/contact-whispering-pines-resort-mukteshwar/" className="text-[#0E2C21] underline font-semibold">contact page</a>.</p>
+            <p className="text-sm text-gray-600 font-light">The resort is located 26 km from Nainital Mall Road, taking approximately 45 minutes by car via the smooth Bhowali-Ramgarh road. View map and directions on our <a href="/contact-whispering-pines-resort-mukteshwar/" className="text-[#0E2C21] underline font-semibold">contact page</a>.</p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] mb-1">Q3. How far is the resort from Kainchi Dham?</h3>
-            <p className="text-xs text-gray-600 font-light">Whispering Pines is situated 22 km (~45-minute drive) from Kainchi Dham Ashram.</p>
+            <p className="text-sm text-gray-600 font-light">Whispering Pines is situated 22 km (~45-minute drive) from Kainchi Dham Ashram.</p>
           </div>
         </div>
 
         {/* Direct WhatsApp CTA Card */}
         <div className="bg-[#0E2C21] text-white p-8 rounded-2xl text-center space-y-4 my-8 shadow-lg border border-[#B0966D]/30">
           <h3 className="text-2xl font-bold text-white">Reserve Your Stay at the Best Resort near Nainital for Families, Couples and Tourists</h3>
-          <p className="text-xs text-gray-300 max-w-xl mx-auto">
+          <p className="text-sm text-gray-300 max-w-xl mx-auto">
             Enjoy 180° snow peak views, a pine forest pool, 150 Mbps Wi-Fi, private fruit orchards, and spacious stone-and-wood suites — all located just 45 minutes from Nainital and Kainchi Dham.
           </p>
           <div className="text-xs text-gray-400">
@@ -1564,7 +1564,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             <div>
               <div className="text-xs font-semibold text-[#B0966D] uppercase tracking-wider">Author & Verified Host</div>
               <h4 className="text-base font-bold text-[#0E2C21]">Gaurav Pandey — Director of Casa De Bello Pvt Ltd</h4>
-              <p className="text-xs text-gray-600 font-light mt-1">
+              <p className="text-sm text-gray-600 font-light mt-1">
                 Traveller host & hospitality entrepreneur leading <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="text-[#B0966D] underline">Casa De Bello Pvt Ltd</a>. Elevation: 1,780m Malla Ramgarh ridge near Mukteshwar & Kainchi Dham.
               </p>
             </div>
@@ -1608,13 +1608,13 @@ export const BLOG_POSTS: BlogPostData[] = [
             alt="Resorts Near Kainchi Dham Ashram Neem Karoli Baba — Whispering Pines Resort Hotel by Casa De Bello, Malla Ramgarh 2026 Guide" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
           />
-          <p className="text-xs text-center text-gray-500 mt-2">Whispering Pines Resort Hotel — Scenic 45-minute drive to Kainchi Dham Ashram in Malla Ramgarh.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">Whispering Pines Resort Hotel — Scenic 45-minute drive to Kainchi Dham Ashram in Malla Ramgarh.</p>
         </div>
 
         {/* WhatsApp Banner */}
         <div className="bg-[#0E2C21] text-white p-6 rounded-xl text-center space-y-3">
           <h3 className="text-xl font-bold">Book Direct on WhatsApp & Save Flat 25% vs OTAs</h3>
-          <p className="text-xs text-gray-300">Skip third-party commissions. Instant reservation response from our front desk team.</p>
+          <p className="text-sm text-gray-300">Skip third-party commissions. Instant reservation response from our front desk team.</p>
           <a 
             href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20near%20Kainchi%20Dham." 
             target="_blank" 
@@ -1662,7 +1662,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-500 font-light">Drive times change with junction traffic, so add a buffer on weekends and festival days.</p>
+        <p className="text-sm text-gray-500 font-light">Drive times change with junction traffic, so add a buffer on weekends and festival days.</p>
 
         <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">Are There Any 4-Star Hotels Near Kainchi Dham?</h2>
         <p className="text-gray-700 leading-relaxed font-light">
@@ -1706,7 +1706,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             alt="What Makes Whispering Pines the Best Stay Near Kainchi Dham Ashram" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
           />
-          <p className="text-xs text-center text-gray-500 mt-2">Senior-friendly step-free garden walkways and peaceful orchard lawns at Whispering Pines.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">Senior-friendly step-free garden walkways and peaceful orchard lawns at Whispering Pines.</p>
         </div>
 
         {/* Why Choose Section */}
@@ -1756,7 +1756,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             alt="Why Whispering Pines Resort Is One of the Best Resort Hotels Near Kainchi Dham" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
           />
-          <p className="text-xs text-center text-gray-500 mt-2">180° snow-peak Himalayan view and serene pine canopy at Whispering Pines Resort.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">180° snow-peak Himalayan view and serene pine canopy at Whispering Pines Resort.</p>
         </div>
 
         {/* Comparison Section */}
@@ -1880,7 +1880,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             alt="Pure Veg, Satvik & Kumaoni Dining Choices at Whispering Pines Resort Hotel Near Kainchi Dham" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
           />
-          <p className="text-xs text-center text-gray-500 mt-2">Freshly cooked Pure Veg & Satvik meals prepared for Kainchi Dham pilgrims.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">Freshly cooked Pure Veg & Satvik meals prepared for Kainchi Dham pilgrims.</p>
         </div>
 
         <h3 className="text-xl font-bold text-[#0E2C21] mt-6 mb-3">Pure Veg & Satvik Dining for Devotees</h3>
@@ -2016,7 +2016,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             alt="Map for Excursions and Driving Routes Near Kainchi Dham Ashram and Whispering Pines Resort" 
             className="w-full h-80 sm:h-96 object-cover rounded-xl border border-[#EAE8E3]" 
           />
-          <p className="text-xs text-center text-gray-500 mt-2">Kumaon regional route map from Malla Ramgarh to Kainchi Dham, Mukteshwar & Bhimtal.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">Kumaon regional route map from Malla Ramgarh to Kainchi Dham, Mukteshwar & Bhimtal.</p>
         </div>
 
         <div className="overflow-x-auto rounded-xl border border-[#EAE8E3] my-6">
@@ -2120,43 +2120,43 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="space-y-4">
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q1. Is Whispering Pines the best 4-star resort hotel near Kainchi Dham Ashram Neem Karoli Baba?</h3>
-            <p className="text-xs text-gray-600 font-light">Yes. Whispering Pines Resort Hotel is a top-rated 4-star resort hotel near Kainchi Dham Ashram. Located in Malla Ramgarh (22 km / 45-minute drive), it offers 180° Himalayan views, ground-floor step-free hotel rooms, pure veg/Satvik dining, a pine forest pool, 150 Mbps Wi-Fi, and a <a href="/reviews/" className="text-[#7A6038] font-semibold underline">4.6 star Google rating</a> across 402 reviews.</p>
+            <p className="text-sm text-gray-600 font-light">Yes. Whispering Pines Resort Hotel is a top-rated 4-star resort hotel near Kainchi Dham Ashram. Located in Malla Ramgarh (22 km / 45-minute drive), it offers 180° Himalayan views, ground-floor step-free hotel rooms, pure veg/Satvik dining, a pine forest pool, 150 Mbps Wi-Fi, and a <a href="/reviews/" className="text-[#7A6038] font-semibold underline">4.6 star Google rating</a> across 402 reviews.</p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q2. Is Whispering Pines Resort Hotel suitable for senior citizen pilgrims?</h3>
-            <p className="text-xs text-gray-600 font-light">Yes. We offer ground-floor hotel rooms with step-free access to gardens and dining areas. Wheelchair facilities are available on-site, and house staff is present to assist elderly guests with mobility and luggage.</p>
+            <p className="text-sm text-gray-600 font-light">Yes. We offer ground-floor hotel rooms with step-free access to gardens and dining areas. Wheelchair facilities are available on-site, and house staff is present to assist elderly guests with mobility and luggage.</p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q3. What facilities are included in the Private Villa for Kainchi Dham visitors?</h3>
-            <p className="text-xs text-gray-600 font-light">The private villa accommodates up to 8–10 guests and includes 2 premium valley-view bedrooms with private balconies, 1 cozy bedroom with an attached bath (3 washrooms total), a spacious living hall, a fully functional kitchenette, a large open terrace, private parking, Smart TV, 150 Mbps Wi-Fi, and daily housekeeping services.</p>
+            <p className="text-sm text-gray-600 font-light">The private villa accommodates up to 8–10 guests and includes 2 premium valley-view bedrooms with private balconies, 1 cozy bedroom with an attached bath (3 washrooms total), a spacious living hall, a fully functional kitchenette, a large open terrace, private parking, Smart TV, 150 Mbps Wi-Fi, and daily housekeeping services.</p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q4. What time should we leave the resort to visit Kainchi Dham Ashram?</h3>
-            <p className="text-xs text-gray-600 font-light">We strongly recommend leaving Whispering Pines Resort Hotel by 7:30 AM. Parking near Kainchi Dham is highly restricted due to daily pilgrim rushes. Leaving early allows you to secure a convenient parking spot before peak morning Yatra traffic builds up.</p>
+            <p className="text-sm text-gray-600 font-light">We strongly recommend leaving Whispering Pines Resort Hotel by 7:30 AM. Parking near Kainchi Dham is highly restricted due to daily pilgrim rushes. Leaving early allows you to secure a convenient parking spot before peak morning Yatra traffic builds up.</p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q5. Can we get pure vegetarian or Satvik food at the resort hotel?</h3>
-            <p className="text-xs text-gray-600 font-light">Yes. Our kitchen prepares freshly cooked pure vegetarian and Satvik meals (without onion and garlic) upon prior request for Kainchi Dham devotees.</p>
+            <p className="text-sm text-gray-600 font-light">Yes. Our kitchen prepares freshly cooked pure vegetarian and Satvik meals (without onion and garlic) upon prior request for Kainchi Dham devotees.</p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q6. Are there self-cooking facilities available in the Private Villa?</h3>
-            <p className="text-xs text-gray-600 font-light">Yes. The private villa features a fully functional kitchenette with cookware, utensils, a refrigerator, and an electric kettle, allowing families to prepare their own tea, snacks, or simple home-style meals.</p>
+            <p className="text-sm text-gray-600 font-light">Yes. The private villa features a fully functional kitchenette with cookware, utensils, a refrigerator, and an electric kettle, allowing families to prepare their own tea, snacks, or simple home-style meals.</p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q7. Was Whispering Pines previously known as Clarks Exotica?</h3>
-            <p className="text-xs text-gray-600 font-light">Yes. The property was formerly known as Clarks Exotica Mukteshwar. It is now operated under upgraded hospitality management by Casa De Bello as Whispering Pines Resort Hotel.</p>
+            <p className="text-sm text-gray-600 font-light">Yes. The property was formerly known as Clarks Exotica Mukteshwar. It is now operated under upgraded hospitality management by Casa De Bello as Whispering Pines Resort Hotel.</p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q8. Can you stay inside Kainchi Dham Ashram?</h3>
-            <p className="text-xs text-gray-600 font-light">Kainchi Dham is a temple and ashram, not a hotel, and its rooms cannot be booked online or through travel sites. Most visitors plan a day visit and stay nearby. Whispering Pines in Malla Ramgarh is 22 km away, so you can reach the Ashram for morning darshan and return to a comfortable room.</p>
+            <p className="text-sm text-gray-600 font-light">Kainchi Dham is a temple and ashram, not a hotel, and its rooms cannot be booked online or through travel sites. Most visitors plan a day visit and stay nearby. Whispering Pines in Malla Ramgarh is 22 km away, so you can reach the Ashram for morning darshan and return to a comfortable room.</p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q9. Is there parking at the resort for guests driving to Kainchi Dham?</h3>
-            <p className="text-xs text-gray-600 font-light">Yes. Whispering Pines has private on-site parking for 25+ cars, so you never have to hunt for space beside a crowded highway. Tell the front desk your arrival time and vehicle type when you book, and leave early for darshan, because parking near the Ashram itself is limited.</p>
+            <p className="text-sm text-gray-600 font-light">Yes. Whispering Pines has private on-site parking for 25+ cars, so you never have to hunt for space beside a crowded highway. Tell the front desk your arrival time and vehicle type when you book, and leave early for darshan, because parking near the Ashram itself is limited.</p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q10. How do I get the best rate for a hotel near Kainchi Dham?</h3>
-            <p className="text-xs text-gray-600 font-light">Book direct. Rates at Whispering Pines change with the season, and direct bookings are always a flat 25% below the OTA rate for the same dates, with a best price guarantee. Send your dates and guest count on WhatsApp at +91-7505029696 for a confirmed quote.</p>
+            <p className="text-sm text-gray-600 font-light">Book direct. Rates at Whispering Pines change with the season, and direct bookings are always a flat 25% below the OTA rate for the same dates, with a best price guarantee. Send your dates and guest count on WhatsApp at +91-7505029696 for a confirmed quote.</p>
           </div>
         </div>
 
@@ -2188,7 +2188,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         {/* Direct Booking CTA */}
         <div className="bg-[#0E2C21] text-white p-8 rounded-2xl text-center space-y-4 my-8 shadow-lg border border-[#B0966D]/30">
           <h3 className="text-2xl font-bold text-white">Reserve Your Senior-Friendly Stay Near Kainchi Dham Ashram</h3>
-          <p className="text-xs text-gray-300 max-w-xl mx-auto">
+          <p className="text-sm text-gray-300 max-w-xl mx-auto">
             Enjoy 180° snow peak views, ground-floor step-free rooms, wheelchair access, pure veg/Satvik dining, a pine forest pool, and private 3-BHK villa stays — located just 45 minutes from Kainchi Dham.
           </p>
           <div className="text-xs text-gray-400">
@@ -2343,7 +2343,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div>
             <div className="text-xs font-semibold text-[#B0966D] uppercase tracking-wider">Author & Verified Host</div>
             <h4 className="text-base font-bold text-[#0E2C21]">Gaurav Pandey — Director of Casa De Bello Pvt Ltd</h4>
-            <p className="text-xs text-gray-600 font-light mt-1">
+            <p className="text-sm text-gray-600 font-light mt-1">
               As a seasoned hospitality director and Kumaon travel advocate, Gaurav Pandey oversees <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="text-[#B0966D] underline font-semibold">Casa De Bello Pvt Ltd</a>. Having hosted thousands of multi-generational families, honeymooners, and digital nomads across Uttarakhand, Gaurav curates Whispering Pines Resort to combine high-altitude Himalayan tranquility with 4-star infrastructure, 150 Mbps fiber connectivity, authentic farm-to-table dining, and direct-booking transparency.
             </p>
           </div>
@@ -2364,7 +2364,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <div className="bg-[#0E2C21] text-white p-6 rounded-2xl text-center space-y-3 shadow-md border border-[#B0966D]/30 my-6">
           <h3 className="text-xl font-bold text-white">Book Direct on WhatsApp: +91-7505029696 — Best Price Guaranteed</h3>
-          <p className="text-xs text-gray-300">Save flat 25% vs OTAs like MakeMyTrip, Booking.com & Goibibo. Instant front desk response within 5 minutes.</p>
+          <p className="text-sm text-gray-300">Save flat 25% vs OTAs like MakeMyTrip, Booking.com & Goibibo. Instant front desk response within 5 minutes.</p>
           <a 
             href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20near%20Mukteshwar." 
             target="_blank" 
@@ -2500,7 +2500,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             alt="Best resort to stay near Mukteshwar for families couples pet owners workcation — Whispering Pines Casa De Bello Ramgarh" 
             className="w-full h-80 sm:h-96 object-cover rounded-2xl border border-[#EAE8E3] shadow-md" 
           />
-          <p className="text-xs text-center text-gray-500 mt-2">Whispering Pines Resort by Casa De Bello — Premier 4-star mountain sanctuary in Malla Ramgarh near Mukteshwar.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">Whispering Pines Resort by Casa De Bello — Premier 4-star mountain sanctuary in Malla Ramgarh near Mukteshwar.</p>
         </div>
 
         <p className="text-gray-700 leading-relaxed font-light">
@@ -2613,7 +2613,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             alt="Accommodation at the best resort to stay near Mukteshwar — villa suite family room cottage Whispering Pines Ramgarh" 
             className="w-full h-80 sm:h-96 object-cover rounded-2xl border border-[#EAE8E3] shadow-md" 
           />
-          <p className="text-xs text-center text-gray-500 mt-2">Stone and cedar wood accommodation options at Whispering Pines Resort in Malla Ramgarh.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">Stone and cedar wood accommodation options at Whispering Pines Resort in Malla Ramgarh.</p>
         </div>
 
         <p className="text-gray-700 leading-relaxed font-light">
@@ -2730,7 +2730,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             alt="Farm-to-table dining at the best resort to stay near Mukteshwar — Kumaoni cuisine Whispering Pines Ramgarh" 
             className="w-full h-80 sm:h-96 object-cover rounded-2xl border border-[#EAE8E3] shadow-md" 
           />
-          <p className="text-xs text-center text-gray-500 mt-2">Al-fresco dining on the resort balcony overlooking mountain valleys and fruit orchards.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">Al-fresco dining on the resort balcony overlooking mountain valleys and fruit orchards.</p>
         </div>
 
         <p className="text-gray-700 leading-relaxed font-light">
@@ -2833,7 +2833,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="space-y-4">
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">🚗 By Road from Delhi/NCR</h3>
-            <p className="text-xs text-gray-600 font-light leading-relaxed">
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
               NH9 via Moradabad → Rampur → Haldwani → Bhowali → Ramgarh → Malla Ramgarh<br />
               Total distance: approximately 340 km | Drive time: 6.5–7.5 hours<br />
               Gurugram via NH48: Same route from Haldwani onwards.<br />
@@ -2842,7 +2842,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">🚆 By Train</h3>
-            <p className="text-xs text-gray-600 font-light leading-relaxed">
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
               Nearest railhead: Kathgodam Station — approximately 43 km (~1.5 hours) from the resort.<br />
               Key trains from Delhi: Ranikhet Express (overnight), Kathgodam Shatabdi (morning).<br />
               Resort cab pickup from Kathgodam available on prior WhatsApp booking.
@@ -2850,7 +2850,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">✈️ By Air</h3>
-            <p className="text-xs text-gray-600 font-light leading-relaxed">
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
               Nearest airport: Pantnagar Airport — approximately 76 km (~2.5 hours) from the resort.<br />
               Connections from Delhi, Mumbai, and Bengaluru.<br />
               Resort cab pickup from Pantnagar available on prior booking.
@@ -2896,61 +2896,61 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="space-y-4">
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q1. Is Whispering Pines the best resort to stay near Mukteshwar?</h3>
-            <p className="text-xs text-gray-600 font-light leading-relaxed">
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
               Whispering Pines Resort by Casa De Bello is rated 4.6★ from 402 verified Google reviews — the highest rating of any resort on the Bhowali-Ramgarh-Mukteshwar Road. It is the only property in this corridor that combines a swimming pool, a private villa sleeping 10, 150 Mbps fiber Wi-Fi, pet-friendly enclosed gardens, senior-friendly ground floor rooms, and 180° Himalayan views in a single 4-star boutique property. (<a href="/reviews/" className="text-[#7A6038] font-semibold underline">Read all guest reviews →</a>)
             </p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q2. How far is the resort from Mukteshwar?</h3>
-            <p className="text-xs text-gray-600 font-light leading-relaxed">
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
               Whispering Pines Resort in Malla Ramgarh is 25 km from Mukteshwar Dham temple — approximately a 45-minute scenic drive on the Bhowali-Ramgarh-Mukteshwar Road.
             </p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q3. How far is the resort from Kainchi Dham?</h3>
-            <p className="text-xs text-gray-600 font-light leading-relaxed">
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
               Kainchi Dham, the Neem Karoli Baba Ashram, is 22 km from Whispering Pines Resort — approximately 45 minutes by road. Our in-house travel desk arranges cab bookings and coordinates early morning darshan departures directly from the resort.
             </p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q4. Does the resort have a swimming pool?</h3>
-            <p className="text-xs text-gray-600 font-light leading-relaxed">
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
               Yes. Whispering Pines Resort has an on-site swimming pool surrounded by pine forest and private orchards at 1,780 metres — one of the very few resorts near Mukteshwar to offer a pool alongside 180° Himalayan views.
             </p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q5. Is the resort suitable for senior citizens?</h3>
-            <p className="text-xs text-gray-600 font-light leading-relaxed">
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
               Yes. Whispering Pines is specifically designed for accessibility. Ground floor Family Twin Rooms have step-free direct lawn access and flat garden pathways throughout the property. The Private Villa also offers ground-level entry — making it one of the most senior-friendly resorts near Mukteshwar.
             </p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q6. Is the resort pet-friendly?</h3>
-            <p className="text-xs text-gray-600 font-light leading-relaxed">
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
               Yes. Whispering Pines is a fully pet-friendly resort near Mukteshwar with safe enclosed garden lawns, direct pine forest trail access, and no additional pet charges for dogs or cats.
             </p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q7. Are Satvik meals available for pilgrims?</h3>
-            <p className="text-xs text-gray-600 font-light leading-relaxed">
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
               Yes. The resident kitchen prepares pure vegetarian and Satvik meals — no onion, no garlic — for guests visiting Kainchi Dham and Mukteshwar Dham. Request in advance via WhatsApp at +91-7505029696.
             </p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q8. What is the Wi-Fi speed?</h3>
-            <p className="text-xs text-gray-600 font-light leading-relaxed">
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
               Whispering Pines has enterprise-grade 150 Mbps fiber optic Wi-Fi covering all 25 rooms, the private villa, outdoor terraces, and the orchard lawn — making it the best-connected workcation resort near Mukteshwar.
             </p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q9. How do I book at the best price?</h3>
-            <p className="text-xs text-gray-600 font-light leading-relaxed">
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
               Book directly via WhatsApp at +91-7505029696 to save a flat 25% versus OTA platforms. Direct guests also receive priority room upgrades, flexible check-in and checkout, exclusive return-guest rates, and instant 5-minute response.
             </p>
           </div>
           <div className="bg-white p-5 rounded-xl border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q10. Is this the same as Clarks Exotica Mukteshwar?</h3>
-            <p className="text-xs text-gray-600 font-light leading-relaxed">
+            <p className="text-sm text-gray-600 font-light leading-relaxed">
               Yes. Whispering Pines by Casa De Bello is the upgraded successor to Clarks Exotica on the Mukteshwar Road in Ramgarh. Same iconic Bhowali-Ramgarh-Mukteshwar Road address — now with enhanced luxury suite architecture, Casa De Bello management, swimming pool, private villa, and 150 Mbps Wi-Fi.
             </p>
           </div>
@@ -2993,10 +2993,10 @@ export const BLOG_POSTS: BlogPostData[] = [
         {/* Reserve Your Stay CTA */}
         <div className="bg-[#0E2C21] text-white p-8 rounded-2xl text-center space-y-4 my-8 shadow-lg border border-[#B0966D]/30">
           <h3 className="text-2xl font-bold text-white">Reserve Your Stay at the Best Resort near Mukteshwar</h3>
-          <p className="text-xs text-gray-300 max-w-xl mx-auto">
+          <p className="text-sm text-gray-300 max-w-xl mx-auto">
             Whether you are planning a peaceful family holiday with senior citizens, a romantic Himalayan retreat, a spiritual trip to Kainchi Dham and Mukteshwar Dham, an extended workcation in the pine forests, or a mountain escape with your dog — Whispering Pines Resort by Casa De Bello is the one address near Mukteshwar that delivers all of it without compromise.
           </p>
-          <p className="text-xs text-gray-300 max-w-xl mx-auto">
+          <p className="text-sm text-gray-300 max-w-xl mx-auto">
             25 premium rooms, a private villa sleeping 10 with full resort services, swimming pool, 150 Mbps fiber Wi-Fi, stone fireplace rooms, private apple and peach orchards, Kumaoni farm-to-table dining, bonfire evenings, and 180° Nanda Devi Himalayan views — all on the Bhowali-Ramgarh-Mukteshwar Road, 25 km from Mukteshwar Dham.
           </p>
           <div className="text-xs text-gray-400 leading-relaxed pt-2">

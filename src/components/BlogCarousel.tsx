@@ -160,7 +160,7 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
                         </h3>
                       </a>
 
-                      <p className="text-xs text-gray-600 font-light leading-relaxed line-clamp-3">
+                      <p className="text-sm text-gray-600 font-light leading-relaxed line-clamp-3">
                         {post.excerpt}
                       </p>
                     </div>

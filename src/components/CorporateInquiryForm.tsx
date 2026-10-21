@@ -137,7 +137,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                 <span className="font-sans text-[11px] uppercase tracking-wider text-[#0E2C21] font-bold block mb-1">
                   B2B Corporate Guarantees
                 </span>
-                <p className="text-xs text-[#2C3531]/75 leading-relaxed">
+                <p className="text-sm text-[#2C3531]/75 leading-relaxed">
                   ✓ 100% Confidential estate buyout option<br />
                   ✓ Valid corporate GST input-credit invoicing<br />
                   ✓ Complimentary high-speed fiber Wi-Fi & AV setup checks
