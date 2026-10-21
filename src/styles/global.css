@@ -85,9 +85,6 @@ p {
   box-shadow: 0 12px 32px -4px rgba(27, 51, 34, 0.15), 0 4px 12px -2px rgba(27, 51, 34, 0.08);
 }
 
-.shadow-gold-glow {
-  box-shadow: 0 0 24px rgba(201, 168, 50, 0.28), 0 4px 12px rgba(27, 51, 34, 0.1);
-}
 
 /* Luxury Glassmorphism */
 .glass-forest {
@@ -104,42 +101,6 @@ p {
   border: 1px solid rgba(27, 51, 34, 0.08);
 }
 
-/* Gold Shimmer Effect for Primary Conversion CTAs */
-@keyframes gold-shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-.btn-shimmer {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-shimmer::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -150%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.28) 50%,
-    transparent 100%
-  );
-  transform: skewX(-20deg);
-  transition: none;
-}
-
-.btn-shimmer:hover::after {
-  left: 150%;
-  transition: all 0.75s ease-in-out;
-}
 
 /* Tabular Numerals for Optical Alignment in Pricing, Tariffs & Metrics */
 .tnum {

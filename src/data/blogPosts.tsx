@@ -1473,7 +1473,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20near%20Nainital." 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-block px-8 py-3.5 bg-[#c9a832] text-[#1B3322] font-bold text-sm rounded-xl hover:bg-yellow-400 transition-all shadow-md transform hover:-translate-y-0.5"
+            className="inline-block px-8 py-3.5 bg-[#c9a832] text-[#1B3322] font-bold text-sm rounded-xl hover:bg-yellow-400 transition-all shadow-md transform"
           >
             WhatsApp +91-7505029696 — Best Price Guaranteed
           </a>
@@ -2198,7 +2198,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20near%20Kainchi%20Dham." 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-block px-8 py-3.5 bg-[#c9a832] text-[#1B3322] font-bold text-sm rounded-xl hover:bg-yellow-400 transition-all shadow-md transform hover:-translate-y-0.5"
+            className="inline-block px-8 py-3.5 bg-[#c9a832] text-[#1B3322] font-bold text-sm rounded-xl hover:bg-yellow-400 transition-all shadow-md transform"
           >
             WhatsApp +91-7505029696 — Save Flat 25% Direct
           </a>
@@ -3008,7 +3008,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20near%20Mukteshwar." 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-block px-8 py-3.5 bg-[#c9a832] text-[#1B3322] font-bold text-sm rounded-xl hover:bg-yellow-400 transition-all shadow-md transform hover:-translate-y-0.5"
+            className="inline-block px-8 py-3.5 bg-[#c9a832] text-[#1B3322] font-bold text-sm rounded-xl hover:bg-yellow-400 transition-all shadow-md transform"
           >
             WhatsApp +91-7505029696 — Save Flat 25% Best Price Guaranteed
           </a>

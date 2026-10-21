@@ -344,7 +344,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full sm:flex-1 btn-shimmer py-4 px-8 rounded-full bg-[#1B3322] hover:bg-[#2A4832] text-[#FAF9F6] font-mono text-xs uppercase tracking-[0.16em] font-semibold transition-all duration-300 shadow-luxury-sm hover:shadow-luxury-md flex items-center justify-center gap-3 cursor-pointer disabled:opacity-70"
+                className="w-full sm:flex-1 py-4 px-8 rounded-full bg-[#1B3322] hover:bg-[#2A4832] text-[#FAF9F6] font-mono text-xs uppercase tracking-[0.16em] font-semibold transition-all duration-300 shadow-luxury-sm hover:shadow-luxury-md flex items-center justify-center gap-3 cursor-pointer disabled:opacity-70"
               >
                 {isSubmitting ? (
                   <span>Generating Proposal...</span>

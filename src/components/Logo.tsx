@@ -18,7 +18,7 @@ export default function Logo({ className = "", iconOnly = false }: LogoProps) {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="-150 -150 300 300"
-        className={`w-10 h-10 hover:scale-105 transition-transform duration-300 ${className}`}
+        className={`w-10 h-10  transition-transform duration-300 ${className}`}
         fill="none"
         role="img"
         aria-label="Whispering Pines Resort Crest"

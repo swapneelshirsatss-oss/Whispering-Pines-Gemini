@@ -199,7 +199,7 @@ export default function Navbar({ children }: NavbarProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleNavBookingClick}
-              className="bg-[#c9a832] hover:bg-[#FAF9F6] text-[#1B3322] hover:text-[#1B3322] text-[10px] font-mono font-bold uppercase tracking-[0.18em] px-5 py-2.5 rounded-sm flex items-center transition-all duration-300 shadow-luxury-sm btn-shimmer"
+              className="bg-[#c9a832] hover:bg-[#FAF9F6] text-[#1B3322] hover:text-[#1B3322] text-[10px] font-mono font-bold uppercase tracking-[0.18em] px-5 py-2.5 rounded-sm flex items-center transition-all duration-300 shadow-luxury-sm"
             >
               <span>Book Stay</span>
               <ArrowUpRight className="w-3.5 h-3.5 ml-1.5 opacity-80" />
@@ -213,7 +213,7 @@ export default function Navbar({ children }: NavbarProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleNavBookingClick}
-              className="bg-[#c9a832] text-[#1B3322] text-[10px] font-mono font-bold uppercase tracking-wider px-3.5 py-2 rounded-sm flex items-center shadow-md active:scale-95 transition-transform btn-shimmer"
+              className="bg-[#c9a832] text-[#1B3322] text-[10px] font-mono font-bold uppercase tracking-wider px-3.5 py-2 rounded-sm flex items-center shadow-md active:scale-95 transition-transform"
             >
               Book Stay
             </a>

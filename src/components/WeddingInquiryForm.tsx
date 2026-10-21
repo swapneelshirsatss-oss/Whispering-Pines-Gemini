@@ -272,7 +272,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full btn-shimmer inline-flex items-center justify-center gap-3 py-4 px-8 rounded-full bg-[#1B3322] hover:bg-[#2A4832] text-[#FAF9F6] text-xs sm:text-sm font-mono uppercase tracking-[0.18em] font-semibold transition-all duration-300 shadow-luxury-md focus-ring disabled:opacity-70 cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-3 py-4 px-8 rounded-full bg-[#1B3322] hover:bg-[#2A4832] text-[#FAF9F6] text-xs sm:text-sm font-mono uppercase tracking-[0.18em] font-semibold transition-all duration-300 shadow-luxury-md focus-ring disabled:opacity-70 cursor-pointer"
               >
                 {isSubmitting ? (
                   <span>Preparing Custom Proposal...</span>
