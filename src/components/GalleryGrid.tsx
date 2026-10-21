@@ -172,7 +172,7 @@ export default function GalleryGrid() {
           <div
             key={`${img.src}-${idx}`}
             onClick={() => setLightboxIndex(idx)}
-            className={`relative overflow-hidden rounded-lg group cursor-pointer border border-black/5 shadow-sm transition-all duration-300 hover:shadow-xl ${
+            className={`relative overflow-hidden rounded-sm group cursor-pointer border border-black/5 transition-shadow duration-300 hover:shadow-lg ${
               activeTab === "all" ? img.span || "col-span-1 row-span-1" : "col-span-1 row-span-1"
             }`}
           >
@@ -181,12 +181,6 @@ export default function GalleryGrid() {
               alt={img.alt}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            {/* Category Tag Badge */}
-            <div className="absolute top-3 left-3 z-10 opacity-90 group-hover:opacity-100 transition-opacity">
-              <span className="bg-[#0E2C21]/85 text-[#B0966D] text-[10px] font-sans font-semibold px-2.5 py-1 rounded-sm backdrop-blur-sm shadow-md border border-[#B0966D]/30">
-                {img.categoryLabel}
-              </span>
-            </div>
             {/* Hover Caption Overlay */}
             <div className="absolute inset-0 scrim-caption opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
               <span className="text-[#FAF9F6] font-display text-sm sm:text-base leading-snug drop-shadow-md mb-2">
@@ -239,7 +233,7 @@ export default function GalleryGrid() {
             <img
               src={filteredImages[lightboxIndex].src}
               alt={filteredImages[lightboxIndex].alt}
-              className="max-h-[70vh] w-auto max-w-full object-contain rounded-lg shadow-2xl mb-4 border border-white/10"
+              className="max-h-[70vh] w-auto max-w-full object-contain rounded-sm shadow-2xl mb-4 border border-white/10"
             />
             <div className="text-center max-w-2xl space-y-2">
               <span className="inline-block bg-[#B0966D] text-[#0E2C21] text-[10px] font-sans font-bold uppercase tracking-wider px-3 py-1 rounded-full">

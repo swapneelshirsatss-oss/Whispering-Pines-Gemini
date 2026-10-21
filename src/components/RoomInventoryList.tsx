@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Users, Bed, Check, ArrowRight, Apple, Snowflake, Info, MessageCircle, Sparkles, ShieldCheck } from "lucide-react";
+import { Users, Bed, Check, ArrowRight, Apple, Snowflake, Info, MessageCircle, ShieldCheck } from "lucide-react";
 import LazyImage from "./LazyImage";
 import { trackAdsConversion } from "../utils/analytics";
 import type { RoomOption } from "../types";
@@ -110,45 +110,34 @@ export default function RoomInventoryList({
                 />
                 <div className="absolute inset-0 bg-[#0E2C21]/10 mix-blend-multiply transition-opacity duration-500 group-hover:opacity-0 pointer-events-none" />
                 
-                {/* Special Tags */}
-                <div className="absolute top-4 left-4 flex flex-col gap-1.5 z-10">
-                  {room.featured && (
-                    <div className="bg-[#0E2C21] text-[#FAF9F6] text-[10px] uppercase font-sans tracking-[0.2em] px-3.5 py-1.5 rounded-sm shadow-md border border-[#B0966D]/40 font-bold">
-                      Signature Villa
-                    </div>
-                  )}
-                  {room.pricePerNight && (
-                    <div className="bg-[#FAF9F6]/95 backdrop-blur-md text-[#0E2C21] text-[11px] font-sans font-bold px-3 py-1.5 rounded-sm shadow-md flex items-center flex-wrap gap-1.5 border border-[#0E2C21]/10">
-                      <Sparkles className="w-3 h-3 text-[#7A6038]" />
-                      <span className="tnum">₹{room.pricePerNight.toLocaleString("en-IN")}/night</span>
-                      {room.otaPricePerNight && (
-                        <span className="line-through text-gray-400 font-normal text-[10px] tnum">
-                          ₹{room.otaPricePerNight.toLocaleString("en-IN")}
-                        </span>
-                      )}
-                      {room.directSavings && (
-                        <span className="bg-[#25D366]/20 text-[#15803d] text-[9px] font-bold px-1.5 py-0.5 rounded tracking-tight">
-                          {room.directSavings}
-                        </span>
-                      )}
-                    </div>
-                  )}
-                </div>
               </div>
 
               {/* Room Specifications - Right/Bottom */}
               <div className="lg:col-span-5 flex flex-col justify-center space-y-6 lg:pr-8">
                 <div>
                   <div className="mb-4">
-                    <p className="text-[10px] font-sans text-[#7A6038] uppercase tracking-[0.2em] mb-2 font-semibold">
-                      {room.subtitle}
+                    <p className="text-[10px] font-sans text-[#7A6038] uppercase tracking-[0.1em] mb-2 font-semibold">
+                      {room.featured ? "Signature Villa — " : ""}{room.subtitle}
                     </p>
-                    <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium text-[#0E2C21] leading-tight">
+                    <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium text-[#0E2C21] leading-snug">
                       {room.name}
                     </h2>
                   </div>
                   
-                  <div className="w-12 h-[1px] bg-[#B0966D] mb-6" />
+                  <div className="w-12 rule-brass-left mb-6" />
+                  {room.pricePerNight && (
+                    <p className="mb-6 font-sans text-sm text-[#2C3531]/80">
+                      <span className="font-display text-2xl text-[#0E2C21] tnum">
+                        &#8377;{room.pricePerNight.toLocaleString("en-IN")}
+                      </span>
+                      <span className="ml-2">per night, booked direct</span>
+                      {room.otaPricePerNight && (
+                        <span className="text-[#2C3531]/55">
+                          {" "}&middot; {Math.round((1 - room.pricePerNight / room.otaPricePerNight) * 100)}% below travel portals
+                        </span>
+                      )}
+                    </p>
+                  )}
                   <p className="text-sm text-[#2C3531]/80 leading-relaxed mb-6 font-sans font-light">
                     {room.description}
                   </p>
@@ -185,14 +174,14 @@ export default function RoomInventoryList({
 
                   {/* Room Amenities Grid */}
                   <div className="mb-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2.5">
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2.5">
                       {room.amenities.slice(0, 4).map((item, idx) => (
-                        <div key={idx} className="flex items-center text-xs text-[#2C3531]/80">
-                          <div className="w-1.5 h-1.5 bg-[#B0966D] rounded-full mr-2.5 shrink-0" />
-                          <h3 className="font-sans font-light leading-snug">{item}</h3>
-                        </div>
+                        <li key={idx} className="flex items-center text-sm text-[#2C3531]/80">
+                          <span className="w-1 h-1 bg-[#7A6038] rounded-full mr-2.5 shrink-0" />
+                          <span className="font-sans font-light leading-snug">{item}</span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
                 </div>
 
