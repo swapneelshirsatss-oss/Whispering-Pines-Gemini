@@ -107,18 +107,8 @@ p {
   contain-intrinsic-size: 1px 600px;
 }
 
-/* Luxury shadows and optical enhancements */
-.shadow-luxury-sm {
-  box-shadow: 0 1px 2px rgba(14, 44, 33, 0.04), 0 4px 12px rgba(14, 44, 33, 0.06);
-}
 
-.shadow-luxury-md {
-  box-shadow: 0 4px 16px -2px rgba(14, 44, 33, 0.08), 0 8px 24px -4px rgba(14, 44, 33, 0.12);
-}
 
-.shadow-luxury-lg {
-  box-shadow: 0 12px 32px -4px rgba(14, 44, 33, 0.15), 0 4px 12px -2px rgba(14, 44, 33, 0.08);
-}
 
 
 /* Luxury Glassmorphism */

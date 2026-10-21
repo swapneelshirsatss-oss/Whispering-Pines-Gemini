@@ -410,7 +410,7 @@ const venueSchema = {
             target="_blank"
             rel="noopener noreferrer"
             data-track-dl='{"event":"generate_lead","event_category":"wedding","event_label":"hero_whatsapp_click"}'
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-sans text-xs uppercase tracking-[0.1em] font-semibold transition-all duration-300 shadow-luxury-md"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-sans text-xs uppercase tracking-[0.1em] font-semibold transition-all duration-300 shadow-md"
           >
             {/* Authentic WhatsApp SVG Logo */}
             <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
@@ -523,7 +523,7 @@ const venueSchema = {
 
           {/* Atmospheric Image Frame */}
           <div class="lg:col-span-5">
-            <div class="relative rounded-2xl overflow-hidden shadow-luxury-lg border border-[#0E2C21]/10 group">
+            <div class="relative rounded-sm overflow-hidden shadow-md border border-[#0E2C21]/10 group">
               <img
                 src="/images/destination-wedding/destination-wedding-nainital-place.avif"
                 alt="Real destination wedding celebrations at Whispering Pines Resort mountain sanctuary in Malla Ramgarh Uttarakhand"
@@ -569,7 +569,7 @@ const venueSchema = {
         {/* 4 Venues Grid */}
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           {VENUES.map((venue) => (
-            <article class="bg-white rounded-2xl border border-[#0E2C21]/10 overflow-hidden shadow-luxury-sm hover:shadow-luxury-md transition-all duration-300 flex flex-col group">
+            <article class="bg-white rounded-sm border border-[#0E2C21]/10 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col group">
               {/* Venue Image */}
               <div class="relative h-64 sm:h-72 overflow-hidden bg-[#0E2C21]/5">
                 <img
@@ -693,7 +693,7 @@ const venueSchema = {
         </div>
 
         {/* Editorial Visual Feature: Private Estate Buyout & Orchard Celebrations */}
-        <div class="mt-14 rounded-2xl bg-white border border-[#0E2C21]/10 overflow-hidden shadow-luxury-sm grid grid-cols-1 lg:grid-cols-12 items-stretch">
+        <div class="mt-14 rounded-sm bg-white border border-[#0E2C21]/10 overflow-hidden shadow-sm grid grid-cols-1 lg:grid-cols-12 items-stretch">
           <div class="lg:col-span-7 p-8 sm:p-10 space-y-4 flex flex-col justify-center">
             <span class="font-mono text-xs uppercase tracking-[0.2em] text-[#C27847] font-semibold block">
               100% PRIVATE BUYOUT SANCTUARY
@@ -763,7 +763,7 @@ const venueSchema = {
           {WEDDING_SERVICES.slice(0, 3).map((service) => {
             const ServiceIcon = service.icon;
             return (
-              <article class="bg-white rounded-2xl border border-[#0E2C21]/10 overflow-hidden flex flex-col justify-between shadow-luxury-sm hover:shadow-luxury-md transition-all duration-300 group">
+              <article class="bg-white rounded-sm border border-[#0E2C21]/10 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300 group">
                 {/* Real Image Header */}
                 <div class="relative h-48 sm:h-52 overflow-hidden bg-[#0E2C21]/5">
                   <img
@@ -829,7 +829,7 @@ const venueSchema = {
           {WEDDING_SERVICES.slice(3, 5).map((service) => {
             const ServiceIcon = service.icon;
             return (
-              <article class="bg-white rounded-2xl border border-[#0E2C21]/10 overflow-hidden flex flex-col justify-between shadow-luxury-sm hover:shadow-luxury-md transition-all duration-300 group">
+              <article class="bg-white rounded-sm border border-[#0E2C21]/10 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300 group">
                 {/* Real Image Header */}
                 <div class="relative h-48 sm:h-52 overflow-hidden bg-[#0E2C21]/5">
                   <img
@@ -921,7 +921,7 @@ const venueSchema = {
           {CEREMONIAL_STEPS.map((step) => {
             const StepIcon = step.icon;
             return (
-              <div class="bg-[#FAF9F6]/5 rounded-2xl border border-[#FAF9F6]/10 overflow-hidden flex flex-col justify-between hover:border-[#8A6F4A]/40 transition-all duration-300 backdrop-blur-sm group">
+              <div class="bg-[#FAF9F6]/5 rounded-sm border border-[#FAF9F6]/10 overflow-hidden flex flex-col justify-between hover:border-[#8A6F4A]/40 transition-all duration-300 backdrop-blur-sm group">
                 {/* Real Image Header */}
                 <div class="relative h-48 overflow-hidden bg-black/30">
                   <img
@@ -1003,7 +1003,7 @@ const venueSchema = {
         {/* Editorial Photo Grid */}
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {REAL_WEDDING_GALLERY.map((item, idx) => (
-            <figure class={`group relative rounded-2xl overflow-hidden shadow-luxury-sm hover:shadow-luxury-lg border border-[#0E2C21]/10 bg-[#0E2C21]/5 transition-all duration-500  ${idx === 0 ? 'md:col-span-2 lg:col-span-2' : ''}`}>
+            <figure class={`group relative rounded-sm overflow-hidden shadow-sm hover:shadow-md border border-[#0E2C21]/10 bg-[#0E2C21]/5 transition-all duration-500  ${idx === 0 ? 'md:col-span-2 lg:col-span-2' : ''}`}>
               <div class={`relative overflow-hidden ${idx === 0 ? 'h-72 sm:h-96' : 'h-72 sm:h-80'}`}>
                 <img
                   src={item.src}
@@ -1037,7 +1037,7 @@ const venueSchema = {
         </div>
 
         {/* Gallery Footer Callout */}
-        <div class="mt-14 p-6 sm:p-8 rounded-2xl bg-[#F4F1EA] border border-[#0E2C21]/10 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+        <div class="mt-14 p-6 sm:p-8 rounded-sm bg-[#F4F1EA] border border-[#0E2C21]/10 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
           <div class="space-y-1">
             <span class="font-sans text-xs uppercase tracking-wider text-[#C27847] font-semibold block">
               SCHEDULE A PROPERTY WALKTHROUGH
@@ -1115,7 +1115,7 @@ const venueSchema = {
         </div>
 
         {/* Destination Wedding Cost & Budget Spotlight Card */}
-        <div class="mt-14 bg-gradient-to-br from-[#0E2C21] to-[#0A2118] rounded-2xl sm:rounded-3xl p-6 sm:p-10 text-white border border-[#B0966D]/35 shadow-xl relative overflow-hidden">
+        <div class="mt-14 bg-gradient-to-br from-[#0E2C21] to-[#0A2118] rounded-sm sm:rounded-sm p-6 sm:p-10 text-white border border-[#B0966D]/35 shadow-md relative overflow-hidden">
           <div class="absolute -top-24 -right-24 w-64 h-64 bg-[#B0966D]/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
           <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
             <div class="space-y-3 text-center md:text-left">
@@ -1131,15 +1131,15 @@ const venueSchema = {
                 Wondering what 50 to 100 guests really spend? Read our line-by-line breakdown covering full 26-key resort buyouts, per-plate catering, local photography, décor budgets, and how to stay under 10 lakhs.
               </p>
               <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-1 text-[11px] font-mono text-[#7A6038]/90">
-                <span class="bg-white/10 px-2.5 py-1 rounded-md">70 Guests Worked Budget</span>
-                <span class="bg-white/10 px-2.5 py-1 rounded-md">Under 10 Lakhs Strategy</span>
-                <span class="bg-white/10 px-2.5 py-1 rounded-md">Peak vs. Shoulder Months</span>
+                <span class="bg-white/10 px-2.5 py-1 rounded-sm">70 Guests Worked Budget</span>
+                <span class="bg-white/10 px-2.5 py-1 rounded-sm">Under 10 Lakhs Strategy</span>
+                <span class="bg-white/10 px-2.5 py-1 rounded-sm">Peak vs. Shoulder Months</span>
               </div>
             </div>
             <div class="shrink-0 flex flex-col sm:flex-row md:flex-col gap-3 w-full sm:w-auto">
               <a
                 href="/blog/destination-wedding-uttarakhand-cost/"
-                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#B0966D] text-[#0E2C21] hover:bg-yellow-400 font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md transform text-center"
+                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#B0966D] text-[#0E2C21] hover:bg-yellow-400 font-bold text-xs uppercase tracking-wider rounded-sm transition-all shadow-md transform text-center"
               >
                 <span>Read Full Cost Guide</span>
                 <ArrowUpRight className="w-4 h-4" />
@@ -1148,7 +1148,7 @@ const venueSchema = {
                 href="https://wa.me/917505029696?text=Hi!%20We%20are%20planning%20a%20destination%20wedding%20at%20Whispering%20Pines.%20Can%20you%20share%20a%20custom%20quote%3F"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/15 border border-white/20 text-white font-medium text-xs rounded-xl transition-all text-center"
+                class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/15 border border-white/20 text-white font-medium text-xs rounded-sm transition-all text-center"
               >
                 <span class="w-2 h-2 rounded-full bg-[#25D366]"></span>
                 <span>WhatsApp for Dates</span>

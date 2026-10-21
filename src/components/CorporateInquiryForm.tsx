@@ -108,7 +108,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
   return (
     <div id="corporate-inquiry" className="relative scroll-mt-24">
       {/* Editorial Container with Subtle Border & Shadow */}
-      <div className="bg-white border border-[#E8E5DF] rounded-2xl p-6 sm:p-10 lg:p-12 shadow-luxury-md relative overflow-hidden">
+      <div className="bg-white border border-[#E8E5DF] rounded-sm p-6 sm:p-10 lg:p-12 shadow-md relative overflow-hidden">
         {/* Decorative Golden Top Accent */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0E2C21] via-[#B0966D] to-[#0E2C21]" />
 
@@ -131,7 +131,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
             </div>
 
             {/* Corporate Perks Guarantee Banner */}
-            <div className="bg-[#FAF9F6] border border-[#8A6F4A]/30 rounded-xl p-5 max-w-md mx-auto text-left flex items-start gap-3.5">
+            <div className="bg-[#FAF9F6] border border-[#8A6F4A]/30 rounded-sm p-5 max-w-md mx-auto text-left flex items-start gap-3.5">
               <ShieldCheck className="w-5 h-5 text-[#7A6038] shrink-0 mt-0.5" />
               <div>
                 <span className="font-sans text-[11px] uppercase tracking-wider text-[#0E2C21] font-bold block mb-1">
@@ -182,7 +182,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                     value={formData.companyName}
                     onChange={handleChange}
                     placeholder="e.g. Acme Technologies Pvt Ltd"
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-xl text-sm text-[#0E2C21] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-sm text-sm text-[#0E2C21] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all"
                   />
                 </div>
               </div>
@@ -203,7 +203,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                     value={formData.organizerName}
                     onChange={handleChange}
                     placeholder="e.g. Vikram Sharma (Head of People / EA)"
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-xl text-sm text-[#0E2C21] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-sm text-sm text-[#0E2C21] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all"
                   />
                 </div>
               </div>
@@ -224,7 +224,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                     value={formData.workEmail}
                     onChange={handleChange}
                     placeholder="vikram@company.com"
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-xl text-sm text-[#0E2C21] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-sm text-sm text-[#0E2C21] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all"
                   />
                 </div>
               </div>
@@ -245,7 +245,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="e.g. +91 98765 43210"
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-xl text-sm text-[#0E2C21] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-sm text-sm text-[#0E2C21] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all"
                   />
                 </div>
               </div>
@@ -265,7 +265,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                     required
                     value={formData.preferredDate}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-xl text-sm text-[#0E2C21] focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-sm text-sm text-[#0E2C21] focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all"
                   />
                 </div>
               </div>
@@ -283,7 +283,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                     name="delegateCount"
                     value={formData.delegateCount}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-xl text-sm text-[#0E2C21] focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all appearance-none cursor-pointer"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-sm text-sm text-[#0E2C21] focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all appearance-none cursor-pointer"
                   >
                     <option value="15-30">15 – 30 Delegates (Executive Sprints / CXO)</option>
                     <option value="30-50">30 – 50 Delegates (Mid-size Team Offsite)</option>
@@ -306,7 +306,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                       type="button"
                       key={req}
                       onClick={() => handleRequirementToggle(req)}
-                      className={`px-3.5 py-2 rounded-xl text-xs font-mono uppercase tracking-wider transition-all duration-200 border flex items-center gap-2 cursor-pointer ${
+                      className={`px-3.5 py-2 rounded-sm text-xs font-mono uppercase tracking-wider transition-all duration-200 border flex items-center gap-2 cursor-pointer ${
                         isChecked
                           ? "bg-[#0E2C21] text-[#FAF9F6] border-[#0E2C21] shadow-xs"
                           : "bg-[#FAF9F6] text-[#2C3531]/80 border-[#0E2C21]/15 hover:border-[#0E2C21]/30"
@@ -335,7 +335,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                 value={formData.notes}
                 onChange={handleChange}
                 placeholder="Share any special team-building activities, dietary restrictions, flight/train transfer requirements, or executive villa preferences..."
-                className="w-full p-4 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-xl text-sm text-[#0E2C21] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all resize-none"
+                className="w-full p-4 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-sm text-sm text-[#0E2C21] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all resize-none"
               ></textarea>
             </div>
 
@@ -344,7 +344,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full sm:flex-1 py-4 px-8 rounded-full bg-[#0E2C21] hover:bg-[#193F30] text-[#FAF9F6] font-sans text-xs uppercase tracking-[0.1em] font-semibold transition-all duration-300 shadow-luxury-sm hover:shadow-luxury-md flex items-center justify-center gap-3 cursor-pointer disabled:opacity-70"
+                className="w-full sm:flex-1 py-4 px-8 rounded-full bg-[#0E2C21] hover:bg-[#193F30] text-[#FAF9F6] font-sans text-xs uppercase tracking-[0.1em] font-semibold transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-3 cursor-pointer disabled:opacity-70"
               >
                 {isSubmitting ? (
                   <span>Generating Proposal...</span>

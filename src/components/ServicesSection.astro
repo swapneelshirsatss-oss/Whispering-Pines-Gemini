@@ -45,7 +45,7 @@ const HeadingTag = asH1 ? "h1" : "h2";
       {RESORT_SERVICES.map((service) => {
         const IconComponent = iconMap[service.icon] || Sparkles;
         return (
-          <div class="bg-white hover:bg-[#0E2C21]/5 border border-[#2C3531]/10 hover:border-[#B0966D]/50 p-6 sm:p-8 rounded-sm hover:shadow-xl transition-all duration-300 group">
+          <div class="bg-white hover:bg-[#0E2C21]/5 border border-[#2C3531]/10 hover:border-[#B0966D]/50 p-6 sm:p-8 rounded-sm hover:shadow-md transition-all duration-300 group">
             {/* Visual Icon Container */}
             <div class="w-12 h-12 bg-[#0E2C21]/5 group-hover:bg-[#B0966D] rounded-sm flex items-center justify-center mb-6 transition-all duration-300">
               <IconComponent className="w-6 h-6 text-[#7A6038] group-hover:text-[#0E2C21] transition-colors duration-300" />

@@ -94,11 +94,11 @@ const remainingPosts = BLOG_POSTS.slice(1);
       </div>
     </header>
 
-    <main class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
+    <main class="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
 
       {/* Featured Article Spotlight Card */}
       {featuredPost && (
-        <section class="bg-white rounded-3xl border border-[#EAE8E3] shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 group">
+        <section class="bg-white rounded-sm border border-[#EAE8E3] shadow-md overflow-hidden hover:shadow-md transition-all duration-300 group">
           <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
             <div class="lg:col-span-7 relative h-72 sm:h-96 lg:h-full overflow-hidden min-h-[320px]">
               <img
@@ -186,7 +186,7 @@ const remainingPosts = BLOG_POSTS.slice(1);
           {remainingPosts.map((post) => {
             const articleUrl = post.customUrl || `/blog/${post.slug}/`;
             return (
-              <article class="bg-white rounded-2xl border border-[#EAE8E3] overflow-hidden hover:shadow-xl hover:border-[#8A6F4A]/30 transition-all duration-300 flex flex-col group">
+              <article class="bg-white rounded-sm border border-[#EAE8E3] overflow-hidden hover:shadow-md hover:border-[#8A6F4A]/30 transition-all duration-300 flex flex-col group">
                 <a
                   href={articleUrl}
                   class="h-52 w-full overflow-hidden block relative"
@@ -198,7 +198,7 @@ const remainingPosts = BLOG_POSTS.slice(1);
                     loading="lazy"
                   />
                   <div class="absolute bottom-3 left-3">
-                    <span class="bg-[#0E2C21]/90 backdrop-blur-md text-[#B0966D] text-[10px] uppercase tracking-wider font-semibold px-2.5 py-1 rounded-md border border-[#B0966D]/20">
+                    <span class="bg-[#0E2C21]/90 backdrop-blur-md text-[#B0966D] text-[10px] uppercase tracking-wider font-semibold px-2.5 py-1 rounded-sm border border-[#B0966D]/20">
                       Himalayan Guide
                     </span>
                   </div>
@@ -248,7 +248,7 @@ const remainingPosts = BLOG_POSTS.slice(1);
       </div>
 
       {/* Luxury Resort Direct Booking Callout Card */}
-      <section class="bg-gradient-to-br from-[#0E2C21] via-[#133A2B] to-[#0E2C21] text-white rounded-3xl p-8 sm:p-12 border border-[#B0966D]/30 shadow-2xl relative overflow-hidden text-center space-y-6">
+      <section class="bg-gradient-to-br from-[#0E2C21] via-[#133A2B] to-[#0E2C21] text-white rounded-sm p-8 sm:p-12 border border-[#B0966D]/30 shadow-md relative overflow-hidden text-center space-y-6">
         <div class="relative z-10 max-w-2xl mx-auto space-y-4">
           <span class="text-xs font-sans text-[#B0966D] uppercase tracking-[0.2em] font-semibold block">
             Plan Your Mountain Escape

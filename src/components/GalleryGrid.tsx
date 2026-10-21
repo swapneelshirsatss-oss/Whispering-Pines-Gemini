@@ -172,7 +172,7 @@ export default function GalleryGrid() {
           <div
             key={`${img.src}-${idx}`}
             onClick={() => setLightboxIndex(idx)}
-            className={`relative overflow-hidden rounded-sm group cursor-pointer border border-black/5 transition-shadow duration-300 hover:shadow-lg ${
+            className={`relative overflow-hidden rounded-sm group cursor-pointer border border-black/5 transition-shadow duration-300 hover:shadow-md ${
               activeTab === "all" ? img.span || "col-span-1 row-span-1" : "col-span-1 row-span-1"
             }`}
           >
@@ -233,7 +233,7 @@ export default function GalleryGrid() {
             <img
               src={filteredImages[lightboxIndex].src}
               alt={filteredImages[lightboxIndex].alt}
-              className="max-h-[70vh] w-auto max-w-full object-contain rounded-sm shadow-2xl mb-4 border border-white/10"
+              className="max-h-[70vh] w-auto max-w-full object-contain rounded-sm shadow-md mb-4 border border-white/10"
             />
             <div className="text-center max-w-2xl space-y-2">
               <span className="inline-block bg-[#B0966D] text-[#0E2C21] text-[10px] font-sans font-bold uppercase tracking-wider px-3 py-1 rounded-full">

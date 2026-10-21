@@ -118,7 +118,7 @@ const schemaData = [
       </a>
 
       {/* Article Header */}
-      <article class="bg-white p-6 sm:p-10 md:p-12 rounded-3xl shadow-sm border border-[#EAE8E3] space-y-8">
+      <article class="bg-white p-6 sm:p-10 md:p-12 rounded-sm shadow-sm border border-[#EAE8E3] space-y-8">
         <div class="space-y-4">
           <div class="flex flex-wrap items-center gap-3 text-xs font-medium text-gray-500">
             <span class="bg-[#0E2C21] text-[#B0966D] text-[11px] font-semibold uppercase px-3 py-1 rounded-full shadow-sm">
@@ -166,7 +166,7 @@ const schemaData = [
         </div>
 
         {/* Feature Hero Image */}
-        <div class="w-full h-64 sm:h-96 md:h-[480px] overflow-hidden rounded-2xl border border-gray-100 shadow-inner bg-gray-100">
+        <div class="w-full h-64 sm:h-96 md:h-[480px] overflow-hidden rounded-sm border border-gray-100 shadow-sm bg-gray-100">
           <img 
             src={post.imageUrl} 
             alt={post.imageAlt ?? post.title} 
@@ -213,10 +213,10 @@ const schemaData = [
               return (
                 <a 
                   href={relUrl}
-                  class="bg-white rounded-2xl border border-[#EAE8E3] p-5 shadow-sm hover:shadow-md hover:border-[#8A6F4A]/30 transition-all duration-300 flex flex-col justify-between group"
+                  class="bg-white rounded-sm border border-[#EAE8E3] p-5 shadow-sm hover:shadow-md hover:border-[#8A6F4A]/30 transition-all duration-300 flex flex-col justify-between group"
                 >
                   <div class="space-y-3">
-                    <div class="h-36 w-full rounded-xl overflow-hidden mb-3">
+                    <div class="h-36 w-full rounded-sm overflow-hidden mb-3">
                       <img src={rel.imageUrl} alt={rel.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
                     <span class="text-[10px] text-gray-500 font-medium">{rel.readTime}</span>
@@ -235,7 +235,7 @@ const schemaData = [
       )}
 
       {/* Callout Card */}
-      <section class="bg-gradient-to-br from-[#0E2C21] to-[#133A2B] text-white rounded-3xl p-8 border border-[#8A6F4A]/30 text-center space-y-4">
+      <section class="bg-gradient-to-br from-[#0E2C21] to-[#133A2B] text-white rounded-sm p-8 border border-[#8A6F4A]/30 text-center space-y-4">
         <h3 class="text-2xl font-bold font-display text-white">Experience Whispering Pines Resort</h3>
         <p class="text-sm text-gray-300 font-light max-w-xl mx-auto">
           Book your luxury stay with 180° Himalayan valley views in Malla Ramgarh near Mukteshwar.

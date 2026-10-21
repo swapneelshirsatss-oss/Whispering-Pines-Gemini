@@ -69,7 +69,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
   return (
     <div id="wedding-inquiry" className="relative scroll-mt-24">
       {/* Editorial Container with Subtle Alabaster Texture & Hairline Border */}
-      <div className="bg-white border border-[#0E2C21]/10 rounded-2xl p-6 sm:p-10 lg:p-12 shadow-luxury-md relative overflow-hidden">
+      <div className="bg-white border border-[#0E2C21]/10 rounded-sm p-6 sm:p-10 lg:p-12 shadow-md relative overflow-hidden">
         {/* Decorative Golden Top Accent */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0E2C21] via-[#B0966D] to-[#0E2C21]" />
 
@@ -92,7 +92,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
             </div>
 
             {/* Host Perks Banner in Confirmation */}
-            <div className="bg-[#FAF9F6] border border-[#8A6F4A]/30 rounded-xl p-5 max-w-md mx-auto text-left flex items-start gap-3.5">
+            <div className="bg-[#FAF9F6] border border-[#8A6F4A]/30 rounded-sm p-5 max-w-md mx-auto text-left flex items-start gap-3.5">
               <Sparkles className="w-5 h-5 text-[#7A6038] shrink-0 mt-0.5" />
               <div>
                 <span className="font-sans text-[11px] uppercase tracking-wider text-[#0E2C21] font-bold block mb-1">
@@ -144,7 +144,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
                     value={formData.fullName}
                     onChange={handleChange}
                     placeholder="e.g. Radhika Sharma & Vikram Mehta"
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-lg text-sm text-[#2C3531] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-colors"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-sm text-sm text-[#2C3531] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-colors"
                   />
                 </div>
               </div>
@@ -166,7 +166,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+91 98765 43210"
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-lg text-sm text-[#2C3531] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-colors font-sans"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-sm text-sm text-[#2C3531] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-colors font-sans"
                   />
                 </div>
               </div>
@@ -188,7 +188,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="host@example.com"
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-lg text-sm text-[#2C3531] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-colors"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-sm text-sm text-[#2C3531] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-colors"
                   />
                 </div>
               </div>
@@ -209,7 +209,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
                     required
                     value={formData.weddingDate}
                     onChange={handleChange}
-                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-lg text-sm text-[#2C3531] focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-colors font-sans"
+                    className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-sm text-sm text-[#2C3531] focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-colors font-sans"
                   />
                 </div>
               </div>
@@ -229,7 +229,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
                   name="guestCount"
                   value={formData.guestCount}
                   onChange={handleChange}
-                  className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-lg text-sm text-[#2C3531] focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-colors appearance-none cursor-pointer"
+                  className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-sm text-sm text-[#2C3531] focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-colors appearance-none cursor-pointer"
                 >
                   <option value="30-50">30 – 50 Guests (Intimate Villa & Orchard Gathering)</option>
                   <option value="50-70">50 – 70 Guests (Complete Estate Buyout · Recommended)</option>
@@ -254,13 +254,13 @@ I look forward to discussing the bridal villa allocation and customized wedding 
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Tell us about your ceremonial vision: specific ritual dates, preferred services (Decoration & Lighting, Menu Creation, Spa & Wellness, Pre-Bridal Beauty, Wedding Cake), or bridal villa allocation..."
-                  className="w-full p-3.5 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-lg text-sm text-[#2C3531] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-colors leading-relaxed"
+                  className="w-full p-3.5 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-sm text-sm text-[#2C3531] placeholder:text-[#2C3531]/40 focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-colors leading-relaxed"
                 />
               </div>
             </div>
 
             {/* Host Perks Callout */}
-            <div className="bg-[#FAF9F6] border border-[#8A6F4A]/25 rounded-xl p-4 flex items-start gap-3">
+            <div className="bg-[#FAF9F6] border border-[#8A6F4A]/25 rounded-sm p-4 flex items-start gap-3">
               <Sparkles className="w-4 h-4 text-[#7A6038] shrink-0 mt-0.5" />
               <p className="text-sm text-[#2C3531]/90 leading-relaxed font-sans">
                 <strong className="text-[#0E2C21] font-semibold">Host Perks Privilege:</strong> Direct inquiries receive priority bridal villa allocation and a complimentary on-site menu tasting session.
@@ -272,7 +272,7 @@ I look forward to discussing the bridal villa allocation and customized wedding 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full inline-flex items-center justify-center gap-3 py-4 px-8 rounded-full bg-[#0E2C21] hover:bg-[#193F30] text-[#FAF9F6] text-xs sm:text-sm font-sans uppercase tracking-[0.1em] font-semibold transition-all duration-300 shadow-luxury-md focus-ring disabled:opacity-70 cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-3 py-4 px-8 rounded-full bg-[#0E2C21] hover:bg-[#193F30] text-[#FAF9F6] text-xs sm:text-sm font-sans uppercase tracking-[0.1em] font-semibold transition-all duration-300 shadow-md focus-ring disabled:opacity-70 cursor-pointer"
               >
                 {isSubmitting ? (
                   <span>Preparing Custom Proposal...</span>

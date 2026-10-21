@@ -376,7 +376,7 @@ const corporateSchema = {
             target="_blank"
             rel="noopener noreferrer"
             data-track-dl='{"event":"generate_lead","event_category":"corporate","event_label":"hero_whatsapp_click"}'
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-mono text-xs uppercase tracking-[0.16em] font-semibold transition-all duration-300 shadow-luxury-md"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-mono text-xs uppercase tracking-[0.16em] font-semibold transition-all duration-300 shadow-md"
           >
             <Phone className="w-4 h-4 fill-current shrink-0" />
             <span>Inquire on WhatsApp (+91-7505029696)</span>
@@ -468,7 +468,7 @@ const corporateSchema = {
           {VALUE_PILLARS.map((pillar) => {
             const Icon = pillar.icon;
             return (
-              <div class="bg-white rounded-2xl border border-[#E8E5DF] p-7 sm:p-8 flex flex-col justify-between hover:border-[#0E2C21]/30 shadow-luxury-sm hover:shadow-luxury-md transition-all duration-300 group">
+              <div class="bg-white rounded-sm border border-[#E8E5DF] p-7 sm:p-8 flex flex-col justify-between hover:border-[#0E2C21]/30 shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div class="space-y-4">
                   <div class="flex items-center justify-between">
                     <div class="w-10 h-10 rounded-full bg-[#0E2C21]/5 flex items-center justify-center text-[#0E2C21] group-hover:bg-[#0E2C21] group-hover:text-[#FAF9F6] transition-colors">
@@ -523,7 +523,7 @@ const corporateSchema = {
         {/* 4 Clean Cards */}
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           {WORKSPACES.map((space) => (
-            <article class="bg-white rounded-2xl border border-[#E8E5DF] overflow-hidden shadow-luxury-sm hover:shadow-luxury-md transition-all duration-300 flex flex-col group">
+            <article class="bg-white rounded-sm border border-[#E8E5DF] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col group">
               {/* Space Real Image Header */}
               <div class="relative h-64 sm:h-72 overflow-hidden bg-[#0E2C21]/5">
                 <img
@@ -566,7 +566,7 @@ const corporateSchema = {
                     {space.name}
                   </h3>
 
-                  <div class="p-3 rounded-xl bg-[#FAF9F6] border border-[#0E2C21]/10 text-xs font-sans text-[#0E2C21]">
+                  <div class="p-3 rounded-sm bg-[#FAF9F6] border border-[#0E2C21]/10 text-xs font-sans text-[#0E2C21]">
                     <strong class="text-[#C27847]">Best For:</strong> {space.bestFor}
                   </div>
 
@@ -621,7 +621,7 @@ const corporateSchema = {
           {EXPERIENCES.map((exp) => {
             const Icon = exp.icon;
             return (
-              <div class="bg-white rounded-2xl border border-[#E8E5DF] p-7 sm:p-8 flex flex-col justify-between hover:border-[#0E2C21]/30 shadow-luxury-sm hover:shadow-luxury-md transition-all duration-300 group">
+              <div class="bg-white rounded-sm border border-[#E8E5DF] p-7 sm:p-8 flex flex-col justify-between hover:border-[#0E2C21]/30 shadow-sm hover:shadow-md transition-all duration-300 group">
                 <div class="space-y-4">
                   <div class="flex items-center justify-between">
                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#FAF9F6] text-[10px] font-sans uppercase tracking-wider text-[#C27847] font-semibold border border-[#0E2C21]/10">
@@ -689,7 +689,7 @@ const corporateSchema = {
           {HR_SUPPORT.map((item) => {
             const Icon = item.icon;
             return (
-              <div class="py-7 sm:py-8 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start hover:bg-white/80 transition-colors group px-2 sm:px-4 rounded-xl">
+              <div class="py-7 sm:py-8 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start hover:bg-white/80 transition-colors group px-2 sm:px-4 rounded-sm">
                 {/* Number / Badge */}
                 <div class="md:col-span-2 flex items-center gap-3">
                   <span class="font-sans text-xs uppercase tracking-[0.1em] text-[#C27847] font-semibold">
@@ -719,7 +719,7 @@ const corporateSchema = {
         </div>
 
         {/* Corporate Trust Banner */}
-        <div class="mt-14 p-6 sm:p-8 rounded-2xl bg-white border border-[#E8E5DF] shadow-luxury-sm flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="mt-14 p-6 sm:p-8 rounded-sm bg-white border border-[#E8E5DF] shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
           <div class="space-y-1 text-center sm:text-left">
             <span class="font-sans text-xs uppercase tracking-wider text-[#C27847] font-semibold block">
               CORPORATE AUDIT COMPLIANCE
@@ -771,7 +771,7 @@ const corporateSchema = {
         {/* 3-Day Timeline Cards */}
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {ITINERARY_DAYS.map((dayPlan) => (
-            <div class="bg-[#FAF9F6]/5 rounded-2xl border border-[#FAF9F6]/10 p-6 sm:p-8 flex flex-col justify-between hover:border-[#8A6F4A]/40 transition-colors backdrop-blur-sm group">
+            <div class="bg-[#FAF9F6]/5 rounded-sm border border-[#FAF9F6]/10 p-6 sm:p-8 flex flex-col justify-between hover:border-[#8A6F4A]/40 transition-colors backdrop-blur-sm group">
               <div class="space-y-6">
                 <div class="flex items-center justify-between pb-4 border-b border-[#FAF9F6]/15">
                   <span class="font-sans text-xs uppercase tracking-[0.1em] text-[#7A6038] font-semibold">
@@ -855,7 +855,7 @@ const corporateSchema = {
         <CorporateInquiryForm client:visible />
 
         {/* Direct Contact Box (Verbatim Information) */}
-        <div class="mt-14 p-8 sm:p-10 rounded-2xl bg-white border border-[#E8E5DF] shadow-luxury-sm">
+        <div class="mt-14 p-8 sm:p-10 rounded-sm bg-white border border-[#E8E5DF] shadow-sm">
           <div class="text-center mb-8">
             <span class="font-sans text-xs uppercase tracking-[0.1em] text-[#C27847] font-semibold block mb-1">
               DIRECT DESK ASSISTANCE

@@ -137,7 +137,7 @@ export default function DistanceTransitMatrix({
         </div>
 
         {/* Desktop Table View (Hidden on Mobile) */}
-        <div className="hidden lg:block bg-white rounded-2xl border border-[#EAE8E3] shadow-md overflow-hidden">
+        <div className="hidden lg:block bg-white rounded-sm border border-[#EAE8E3] shadow-md overflow-hidden">
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="bg-[#0E2C21] text-[#FAF9F6] font-sans text-xs uppercase tracking-wider border-b border-[#B0966D]/30">
@@ -160,7 +160,7 @@ export default function DistanceTransitMatrix({
                   {/* Origin */}
                   <td className="py-4 px-5">
                     <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-[#0E2C21]/5 flex items-center justify-center shrink-0 mt-0.5 border border-[#0E2C21]/10">
+                      <div className="w-8 h-8 rounded-sm bg-[#0E2C21]/5 flex items-center justify-center shrink-0 mt-0.5 border border-[#0E2C21]/10">
                         {renderIcon(route.iconType)}
                       </div>
                       <div>
@@ -168,7 +168,7 @@ export default function DistanceTransitMatrix({
                           {route.origin}
                         </div>
                         {route.badge && (
-                          <span className="inline-block mt-1 text-[10px] font-sans uppercase tracking-wider px-2 py-0.5 rounded bg-[#B0966D]/15 text-[#0E2C21] font-semibold border border-[#8A6F4A]/30">
+                          <span className="inline-block mt-1 text-[10px] font-sans uppercase tracking-wider px-2 py-0.5 rounded-sm bg-[#B0966D]/15 text-[#0E2C21] font-semibold border border-[#8A6F4A]/30">
                             {route.badge}
                           </span>
                         )}
@@ -183,7 +183,7 @@ export default function DistanceTransitMatrix({
 
                   {/* Distance */}
                   <td className="py-4 px-4 text-center">
-                    <span className="font-sans font-bold text-sm text-[#0E2C21] bg-[#FAF9F6] px-2.5 py-1 rounded border border-[#EAE8E3]">
+                    <span className="font-sans font-bold text-sm text-[#0E2C21] bg-[#FAF9F6] px-2.5 py-1 rounded-sm border border-[#EAE8E3]">
                       {route.distanceKm}
                     </span>
                   </td>
@@ -212,7 +212,7 @@ export default function DistanceTransitMatrix({
                       href={route.googleMapsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 bg-[#0E2C21] hover:bg-[#B0966D] text-[#FAF9F6] hover:text-[#0E2C21] px-3.5 py-2 rounded-lg font-sans text-xs font-semibold transition-all shadow-sm group whitespace-nowrap"
+                      className="inline-flex items-center gap-1.5 bg-[#0E2C21] hover:bg-[#B0966D] text-[#FAF9F6] hover:text-[#0E2C21] px-3.5 py-2 rounded-sm font-sans text-xs font-semibold transition-all shadow-sm group whitespace-nowrap"
                       title={`Open driving directions from ${route.origin} on Google Maps`}
                     >
                       <Navigation className="w-3.5 h-3.5 group-hover:rotate-45 transition-transform" />
@@ -231,12 +231,12 @@ export default function DistanceTransitMatrix({
           {filteredRoutes.map((route) => (
             <div 
               key={route.id}
-              className="bg-white p-5 rounded-xl border border-[#EAE8E3] shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4"
+              className="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4"
             >
               <div>
                 <div className="flex items-start justify-between gap-3 mb-2.5">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-9 h-9 rounded-lg bg-[#0E2C21]/5 flex items-center justify-center shrink-0 border border-[#0E2C21]/10">
+                    <div className="w-9 h-9 rounded-sm bg-[#0E2C21]/5 flex items-center justify-center shrink-0 border border-[#0E2C21]/10">
                       {renderIcon(route.iconType)}
                     </div>
                     <div>
@@ -250,18 +250,18 @@ export default function DistanceTransitMatrix({
                   </div>
 
                   {route.badge && (
-                    <span className="text-[10px] font-sans uppercase tracking-wider px-2 py-0.5 rounded bg-[#B0966D]/15 text-[#0E2C21] font-semibold border border-[#8A6F4A]/30 shrink-0">
+                    <span className="text-[10px] font-sans uppercase tracking-wider px-2 py-0.5 rounded-sm bg-[#B0966D]/15 text-[#0E2C21] font-semibold border border-[#8A6F4A]/30 shrink-0">
                       {route.badge}
                     </span>
                   )}
                 </div>
 
                 <div className="flex items-center gap-2 py-2 border-y border-gray-100 my-3">
-                  <div className="flex-1 bg-[#FAF9F6] p-2 rounded text-center border border-[#EAE8E3]">
+                  <div className="flex-1 bg-[#FAF9F6] p-2 rounded-sm text-center border border-[#EAE8E3]">
                     <span className="text-[10px] font-sans text-gray-500 block uppercase">Distance</span>
                     <span className="font-sans font-bold text-sm text-[#0E2C21]">{route.distanceKm}</span>
                   </div>
-                  <div className="flex-1 bg-[#B0966D]/15 p-2 rounded text-center border border-[#8A6F4A]/30">
+                  <div className="flex-1 bg-[#B0966D]/15 p-2 rounded-sm text-center border border-[#8A6F4A]/30">
                     <span className="text-[10px] font-sans text-gray-600 block uppercase">Travel Time</span>
                     <span className="font-sans font-bold text-xs sm:text-sm text-[#0E2C21]">{route.duration}</span>
                   </div>
@@ -282,7 +282,7 @@ export default function DistanceTransitMatrix({
                   href={route.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#0E2C21] hover:bg-[#B0966D] text-[#FAF9F6] hover:text-[#0E2C21] py-2.5 px-4 rounded-lg font-sans text-xs font-semibold transition-all shadow-sm group"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#0E2C21] hover:bg-[#B0966D] text-[#FAF9F6] hover:text-[#0E2C21] py-2.5 px-4 rounded-sm font-sans text-xs font-semibold transition-all shadow-sm group"
                 >
                   <Navigation className="w-3.5 h-3.5 group-hover:rotate-45 transition-transform" />
                   <span>Open in Google Maps Navigation</span>
@@ -294,7 +294,7 @@ export default function DistanceTransitMatrix({
         </div>
 
         {/* Airport & Railway Station Cab Concierge Banner */}
-        <div className="mt-8 bg-gradient-to-r from-[#0E2C21] to-[#113B2B] text-[#FAF9F6] p-6 sm:p-8 rounded-2xl shadow-lg border border-[#8A6F4A]/30 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-8 bg-gradient-to-r from-[#0E2C21] to-[#113B2B] text-[#FAF9F6] p-6 sm:p-8 rounded-sm shadow-md border border-[#8A6F4A]/30 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
             <div className="inline-flex items-center gap-2 text-xs font-sans text-[#7A6038] uppercase tracking-wider font-semibold">
               <ShieldCheck className="w-4 h-4 text-[#7A6038]" />
@@ -313,14 +313,14 @@ export default function DistanceTransitMatrix({
               href="https://wa.me/917505029696?text=Hi!%20I'm%20planning%20my%20trip%20to%20Whispering%20Pines%20Resort%20and%20would%20like%20to%20arrange%20a%20cab%20pick-up."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-sans text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-lg shadow-md transition-all transform"
+              className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-sans text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-sm shadow-md transition-all transform"
             >
               <span>Arrange Cab on WhatsApp</span>
               <ArrowUpRight className="w-4 h-4" />
             </a>
             <a
               href={`tel:${RESORT_CONTACT.phoneTel || '+917505029696'}`}
-              className="inline-flex items-center gap-2 bg-[#FAF9F6]/10 hover:bg-[#FAF9F6]/20 text-[#FAF9F6] border border-[#FAF9F6]/20 font-mono text-xs font-semibold uppercase tracking-wider px-5 py-3.5 rounded-lg transition-all"
+              className="inline-flex items-center gap-2 bg-[#FAF9F6]/10 hover:bg-[#FAF9F6]/20 text-[#FAF9F6] border border-[#FAF9F6]/20 font-mono text-xs font-semibold uppercase tracking-wider px-5 py-3.5 rounded-sm transition-all"
             >
               <span>Call 075050 29696</span>
             </a>

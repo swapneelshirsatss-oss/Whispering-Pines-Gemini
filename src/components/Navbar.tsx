@@ -122,20 +122,20 @@ export default function Navbar({ children }: NavbarProps) {
                     </a>
                     {/* Dropdown Menu */}
                     <div className="absolute top-full -left-3 pt-2 w-72 opacity-0 translate-y-1 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-200 z-50">
-                      <div className="bg-[#0A2118] border border-[#FAF9F6]/15 rounded-xl shadow-2xl p-2 backdrop-blur-xl divide-y divide-white/5">
+                      <div className="bg-[#0A2118] border border-[#FAF9F6]/15 rounded-sm shadow-md p-2 backdrop-blur-xl divide-y divide-white/5">
                         {link.dropdown.map((subItem) => (
                           <a
                             key={subItem.name}
                             href={subItem.href}
                             data-astro-prefetch="hover"
-                            className="block px-3.5 py-2.5 rounded-lg hover:bg-white/10 transition-colors group/item"
+                            className="block px-3.5 py-2.5 rounded-sm hover:bg-white/10 transition-colors group/item"
                           >
                             <div className="flex items-center justify-between">
                               <span className="text-xs font-semibold text-white group-hover/item:text-[#7A6038] transition-colors">
                                 {subItem.name}
                               </span>
                               {subItem.badge && (
-                                <span className="text-[10px] font-sans font-medium px-2 py-0.5 rounded bg-[#B0966D]/20 text-[#C4A77D] border border-[#8A6F4A]/30">
+                                <span className="text-[10px] font-sans font-medium px-2 py-0.5 rounded-sm bg-[#B0966D]/20 text-[#C4A77D] border border-[#8A6F4A]/30">
                                   {subItem.badge}
                                 </span>
                               )}
@@ -198,7 +198,7 @@ export default function Navbar({ children }: NavbarProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleNavBookingClick}
-              className="bg-[#B0966D] hover:bg-[#FAF9F6] text-[#0E2C21] hover:text-[#0E2C21] text-[10px] font-sans font-bold uppercase tracking-[0.1em] px-5 py-2.5 rounded-sm flex items-center transition-all duration-300 shadow-luxury-sm"
+              className="bg-[#B0966D] hover:bg-[#FAF9F6] text-[#0E2C21] hover:text-[#0E2C21] text-[10px] font-sans font-bold uppercase tracking-[0.1em] px-5 py-2.5 rounded-sm flex items-center transition-all duration-300 shadow-sm"
             >
               <span>Book Stay</span>
               <ArrowUpRight className="w-3.5 h-3.5 ml-1.5 opacity-80" />
@@ -229,7 +229,7 @@ export default function Navbar({ children }: NavbarProps) {
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-[#0E2C21]/98 backdrop-blur-xl border-b border-[#FAF9F6]/10 shadow-2xl transition-all duration-300 ease-in-out z-40 ${isOpen ? "opacity-100 max-h-screen py-5" : "opacity-0 max-h-0 overflow-hidden"
+        className={`md:hidden absolute top-full left-0 w-full bg-[#0E2C21]/98 backdrop-blur-xl border-b border-[#FAF9F6]/10 shadow-md transition-all duration-300 ease-in-out z-40 ${isOpen ? "opacity-100 max-h-screen py-5" : "opacity-0 max-h-0 overflow-hidden"
           }`}
       >
         <div className="px-4 pt-1 pb-4 space-y-2">
@@ -237,10 +237,10 @@ export default function Navbar({ children }: NavbarProps) {
           <a
             href="/book-now/"
             onClick={() => setIsOpen(false)}
-            className="flex items-center justify-between p-3 rounded bg-[#B0966D]/15 border border-[#8A6F4A]/40 text-[#C4A77D] font-sans text-xs tracking-wider uppercase font-bold mb-3 hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors"
+            className="flex items-center justify-between p-3 rounded-sm bg-[#B0966D]/15 border border-[#8A6F4A]/40 text-[#C4A77D] font-sans text-xs tracking-wider uppercase font-bold mb-3 hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors"
           >
             <span>Direct Booking VIP Privileges</span>
-            <span className="text-[10px] font-normal lowercase bg-[#B0966D]/20 px-2 py-0.5 rounded">save 25%</span>
+            <span className="text-[10px] font-normal lowercase bg-[#B0966D]/20 px-2 py-0.5 rounded-sm">save 25%</span>
           </a>
           {mobileNavLinks.map((link) => {
             if (link.dropdown) {
@@ -255,14 +255,14 @@ export default function Navbar({ children }: NavbarProps) {
                     <ChevronDown className={`w-4 h-4 text-[#7A6038] transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} />
                   </button>
                   {mobileServicesOpen && (
-                    <div className="pl-4 pr-2 pb-2 space-y-1 bg-black/20 rounded-md">
+                    <div className="pl-4 pr-2 pb-2 space-y-1 bg-black/20 rounded-sm">
                       {link.dropdown.map((sub) => (
                         <a
                           key={sub.name}
                           href={sub.href}
                           data-astro-prefetch="hover"
                           onClick={() => setIsOpen(false)}
-                          className="block px-3 py-2 text-sm text-[#FAF9F6]/90 hover:text-[#7A6038] rounded transition-colors"
+                          className="block px-3 py-2 text-sm text-[#FAF9F6]/90 hover:text-[#7A6038] rounded-sm transition-colors"
                         >
                           {sub.name}
                         </a>

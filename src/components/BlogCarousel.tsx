@@ -56,7 +56,7 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
   };
 
   return (
-    <section className="py-20 bg-[#FAF9F6] border-t border-[#EAE8E3] relative overflow-hidden">
+    <section className="py-20 lg:py-28 bg-[#FAF9F6] border-t border-[#EAE8E3] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Block with Navigation Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
@@ -124,7 +124,7 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
                 key={post.id}
                 className="w-[85vw] sm:w-[380px] lg:w-[400px] shrink-0 snap-start"
               >
-                <article className="bg-white rounded-2xl border border-[#EAE8E3] overflow-hidden hover:shadow-xl hover:border-[#8A6F4A]/40 transition-all duration-300 flex flex-col h-full group">
+                <article className="bg-white rounded-sm border border-[#EAE8E3] overflow-hidden hover:shadow-md hover:border-[#8A6F4A]/40 transition-all duration-300 flex flex-col h-full group">
                   <a
                     href={articleUrl}
                     className="h-52 w-full overflow-hidden block relative shrink-0"

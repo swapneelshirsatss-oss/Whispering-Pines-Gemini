@@ -115,7 +115,7 @@ Please confirm availability and share direct booking privileges.`;
         </div>
 
         {/* Dynamic Booking Planner Box */}
-        <div className="bg-white rounded-lg overflow-hidden shadow-luxury-lg border border-[#0E2C21]/10 grid grid-cols-1 lg:grid-cols-12 gap-0">
+        <div className="bg-white rounded-sm overflow-hidden shadow-md border border-[#0E2C21]/10 grid grid-cols-1 lg:grid-cols-12 gap-0">
           
           {/* Interactive Inputs Form - Left */}
           <form className="p-6 sm:p-10 lg:col-span-7 space-y-6" onSubmit={(e) => e.preventDefault()}>
@@ -134,7 +134,7 @@ Please confirm availability and share direct booking privileges.`;
                   id="room-select"
                   value={selectedRoomId}
                   onChange={(e) => setSelectedRoomId(e.target.value)}
-                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded py-3 pl-3.5 pr-8 text-[13px] font-medium text-[#0E2C21] focus:outline-none transition-colors appearance-none cursor-pointer"
+                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded-sm py-3 pl-3.5 pr-8 text-[13px] font-medium text-[#0E2C21] focus:outline-none transition-colors appearance-none cursor-pointer"
                 >
                   {FORM_ROOM_OPTIONS.map((room) => (
                     <option key={room.id} value={room.id}>
@@ -160,7 +160,7 @@ Please confirm availability and share direct booking privileges.`;
                   id="checkin-date"
                   value={checkIn}
                   onChange={(e) => setCheckIn(e.target.value)}
-                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded py-2.5 px-3 text-[13px] font-medium text-[#0E2C21] focus:outline-none transition-colors cursor-pointer"
+                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded-sm py-2.5 px-3 text-[13px] font-medium text-[#0E2C21] focus:outline-none transition-colors cursor-pointer"
                 />
               </div>
 
@@ -174,7 +174,7 @@ Please confirm availability and share direct booking privileges.`;
                   id="checkout-date"
                   value={checkOut}
                   onChange={(e) => setCheckOut(e.target.value)}
-                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded py-2.5 px-3 text-[13px] font-medium text-[#0E2C21] focus:outline-none transition-colors cursor-pointer"
+                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded-sm py-2.5 px-3 text-[13px] font-medium text-[#0E2C21] focus:outline-none transition-colors cursor-pointer"
                 />
               </div>
             </div>
@@ -190,7 +190,7 @@ Please confirm availability and share direct booking privileges.`;
                   id="guests-count"
                   value={guestsCount}
                   onChange={(e) => setGuestsCount(e.target.value)}
-                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded py-2.5 pl-3.5 pr-8 text-[13px] font-medium text-[#0E2C21] focus:outline-none transition-colors appearance-none cursor-pointer"
+                  className="w-full bg-[#FAF9F6] border border-[#2C3531]/15 focus:border-[#8A6F4A] rounded-sm py-2.5 pl-3.5 pr-8 text-[13px] font-medium text-[#0E2C21] focus:outline-none transition-colors appearance-none cursor-pointer"
                 >
                   <option value="1 Adult">1 Adult</option>
                   <option value="2 Adults">2 Adults (Couple)</option>
@@ -238,7 +238,7 @@ Please confirm availability and share direct booking privileges.`;
                 <h3 className="font-display text-xl sm:text-2xl font-medium text-[#FAF9F6]">
                   Reservation Summary
                 </h3>
-                <span className="bg-[#B0966D]/20 text-[#C4A77D] border border-[#8A6F4A]/30 text-[10px] font-sans uppercase px-2 py-0.5 rounded">
+                <span className="bg-[#B0966D]/20 text-[#C4A77D] border border-[#8A6F4A]/30 text-[10px] font-sans uppercase px-2 py-0.5 rounded-sm">
                   Best Rate
                 </span>
               </div>
@@ -261,7 +261,7 @@ Please confirm availability and share direct booking privileges.`;
               </div>
 
               {/* Price Transparency & OTA Comparison Display */}
-              <div className="mt-6 p-4 rounded bg-[#FAF9F6]/5 border border-[#FAF9F6]/10">
+              <div className="mt-6 p-4 rounded-sm bg-[#FAF9F6]/5 border border-[#FAF9F6]/10">
                 <div className="flex justify-between items-baseline mb-1">
                   <span className="text-[10px] uppercase font-sans tracking-wider text-[#FAF9F6]/60">
                     Est. OTA Platform Price:
@@ -295,7 +295,7 @@ Please confirm availability and share direct booking privileges.`;
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleWhatsAppBookingClick}
-                className="w-full bg-[#25D366] hover:bg-[#20ba59] text-white font-sans text-center text-xs font-bold uppercase tracking-wider py-4 px-6 rounded shadow-xl flex items-center justify-center transition-all duration-300 transform active:scale-[0.99] group"
+                className="w-full bg-[#25D366] hover:bg-[#20ba59] text-white font-sans text-center text-xs font-bold uppercase tracking-wider py-4 px-6 rounded-sm shadow-md flex items-center justify-center transition-all duration-300 transform active:scale-[0.99] group"
               >
                 <MessageCircle className="w-4 h-4 mr-2 fill-current" />
                 <span>Reserve on WhatsApp (Best Rate)</span>
@@ -306,7 +306,7 @@ Please confirm availability and share direct booking privileges.`;
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleEngineBookingClick}
-                className="w-full bg-transparent hover:bg-white/10 text-[#FAF9F6] border border-[#FAF9F6]/25 font-sans text-center text-[10px] font-semibold uppercase tracking-wider py-2.5 px-4 rounded flex items-center justify-center transition-colors"
+                className="w-full bg-transparent hover:bg-white/10 text-[#FAF9F6] border border-[#FAF9F6]/25 font-sans text-center text-[10px] font-semibold uppercase tracking-wider py-2.5 px-4 rounded-sm flex items-center justify-center transition-colors"
               >
                 <span>Or Book via Direct Engine</span>
                 <ArrowUpRight className="w-3.5 h-3.5 ml-1.5 opacity-70" />
