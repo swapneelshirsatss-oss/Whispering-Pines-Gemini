@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect width="200" height="200" rx="36" fill="#0E2C21"/>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF0BE"/>
+      <stop offset=".35" stop-color="#E5C36B"/>
+      <stop offset=".65" stop-color="#B78B28"/>
+      <stop offset="1" stop-color="#F8E3A3"/>
+    </linearGradient>
+
+    <path id="petal"
+          d="M0,0 C-61,-32 -62,-90 0,-137
+                   C62,-90 61,-32 0,0Z"/>
+    <path id="innerPetal"
+          d="M0,0 C-30,-20 -30,-52 0,-77
+                   C30,-52 30,-20 0,0Z"/>
+  </defs>
+
+  <g transform="translate(100 100) scale(.58)"
+     fill="none" stroke="url(#gold)"
+     stroke-width="8" stroke-linejoin="round">
+    <use href="#petal"/>
+    <use href="#petal" transform="rotate(90)"/>
+    <use href="#petal" transform="rotate(180)"/>
+    <use href="#petal" transform="rotate(270)"/>
+
+    <g stroke-width="6">
+      <use href="#innerPetal"/>
+      <use href="#innerPetal" transform="rotate(90)"/>
+      <use href="#innerPetal" transform="rotate(180)"/>
+      <use href="#innerPetal" transform="rotate(270)"/>
+    </g>
+  </g>
+</svg>
