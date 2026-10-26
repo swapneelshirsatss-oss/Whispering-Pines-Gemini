@@ -36,8 +36,8 @@ export const RESORT_CONTACT = {
   rating: {
     value: "4.6",
     ratingValue: 4.6,
-    reviewCount: "402",
-    reviewCountNumeric: 402,
+    reviewCount: "409",
+    reviewCountNumeric: 409,
     source: "Google Reviews",
     ratingUrl: "https://maps.google.com/?cid=8386667112972057918"
   },

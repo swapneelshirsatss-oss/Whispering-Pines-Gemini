@@ -133,6 +133,34 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
       "url": "https://whisperingpinesresort.in/"
     })} />
 
+    <!-- Hotel / Resort Entity & Aggregate Rating Schema (Updated to 4.6 stars & 409 reviews) -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "@id": "https://whisperingpinesresort.in/#hotel",
+      "name": "Whispering Pines Resort by Casa De Bello",
+      "url": "https://whisperingpinesresort.in/",
+      "image": "https://whisperingpinesresort.in/og-image.webp",
+      "priceRange": "₹4,500 - ₹12,500",
+      "telephone": "+917505029696",
+      "hasMap": "https://maps.google.com/?cid=8386667112972057918",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mukteshwar Road, Malla Ramgarh",
+        "addressLocality": "Nainital",
+        "addressRegion": "Uttarakhand",
+        "postalCode": "263137",
+        "addressCountry": "IN"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "409",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    })} />
+
     <!-- Generative Engine Optimization (GEO) & LLM Knowledge Base Discovery -->
     <link rel="alternate" type="text/markdown" href="/llms.txt" title="Whispering Pines Resort LLM Knowledge Base" />
     <link rel="llms" href="/llms.txt" />

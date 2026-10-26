@@ -160,7 +160,7 @@ All copy, metadata, structured data, calculator models, and LLM text files must 
 - **Canonical Address**: `House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, District Nainital, Uttarakhand 263137`
 - **Direct Booking Discount**: Flat `25%` (Zero OTA commission; $P_{OTA} = \frac{P_{direct}}{0.75}$)
 - **Official Booking Engines**: `https://casadebello-book.whisperingpinesresort.in/` (whitelabel) / `https://whisperingpinesresort.bookingjini.in/`
-- **Google Verified Rating**: `4.6★ (402 verified Google reviews)`
+- **Google Verified Rating**: `4.6★ (409 verified Google reviews)`
 - **Total Capacity & Inventory**: `25 premium rooms` + `1 standalone 3-BHK private alpine villa` (Sleeps up to 70 residential guests; outdoor lawn events & weddings up to 100 guests)
 - **Room Categories**: `3-BHK Private Alpine Villa`, `Deluxe Skylight Suite`, `Family Twin Room`, `Executive Cedar Suite` (Avoid calling them "stone cottages" or "homestays")
 - **Wi-Fi**: Dedicated `150 Mbps Enterprise Fiber Wi-Fi` across all rooms, lawns, and desks (Never say "ambient Wi-Fi")
