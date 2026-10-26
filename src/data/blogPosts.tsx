@@ -1485,17 +1485,25 @@ export const BLOG_POSTS: BlogPostData[] = [
     id: 5,
     slug: "resort-stay-near-kainchi-dham",
     title: "Best Hotel & Resort Near Kainchi Dham: Where to Stay (2026 Guide)",
-    seoTitle: "4-Star Resort Near Kainchi Dham (45 Mins) | Save 25% Direct",
-    seoDescription: "Stay 45 mins (22 km) from Neem Karoli Baba Ashram at Whispering Pines 4-Star Resort, Ramgarh. 180° Himalayan views, pine pool & parking. Save 25% direct!",
-    excerpt: "Where to stay near Kainchi Dham Ashram (Neem Karoli Baba): a senior-friendly 4-star resort hotel 22 km away in Malla Ramgarh, compared with highway and Bhowali stays. Darshan plan, parking for 25+ cars, and a flat 25% off when you book direct.",
+    seoTitle: "Resort Near Kainchi Dham | Save 20% Direct — Whispering Pines",
+    seoDescription: "Looking for a peaceful resort near Kainchi Dham? Stay 45 mins from Ashram at Whispering Pines Ramgarh with 180° Himalayan views & parking. Save 20% direct!",
+    excerpt: "Where to stay near Kainchi Dham Ashram (Neem Karoli Baba): a senior-friendly 4-star resort hotel 22 km away in Malla Ramgarh, compared with highway and Bhowali stays. Darshan plan, parking for 25+ cars, and a flat 20% off when you book direct.",
     date: "August 6, 2026",
-    updatedDate: "October 12, 2026",
+    updatedDate: "October 26, 2026",
     readTime: "18 min read",
     imageUrl: "/images/blog-resort-near-kainchi-dham-image/resorts-near-kainchi-dham-ashram-neem-karoli-baba-2026.avif",
     faqSchema: {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the best resort near Kainchi Dham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The best resort near Kainchi Dham is Whispering Pines Resort by Casa De Bello in Malla Ramgarh (22 km, 45-minute drive). Rated 4.6★ across 409 reviews, it features 180° Himalayan views, senior-friendly ground-floor suites, pure Satvik dining, secure parking, and flat 20% direct booking savings."
+          }
+        },
         {
           "@type": "Question",
           "name": "Is Whispering Pines the best 4-star resort hotel near Kainchi Dham Ashram Neem Karoli Baba?",
@@ -1577,10 +1585,10 @@ export const BLOG_POSTS: BlogPostData[] = [
         </div>
 
         {/* AEO Direct Answer Summary */}
-        <div className="bg-[#FAF9F6] p-6 rounded-sm border-l-4 border-[#8A6F4A] shadow-sm space-y-3">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-[#7A6038]">Best 4-Star Resort Near Kainchi Dham: The Quick Answer</h2>
-          <p className="text-base text-gray-700 leading-relaxed font-light">
-            Whispering Pines Resort by Casa De Bello is a 4-star mountain resort located 22 km (45 mins) from Kainchi Dham Ashram at 1,780m in Malla Ramgarh, offering 25 rooms, a 10-guest private villa, secure parking, and 25% direct savings with instant host confirmation and scenic Himalayan views.
+        <div className="bg-[#FAF9F6] p-6 rounded-sm border-l-4 border-[#8A6F4A] shadow-sm space-y-3" id="aeo-best-resort-kainchi">
+          <h2 className="text-sm font-bold uppercase tracking-wider text-[#7A6038]">What is the best resort near Kainchi Dham?</h2>
+          <p className="text-base text-gray-800 leading-relaxed font-normal aeo-direct-answer">
+            The best resort near Kainchi Dham is <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (22 km, 45-minute drive). Rated 4.6★ across 409 reviews, it features 180° Himalayan views, senior-friendly ground-floor suites, pure Satvik dining, secure parking, and flat 20% direct booking savings.
           </p>
         </div>
 
