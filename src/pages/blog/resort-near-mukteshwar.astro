@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import BlogShareBar from "../../components/BlogShareBar.astro";
+import DirectVsOtaTable from "../../components/DirectVsOtaTable.astro";
 import { RESORT_CONTACT, generateWhatsAppLink } from '../../data';
 
 const pageTitle = "Best Resort Near Mukteshwar | Whispering Pines Ramgarh (2026)";
@@ -38,13 +39,7 @@ const geoPlaceSchema = {
     "latitude": 29.4264111,
     "longitude": 79.5505355,
     "elevation": "1780"
-  },
-  "geoContains": [
-    { "@type": "Place", "name": "Mukteshwar Dham Temple", "distance": "25 km" },
-    { "@type": "Place", "name": "Kainchi Dham Neem Karoli Baba Ashram", "distance": "22 km" },
-    { "@type": "Place", "name": "Bhalu Gaad Waterfall", "distance": "16 km (~35 mins)" },
-    { "@type": "Place", "name": "Nainital Lake", "distance": "26 km" }
-  ]
+  }
 };
 
 // Rich JSON-LD Schemas for BlogPosting, Resort/LocalBusiness, FAQPage
@@ -205,24 +200,17 @@ const faqSchema = {
 };
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} breadcrumbs={breadcrumbs}>
+<Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} image={ogImageUrl} breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
     <!-- LCP Image Preloading for Core Web Vitals (Main Hero Image Only) -->
-    <link rel="preload" as="image" href="/images/Whispering-pines-balcony-view-nanital.avif" fetchpriority="high" type="image/avif" />
+    <link rel="preload" as="image" href="/images/Resort-Near-Mukteshwar-for-Families-Couples-Workations.webp" fetchpriority="high" type="image/webp" />
 
     <!-- Custom Meta Tags for Target Keyword & Social Share -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={pageDescription} />
-    <meta property="og:image" content={ogImageUrl} />
-    <meta property="og:image:alt" content={ogAltText} />
     <meta property="article:published_time" content="2026-08-03T10:00:00+05:30" />
     <meta property="article:author" content="Gaurav Pandey - Director of Casa De Bello Pvt Ltd" />
     <meta property="article:section" content="Himalayan Hospitality & Travel Guide" />
 
     <!-- Structured Data Schemas -->
-    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
-    <script type="application/ld+json" set:html={JSON.stringify(speakableSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(geoPlaceSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(resortLocalBusinessSchema)} />
@@ -243,6 +231,7 @@ const faqSchema = {
           loading="eager"
           fetchpriority="high"
         />
+        <div class="absolute inset-0 scrim-hero pointer-events-none"></div>
       </div>
       <div class="relative z-10 max-w-5xl mx-auto text-center space-y-6">
         <div class="inline-flex items-center space-x-2 bg-[#B0966D]/20 border border-[#8A6F4A]/40 rounded-full px-4 py-1.5 text-xs sm:text-sm font-medium text-[#C4A77D] backdrop-blur-sm">
@@ -270,6 +259,43 @@ const faqSchema = {
 
     <!-- Main Container -->
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 lg:py-28">
+
+      <!-- Verified Host E-E-A-T Banner -->
+      <div class="bg-white p-6 rounded-sm border border-[#EAE8E3] shadow-sm flex flex-col sm:flex-row items-center gap-4 mb-8">
+        <img
+          src="/images/Gaurav-pandey-casa-de-bello.webp"
+          alt="Gaurav Pandey — Director, Casa De Bello Pvt Ltd"
+          class="w-14 h-14 rounded-full object-cover border-2 border-[#8A6F4A] shrink-0 shadow-sm"
+          width="56"
+          height="56"
+          loading="lazy"
+        />
+        <div class="text-center sm:text-left">
+          <div class="text-xs font-bold text-[#7A6038] uppercase tracking-wider">Written by Verified Host</div>
+          <div class="text-base font-bold text-[#0E2C21]">Gaurav Pandey — Director, Casa De Bello Pvt Ltd</div>
+          <p class="text-xs sm:text-sm text-gray-600 font-light mt-0.5">
+            On-site hospitality host in Malla Ramgarh overseeing Whispering Pines Resort (formerly Clarks Exotica) since 2023.
+          </p>
+        </div>
+      </div>
+
+      <!-- AEO Direct Answer Block -->
+      <div class="aeo-direct-answer bg-[#0E2C21] text-white rounded-sm p-6 sm:p-8 border-l-4 border-[#B0966D] mb-8 shadow-md">
+        <div class="flex items-start gap-3 mb-3">
+          <span class="text-[#B0966D] text-xl">◆</span>
+          <h2 class="text-lg font-bold text-white">Quick Answer: Best Resort Near Mukteshwar for Families, Couples & Workations</h2>
+        </div>
+        <p class="text-gray-200 text-sm sm:text-base leading-relaxed font-light">
+          <strong class="text-white">Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh, rated <strong class="text-[#B0966D]">4.6★ from 409 verified Google reviews</strong>, is the best 4-star resort near Mukteshwar (25 km / 45 mins from Mukteshwar Dham and 22 km from Kainchi Dham). Perched at <strong class="text-white">1,780 metres</strong>, it offers <strong class="text-white">180° unobstructed views of Nanda Devi and Trishul</strong> from every room and balcony, a pine forest swimming pool, a 3-BHK private villa sleeping up to 10 guests, 150 Mbps enterprise fiber Wi-Fi, and pet-friendly organic fruit orchards. Book direct on WhatsApp at <strong class="text-[#B0966D]">+91-7505029696</strong> to save flat 25%.
+        </p>
+      </div>
+
+      <!-- Direct vs OTA Comparison Table -->
+      <DirectVsOtaTable
+        title="Resort Near Mukteshwar: Book Direct vs Third-Party Portals"
+        subtitle="Skip 25% OTA portal markups. Reserve directly with host Gaurav Pandey for guaranteed 180° Nanda Devi balcony views, priority upgrades, and instant confirmation."
+        className="mb-10"
+      />
 
       <!-- Table of Contents Quick Nav -->
       <nav class="bg-[#0E2C21]/5 p-6 rounded-sm border border-[#0E2C21]/10 mb-8">
@@ -340,7 +366,8 @@ const faqSchema = {
           width="1200"
           height="630"
           class="w-full h-auto max-h-[850px] object-contain rounded-sm shadow-md border border-[#EAE8E3] bg-white p-2 sm:p-4"
-          loading="lazy"
+          loading="eager"
+          fetchpriority="high"
         />
         <figcaption class="text-center text-xs sm:text-sm text-gray-500 mt-3 font-light">
           Figure 1: Resort near Mukteshwar — Whispering Pines by Casa De Bello in Malla Ramgarh featuring 180° Himalayan views of Nanda Devi and Trishul peaks.
@@ -942,7 +969,7 @@ const faqSchema = {
         <div class="bg-white p-6 rounded-sm border border-[#EAE8E3] text-center space-y-2">
           <h4 class="font-bold text-[#0E2C21]">Exact Property Location Address</h4>
           <p class="text-sm sm:text-sm text-gray-600 font-light">
-            Whispering Pines Resort by Casa De Bello, House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Ramgarh, Nainital, Uttarakhand 263137
+            Whispering Pines Resort by Casa De Bello, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137
           </p>
           <a href="/contact-whispering-pines-resort-mukteshwar/" class="inline-block text-xs font-semibold text-[#7A6038] hover:underline pt-1">
             View Interactive Google Map & Directions →

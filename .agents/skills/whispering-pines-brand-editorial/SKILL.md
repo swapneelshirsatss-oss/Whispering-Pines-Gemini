@@ -9,7 +9,7 @@ This skill governs all content creation, blog writing, schema generation, and bo
 
 ## 1. Brand Identity & Canonical Entity
 - **Official Name**: Whispering Pines Resort by Casa De Bello - Near Mukteshwar
-- **Official Address**: Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137
+- **Official Address**: Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137 *(Strict Guardrail: Never prefix with "House No. 23-13/4")*
 - **Google Verified Rating**: 4.6★ (409 verified Google reviews)
 - **Google Maps CID**: `https://maps.google.com/?cid=8386667112972057918`
 - **Google Travel Entity**: `https://www.google.com/travel/hotels/entity/ChgIvvqZseCp27F0GgwvZy8xaGR6ejNrcDcQAQ`
@@ -56,7 +56,7 @@ This skill governs all content creation, blog writing, schema generation, and bo
 
 ## 6. Direct vs OTA CRO Directives & Comparison Standards
 - **Direct Booking Advantage Representation**: Whenever publishing high-intent pillar guides, accommodation overviews, or travel guides, integrate the `<DirectVsOtaTable />` component to highlight the 3 core direct perks:
-  1. **Tariff**: Flat 20% Direct Savings (Zero OTA portal commission markup).
+  1. **Tariff**: Flat 25% Direct Savings (Zero OTA portal commission markup).
   2. **Room Allocation**: Priority 180° unobstructed Nanda Devi & Trishul balcony view upgrade.
   3. **Perks & Hospitality**: 100% Pet-friendly (₹0 pet surcharge) and flexible check-in coordinated directly with resident host Gaurav Pandey.
 - **Placement Guidelines**:

@@ -30,8 +30,8 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
 ---
 
 <Layout
-  title="Whispering Pines Resort by Casa De Bello | Save 20% Direct"
-  description="Official direct booking for Whispering Pines Resort by Casa De Bello. Enjoy 180° Himalayan views, heated suites & pool. Book direct to save flat 20% vs OTAs!"
+  title="Whispering Pines Resort by Casa De Bello | Save 25% Direct"
+  description="Official direct booking for Whispering Pines Resort by Casa De Bello. Enjoy 180° Himalayan views, heated suites & pool. Book direct to save flat 25% vs OTAs!"
   canonical="https://whisperingpinesresort.in/book-now/"
 >
   <Fragment slot="head">
@@ -54,7 +54,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           "paymentAccepted": "Cash, Credit Card, UPI, Bank Transfer",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road",
+            "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd",
             "addressLocality": "Mukteshwar, Nainital",
             "postalCode": "263137",
             "addressRegion": "Uttarakhand",
@@ -62,8 +62,8 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 29.4385,
-            "longitude": 79.5532
+            "latitude": 29.4262052,
+            "longitude": 79.5506314
           },
           "hasMap": "https://maps.google.com/?cid=8386667112972057918",
           "aggregateRating": {
@@ -262,7 +262,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           src={heroImage.src}
           alt="Panoramic private balcony view of Nanda Devi Himalayan mountain range from Whispering Pines Resort Ramgarh"
           class="w-full h-full object-cover opacity-30"
-          loading="eager"
+          loading="eager" fetchpriority="high"
           decoding="async"
           width="1800"
           height="1200"
@@ -322,7 +322,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
             <span class="text-sm line-through text-[#FAF7F2]/50 font-sans">₹3,499 – ₹18,999 + taxes & platform surcharges</span>
           </div>
           <span class="bg-red-500/15 text-red-300 border border-red-500/30 text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded-sm">
-            +18% OTA Commission Markups
+            +25% OTA Commission Markups
           </span>
         </div>
 
@@ -430,7 +430,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 loading="lazy"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none"></div>
               <div class="absolute top-4 left-4 bg-[#03110B]/90 backdrop-blur-md border border-[#B0966D]/40 text-[#C4A77D] font-mono text-[10px] sm:text-[11px] uppercase tracking-wider font-bold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-md">
                 <span class="w-2 h-2 rounded-full bg-[#7A6038]"></span>
                 180° Snow Panorama • 1,780m
@@ -545,7 +545,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 loading="lazy"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none"></div>
               <div class="absolute top-4 left-4 bg-[#03110B]/90 backdrop-blur-md border border-emerald-400/40 text-emerald-300 font-mono text-[10px] sm:text-[11px] uppercase tracking-wider font-bold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-md">
                 <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
                 9 km (15 Mins) to Ashram • Kehelkwira
@@ -642,18 +642,18 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           </div>
         </div>
 
-        <!-- Property 3: Anurra Hotel- Kaincho Dham -->
+        <!-- Property 3: Anurra Hotel - Kainchi Dham -->
         <div class="bg-white border-2 border-amber-600/30 hover:border-amber-600 rounded-sm overflow-hidden shadow-md hover:shadow-md transition-all flex flex-col justify-between group">
           <div>
             <!-- Hotel Hero Image -->
             <div class="relative h-64 sm:h-72 overflow-hidden">
               <img
                 src={anurraImg.src}
-                alt="Anurra Hotel- Kaincho Dham near Neem Karoli Baba Ashram"
+                alt="Anurra Hotel - Kainchi Dham near Neem Karoli Baba Ashram"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 loading="lazy"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none"></div>
               <div class="absolute top-4 left-4 bg-[#03110B]/90 backdrop-blur-md border border-amber-400/40 text-amber-300 font-mono text-[10px] sm:text-[11px] uppercase tracking-wider font-bold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-md">
                 <span class="w-2 h-2 rounded-full bg-amber-400"></span>
                 3.3 km (6 Mins) to Ashram • Niglat Malla
@@ -661,7 +661,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               <div class="absolute bottom-4 left-4 right-4 text-white">
                 <span class="text-[10px] font-sans uppercase tracking-[0.1em] text-amber-300 block mb-0.5 font-bold">Closest Pilgrim Haven &amp; Pure Veg Kitchen</span>
                 <h3 class="font-display text-xl sm:text-2xl font-bold text-white leading-tight">
-                  Anurra Hotel- Kaincho Dham
+                  Anurra Hotel - Kainchi Dham
                 </h3>
               </div>
             </div>
@@ -738,7 +738,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               <span>↓</span>
             </a>
             <a
-              href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20booking%20at%20Anurra%20Hotel-%20Kaincho%20Dham%20(Neem%20Karoli%20Baba%20Ashram).%20Please%20share%20room%20availability%20and%20direct%20rates."
+              href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20booking%20at%20Anurra%20Hotel%20-%20Kainchi%20Dham%20(Neem%20Karoli%20Baba%20Ashram).%20Please%20share%20room%20availability%20and%20direct%20rates."
               target="_blank"
               rel="noopener noreferrer"
               data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","property_anurra_whatsapp",{"hotel":"Anurra Hotel Kainchi Dham","conversion_type":"whatsapp","value":3199,"currency":"INR"}]'
@@ -827,7 +827,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           data-tab="anurra"
           class="property-tab-btn px-5 py-2.5 rounded-full font-sans text-xs font-bold uppercase tracking-wider transition-all bg-[#062116] hover:bg-[#053323] text-[#FAF7F2] border border-amber-500/40 cursor-pointer"
         >
-          Anurra Hotel - Kaincho Dham (2)
+          Anurra Hotel - Kainchi Dham (2)
         </button>
       </div>
 
@@ -1095,18 +1095,18 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           </div>
         </div>
 
-        <!-- Room 5: Deluxe Hill View Room with Balcony (Anurra Hotel- Kaincho Dham) -->
+        <!-- Room 5: Deluxe Hill View Room with Balcony (Anurra Hotel - Kainchi Dham) -->
         <div class="accommodation-card bg-[#062116] border border-amber-600/40 rounded-sm overflow-hidden shadow-md flex flex-col group relative ring-2 ring-amber-500/20" data-property="anurra">
           <div class="relative h-64 overflow-hidden">
             <img
               src={anurraImg.src}
-              alt="Deluxe Hill View Room with Balcony at Anurra Hotel- Kaincho Dham near Neem Karoli Baba Ashram"
+              alt="Deluxe Hill View Room with Balcony at Anurra Hotel - Kainchi Dham near Neem Karoli Baba Ashram"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"
             />
             <div class="absolute top-3 left-3 bg-[#03110B]/90 backdrop-blur-md border border-amber-400/50 text-amber-300 font-sans text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-              Anurra Hotel- Kaincho Dham (3.3 km to Ashram)
+              Anurra Hotel - Kainchi Dham (3.3 km to Ashram)
             </div>
             <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-sans text-xs font-bold px-2.5 py-0.5 rounded-sm">
               Sleeps 2 to 3
@@ -1147,7 +1147,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   <svg class="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
                 <a
-                  href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20the%20Deluxe%20Hill%20View%20Room%20at%20Anurra%20Hotel-%20Kaincho%20Dham.%20Please%20share%20availability%20and%20rates."
+                  href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20the%20Deluxe%20Hill%20View%20Room%20at%20Anurra%20Hotel%20-%20Kainchi%20Dham.%20Please%20share%20availability%20and%20rates."
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","room_anurra_deluxe_whatsapp",{"room":"Deluxe Hill View Room","hotel":"Anurra Hotel Kainchi Dham","value":3199,"currency":"INR"}]'
@@ -1161,18 +1161,18 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           </div>
         </div>
 
-        <!-- Room 6: Grand Valley Family Room (Anurra Hotel- Kaincho Dham) -->
+        <!-- Room 6: Grand Valley Family Room (Anurra Hotel - Kainchi Dham) -->
         <div class="accommodation-card bg-[#062116] border border-amber-600/40 rounded-sm overflow-hidden shadow-md flex flex-col group" data-property="anurra">
           <div class="relative h-64 overflow-hidden">
             <img
               src={anurraImg.src}
-              alt="Grand Valley Family Room at Anurra Hotel- Kaincho Dham near Neem Karoli Baba Ashram"
+              alt="Grand Valley Family Room at Anurra Hotel - Kainchi Dham near Neem Karoli Baba Ashram"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"
             />
             <div class="absolute top-3 left-3 bg-[#03110B]/90 backdrop-blur-md border border-amber-400/50 text-amber-300 font-sans text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-              Anurra Hotel- Kaincho Dham (3.3 km to Ashram)
+              Anurra Hotel - Kainchi Dham (3.3 km to Ashram)
             </div>
             <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-sans text-xs font-bold px-2.5 py-0.5 rounded-sm">
               Sleeps 3 to 4
@@ -1213,7 +1213,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   <svg class="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
                 <a
-                  href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20the%20Grand%20Valley%20Family%20Room%20at%20Anurra%20Hotel-%20Kaincho%20Dham.%20Please%20share%20availability%20and%20rates."
+                  href="https://wa.me/917505029696?text=Hi!%20I%20am%20interested%20in%20the%20Grand%20Valley%20Family%20Room%20at%20Anurra%20Hotel%20-%20Kainchi%20Dham.%20Please%20share%20availability%20and%20rates."
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","room_anurra_family_whatsapp",{"room":"Grand Valley Family Room","hotel":"Anurra Hotel Kainchi Dham","value":3999,"currency":"INR"}]'
@@ -1247,7 +1247,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
         </h2>
         <div class="w-16 h-0.5 bg-[#B0966D] mx-auto my-4"></div>
         <p class="text-sm text-[#FAF7F2]/80 leading-relaxed">
-          OTA platforms charge property owners 18% to 22% commissions on every transaction. When you contact our front desk directly, we cut out the tech middleman and pass those savings straight to you.
+          OTA platforms charge property owners flat 25% OTA commission markups on every transaction. When you contact our front desk directly, we cut out the tech middleman and pass those savings straight to you.
         </p>
       </div>
 
@@ -1441,7 +1441,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               >
                 <option value="mukteshwar" selected>Mukteshwar: Whispering Pines Resort By Casa De Bello</option>
                 <option value="kainchi">Casa De Bello Resort- Kainchi Dham (9 km to Ashram)</option>
-                <option value="anurra">Anurra Hotel- Kaincho Dham (3.3 km to Ashram)</option>
+                <option value="anurra">Anurra Hotel - Kainchi Dham (3.3 km to Ashram)</option>
               </select>
             </div>
             <div>
@@ -1747,7 +1747,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           ]
         },
         anurra: {
-          name: 'Anurra Hotel- Kaincho Dham',
+          name: 'Anurra Hotel - Kainchi Dham',
           location: 'Niglat Malla, Bhowali-Almora Highway (3.3 km / 6 Mins to Ashram)',
           rooms: [
             { id: 'anurra-deluxe', name: 'Deluxe Hill View Room (Private Balcony & Fast Wi-Fi)', default: true, basePrice: 3199 },

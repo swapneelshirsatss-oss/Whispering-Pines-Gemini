@@ -2,6 +2,11 @@
 // SpeakableSchema.astro
 // Schema.org SpeakableSpecification for Voice Search Optimization (Google Assistant, Siri, Alexa, Gemini Live)
 
+interface Props {
+  title?: string;
+}
+
+const { title = "Whispering Pines Resort by Casa De Bello - Near Mukteshwar" } = Astro.props;
 const siteBase = "https://whisperingpinesresort.in";
 const rawPathname = Astro.url.pathname;
 const pathname = rawPathname.endsWith('/') ? rawPathname : `${rawPathname}/`;
@@ -12,10 +17,12 @@ const schemaData = {
   "@type": "WebPage",
   "@id": `${currentUrl}#webpage`,
   "url": currentUrl,
-  "name": "Whispering Pines Resort Mukteshwar",
+  "name": title,
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": [
+      "h1",
+      ".aeo-direct-answer",
       "#speakable-hero-intro",
       "#speakable-about-summary",
       ".speakable-faq-answer"

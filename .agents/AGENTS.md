@@ -24,7 +24,7 @@ Consult these guides before working on related tasks:
 ## Google Site Name & SERP Branding Rules
 
 Whenever updating site metadata, `Layout.astro`, or JSON-LD schemas:
-- **`WebSite` Schema**: Set `name` to `"Whispering Pines Resort by Casa De Bello - Near Mukteshwar"`. Provide an `alternateName` array containing `["Whispering Pines Resort by Casa De Bello", "Whispering Pines Resort Mukteshwar", "Whispering Pines Resort near Mukteshwar", "Whispering Pines by Casa De Bello"]`.
+- **`WebSite` Schema**: Set `name` to `"Whispering Pines Resort by Casa De Bello - Near Mukteshwar"`. Provide an `alternateName` array containing `["Whispering Pines Resort by Casa De Bello", "Whispering Pines Resort Mukteshwar", "Whispering Pines Resort near Mukteshwar", "Whispering Pines by Casa De Bello", "Casa De Bello Mukteshwar - ramgarh", "Casa De Bello Mukteshwar - Ramgarh"]`.
 - **OpenGraph `og:site_name`**: Ensure `<meta property="og:site_name" content="Whispering Pines Resort by Casa De Bello - Near Mukteshwar" />` is declared in `Layout.astro`.
 - **Primary Address Format**: Always format the official property address as `"Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137"`.
 
@@ -118,7 +118,7 @@ Whenever refactoring or adding links to header navigation:
 ## Direct Booking & WhatsApp CRO Standards
 
 Whenever designing or refactoring direct booking pages, room cards, or conversion CTAs:
-- **WhatsApp Visual Dominance**: All primary direct booking buttons must use authentic WhatsApp green (`#25D366` hover `#1EBE5D`), an animated concentric pulse ring, and explicit direct saving microcopy (*"Save 15–20% Direct • ⚡ < 5m reply"*).
+- **WhatsApp Visual Dominance**: All primary direct booking buttons must use authentic WhatsApp green (`#25D366` hover `#1EBE5D`), an animated concentric pulse ring, and explicit direct saving microcopy (*"Save Flat 25% Direct • ⚡ < 5m reply"*).
 - **Multi-Viewport Availability**:
   - **Desktop**: Maintain the persistent floating WhatsApp concierge pill at `bottom-6 right-6 z-50 hidden md:flex`.
   - **Mobile**: Maintain the mobile sticky bottom bar with WhatsApp highlighted as the hero CTA.

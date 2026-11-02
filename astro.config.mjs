@@ -32,6 +32,29 @@ function indexNowIntegration() {
   const HOST = 'whisperingpinesresort.in';
   const SITE_URL = 'https://whisperingpinesresort.in';
 
+  const excludedRedirectPaths = new Set([
+    '/404/',
+    '/book-direct/',
+    '/corporate-retreats-mukteshwar/',
+    '/stay-near-mukteshwar-kainchi-dham/',
+    '/himalayan-view-resort-uttarakhand/',
+    '/resort-near-mukteshwar/',
+    '/why-ramgarh-is-the-fruit-bowl-of-kumaon/',
+    '/blog/why-ramgarh-is-the-fruit-bowl-of-kumaon/',
+    '/ramgarh-fruit-bowl-of-kumaon/',
+    '/blog/clarks-exotica-resort-ramgarh-mukteshwar/',
+    '/about/',
+    '/contact/',
+    '/amenities/',
+    '/services/',
+    '/experiences/',
+    '/stay/',
+    '/rooms/',
+    '/villa/',
+    '/villas/',
+    '/gallaery/'
+  ]);
+
   return {
     name: 'indexnow-integration',
     hooks: {
@@ -44,7 +67,9 @@ function indexNowIntegration() {
           .map(p => {
             const rawPath = p.pathname ? (p.pathname.startsWith('/') ? p.pathname : '/' + p.pathname) : '';
             if (!rawPath || rawPath.includes('404')) return '';
-            return `${SITE_URL}${rawPath.endsWith('/') ? rawPath : rawPath + '/'}`;
+            const normalizedPath = rawPath.endsWith('/') ? rawPath : rawPath + '/';
+            if (excludedRedirectPaths.has(normalizedPath)) return '';
+            return `${SITE_URL}${normalizedPath}`;
           })
           .filter(Boolean);
 

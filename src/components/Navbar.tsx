@@ -5,6 +5,7 @@ import { trackAdsConversion } from "../utils/analytics";
 const PHONE_DISPLAY = "075050 29696";
 const PHONE_TEL = "+917505029696";
 const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
+const WHATSAPP_BOOKING_URL = "https://wa.me/917505029696?text=Hi%20Whispering%20Pines%20Resort%2C%20I%27d%20like%20to%20claim%20the%20Flat%2025%25%20Direct%20Booking%20privilege.";
 
 interface NavbarProps {
   children?: React.ReactNode;
@@ -131,7 +132,7 @@ export default function Navbar({ children }: NavbarProps) {
                             className="block px-3.5 py-2.5 rounded-sm hover:bg-white/10 transition-colors group/item"
                           >
                             <div className="flex items-center justify-between">
-                              <span className="text-xs font-semibold text-white group-hover/item:text-[#7A6038] transition-colors">
+                              <span className="text-xs font-semibold text-white group-hover/item:text-[#C4A77D] transition-colors">
                                 {subItem.name}
                               </span>
                               {subItem.badge && (
@@ -172,8 +173,8 @@ export default function Navbar({ children }: NavbarProps) {
                   }}
                   className={`text-xs lg:text-sm font-medium tracking-wide transition-all duration-200 ${
                     link.highlight
-                      ? "text-[#7A6038] font-semibold hover:text-[#FAF9F6]"
-                      : "text-[#FAF9F6]/90 hover:text-[#7A6038]"
+                      ? "text-[#C4A77D] font-semibold hover:text-[#FAF9F6]"
+                      : "text-[#FAF9F6]/90 hover:text-[#C4A77D]"
                   }`}
                 >
                   {link.name}
@@ -187,10 +188,10 @@ export default function Navbar({ children }: NavbarProps) {
             <a
               href={`tel:${PHONE_TEL}`}
               onClick={() => trackAdsConversion("phone_call_click", "engagement", "header_phone_call")}
-              className="flex items-center text-[11px] font-sans text-[#FAF9F6]/85 hover:text-[#7A6038] transition-colors"
+              className="flex items-center text-[11px] font-sans text-[#FAF9F6]/85 hover:text-[#C4A77D] transition-colors"
               title="Call Whispering Pines Direct Front Desk: 075050 29696"
             >
-              <Phone className="w-3.5 h-3.5 mr-1.5 text-[#7A6038]" />
+              <Phone className="w-3.5 h-3.5 mr-1.5 text-[#C4A77D]" />
               {PHONE_DISPLAY}
             </a>
             <a
@@ -218,7 +219,7 @@ export default function Navbar({ children }: NavbarProps) {
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-[#FAF9F6] hover:text-[#7A6038] p-2 focus:outline-none -mr-2"
+              className="text-[#FAF9F6] hover:text-[#C4A77D] p-2 focus:outline-none -mr-2"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
@@ -249,10 +250,10 @@ export default function Navbar({ children }: NavbarProps) {
                   <button
                     type="button"
                     onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                    className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-[#FAF9F6]/95 hover:text-[#7A6038] hover:bg-[#FAF9F6]/5 rounded-sm transition-colors text-left"
+                    className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-[#FAF9F6]/95 hover:text-[#C4A77D] hover:bg-[#FAF9F6]/5 rounded-sm transition-colors text-left"
                   >
                     <span>{link.name}</span>
-                    <ChevronDown className={`w-4 h-4 text-[#7A6038] transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} />
+                    <ChevronDown className={`w-4 h-4 text-[#C4A77D] transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} />
                   </button>
                   {mobileServicesOpen && (
                     <div className="pl-4 pr-2 pb-2 space-y-1 bg-black/20 rounded-sm">
@@ -262,7 +263,7 @@ export default function Navbar({ children }: NavbarProps) {
                           href={sub.href}
                           data-astro-prefetch="hover"
                           onClick={() => setIsOpen(false)}
-                          className="block px-3 py-2 text-sm text-[#FAF9F6]/90 hover:text-[#7A6038] rounded-sm transition-colors"
+                          className="block px-3 py-2 text-sm text-[#FAF9F6]/90 hover:text-[#C4A77D] rounded-sm transition-colors"
                         >
                           {sub.name}
                         </a>
@@ -293,8 +294,8 @@ export default function Navbar({ children }: NavbarProps) {
                   setIsOpen(false);
                 }}
                 className={`block px-4 py-3 text-base font-medium rounded-sm transition-colors ${link.external
-                    ? "text-[#7A6038] font-semibold hover:bg-[#FAF9F6]/5"
-                    : "text-[#FAF9F6]/95 hover:text-[#7A6038] hover:bg-[#FAF9F6]/5"
+                    ? "text-[#C4A77D] font-semibold hover:bg-[#FAF9F6]/5"
+                    : "text-[#FAF9F6]/95 hover:text-[#C4A77D] hover:bg-[#FAF9F6]/5"
                   }`}
               >
                 {link.name}
@@ -345,27 +346,27 @@ export default function Navbar({ children }: NavbarProps) {
               onClick={() => trackAdsConversion("phone_call_click", "engagement", "mobile_phone_call")}
               className="flex items-center text-base font-sans text-[#FAF9F6]/85 p-2 -ml-2"
             >
-              <Phone className="w-5 h-5 mr-3 text-[#7A6038]" />
+              <Phone className="w-5 h-5 mr-3 text-[#C4A77D]" />
               {PHONE_DISPLAY} <span className="text-xs text-[#FAF9F6]/50 ml-2">(+91 75050 29696)</span>
             </a>
 
             <a
-              href={BOOKING_ENGINE_URL}
+              href={WHATSAPP_BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => {
                 setIsOpen(false);
                 handleNavBookingClick();
               }}
-              className="w-full text-center bg-[#B0966D] text-[#0E2C21] font-bold uppercase tracking-wider py-3.5 rounded-sm flex items-center justify-center transition-colors shadow-md active:scale-95"
+              className="w-full text-center bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold uppercase tracking-wider py-3.5 rounded-sm flex items-center justify-center transition-colors shadow-md active:scale-95"
             >
-              Instant Booking (WhatsApp)
+              Instant Booking (WhatsApp • Save 25%)
               <ArrowUpRight className="w-5 h-5 ml-1.5" />
             </a>
 
             {/* Google Preferred Source Button in Mobile Menu */}
             <div className="pt-2 flex flex-col items-center">
-              <span className="text-[10px] font-sans uppercase tracking-[0.2em] text-[#7A6038] block mb-2 font-semibold text-center">
+              <span className="text-[10px] font-sans uppercase tracking-[0.2em] text-[#C4A77D] block mb-2 font-semibold text-center">
                 Google Preferred Source
               </span>
               <div

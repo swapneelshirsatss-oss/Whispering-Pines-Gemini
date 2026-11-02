@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import BlogContent from "../../components/BlogContent";
 import BlogShareBar from "../../components/BlogShareBar.astro";
+import DirectVsOtaTable from "../../components/DirectVsOtaTable.astro";
 import { BLOG_POSTS } from '../../data/blogPosts.tsx';
 
 export async function getStaticPaths() {
@@ -70,7 +71,7 @@ const schemaData = [
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+      "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
       "addressLocality": "Mukteshwar",
       "addressRegion": "Uttarakhand",
       "postalCode": "263137",
@@ -170,6 +171,8 @@ const schemaData = [
           <img 
             src={post.imageUrl} 
             alt={post.imageAlt ?? post.title} 
+            width="1200"
+            height="675"
             class="w-full h-full object-cover"
             loading="eager"
             fetchpriority="high"
@@ -185,6 +188,36 @@ const schemaData = [
           label="Planning a trip? Share this guide with your travel group"
           className="my-6"
         />
+
+        {/* Verified Host E-E-A-T Attribution Bar */}
+        <div class="bg-[#FAF9F6] p-4 sm:p-5 rounded-sm border border-[#EAE8E3] flex flex-col sm:flex-row items-center justify-between gap-4 my-6">
+          <div class="flex items-center gap-3.5">
+            <img
+              src="/images/Gaurav-pandey-casa-de-bello.webp"
+              alt="Gaurav Pandey — Director, Whispering Pines Resort by Casa De Bello"
+              class="w-12 h-12 rounded-full object-cover border-2 border-[#8A6F4A] shrink-0 shadow-xs"
+              width="48"
+              height="48"
+              loading="lazy"
+            />
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#7A6038] block">Verified On-Site Host &amp; Fact-Checked Guide</span>
+              <p class="text-xs sm:text-sm font-bold text-[#0E2C21]">Reviewed by Gaurav Pandey — Director, Whispering Pines Resort by Casa De Bello</p>
+              <p class="text-xs text-gray-600 font-light">1,780m Malla Ramgarh Ridge • 180° Nanda Devi View From All Rooms • Direct WhatsApp: +91 75050 29696</p>
+            </div>
+          </div>
+          <a
+            href="https://wa.me/917505029696?text=Hi%20Gaurav!%20I'm%20reading%20your%20travel%20guide%20and%20would%20like%20to%20claim%20the%20Flat%2025%25%20Direct%20Booking%20Discount."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs rounded-sm shadow-xs transition-all"
+          >
+            <span>💬 Ask Host on WhatsApp</span>
+          </a>
+        </div>
+
+        {/* Direct vs OTA Table */}
+        <DirectVsOtaTable className="my-6" />
 
         {/* Body Content */}
         <div class="prose prose-lg max-w-none text-[#2C3531] font-light leading-relaxed prose-headings:font-display prose-headings:text-[#0E2C21] prose-a:text-[#0E2C21] prose-a:font-semibold prose-a:underline">
@@ -238,16 +271,25 @@ const schemaData = [
       <section class="bg-gradient-to-br from-[#0E2C21] to-[#133A2B] text-white rounded-sm p-8 border border-[#8A6F4A]/30 text-center space-y-4">
         <h3 class="text-2xl font-bold font-display text-white">Experience Whispering Pines Resort</h3>
         <p class="text-sm text-gray-300 font-light max-w-xl mx-auto">
-          Book your luxury stay with 180° Himalayan valley views in Malla Ramgarh near Mukteshwar.
+          Book your luxury stay with 180° Himalayan valley views from every room in Malla Ramgarh near Mukteshwar.
         </p>
-        <div class="pt-2">
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="https://wa.me/917505029696?text=Hi!%20I%20want%20to%20claim%20the%20Flat%2025%25%20Direct%20Booking%20Discount%20at%20Whispering%20Pines%20Resort."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex flex-col items-center justify-center bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs px-6 py-3 rounded-full shadow-md transition-all duration-300"
+          >
+            <span class="uppercase tracking-wider">💬 Book Direct on WhatsApp (+91 75050 29696)</span>
+            <span class="text-[11px] font-medium text-white/95 mt-0.5">Save Flat 25% Direct • ⚡ &lt; 5m reply</span>
+          </a>
           <a
             href="https://casadebello-book.whisperingpinesresort.in/"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-block bg-[#B0966D] hover:bg-[#C4A77D] text-[#0E2C21] font-bold text-xs px-6 py-3 rounded-full shadow-md uppercase tracking-wider transition-all duration-300"
+            class="inline-block bg-[#B0966D] hover:bg-[#C4A77D] text-[#0E2C21] font-bold text-xs px-6 py-3.5 rounded-full shadow-md uppercase tracking-wider transition-all duration-300"
           >
-            Check Rates & Availability
+            Check Rates &amp; Availability
           </a>
         </div>
       </section>

@@ -53,16 +53,17 @@ const remainingPosts = BLOG_POSTS.slice(1);
   canonical={canonicalUrl}
   breadcrumbs={breadcrumbs}
 >
-  <div
-    class="relative w-full bg-[#FAF9F6] text-[#0E2C21] overflow-x-hidden selection:bg-[#B0966D] selection:text-[#0E2C21]"
-  >
+  <Fragment slot="head">
     {/* JSON-LD Schema for SEO */}
     <script
       type="application/ld+json"
-      slot="head"
       set:html={JSON.stringify(schemaData)}
     />
+  </Fragment>
 
+  <div
+    class="relative w-full bg-[#FAF9F6] text-[#0E2C21] overflow-x-hidden selection:bg-[#B0966D] selection:text-[#0E2C21]"
+  >
     <Breadcrumbs />
 
     {/* Hero Header Banner */}
@@ -106,6 +107,7 @@ const remainingPosts = BLOG_POSTS.slice(1);
                 alt={featuredPost.title}
                 class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 loading="eager"
+                fetchpriority="high"
               />
               <div class="absolute top-4 left-4">
                 <span class="bg-[#0E2C21] text-[#B0966D] text-xs font-semibold uppercase px-3 py-1.5 rounded-full shadow-md border border-[#B0966D]/30">

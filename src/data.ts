@@ -19,13 +19,13 @@ export const RESORT_CONTACT = {
   whatsapp: "https://wa.me/917505029696",
   email: "booking@whisperingpinesresort.in",
   domain: "https://whisperingpinesresort.in/",
-  streetAddress: "House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd",
+  streetAddress: "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd",
   addressLocality: "Ramgarh, Mukteshwar",
   addressRegion: "Nainital, Uttarakhand",
   postalCode: "263137",
   addressCountry: "IN",
-  location: "House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, District Nainital, Uttarakhand 263137",
-  address: "House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, District Nainital, Uttarakhand 263137",
+  location: "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+  address: "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
   geoCoordinates: "29.4262052, 79.5506314",
   latitude: 29.4262052,
   longitude: 79.5506314,
@@ -455,7 +455,7 @@ export const LOCAL_EXPERIENCES: LocalExperience[] = [
     distance: "On-site",
     description: "Rejuvenate your mind and body with our guided group yoga sessions amidst the serene mountain environment of Whispering Pines Ramgarh.",
     tag: "Wellness",
-    image: "https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?auto=format&fit=crop&q=80&w=800"
+    image: "/images/best-resort-in-ramgarh.avif"
   }
 ];
 
@@ -593,7 +593,7 @@ export const CONTACT_FAQS: FAQItem[] = [
   {
     category: "Location & Transit",
     question: "How far is Whispering Pines Resort from Delhi and how do I reach it?",
-    answer: "Whispering Pines Resort is approximately 6.5 to 7.5 hours drive (~340 km) from Delhi, Gurugram and Noida via NH9 and Bhowali Rd. The nearest railhead is Kathgodam Railway Station (KGM), approximately 43 km (~1.5 hours drive) from the resort. The nearest airport is Pantnagar Airport (PGH), approximately 76 km (~2.5 hours drive) via NH 109. The resort is located at House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, District Nainital, Uttarakhand 263137. The reservations team at +91-7505029696 can coordinate airport and station pickup on request."
+    answer: "Whispering Pines Resort is approximately 6.5 to 7.5 hours drive (~340 km) from Delhi, Gurugram and Noida via NH9 and Bhowali Rd. The nearest railhead is Kathgodam Railway Station (KGM), approximately 43 km (~1.5 hours drive) from the resort. The nearest airport is Pantnagar Airport (PGH), approximately 76 km (~2.5 hours drive) via NH 109. The resort is located at Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137. The reservations team at +91-7505029696 can coordinate airport and station pickup on request."
   },
   {
     category: "Rooms & Villa",

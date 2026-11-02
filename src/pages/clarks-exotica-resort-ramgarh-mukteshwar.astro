@@ -39,13 +39,7 @@ const geoPlaceSchema = {
     "latitude": 29.4264111,
     "longitude": 79.5505355,
     "elevation": "1780"
-  },
-  "geoContains": [
-    { "@type": "Place", "name": "Mukteshwar Dham Temple", "distance": "25 km" },
-    { "@type": "Place", "name": "Kainchi Dham Neem Karoli Baba Ashram", "distance": "22 km" },
-    { "@type": "Place", "name": "Bhalu Gaad Waterfall", "distance": "16 km (~35 mins)" },
-    { "@type": "Place", "name": "Nainital Mall Road", "distance": "26 km" }
-  ]
+  }
 };
 
 // BlogPosting Schema
@@ -118,12 +112,13 @@ const resortLocalBusinessSchema = {
   "image": ogImageUrl,
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+    "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
     "addressLocality": "Ramgarh, Mukteshwar",
     "addressRegion": "Uttarakhand",
     "postalCode": "263137",
     "addressCountry": "IN"
   },
+  "hasMap": "https://maps.google.com/?cid=8386667112972057918",
   "geo": {
     "@type": "GeoCoordinates",
     "latitude": 29.4264111,
@@ -133,7 +128,9 @@ const resortLocalBusinessSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.6",
-    "reviewCount": "409"
+    "reviewCount": "409",
+    "bestRating": "5",
+    "worstRating": "1"
   }
 };
 
@@ -226,12 +223,10 @@ const faqSchema = {
 };
 
 const jsonLdSchemas = [
-  websiteSchema,
   blogPostingSchema,
   resortLocalBusinessSchema,
   faqSchema,
-  geoPlaceSchema,
-  speakableSchema
+  geoPlaceSchema
 ];
 ---
 
@@ -239,13 +234,11 @@ const jsonLdSchemas = [
   title={pageTitle}
   description={pageDescription}
   canonical={canonicalUrl}
+  image={ogImageUrl}
   breadcrumbs={breadcrumbs}
 >
   <Fragment slot="head">
-    <meta property="og:site_name" content="Whispering Pines Resort by Casa De Bello - Near Mukteshwar" />
-    <meta property="og:image" content={ogImageUrl} />
-    <meta property="og:image:alt" content={ogAltText} />
-    <meta property="twitter:image" content={ogImageUrl} />
+    <link rel="preload" as="image" href={ogImageUrl} fetchpriority="high" />
     {jsonLdSchemas.map(schema => (
       <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     ))}
@@ -261,6 +254,7 @@ const jsonLdSchemas = [
           alt={ogAltText}
           class="w-full h-full object-cover"
           loading="eager"
+          fetchpriority="high"
           width="1400"
           height="800"
         />
@@ -414,7 +408,7 @@ const jsonLdSchemas = [
             <tbody class="divide-y divide-[#EAE8E3] text-gray-700">
               <tr class="hover:bg-[#FAF9F6]">
                 <td class="p-3.5 font-medium">Bhowali-Ramgarh-Mukteshwar Road address</td>
-                <td class="p-3.5">✅ Same address — House No. 23-13/4, Malla Ramgarh</td>
+                <td class="p-3.5">✅ Same address — Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd</td>
               </tr>
               <tr class="hover:bg-[#FAF9F6]">
                 <td class="p-3.5 font-medium">180° Himalayan views of Nanda Devi and Trishul</td>
@@ -831,7 +825,7 @@ const jsonLdSchemas = [
         </div>
 
         <div class="p-4 bg-[#0E2C21]/5 rounded-sm border border-[#0E2C21]/10 text-xs text-gray-700">
-          <strong>Official Address:</strong> House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, Nainital, Uttarakhand 263137
+          <strong>Official Address:</strong> Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137
         </div>
       </section>
 
@@ -920,7 +914,7 @@ const jsonLdSchemas = [
       {/* Footer Contact Details Block */}
       <div class="p-6 bg-[#0E2C21] text-white rounded-sm space-y-2 text-center text-xs">
         <h3 class="font-bold text-sm text-[#B0966D]">Whispering Pines Resort by Casa De Bello</h3>
-        <p class="text-gray-300">House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, Uttarakhand 263137</p>
+        <p class="text-gray-300">Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137</p>
         <p class="text-gray-300">📞 +91-7505029696 | ✉️ booking@whisperingpinesresort.in | 🌐 whisperingpinesresort.in</p>
       </div>
 

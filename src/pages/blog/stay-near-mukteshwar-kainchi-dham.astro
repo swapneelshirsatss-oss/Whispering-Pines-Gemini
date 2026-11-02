@@ -52,13 +52,7 @@ const geoPlaceSchema = {
     "latitude": 29.4264111,
     "longitude": 79.5505355,
     "elevation": "1780"
-  },
-  "geoContains": [
-    { "@type": "Place", "name": "Kainchi Dham Neem Karoli Baba Ashram", "distance": "22 km (~45 mins drive)" },
-    { "@type": "Place", "name": "Mukteshwar Dham Temple & Chauli Ki Jali", "distance": "25 km (~45 mins drive)" },
-    { "@type": "Place", "name": "Bhalu Gaad Waterfall", "distance": "16 km (~35 mins drive)" },
-    { "@type": "Place", "name": "Malla Ramgarh Fruit Orchards", "distance": "0.5 km (walking distance)" }
-  ]
+  }
 };
 
 const blogPostingSchema = {
@@ -96,7 +90,7 @@ const resortSchema = {
   "email": "booking@whisperingpinesresort.in",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+    "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
     "addressLocality": "Ramgarh",
     "addressRegion": "Uttarakhand",
     "postalCode": "263137",
@@ -131,25 +125,13 @@ const kainchiFaqs = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} breadcrumbs={breadcrumbs} faqs={kainchiFaqs}>
+<Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} image={ogImageUrl} breadcrumbs={breadcrumbs} faqs={kainchiFaqs}>
   <Fragment slot="head">
     <link rel="preload" as="image" href="/images/Best-Stay-Near-Mukteshwar-&-Kainchi-Dham.avif" fetchpriority="high" type="image/avif" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={pageDescription} />
-    <meta property="og:image" content={ogImageUrl} />
-    <meta property="og:image:alt" content={ogAltText} />
-    <meta property="og:url" content={canonicalUrl} />
     <meta property="article:published_time" content="2026-09-23T10:00:00+05:30" />
     <meta property="article:modified_time" content="2026-09-23T10:00:00+05:30" />
     <meta property="article:author" content="Gaurav Pandey — Director, Casa De Bello Pvt Ltd" />
     <meta property="article:section" content="Kumaon Travel Guide and Mountain Stays" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content={ogImageUrl} />
-    <meta name="twitter:title" content={pageTitle} />
-    <meta name="twitter:description" content={pageDescription} />
-    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
-    <script type="application/ld+json" set:html={JSON.stringify(speakableSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(geoPlaceSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(resortSchema)} />
@@ -276,7 +258,7 @@ const kainchiFaqs = [
         <ol class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs sm:text-sm text-[#2C3531] list-decimal list-inside">
           <li><a href="#why-location-matters" class="hover:text-[#B0966D] transition-colors">The Mukteshwar Dilemma: Why 20 Minutes Down the Ridge Changes Everything</a></li>
           <li><a href="#whispering-pines-overview" class="hover:text-[#B0966D] transition-colors">Life on the Malla Ramgarh Ridge: Quiet Mornings & Forest Canopy</a></li>
-          <li><a href="#kainchi-dham-connectivity" class="hover:text-[#B0966D] transition-colors">Visiting Kainchi Dham: The Quiet 18-Kilometre Corridor</a></li>
+          <li><a href="#kainchi-dham-connectivity" class="hover:text-[#B0966D] transition-colors">Visiting Kainchi Dham: The Quiet 22-Kilometre Corridor</a></li>
           <li><a href="#itinerary" class="hover:text-[#B0966D] transition-colors">An Unhurried 3-Day Rhythm: Temples, Valleys & Starlit Nights</a></li>
           <li><a href="#exploring-mukteshwar" class="hover:text-[#B0966D] transition-colors">Beyond the Town: Hidden Waterfalls & Ancient Cliffs</a></li>
           <li><a href="#himalayan-views" class="hover:text-[#B0966D] transition-colors">The View That Stops You: 180° of Nanda Devi & Trishul</a></li>
@@ -391,23 +373,23 @@ const kainchiFaqs = [
           Perched at approximately 1,780 metres above sea level, Whispering Pines by Casa De Bello was built with a clear philosophy: <em>your stay should be an enriching part of your holiday, not just a place to sleep between road trips.</em>
         </p>
         <p class="text-base leading-relaxed text-gray-700 font-light mb-6 text-pretty">
-          The property offers <strong>22 accommodation units</strong>:
+          The property offers <strong>25 premium rooms and 1 standalone 3-BHK private alpine villa</strong>:
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
           <div class="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-sm">
-            <div class="text-[#7A6038] font-bold text-2xl mb-1">13</div>
-            <h4 class="font-bold text-[#0E2C21] text-sm">Super Deluxe Rooms</h4>
-            <p class="text-sm text-gray-600 font-light mt-1">King beds, private cedar balconies, and direct Himalayan mountain vistas.</p>
+            <div class="text-[#7A6038] font-bold text-2xl mb-1">25</div>
+            <h4 class="font-bold text-[#0E2C21] text-sm">Premium Rooms & Suites</h4>
+            <p class="text-sm text-gray-600 font-light mt-1">Deluxe Skylight Suites, Executive Cedar Suites, and Super Deluxe rooms with 180° Himalayan views.</p>
           </div>
           <div class="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-sm">
-            <div class="text-[#7A6038] font-bold text-2xl mb-1">4</div>
+            <div class="text-[#7A6038] font-bold text-2xl mb-1">Step-Free</div>
             <h4 class="font-bold text-[#0E2C21] text-sm">Family Twin Rooms</h4>
-            <p class="text-sm text-gray-600 font-light mt-1">Spacious double-bed layouts designed for parents travelling with children.</p>
+            <p class="text-sm text-gray-600 font-light mt-1">Ground-floor step-free layouts with direct orchard lawn access for families and seniors.</p>
           </div>
           <div class="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-sm">
-            <div class="text-[#7A6038] font-bold text-2xl mb-1">5</div>
-            <h4 class="font-bold text-[#0E2C21] text-sm">Villas & Cottages</h4>
-            <p class="text-sm text-gray-600 font-light mt-1">Including our signature 3-BHK Alpine Villa with stone fireplace for up to 10 guests.</p>
+            <div class="text-[#7A6038] font-bold text-2xl mb-1">1</div>
+            <h4 class="font-bold text-[#0E2C21] text-sm">3-BHK Private Alpine Villa</h4>
+            <p class="text-sm text-gray-600 font-light mt-1">Standalone stone-and-cedar estate with wood-fired fireplace sleeping up to 10 guests.</p>
           </div>
         </div>
 
@@ -429,7 +411,7 @@ const kainchiFaqs = [
       <!-- SECTION 3: KAINCHI DHAM CONNECTIVITY -->
       <section id="kainchi-dham-connectivity" class="mb-14 scroll-mt-24">
         <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] mb-6 border-b border-[#8A6F4A]/30 pb-3">
-          Visiting Kainchi Dham: The Quiet 18-Kilometre Corridor
+          Visiting Kainchi Dham: The Quiet 22-Kilometre Corridor
         </h2>
         <p class="text-base leading-relaxed text-gray-700 font-light mb-4 text-pretty">
           One of the primary reasons pilgrims and spiritual travellers choose Whispering Pines is its comfortable connectivity to <strong>Kainchi Dham Ashram</strong>, the sacred seat of <strong>Neem Karoli Baba</strong>.

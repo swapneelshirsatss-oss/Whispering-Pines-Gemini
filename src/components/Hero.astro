@@ -18,13 +18,16 @@ const mainHeroSrc = optimizedImage || resortLuxuryHeroImg;
       src={mainHeroSrc}
       mobileSrc={optimizedMobileImage}
       alt="Whispering Pines Resort luxury 4-star mountain hotel exterior overlooking Himalayan snow peaks in Mukteshwar"
-      className="w-full h-full object-cover"
+      className="w-full h-full"
+      imgClassName="w-full h-full object-cover"
+      width={1400}
+      height={800}
       referrerPolicy="no-referrer"
       placeholderColor="#0E2C21"
       priority
     />
     {/* Single bottom-weighted scrim: keeps type legible without burying the photograph */}
-    <div class="absolute inset-0 scrim-hero" />
+    <div class="absolute inset-0 scrim-hero pointer-events-none" />
     <div class="absolute inset-0 vignette pointer-events-none" />
     <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#FAF9F6] to-transparent pointer-events-none" />
   </div>
@@ -55,6 +58,15 @@ const mainHeroSrc = optimizedImage || resortLuxuryHeroImg;
         class="w-full sm:w-auto bg-[#B0966D] hover:bg-[#FAF9F6] text-[#0E2C21] px-10 py-4 font-sans text-[11px] font-bold uppercase tracking-[0.1em] transition-colors duration-300 flex items-center justify-center border border-[#8A6F4A] hover:border-[#FAF9F6] rounded-sm shadow-md"
       >
         <span>Check Availability</span>
+        <svg class="w-4 h-4 ml-2 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </a>
+      <a
+        href="https://wa.me/917505029696?text=Hi%20Whispering%20Pines%20Resort%2C%20I%27d%20like%20to%20claim%20the%20Flat%2025%25%20Direct%20Booking%20privilege."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full sm:w-auto bg-[#25D366] hover:bg-[#1EBE5D] text-white px-8 py-3.5 font-sans text-[11px] font-bold uppercase tracking-[0.1em] transition-colors duration-300 flex items-center justify-center rounded-sm shadow-md"
+      >
+        <span>WhatsApp Concierge (Save Flat 25% Direct • ⚡ &lt; 5m reply)</span>
         <svg class="w-4 h-4 ml-2 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"/></svg>
       </a>
       <a

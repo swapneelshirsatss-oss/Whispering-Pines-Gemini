@@ -86,7 +86,8 @@ const USPList = [
         <div class="relative rounded-sm overflow-hidden shadow-md">
           {/* Main Photo */}
           <LazyImage
-            client:visible
+            width={800}
+            height={600}
             src={balconyViewImg}
             alt="Beautiful and elegant wood-crafted bedroom inside Whispering Pines Resort"
             className="group w-full aspect-[4/3] sm:aspect-auto sm:h-[480px] lg:h-[520px]"
@@ -94,7 +95,7 @@ const USPList = [
             referrerPolicy="no-referrer"
           />
           {/* Highlight Overlay */}
-          <div class="absolute inset-0 bg-[#0E2C21]/5 mix-blend-multiply" />
+          <div class="absolute inset-0 bg-[#0E2C21]/5 mix-blend-multiply pointer-events-none" />
         </div>
 
         {/* Float Badge */}

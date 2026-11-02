@@ -179,10 +179,11 @@ export default function GalleryGrid() {
             <LazyImage
               src={img.src}
               alt={img.alt}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-full"
+              imgClassName="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             {/* Hover Caption Overlay */}
-            <div className="absolute inset-0 scrim-caption opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+            <div className="absolute inset-0 scrim-caption opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 pointer-events-none">
               <span className="text-[#FAF9F6] font-display text-sm sm:text-base leading-snug drop-shadow-md mb-2">
                 {img.alt}
               </span>

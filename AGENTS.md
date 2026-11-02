@@ -157,7 +157,7 @@ Whenever updating `<head>`, `Layout.astro`, landing page templates, or analytics
 ## Canonical Entity & Geographic Ground-Truth Invariants (AEO / GEO Fact Parity)
 
 All copy, metadata, structured data, calculator models, and LLM text files must strictly maintain the following facts with zero deviations:
-- **Canonical Address**: `House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road, Ramgarh, District Nainital, Uttarakhand 263137`
+- **Canonical Address**: `Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137`
 - **Direct Booking Discount**: Flat `25%` (Zero OTA commission; $P_{OTA} = \frac{P_{direct}}{0.75}$)
 - **Official Booking Engines**: `https://casadebello-book.whisperingpinesresort.in/` (whitelabel) / `https://whisperingpinesresort.bookingjini.in/`
 - **Google Verified Rating**: `4.6★ (409 verified Google reviews)`

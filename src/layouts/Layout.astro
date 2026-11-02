@@ -97,11 +97,11 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
     <meta property="og:image" content={ogImage} />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL.href} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL.href} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
 
     <!-- Google Fonts for Editorial Elegance and Readability (Asynchronous / Non-Blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -114,7 +114,7 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
     </noscript>
     
     <BreadcrumbSchema title={title} breadcrumbs={breadcrumbs} />
-    <SpeakableSchema />
+    <SpeakableSchema title={title} />
 
     <!-- Google WebSite Schema for Site Name SERP Branding -->
     <script type="application/ld+json" set:html={JSON.stringify({
@@ -141,13 +141,13 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
       "name": "Whispering Pines Resort by Casa De Bello",
       "url": "https://whisperingpinesresort.in/",
       "image": "https://whisperingpinesresort.in/og-image.webp",
-      "priceRange": "₹4,500 - ₹12,500",
-      "telephone": "+917505029696",
+      "priceRange": "₹3,000 - ₹15,999",
+      "telephone": "+91-7505029696",
       "hasMap": "https://maps.google.com/?cid=8386667112972057918",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Mukteshwar Road, Malla Ramgarh",
-        "addressLocality": "Nainital",
+        "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd",
+        "addressLocality": "Mukteshwar",
         "addressRegion": "Uttarakhand",
         "postalCode": "263137",
         "addressCountry": "IN"
@@ -208,6 +208,6 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
       <FooterSection />
     </div>
 
-    <StickyDirectBookingBar />
+    <StickyDirectBookingBar hideBar={pathname === '/book-now/'} />
   </body>
 </html>

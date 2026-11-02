@@ -1,8 +1,13 @@
 ---
 // StickyDirectBookingBar.astro
 // Sleek, high-converting sticky bottom direct booking bar with automated GA4 & GTM conversion tracking.
+interface Props {
+  hideBar?: boolean;
+}
+const { hideBar = false } = Astro.props;
 ---
 
+{!hideBar && (
 <div
   id="sticky-direct-booking-bar"
   class="fixed bottom-0 inset-x-0 w-full z-[9999] bg-[#0E2C21] text-[#FAF9F6] border-t-2 border-[#B0966D] shadow-[0_-4px_24px_rgba(0,0,0,0.45)] px-3 sm:px-6 py-2.5 transition-transform duration-300 transform translate-y-0"
@@ -16,7 +21,7 @@
         ✦
       </span>
       <p class="text-sm sm:text-sm font-sans font-medium text-white/95 leading-tight">
-        <span class="font-bold text-[#7A6038]">Book Direct & Save 25% vs OTAs</span>
+        <span class="font-bold text-[#C4A77D]">Book Direct & Save 25% vs OTAs</span>
         <span class="hidden md:inline"> • Instant Host Confirmation</span>
         <span class="hidden lg:inline text-white/70"> (Zero Portal Markup)</span>
       </p>
@@ -64,15 +69,13 @@
 </div>
 
 <style>
-  /* Fallback only. The real value is measured from the bar at runtime, because
-     a hardcoded height silently breaks the moment the bar's content changes —
-     which is exactly what happened when the Call CTA was added to it. */
   @media (max-width: 767px) {
     body {
-      padding-bottom: 96px;
+      padding-bottom: 68px;
     }
   }
 </style>
+)}
 
 <script is:inline>
   (function () {
@@ -86,12 +89,11 @@
       btn.href = "https://wa.me/917505029696?text=" + encodeURIComponent(fullText);
     }
 
-    // 2. Reserve exactly as much space as the bar actually occupies, so the
-    //    footer is never hidden behind it. Measured, not assumed.
+    // 2. Reserve space for the sticky bar on mobile viewports (<768px)
     function applyMobilePadding() {
       var bar = document.getElementById('sticky-direct-booking-bar');
       if (window.innerWidth < 768 && bar) {
-        document.body.style.paddingBottom = Math.ceil(bar.getBoundingClientRect().height) + 'px';
+        document.body.style.paddingBottom = Math.max(68, Math.ceil(bar.getBoundingClientRect().height)) + 'px';
       } else {
         document.body.style.paddingBottom = '';
       }
@@ -119,6 +121,7 @@
     document.addEventListener('click', function (event) {
       var target = event.target && event.target.closest ? event.target.closest('a') : null;
       if (!target) return;
+      if (target.hasAttribute('data-track-fn') || target.hasAttribute('data-track-dl')) return;
 
       var href = target.getAttribute('href') || '';
       if (!href) return;

@@ -4,7 +4,7 @@ import BlogShareBar from '../../components/BlogShareBar.astro';
 import DirectVsOtaTable from '../../components/DirectVsOtaTable.astro';
 
 const pageTitle = "Ramgarh Uttarakhand Travel Guide | 4-Star Orchard Resort";
-const pageDescription = "Discover why Ramgarh is called the Fruit Bowl of Kumaon. Learn about peach, apple, plum & apricot harvest seasons, history, and stay in active orchards at Whispering Pines 4-Star Resort.";
+const pageDescription = "Discover why Ramgarh is the Fruit Bowl of Kumaon. Explore peach, apple, plum & apricot harvest seasons and stay in organic orchards at Whispering Pines.";
 const canonicalUrl = "https://whisperingpinesresort.in/blog/ramgarh-fruit-bowl-of-kumaon/";
 const ogImageUrl = "https://whisperingpinesresort.in/images/Why-Many-Travellers-Choose-resort-Near-Mukteshwar-Instead-of-Staying-Inside-the-Town.webp";
 const ogAltText = "Why Ramgarh is the Fruit Bowl of Kumaon — Whispering Pines Resort by Casa De Bello, Malla Ramgarh";
@@ -65,7 +65,7 @@ const resortSchema = {
   "email": "booking@whisperingpinesresort.in",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "House No. 23-13/4, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+    "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
     "addressLocality": "Ramgarh",
     "addressRegion": "Uttarakhand",
     "postalCode": "263137",
@@ -78,22 +78,12 @@ const resortSchema = {
 };
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} breadcrumbs={breadcrumbs} faqs={ramgarhFaqs}>
+<Layout title={pageTitle} description={pageDescription} canonical={canonicalUrl} image={ogImageUrl} breadcrumbs={breadcrumbs} faqs={ramgarhFaqs}>
   <Fragment slot="head">
     <link rel="preload" as="image" href={ogImageUrl} fetchpriority="high" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={pageDescription} />
-    <meta property="og:image" content={ogImageUrl} />
-    <meta property="og:image:alt" content={ogAltText} />
-    <meta property="og:url" content={canonicalUrl} />
     <meta property="article:published_time" content="2026-08-03T10:00:00+05:30" />
     <meta property="article:modified_time" content="2026-09-23T10:00:00+05:30" />
     <meta property="article:author" content="Gaurav Pandey — Director, Casa De Bello Pvt Ltd" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content={ogImageUrl} />
-    <meta name="twitter:title" content={pageTitle} />
-    <meta name="twitter:description" content={pageDescription} />
     <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(resortSchema)} />
   </Fragment>
@@ -160,6 +150,16 @@ const resortSchema = {
           Active peach, plum, and apple orchards surrounding Whispering Pines Resort in Malla Ramgarh, Uttarakhand.
         </figcaption>
       </figure>
+
+      <!-- AEO DIRECT ANSWER CALLOUT -->
+      <section class="aeo-direct-answer bg-[#0E2C21] text-white rounded-sm p-6 sm:p-8 border-l-4 border-[#B0966D] shadow-md space-y-2">
+        <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#B0966D]">
+          <span>◆</span> Quick Answer: Why is Ramgarh Called the Fruit Bowl of Kumaon?
+        </div>
+        <p class="text-sm sm:text-base text-gray-200 font-light leading-relaxed">
+          <strong class="text-white">Ramgarh is called the Fruit Bowl of Kumaon</strong> because its 1,780-metre ridge altitude, sunny microclimate, and well-drained Himalayan soil produce abundant harvests of organic peaches, plums, apricots, pears, and apples introduced in the late 1800s. Guests at <strong class="text-white">Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh stay directly inside working fruit orchards with 180° views of Nanda Devi and save flat 25% when booking direct via WhatsApp (+91-7505029696).
+        </p>
+      </section>
 
       <!-- INTRODUCTION SECTION -->
       <section class="prose prose-lg max-w-none text-[#2C3531] space-y-5">
@@ -284,6 +284,28 @@ const resortSchema = {
           </table>
         </div>
       </section>
+
+      <!-- MID-ARTICLE WHATSAPP DIRECT BOOKING CTA CARD -->
+      <div class="my-10 bg-gradient-to-br from-[#0E2C21] via-[#133A2B] to-[#0E2C21] text-white rounded-sm p-6 sm:p-8 border border-[#B0966D]/30 shadow-md flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center sm:text-left">
+          <span class="inline-block px-3 py-1 bg-[#B0966D] text-[#0E2C21] text-xs font-bold rounded-full uppercase tracking-wider">Direct Orchard Stay Privilege</span>
+          <h3 class="text-xl sm:text-2xl font-bold font-display text-white">Stay Inside Working Fruit Orchards at Whispering Pines</h3>
+          <p class="text-sm text-gray-200 font-light max-w-xl">
+            Wake up to 180° Nanda Devi snow peak views from every balcony, stroll private peach and apple lawns, and skip third-party OTA commissions.
+          </p>
+        </div>
+        <div class="shrink-0 text-center">
+          <a
+            href="https://wa.me/917505029696?text=Hi!%20I'm%20reading%20the%20Ramgarh%20Fruit%20Bowl%20guide%20and%20want%20to%20claim%20the%2025%25%20Direct%20Booking%20Discount."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex flex-col items-center justify-center px-6 py-3.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-sm rounded-sm shadow-md transition-all"
+          >
+            <span>💬 Book on WhatsApp (+91 75050 29696)</span>
+            <span class="text-[11px] font-medium text-white/95 mt-0.5">Save Flat 25% Direct • ⚡ &lt; 5m reply</span>
+          </a>
+        </div>
+      </div>
 
       <!-- 5 MAJOR FRUITS GROWN -->
       <section class="space-y-6">

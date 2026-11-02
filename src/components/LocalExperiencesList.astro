@@ -45,11 +45,12 @@ const HeadingTag = asH1 ? "h1" : "h2";
             <LazyImage
               client:visible
               src={item.image}
-              alt={`Scenic local attractions: ${item.title} near Whispering Pines Cottage Mukteshwar`}
-              className="absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+              alt={`Scenic local attractions: ${item.title} near Whispering Pines Resort Mukteshwar`}
+              className="absolute inset-0 w-full h-full"
+              imgClassName="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               referrerPolicy="no-referrer"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
             
             {/* Distance Badge over Image */}
             <div class="absolute bottom-3 left-3 bg-[#FAF9F6] text-[#0E2C21] px-2.5 py-1 rounded-sm text-[10px] font-sans font-bold tracking-wider uppercase flex items-center shadow-md">
