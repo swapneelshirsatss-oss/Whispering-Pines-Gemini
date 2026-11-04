@@ -23,6 +23,20 @@ export type BlogPostData = {
 
 export const BLOG_POSTS: BlogPostData[] = [
   {
+    id: 16,
+    slug: "nainital-itinerary",
+    customUrl: "/blog/nainital-itinerary/",
+    title: "Nainital Itinerary: A 3-Day Nainital Trip with Kainchi Dham and Mukteshwar (2026)",
+    seoTitle: "Nainital Itinerary: 3-Day Trip with Kainchi Dham (2026 Plan)",
+    seoDescription: "Planning a 3-day Nainital trip from Delhi? Complete itinerary with Kainchi Dham and Mukteshwar, drive times, costs, and why Ramgarh is the smartest base.",
+    excerpt: "Most Nainital itineraries trap you in town traffic. This 3-day circuit bases you centrally in Malla Ramgarh—putting Nainital (26 km), Kainchi Dham (22 km), and Mukteshwar (25 km) under an hour each way with 180° Himalayan views and flat 25% direct savings.",
+    date: "November 5, 2026",
+    updatedDate: "November 5, 2026",
+    readTime: "13 min read",
+    imageUrl: "/images/Things-to-do-near-nainital.avif",
+    imageAlt: "Nainital 3-Day Itinerary: Naini Lake, Kainchi Dham Ashram and Mukteshwar scenic drive from Ramgarh"
+  },
+  {
     id: 15,
     slug: "nainital-in-december",
     customUrl: "/blog/nainital-in-december/",

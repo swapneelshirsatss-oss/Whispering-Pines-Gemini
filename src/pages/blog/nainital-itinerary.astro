@@ -1,0 +1,750 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { RESORT_CONTACT, generateWhatsAppLink } from '../../data';
+import BlogShareBar from '../../components/BlogShareBar.astro';
+import DirectVsOtaTable from '../../components/DirectVsOtaTable.astro';
+
+const pageTitle = "Nainital Itinerary: 3-Day Trip with Kainchi Dham (2026 Plan)";
+const pageDescription = "Planning a 3-day Nainital trip from Delhi? Complete itinerary with Kainchi Dham and Mukteshwar, drive times, costs, and why Ramgarh is the smartest base.";
+const canonicalUrl = "https://whisperingpinesresort.in/blog/nainital-itinerary/";
+const ogImageUrl = "https://whisperingpinesresort.in/images/Things-to-do-near-nainital.avif";
+const ogAltText = "Nainital 3-Day Itinerary: Naini Lake, Kainchi Dham Ashram and Mukteshwar scenic drive from Ramgarh";
+
+const breadcrumbs = [
+  { name: "Home", item: "https://whisperingpinesresort.in/" },
+  { name: "Blog", item: "https://whisperingpinesresort.in/blog/" },
+  { name: "3-Day Nainital Itinerary with Kainchi Dham", item: canonicalUrl }
+];
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
+  "headline": "Nainital Itinerary: A 3-Day Nainital Trip with Kainchi Dham and Mukteshwar (2026)",
+  "description": pageDescription,
+  "image": { "@type": "ImageObject", "url": ogImageUrl, "width": 1200, "height": 675 },
+  "datePublished": "2026-11-05T10:00:00+05:30",
+  "dateModified": "2026-11-05T10:00:00+05:30",
+  "author": {
+    "@type": "Person",
+    "name": "Gaurav Pandey",
+    "jobTitle": "Director, Casa De Bello Pvt Ltd",
+    "url": "https://whisperingpinesresort.in/about-whispering-pines-resort-ramgarh/",
+    "sameAs": ["https://casadebello.com/"]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+    "url": "https://whisperingpinesresort.in",
+    "logo": { "@type": "ImageObject", "url": "https://whisperingpinesresort.in/logo.svg" }
+  },
+  "keywords": "Nainital itinerary, 3 day Nainital itinerary, Nainital trip plan from Delhi, Nainital Kainchi Dham Mukteshwar itinerary, places to visit in Nainital in 3 days, Nainital trip cost, Ramgarh stay near Nainital, Whispering Pines Resort"
+};
+
+const resortSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Resort", "Hotel", "LodgingBusiness"],
+  "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+  "description": "Boutique 4-star mountain resort with 25 rooms, standalone 3-BHK private alpine villa, heated suites, farm-to-table dining, and 180° Himalayan views at 1,780m in Malla Ramgarh, situated centrally between Nainital (26 km), Kainchi Dham (22 km), and Mukteshwar (25 km).",
+  "url": "https://whisperingpinesresort.in",
+  "telephone": "+91-7505029696",
+  "email": "booking@whisperingpinesresort.in",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+    "addressLocality": "Mukteshwar",
+    "addressRegion": "Uttarakhand",
+    "postalCode": "263137",
+    "addressCountry": "IN"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": "29.4264111", "longitude": "79.5505355" },
+  "hasMap": "https://maps.google.com/?cid=8386667112972057918",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "409", "bestRating": "5", "worstRating": "1" },
+  "priceRange": "₹3,000 – ₹15,999",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Central Hub to Nainital (26 km), Kainchi Dham (22 km) & Mukteshwar (25 km)", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "180° Himalayan Views — Nanda Devi & Trishul from All Rooms", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Dedicated Satvik & Pure Veg Dining Options on Request", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Free Gated Parking for 25+ Vehicles", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "150 Mbps High-Speed Fiber Wi-Fi", "value": true }
+  ]
+};
+
+const itineraryFaqs = [
+  {
+    question: "How many days are enough for a complete Nainital trip?",
+    answer: "Three days is the ideal duration for a memorable trip from Delhi. It allows you to explore Nainital town (Naini Lake, Naina Devi Temple, Snow View) on Day 2, and attend early morning darshan at Kainchi Dham Ashram on Day 3 before heading home. Adding a fourth day lets you explore Mukteshwar and Chauli Ki Jali without rushing."
+  },
+  {
+    question: "What is the best 3-day Nainital itinerary from Delhi?",
+    answer: "Day 1: Drive from Delhi to Malla Ramgarh (~340 km / 6.5–7.5h) via NH 9 and check in to a quiet ridge resort. Day 2: Day excursion to Nainital town (Naina Devi Temple, Naini Lake boating, Snow View ropeway, Mall Road) and return to Ramgarh for a bonfire. Day 3: Sunrise darshan at Kainchi Dham Ashram (~22 km) at 7:30 AM, followed by the drive back to Delhi."
+  },
+  {
+    question: "Why is Malla Ramgarh the smartest base for this itinerary?",
+    answer: "Nainital and Mukteshwar sit at opposite ends of the mountain road, 51 km apart (a grueling 100 km round trip). Malla Ramgarh sits right in the geographic middle: exactly 26 km from Nainital, 22 km from Kainchi Dham, and 25 km from Mukteshwar. Basing yourself here keeps every single day trip under 45–50 minutes."
+  },
+  {
+    question: "How far is Mukteshwar from Nainital?",
+    answer: "Mukteshwar is approximately 51 km from Nainital town via Bhowali and Ramgarh, taking roughly 1.5 to 2 hours of hill driving. By staying at Whispering Pines Resort in Malla Ramgarh, you cut the drive to Mukteshwar down to just 25 km (~45 minutes)."
+  },
+  {
+    question: "Can we visit Kainchi Dham and Nainital on the same day?",
+    answer: "We strongly advise against combining them on the same afternoon. Bhowali junction experiences heavy tourist bottlenecks midday. Instead, dedicate Day 2 to Nainital town and visit Kainchi Dham on Day 3 early at 7:30 AM when temple queues are shortest and parking is hassle-free."
+  },
+  {
+    question: "How much does a 3-day Nainital trip cost for two adults?",
+    answer: "Excluding fuel and meals, a comfortable 3-day trip costs approximately ₹8,500 to ₹14,000 for two. Whispering Pines Resort direct room rates start from ₹3,999/night (Executive Cedar Suite) with a 25% direct booking saving, Naini Lake boating is ₹250–₹350, Snow View ropeway is ~₹300/adult, and Kainchi Dham darshan is completely free."
+  }
+];
+
+const waItineraryLink = generateWhatsAppLink(
+  "Hi Gaurav! I am planning a 3-Day Nainital, Kainchi Dham & Mukteshwar trip and would like route guidance and to claim the Flat 25% Direct Booking Discount at Whispering Pines Resort."
+);
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={canonicalUrl}
+  image={ogImageUrl}
+  breadcrumbs={breadcrumbs}
+  faqs={itineraryFaqs}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href={ogImageUrl} fetchpriority="high" type="image/avif" />
+    <meta property="article:published_time" content="2026-11-05T10:00:00+05:30" />
+    <meta property="article:modified_time" content="2026-11-05T10:00:00+05:30" />
+    <meta property="article:author" content="Gaurav Pandey — Director, Casa De Bello Pvt Ltd" />
+    <meta property="article:section" content="Nainital Travel Itineraries & Hill Circuits" />
+    <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(resortSchema)} />
+  </Fragment>
+
+  <article class="bg-[#FAF9F6] text-[#0E2C21] font-sans antialiased selection:bg-[#B0966D] selection:text-[#0E2C21]">
+    {/* Breadcrumbs Navigation */}
+    <nav class="pt-28 pb-4 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto" aria-label="Breadcrumb">
+      <div class="flex items-center gap-2 text-xs font-semibold text-gray-500">
+        <a href="/" class="hover:text-[#0E2C21] transition-colors">Home</a>
+        <span>/</span>
+        <a href="/blog/" class="hover:text-[#0E2C21] transition-colors">Blog</a>
+        <span>/</span>
+        <span class="text-[#7A6038] truncate">Nainital 3-Day Itinerary (2026)</span>
+      </div>
+    </nav>
+
+    {/* Main Container */}
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 space-y-12">
+      {/* Article Header Card */}
+      <header class="bg-white p-6 sm:p-10 md:p-12 rounded-sm shadow-sm border border-[#EAE8E3] space-y-6">
+        <div class="space-y-4">
+          <div class="flex flex-wrap items-center gap-3 text-xs font-medium text-gray-500">
+            <span class="bg-[#0E2C21] text-[#B0966D] text-[11px] font-semibold uppercase px-3 py-1 rounded-full shadow-xs">
+              Complete Circuit Plan
+            </span>
+            <span>•</span>
+            <span class="inline-flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-[#B0966D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              November 5, 2026
+            </span>
+            <span>•</span>
+            <span>Updated November 5, 2026</span>
+            <span>•</span>
+            <span class="inline-flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-[#B0966D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              13 min read
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-[#0E2C21] leading-tight">
+            Nainital Itinerary: A 3-Day Nainital Trip with Kainchi Dham and Mukteshwar (2026)
+          </h1>
+
+          {/* Author Byline & Host Verification */}
+          <div class="pt-4 flex flex-col sm:flex-row sm:items-center gap-4 border-t border-gray-100">
+            <div class="flex items-center gap-3">
+              <img
+                src="/images/Gaurav-pandey-casa-de-bello.webp"
+                alt="Gaurav Pandey — Director, Casa De Bello Pvt Ltd"
+                class="w-12 h-12 rounded-full object-cover border-2 border-[#B0966D] shrink-0 shadow-sm"
+                width="48"
+                height="48"
+                loading="eager"
+              />
+              <div>
+                <p class="text-sm font-bold text-[#0E2C21]">
+                  By Gaurav Pandey, Director, Casa De Bello Pvt Ltd
+                </p>
+                <p class="text-xs text-gray-500 font-light">
+                  Route verified by Anand Bisht, Operations Manager • Whispering Pines Resort, Malla Ramgarh
+                </p>
+              </div>
+            </div>
+            <div class="sm:ml-auto">
+              <span class="inline-block bg-[#0E2C21]/5 text-[#7A6038] text-[11px] font-semibold px-3 py-1 rounded-sm border border-[#0E2C21]/10">
+                ⭐ 10+ Years Hosting Delhi Weekenders
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Hero Image */}
+        <div class="w-full h-64 sm:h-96 md:h-[460px] overflow-hidden rounded-sm border border-gray-100 shadow-sm bg-gray-100">
+          <img
+            src={ogImageUrl}
+            alt={ogAltText}
+            width="1200"
+            height="675"
+            class="w-full h-full object-cover"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+
+        {/* Verified Host Attribution Card */}
+        <div class="bg-[#FAF9F6] p-4 sm:p-5 rounded-sm border border-[#EAE8E3] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3.5">
+            <img
+              src="/images/Gaurav-pandey-casa-de-bello.webp"
+              alt="Gaurav Pandey"
+              class="w-11 h-11 rounded-full object-cover border-2 border-[#8A6F4A] shrink-0"
+              width="44"
+              height="44"
+              loading="lazy"
+            />
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#7A6038] block">Verified Mountain Hub Strategy</span>
+              <p class="text-xs sm:text-sm font-bold text-[#0E2C21]">Designed by Gaurav Pandey — Resident Director at Whispering Pines Resort</p>
+              <p class="text-xs text-gray-600 font-light">Malla Ramgarh: 26 km to Nainital • 22 km to Kainchi Dham • 25 km to Mukteshwar</p>
+            </div>
+          </div>
+          <a
+            href={waItineraryLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="shrink-0 inline-flex items-center gap-1.5 px-4 py-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs rounded-sm shadow-sm transition-all"
+          >
+            <span>💬 WhatsApp Front Desk for Timing</span>
+          </a>
+        </div>
+
+        {/* Share Bar Top */}
+        <BlogShareBar
+          title={pageTitle}
+          url={canonicalUrl}
+          description={pageDescription}
+          label="Planning a 3-day Kumaon trip? Share this verified itinerary with your travel group"
+          className="my-4"
+        />
+
+        {/* AEO Quick Answer Box */}
+        <div class="aeo-direct-answer bg-[#FAF9F6] p-6 sm:p-7 rounded-sm border-l-4 border-[#8A6F4A] shadow-xs space-y-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-[#7A6038] block">
+            Nainital 3-Day Itinerary: Executive Summary
+          </span>
+          <p class="text-base text-gray-800 leading-relaxed font-light">
+            <strong>The most effortless 3-day Nainital itinerary from Delhi bases you outside town in Malla Ramgarh rather than inside the congested lake basin.</strong> Nainital, Kainchi Dham, and Mukteshwar form a triangular road network with Ramgarh sitting right at the center. Day 1 is dedicated to the scenic 340 km drive from Delhi (~6.5–7.5h) and a sunset mountain dinner. Day 2 is an unhurried day trip to Nainital town (Naina Devi Temple, Naini Lake boating, Snow View ropeway). Day 3 begins with peaceful 7:30 AM darshan at Neem Karoli Baba Ashram in Kainchi Dham (~22 km) before returning to Delhi.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-4 text-xs text-[#0E2C21] font-medium">
+            <span>✓ Every Day Trip &lt; 50 Mins Each Way</span>
+            <span>✓ Free Gated Parking for 25+ Cars</span>
+            <span>✓ Flat 25% Direct Booking Discount</span>
+            <span>✓ 180° Nanda Devi Views from Bed</span>
+          </div>
+        </div>
+
+        {/* Article Body */}
+        <div class="prose prose-lg max-w-none text-[#2C3531] font-light leading-relaxed prose-headings:font-display prose-headings:text-[#0E2C21] prose-a:text-[#0E2C21] prose-a:font-semibold prose-a:underline space-y-8">
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Most Nainital itineraries put you in a lake-side hotel and send you up and down the same crowded road for three days, battling for parking and breathing vehicle fumes. This itinerary is built the other way round. Nainital town, Kainchi Dham Ashram, and Mukteshwar all share a connected mountain road corridor, and Malla Ramgarh sits right in the geographic middle: exactly 26 km from Nainital, 22 km from Kainchi Dham, and 25 km from Mukteshwar.
+          </p>
+
+          <p>
+            Stay on the Ramgarh ridge, and every single day trip is under an hour each way. Below is the 3-day circuit we recommend to families driving up from Delhi NCR, along with a 2-day quick version, a 4-day extended circuit, realistic budgets, and honest trade-offs. We manage <a href="/about-whispering-pines-resort-ramgarh/">Whispering Pines Resort</a> — our 25-room boutique 4-star property and standalone 10-guest Alpine Villa perched at 1,780 metres on the Malla Ramgarh ridge.
+          </p>
+
+          {/* Section 1: Overview */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Nainital Itinerary at a Glance (3-Day Circuit)
+          </h2>
+
+          <div class="overflow-x-auto my-6 border border-[#EAE8E3] rounded-sm bg-white shadow-xs">
+            <table class="w-full text-left text-sm text-[#2C3531]">
+              <thead class="bg-[#0E2C21] text-[#FAF9F6] text-xs uppercase font-semibold">
+                <tr>
+                  <th class="p-3.5">Day</th>
+                  <th class="p-3.5">Key Highlights &amp; Circuit Route</th>
+                  <th class="p-3.5">Total Driving That Day</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Day 1</td>
+                  <td class="p-3.5">Delhi to Malla Ramgarh via NH 9; check-in, sunset peak views over Nanda Devi &amp; Trishul, early dinner.</td>
+                  <td class="p-3.5 font-semibold text-[#7A6038]">~340 km (6.5 to 7.5 hours)</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-amber-50/20">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Day 2</td>
+                  <td class="p-3.5">Nainital Town: Naina Devi Temple, Naini Lake boat ride, Snow View ropeway, Mall Road walk; evening bonfire.</td>
+                  <td class="p-3.5 font-semibold text-[#7A6038]">~52 km round-trip (~45 min each way)</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-emerald-50/20">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Day 3</td>
+                  <td class="p-3.5">Early 7:30 AM darshan at Kainchi Dham Ashram (avoiding shuttle crowds), hot breakfast, return drive to Delhi.</td>
+                  <td class="p-3.5 font-semibold text-[#7A6038]">22 km to ashram + drive home to Delhi</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Day 4 (Optional)</td>
+                  <td class="p-3.5">Mukteshwar Dham temple, Chauli Ki Jali cliffs, Bhalu Gaad Waterfall walk, and Ramgarh fruit orchard tour.</td>
+                  <td class="p-3.5 font-semibold text-[#7A6038]">~50 km round-trip (~45 min each way)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Section 2: Why Base in Ramgarh */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Why Base Yourself Between Nainital and Mukteshwar?
+          </h2>
+
+          <p>
+            Nainital town sits at one end of the road and Mukteshwar sits at the opposite end. The Nainital district administration records the road distance from Nainital to Mukteshwar at <strong>51 km</strong>. If you book a hotel inside Nainital town, a day trip to Mukteshwar requires a punishing 102 km round trip over winding mountain hairpins.
+          </p>
+
+          <p>
+            By choosing Malla Ramgarh as your base, every key landmark in the Kumaon hills is within an easy 35-to-50 minute hop:
+          </p>
+
+          {/* Table: Distances from Whispering Pines */}
+          <div class="overflow-x-auto my-6 border border-[#EAE8E3] rounded-sm bg-white shadow-xs">
+            <table class="w-full text-left text-sm text-[#2C3531]">
+              <thead class="bg-[#7A6038] text-white text-xs uppercase font-semibold">
+                <tr>
+                  <th class="p-3.5">Destination from Whispering Pines (Ramgarh)</th>
+                  <th class="p-3.5">Verified Distance</th>
+                  <th class="p-3.5">Typical Driving Time</th>
+                  <th class="p-3.5">Direct Route Highway</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Nainital Mall Road &amp; Naini Lake</td>
+                  <td class="p-3.5">26 km</td>
+                  <td class="p-3.5">~45 to 50 minutes</td>
+                  <td class="p-3.5">Via Bhowali-Ramgarh Rd</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-amber-50/20">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Kainchi Dham (Neem Karoli Baba Ashram)</td>
+                  <td class="p-3.5 font-bold text-[#7A6038]">22 km</td>
+                  <td class="p-3.5 font-bold text-[#7A6038]">~45 minutes</td>
+                  <td class="p-3.5">Via Bhowali junction</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Mukteshwar Dham &amp; Chauli Ki Jali</td>
+                  <td class="p-3.5">25 km</td>
+                  <td class="p-3.5">~45 to 55 minutes</td>
+                  <td class="p-3.5">Via Bhatelia junction</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Bhimtal Lake &amp; Island Aquarium</td>
+                  <td class="p-3.5">26 km</td>
+                  <td class="p-3.5">~50 minutes</td>
+                  <td class="p-3.5">Via Bhowali bypass</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Bhalu Gaad Waterfall Forest Trail</td>
+                  <td class="p-3.5">16 km</td>
+                  <td class="p-3.5">~35 minutes</td>
+                  <td class="p-3.5">Towards Mukteshwar</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Kathgodam Railway Station (KGM)</td>
+                  <td class="p-3.5">43 km</td>
+                  <td class="p-3.5">~1.5 hours</td>
+                  <td class="p-3.5">NH 109 &amp; Bhowali Rd</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Section 3: Detailed Day-by-Day */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Day 1: Delhi to Malla Ramgarh (The Mountain Approach)
+          </h2>
+
+          <p>
+            The driving route from Delhi NCR follows <strong>NH 9</strong>: Delhi → Hapur bypass → Moradabad bypass → Rampur → Bilaspur → Rudrapur → Haldwani → Kathgodam. At Kathgodam, the mountain climb begins through Bhimtal and Bhowali, with Ramgarh situated 14 km further along the peaceful fruit orchard ridge.
+          </p>
+
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li><strong>Departure Window:</strong> In summer and autumn, leave Delhi by 6:00 AM to beat NCR toll traffic. If you are travelling in winter, see our guide on <a href="/blog/nainital-in-december/">visiting Nainital in December</a>: leave around 6:45–7:00 AM once plain fog lifts.</li>
+            <li><strong>Daylight Arrival:</strong> Aim to reach Kathgodam by 1:00 PM and Whispering Pines by 2:30 PM. Mountain curves are far more enjoyable and scenic before sunset.</li>
+            <li><strong>Rail Option:</strong> The New Delhi - Kathgodam Shatabdi Express (12040) reaches Kathgodam at 11:40 AM. Our front desk can arrange a trusted local taxi pickup (approx. ₹1,800 to ₹2,200).</li>
+          </ul>
+
+          <div class="bg-amber-50/50 p-5 rounded-sm border border-amber-200/60 my-4">
+            <h3 class="text-sm font-bold text-[#0E2C21] mb-1">Host Ground Observation:</h3>
+            <p class="text-xs sm:text-sm text-gray-700 font-light leading-relaxed">
+              When guests arrive on their first evening, they often step onto our 2,200 sq ft lawn in absolute silence. Sitting with a cup of hot herbal tea around 5:30 PM, they witness the Alpenglow phenomenon: the last golden-pink rays of sunlight illuminating the 7,120-metre snow crest of Trishul across the valley.
+            </p>
+          </div>
+
+          {/* Section 4: Day 2 */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Day 2: Nainital Town Day Excursion
+          </h2>
+
+          <p>
+            Depart Whispering Pines Resort by 8:30 AM. Nainital parking lots fill up rapidly on weekends and holidays, so an early arrival ensures hassle-free parking at Mallital:
+          </p>
+
+          <div class="overflow-x-auto my-6 border border-[#EAE8E3] rounded-sm bg-white shadow-xs">
+            <table class="w-full text-left text-sm text-[#2C3531]">
+              <thead class="bg-[#0E2C21] text-[#FAF9F6] text-xs uppercase font-semibold">
+                <tr>
+                  <th class="p-3">Timeline</th>
+                  <th class="p-3">Activity &amp; Location</th>
+                  <th class="p-3">Insider Travel Guidance</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
+                <tr>
+                  <td class="p-3 font-bold text-[#0E2C21]">9:15 AM</td>
+                  <td class="p-3">Maa Naina Devi Temple (Mallital)</td>
+                  <td class="p-3">Park at the Flats ground; pay respects at the sacred Shaktipeeth before long tourist queues build.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-[#0E2C21]">10:00 AM</td>
+                  <td class="p-3">Traditional Boating on Naini Lake</td>
+                  <td class="p-3">Traditional rowboats cost ~₹250–₹350 per round (2–4 pax); crisp morning reflections are spectacular.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-[#0E2C21]">11:30 AM</td>
+                  <td class="p-3">Aerial Ropeway to Snow View Point</td>
+                  <td class="p-3">Round-trip ticket is ~₹300/adult and ₹200/child. Clear morning skies offer majestic Himalayan outlooks.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-[#0E2C21]">1:30 PM</td>
+                  <td class="p-3">Lunch &amp; Leisurely Mall Road Stroll</td>
+                  <td class="p-3">Try hot momos and thukpa at Tibetan Market, then walk along the shaded lake promenade towards Tallital.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-[#0E2C21]">3:30 PM</td>
+                  <td class="p-3">Optional: Eco Cave Gardens</td>
+                  <td class="p-3">Fun interconnected natural caves for teens and active adults; skip if traveling with seniors with knee pain.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-[#0E2C21]">4:30 PM</td>
+                  <td class="p-3">Scenic Drive Back to Ramgarh</td>
+                  <td class="p-3">Depart town before dusk; enjoy a wood-fired bonfire with live barbecue counters at Whispering Pines by 6:30 PM.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Section 5: Day 3 */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Day 3: Sunrise Darshan at Kainchi Dham, Then Home
+          </h2>
+
+          <p>
+            Neem Karoli Baba Ashram at Kainchi Dham is located 22 km down our ridge via Bhowali. For a complete guide to weekend parking intercept lots, shuttle fares, and rules, read our dedicated <a href="/blog/hotel-near-kainchi-dham/">Kainchi Dham parking and shuttle guide</a>.
+          </p>
+
+          <ol class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">1. 6:45 AM Departure:</span>
+              <span>Our kitchen serves early hot tea and can pack light breakfast items (satvik sandwiches and fresh fruit) on advance request.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">2. 7:30 AM Temple Arrival:</span>
+              <span>On weekdays, your private car can drive right to the ashram bridge before morning rush hours. Darshan is completely free with no online registration required.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">3. 9:30 AM Downhill Cruise:</span>
+              <span>Rejoin the highway at Bhowali, descend smoothly through Bhimtal to Kathgodam, and cruise along NH 9 back to Delhi NCR by Sunday evening.</span>
+            </li>
+          </ol>
+
+          {/* Section 6: Optional Day 4 */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Day 4 (Optional Extended Circuit): Mukteshwar &amp; Waterfalls
+          </h2>
+
+          <p>
+            If you have four days, you can explore the rugged beauty of Mukteshwar without checking out or changing hotels:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 text-sm">
+            <div class="bg-white p-4 rounded-sm border border-[#EAE8E3]">
+              <span class="font-bold text-[#0E2C21] block mb-1">🛕 Mukteshwar Dham &amp; Chauli Ki Jali (25 km):</span>
+              <p class="text-gray-600 font-light">
+                Perched at 2,285 metres, the 350-year-old stone temple commands panoramic views of the high peaks, while adjacent Chauli Ki Jali offers sheer 1,000-foot cliff overhangs. Also explore our guide on <a href="/blog/stay-near-mukteshwar-kainchi-dham/">staying near Mukteshwar and Kainchi Dham</a>.
+              </p>
+            </div>
+            <div class="bg-white p-4 rounded-sm border border-[#EAE8E3]">
+              <span class="font-bold text-[#0E2C21] block mb-1">🌊 Bhalu Gaad Waterfall (16 km):</span>
+              <p class="text-gray-600 font-light">
+                An easy 1.5 km shaded forest hike along a gushing stream culminating in a natural 60-foot plunge waterfall and natural pool.
+              </p>
+            </div>
+            <div class="bg-white p-4 rounded-sm border border-[#EAE8E3]">
+              <span class="font-bold text-[#0E2C21] block mb-1">🍑 Ramgarh Fruit Orchards:</span>
+              <p class="text-gray-600 font-light">
+                Stroll through century-old apricot, plum, and apple orchards. Discover <a href="/blog/ramgarh-fruit-bowl-of-kumaon/">why Ramgarh is celebrated as the fruit bowl of Kumaon</a>.
+              </p>
+            </div>
+            <div class="bg-white p-4 rounded-sm border border-[#EAE8E3]">
+              <span class="font-bold text-[#0E2C21] block mb-1">☕ Cafe Hopping &amp; Local Jams:</span>
+              <p class="text-gray-600 font-light">
+                Pick up handmade mountain jams, rhododendron juice, and organic honey from local Ramgarh cooperatives.
+              </p>
+            </div>
+          </div>
+
+          {/* Section 7: Trip Cost Table */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            What a 3-Day Nainital Trip Costs (Transparent 2026 Breakdown)
+          </h2>
+
+          <div class="overflow-x-auto my-6 border border-[#EAE8E3] rounded-sm bg-white shadow-xs">
+            <table class="w-full text-left text-sm text-[#2C3531]">
+              <thead class="bg-[#0E2C21] text-[#FAF9F6] text-xs uppercase font-semibold">
+                <tr>
+                  <th class="p-3.5">Cost Component</th>
+                  <th class="p-3.5">Approximate Expense</th>
+                  <th class="p-3.5">Verified Source &amp; Policy</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Resort Stay (2 Nights at Whispering Pines)</td>
+                  <td class="p-3.5 font-semibold text-[#7A6038]">From ₹7,998 (Executive Suite) to ₹31,998 (10-Pax Villa)</td>
+                  <td class="p-3.5">Direct published website rates (Executive Suite: ₹3,999/night; Villa: ₹15,999/night).</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-emerald-50/20">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Direct Booking Saving</td>
+                  <td class="p-3.5 font-bold text-emerald-800">Flat 25% Off vs OTA Portals</td>
+                  <td class="p-3.5">Official resort direct guarantee via WhatsApp or official booking engine.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Snow View Aerial Ropeway</td>
+                  <td class="p-3.5">~₹300 / adult, ₹200 / child round-trip</td>
+                  <td class="p-3.5">Official KMVN ropeway counter rate.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Naini Lake Rowboat Ride</td>
+                  <td class="p-3.5">~₹250 to ₹350 per boat (2–4 pax)</td>
+                  <td class="p-3.5">Nainital municipal boat stand board.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Kainchi Dham Darshan Entry</td>
+                  <td class="p-3.5 font-bold text-emerald-800">₹0 (Completely Free)</td>
+                  <td class="p-3.5">Ashram trust policy; no ticket or registration fee.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Highway FASTag Tolls (Delhi ↔ Haldwani)</td>
+                  <td class="p-3.5">~₹260 to ₹310 each way</td>
+                  <td class="p-3.5">NH 9 toll plazas (Chhajarsi, Brijghat, Joya).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Section 8: Room Inventory */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Rooms &amp; Suites at Whispering Pines Resort
+          </h2>
+
+          <div class="overflow-x-auto my-6 border border-[#EAE8E3] rounded-sm bg-white shadow-xs">
+            <table class="w-full text-left text-sm text-[#2C3531]">
+              <thead class="bg-[#0E2C21] text-[#FAF9F6] text-xs uppercase font-semibold">
+                <tr>
+                  <th class="p-3.5">Room Category</th>
+                  <th class="p-3.5">Capacity</th>
+                  <th class="p-3.5">Direct Rate From</th>
+                  <th class="p-3.5">Why It Fits This Itinerary</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Executive Cedar Suite</td>
+                  <td class="p-3.5">2 Adults</td>
+                  <td class="p-3.5 font-semibold text-[#7A6038]">₹3,999 / night</td>
+                  <td class="p-3.5">Couples on a weekend break; private balcony facing Nanda Devi.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-amber-50/20">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Family Twin Room</td>
+                  <td class="p-3.5">2 to 4 Guests</td>
+                  <td class="p-3.5 font-semibold text-[#7A6038]">₹4,999 / night</td>
+                  <td class="p-3.5">Families with kids or grandparents; ground floor step-free orchard access.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Deluxe Skylight Suite</td>
+                  <td class="p-3.5">2 to 3 Adults</td>
+                  <td class="p-3.5 font-semibold text-[#7A6038]">₹6,499 / night</td>
+                  <td class="p-3.5">Glass skylight for stargazing; luxurious heated bathroom.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-emerald-50/30">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Standalone 3-BHK Private Villa</td>
+                  <td class="p-3.5 font-semibold text-[#0E2C21]">Up to 10 Guests</td>
+                  <td class="p-3.5 font-bold text-[#7A6038]">₹15,999 / night</td>
+                  <td class="p-3.5">Multi-gen families or friends; stone fireplace, private lawn &amp; kitchenette.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Direct vs OTA Table Integration */}
+          <div class="my-8">
+            <DirectVsOtaTable />
+          </div>
+
+          {/* Section 9: Best Time */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Best Season to Follow This Itinerary
+          </h2>
+
+          <div class="overflow-x-auto my-6 border border-[#EAE8E3] rounded-sm bg-white shadow-xs">
+            <table class="w-full text-left text-sm text-[#2C3531]">
+              <thead class="bg-[#0E2C21] text-[#FAF9F6] text-xs uppercase font-semibold">
+                <tr>
+                  <th class="p-3.5">Season Window</th>
+                  <th class="p-3.5">Atmospheric Conditions</th>
+                  <th class="p-3.5">What Changes for This Itinerary</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">March to June (Summer)</td>
+                  <td class="p-3.5">Warm days, cool mountain evenings; fruit blossoms blooming in Ramgarh.</td>
+                  <td class="p-3.5">Highest tourist footfall in Nainital; start Day 2 by 8:00 AM to park smoothly.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">July to August (Monsoon)</td>
+                  <td class="p-3.5">Lush green valleys, mist, roaring waterfalls; occasional rain delays.</td>
+                  <td class="p-3.5">Check highway advisories morning of travel; Bhalu Gaad waterfall is at full flow.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-emerald-50/20">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">September to November (Autumn)</td>
+                  <td class="p-3.5">Post-monsoon crystal clarity; razor-sharp 180° snow peak views.</td>
+                  <td class="p-3.5 font-bold text-emerald-800">The premier season for this itinerary! Calmer weekdays and sparkling mountain sun.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">December to February (Winter)</td>
+                  <td class="p-3.5">Crisp, sunny days (10–15°C); chilly nights; occasional snowfall.</td>
+                  <td class="p-3.5">Pack thermals; check our guide on <a href="/blog/nainital-in-december/">Nainital in December</a> for fog departure timings.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Section 10: Honest Trade-Offs */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Honest Trade-Offs to Keep in Mind
+          </h2>
+
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">• 45-Minute Drive to Naini Lake:</span>
+              <span>If your idea of a vacation is stepping out at 10:00 PM to eat softies on Mall Road, stay inside town. If your priority is peace, zero pollution, and direct Himalayan snow peak views from your balcony, stay in Ramgarh.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">• You Need a Vehicle or Pre-Booked Cab:</span>
+              <span>Because the resort is perched along a tranquil fruit orchard ridge, having your personal car or a reserved taxi is essential for completing day trips comfortably.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">• Day 3 is an Active Day:</span>
+              <span>Combining an early morning Kainchi Dham darshan with the return drive to Delhi works well, but requires leaving by 6:45 AM. If traveling with elderly family members, we recommend adding a 4th night to keep everyone well-rested.</span>
+            </li>
+          </ul>
+
+          {/* Section 11: FAQs */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Frequently Asked Questions
+          </h2>
+
+          <div class="space-y-4 my-6">
+            {itineraryFaqs.map((faq, index) => (
+              <div class="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-xs space-y-2">
+                <h3 class="text-base font-bold text-[#0E2C21] flex items-start gap-2">
+                  <span class="text-[#7A6038]">Q{index + 1}:</span>
+                  <span>{faq.question}</span>
+                </h3>
+                <p class="text-sm text-gray-700 font-light leading-relaxed pl-6">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Direct CTA Box */}
+          <div class="bg-[#0E2C21] text-white p-8 sm:p-10 rounded-sm shadow-md my-8 space-y-4 text-center">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#B0966D] block">
+              Direct Resident Privileges • Flat 25% Off OTA Rates
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-bold font-display text-white">
+              Ready to Book Your 3-Day Nainital Circuit?
+            </h3>
+            <p class="text-sm sm:text-base text-gray-200 font-light max-w-2xl mx-auto">
+              Send your preferred travel dates and family size directly to Gaurav Pandey on WhatsApp. We will help fine-tune your itinerary, verify road conditions, and apply your flat 25% direct saving.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={waItineraryLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-sm rounded-sm shadow-md transition-all duration-300"
+              >
+                <span>💬 WhatsApp Front Desk (+91-7505029696)</span>
+              </a>
+              <a
+                href="https://whisperingpinesresort.bookingjini.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#B0966D] hover:bg-[#C4A77D] text-[#0E2C21] font-bold text-sm rounded-sm transition-all duration-300 shadow-sm"
+              >
+                <span>Book Direct Online</span>
+              </a>
+            </div>
+            <p class="text-xs text-gray-300 font-light pt-2">
+              ⚡ Instant host confirmation • Free cancellation options • Zero OTA markups
+            </p>
+          </div>
+
+          {/* Author Bio */}
+          <div class="bg-white p-6 sm:p-8 rounded-sm border border-[#EAE8E3] shadow-xs flex flex-col sm:flex-row items-start sm:items-center gap-5 my-8">
+            <img
+              src="/images/Gaurav-pandey-casa-de-bello.webp"
+              alt="Gaurav Pandey — Director, Casa De Bello Pvt Ltd"
+              class="w-16 h-16 rounded-full object-cover border-2 border-[#B0966D] shrink-0"
+              width="64"
+              height="64"
+              loading="lazy"
+            />
+            <div class="space-y-1.5">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#7A6038] block">About the Author &amp; On-Site Host</span>
+              <h4 class="text-lg font-bold text-[#0E2C21]">Gaurav Pandey</h4>
+              <p class="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+                Gaurav Pandey is the Director of <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" class="text-[#7A6038] underline font-semibold">Casa De Bello Pvt Ltd</a> and leads operations at Whispering Pines Resort in Malla Ramgarh (formerly Clarks Exotica). Having hosted thousands of guests exploring Nainital, Kainchi Dham, and Mukteshwar for over a decade, Gaurav creates practical mountain itineraries that eliminate wasted travel time and vehicle stress. Read our complete heritage story on the <a href="/about-whispering-pines-resort-ramgarh/" class="text-[#7A6038] underline font-semibold">About Us page</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Share Bar Bottom */}
+        <BlogShareBar
+          title={pageTitle}
+          url={canonicalUrl}
+          description={pageDescription}
+          label="Found this 3-day itinerary helpful? Share it with family and fellow travellers"
+          className="mt-8 mb-4"
+        />
+      </header>
+    </div>
+  </article>
+</Layout>
