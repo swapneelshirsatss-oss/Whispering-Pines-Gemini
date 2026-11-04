@@ -23,6 +23,20 @@ export type BlogPostData = {
 
 export const BLOG_POSTS: BlogPostData[] = [
   {
+    id: 14,
+    slug: "hotel-near-kainchi-dham",
+    customUrl: "/blog/hotel-near-kainchi-dham/",
+    title: "Hotel Near Kainchi Dham: Parking, Shuttle & Family Darshan Plan (2026)",
+    seoTitle: "Hotel Near Kainchi Dham | Family Stay, Parking & Darshan Plan",
+    seoDescription: "Looking for a hotel near Kainchi Dham? Stay 45 mins away in Ramgarh with 180° Himalayan views, parking & satvik meals. Kainchi shuttle & 2026 darshan guide.",
+    excerpt: "Kainchi Dham parking, shuttle routes, and 2026 darshan rules for families visiting Neem Karoli Baba Ashram. Compare staying bases, avoid weekend traffic jams, and discover Whispering Pines Resort in Malla Ramgarh (22 km) with flat 25% direct savings.",
+    date: "November 4, 2026",
+    updatedDate: "November 4, 2026",
+    readTime: "11 min read",
+    imageUrl: "/images/blog-resort-near-kainchi-dham-image/resorts-near-kainchi-dham-ashram-neem-karoli-baba-Whispering-Pines-2026.avif",
+    imageAlt: "Whispering Pines 4-Star Resort Hotel near Kainchi Dham Ashram in Malla Ramgarh with 180° Himalayan snow peak views"
+  },
+  {
     id: 13,
     slug: "destination-wedding-uttarakhand-cost",
     title: "Destination Wedding in Uttarakhand Cost: What 50 to 100 Guests Really Spend in 2026-27",

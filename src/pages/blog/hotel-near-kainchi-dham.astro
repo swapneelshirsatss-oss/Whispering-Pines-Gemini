@@ -1,0 +1,745 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { RESORT_CONTACT, generateWhatsAppLink } from '../../data';
+import BlogShareBar from '../../components/BlogShareBar.astro';
+import DirectVsOtaTable from '../../components/DirectVsOtaTable.astro';
+
+const pageTitle = "Hotel Near Kainchi Dham: Parking, Shuttle & Family Darshan Plan (2026)";
+const pageDescription = "Looking for a hotel near Kainchi Dham? Stay 45 mins away in Ramgarh with 180° Himalayan views, parking & satvik meals. Kainchi shuttle & 2026 darshan guide.";
+const canonicalUrl = "https://whisperingpinesresort.in/blog/hotel-near-kainchi-dham/";
+const ogImageUrl = "https://whisperingpinesresort.in/images/blog-resort-near-kainchi-dham-image/resorts-near-kainchi-dham-ashram-neem-karoli-baba-Whispering-Pines-2026.avif";
+const ogAltText = "Whispering Pines 4-Star Resort Hotel near Kainchi Dham Ashram in Malla Ramgarh with 180° Himalayan snow peak views";
+
+const breadcrumbs = [
+  { name: "Home", item: "https://whisperingpinesresort.in/" },
+  { name: "Blog", item: "https://whisperingpinesresort.in/blog/" },
+  { name: "Hotel Near Kainchi Dham: Parking, Shuttle & Family Darshan", item: canonicalUrl }
+];
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
+  "headline": pageTitle,
+  "description": pageDescription,
+  "image": { "@type": "ImageObject", "url": ogImageUrl, "width": 1200, "height": 675 },
+  "datePublished": "2026-11-04T10:00:00+05:30",
+  "dateModified": "2026-11-04T10:00:00+05:30",
+  "author": {
+    "@type": "Person",
+    "name": "Gaurav Pandey",
+    "jobTitle": "Director, Casa De Bello Pvt Ltd",
+    "url": "https://whisperingpinesresort.in/about-whispering-pines-resort-ramgarh/",
+    "sameAs": ["https://casadebello.com/"]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+    "url": "https://whisperingpinesresort.in",
+    "logo": { "@type": "ImageObject", "url": "https://whisperingpinesresort.in/logo.svg" }
+  },
+  "keywords": "Hotel near kainchi dham, hotels near kainchi dham, resort hotel near kainchi dham, kainchi dham parking, kainchi dham shuttle 2026, neem karoli baba ashram stay, kainchi dham family darshan, kainchi dham registration 2026, Whispering Pines Resort Ramgarh"
+};
+
+const resortSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Resort", "Hotel", "LodgingBusiness"],
+  "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+  "description": "Boutique 4-star mountain resort hotel with 25 rooms, standalone 3-BHK private alpine villa, Satvik pure vegetarian dining on request, and 180° Himalayan views at 1,780m in Malla Ramgarh, 22 km from Kainchi Dham Ashram.",
+  "url": "https://whisperingpinesresort.in",
+  "telephone": "+91-7505029696",
+  "email": "booking@whisperingpinesresort.in",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+    "addressLocality": "Mukteshwar",
+    "addressRegion": "Uttarakhand",
+    "postalCode": "263137",
+    "addressCountry": "IN"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": "29.4264111", "longitude": "79.5505355" },
+  "hasMap": "https://maps.google.com/?cid=8386667112972057918",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "409", "bestRating": "5", "worstRating": "1" },
+  "priceRange": "₹3,000 – ₹15,999",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "180° Himalayan Views — Nanda Devi & Trishul from All Rooms", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Dedicated Satvik & Pure Veg Dining Options on Request", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Secure Gated Parking for 25+ Vehicles", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "150 Mbps Fiber Wi-Fi", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Senior-Friendly Ground Floor Step-Free Suites", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "3-Bedroom Standalone Private Alpine Villa (Sleeps Up to 10)", "value": true }
+  ]
+};
+
+const kainchiFaqs = [
+  {
+    question: "Is registration required for Kainchi Dham darshan in 2026?",
+    answer: "No, not as of November 2026. Darshan at Kainchi Dham is completely free and requires no online token or pre-booking. While authorities discussed a Char Dham-style registration model after heavy holiday rushes, no mandate has been enforced. Simply arrive during temple hours."
+  },
+  {
+    question: "Can I drive my own private car directly to Kainchi Dham on weekends?",
+    answer: "Usually not to the ashram gate on Saturdays, Sundays, and major festival holidays. Police route private vehicles to intercept lots at Bhowali Sanatorium (~9 km away) or Bhimtal Vikas Bhawan, from where government-regulated shuttle e-buses and cabs transfer devotees to the shrine."
+  },
+  {
+    question: "What are the Kainchi Dham shuttle timings and fares?",
+    answer: "Shuttles operate continuously from 7:00 AM to 8:00 PM on weekends and festival surges (and 8:00 AM to 2:00 PM on regular weekdays). The nominal one-way fare is approximately ₹20 to ₹30 per passenger between Bhowali and the Kainchi Dham drop-off point."
+  },
+  {
+    question: "What is the best time for Kainchi Dham darshan with elderly parents?",
+    answer: "A weekday morning between 7:00 AM and 8:30 AM is ideal. Roads from Bhowali are clear, shuttle diversions are not in force, queues are under 15 minutes, and parents can receive peaceful darshan before the noon rush builds up."
+  },
+  {
+    question: "How far is Whispering Pines Resort from Kainchi Dham Ashram?",
+    answer: "Whispering Pines Resort in Malla Ramgarh is located approximately 22 km (~45 to 50 minutes drive) from Kainchi Dham via Bhowali. It offers peaceful mountain ridge lodging with 180° Himalayan views, far removed from congested highway bottlenecks."
+  },
+  {
+    question: "Do you serve satvik or pure vegetarian food for pilgrims?",
+    answer: "Yes. Our culinary team prepares fresh, pure vegetarian and authentic Satvik food (strictly without onion and garlic) upon advance request for Kainchi Dham devotees, cooked with clean hill water and organic local ingredients."
+  },
+  {
+    question: "What are the room rates and direct booking benefits at Whispering Pines?",
+    answer: "Direct rates start from ₹3,999/night for the Executive Cedar Suite, ₹4,999/night for the ground-floor Family Twin Room, and ₹15,999/night for the 3-BHK Private Villa. Guests who book directly via WhatsApp or phone save a flat 25% compared to OTA portals."
+  }
+];
+
+const waDarshanLink = generateWhatsAppLink(
+  "Hi Gaurav! I am planning a family pilgrimage to Kainchi Dham and would like to check room availability and claim the Flat 25% Direct Booking Discount at Whispering Pines Resort."
+);
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={canonicalUrl}
+  image={ogImageUrl}
+  breadcrumbs={breadcrumbs}
+  faqs={kainchiFaqs}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href={ogImageUrl} fetchpriority="high" type="image/avif" />
+    <meta property="article:published_time" content="2026-11-04T10:00:00+05:30" />
+    <meta property="article:modified_time" content="2026-11-04T10:00:00+05:30" />
+    <meta property="article:author" content="Gaurav Pandey — Director, Casa De Bello Pvt Ltd" />
+    <meta property="article:section" content="Kainchi Dham Travel Guide & Family Stays" />
+    <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(resortSchema)} />
+  </Fragment>
+
+  <article class="bg-[#FAF9F6] text-[#0E2C21] font-sans antialiased selection:bg-[#B0966D] selection:text-[#0E2C21]">
+    {/* Top Breadcrumb & Back Navigation */}
+    <nav class="pt-28 pb-4 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto" aria-label="Breadcrumb">
+      <div class="flex items-center gap-2 text-xs font-semibold text-gray-500">
+        <a href="/" class="hover:text-[#0E2C21] transition-colors">Home</a>
+        <span>/</span>
+        <a href="/blog/" class="hover:text-[#0E2C21] transition-colors">Blog</a>
+        <span>/</span>
+        <span class="text-[#7A6038] truncate">Hotel Near Kainchi Dham (2026 Guide)</span>
+      </div>
+    </nav>
+
+    {/* Main Container */}
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 space-y-12">
+      {/* Header Block */}
+      <header class="bg-white p-6 sm:p-10 md:p-12 rounded-sm shadow-sm border border-[#EAE8E3] space-y-6">
+        <div class="space-y-4">
+          <div class="flex flex-wrap items-center gap-3 text-xs font-medium text-gray-500">
+            <span class="bg-[#0E2C21] text-[#B0966D] text-[11px] font-semibold uppercase px-3 py-1 rounded-full shadow-xs">
+              Pilgrim &amp; Family Guide
+            </span>
+            <span>•</span>
+            <span class="inline-flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-[#B0966D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              November 4, 2026
+            </span>
+            <span>•</span>
+            <span>Updated November 4, 2026</span>
+            <span>•</span>
+            <span class="inline-flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-[#B0966D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              11 min read
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-[#0E2C21] leading-tight">
+            Hotel Near Kainchi Dham: Parking, Shuttle &amp; Family Darshan Plan (2026)
+          </h1>
+
+          {/* Author Byline */}
+          <div class="pt-4 flex items-center gap-3 border-t border-gray-100">
+            <img
+              src="/images/Gaurav-pandey-casa-de-bello.webp"
+              alt="Gaurav Pandey — Director, Casa De Bello Pvt Ltd"
+              class="w-12 h-12 rounded-full object-cover border-2 border-[#B0966D] shrink-0 shadow-sm"
+              width="48"
+              height="48"
+              loading="eager"
+            />
+            <div>
+              <p class="text-sm font-bold text-[#0E2C21]">
+                By Gaurav Pandey, Director, Casa De Bello Pvt Ltd
+              </p>
+              <p class="text-xs text-gray-500 font-light">
+                Whispering Pines Resort, Malla Ramgarh • Hosting Kainchi Dham pilgrims &amp; families for over a decade
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Feature Hero Image */}
+        <div class="w-full h-64 sm:h-96 md:h-[460px] overflow-hidden rounded-sm border border-gray-100 shadow-sm bg-gray-100">
+          <img
+            src={ogImageUrl}
+            alt={ogAltText}
+            width="1200"
+            height="675"
+            class="w-full h-full object-cover"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+
+        {/* Verified Host E-E-A-T Attribution Bar */}
+        <div class="bg-[#FAF9F6] p-4 sm:p-5 rounded-sm border border-[#EAE8E3] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3.5">
+            <img
+              src="/images/Gaurav-pandey-casa-de-bello.webp"
+              alt="Gaurav Pandey"
+              class="w-11 h-11 rounded-full object-cover border-2 border-[#8A6F4A] shrink-0"
+              width="44"
+              height="44"
+              loading="lazy"
+            />
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#7A6038] block">Verified Local Host &amp; Operational Advisory</span>
+              <p class="text-xs sm:text-sm font-bold text-[#0E2C21]">Curated by Gaurav Pandey — Resident Director at Whispering Pines Resort</p>
+              <p class="text-xs text-gray-600 font-light">Malla Ramgarh (22 km / ~45 min from Kainchi Dham) • Direct WhatsApp: +91 75050 29696</p>
+            </div>
+          </div>
+          <a
+            href={waDarshanLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="shrink-0 inline-flex items-center gap-1.5 px-4 py-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs rounded-sm shadow-sm transition-all"
+          >
+            <span>💬 Ask Front Desk on WhatsApp</span>
+          </a>
+        </div>
+
+        {/* Share Bar Top */}
+        <BlogShareBar
+          title={pageTitle}
+          url={canonicalUrl}
+          description={pageDescription}
+          label="Planning a family darshan to Kainchi Dham? Share this practical guide with your group"
+          className="my-4"
+        />
+
+        {/* AEO Quick Answer Box */}
+        <div class="aeo-direct-answer bg-[#FAF9F6] p-6 sm:p-7 rounded-sm border-l-4 border-[#8A6F4A] shadow-xs space-y-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-[#7A6038] block">
+            Kainchi Dham Stay &amp; Darshan in 2026: Quick Executive Answer
+          </span>
+          <p class="text-base text-gray-800 leading-relaxed font-light">
+            <strong>If you are searching for a peaceful hotel near Kainchi Dham with verified parking and senior-friendly comfort, staying in Malla Ramgarh (22 km / 45–50 min drive) is the most reliable strategy.</strong> On weekends, private vehicles are stopped at Bhowali or Bhimtal intercept lots where shuttle buses take devotees to the temple. By basing your family at Whispering Pines Resort, you escape the highway gridlock, wake up to 180° Himalayan snow peaks, enjoy Satvik dining, and reach the ashram in under 45 minutes on weekday mornings.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-4 text-xs text-[#0E2C21] font-medium">
+            <span>✓ No Registration Required (Nov 2026)</span>
+            <span>✓ Flat 25% Direct Booking Discount</span>
+            <span>✓ Free On-Site Parking for 25+ Cars</span>
+            <span>✓ Ground-Floor Step-Free Rooms</span>
+          </div>
+        </div>
+
+        {/* Article Body Content */}
+        <div class="prose prose-lg max-w-none text-[#2C3531] font-light leading-relaxed prose-headings:font-display prose-headings:text-[#0E2C21] prose-a:text-[#0E2C21] prose-a:font-semibold prose-a:underline space-y-8">
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Over the Gandhi Jayanti weekend in October 2026, more than 50,000 devotees reached Kainchi Dham. The Nainital district administration has since urged visitors to arrange their accommodation beforehand instead of searching for rooms on arrival along the packed highway corridor. If you are bringing parents, grandparents or small children to Neem Karoli Baba's ashram, the scenic mountain drive is not the challenge — navigating the weekend parking rules, shuttle buses, and morning temple queues is.
+          </p>
+
+          <p>
+            This guide breaks down how Kainchi Dham parking and shuttles operate right now, current registration requirements, and the step-by-step darshan schedule we recommend to families staying at <a href="/about-whispering-pines-resort-ramgarh/">Whispering Pines Resort</a> — our 25-room boutique 4-star property and standalone 10-guest Alpine Villa located 22 km away on the quiet fruit orchards of the Malla Ramgarh ridge.
+          </p>
+
+          {/* Section 1: Parking & Shuttle Rules */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Kainchi Dham Parking and Shuttle Rules in 2026
+          </h2>
+
+          <p>
+            <strong>On Saturdays, Sundays, and major religious festivals, police stop private cars at designated outlying parking lots — primarily Bhowali Sanatorium and Bhimtal Vikas Bhawan — and devotees board official shuttle vehicles to reach the shrine. Taxis and two-wheelers are also strictly barred from the inner temple approach on weekends. On weekdays, private cars can usually drive to the ashram, though parking space near the main bridge remains scarce after 8:30 AM.</strong>
+          </p>
+
+          <p>
+            Traffic protocols in the Nainital hills are dynamically reviewed each week. Since October 2026, administrative officers at the SDM, CO (Circle Officer), and ARTO levels convene prior to every weekend to finalize parking allocations, shuttle fleets, and one-way diversions based on projected crowd counts. Here is how the system currently functions:
+          </p>
+
+          {/* Table 1: Parking & Shuttle Matrix */}
+          <div class="overflow-x-auto my-6 border border-[#EAE8E3] rounded-sm bg-white shadow-xs">
+            <table class="w-full text-left text-sm text-[#2C3531]">
+              <thead class="bg-[#0E2C21] text-[#FAF9F6] text-xs uppercase font-semibold">
+                <tr>
+                  <th class="p-3.5">Day Type</th>
+                  <th class="p-3.5">Can Private Cars Reach Ashram?</th>
+                  <th class="p-3.5">Where You Must Park</th>
+                  <th class="p-3.5">Shuttle Service &amp; Fare</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Regular Weekdays (Mon – Fri)</td>
+                  <td class="p-3.5">Yes, permitted subject to available roadside bay capacity.</td>
+                  <td class="p-3.5">Designated roadside parking bays near Kainchi; overflow directed to Bhowali.</td>
+                  <td class="p-3.5">Runs 8:00 AM to 2:00 PM when needed (~₹20–₹30 per head).</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-amber-50/30">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Saturdays, Sundays &amp; Long Weekends</td>
+                  <td class="p-3.5 text-red-700 font-semibold">No private cars or commercial cabs permitted past checkpoints.</td>
+                  <td class="p-3.5">Bhowali Sanatorium ground (from Ramgarh / Nainital) or Bhimtal Vikas Bhawan lot.</td>
+                  <td class="p-3.5 font-medium">Continuous shuttle fleets operate 7:00 AM to 8:00 PM (~₹20–₹30 one-way).</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Kainchi Dham Foundation Day (15 June)</td>
+                  <td class="p-3.5 text-red-700 font-semibold">Strict total vehicle freeze (typically 13 to 16 June).</td>
+                  <td class="p-3.5">Mass peripheral parking lots at Haldwani, Kathgodam, Bhimtal &amp; Bhowali.</td>
+                  <td class="p-3.5">Mass shuttle operations running continuously round the clock.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="bg-[#FAF9F6] p-5 rounded-sm border-l-4 border-[#B0966D] my-4">
+            <h3 class="text-sm font-bold text-[#0E2C21] mb-1">What this means when staying in Malla Ramgarh:</h3>
+            <p class="text-xs sm:text-sm text-gray-700 font-light leading-relaxed">
+              When travelling from Whispering Pines Resort in Malla Ramgarh, you take the scenic descent to Bhowali junction. On a weekday at 7:00 AM, the Bhowali-Kainchi road is breezy and completely clear, allowing you to reach the shrine in roughly 45 minutes. On a Saturday or Sunday, you simply park your car at the designated Bhowali Sanatorium grounds and take the short 10-minute shuttle ride down. Our front desk verifies the evening before exactly which lot is operational for the following morning.
+            </p>
+          </div>
+
+          {/* Section 2: Registration Rules */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Do You Need Online Registration for Kainchi Dham Darshan?
+          </h2>
+
+          <p>
+            <strong>No online registration, token system, or pre-booking pass is required for Kainchi Dham darshan as of November 2026.</strong> Entry to Neem Karoli Baba Ashram remains 100% free for all devotees.
+          </p>
+
+          <p>
+            Following unprecedented holiday crowds exceeding 50,000 visitors over single weekends, district officials proposed evaluating a tourist registration framework modelled on the Uttarakhand Char Dham Yatra. However, no official notification or portal cap has been put into effect. If an official registration system is ever introduced by the administration, our front desk team will update this guide immediately.
+          </p>
+
+          {/* Section 3: The Family Darshan Plan */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            The Family Darshan Plan We Recommend for Elders &amp; Kids
+          </h2>
+
+          <p>
+            The itinerary that exhausts senior family members is the one frequently promoted online: driving through the night from Delhi or Lucknow, reaching Bhowali around 10:00 AM on a crowded Saturday, and standing directly in a 2-hour queue under the sun.
+          </p>
+
+          <p>
+            The serene, respectful way to experience Kainchi Dham takes just one extra night:
+          </p>
+
+          <div class="space-y-4 my-6">
+            <div class="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-xs">
+              <h3 class="text-base font-bold text-[#0E2C21]">Day 1 — Relaxed Afternoon Arrival &amp; Peak Views</h3>
+              <p class="text-sm text-gray-600 font-light mt-1">
+                Arrive at Whispering Pines Resort by 2:00 PM. Let elderly parents unpack and rest in peaceful, heated mountain rooms. Sip fresh orchard tea on the 2,200 sq ft lawn facing the snow peaks of Nanda Devi and Trishul. Enjoy an early, comforting Satvik dinner and retire early.
+              </p>
+            </div>
+
+            <div class="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-xs">
+              <h3 class="text-base font-bold text-[#0E2C21]">Day 2 (Preferred Weekday) — Early Sunrise Darshan</h3>
+              <p class="text-sm text-gray-600 font-light mt-1">
+                Enjoy hot morning tea delivered to your suite at 6:15 AM. Depart the resort at 6:45 AM. Reach the ashram by 7:30 AM before outside tourist traffic arrives. Experience heartfelt darshan in the morning quiet, receive Baba Neem Karoli's blessed prasad, and return to the resort by 10:00 AM for a hot breakfast buffet.
+              </p>
+            </div>
+
+            <div class="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-xs">
+              <h3 class="text-base font-bold text-[#0E2C21]">Day 2 Afternoon — Pure Relaxation</h3>
+              <p class="text-sm text-gray-600 font-light mt-1">
+                No rushed driving. Rest in the crisp mountain air, stroll through the organic apple and peach orchards of Ramgarh, or gather for a warm evening bonfire with live barbecue counters under starlit skies.
+              </p>
+            </div>
+          </div>
+
+          {/* Darshan Morning Schedule Table */}
+          <h3 class="text-lg font-bold text-[#0E2C21] pt-2">Recommended Morning Darshan Timeline</h3>
+          <div class="overflow-x-auto my-4 border border-[#EAE8E3] rounded-sm bg-white shadow-xs">
+            <table class="w-full text-left text-sm text-[#2C3531]">
+              <thead class="bg-[#7A6038] text-white text-xs uppercase font-semibold">
+                <tr>
+                  <th class="p-3">Time</th>
+                  <th class="p-3">Action</th>
+                  <th class="p-3">Devotee Advantage</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
+                <tr>
+                  <td class="p-3 font-bold text-[#0E2C21]">6:15 AM</td>
+                  <td class="p-3">Freshly brewed herbal or ginger tea served to your suite.</td>
+                  <td class="p-3">Warms elders before the crisp morning drive.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-[#0E2C21]">6:45 AM</td>
+                  <td class="p-3">Depart Whispering Pines Resort via Ramgarh-Bhowali Rd.</td>
+                  <td class="p-3">Roads are completely empty; pristine mountain views.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-[#0E2C21]">7:30 AM</td>
+                  <td class="p-3">Arrive at Kainchi Dham Ashram gate.</td>
+                  <td class="p-3">Ashram opens (~6:30–7:00 AM in winter); minimal line.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-[#0E2C21]">7:30 – 9:00 AM</td>
+                  <td class="p-3">Peaceful darshan, Hanuman Chalisa, prasad collection.</td>
+                  <td class="p-3">Uncrowded sanctum; peaceful atmosphere for elderly.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-[#0E2C21]">10:00 AM</td>
+                  <td class="p-3">Return to Whispering Pines Resort for hot breakfast.</td>
+                  <td class="p-3">Fresh parathas, satvik poha, juice, and fruit on the sunny lawn.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Real Host Experience Story */}
+          <div class="bg-amber-50/50 p-6 rounded-sm border border-amber-200/60 my-6 space-y-2">
+            <div class="flex items-center gap-2 text-xs font-bold text-[#7A6038] uppercase tracking-wider">
+              <span>★ Guest Experience Bank</span>
+            </div>
+            <p class="text-sm text-gray-800 font-light italic leading-relaxed">
+              "When the Sharma family from Noida arrived in October with their 74-year-old grandmother, they were nervous about the reported crowds. We briefed them to take Wednesday morning instead of Saturday. Leaving our gates at 6:40 AM, they parked smoothly, crossed the bridge with our walking tips, had a serene darshan of Maharaj-ji by 7:35 AM with zero waiting, and were back enjoying hot parathas on our sunlit lawn by 10:15 AM without grandmother feeling any strain."
+            </p>
+            <p class="text-xs text-gray-500 font-medium pt-1">
+              — Recorded at Whispering Pines Resort Front Desk, October 2026
+            </p>
+          </div>
+
+          {/* Section 4: Practical Tips for Seniors & Children */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Important Tips for Grandparents and Small Children
+          </h2>
+
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">1. Woollen Socks for Cold Marble:</span>
+              <span>All footwear must be left at the ashram entrance shoe counters. From November through March, the temple marble and stone courtyards are icy cold in the early morning. Carry thick woollen socks for elderly parents so their feet stay warm during darshan.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">2. Walking Distance &amp; Gentle Steps:</span>
+              <span>From the riverbank shuttle drop point, expect approximately 250 to 300 metres of level walking to the main gate. There is a gentle paved ramp and 8 to 10 wide steps leading into the temple courtyard. Take your time and support elders.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">3. Mobility &amp; Wheelchair Assistance:</span>
+              <span>If an elderly family member has limited mobility, inform our reservations team in advance. Whispering Pines maintains ground-floor, step-free access suites and has on-site wheelchair support for check-in and lawn access.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">4. Warm Layers for Ramgarh Mornings:</span>
+              <span>Whispering Pines sits at an elevation of 1,780 metres. Early mornings and evenings are noticeably cooler than Kathgodam or Haldwani. Dress children and seniors in windproof jackets before departing at 6:45 AM.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">5. Keep Small Cash Currency:</span>
+              <span>Keep small ₹10, ₹20, and ₹50 banknotes handy for shuttle bus fares, prasad tokens, and footwear tokens, as mobile internet payments can be slow near the river gorge.</span>
+            </li>
+          </ul>
+
+          {/* Section 5: Where to Stay Comparison */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Where to Stay: Comparing Hotels &amp; Areas Near Kainchi Dham
+          </h2>
+
+          <p>
+            When evaluating where to stay for a Kainchi Dham pilgrimage, the choice generally comes down to four lodging bases across Nainital district. Each has clear trade-offs:
+          </p>
+
+          {/* Table 2: Area Comparison */}
+          <div class="overflow-x-auto my-6 border border-[#EAE8E3] rounded-sm bg-white shadow-xs">
+            <table class="w-full text-left text-sm text-[#2C3531]">
+              <thead class="bg-[#0E2C21] text-[#FAF9F6] text-xs uppercase font-semibold">
+                <tr>
+                  <th class="p-3.5">Base Area</th>
+                  <th class="p-3.5">Distance &amp; Drive Time</th>
+                  <th class="p-3.5">Darshan Convenience</th>
+                  <th class="p-3.5">Evening Atmosphere</th>
+                  <th class="p-3.5">Best Suited For</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Ashram Highway Stays</td>
+                  <td class="p-3.5">0 – 3 km (~5–10 min)</td>
+                  <td class="p-3.5">Walking distance, but right inside the heavy weekend gridlock.</td>
+                  <td class="p-3.5">Noisy highway corridor, continuous vehicle fumes.</td>
+                  <td class="p-3.5">Solo travellers &amp; short 1-night halt pilgrims.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Bhowali Town</td>
+                  <td class="p-3.5">~9 km (~20–25 min)</td>
+                  <td class="p-3.5">Closest to the weekend shuttle hub at Bhowali Sanatorium.</td>
+                  <td class="p-3.5">Bustling commercial junction town and busy market streets.</td>
+                  <td class="p-3.5">Budget travellers seeking quick highway transit.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Nainital Town</td>
+                  <td class="p-3.5">~18 km (~45–60 min)</td>
+                  <td class="p-3.5">Substantial weekend traffic delays getting out of the valley.</td>
+                  <td class="p-3.5">Crowded Mall Road and bustling lake activities.</td>
+                  <td class="p-3.5">Tourists mixing temple visit with city sightseeing.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-emerald-50/40">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Malla Ramgarh (Whispering Pines)</td>
+                  <td class="p-3.5 font-bold text-[#7A6038]">22 km (~45 min)</td>
+                  <td class="p-3.5">Clear mountain road descent; front desk traffic guidance.</td>
+                  <td class="p-3.5">Serene fruit orchards, pine forests, 180° Himalayan snow peak panorama.</td>
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Families, elders, &amp; groups seeking restorative, peaceful stays.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Section 6: Rooms at Whispering Pines */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            What a Stay at Whispering Pines Looks Like for Pilgrim Families
+          </h2>
+
+          <p>
+            Unlike crowded highway hotels, Whispering Pines Resort provides a complete mountain sanctuary. Direct rates as published on our official website for November 2026:
+          </p>
+
+          {/* Table 3: Room Inventory & Rates */}
+          <div class="overflow-x-auto my-6 border border-[#EAE8E3] rounded-sm bg-white shadow-xs">
+            <table class="w-full text-left text-sm text-[#2C3531]">
+              <thead class="bg-[#0E2C21] text-[#FAF9F6] text-xs uppercase font-semibold">
+                <tr>
+                  <th class="p-3.5">Room Category</th>
+                  <th class="p-3.5">Capacity</th>
+                  <th class="p-3.5">Direct Rate From</th>
+                  <th class="p-3.5">Why Families &amp; Devotees Choose It</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Executive Cedar Suite</td>
+                  <td class="p-3.5">2 Adults</td>
+                  <td class="p-3.5 font-semibold text-[#7A6038]">₹3,999 / night</td>
+                  <td class="p-3.5">Cozy cedar interiors with direct private balcony viewing Nanda Devi peaks.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-amber-50/20">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Family Twin Room</td>
+                  <td class="p-3.5">2 to 4 Guests</td>
+                  <td class="p-3.5 font-semibold text-[#7A6038]">₹4,999 / night</td>
+                  <td class="p-3.5">Ground-floor step-free access straight to orchards; ideal for parents and kids.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Deluxe Skylight Suite</td>
+                  <td class="p-3.5">2 to 3 Adults</td>
+                  <td class="p-3.5 font-semibold text-[#7A6038]">₹6,499 / night</td>
+                  <td class="p-3.5">Glass skylight for Himalayan stargazing, spacious luxury bathroom.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-emerald-50/30">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Standalone 3-BHK Private Villa</td>
+                  <td class="p-3.5 font-semibold text-[#0E2C21]">Up to 10 Guests</td>
+                  <td class="p-3.5 font-bold text-[#7A6038]">₹15,999 / night</td>
+                  <td class="p-3.5">3 private bedrooms + loft, stone fireplace, private lawn, kitchenette for custom tea.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 text-sm">
+            <div class="bg-white p-4 rounded-sm border border-[#EAE8E3]">
+              <span class="font-bold text-[#0E2C21] block mb-1">🍲 Fresh Satvik &amp; Pure Veg Dining:</span>
+              <p class="text-gray-600 font-light">
+                Our kitchen prepares dedicated pure vegetarian and Satvik meals (without onion or garlic) with clean separate cooking utensils upon advance notice.
+              </p>
+            </div>
+            <div class="bg-white p-4 rounded-sm border border-[#EAE8E3]">
+              <span class="font-bold text-[#0E2C21] block mb-1">🅿️ Free Gated Parking for 25+ Cars:</span>
+              <p class="text-gray-600 font-light">
+                Secure on-site private parking inside the resort gates. No leaving vehicles on narrow mountain curves overnight.
+              </p>
+            </div>
+            <div class="bg-white p-4 rounded-sm border border-[#EAE8E3]">
+              <span class="font-bold text-[#0E2C21] block mb-1">📶 150 Mbps Enterprise Fiber Wi-Fi:</span>
+              <p class="text-gray-600 font-light">
+                High-speed fiber connectivity throughout every room and garden desk for family members who need to manage urgent office tasks.
+              </p>
+            </div>
+            <div class="bg-white p-4 rounded-sm border border-[#EAE8E3]">
+              <span class="font-bold text-[#0E2C21] block mb-1">🐾 100% Pet-Friendly Property:</span>
+              <p class="text-gray-600 font-light">
+                Your four-legged family members are warmly welcomed at zero extra pet fee across our enclosed garden grounds.
+              </p>
+            </div>
+          </div>
+
+          {/* Direct vs OTA Pricing Callout & DirectVsOtaTable */}
+          <div class="my-8">
+            <DirectVsOtaTable />
+          </div>
+
+          {/* Section 7: Honest Trade-Offs */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Honest Trade-Offs: Is Whispering Pines Right for Your Visit?
+          </h2>
+
+          <p>
+            Every property has real trade-offs, and we believe in complete transparency before you confirm your stay:
+          </p>
+
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">• 45-Minute Drive to the Ashram:</span>
+              <span>We are situated in Malla Ramgarh, 22 km away. If your priority is walking into the temple three times a day, an immediate roadside dharamsala in Kainchi village is more practical. Our guests choose us for quiet restorative sleep and clean Himalayan air away from traffic fumes.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">• Multi-Cuisine Kitchen with Dedicated Satvik Setup:</span>
+              <span>Our main restaurant serves North Indian, Kumaoni, and Continental dishes. For pilgrim families requesting Satvik or Jain food, dishes are cooked to order using dedicated cooking vessels.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">• Own Vehicle or Booked Taxi Recommended:</span>
+              <span>To reach Malla Ramgarh and travel to the darshan shuttle points comfortably, having your own car or a pre-arranged local taxi is strongly advised.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">• Crisp Winter Mornings at 1,780m:</span>
+              <span>Malla Ramgarh is cooler than Bhowali or Kathgodam. While all rooms have heating amenities, please carry adequate woollens for early morning darshan departures between November and February.</span>
+            </li>
+          </ul>
+
+          {/* Section 8: Best Days & Months */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Best Days and Months for a Peaceful Darshan
+          </h2>
+
+          {/* Table 4: Season Matrix */}
+          <div class="overflow-x-auto my-6 border border-[#EAE8E3] rounded-sm bg-white shadow-xs">
+            <table class="w-full text-left text-sm text-[#2C3531]">
+              <thead class="bg-[#0E2C21] text-[#FAF9F6] text-xs uppercase font-semibold">
+                <tr>
+                  <th class="p-3.5">Travel Period</th>
+                  <th class="p-3.5">Crowd Levels</th>
+                  <th class="p-3.5">Family &amp; Elder Practical Guidance</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
+                <tr class="hover:bg-[#FAF9F6]/60 bg-emerald-50/20">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Tuesday to Thursday (Weekdays)</td>
+                  <td class="p-3.5 font-semibold text-emerald-800">Lowest crowd levels</td>
+                  <td class="p-3.5">The absolute best days for elderly devotees. Vehicles reach the gate; zero shuttle delays.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Weekends &amp; Gazetted Holidays</td>
+                  <td class="p-3.5 text-red-600 font-semibold">Extremely high (30,000+)</td>
+                  <td class="p-3.5">Mandatory Bhowali shuttle buses; leave the resort by 6:15 AM to beat lines.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-amber-50/30">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">13 to 16 June (Bhandara Peak)</td>
+                  <td class="p-3.5 text-red-700 font-bold">Annual Peak (1.5–2 Lakh)</td>
+                  <td class="p-3.5">Total vehicle bans; massive pedestrian crowds; book rooms 2–3 months ahead.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">November to February (Winter)</td>
+                  <td class="p-3.5 font-medium text-emerald-800">Very calm on weekdays</td>
+                  <td class="p-3.5">Crisp, crystal-clear Himalayan mountain views. Shorter ashram daylight hours (~7 AM to 6 PM).</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">March to June, Sept to October</td>
+                  <td class="p-3.5 font-medium">Pleasant &amp; popular</td>
+                  <td class="p-3.5">Ideal hill weather; fruit blossoms or harvest in Ramgarh; reserve rooms in advance.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Section 9: FAQs */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Frequently Asked Questions
+          </h2>
+
+          <div class="space-y-4 my-6">
+            {kainchiFaqs.map((faq, index) => (
+              <div class="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-xs space-y-2">
+                <h3 class="text-base font-bold text-[#0E2C21] flex items-start gap-2">
+                  <span class="text-[#7A6038]">Q{index + 1}:</span>
+                  <span>{faq.question}</span>
+                </h3>
+                <p class="text-sm text-gray-700 font-light leading-relaxed pl-6">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Direct CTA Box */}
+          <div class="bg-[#0E2C21] text-white p-8 sm:p-10 rounded-sm shadow-md my-8 space-y-4 text-center">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#B0966D] block">
+              Direct Resident Privileges • Flat 25% Off OTA Rates
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-bold font-display text-white">
+              Planning Your Family Kainchi Dham Pilgrimage?
+            </h3>
+            <p class="text-sm sm:text-base text-gray-200 font-light max-w-2xl mx-auto">
+              Send your family size and preferred dates directly to Gaurav Pandey on WhatsApp. We will suggest the ideal room combination, advise on that week's parking advisory, and confirm your direct 25% saving instantly.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={waDarshanLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-sm rounded-sm shadow-md transition-all duration-300"
+              >
+                <span>💬 WhatsApp Front Desk (+91-7505029696)</span>
+              </a>
+              <a
+                href="https://whisperingpinesresort.bookingjini.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#B0966D] hover:bg-[#C4A77D] text-[#0E2C21] font-bold text-sm rounded-sm transition-all duration-300 shadow-sm"
+              >
+                <span>Book Direct Online</span>
+              </a>
+            </div>
+            <p class="text-xs text-gray-300 font-light pt-2">
+              ⚡ Instant host confirmation • Free cancellations on flexible direct rates • Zero OTA commission markup
+            </p>
+          </div>
+
+          {/* Author Biography Section */}
+          <div class="bg-white p-6 sm:p-8 rounded-sm border border-[#EAE8E3] shadow-xs flex flex-col sm:flex-row items-start sm:items-center gap-5 my-8">
+            <img
+              src="/images/Gaurav-pandey-casa-de-bello.webp"
+              alt="Gaurav Pandey — Director, Casa De Bello Pvt Ltd"
+              class="w-16 h-16 rounded-full object-cover border-2 border-[#B0966D] shrink-0"
+              width="64"
+              height="64"
+              loading="lazy"
+            />
+            <div class="space-y-1.5">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#7A6038] block">About the Author &amp; On-Site Host</span>
+              <h4 class="text-lg font-bold text-[#0E2C21]">Gaurav Pandey</h4>
+              <p class="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+                Gaurav Pandey is the Director of <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" class="text-[#7A6038] underline font-semibold">Casa De Bello Pvt Ltd</a> and leads operations at Whispering Pines Resort in Malla Ramgarh (formerly Clarks Exotica). Having hosted thousands of devotees travelling to Kainchi Dham Ashram and Mukteshwar for over a decade, Gaurav provides live ground guidance on traffic plans, mountain weather, and family comfort. Read our full heritage story on the <a href="/about-whispering-pines-resort-ramgarh/" class="text-[#7A6038] underline font-semibold">About Us page</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Share Bar Bottom */}
+        <BlogShareBar
+          title={pageTitle}
+          url={canonicalUrl}
+          description={pageDescription}
+          label="Found this guide helpful? Share it with family and fellow devotees"
+          className="mt-8 mb-4"
+        />
+      </header>
+    </div>
+  </article>
+</Layout>
