@@ -23,6 +23,20 @@ export type BlogPostData = {
 
 export const BLOG_POSTS: BlogPostData[] = [
   {
+    id: 15,
+    slug: "nainital-in-december",
+    customUrl: "/blog/nainital-in-december/",
+    title: "Nainital in December: Delhi Weekend Plan, Snow Odds and a Quieter Base in Ramgarh (2026)",
+    seoTitle: "Nainital in December: Delhi Plan, Snow Odds & Mountain Stay",
+    seoDescription: "Planning a Delhi to Nainital trip in December 2026? Snow odds, fog driving tips, Christmas & New Year dates, and why staying in Ramgarh beats Mall Road crowds.",
+    excerpt: "December in Nainital: cold mountain air, clear Nanda Devi peak views, and busy holiday weekends. Compare Christmas and New Year crowds, navigate Delhi morning fog, and discover why staying 26 km away in Malla Ramgarh offers the quietest winter escape.",
+    date: "November 4, 2026",
+    updatedDate: "November 4, 2026",
+    readTime: "12 min read",
+    imageUrl: "/images/Whispering-pines-balcony-view-nanital.avif",
+    imageAlt: "Winter Himalayan snow peaks view from balcony of Whispering Pines Resort near Nainital in December"
+  },
+  {
     id: 14,
     slug: "hotel-near-kainchi-dham",
     customUrl: "/blog/hotel-near-kainchi-dham/",

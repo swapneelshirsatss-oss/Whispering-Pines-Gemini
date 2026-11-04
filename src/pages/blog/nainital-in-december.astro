@@ -1,0 +1,709 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { RESORT_CONTACT, generateWhatsAppLink } from '../../data';
+import BlogShareBar from '../../components/BlogShareBar.astro';
+import DirectVsOtaTable from '../../components/DirectVsOtaTable.astro';
+
+const pageTitle = "Nainital in December: Delhi Plan, Snow Odds & Mountain Stay (2026)";
+const pageDescription = "Planning a Delhi to Nainital trip in December 2026? Snow odds, fog driving tips, Christmas & New Year dates, and why staying in Ramgarh beats Mall Road crowds.";
+const canonicalUrl = "https://whisperingpinesresort.in/blog/nainital-in-december/";
+const ogImageUrl = "https://whisperingpinesresort.in/images/Whispering-pines-balcony-view-nanital.avif";
+const ogAltText = "Winter Himalayan snow peaks view from balcony of Whispering Pines Resort near Nainital in December";
+
+const breadcrumbs = [
+  { name: "Home", item: "https://whisperingpinesresort.in/" },
+  { name: "Blog", item: "https://whisperingpinesresort.in/blog/" },
+  { name: "Nainital in December 2026 Guide", item: canonicalUrl }
+];
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
+  "headline": pageTitle,
+  "description": pageDescription,
+  "image": { "@type": "ImageObject", "url": ogImageUrl, "width": 1200, "height": 675 },
+  "datePublished": "2026-11-04T10:00:00+05:30",
+  "dateModified": "2026-11-04T10:00:00+05:30",
+  "author": {
+    "@type": "Person",
+    "name": "Gaurav Pandey",
+    "jobTitle": "Director, Casa De Bello Pvt Ltd",
+    "url": "https://whisperingpinesresort.in/about-whispering-pines-resort-ramgarh/",
+    "sameAs": ["https://casadebello.com/"]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+    "url": "https://whisperingpinesresort.in",
+    "logo": { "@type": "ImageObject", "url": "https://whisperingpinesresort.in/logo.svg" }
+  },
+  "keywords": "Nainital in December, Nainital in December 2026, Delhi to Nainital in December, Nainital snowfall December, Nainital winter trip, places to visit in Nainital in December, Ramgarh stay near Nainital, Whispering Pines Resort Ramgarh"
+};
+
+const resortSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Resort", "Hotel", "LodgingBusiness"],
+  "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+  "description": "Boutique 4-star mountain resort with 25 rooms, standalone 3-BHK private alpine villa, heated suites, wood-fired bonfires, and 180° Himalayan views at 1,780m in Malla Ramgarh, 26 km from Nainital Mall Road.",
+  "url": "https://whisperingpinesresort.in",
+  "telephone": "+91-7505029696",
+  "email": "booking@whisperingpinesresort.in",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+    "addressLocality": "Mukteshwar",
+    "addressRegion": "Uttarakhand",
+    "postalCode": "263137",
+    "addressCountry": "IN"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": "29.4264111", "longitude": "79.5505355" },
+  "hasMap": "https://maps.google.com/?cid=8386667112972057918",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "409", "bestRating": "5", "worstRating": "1" },
+  "priceRange": "₹3,000 – ₹15,999",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "180° Himalayan Views — Nanda Devi & Trishul from All Rooms", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Powerful Room Heating & 24/7 Hot Water", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Nightly Wood-Fired Bonfire & Barbecue Lawn", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Dual Silent DG Generator Power Backup", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Secure Gated Parking for 25+ Vehicles", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "150 Mbps High-Speed Fiber Wi-Fi", "value": true }
+  ]
+};
+
+const decemberFaqs = [
+  {
+    question: "Does it snow in Nainital in December?",
+    answer: "Snowfall in Nainital town is possible but uncommon before January. Higher elevation vantage points above 2,200 metres, such as Snow View Point and Kilbury forest, occasionally experience light early dustings. We advise guests to plan their trip for the crystal-clear Himalayan mountain panoramas and treat snow as a delightful bonus."
+  },
+  {
+    question: "Is December a good time to visit Nainital?",
+    answer: "Yes, especially on regular weekends and weekdays. The winter air is the clearest of the entire year, offering unobstructed 180° views of snow-clad peaks like Nanda Devi and Trishul. However, the Christmas (Dec 25–27) and New Year (Dec 31–Jan 3) holiday periods bring massive crowds and stringent parking restrictions in town."
+  },
+  {
+    question: "How long is the drive from Delhi to Nainital and Ramgarh in December?",
+    answer: "The drive covers roughly 320 km to Nainital town and 340 km to Whispering Pines Resort in Malla Ramgarh, typically taking 6.5 to 7.5 hours via NH 9. Because early-morning plain fog can reduce visibility between Hapur and Rampur, leaving Delhi around 6:30–7:00 AM ensures you drive the plains after fog clears and climb the hills in broad daylight."
+  },
+  {
+    question: "Can private vehicles enter Nainital on New Year's Eve without a hotel booking?",
+    answer: "In recent winter seasons, Nainital traffic police have restricted private vehicle entry at the Rusi bypass checkpoint during peak New Year dates (Dec 30 to Jan 1), allowing entry primarily to tourists holding pre-confirmed hotel vouchers or directing motorists to park and take shuttle buses. Always book your stay before leaving Delhi."
+  },
+  {
+    question: "Why do families prefer staying in Malla Ramgarh over Nainital town in December?",
+    answer: "Malla Ramgarh (26 km / ~45 mins from Nainital) provides peaceful mountain ridge living with zero town traffic, on-site gated parking for 25+ cars, direct 180° Himalayan views from every room, nightly garden bonfires, and heated suites away from crowded Mall Road bottlenecks."
+  },
+  {
+    question: "What are the direct room rates and discounts at Whispering Pines for December?",
+    answer: "Direct rates start from ₹3,999/night for the Executive Cedar Suite, ₹4,999/night for the Family Twin Room, and ₹15,999/night for the 3-BHK Private Villa. Devotees and leisure travellers save a flat 25% direct discount compared to OTA portals by booking directly via WhatsApp (+91-7505029696)."
+  }
+];
+
+const waDecemberLink = generateWhatsAppLink(
+  "Hi Gaurav! I am planning a Delhi to Nainital winter weekend trip in December 2026 and would like to check room availability and claim the Flat 25% Direct Booking Discount at Whispering Pines Resort."
+);
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={canonicalUrl}
+  image={ogImageUrl}
+  breadcrumbs={breadcrumbs}
+  faqs={decemberFaqs}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href={ogImageUrl} fetchpriority="high" type="image/avif" />
+    <meta property="article:published_time" content="2026-11-04T10:00:00+05:30" />
+    <meta property="article:modified_time" content="2026-11-04T10:00:00+05:30" />
+    <meta property="article:author" content="Gaurav Pandey — Director, Casa De Bello Pvt Ltd" />
+    <meta property="article:section" content="Nainital Winter Travel & Weekend Guides" />
+    <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(resortSchema)} />
+  </Fragment>
+
+  <article class="bg-[#FAF9F6] text-[#0E2C21] font-sans antialiased selection:bg-[#B0966D] selection:text-[#0E2C21]">
+    {/* Breadcrumbs Navigation */}
+    <nav class="pt-28 pb-4 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto" aria-label="Breadcrumb">
+      <div class="flex items-center gap-2 text-xs font-semibold text-gray-500">
+        <a href="/" class="hover:text-[#0E2C21] transition-colors">Home</a>
+        <span>/</span>
+        <a href="/blog/" class="hover:text-[#0E2C21] transition-colors">Blog</a>
+        <span>/</span>
+        <span class="text-[#7A6038] truncate">Nainital in December 2026</span>
+      </div>
+    </nav>
+
+    {/* Main Content Container */}
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 space-y-12">
+      {/* Header Article Block */}
+      <header class="bg-white p-6 sm:p-10 md:p-12 rounded-sm shadow-sm border border-[#EAE8E3] space-y-6">
+        <div class="space-y-4">
+          <div class="flex flex-wrap items-center gap-3 text-xs font-medium text-gray-500">
+            <span class="bg-[#0E2C21] text-[#B0966D] text-[11px] font-semibold uppercase px-3 py-1 rounded-full shadow-xs">
+              Winter Travel Guide
+            </span>
+            <span>•</span>
+            <span class="inline-flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-[#B0966D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              November 4, 2026
+            </span>
+            <span>•</span>
+            <span>Updated November 4, 2026</span>
+            <span>•</span>
+            <span class="inline-flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-[#B0966D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              12 min read
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-[#0E2C21] leading-tight">
+            Nainital in December 2026: Delhi Weekend Plan, Snow Odds and a Quieter Base in Ramgarh
+          </h1>
+
+          {/* Author Byline */}
+          <div class="pt-4 flex items-center gap-3 border-t border-gray-100">
+            <img
+              src="/images/Gaurav-pandey-casa-de-bello.webp"
+              alt="Gaurav Pandey — Director, Casa De Bello Pvt Ltd"
+              class="w-12 h-12 rounded-full object-cover border-2 border-[#B0966D] shrink-0 shadow-sm"
+              width="48"
+              height="48"
+              loading="eager"
+            />
+            <div>
+              <p class="text-sm font-bold text-[#0E2C21]">
+                By Gaurav Pandey, Director, Casa De Bello Pvt Ltd
+              </p>
+              <p class="text-xs text-gray-500 font-light">
+                Whispering Pines Resort, Malla Ramgarh • Hosting Delhi weekenders &amp; winter travellers across 10+ Himalayan winters
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Feature Hero Image */}
+        <div class="w-full h-64 sm:h-96 md:h-[460px] overflow-hidden rounded-sm border border-gray-100 shadow-sm bg-gray-100">
+          <img
+            src={ogImageUrl}
+            alt={ogAltText}
+            width="1200"
+            height="675"
+            class="w-full h-full object-cover"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+
+        {/* Verified Host Attribution */}
+        <div class="bg-[#FAF9F6] p-4 sm:p-5 rounded-sm border border-[#EAE8E3] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3.5">
+            <img
+              src="/images/Gaurav-pandey-casa-de-bello.webp"
+              alt="Gaurav Pandey"
+              class="w-11 h-11 rounded-full object-cover border-2 border-[#8A6F4A] shrink-0"
+              width="44"
+              height="44"
+              loading="lazy"
+            />
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#7A6038] block">Verified On-Site Host &amp; Winter Advisory</span>
+              <p class="text-xs sm:text-sm font-bold text-[#0E2C21]">Curated by Gaurav Pandey — Resident Director at Whispering Pines Resort</p>
+              <p class="text-xs text-gray-600 font-light">1,780m Malla Ramgarh (26 km from Nainital Mall Rd) • Direct WhatsApp: +91 75050 29696</p>
+            </div>
+          </div>
+          <a
+            href={waDecemberLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="shrink-0 inline-flex items-center gap-1.5 px-4 py-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs rounded-sm shadow-sm transition-all"
+          >
+            <span>💬 Ask Host on WhatsApp</span>
+          </a>
+        </div>
+
+        {/* Share Bar Top */}
+        <BlogShareBar
+          title={pageTitle}
+          url={canonicalUrl}
+          description={pageDescription}
+          label="Planning a December trip to Nainital? Share this weekend plan with your friends or family"
+          className="my-4"
+        />
+
+        {/* AEO Quick Answer Box */}
+        <div class="aeo-direct-answer bg-[#FAF9F6] p-6 sm:p-7 rounded-sm border-l-4 border-[#8A6F4A] shadow-xs space-y-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-[#7A6038] block">
+            Nainital in December 2026: Executive Quick Answer
+          </span>
+          <p class="text-base text-gray-800 leading-relaxed font-light">
+            <strong>Yes, December is one of the most rewarding months to visit Nainital if your priority is crisp mountain air, crystal-clear 180° views of the Nanda Devi range, and cozy winter bonfires.</strong> While snowfall in Nainital town itself is rare before January, higher vantage points like Snow View see occasional flurries. For an unhurried holiday free from Mall Road traffic jams and strict New Year vehicle controls, basing yourself 26 km away in Malla Ramgarh at Whispering Pines Resort gives you heated suites, free on-site parking for 25+ vehicles, and flat 25% direct savings.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-4 text-xs text-[#0E2C21] font-medium">
+            <span>✓ Daytime Temp: 10°C to 15°C (Sunny)</span>
+            <span>✓ Night Temp: 2°C to 6°C</span>
+            <span>✓ Distance from Delhi: ~340 km (6.5–7.5h)</span>
+            <span>✓ Quietest Weekends: Dec 5–6 &amp; Dec 12–13</span>
+          </div>
+        </div>
+
+        {/* Article Body Content */}
+        <div class="prose prose-lg max-w-none text-[#2C3531] font-light leading-relaxed prose-headings:font-display prose-headings:text-[#0E2C21] prose-a:text-[#0E2C21] prose-a:font-semibold prose-a:underline space-y-8">
+          <p class="text-lg text-gray-700 leading-relaxed">
+            December in Nainital is cold, crisp, and busy around the edges. The district administration lists December and January as the coldest months of the year, when winter snowfall occasionally touches the Kumaon hills. In reality, snowfall inside Nainital town itself is uncommon before January. Most travellers from Delhi NCR visit for one of three experiences: a refreshing 2-night weekend escape, a Christmas celebration, or a New Year's Eve getaway.
+          </p>
+
+          <p>
+            This operational guide outlines which December weekends to choose, what the 340 km drive from Delhi is like during early-morning plains fog, and whether you should stay directly in bustling Nainital town or 26 km away in the fruit orchards of Ramgarh. At <a href="/about-whispering-pines-resort-ramgarh/">Whispering Pines Resort</a> — our 25-room boutique 4-star property and standalone 10-guest Alpine Villa at 1,780 metres on the Malla Ramgarh ridge — winter peak viewing is what we know best.
+          </p>
+
+          {/* Section 1: At a Glance */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Nainital in December at a Glance
+          </h2>
+
+          <div class="overflow-x-auto my-6 border border-[#EAE8E3] rounded-sm bg-white shadow-xs">
+            <table class="w-full text-left text-sm text-[#2C3531]">
+              <thead class="bg-[#0E2C21] text-[#FAF9F6] text-xs uppercase font-semibold">
+                <tr>
+                  <th class="p-3.5">Condition</th>
+                  <th class="p-3.5">What to Expect in December 2026</th>
+                  <th class="p-3.5">Host Operational Insight</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Weather &amp; Temperature</td>
+                  <td class="p-3.5">Daytime highs of 10°C to 15°C; nighttime drops to 2°C to 6°C (near 0°C during cold snaps).</td>
+                  <td class="p-3.5">Bright, crystal-clear winter sun during the afternoon; chilly once the sun dips behind the ridge at 5:00 PM.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Snowfall Odds</td>
+                  <td class="p-3.5">Uncommon in Nainital town before January; Kilbury &amp; Snow View (2,200m+) receive first dustings.</td>
+                  <td class="p-3.5 font-medium text-[#7A6038]">Treat snowfall as a bonus rather than the sole goal of your trip.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-emerald-50/20">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Himalayan Mountain Views</td>
+                  <td class="p-3.5">Winter air holds the lowest humidity and dust, offering razor-sharp 180° views.</td>
+                  <td class="p-3.5 font-bold text-emerald-800">The primary reason to visit! Nanda Devi, Trishul &amp; Panchachuli shine in white snow.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Crowds &amp; Traffic</td>
+                  <td class="p-3.5">First two weekends are delightfully calm; Christmas and New Year weekends hit maximum capacity.</td>
+                  <td class="p-3.5">Strict vehicle controls at Nainital entry points during Dec 25–Jan 1.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Nainital Winter Carnival</td>
+                  <td class="p-3.5">Late December (typically Dec 22 to 26) with folk performances and light shows around Naini Lake.</td>
+                  <td class="p-3.5">Great festive atmosphere; expect heavy evening pedestrian footfall on Mall Road.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Section 2: Which Weekend to Pick */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Which December 2026 Weekend Should You Pick from Delhi?
+          </h2>
+
+          <p>
+            Timing your weekend makes all the difference between breezy mountain roads and hours stuck in Kathgodam-Bhowali traffic queues:
+          </p>
+
+          <div class="overflow-x-auto my-6 border border-[#EAE8E3] rounded-sm bg-white shadow-xs">
+            <table class="w-full text-left text-sm text-[#2C3531]">
+              <thead class="bg-[#7A6038] text-white text-xs uppercase font-semibold">
+                <tr>
+                  <th class="p-3.5">December Dates</th>
+                  <th class="p-3.5">Weekend Type</th>
+                  <th class="p-3.5">Crowd Level</th>
+                  <th class="p-3.5">Who It Suits Best</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
+                <tr class="hover:bg-[#FAF9F6]/60 bg-emerald-50/30">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Sat 5 to Sun 6 Dec</td>
+                  <td class="p-3.5">Regular Weekend</td>
+                  <td class="p-3.5 text-emerald-800 font-semibold">Low</td>
+                  <td class="p-3.5">Couples and peace-seekers wanting clear skies, zero traffic, and restful mountain walks.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-emerald-50/20">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Sat 12 to Sun 13 Dec</td>
+                  <td class="p-3.5">Regular Weekend</td>
+                  <td class="p-3.5 text-emerald-800 font-semibold">Low to Moderate</td>
+                  <td class="p-3.5">Families taking an early winter break before schools close for winter exams.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Sat 19 to Sun 20 Dec</td>
+                  <td class="p-3.5">Pre-Holiday Weekend</td>
+                  <td class="p-3.5 text-amber-700 font-semibold">Rising</td>
+                  <td class="p-3.5">Early holidaymakers; reserve rooms 2–3 weeks in advance.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-amber-50/40">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Fri 25 to Sun 27 Dec</td>
+                  <td class="p-3.5">Christmas Long Weekend</td>
+                  <td class="p-3.5 text-red-600 font-bold">High</td>
+                  <td class="p-3.5">Families celebrating Christmas; expect busy highway bottlenecks near Rampur &amp; Haldwani.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-red-50/40">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Thu 31 Dec to Sun 3 Jan</td>
+                  <td class="p-3.5">New Year Peak</td>
+                  <td class="p-3.5 text-red-700 font-bold">Peak Highest</td>
+                  <td class="p-3.5">Must have confirmed hotel vouchers before leaving Delhi. Police restrict town entry.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="text-sm text-gray-600 font-light italic">
+            *Host Tip: If your schedule has flexibility, booking the 1st or 2nd weekend of December (Dec 5–6 or Dec 12–13) provides the exact same snow peak views and bonfires with 70% fewer cars on the highway.*
+          </p>
+
+          {/* Section 3: Delhi to Nainital Drive */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Delhi to Nainital and Ramgarh by Car in December: Fog &amp; Route Guide
+          </h2>
+
+          <p>
+            The verified driving route from Delhi NCR runs via <strong>NH 9</strong>: Delhi → Hapur bypass → Moradabad bypass → Rampur → Bilaspur → Rudrapur → Haldwani → Kathgodam. At Kathgodam, the mountain climb begins through Bhimtal and Bhowali. Nainital town branches left at Bhowali, while Malla Ramgarh continues along the quiet Bhowali-Ramgarh-Mukteshwar Road.
+          </p>
+
+          <div class="overflow-x-auto my-6 border border-[#EAE8E3] rounded-sm bg-white shadow-xs">
+            <table class="w-full text-left text-sm text-[#2C3531]">
+              <thead class="bg-[#0E2C21] text-[#FAF9F6] text-xs uppercase font-semibold">
+                <tr>
+                  <th class="p-3.5">Route Leg</th>
+                  <th class="p-3.5">Distance</th>
+                  <th class="p-3.5">Typical Drive Time</th>
+                  <th class="p-3.5">December Seasonal Caveat</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Delhi to Whispering Pines (Ramgarh)</td>
+                  <td class="p-3.5">~340 km</td>
+                  <td class="p-3.5 font-semibold text-[#7A6038]">6.5 to 7.5 hours</td>
+                  <td class="p-3.5">Plains morning fog (Hapur-Rampur) can add 45–60 mins; leave Delhi at 6:30–7:00 AM.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Kathgodam Railway Station to Resort</td>
+                  <td class="p-3.5">43 km</td>
+                  <td class="p-3.5">~1.5 hours</td>
+                  <td class="p-3.5">Scenic hill climb; avoid driving after 8:00 PM if tired. Pre-booked cabs: ₹1,800–₹2,200.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Whispering Pines to Nainital Mall Road</td>
+                  <td class="p-3.5">26 km</td>
+                  <td class="p-3.5">~45 minutes</td>
+                  <td class="p-3.5">Smooth, scenic drive via Bhowali. Leave early (by 8:30 AM) on festive weekends to park easily.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="bg-amber-50/50 p-5 rounded-sm border border-amber-200/60 my-4 space-y-2">
+            <h3 class="text-sm font-bold text-[#0E2C21]">3 Critical December Road Invariants from Our Front Desk:</h3>
+            <ul class="text-xs sm:text-sm text-gray-700 space-y-2 font-light">
+              <li><strong>1. Plain Fog Determines Your Departure:</strong> Leaving Delhi at 4:30 AM sounds smart in June, but in December it often puts you in dense fog crawling at 30 km/h until Moradabad. Leaving around 6:30–7:00 AM allows the morning sun to burn off the fog, letting you cruise comfortably.</li>
+              <li><strong>2. Reach the Hills Before Dark:</strong> Sunset in Uttarakhand occurs around 5:15 PM in December. Climbing after Kathgodam in broad daylight is safer, warmer, and treats your family to breathtaking golden sunset peak views.</li>
+              <li><strong>3. Train Alternative:</strong> The Kathgodam Shatabdi (12040) from New Delhi (departs 06:20 AM, reaches Kathgodam 11:40 AM) completely bypasses highway fog. Our front desk can have a sanitized private cab waiting at the station.</li>
+            </ul>
+          </div>
+
+          {/* Section 4: 2-Night Weekend Itinerary */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            A Perfect 2-Night December Weekend Itinerary from Delhi
+          </h2>
+
+          <div class="space-y-4 my-6">
+            <div class="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-xs">
+              <h3 class="text-base font-bold text-[#0E2C21]">Friday — The Scenic Drive &amp; Sunset Peak Warm-up</h3>
+              <p class="text-sm text-gray-600 font-light mt-1">
+                Depart Delhi at 6:45 AM via NH 9. Enjoy hot parathas at Shiva Tourist Dhaba near Gajraula. Ascend the hills past Kathgodam and reach Whispering Pines Resort in Malla Ramgarh by 2:30 PM. Settle into heated suites, sip hot mountain tea on the lawn as the setting sun turns Nanda Devi pink-gold, and savor a Kumaoni dinner buffet.
+              </p>
+            </div>
+
+            <div class="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-xs">
+              <h3 class="text-base font-bold text-[#0E2C21]">Saturday — Day Excursion to Nainital &amp; Nightly Bonfire</h3>
+              <p class="text-sm text-gray-600 font-light mt-1">
+                Have an early breakfast and take the 45-minute drive into Nainital town by 8:30 AM. Park smoothly near the flats or Mallital before day-tripper crowds arrive. Walk around Naini Lake, visit the ancient Naina Devi Temple, and ride the aerial ropeway to Snow View Point. Return to Whispering Pines by 4:00 PM while daylight remains. Spend the evening around our crackling wood-fired bonfire with live barbecue skewers under millions of stars.
+              </p>
+            </div>
+
+            <div class="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-xs">
+              <h3 class="text-base font-bold text-[#0E2C21]">Sunday — Sunrise Stroll &amp; Easy Return</h3>
+              <p class="text-sm text-gray-600 font-light mt-1">
+                Wake up to crystal-clear 180° sunrise views over Trishul right from your bed. Take an unhurried morning walk through the quiet apple and peach orchard lanes of Ramgarh. Enjoy a hearty breakfast and depart by 10:30 AM to comfortably reach Delhi NCR by Sunday evening.
+              </p>
+            </div>
+          </div>
+
+          <p class="text-sm text-gray-700">
+            *Have an extra day?* Dedicate Saturday morning to a darshan pilgrimage to <a href="/blog/hotel-near-kainchi-dham/">Kainchi Dham Ashram</a> (22 km / 45 mins away via Bhowali) before exploring Nainital town.
+          </p>
+
+          {/* Section 5: Nainital Town vs Ramgarh Base */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Stay in Nainital Town or in Ramgarh?
+          </h2>
+
+          <p>
+            Both locations offer distinct mountain experiences. Here is an honest, side-by-side comparison to help you choose the right base:
+          </p>
+
+          <div class="overflow-x-auto my-6 border border-[#EAE8E3] rounded-sm bg-white shadow-xs">
+            <table class="w-full text-left text-sm text-[#2C3531]">
+              <thead class="bg-[#0E2C21] text-[#FAF9F6] text-xs uppercase font-semibold">
+                <tr>
+                  <th class="p-3.5">Feature</th>
+                  <th class="p-3.5">Nainital Town (Lake / Mall Road)</th>
+                  <th class="p-3.5">Malla Ramgarh (Whispering Pines)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Altitude</td>
+                  <td class="p-3.5">~2,000 metres (Lake basin)</td>
+                  <td class="p-3.5 font-bold text-[#7A6038]">1,780 metres (Sunny ridge)</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Primary View</td>
+                  <td class="p-3.5">Naini Lake, hillside houses, town lights</td>
+                  <td class="p-3.5 font-bold text-emerald-800">Unobstructed 180° Nanda Devi &amp; Trishul snow peaks</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Christmas &amp; New Year</td>
+                  <td class="p-3.5">High crowds, noisy streets, police traffic checkpoints</td>
+                  <td class="p-3.5 font-bold text-emerald-800">Peaceful private sanctuary; drive to town on your own schedule</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Car Parking</td>
+                  <td class="p-3.5">Severely limited; municipal lots fill by 9:30 AM</td>
+                  <td class="p-3.5 font-bold text-emerald-800">Free, secure private on-site parking for 25+ cars</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Evening Bonfires</td>
+                  <td class="p-3.5">Rare due to compact town properties</td>
+                  <td class="p-3.5 font-bold text-emerald-800">Nightly wood-fired bonfires &amp; barbecues on open lawn</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Best For</td>
+                  <td class="p-3.5">Travellers without cars wanting nightlife &amp; cafés</td>
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Families, groups &amp; couples wanting peace, views &amp; space</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Section 6: Places to Visit Around Ramgarh */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Top Places to Visit Around Ramgarh in December
+          </h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 text-sm">
+            <div class="bg-white p-4 rounded-sm border border-[#EAE8E3]">
+              <span class="font-bold text-[#0E2C21] block mb-1">🌲 Tagore Top (4 km Nature Walk):</span>
+              <p class="text-gray-600 font-light">
+                A serene forest trail where Nobel Laureate Rabindranath Tagore stayed and penned parts of his work. Clear winter skies provide mesmerizing valley outlooks.
+              </p>
+            </div>
+            <div class="bg-white p-4 rounded-sm border border-[#EAE8E3]">
+              <span class="font-bold text-[#0E2C21] block mb-1">🛕 Mukteshwar Dham &amp; Chauli Ki Jali (25 km):</span>
+              <p class="text-gray-600 font-light">
+                A 45-minute drive brings you to the 350-year-old Shiva temple and dramatic overhanging cliffs of Chauli Ki Jali, offering 300° Himalayan horizons.
+              </p>
+            </div>
+            <div class="bg-white p-4 rounded-sm border border-[#EAE8E3]">
+              <span class="font-bold text-[#0E2C21] block mb-1">🙏 Kainchi Dham Neem Karoli Baba Ashram (22 km):</span>
+              <p class="text-gray-600 font-light">
+                Just 45 minutes down the Bhowali corridor. In December, morning darshan between 7:30 and 9:00 AM is tranquil and spiritually uplifting.
+              </p>
+            </div>
+            <div class="bg-white p-4 rounded-sm border border-[#EAE8E3]">
+              <span class="font-bold text-[#0E2C21] block mb-1">🌊 Bhalu Gaad Waterfall (16 km):</span>
+              <p class="text-gray-600 font-light">
+                A gentle 1.5 km forest hike through pine woods leading to a pristine 60-foot waterfall. Winter waters are crystal-clear and quiet.
+              </p>
+            </div>
+          </div>
+
+          {/* Section 7: Rooms at Whispering Pines */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Winter Amenities &amp; Direct Rates at Whispering Pines Resort
+          </h2>
+
+          <p>
+            Winter comfort at 1,780 metres requires serious infrastructure. Every suite and villa bedroom at Whispering Pines features powerful room heating, heavy down comforters, 24/7 hot geyser water, dual silent generator power backup, and 150 Mbps fiber Wi-Fi.
+          </p>
+
+          <div class="overflow-x-auto my-6 border border-[#EAE8E3] rounded-sm bg-white shadow-xs">
+            <table class="w-full text-left text-sm text-[#2C3531]">
+              <thead class="bg-[#0E2C21] text-[#FAF9F6] text-xs uppercase font-semibold">
+                <tr>
+                  <th class="p-3.5">Room Category</th>
+                  <th class="p-3.5">Capacity</th>
+                  <th class="p-3.5">Direct Rate From</th>
+                  <th class="p-3.5">Why It Excels in December</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Executive Cedar Suite</td>
+                  <td class="p-3.5">2 Adults</td>
+                  <td class="p-3.5 font-semibold text-[#7A6038]">₹3,999 / night</td>
+                  <td class="p-3.5">Warm cedarwood wall finishes, private balcony commanding direct Nanda Devi sunrise views.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-amber-50/20">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Family Twin Room</td>
+                  <td class="p-3.5">2 to 4 Guests</td>
+                  <td class="p-3.5 font-semibold text-[#7A6038]">₹4,999 / night</td>
+                  <td class="p-3.5">Ground-floor step-free access straight to the garden; heated space ideal for kids and elders.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Deluxe Skylight Suite</td>
+                  <td class="p-3.5">2 to 3 Adults</td>
+                  <td class="p-3.5 font-semibold text-[#7A6038]">₹6,499 / night</td>
+                  <td class="p-3.5">Glass skylight for stargazing directly from your bed under zero-light-pollution winter skies.</td>
+                </tr>
+                <tr class="hover:bg-[#FAF9F6]/60 bg-emerald-50/30">
+                  <td class="p-3.5 font-bold text-[#0E2C21]">Standalone 3-BHK Private Villa</td>
+                  <td class="p-3.5 font-semibold text-[#0E2C21]">Up to 10 Guests</td>
+                  <td class="p-3.5 font-bold text-[#7A6038]">₹15,999 / night</td>
+                  <td class="p-3.5">Private stone fireplace, 3 bedrooms + loft, kitchen, private garden for group Christmas &amp; New Year buyouts.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Direct vs OTA Table Integration */}
+          <div class="my-8">
+            <DirectVsOtaTable />
+          </div>
+
+          {/* Section 8: Honest Trade-Offs */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Honest Trade-Offs to Keep in Mind Before Booking
+          </h2>
+
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">• 45-Minute Drive to Mall Road:</span>
+              <span>We are located in Malla Ramgarh, 26 km outside Nainital town. If you want to step out onto Mall Road at 10:00 PM for late-night softies, stay inside town. If you want peace, fresh air, and zero traffic noise, stay with us.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">• Snow is Not Guaranteed in December:</span>
+              <span>Snowfall on the Ramgarh ridge happens occasionally in late December and January. Do not plan a December trip solely banking on snow; visit for the world-class Himalayan clarity and cozy bonfires.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">• Nights are Genuinely Cold:</span>
+              <span>At 1,780 metres, evening temperatures drop to 2°C–6°C. While our rooms are well-heated, pack thermal innerwear, gloves, and woolen beanies for outdoors.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold">• Fruit Trees are Dormant:</span>
+              <span>The peach and apple orchards of Ramgarh are bare in December (fruit season is May–August). However, the leafless branches open up the most expansive snow peak valley views.</span>
+            </li>
+          </ul>
+
+          {/* Section 9: What to Pack */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            What to Pack for a December Hill Trip
+          </h2>
+
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700">
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">✓ Thermal innerwear sets (top and bottom)</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">✓ Heavy fleece jacket or down feather coat</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">✓ Woolen caps, mufflers, and thermal gloves</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">✓ Sturdy shoes with rubber grip for frosty mornings</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">✓ Cold cream, lip balm, and moisturizer for dry air</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">✓ Personal prescription medicines</li>
+          </ul>
+
+          {/* Section 10: FAQs */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Frequently Asked Questions
+          </h2>
+
+          <div class="space-y-4 my-6">
+            {decemberFaqs.map((faq, index) => (
+              <div class="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-xs space-y-2">
+                <h3 class="text-base font-bold text-[#0E2C21] flex items-start gap-2">
+                  <span class="text-[#7A6038]">Q{index + 1}:</span>
+                  <span>{faq.question}</span>
+                </h3>
+                <p class="text-sm text-gray-700 font-light leading-relaxed pl-6">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Direct CTA Box */}
+          <div class="bg-[#0E2C21] text-white p-8 sm:p-10 rounded-sm shadow-md my-8 space-y-4 text-center">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#B0966D] block">
+              Direct Resident Privileges • Flat 25% Off OTA Rates
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-bold font-display text-white">
+              Ready for a Crisp Himalayan December Escape?
+            </h3>
+            <p class="text-sm sm:text-base text-gray-200 font-light max-w-2xl mx-auto">
+              Send your preferred travel dates and group size directly to Gaurav Pandey on WhatsApp. We will confirm room availability, share the morning fog driving window, and apply your flat 25% direct saving instantly.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={waDecemberLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-sm rounded-sm shadow-md transition-all duration-300"
+              >
+                <span>💬 WhatsApp Front Desk (+91-7505029696)</span>
+              </a>
+              <a
+                href="https://whisperingpinesresort.bookingjini.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#B0966D] hover:bg-[#C4A77D] text-[#0E2C21] font-bold text-sm rounded-sm transition-all duration-300 shadow-sm"
+              >
+                <span>Book Direct Online</span>
+              </a>
+            </div>
+            <p class="text-xs text-gray-300 font-light pt-2">
+              ⚡ Instant host confirmation • Free cancellation options • Zero OTA markups
+            </p>
+          </div>
+
+          {/* Author Bio */}
+          <div class="bg-white p-6 sm:p-8 rounded-sm border border-[#EAE8E3] shadow-xs flex flex-col sm:flex-row items-start sm:items-center gap-5 my-8">
+            <img
+              src="/images/Gaurav-pandey-casa-de-bello.webp"
+              alt="Gaurav Pandey — Director, Casa De Bello Pvt Ltd"
+              class="w-16 h-16 rounded-full object-cover border-2 border-[#B0966D] shrink-0"
+              width="64"
+              height="64"
+              loading="lazy"
+            />
+            <div class="space-y-1.5">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#7A6038] block">About the Author &amp; On-Site Host</span>
+              <h4 class="text-lg font-bold text-[#0E2C21]">Gaurav Pandey</h4>
+              <p class="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+                Gaurav Pandey is the Director of <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" class="text-[#7A6038] underline font-semibold">Casa De Bello Pvt Ltd</a> and heads Whispering Pines Resort in Malla Ramgarh (formerly Clarks Exotica). Having managed over a decade of winter seasons on the Ramgarh ridge, Gaurav guides travelers on highway fog windows, winter driving safety, and peaceful Himalayan retreats. Read our full story on the <a href="/about-whispering-pines-resort-ramgarh/" class="text-[#7A6038] underline font-semibold">About Us page</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Share Bar Bottom */}
+        <BlogShareBar
+          title={pageTitle}
+          url={canonicalUrl}
+          description={pageDescription}
+          label="Found this December guide helpful? Share it with your winter travel group"
+          className="mt-8 mb-4"
+        />
+      </header>
+    </div>
+  </article>
+</Layout>
