@@ -13,9 +13,11 @@
   RewriteRule ^(.*)$ https://whisperingpinesresort.in/$1 [R=301,L]
 
   # 3. Redirect legacy URLs to canonical routes (GSC 404 & Crawl Fixes)
-  RewriteRule ^stay-near-mukteshwar-kainchi-dham/?$ https://whisperingpinesresort.in/blog/stay-near-mukteshwar-kainchi-dham/ [R=301,L]
+  RewriteRule ^stay-near-mukteshwar-kainchi-dham/?$ https://whisperingpinesresort.in/blog/best-resort-to-stay-near-mukteshwar/ [R=301,L]
+  RewriteRule ^blog/stay-near-mukteshwar-kainchi-dham/?$ https://whisperingpinesresort.in/blog/best-resort-to-stay-near-mukteshwar/ [R=301,L]
   RewriteRule ^himalayan-view-resort-uttarakhand/?$ https://whisperingpinesresort.in/blog/himalayan-view-resort-uttarakhand/ [R=301,L]
-  RewriteRule ^resort-near-mukteshwar/?$ https://whisperingpinesresort.in/blog/resort-near-mukteshwar/ [R=301,L]
+  RewriteRule ^resort-near-mukteshwar/?$ https://whisperingpinesresort.in/blog/best-resort-to-stay-near-mukteshwar/ [R=301,L]
+  RewriteRule ^blog/resort-near-mukteshwar/?$ https://whisperingpinesresort.in/blog/best-resort-to-stay-near-mukteshwar/ [R=301,L]
   RewriteRule ^why-ramgarh-is-the-fruit-bowl-of-kumaon/?$ https://whisperingpinesresort.in/blog/ramgarh-fruit-bowl-of-kumaon/ [R=301,L]
   RewriteRule ^blog/why-ramgarh-is-the-fruit-bowl-of-kumaon/?$ https://whisperingpinesresort.in/blog/ramgarh-fruit-bowl-of-kumaon/ [R=301,L]
   RewriteRule ^ramgarh-fruit-bowl-of-kumaon/?$ https://whisperingpinesresort.in/blog/ramgarh-fruit-bowl-of-kumaon/ [R=301,L]

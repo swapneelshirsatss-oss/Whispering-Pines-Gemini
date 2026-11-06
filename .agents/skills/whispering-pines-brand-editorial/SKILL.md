@@ -64,4 +64,16 @@ This skill governs all content creation, blog writing, schema generation, and bo
   - On pillar travel guides: Place `<DirectVsOtaTable />` right after the AEO direct answer block or editorial introduction.
 - **Dedicated Pillar Route Architecture**: When a blog guide requires custom interactive Astro components (e.g. `DirectVsOtaTable.astro`), instantiate a dedicated page at `src/pages/blog/<slug>.astro` and define `customUrl: "/blog/<slug>/"` in `src/data/blogPosts.tsx` so `[slug].astro` avoids route conflicts.
 
+## 7. Keyword Cannibalisation & Consolidation Playbook (Mukteshwar Search Intent)
+- **Problem Statement**: Multiple URLs competing for Mukteshwar resort intent dilutes ranking equity across SERPs (`/resort-near-mukteshwar/`, `/blog/resort-near-mukteshwar/`, `/blog/stay-near-mukteshwar-kainchi-dham/`).
+- **Designated Master Canonical URL**: **`https://whisperingpinesresort.in/blog/best-resort-to-stay-near-mukteshwar/`** is the single authoritative canonical target absorbing 100% of ranking equity and impressions.
+- **Permanent 301 Redirect Rules (Apache `.htaccess` & `astro.config.mjs`)**:
+  - `^resort-near-mukteshwar/?$` ➔ `https://whisperingpinesresort.in/blog/best-resort-to-stay-near-mukteshwar/` [R=301,L]
+  - `^blog/resort-near-mukteshwar/?$` ➔ `https://whisperingpinesresort.in/blog/best-resort-to-stay-near-mukteshwar/` [R=301,L]
+  - `^blog/stay-near-mukteshwar-kainchi-dham/?$` ➔ `https://whisperingpinesresort.in/blog/best-resort-to-stay-near-mukteshwar/` [R=301,L]
+  - `^stay-near-mukteshwar-kainchi-dham/?$` ➔ `https://whisperingpinesresort.in/blog/best-resort-to-stay-near-mukteshwar/` [R=301,L]
+- **Internal Linking Invariant**: All site navigation, breadcrumbs, footers, blog cross-links, and sitemaps must link exclusively to `/blog/best-resort-to-stay-near-mukteshwar/`. Deprecated URLs must never be linked internally.
+- **AEO Direct Answer Invariant**: Maintain a 40–55 word direct answer block targeting altitude (1,780m), 25 km / 45 mins distance from Mukteshwar, pine forest swimming pool, 180° Nanda Devi snow peaks, 3-BHK Alpine Villa, and 25% direct WhatsApp savings.
+- **Structured Data Standards**: Dynamic blog layout (`src/pages/blog/[slug].astro`) must inject full Hotel/Resort schema with verified `sameAs` array pointing to Google Maps CID (`https://maps.google.com/?cid=8386667112972057918`), Google Travel Entity, and official Casa De Bello channels.
+
 
