@@ -23,6 +23,20 @@ export type BlogPostData = {
 
 export const BLOG_POSTS: BlogPostData[] = [
   {
+    id: 17,
+    slug: "places-for-corporate-team-outing-near-delhi",
+    customUrl: "/blog/places-for-corporate-team-outing-near-delhi/",
+    title: "Places for Corporate Team Outing Near Delhi (2026-27 Guide): Sorted by How Many Days You Have",
+    seoTitle: "Places for Corporate Team Outing Near Delhi (2026-27 Guide)",
+    seoDescription: "Shortlisting places for a corporate team outing near Delhi? Venues sorted by 1 day, 1 night & 2 nights offsites, budgets, MICE setup & team activities.",
+    excerpt: "Count the days your team can be away before picking a venue. Discover the best corporate team outing places near Delhi sorted by single-day NCR spots, 1-night getaways (Neemrana, Rishikesh, Corbett), and private 2-night Kumaon hill offsites at Whispering Pines.",
+    date: "November 6, 2026",
+    updatedDate: "November 6, 2026",
+    readTime: "14 min read",
+    imageUrl: "/images/Group_booking_nainital_resort.avif",
+    imageAlt: "Corporate team outing and offsite group gathering at Whispering Pines Resort near Delhi with panoramic Himalayan views"
+  },
+  {
     id: 16,
     slug: "nainital-itinerary",
     customUrl: "/blog/nainital-itinerary/",
