@@ -1,0 +1,408 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { RESORT_CONTACT, generateWhatsAppLink } from '../../data';
+import BlogShareBar from '../../components/BlogShareBar.astro';
+import DirectVsOtaTable from '../../components/DirectVsOtaTable.astro';
+
+const pageTitle = "New Year Packages Near Delhi: Hill Stay From Rs 6,000";
+const pageDescription = "Looking for New Year packages near Delhi? 25 heated rooms and a 10-guest villa at 1,780m, from Rs 6,000 a night with meals and bonfire. WhatsApp for festive dates.";
+const canonicalUrl = "https://whisperingpinesresort.in/blog/new-year-packages-near-delhi/";
+const ogImageUrl = "https://whisperingpinesresort.in/images/Whispering-pines-balcony-view-nanital.avif";
+const ogAltText = "New Year packages near Delhi: bonfire lawn and Nanda Devi snow peak views at Whispering Pines Resort, Malla Ramgarh";
+
+const breadcrumbs = [
+  { name: "Home", item: "https://whisperingpinesresort.in/" },
+  { name: "Blog", item: "https://whisperingpinesresort.in/blog/" },
+  { name: "New Year Packages Near Delhi", item: canonicalUrl }
+];
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
+  "headline": "New Year Packages Near Delhi: What a Rs 6,000 Hill Night Actually Includes",
+  "description": pageDescription,
+  "image": { "@type": "ImageObject", "url": ogImageUrl, "width": 1200, "height": 675 },
+  "datePublished": "2026-11-17T10:00:00+05:30",
+  "dateModified": "2026-11-17T10:00:00+05:30",
+  "author": {
+    "@type": "Person",
+    "name": "Gaurav Pandey",
+    "jobTitle": "Director, Casa De Bello Pvt Ltd",
+    "url": "https://whisperingpinesresort.in/about-whispering-pines-resort-ramgarh/",
+    "sameAs": ["https://casadebello.com/"]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+    "url": "https://whisperingpinesresort.in",
+    "logo": { "@type": "ImageObject", "url": "https://whisperingpinesresort.in/logo.svg" }
+  },
+  "about": { "@type": "Place", "name": "Malla Ramgarh, Mukteshwar, Nainital District, Uttarakhand" },
+  "keywords": "new year packages near delhi, new year stay packages, christmas and new year in mukteshwar, new year celebration in uttarakhand, new year in nainital, pet friendly new year stay, bonfire new year hill station, new year packages from delhi ncr"
+};
+
+const resortSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Resort", "Hotel", "LodgingBusiness"],
+  "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+  "description": "Boutique 4-star mountain resort at 1,780m on the Bhowali-Ramgarh-Mukteshwar Road with 25 heated premium rooms, a standalone 3-BHK alpine villa sleeping 10, a 2,200 sq ft bonfire lawn facing Nanda Devi, and 180 degree Himalayan views from all rooms.",
+  "url": "https://whisperingpinesresort.in",
+  "telephone": "+91-7505029696",
+  "email": "booking@whisperingpinesresort.in",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+    "addressLocality": "Mukteshwar",
+    "addressRegion": "Uttarakhand",
+    "postalCode": "263137",
+    "addressCountry": "IN"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": "29.4264111", "longitude": "79.5505355" },
+  "hasMap": "https://maps.google.com/?cid=8386667112972057918",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "425", "bestRating": "5", "worstRating": "1" },
+  "priceRange": "Rs 3,000 - Rs 15,999",
+  "starRating": { "@type": "Rating", "ratingValue": "4" },
+  "petsAllowed": true,
+  "numberOfRooms": "26"
+};
+
+const festiveOffer = {
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "name": "Christmas and New Year Festive Stay 2026-27",
+  "description": "Festive night stay near Delhi including breakfast, dinner and the nightly bonfire on the Nanda Devi lawn.",
+  "price": "6000",
+  "priceCurrency": "INR",
+  "availability": "https://schema.org/LimitedAvailability",
+  "validFrom": "2026-11-17",
+  "priceValidUntil": "2027-01-05",
+  "url": canonicalUrl,
+  "seller": { "@type": "Organization", "name": "Whispering Pines Resort by Casa De Bello" }
+};
+
+const festiveFaqs = [
+  {
+    question: "Where is the best place to celebrate New Year's Eve in Uttarakhand?",
+    answer: "It depends on whether you want a crowd or a view. Nainital, Mussoorie and Rishikesh have the organised parties and the traffic that comes with them. The Ramgarh and Mukteshwar ridge, around 45 minutes out, trades the DJ floor for snow-peak views, a bonfire and an empty road on 1 January. We are on that ridge at 1,780 m."
+  },
+  {
+    question: "What does the Rs 6,000 festive rate include?",
+    answer: "Rs 6,000 per night covers your heated room with a 180 degree snow-peak view, breakfast, dinner, and the wood-fired bonfire on the lawn facing Nanda Devi. That is the direct rate, booked with us rather than an OTA portal. Alcohol, lunch and spa treatments are charged separately."
+  },
+  {
+    question: "How far is the resort from Delhi, and how long is the drive?",
+    answer: "Roughly 340 km and 6.5 to 7.5 hours via NH 9 in normal conditions, longer across holiday weekends. The variable is early morning fog between Hapur and Rampur. Leaving Delhi around 6:30 to 7:00 AM clears the plains after the fog lifts and gets you up the hill in daylight."
+  },
+  {
+    question: "Can we drive into Nainital on 31 December?",
+    answer: "Check before you plan it. In recent winters Nainital traffic police have restricted private vehicle entry at the Rusi bypass checkpoint across roughly 30 December to 1 January, admitting mainly tourists with confirmed hotel vouchers. Staying 26 km out means you are not in that queue."
+  },
+  {
+    question: "Will it snow at Christmas or New Year?",
+    answer: "Possibly, and nobody can promise it for a given date. Snow at 1,780 m is realistic from late December through February. What is reliable in this window is the clearest air of the year, with Nanda Devi and Trishul visible for days at a stretch. Treat snow as a bonus."
+  },
+  {
+    question: "Is Nainital worth visiting in December?",
+    answer: "Yes on weekdays and ordinary weekends, when the air is clear and the lake is quiet. Over Christmas and New Year it is busy, with heavy Mall Road traffic and parking restrictions. Many guests drive in for a day from the ridge instead of staying in town."
+  },
+  {
+    question: "Does the resort have a DJ or club night on 31 December?",
+    answer: "No. This is a bonfire-and-snow-peaks property and the ridge is quiet by midnight. If a large DJ floor is what you want, book in Nainital town and accept the traffic. If you want a fire, a clear sky and your family around it, this suits you."
+  },
+  {
+    question: "Are pets allowed over the festive period?",
+    answer: "Yes, with no pet surcharge at any time of year, which is unusual in this price band. Pets are welcome in the enclosed orchard gardens and on the pine trails around the property."
+  },
+  {
+    question: "Can we book the whole property for a family group?",
+    answer: "Yes. There are 25 premium rooms plus a standalone 3-BHK alpine villa sleeping 10, for 70 guests in total, with a conference hall and group dining area each seating 80. WhatsApp +91-7505029696 with your dates and headcount for a buyout quote."
+  }
+];
+
+const waFestiveLink = generateWhatsAppLink(
+  "Hi Gaurav! I am looking at New Year and Christmas dates at Whispering Pines from Delhi. Could you confirm availability and what the Rs 6,000 festive rate includes?"
+);
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={canonicalUrl}
+  image={ogImageUrl}
+  breadcrumbs={breadcrumbs}
+  faqs={festiveFaqs}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href={ogImageUrl} fetchpriority="high" type="image/avif" />
+    <meta property="article:published_time" content="2026-11-17T10:00:00+05:30" />
+    <meta property="article:modified_time" content="2026-11-17T10:00:00+05:30" />
+    <meta property="article:author" content="Gaurav Pandey, Director, Casa De Bello Pvt Ltd" />
+    <meta property="article:section" content="Festive and Seasonal Stay Guides" />
+    <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(resortSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(festiveOffer)} />
+  </Fragment>
+
+  <article class="bg-[#FAF9F6] text-[#0E2C21] font-sans antialiased selection:bg-[#B0966D] selection:text-[#0E2C21]">
+    <nav class="pt-28 pb-4 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto" aria-label="Breadcrumb">
+      <div class="flex items-center gap-2 text-xs font-semibold text-gray-500">
+        <a href="/" class="hover:text-[#0E2C21] transition-colors">Home</a>
+        <span>/</span>
+        <a href="/blog/" class="hover:text-[#0E2C21] transition-colors">Blog</a>
+        <span>/</span>
+        <span class="text-[#7A6038] truncate">New Year Packages Near Delhi</span>
+      </div>
+    </nav>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 space-y-12">
+      <header class="bg-white p-6 sm:p-10 md:p-12 rounded-sm shadow-sm border border-[#EAE8E3] space-y-6">
+        <div class="space-y-4">
+          <div class="flex flex-wrap items-center gap-3 text-xs font-medium text-gray-500">
+            <span class="bg-[#0E2C21] text-[#B0966D] text-[11px] font-semibold uppercase px-3 py-1 rounded-full shadow-xs">
+              Festive Stay Guide
+            </span>
+            <span>&bull;</span>
+            <span>November 17, 2026</span>
+            <span>&bull;</span>
+            <span>Updated November 17, 2026</span>
+            <span>&bull;</span>
+            <span>7 min read</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-[#0E2C21] leading-tight">
+            New Year Packages Near Delhi: What a Rs 6,000 Hill Night Actually Includes
+          </h1>
+
+          <div class="pt-4 flex items-center gap-3 border-t border-gray-100">
+            <img
+              src="/images/Gaurav-pandey-casa-de-bello.webp"
+              alt="Gaurav Pandey, Director, Casa De Bello Pvt Ltd"
+              class="w-12 h-12 rounded-full object-cover border-2 border-[#B0966D] shrink-0 shadow-sm"
+              width="48" height="48" loading="eager"
+            />
+            <div>
+              <p class="text-sm font-bold text-[#0E2C21]">By Gaurav Pandey, Director, Casa De Bello Pvt Ltd</p>
+              <p class="text-xs text-gray-500 font-light">
+                Whispering Pines Resort, Malla Ramgarh &bull; Hosting Delhi families through 10+ Himalayan New Years &bull; Reviewed 17 November 2026
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full h-64 sm:h-96 md:h-[460px] overflow-hidden rounded-sm border border-gray-100 shadow-sm bg-gray-100">
+          <img src={ogImageUrl} alt={ogAltText} width="1200" height="675"
+            class="w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" />
+        </div>
+
+        <div class="bg-[#FAF9F6] p-4 sm:p-5 rounded-sm border border-[#EAE8E3] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3.5">
+            <img src="/images/Gaurav-pandey-casa-de-bello.webp" alt="Gaurav Pandey"
+              class="w-11 h-11 rounded-full object-cover border-2 border-[#8A6F4A] shrink-0" width="44" height="44" loading="lazy" />
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#7A6038] block">Verified On-Site Host</span>
+              <p class="text-xs sm:text-sm font-bold text-[#0E2C21]">Gaurav Pandey, Resident Director at Whispering Pines Resort</p>
+              <p class="text-xs text-gray-600 font-light">Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar 263137 &bull; 4.6 stars from 425 Google reviews &bull; WhatsApp +91 75050 29696</p>
+            </div>
+          </div>
+          <a href={waFestiveLink} target="_blank" rel="noopener noreferrer"
+            class="shrink-0 inline-flex items-center gap-1.5 px-4 py-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs rounded-sm shadow-sm transition-all">
+            <span>Check Festive Dates</span>
+          </a>
+        </div>
+
+        <BlogShareBar title={pageTitle} url={canonicalUrl} description={pageDescription}
+          label="Send this to whoever is planning the festive trip" className="mt-2 mb-2" />
+
+        <div class="space-y-6 text-base sm:text-lg leading-relaxed text-gray-800 font-light">
+
+          <div class="bg-[#FAF9F6] border-l-4 border-[#B0966D] p-5 sm:p-6 rounded-sm">
+            <p class="text-base sm:text-lg font-bold text-[#0E2C21] leading-relaxed">
+              New Year packages near Delhi start at Rs 6,000 per night at Whispering Pines, including
+              a heated room with 180 degree snow-peak views, breakfast, dinner and the nightly bonfire.
+              We are 340 km from Delhi at Malla Ramgarh, Mukteshwar 263137, which is 26 km from
+              Nainital and outside its holiday traffic restrictions.
+            </p>
+          </div>
+
+          <p>
+            Most festive pages for hill properties will not tell you the rate. You read about bonfires
+            and snow peaks, then have to call to find out what it costs, by which point the rooms with
+            the view are gone. So the rate is above, and what it covers is the next section.
+          </p>
+
+          <p>
+            I run this property. What follows is what I tell Delhi families on the phone in November,
+            including the parts that are not a sales pitch.
+          </p>
+
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            What is included in the Rs 6,000 festive rate
+          </h2>
+
+          <p>Every festive night at Rs 6,000 includes:</p>
+
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700 my-4">
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">Heated premium room, 180 degree Nanda Devi and Trishul view</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">Breakfast and dinner</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">Wood-fired bonfire nightly on the 2,200 sq ft lawn</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">24-hour hot water and dual DG power backup</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">150 Mbps fibre Wi-Fi</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">Gated parking, and pets at no surcharge</li>
+          </ul>
+
+          <p>
+            Charged separately: alcohol, lunch, a la carte orders, spa treatments, local sightseeing
+            cabs, and taxes as applicable.
+          </p>
+
+          <p class="bg-white p-4 border border-gray-100 rounded-sm text-sm sm:text-base">
+            <span class="font-bold text-[#7A6038]">Rates as of 17 November 2026.</span> For a
+            like-for-like sense of the market, Nainital town five-star festive rates were showing
+            around Rs 14,000 a night in Google's own results in mid-November 2026. We are a 4-star
+            property 26 km out, which is most of the difference.
+          </p>
+
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Distances from the resort
+          </h2>
+
+          <div class="overflow-x-auto my-6 rounded-sm border border-[#EAE8E3] shadow-xs">
+            <table class="w-full text-sm bg-white">
+              <thead class="bg-[#0E2C21] text-[#FAF7F2]">
+                <tr>
+                  <th scope="col" class="text-left font-semibold px-4 py-3">Destination</th>
+                  <th scope="col" class="text-left font-semibold px-4 py-3">Distance</th>
+                  <th scope="col" class="text-left font-semibold px-4 py-3">Typical time</th>
+                  <th scope="col" class="text-left font-semibold px-4 py-3">Festive note</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-gray-700 font-light">
+                <tr><td class="px-4 py-3 font-semibold text-[#0E2C21]">Delhi</td><td class="px-4 py-3">340 km</td><td class="px-4 py-3">6.5 to 7.5 hrs</td><td class="px-4 py-3">Leave 6:30 AM to clear the Hapur to Rampur fog</td></tr>
+                <tr><td class="px-4 py-3 font-semibold text-[#0E2C21]">Nainital</td><td class="px-4 py-3">26 km</td><td class="px-4 py-3">45 min</td><td class="px-4 py-3">Vehicle entry restricted 30 Dec to 1 Jan in recent years</td></tr>
+                <tr><td class="px-4 py-3 font-semibold text-[#0E2C21]">Mukteshwar Dham</td><td class="px-4 py-3">25 km</td><td class="px-4 py-3">45 min</td><td class="px-4 py-3">Quietest before 10 AM</td></tr>
+                <tr><td class="px-4 py-3 font-semibold text-[#0E2C21]">Kainchi Dham</td><td class="px-4 py-3">22 km</td><td class="px-4 py-3">45 min</td><td class="px-4 py-3">Morning darshan, go early</td></tr>
+                <tr><td class="px-4 py-3 font-semibold text-[#0E2C21]">Kathgodam railhead</td><td class="px-4 py-3">60 km</td><td class="px-4 py-3">2 hrs</td><td class="px-4 py-3">Book the cab before you travel over the holidays</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Why 26 km out of Nainital matters on 31 December
+          </h2>
+
+          <p>
+            In recent winters Nainital traffic police have restricted private vehicle entry at the
+            Rusi bypass checkpoint across the peak dates, roughly 30 December to 1 January, admitting
+            mainly tourists holding confirmed hotel vouchers and directing others to park and shuttle.
+            Staying on the Ramgarh ridge means you are not in that queue at all. You drive in for a
+            day if you want to, and come back to an empty road. Our
+            <a href="/blog/nainital-in-december/" class="text-[#7A6038] underline font-semibold"> December guide for this area</a>
+            goes into the fog window and the snow odds in more detail.
+          </p>
+
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Who this suits, and who it does not
+          </h2>
+
+          <p>
+            <span class="font-bold text-[#0E2C21]">Choose this if</span> you want space and a lawn
+            rather than a crowded Mall Road, the view from the bed, a quiet midnight around a fire,
+            or you are bringing a pet or a family group taking
+            <a href="/private-villas-near-nainital/" class="text-[#7A6038] underline font-semibold">the 10-guest villa</a>.
+          </p>
+
+          <p>
+            <span class="font-bold text-[#0E2C21]">Choose somewhere else if</span> you want a DJ
+            floor and a late bar. This is not a party venue and the ridge is quiet by midnight. Book
+            in Nainital town for that, and plan around the traffic.
+          </p>
+
+          <div class="bg-[#FAF9F6] p-5 border-l-4 border-[#8A6F4A] rounded-sm space-y-2">
+            <p class="font-bold text-[#0E2C21]">Before you book, the honest trade-offs</p>
+            <p class="text-sm sm:text-base">
+              Evenings drop to roughly 2 to 6 degrees at 1,780 m, so pack thermals and gloves even
+              though the rooms are heated. The peach and apple orchards are bare in December, which
+              does open the widest valley views of the year. Every sight is a 45-minute drive, because
+              we are not in any of those towns. And if it snows, the last few kilometres get difficult
+              for a two-wheel-drive car, so call us the morning you drive up and we will tell you the
+              real road condition rather than the forecast.
+            </p>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Booking direct over the festive window
+          </h2>
+
+          <p>
+            Rs 6,000 a night with meals and the bonfire is our direct rate. Booking with us rather
+            than through MakeMyTrip, Goibibo or Booking.com also puts you first in line for the 180
+            degree view room upgrades, which over these dates is the thing worth having.
+          </p>
+
+          <DirectVsOtaTable />
+
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            New Year packages near Delhi: Frequently Asked Questions
+          </h2>
+
+          <div class="space-y-4 my-6">
+            {festiveFaqs.map((faq, index) => (
+              <div class="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-xs space-y-2">
+                <h3 class="text-base font-bold text-[#0E2C21] flex items-start gap-2">
+                  <span class="text-[#7A6038]">Q{index + 1}:</span>
+                  <span>{faq.question}</span>
+                </h3>
+                <p class="text-sm text-gray-700 font-light leading-relaxed pl-6">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+
+          <div class="bg-[#0E2C21] text-white p-8 sm:p-10 rounded-sm shadow-md my-8 space-y-4 text-center">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#B0966D] block">
+              Festive Dates 2026-27 &bull; From Rs 6,000 With Meals and Bonfire
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-bold font-display text-white">
+              Check what is left for Christmas and New Year
+            </h3>
+            <p class="text-sm sm:text-base text-gray-200 font-light max-w-2xl mx-auto">
+              Send your dates and group size. You get back what is actually available, the full
+              inclusions, the minimum nights for those dates and the cancellation terms, in one
+              message from the property rather than a call centre.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href={waFestiveLink} target="_blank" rel="noopener noreferrer"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-sm rounded-sm shadow-md transition-all duration-300">
+                <span>WhatsApp +91-7505029696</span>
+              </a>
+              <a href="/book-now/"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#B0966D] hover:bg-[#C4A77D] text-[#0E2C21] font-bold text-sm rounded-sm transition-all duration-300 shadow-sm">
+                <span>Check Rates and Book Direct</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 sm:p-8 rounded-sm border border-[#EAE8E3] shadow-xs flex flex-col sm:flex-row items-start sm:items-center gap-5 my-8">
+            <img src="/images/Gaurav-pandey-casa-de-bello.webp" alt="Gaurav Pandey, Director, Casa De Bello Pvt Ltd"
+              class="w-16 h-16 rounded-full object-cover border-2 border-[#B0966D] shrink-0" width="64" height="64" loading="lazy" />
+            <div class="space-y-1.5">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#7A6038] block">About the Author and On-Site Host</span>
+              <h4 class="text-lg font-bold text-[#0E2C21]">Gaurav Pandey</h4>
+              <p class="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+                Gaurav Pandey is Director of <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" class="text-[#7A6038] underline font-semibold">Casa De Bello Pvt Ltd</a>
+                and heads Whispering Pines Resort at Malla Ramgarh on the Bhowali-Ramgarh-Mukteshwar
+                Road, formerly Clarks Exotica. He has run Christmas and New Year on this ridge through
+                more than a decade of winters, including the years the last stretch of road closed.
+                Read the full story on the <a href="/about-whispering-pines-resort-ramgarh/" class="text-[#7A6038] underline font-semibold">About Us page</a>,
+                or see <a href="/blog/best-resort-to-stay-near-mukteshwar/" class="text-[#7A6038] underline font-semibold">the full resort guide for this corridor</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <BlogShareBar title={pageTitle} url={canonicalUrl} description={pageDescription}
+          label="Planning the festive trip with family? Send them this" className="mt-8 mb-4" />
+      </header>
+    </div>
+  </article>
+</Layout>

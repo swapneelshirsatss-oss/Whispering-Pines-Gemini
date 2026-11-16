@@ -10,7 +10,7 @@ This skill governs all content creation, blog writing, schema generation, and bo
 ## 1. Brand Identity & Canonical Entity
 - **Official Name**: Whispering Pines Resort by Casa De Bello - Near Mukteshwar
 - **Official Address**: Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137 *(Strict Guardrail: Never prefix with "House No. 23-13/4")*
-- **Google Verified Rating**: 4.6★ (409 verified Google reviews)
+- **Google Verified Rating**: 4.6★ (425 verified Google reviews)
 - **Google Maps CID**: `https://maps.google.com/?cid=8386667112972057918`
 - **Google Travel Entity**: `https://www.google.com/travel/hotels/entity/ChgIvvqZseCp27F0GgwvZy8xaGR6ejNrcDcQAQ`
 - **Official Contact**: Phone: `075050 29696` | WhatsApp: `+91 75050 29696`
@@ -41,7 +41,7 @@ This skill governs all content creation, blog writing, schema generation, and bo
   - **Primary Canonical Landing Page**: `https://whisperingpinesresort.in/book-now/` is the official paid ads destination URL; `/book-direct/` must permanently 301-redirect to `/book-now/`.
   - **Universal Conversion Dispatcher**: Use `window.trackBookingConversion(action, category, label, extra)` across all CTAs to ensure synchronous dispatch to both Google Ads and GTM (`GTM-PL8FVLPX`).
   - **WhatsApp Attribution Tagging**: Automatically inject `sessionStorage` attribution into WhatsApp payloads so front desk staff can trace ad campaigns directly.
-- **Global Hotel AggregateRating SERP Standard**: Maintain the official `Hotel` entity schema with `AggregateRating` inside `src/layouts/Layout.astro` (`ratingValue`: `"4.6"`, `reviewCount`: `"409"`, `bestRating`: `"5"`, `worstRating`: `"1"`). This guarantees Google Search Engine indexation and rich star snippets on SERPs across the entire website domain.
+- **Global Hotel AggregateRating SERP Standard**: Maintain the official `Hotel` entity schema with `AggregateRating` inside `src/layouts/Layout.astro` (`ratingValue`: `"4.6"`, `reviewCount`: `"425"`, `bestRating`: `"5"`, `worstRating`: `"1"`). This guarantees Google Search Engine indexation and rich star snippets on SERPs across the entire website domain.
 - **Review Count Synchronization Protocol**: Whenever the Google review count increases, update all 10 synchronized layers in a single pass:
   1. `src/layouts/Layout.astro` (Hotel AggregateRating JSON-LD)
   2. `src/data.ts` (`RESORT_INFO.rating.reviewCount` & `reviewCountNumeric`)
