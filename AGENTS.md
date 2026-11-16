@@ -203,3 +203,33 @@ Whenever maintaining or refactoring bottom conversion bars or global tracking:
 
 
 
+
+
+## GrowGuest standard: read first (added 2026-11-16)
+
+1. Client profile: `D:\AI-Skills-Vault\shared-context\client-profiles\whispering-pines.md`. This is the ground truth for name, address, phone, Maps ID, rooms and offers. If the profile and the website disagree, the profile wins. Ask before changing either.
+2. Project rules: the sections above in this `AGENTS.md`, plus `CLAUDE.md` and `.agents/AGENTS.md`.
+3. `STATE.md`: where the last session stopped and what is open.
+4. `DESIGN.md`, then `docs/PRD.md`, `docs/ARCHITECTURE.md`, `docs/SEO_MARKETING.md`, `docs/TESTING.md`.
+
+### Facts that must never be wrong
+- Name: Whispering Pines Resort by Casa De Bello
+- Address: Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137. NEVER prefix with "House No. 23-13/4".
+- Phone / WhatsApp: 075050 29696 (+91 75050 29696)
+- Google Maps CID: `8386667112972057918`. Never use `maps.app.goo.gl` shortlinks.
+- Booking page: https://whisperingpinesresort.in/book-now/
+- Always "alpine resort and luxury villa property". NEVER "stone cottage".
+- Direct saving: 25% (not 20%) · ₹0 pet fee
+- Host / author: Gaurav Pandey, Director
+- Master page for Mukteshwar resort searches: `/blog/best-resort-to-stay-near-mukteshwar/` (all old URLs 301 there)
+- GBP posts: no phone numbers or URLs in the text
+- GTM: GTM-PL8FVLPX · Google Ads: AW-18455442099
+- Never invent prices, reviews, ratings, awards or amenities. Write `[TODO: ...]` and ask.
+
+### Where facts live in this code
+Main data is in `src/data/hotelData.ts`, but the phone number is ALSO typed into about 39 files under `src/`. When a fact changes, search the whole `src` folder.
+
+### Session rules
+- Start every session by reading the client profile, this file and `STATE.md`.
+- Edit local files only. Swapneel commits, pushes and deploys.
+- Before saying "done": run the checks in `docs/TESTING.md`, then update `STATE.md` with what changed, what was tested and what was NOT tested.

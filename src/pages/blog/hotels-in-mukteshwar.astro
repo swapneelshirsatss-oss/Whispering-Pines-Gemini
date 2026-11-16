@@ -1,0 +1,598 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { RESORT_CONTACT, generateWhatsAppLink } from '../../data';
+import BlogShareBar from '../../components/BlogShareBar.astro';
+import DirectVsOtaTable from '../../components/DirectVsOtaTable.astro';
+
+const pageTitle = "Hotels in Mukteshwar: How to Pick the Right Stay (2026)";
+const pageDescription = "A straight guide to hotels in Mukteshwar: how the ridge areas differ, what each price band gets you, and which stay suits families, couples and pet owners.";
+const canonicalUrl = "https://whisperingpinesresort.in/blog/hotels-in-mukteshwar/";
+const ogImageUrl = "https://whisperingpinesresort.in/images/Resort-in-nanital-on-mukteshwar-road.avif";
+const ogAltText = "Hotels in Mukteshwar: Whispering Pines Resort on the Bhowali-Ramgarh-Mukteshwar Road with 180 degree Himalayan views";
+
+const breadcrumbs = [
+  { name: "Home", item: "https://whisperingpinesresort.in/" },
+  { name: "Blog", item: "https://whisperingpinesresort.in/blog/" },
+  { name: "Hotels in Mukteshwar 2026 Guide", item: canonicalUrl }
+];
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
+  "headline": pageTitle,
+  "description": pageDescription,
+  "image": { "@type": "ImageObject", "url": ogImageUrl, "width": 1200, "height": 675 },
+  "datePublished": "2026-11-17T10:00:00+05:30",
+  "dateModified": "2026-11-17T10:00:00+05:30",
+  "author": {
+    "@type": "Person",
+    "name": "Gaurav Pandey",
+    "jobTitle": "Director, Casa De Bello Pvt Ltd",
+    "url": "https://whisperingpinesresort.in/about-whispering-pines-resort-ramgarh/",
+    "sameAs": ["https://casadebello.com/"]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+    "url": "https://whisperingpinesresort.in",
+    "logo": { "@type": "ImageObject", "url": "https://whisperingpinesresort.in/logo.svg" }
+  },
+  "about": { "@type": "Place", "name": "Mukteshwar, Nainital District, Uttarakhand" },
+  "keywords": "hotels in mukteshwar, hotels in mukteshwar uttarakhand, resorts in mukteshwar, stay in mukteshwar, best hotels in mukteshwar, places to stay in mukteshwar, 4 star hotels in mukteshwar, budget hotels in mukteshwar, pet friendly hotels in mukteshwar, where to stay in mukteshwar"
+};
+
+const resortSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Resort", "Hotel", "LodgingBusiness"],
+  "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+  "description": "Boutique 4-star mountain resort with 25 upgraded premium rooms, a standalone 3-BHK private alpine villa sleeping 10, a pine-forest pool and 180 degree Himalayan views at 1,780m on the Bhowali-Ramgarh-Mukteshwar Road, 25 km from Mukteshwar Dham.",
+  "url": "https://whisperingpinesresort.in",
+  "telephone": "+91-7505029696",
+  "email": "booking@whisperingpinesresort.in",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+    "addressLocality": "Mukteshwar",
+    "addressRegion": "Uttarakhand",
+    "postalCode": "263137",
+    "addressCountry": "IN"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": "29.4264111", "longitude": "79.5505355" },
+  "hasMap": "https://maps.google.com/?cid=8386667112972057918",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "409", "bestRating": "5", "worstRating": "1" },
+  "priceRange": "₹3,000 – ₹15,999",
+  "starRating": { "@type": "Rating", "ratingValue": "4" },
+  "petsAllowed": true,
+  "numberOfRooms": "26",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "180° Himalayan Views — Nanda Devi & Trishul from All Rooms", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Outdoor Swimming Pool Under Pine Canopy", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Standalone 3-BHK Alpine Villa Sleeping 10", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "150 Mbps High-Speed Fiber Wi-Fi", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Pet Friendly With No Surcharge", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Secure Gated Parking for 25+ Vehicles", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Multi-Cuisine Restaurant With 24-Hour In-Room Dining", "value": true }
+  ]
+};
+
+const mukteshwarFaqs = [
+  {
+    question: "Which is the best hotel in Mukteshwar?",
+    answer: "There is no single best hotel in Mukteshwar, because the right stay depends on which part of the ridge suits your trip. For open Himalayan views and a 4-star standard, the Malla Ramgarh side of the Bhowali-Ramgarh-Mukteshwar Road has the strongest properties. For walking to Mukteshwar Dham, stay near the market. For a budget bed, look at the KMVN rest house and the hostels near town."
+  },
+  {
+    question: "How many hotels are there in Mukteshwar?",
+    answer: "Booking platforms list 200 or more properties under Mukteshwar, but that count sweeps in stays at Bhimtal, Bhowali and Ramgarh. Inside Mukteshwar and the villages along its ridge, the realistic number is a few dozen, of which only a handful are 4-star boutique resorts."
+  },
+  {
+    question: "What is the best area to stay in Mukteshwar?",
+    answer: "Mukteshwar town and market for sightseeing on foot. Dhanachuli and Satkhol for quiet mid-range cottages. Malla Ramgarh for open snow-peak views, larger resorts, families and groups. Peora and Sargakhet for long slow stays and birdwatching. The drive from one end of the ridge to the other takes about 45 minutes, so the area you pick shapes your whole trip."
+  },
+  {
+    question: "Are there 4-star or 5-star hotels in Mukteshwar?",
+    answer: "There are a small number of 4-star boutique resorts, including Whispering Pines Resort by Casa De Bello in Malla Ramgarh, rated 4.6★ from 409 verified Google reviews. There is no internationally classified 5-star hotel in Mukteshwar itself, so treat any 5 star listing as a self-description and check the actual facilities rather than the label."
+  },
+  {
+    question: "Do hotels in Mukteshwar allow pets?",
+    answer: "Some do, usually with a size limit and a pet fee. Confirm the fee, the size limit and whether pets are allowed in common areas before you drive six hours. Whispering Pines is fully pet friendly with no pet surcharge, with enclosed orchard lawns and pine walking trails on the property."
+  },
+  {
+    question: "Does it snow in Mukteshwar, and will my hotel be reachable?",
+    answer: "Snow is possible from late December through February and is never guaranteed. When it does snow, the last few kilometres up to higher properties can become difficult for a two-wheel-drive car. Ask your stay directly about the final approach road before you book a winter trip."
+  },
+  {
+    question: "How far is Mukteshwar from Kainchi Dham?",
+    answer: "Kainchi Dham, the Neem Karoli Baba Ashram, is 22 km from Malla Ramgarh, roughly a 45-minute drive on the Bhowali-Ramgarh-Mukteshwar Road. Many visitors base themselves on this ridge and drive across for a morning darshan rather than staying on the highway."
+  },
+  {
+    question: "Is it cheaper to book a Mukteshwar hotel direct or on MakeMyTrip?",
+    answer: "Direct, at any property that offers it, because the OTA portal commission comes out of the room rate. Booking direct with Whispering Pines on WhatsApp saves a flat 25% against MakeMyTrip, Goibibo and Booking.com, and adds priority on the 180° view room upgrade."
+  },
+  {
+    question: "What do rooms cost at Whispering Pines near Mukteshwar?",
+    answer: "Direct rates start from ₹3,999 per night for the Executive Cedar Suite, ₹4,999 for the Family Twin Room and ₹15,999 for the 3-BHK Private Villa sleeping 10. Rates move with the season and occupancy, so WhatsApp +91-7505029696 with your dates for the live number."
+  }
+];
+
+const waMukteshwarLink = generateWhatsAppLink(
+  "Hi Gaurav! I am comparing hotels in Mukteshwar and would like to check room availability and claim the Flat 25% Direct Booking Discount at Whispering Pines Resort."
+);
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={canonicalUrl}
+  image={ogImageUrl}
+  breadcrumbs={breadcrumbs}
+  faqs={mukteshwarFaqs}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href={ogImageUrl} fetchpriority="high" type="image/avif" />
+    <meta property="article:published_time" content="2026-11-17T10:00:00+05:30" />
+    <meta property="article:modified_time" content="2026-11-17T10:00:00+05:30" />
+    <meta property="article:author" content="Gaurav Pandey — Director, Casa De Bello Pvt Ltd" />
+    <meta property="article:section" content="Mukteshwar Stay & Accommodation Guides" />
+    <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(resortSchema)} />
+  </Fragment>
+
+  <article class="bg-[#FAF9F6] text-[#0E2C21] font-sans antialiased selection:bg-[#B0966D] selection:text-[#0E2C21]">
+    {/* Breadcrumbs Navigation */}
+    <nav class="pt-28 pb-4 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto" aria-label="Breadcrumb">
+      <div class="flex items-center gap-2 text-xs font-semibold text-gray-500">
+        <a href="/" class="hover:text-[#0E2C21] transition-colors">Home</a>
+        <span>/</span>
+        <a href="/blog/" class="hover:text-[#0E2C21] transition-colors">Blog</a>
+        <span>/</span>
+        <span class="text-[#7A6038] truncate">Hotels in Mukteshwar</span>
+      </div>
+    </nav>
+
+    {/* Main Content Container */}
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 space-y-12">
+      <header class="bg-white p-6 sm:p-10 md:p-12 rounded-sm shadow-sm border border-[#EAE8E3] space-y-6">
+        <div class="space-y-4">
+          <div class="flex flex-wrap items-center gap-3 text-xs font-medium text-gray-500">
+            <span class="bg-[#0E2C21] text-[#B0966D] text-[11px] font-semibold uppercase px-3 py-1 rounded-full shadow-xs">
+              Where to Stay Guide
+            </span>
+            <span>•</span>
+            <span class="inline-flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-[#B0966D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              November 17, 2026
+            </span>
+            <span>•</span>
+            <span>Updated November 17, 2026</span>
+            <span>•</span>
+            <span class="inline-flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-[#B0966D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              11 min read
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-[#0E2C21] leading-tight">
+            Hotels in Mukteshwar: How to Pick the Right Stay
+          </h1>
+
+          {/* Author Byline */}
+          <div class="pt-4 flex items-center gap-3 border-t border-gray-100">
+            <img
+              src="/images/Gaurav-pandey-casa-de-bello.webp"
+              alt="Gaurav Pandey — Director, Casa De Bello Pvt Ltd"
+              class="w-12 h-12 rounded-full object-cover border-2 border-[#B0966D] shrink-0 shadow-sm"
+              width="48"
+              height="48"
+              loading="eager"
+            />
+            <div>
+              <p class="text-sm font-bold text-[#0E2C21]">
+                By Gaurav Pandey, Director, Casa De Bello Pvt Ltd
+              </p>
+              <p class="text-xs text-gray-500 font-light">
+                Whispering Pines Resort, Malla Ramgarh &bull; Hosting guests on the Mukteshwar road across 10+ Himalayan seasons
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Feature Hero Image */}
+        <div class="w-full h-64 sm:h-96 md:h-[460px] overflow-hidden rounded-sm border border-gray-100 shadow-sm bg-gray-100">
+          <img
+            src={ogImageUrl}
+            alt={ogAltText}
+            width="1200"
+            height="675"
+            class="w-full h-full object-cover"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+
+        {/* Verified Host Attribution */}
+        <div class="bg-[#FAF9F6] p-4 sm:p-5 rounded-sm border border-[#EAE8E3] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3.5">
+            <img
+              src="/images/Gaurav-pandey-casa-de-bello.webp"
+              alt="Gaurav Pandey"
+              class="w-11 h-11 rounded-full object-cover border-2 border-[#8A6F4A] shrink-0"
+              width="44"
+              height="44"
+              loading="lazy"
+            />
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#7A6038] block">Verified On-Site Host &amp; Accommodation Advisory</span>
+              <p class="text-xs sm:text-sm font-bold text-[#0E2C21]">Curated by Gaurav Pandey, Resident Director at Whispering Pines Resort</p>
+              <p class="text-xs text-gray-600 font-light">Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar 263137 &bull; Direct WhatsApp: +91 75050 29696</p>
+            </div>
+          </div>
+          <a
+            href={waMukteshwarLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="shrink-0 inline-flex items-center gap-1.5 px-4 py-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs rounded-sm shadow-sm transition-all"
+          >
+            <span>💬 Ask Host on WhatsApp</span>
+          </a>
+        </div>
+
+        {/* Share Bar Top */}
+        <BlogShareBar
+          title={pageTitle}
+          url={canonicalUrl}
+          description={pageDescription}
+          label="Share this Mukteshwar stay guide with whoever is planning the trip"
+          className="mt-2 mb-2"
+        />
+
+        <div class="space-y-6 text-base sm:text-lg leading-relaxed text-gray-800 font-light">
+
+          {/* Quick Answer Block */}
+          <div class="bg-[#FAF9F6] border-l-4 border-[#B0966D] p-5 sm:p-6 rounded-sm">
+            <p class="text-base sm:text-lg font-bold text-[#0E2C21] leading-relaxed">
+              Hotels in Mukteshwar fall into three groups: budget guesthouses near the market,
+              mid-range cottages across the ridge villages, and a handful of 4-star resorts along the
+              Bhowali-Ramgarh-Mukteshwar Road. Which part of the ridge you sleep on matters more than
+              the star rating, because views and road quality change village by village.
+            </p>
+          </div>
+
+          <p>
+            Most people searching for a hotel in Mukteshwar are deciding two things at once: how much
+            to spend, and which part of the hillside to stay on. The second one is what guests get
+            wrong. A room at the same price can look out at a parking lot or at the Nanda Devi range,
+            depending on which turn off the Bhowali-Ramgarh-Mukteshwar Road you take.
+          </p>
+
+          <p>
+            We run Whispering Pines on that road, at Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd,
+            Mukteshwar 263137. So treat the section near the end as our pitch and the rest as what we
+            tell guests who phone us and end up booking somewhere else because it suited them better.
+            That happens often enough that we may as well write it down.
+          </p>
+
+          {/* Section 1: Price bands */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            The three price bands, and what each one actually gets you
+          </h2>
+
+          <h3 class="text-xl font-bold text-[#0E2C21] pt-2">
+            Under ₹2,500 a night: guesthouses, hostels and the KMVN
+          </h3>
+
+          <p>
+            You get a clean bed, hot water from a geyser or a bucket, and usually no heating. The
+            Kumaon Mandal Vikas Nigam (KMVN) rest house is the best known of these and books out
+            early in season because it sits on one of the better viewpoints. Hostel brands have
+            arrived too, which suits solo travellers who want company.
+          </p>
+
+          <p class="bg-white p-4 border border-gray-100 rounded-sm text-sm sm:text-base">
+            <span class="font-bold text-[#7A6038]">What to check:</span> whether the room has a
+            working heater in December and January, and whether the property is reachable by car for
+            the last 200 metres. Several budget stays here involve a walk uphill with your luggage.
+          </p>
+
+          <h3 class="text-xl font-bold text-[#0E2C21] pt-2">
+            ₹2,500 to ₹6,000 a night: cottages and homestays
+          </h3>
+
+          <p>
+            This is the biggest group and the most variable. Many are family-run cottages in villages
+            like Dhanachuli, Satkhol, Peora and Sargakhet. Some are excellent. Some are two rooms
+            built onto a house, with photographs taken from the one angle that works.
+          </p>
+
+          <p class="bg-white p-4 border border-gray-100 rounded-sm text-sm sm:text-base">
+            <span class="font-bold text-[#7A6038]">What to check:</span> ask for a video call before
+            you pay. Ask what is visible from the specific room you are being sold, not from the
+            terrace. Ask whether food is cooked to order or at fixed times, because most small
+            homestays run fixed meal times and that shapes your whole day.
+          </p>
+
+          <h3 class="text-xl font-bold text-[#0E2C21] pt-2">
+            ₹6,000 and above: 4-star boutique resorts
+          </h3>
+
+          <p>
+            A short list. You get heating, a restaurant with a menu rather than a single thali, a
+            proper reception, parking, and staff who can arrange a cab at short notice. Some have a
+            pool, which on this hillside is rarer than the photos suggest because the season for
+            using one is narrow.
+          </p>
+
+          <p class="bg-white p-4 border border-gray-100 rounded-sm text-sm sm:text-base">
+            <span class="font-bold text-[#7A6038]">What to check:</span> how many rooms, and how many
+            of them have the view. A 40-room property on this terrain usually means half the rooms
+            face inward. Ask before you book the cheapest category.
+          </p>
+
+          {/* Section 2: Areas */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Where to stay in Mukteshwar: the areas, and how they differ
+          </h2>
+
+          <p>
+            Mukteshwar is not one town. It is a temple, a market, and a scatter of villages along a
+            ridge, and the drive between the two ends of it takes about 45 minutes.
+          </p>
+
+          <div class="overflow-x-auto my-6 rounded-sm border border-[#EAE8E3] shadow-xs">
+            <table class="w-full text-sm bg-white">
+              <thead class="bg-[#0E2C21] text-[#FAF7F2]">
+                <tr>
+                  <th scope="col" class="text-left font-semibold px-4 py-3">Area</th>
+                  <th scope="col" class="text-left font-semibold px-4 py-3">Best for</th>
+                  <th scope="col" class="text-left font-semibold px-4 py-3">The trade-off</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-gray-700 font-light">
+                <tr>
+                  <td class="px-4 py-3 font-semibold text-[#0E2C21]">Mukteshwar town and market</td>
+                  <td class="px-4 py-3">First-time visitors, short stays, walking to Mukteshwar Dham and Chauli Ki Jali</td>
+                  <td class="px-4 py-3">Busiest stretch, most traffic, fewest open views</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 font-semibold text-[#0E2C21]">Dhanachuli and Satkhol</td>
+                  <td class="px-4 py-3">Quiet, orchard scenery, mid-range cottages</td>
+                  <td class="px-4 py-3">Narrow approach roads, few places to eat outside your stay</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 font-semibold text-[#0E2C21]">Peora and Sargakhet</td>
+                  <td class="px-4 py-3">Walking and birdwatching, long slow stays</td>
+                  <td class="px-4 py-3">Little to do in the evening, limited phone signal in places</td>
+                </tr>
+                <tr class="bg-[#FAF9F6]">
+                  <td class="px-4 py-3 font-semibold text-[#0E2C21]">Malla Ramgarh</td>
+                  <td class="px-4 py-3">Open 180° Himalayan views, 4-star stays, families and groups</td>
+                  <td class="px-4 py-3">25 km from the temple, so you drive to the main sights</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 font-semibold text-[#0E2C21]">Bhimtal and Bhowali, on the way up</td>
+                  <td class="px-4 py-3">Lake access, cheaper rooms, easier roads</td>
+                  <td class="px-4 py-3">Not really Mukteshwar, lower altitude, no snow-peak view</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            One practical note. Mukteshwar sits between roughly 1,780 m and 2,300 m depending where
+            you are on the ridge. The higher you go, the better the chance of snow in late December
+            and January, and the worse the roads get when it does snow. If you are driving your own
+            car in winter, ask your stay directly about the last 5 km. Any honest property will tell
+            you. Our own <a href="/blog/nainital-in-december/" class="text-[#7A6038] underline font-semibold">December
+            weekend guide</a> covers the fog window on the drive up from Delhi.
+          </p>
+
+          {/* Section 3: When to come */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            When to come
+          </h2>
+
+          <ul class="space-y-3 text-base">
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold shrink-0">• April to June:</span>
+              <span>The busiest stretch, with clear mornings and full occupancy across the ridge. Book six weeks out.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold shrink-0">• July to September:</span>
+              <span>Monsoon. Green, cheap, and a genuine landslide risk on the ghat roads. We do not recommend a tight itinerary in these months.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold shrink-0">• October to November:</span>
+              <span>The best viewing window of the year. The air is clearest after the rains and the Nanda Devi and Trishul peaks show for days at a stretch.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold shrink-0">• December to February:</span>
+              <span>Cold, quiet and the reason many people come. Snow is possible but never guaranteed, and anyone promising you snow for a specific date is selling something they cannot deliver. Rooms over Christmas and New Year go first.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#7A6038] font-bold shrink-0">• March:</span>
+              <span>Orchard blossom season, and underrated. The peach and plum trees across Ramgarh come into flower.</span>
+            </li>
+          </ul>
+
+          {/* Section 4: Segments */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Matching the stay to who is travelling
+          </h2>
+
+          <p>
+            <span class="font-bold text-[#0E2C21]">Families with children.</span> You want ground-floor
+            access, a lawn, food at flexible times and a doctor reachable by road. Avoid stays where
+            the rooms are spread across steep steps.
+          </p>
+
+          <p>
+            <span class="font-bold text-[#0E2C21]">Couples.</span> You want the view from the bed and
+            no group booking in the next room. Ask whether the property hosts weddings, and whether
+            your dates are clear of one.
+          </p>
+
+          <p>
+            <span class="font-bold text-[#0E2C21]">Remote workers.</span> Ask for the actual bandwidth
+            number, not "wifi available". Ask about power backup, because the supply on this ridge
+            drops. A workcation here fails on those two things and nothing else.
+          </p>
+
+          <p>
+            <span class="font-bold text-[#0E2C21]">Pet owners.</span> Most Mukteshwar stays that say
+            pet friendly mean one small dog, on request, with a fee. Ask for the fee, the size limit
+            and whether pets are allowed in common areas before you drive six hours.
+          </p>
+
+          <p>
+            <span class="font-bold text-[#0E2C21]">Groups and offsites.</span> You need a property you
+            can take over. Ask about total capacity, whether there is a hall, and whether the kitchen
+            can serve everyone in one sitting. Our <a href="/corporate-offsite-resort-mukteshwar/" class="text-[#7A6038] underline font-semibold">corporate
+            offsite page</a> covers what a full buyout involves.
+          </p>
+
+          {/* Section 5: Where we fit */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Where we fit in
+          </h2>
+
+          <p>
+            Whispering Pines Resort by Casa De Bello sits at Malla Ramgarh on the
+            Bhowali-Ramgarh-Mukteshwar Road, at 1,780 m. <a href="/clarks-exotica-resort-ramgarh-mukteshwar/" class="text-[#7A6038] underline font-semibold">It
+            was Clarks Exotica Mukteshwar</a> before we took it over and upgraded it. We are 25 km
+            from Mukteshwar Dham and 22 km from <a href="/blog/resort-stay-near-kainchi-dham/" class="text-[#7A6038] underline font-semibold">Kainchi
+            Dham</a>, both about 45 minutes, which means you drive to the sights and come back to an
+            open view rather than sleeping in the middle of the traffic. If you want the full
+            property write-up rather than this comparison, read <a href="/blog/best-resort-to-stay-near-mukteshwar/" class="text-[#7A6038] underline font-semibold">our
+            resort guide for the Mukteshwar corridor</a>.
+          </p>
+
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700 my-6">
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">✓ 25 upgraded premium rooms, total capacity 70</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">✓ Standalone 3-BHK alpine villa sleeping 10, with a stone fireplace</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">✓ 180° Nanda Devi and Trishul views from all rooms</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">✓ Outdoor pool under a pine canopy</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">✓ Our own peach, plum, apple and apricot orchards</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">✓ 150 Mbps fibre Wi-Fi and dual DG power backup</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">✓ Fully pet friendly, enclosed gardens, no pet surcharge</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">✓ 2,200 sq ft lawn facing Nanda Devi for bonfires and stargazing</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">✓ Multi-cuisine restaurant, 24-hour in-room dining</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">✓ Conference hall seating 80, gated parking for 25+ cars</li>
+          </ul>
+
+          <p class="bg-[#FAF9F6] p-5 border-l-4 border-[#8A6F4A] rounded-sm">
+            <span class="font-bold text-[#0E2C21]">What it is not.</span> We are not in Mukteshwar
+            town, and we are not a rustic homestay. If you want to walk to the temple in the morning,
+            stay in the market area instead and we will tell you so on the phone. If you would rather
+            see what there is to do from this ridge first, we keep a list of <a href="/things-to-do-near-mukteshwar/" class="text-[#7A6038] underline font-semibold">things
+            to do near Mukteshwar</a>.
+          </p>
+
+          {/* Direct vs OTA */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Book direct and save a flat 25%
+          </h2>
+
+          <p>
+            Our rates on this site run a flat 25% below MakeMyTrip, Goibibo and Booking.com, because
+            we are not paying their portal commission. Direct rates start from ₹3,999 per night for
+            the Executive Cedar Suite, ₹4,999 for the Family Twin Room and ₹15,999 for the 3-BHK
+            Private Villa. Rates move with the season and with how full we are, so WhatsApp us with
+            your dates for the live number.
+          </p>
+
+          <DirectVsOtaTable />
+
+          {/* FAQs */}
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+            Hotels in Mukteshwar: Frequently Asked Questions
+          </h2>
+
+          <div class="space-y-4 my-6">
+            {mukteshwarFaqs.map((faq, index) => (
+              <div class="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-xs space-y-2">
+                <h3 class="text-base font-bold text-[#0E2C21] flex items-start gap-2">
+                  <span class="text-[#7A6038]">Q{index + 1}:</span>
+                  <span>{faq.question}</span>
+                </h3>
+                <p class="text-sm text-gray-700 font-light leading-relaxed pl-6">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Direct CTA Box */}
+          <div class="bg-[#0E2C21] text-white p-8 sm:p-10 rounded-sm shadow-md my-8 space-y-4 text-center">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#B0966D] block">
+              Direct Resident Privileges &bull; Flat 25% Off OTA Rates
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-bold font-display text-white">
+              Still comparing hotels in Mukteshwar?
+            </h3>
+            <p class="text-sm sm:text-base text-gray-200 font-light max-w-2xl mx-auto">
+              Send your dates and group size to Gaurav Pandey on WhatsApp. You will get the live
+              rate, what is still available, and a straight answer on whether this ridge or the
+              market area suits your trip better.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={waMukteshwarLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-sm rounded-sm shadow-md transition-all duration-300"
+              >
+                <span>💬 WhatsApp Front Desk (+91-7505029696)</span>
+              </a>
+              <a
+                href="/book-now/"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#B0966D] hover:bg-[#C4A77D] text-[#0E2C21] font-bold text-sm rounded-sm transition-all duration-300 shadow-sm"
+              >
+                <span>Check Rates &amp; Book Direct</span>
+              </a>
+            </div>
+            <p class="text-xs text-gray-300 font-light pt-2">
+              ⚡ Instant host confirmation &bull; Free cancellation options &bull; Zero OTA markups
+            </p>
+          </div>
+
+          {/* Author Bio */}
+          <div class="bg-white p-6 sm:p-8 rounded-sm border border-[#EAE8E3] shadow-xs flex flex-col sm:flex-row items-start sm:items-center gap-5 my-8">
+            <img
+              src="/images/Gaurav-pandey-casa-de-bello.webp"
+              alt="Gaurav Pandey — Director, Casa De Bello Pvt Ltd"
+              class="w-16 h-16 rounded-full object-cover border-2 border-[#B0966D] shrink-0"
+              width="64"
+              height="64"
+              loading="lazy"
+            />
+            <div class="space-y-1.5">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#7A6038] block">About the Author &amp; On-Site Host</span>
+              <h4 class="text-lg font-bold text-[#0E2C21]">Gaurav Pandey</h4>
+              <p class="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
+                Gaurav Pandey is the Director of <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" class="text-[#7A6038] underline font-semibold">Casa De Bello Pvt Ltd</a>
+                and heads Whispering Pines Resort at Malla Ramgarh on the Bhowali-Ramgarh-Mukteshwar
+                Road, formerly Clarks Exotica. He has hosted guests on this ridge through every
+                season, including the winters when the last stretch of road closes. Read the full
+                story on the <a href="/about-whispering-pines-resort-ramgarh/" class="text-[#7A6038] underline font-semibold">About Us page</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Share Bar Bottom */}
+        <BlogShareBar
+          title={pageTitle}
+          url={canonicalUrl}
+          description={pageDescription}
+          label="Found this Mukteshwar stay guide useful? Send it to whoever is booking"
+          className="mt-8 mb-4"
+        />
+      </header>
+    </div>
+  </article>
+</Layout>

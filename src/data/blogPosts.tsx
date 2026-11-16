@@ -23,6 +23,20 @@ export type BlogPostData = {
 
 export const BLOG_POSTS: BlogPostData[] = [
   {
+    id: 18,
+    slug: "hotels-in-mukteshwar",
+    customUrl: "/blog/hotels-in-mukteshwar/",
+    title: "Hotels in Mukteshwar: How to Pick the Right Stay (2026 Guide)",
+    seoTitle: "Hotels in Mukteshwar: How to Pick the Right Stay (2026)",
+    seoDescription: "A straight guide to hotels in Mukteshwar: how the ridge areas differ, what each price band gets you, and which stay suits families, couples and pet owners.",
+    excerpt: "Comparing hotels in Mukteshwar? The area you pick matters more than the star rating. Budget guesthouses near the market, mid-range cottages in Dhanachuli and Satkhol, and 4-star resorts on the Bhowali-Ramgarh-Mukteshwar Road, with what to check before you pay.",
+    date: "November 17, 2026",
+    updatedDate: "November 17, 2026",
+    readTime: "11 min read",
+    imageUrl: "/images/Resort-in-nanital-on-mukteshwar-road.avif",
+    imageAlt: "Hotels in Mukteshwar: Whispering Pines Resort on the Bhowali-Ramgarh-Mukteshwar Road with 180 degree Himalayan views"
+  },
+  {
     id: 17,
     slug: "places-for-corporate-team-outing-near-delhi",
     customUrl: "/blog/places-for-corporate-team-outing-near-delhi/",
