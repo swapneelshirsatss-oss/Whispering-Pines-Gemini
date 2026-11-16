@@ -65,6 +65,8 @@ export const propertyDetails = {
     "Whispering Pines Resort Mukteshwar",
     "Whispering Pines Resort near Mukteshwar",
     "Whispering Pines by Casa De Bello",
+    "Casa De Bello - Whispering Pines Mukteshwar Road",
+    "Casa De bello - Whsipering pines Mukteshwar Road",
     "Casa De Bello Mukteshwar - ramgarh",
     "Casa De Bello Mukteshwar - Ramgarh"
   ],
