@@ -33,8 +33,8 @@ export const BLOG_POSTS: BlogPostData[] = [
     date: "November 17, 2026",
     updatedDate: "November 17, 2026",
     readTime: "7 min read",
-    imageUrl: "/images/Whispering-pines-balcony-view-nanital.avif",
-    imageAlt: "New Year packages near Delhi: bonfire lawn and Nanda Devi snow peak views at Whispering Pines Resort, Malla Ramgarh"
+    imageUrl: "/images/2027-new-year-in-the-himalayan-foothills.webp",
+    imageAlt: "2027 New Year in the Himalayan Foothills at Whispering Pines Resort near Delhi"
   },
   {
     id: 18,
@@ -47,8 +47,8 @@ export const BLOG_POSTS: BlogPostData[] = [
     date: "November 17, 2026",
     updatedDate: "November 17, 2026",
     readTime: "11 min read",
-    imageUrl: "/images/Resort-in-nanital-on-mukteshwar-road.avif",
-    imageAlt: "Hotels in Mukteshwar: Whispering Pines Resort on the Bhowali-Ramgarh-Mukteshwar Road with 180 degree Himalayan views"
+    imageUrl: "/images/hotels-in-mukteshwar-temple-among-pines.webp",
+    imageAlt: "Hotels in Mukteshwar: Temple Among Pines on the Mukteshwar ridge"
   },
   {
     id: 17,
