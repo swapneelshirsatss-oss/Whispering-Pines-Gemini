@@ -3,18 +3,20 @@
 Read this first in every session. Update it after finishing a task or stopping work.
 
 ## 1. Current Status
-- **Active Phase:** Phase 7: Grow (site is live; guide files added 2026-11-16)
-- **Last Updated:** 2026-11-16
+- **Active Phase:** Phase 7: Grow (site is live; guide files added 2026-11-16; backlink tracker synced 2026-11-17)
+- **Last Updated:** 2026-11-17
 
 ## 2. Open Tasks (from the weekly SEO report of 2026-11-15)
 - [ ] Rate parity: Agoda ₹2,415 vs official site ₹3,675 on Google Hotels (2026-11-15).
 - [ ] Merge the two hotel schema blocks on the homepage into one.
 - [x] Update review count 409 → 425 sitewide (60 occurrences across 29 files safely synced with word boundaries).
+- [x] Synchronize Backlink & Anchor Text Google Sheet tracker (`1gNVt5CLMvDEDBT5FtNLHKRpT95ynFB45RMtOo5HLF_g`): corrected NAP, updated 425+ reviews, eliminated forbidden stone cottage terminology, updated deprecated redirect target, and added 4 new target pages (#27-#30 / #10-#13) expanding outreach pipeline to 30 verified links.
 - [ ] The client sheet's GBP calendar says "Save 20%"; the profile says 25%. Fix the posts.
-- [ ] The client sheet plans a heading "Stone Cottage Rooms". Do not use it (forbidden term).
+- [x] The client sheet plans a heading "Stone Cottage Rooms". Fixed in Google Sheet tracker to "private 3-BHK alpine villa".
 - [ ] Confirm the room count (sheet says 25 rooms + 1 villa) and add it to the profile.
 
 ## 3. Completed Milestones & Decisions
+- 2026-11-17 — Synchronized and expanded Google Sheet Backlink & Anchor Text Tracker (`1gNVt5CLMvDEDBT5FtNLHKRpT95ynFB45RMtOo5HLF_g`): corrected NAP header (removed House No. 23-13/4), updated verified review count to 425+, updated villa terminology (removed forbidden "stone villa"), updated 301 deprecated target URL, and added 4 new outreach opportunities (#27-#30) + 4 new target landing pages (#10-#13) bringing total planned links to 30 across 13 landing pages with healthy anchor text distribution (50% branded/naked, 6.7% exact match).
 - 2026-11-16 — Performed full SXO (Search Experience Optimization) audit on `/blog/hotels-in-mukteshwar/` (Score: 88/100, Aligned intent match, 4 persona models scored). Report saved to `05_Marketing/SEO-Reports/SXO-Audit-Hotels-in-Mukteshwar-2026-11-16.md`.
 - 2026-11-16 — Updated official header & featured images for `/blog/new-year-packages-near-delhi/` and `/blog/hotels-in-mukteshwar/` with WebP preload links and web-safe paths.
 - 2026-11-16 — Upgraded `/blog/hotels-in-mukteshwar/` with speakable AEO direct answer block, speakable FAQs, ItemList schema, `<DistanceTransitMatrix />`, `<HostFieldNote />`, and dropped "(2026 Guide)" from title. Added 3 inbound links from `/blog/best-resort-to-stay-near-mukteshwar/`, `/blog/resort-stay-near-kainchi-dham/`, and `/blog/nainital-in-december/`.
