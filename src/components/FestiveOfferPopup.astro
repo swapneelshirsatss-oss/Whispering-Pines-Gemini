@@ -1,6 +1,6 @@
 ---
 // Christmas & New Year 2026-27 booking card (non-modal, slide-up). Rates confirmed by Swapneel on 2026-11-16
-// and match /blog/new-year-packages-near-delhi/. Shows after 8s or 40% scroll, never on arrival (Google's mobile
+// and match /blog/new-year-packages-near-delhi/. Shows after 4s or 40% scroll, never on arrival (Google's mobile
 // intrusive-interstitial rule), dismiss hides it for 3 days, and it switches itself off on 1 Jan 2027.
 // Remove this component (and its line in Layout.astro) after the season.
 const OFFER_ENDS = '2027-01-01T00:00:00+05:30';
@@ -61,7 +61,7 @@ const waLink = `https://wa.me/917505029696?text=${waText}`;
       var max = document.documentElement.scrollHeight - innerHeight;
       if (max > 0 && scrollY / max >= 0.4) show();
     }
-    setTimeout(show, 8000);
+    setTimeout(show, 4000);
     window.addEventListener('scroll', onScroll, { passive: true });
     el.querySelector('[data-wpf-close]').addEventListener('click', hide);
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !el.hidden) hide(); });
