@@ -6,6 +6,7 @@
 // Phones: link groups are <details> (collapsed but in the HTML for crawlers); desktop opens them via the script below.
 import { MapPin, Phone, Mail, ArrowUpRight } from 'lucide-react';
 import { RESORT_CONTACT } from "../data";
+import { siFacebook, siInstagram, siYoutube, siTripadvisor } from 'simple-icons';
 import Logo from "./Logo.astro";
 
 const currentYear = new Date().getFullYear();
@@ -48,12 +49,20 @@ const groups = [
   },
 ];
 
+// Official brand marks (simple-icons), inlined at build time: no runtime JS or image requests.
 const socials = [
-  ['Facebook', RESORT_CONTACT.socials?.facebook],
-  ['Instagram', RESORT_CONTACT.socials?.instagram],
-  ['YouTube', RESORT_CONTACT.socials?.youtube],
-  ['TripAdvisor', RESORT_CONTACT.socials?.tripadvisor],
-].filter(([, url]) => url);
+  { icon: siFacebook, url: RESORT_CONTACT.socials?.facebook },
+  { icon: siInstagram, url: RESORT_CONTACT.socials?.instagram },
+  { icon: siYoutube, url: RESORT_CONTACT.socials?.youtube },
+  { icon: siTripadvisor, url: RESORT_CONTACT.socials?.tripadvisor },
+].filter((s) => s.url);
+
+// Sister properties (websites from the client profiles; logos from each client's 03_Raw-Media).
+const ourHotels = [
+  { name: 'Anurra', place: 'Kainchi Dham', url: 'https://anurrakainchidhamhotel.in/', logo: '/images/our-hotels/anurra-kainchi-dham.webp', w: 238, h: 180 },
+  { name: 'Casa De Bello', place: 'Kainchi Dham', url: 'https://casadebello.com/', logo: '/images/our-hotels/casa-de-bello-kainchi-dham.webp', w: 360, h: 111 },
+  { name: 'Hotel Vikrant', place: 'Nainital', url: 'https://vikranthotelnainital.in/', logo: '/images/our-hotels/hotel-vikrant-nainital.webp', w: 180, h: 180 },
+];
 ---
 <footer class="bg-[#0E2C21] text-[#FAF9F6] pt-12 pb-8 border-t border-[#B0966D]/20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -152,10 +161,28 @@ const socials = [
       </a>
     </div>
 
+    {/* Our hotels: sister properties on identical cream cards */}
+    <div class="py-8 border-b border-[#FAF9F6]/10">
+      <p class="text-xs uppercase tracking-[0.14em] text-[#C4A77D] font-semibold mb-4">Our hotels</p>
+      <ul class="grid grid-cols-3 gap-3 md:gap-5 max-w-2xl">
+        {ourHotels.map((h) => (
+          <li>
+            <a href={h.url} target="_blank" rel="noopener" class="group block text-center" title={`${h.name}, ${h.place}`}>
+              <span class="flex items-center justify-center h-20 md:h-24 p-3 bg-[#FAF9F6] rounded-sm transition-opacity group-hover:opacity-90">
+                <img src={h.logo} alt={`${h.name} logo`} width={h.w} height={h.h} loading="lazy" decoding="async" class="max-h-full w-auto object-contain" />
+              </span>
+              <span class="block mt-2 text-xs text-[#FAF9F6]/85 group-hover:text-[#C4A77D]">{h.name}</span>
+              <span class="block text-[11px] text-[#FAF9F6]/55">{h.place}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
     {/* Bottom bar */}
     <div class="pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-[#FAF9F6]/60">
       <div class="space-y-2">
-        <p>© {currentYear} Whispering Pines Resort by Casa De Bello. Operated by <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#C4A77D]">Casa De Bello</a>.</p>
+        <p>© {currentYear} <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" class="hover:text-[#C4A77D]">Casa De Bello Hospitality</a>. All rights reserved.</p>
         <p class="flex flex-wrap items-center gap-x-3">
           <a href="/privacy-policy/" class="inline-flex min-h-11 items-center hover:text-[#C4A77D]">Privacy</a>
           <a href="/terms/" class="inline-flex min-h-11 items-center hover:text-[#C4A77D]">Terms</a>
@@ -164,10 +191,10 @@ const socials = [
         </p>
       </div>
       <div class="flex flex-wrap items-center gap-2">
-        {socials.map(([name, url]) => (
-          <a href={url} target="_blank" rel="noopener noreferrer" aria-label={name} title={`Whispering Pines on ${name}`}
-            class="inline-flex items-center justify-center min-h-11 px-3 border border-[#FAF9F6]/15 rounded-sm hover:border-[#C4A77D] hover:text-[#C4A77D] transition-colors text-[11px] uppercase tracking-wider">
-            {name}
+        {socials.map(({ icon, url }) => (
+          <a href={url} target="_blank" rel="noopener noreferrer" aria-label={icon.title} title={`Whispering Pines on ${icon.title}`}
+            class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#FAF9F6] transition-opacity hover:opacity-85">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill={`#${icon.hex}`}><path d={icon.path} /></svg>
           </a>
         ))}
       </div>
