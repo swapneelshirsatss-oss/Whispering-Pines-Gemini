@@ -89,7 +89,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     date: "November 4, 2026",
     updatedDate: "November 4, 2026",
     readTime: "12 min read",
-    imageUrl: "/images/Whispering-pines-balcony-view-nanital.avif",
+    imageUrl: "/images/View-from-resort-mukteshwar.avif",
     imageAlt: "Winter Himalayan snow peaks view from balcony of Whispering Pines Resort near Nainital in December"
   },
   {
@@ -497,7 +497,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <ol className="list-decimal pl-6 space-y-3 text-gray-700 font-light">
           <li><strong>Pick a shoulder month.</strong> March, April, late September and October usually price 15 to 25 percent below November and February.</li>
           <li><strong>Get married on a weekday.</strong> Weekends cost the most, and a Thursday wedding also dodges the weekend tourist traffic on hill roads.</li>
-          <li><strong>Keep everyone under one roof.</strong> A full buyout means no shuttles between hotels, and the lawn, dining room and pool are yours alone.</li>
+          <li><strong>Keep everyone under one roof.</strong> A full buyout means no shuttles between hotels, and the lawns, dining room, and orchards are yours alone.</li>
           <li><strong>Merge mehendi and sangeet.</strong> One evening instead of two saves ₹80,000 to ₹1.2 lakh on décor and ₹50,000 to ₹80,000 on catering, according to SnazzyTrips.</li>
           <li><strong>Hire local vendors.</strong> Photographers from Haldwani or Ramnagar charge ₹50,000 to ₹70,000 a day, with no travel or hotel bill on top.</li>
           <li><strong>Let the view do the work.</strong> A Himalayan backdrop needs far less floral décor than a banquet hall.</li>
@@ -507,7 +507,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         {/* What WP includes */}
         <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">What a Wedding at Whispering Pines Includes</h2>
         <p className="text-gray-700 leading-relaxed font-light">
-          Whispering Pines Resort by Casa De Bello sits at 1,780 metres in Malla Ramgarh, Nainital district, looking straight at Nanda Devi and Trishul. For a wedding, we close the whole property to outside guests, so it is just your families on the lawns, in the dining room and around the pool.
+          Whispering Pines Resort by Casa De Bello sits at 1,780 metres in Malla Ramgarh, Nainital district, looking straight at Nanda Devi and Trishul. For a wedding, we close the whole property to outside guests, so it is just your families on the lawns, in the dining room, and across the orchards.
         </p>
         <div className="overflow-x-auto rounded-sm border border-[#EAE8E3] my-6">
           <table className="w-full text-left text-xs sm:text-sm">
@@ -564,7 +564,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <ol className="list-decimal pl-6 space-y-3 text-gray-700 font-light">
           <li><strong>Day 1, afternoon:</strong> guests arrive from Delhi and Kathgodam, check in, and gather for a combined haldi and mehendi on the villa lawn.</li>
           <li><strong>Day 1, evening:</strong> sangeet around a bonfire with the DJ, then dinner.</li>
-          <li><strong>Day 2, morning:</strong> a slow breakfast, orchard walks and the pool.</li>
+          <li><strong>Day 2, morning:</strong> a slow breakfast and orchard walks.</li>
           <li><strong>Day 2, golden hour:</strong> pheras on the Nanda Devi lawn, then the reception dinner outdoors.</li>
           <li><strong>Day 3, morning:</strong> breakfast and checkout, with time to reach Delhi before dark.</li>
         </ol>
@@ -620,7 +620,7 @@ export const BLOG_POSTS: BlogPostData[] = [
               Rooms for Your Guests
             </a>
             <a href="/resort-amenities-mukteshwar/" className="p-3 bg-white rounded-sm border border-[#EAE8E3] text-[#0E2C21] font-semibold hover:border-[#8A6F4A] transition-colors shadow-sm">
-              Pool and Resort Amenities
+              Resort Amenities &amp; Orchards
             </a>
             <a href="/blog/resort-stay-near-kainchi-dham/" className="p-3 bg-white rounded-sm border border-[#EAE8E3] text-[#0E2C21] font-semibold hover:border-[#8A6F4A] transition-colors shadow-sm">
               Add a Kainchi Dham Darshan
@@ -686,7 +686,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     excerpt: "The breathtaking Malla Ramgarh sanctuary you previously knew as Clarks Exotica near Mukteshwar has officially evolved. We are proud to announce our comprehensive rebranding and property upgrade to Whispering Pines Resort, now operating exclusively under the premium hospitality management of Casa De Bello (https://casadebello.com/).",
     date: "June 27, 2026",
     readTime: "4 min read",
-    imageUrl: "/images/Whispering-pines-balcony-view-nanital.avif",
+    imageUrl: "/images/View-from-resort-mukteshwar.avif",
     faqSchema: {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -696,7 +696,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           "name": "Is Clarks Exotica Ramgarh Mukteshwar now Whispering Pines Resort?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Clarks Exotica on the Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh (Uttarakhand 263137) is now operating as Whispering Pines Resort by Casa De Bello at the exact same location with upgraded suites, a pine forest swimming pool, a 3-BHK private alpine villa, and 150 Mbps fiber Wi-Fi."
+            "text": "Yes. Clarks Exotica on the Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh (Uttarakhand 263137) is now operating as Whispering Pines Resort by Casa De Bello at the exact same location with upgraded suites, a 3-BHK private alpine villa, fruit orchards, and 150 Mbps fiber Wi-Fi."
           }
         },
         {
@@ -712,7 +712,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           "name": "What new facilities were added under Casa De Bello management?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "New upgrades include an outdoor pine forest swimming pool at 1,780m altitude, a standalone 3-BHK Private Alpine Villa sleeping up to 10 guests, 150 Mbps enterprise fiber Wi-Fi across all 25 rooms and lawns, and farm-to-table Kumaoni dining."
+            "text": "New upgrades include a standalone 3-BHK Private Alpine Villa sleeping up to 10 guests, 150 Mbps enterprise fiber Wi-Fi across all 25 rooms and lawns, and farm-to-table Kumaoni dining."
           }
         }
       ]
@@ -730,7 +730,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <ul className="list-disc pl-6 text-gray-600 space-y-2 font-light">
           <li><strong>Frictionless Service:</strong> Direct-to-guest operational model ensuring rapid response times and personalized itinerary planning.</li>
           <li><strong>Enhanced Corporate Offsite Capabilities:</strong> Upgraded 150 Mbps fiber Wi-Fi infrastructure and dedicated event spaces for retreats.</li>
-          <li><strong>Private Villa & Pool Amenities:</strong> Introduction of a 3-bedroom private villa and outdoor swimming pool surrounded by pine forest.</li>
+          <li><strong>Private Villa &amp; Lawn Amenities:</strong> Introduction of a 3-bedroom private villa and 2,200 sq ft panoramic Nanda Devi lawn.</li>
         </ul>
 
         <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">Honoring Our Legacy: A Promise to Past Clarks Exotica Guests</h2>
@@ -778,7 +778,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         </p>
 
         <p className="text-base leading-relaxed text-gray-700 font-light">
-          <a href="/about-whispering-pines-resort-ramgarh/" className="text-[#0E2C21] font-semibold underline">Whispering Pines Resort by Casa De Bello</a> is positioned directly inside private peach, plum, and apple orchards in Malla Ramgarh at 1,780 metres altitude. Featuring 25 premium rooms, a standalone <a href="/private-villas-near-nainital/" className="text-[#0E2C21] font-semibold underline">private villa</a>, an outdoor pool, 150 Mbps fiber Wi-Fi, and 180° views of Nanda Devi and Trishul peaks, it offers guests a stay experience in the heart of Kumaon's orchard country.
+          <a href="/about-whispering-pines-resort-ramgarh/" className="text-[#0E2C21] font-semibold underline">Whispering Pines Resort by Casa De Bello</a> is positioned directly inside private peach, plum, and apple orchards in Malla Ramgarh at 1,780 metres altitude. Featuring 25 premium rooms, a standalone <a href="/private-villas-near-nainital/" className="text-[#0E2C21] font-semibold underline">private villa</a>, 150 Mbps fiber Wi-Fi, and 180° views of Nanda Devi and Trishul peaks, it offers guests a stay experience in the heart of Kumaon's orchard country.
         </p>
 
         <div className="my-6">
@@ -1005,9 +1005,9 @@ export const BLOG_POSTS: BlogPostData[] = [
                 <td className="p-3 font-semibold text-[#0E2C21]">Enterprise 150 Mbps Fiber Wi-Fi across property</td>
               </tr>
               <tr>
-                <td className="p-3 font-semibold">Recreation & Pool</td>
-                <td className="p-3">No pool or outdoor lawn areas</td>
-                <td className="p-3 font-semibold text-[#0E2C21]">Outdoor swimming pool surrounded by pine canopy</td>
+                <td className="p-3 font-semibold">Lawns &amp; Orchards</td>
+                <td className="p-3">Limited outdoor lawn areas</td>
+                <td className="p-3 font-semibold text-[#0E2C21]">2,200 sq ft Nanda Devi lawn &amp; working fruit orchards</td>
               </tr>
               <tr className="bg-yellow-50/50">
                 <td className="p-3 font-semibold">Pet Friendliness</td>
@@ -1190,7 +1190,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           "name": "Is Whispering Pines the best resort near Nainital for families, couples and tourists?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Rated 4.6★ from 425 verified Google reviews, Whispering Pines Resort by Casa De Bello in Malla Ramgarh offers 25 premium rooms and 1 standalone 3-BHK Private Alpine Villa with 180° Nanda Devi views from every room, a pine forest swimming pool, 150 Mbps fiber Wi-Fi, and pet-friendly fruit orchards."
+            "text": "Yes. Rated 4.6★ from 425 verified Google reviews, Whispering Pines Resort by Casa De Bello in Malla Ramgarh offers 25 premium rooms and 1 standalone 3-BHK Private Alpine Villa with 180° Nanda Devi views from every room, 150 Mbps fiber Wi-Fi, and pet-friendly fruit orchards."
           }
         },
         {
@@ -1236,7 +1236,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="aeo-direct-answer bg-[#FAF9F6] p-6 rounded-sm border-l-4 border-[#8A6F4A] shadow-sm space-y-2">
           <div className="text-xs font-bold text-[#7A6038] uppercase tracking-widest">Quick Answer: Best Resort to Stay Near Mukteshwar</div>
           <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light">
-            <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (1,780m, 25 km / 45 mins from Mukteshwar Dham), rated <strong>4.6★ across 425 verified Google reviews</strong>, is the best resort near Mukteshwar. All 25 rooms and the standalone 3-BHK Alpine Villa offer unobstructed <strong>180° Himalayan snow peak views</strong> of Nanda Devi, complemented by a pine forest swimming pool, 150 Mbps fiber Wi-Fi, and flat <strong>25% direct booking savings</strong> via WhatsApp (+91-7505029696).
+            <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (1,780m, 25 km / 45 mins from Mukteshwar Dham), rated <strong>4.6★ across 425 verified Google reviews</strong>, is the best resort near Mukteshwar. All 25 rooms and the standalone 3-BHK Alpine Villa offer unobstructed <strong>180° Himalayan snow peak views</strong> of Nanda Devi, complemented by 150 Mbps fiber Wi-Fi, working fruit orchards, and flat <strong>25% direct booking savings</strong> via WhatsApp (+91-7505029696).
           </p>
         </div>
 
@@ -1305,7 +1305,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             alt="Why Choose Whispering Pines as Your Resort near Nainital" 
             className="w-full h-80 sm:h-96 object-cover rounded-sm border border-[#EAE8E3] shadow-md" 
           />
-          <p className="text-sm text-center text-gray-500 mt-2">180° Himalayan views, pine forest swimming pool, and stone architecture at Whispering Pines Resort near Nainital.</p>
+          <p className="text-sm text-center text-gray-500 mt-2">180° Himalayan views, fruit orchards, and cedar-and-stone architecture at Whispering Pines Resort near Nainital.</p>
         </div>
 
         {/* Feature Comparison Table */}
@@ -1347,7 +1347,7 @@ export const BLOG_POSTS: BlogPostData[] = [
               <tr className="bg-white">
                 <td className="p-3 font-semibold">Outdoor Recreation</td>
                 <td className="p-3 text-red-600">Zero private lawn or garden spaces</td>
-                <td className="p-3 font-semibold text-emerald-700">2,200 sq ft panoramic lawn, pine pool, orchards</td>
+                <td className="p-3 font-semibold text-emerald-700">2,200 sq ft panoramic lawn, working fruit orchards</td>
               </tr>
               <tr className="bg-gray-50">
                 <td className="p-3 font-semibold">Wi-Fi Performance</td>
@@ -1469,7 +1469,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="space-y-4">
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] mb-1">Q1. Is Whispering Pines the best resort near Nainital for families, couples and tourists?</h3>
-            <p className="text-sm text-gray-600 font-light">Yes. Rated 4.6★ from 425 verified Google reviews (see <a href="/reviews/" className="text-[#7A6038] underline font-semibold">guest reviews</a>), Whispering Pines Resort by Casa De Bello is widely recognized as a top-rated resort near Nainital for families, couples and tourists. It offers a pine forest pool, 180° Nanda Devi views, 25 premium rooms + 1 standalone <a href="/private-villas-near-nainital/" className="text-[#0E2C21] underline">3-BHK Private Alpine Villa</a>, 150 Mbps Wi-Fi, and pet-friendly fruit orchards.</p>
+            <p className="text-sm text-gray-600 font-light">Yes. Rated 4.6★ from 425 verified Google reviews (see <a href="/reviews/" className="text-[#7A6038] underline font-semibold">guest reviews</a>), Whispering Pines Resort by Casa De Bello is widely recognized as a top-rated resort near Nainital for families, couples and tourists. It offers 180° Nanda Devi views, 25 premium rooms + 1 standalone <a href="/private-villas-near-nainital/" className="text-[#0E2C21] underline">3-BHK Private Alpine Villa</a>, 150 Mbps Wi-Fi, and pet-friendly fruit orchards.</p>
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] mb-1">Q2. How far is Whispering Pines Resort from Nainital Mall Road?</h3>
@@ -1485,7 +1485,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="bg-[#0E2C21] text-white p-8 rounded-sm text-center space-y-4 my-8 shadow-md border border-[#B0966D]/30">
           <h3 className="text-2xl font-bold text-white">Reserve Your Stay at the Best Resort near Nainital for Families, Couples and Tourists</h3>
           <p className="text-sm text-gray-300 max-w-xl mx-auto">
-            Enjoy 180° snow peak views, a pine forest pool, 150 Mbps Wi-Fi, private fruit orchards, and spacious stone-and-wood suites — all located just 45 minutes from Nainital and Kainchi Dham.
+            Enjoy 180° snow peak views, 150 Mbps Wi-Fi, private fruit orchards, and spacious cedar-and-stone suites — all located just 45 minutes from Nainital and Kainchi Dham.
           </p>
           <div className="text-xs text-gray-400">
             Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137 (<a href="/contact-whispering-pines-resort-mukteshwar/" className="text-[#B0966D] underline">Get Directions</a>)
@@ -1528,7 +1528,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         {
           "@type": "Question",
           "name": "Is Whispering Pines the best 4-star resort hotel near Kainchi Dham Ashram Neem Karoli Baba?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whispering Pines Resort Hotel is a top-rated 4-star resort hotel near Kainchi Dham Ashram. Located in Malla Ramgarh (22 km / 45-minute drive), it offers 180° Himalayan views, ground-floor step-free hotel rooms, pure veg/Satvik dining, a pine forest pool, 150 Mbps Wi-Fi, and a 4.6 star Google rating across 425 reviews." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whispering Pines Resort Hotel is a top-rated 4-star resort hotel near Kainchi Dham Ashram. Located in Malla Ramgarh (22 km / 45-minute drive), it offers 180° Himalayan views, ground-floor step-free hotel rooms, pure veg/Satvik dining, 150 Mbps Wi-Fi, and a 4.6 star Google rating across 425 reviews." }
         },
         {
           "@type": "Question",
@@ -1695,7 +1695,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">Are There Any 4-Star Hotels Near Kainchi Dham?</h2>
         <p className="text-gray-700 leading-relaxed font-light">
-          Very few. Stays right beside the Ashram are mostly budget lodges and guesthouses, so travellers who want 4-star facilities usually base themselves a short drive away. Whispering Pines Resort is a 4-star resort hotel in Malla Ramgarh, 22 km from Kainchi Dham, with a pool, a multi-cuisine restaurant, 24/7 in-room dining and a private villa.
+          Very few. Stays right beside the Ashram are mostly budget lodges and guesthouses, so travellers who want 4-star facilities usually base themselves a short drive away. Whispering Pines Resort is a 4-star resort hotel in Malla Ramgarh, 22 km from Kainchi Dham, with a multi-cuisine restaurant, 24/7 in-room dining, working fruit orchards and a private villa.
         </p>
         <p className="text-gray-700 leading-relaxed font-light">
           Whichever hotel you choose, ask four questions before you book: Is hot water reliable in winter? Is there power backup? Where will you park? Are there ground-floor rooms for elderly family members?
@@ -1761,11 +1761,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             <p className="text-gray-600 text-sm font-light">Ground-floor hotel rooms, flat garden pathways, wheelchair availability, and step-free access make the resort hotel comfortable for elderly pilgrims and multi-generational families.</p>
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
-            <h3 className="font-bold text-[#0E2C21] text-lg mb-1">4. Swimming Pool Surrounded by Pine Forest</h3>
-            <p className="text-gray-600 text-sm font-light">Unwind after your visit to the Ashram at our outdoor <a href="/resort-amenities-mukteshwar/" className="text-[#0E2C21] font-semibold underline">pine forest swimming pool</a>. Set amidst dense pine and cedar trees, the pool area offers relaxing mountain surroundings for hotel guests.</p>
-          </div>
-          <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
-            <h3 className="font-bold text-[#0E2C21] text-lg mb-1">5. Private 8 to 10-Sleeper Villa for Family Groups</h3>
+            <h3 className="font-bold text-[#0E2C21] text-lg mb-1">4. Private 8 to 10-Sleeper Villa for Family Groups</h3>
             <p className="text-gray-600 text-sm font-light">Traveling with extended family? Our standalone <a href="/private-villas-near-nainital/" className="text-[#0E2C21] font-semibold underline">private villa near Nainital</a> features a 3-bedroom layout, 3 washrooms, a spacious living hall, a fully functional kitchenette, and a large open terrace overlooking the hills.</p>
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
@@ -1835,9 +1831,9 @@ export const BLOG_POSTS: BlogPostData[] = [
                 <td className="p-3 font-semibold text-[#0E2C21]">Pure Veg, Satvik & Kumaoni options on request</td>
               </tr>
               <tr>
-                <td className="p-3 font-semibold">Pool & Outdoor Space</td>
-                <td className="p-3">Outdoor grounds and pools are rare</td>
-                <td className="p-3 font-semibold text-[#0E2C21]">Outdoor pine forest pool, bonfire pit, private orchards</td>
+                <td className="p-3 font-semibold">Lawns &amp; Outdoor Space</td>
+                <td className="p-3">Outdoor grounds and lawns are rare</td>
+                <td className="p-3 font-semibold text-[#0E2C21]">2,200 sq ft Nanda Devi lawn, bonfire pit, private orchards</td>
               </tr>
               <tr className="bg-yellow-50/50">
                 <td className="p-3 font-semibold">Wi-Fi Speed</td>
@@ -1856,7 +1852,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         {/* Price section (question-led) */}
         <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">Nearest Hotel Price Near Kainchi Dham</h2>
         <p className="text-gray-700 leading-relaxed font-light">
-          Budget rooms beside the Ashram usually cost less per night than a resort. The difference buys a quieter night, a Himalayan view, a pool, and a base you can stay in for more than one night. At Whispering Pines, room rates change with the season and the room type, ranging from about ₹3,000 to ₹16,000 a night, with the private villa at the top of that range.
+          Budget rooms beside the Ashram usually cost less per night than a resort. The difference buys a quieter night, a Himalayan view, working fruit orchards, and a base you can stay in for more than one night. At Whispering Pines, room rates change with the season and the room type, ranging from about ₹3,000 to ₹16,000 a night, with the private villa at the top of that range.
         </p>
         <p className="text-gray-700 leading-relaxed font-light">
           Online travel agencies charge hotels a commission, and that cost sits inside the price you see. Book direct and you get a flat 25% off the OTA rate for the same dates, plus a best price guarantee. For example, a room listed at ₹8,000 a night on an OTA costs ₹6,000 direct, which saves ₹6,000 over a three-night stay.
@@ -2072,7 +2068,7 @@ export const BLOG_POSTS: BlogPostData[] = [
                 <td className="p-3 font-bold text-[#0E2C21]">16 km</td>
                 <td className="p-3 font-bold text-[#0E2C21]">35 Mins</td>
                 <td className="p-3">9:00 AM – 3:00 PM</td>
-                <td className="p-3">Light 1.5 km forest trek, natural mountain pool, bird watching.</td>
+                <td className="p-3">Light 1.5 km forest trek, natural waterfall plunge pool, bird watching.</td>
               </tr>
               <tr>
                 <td className="p-3 font-semibold">Mukteshwar Dham Temple</td>
@@ -2117,7 +2113,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <li><strong>Park early:</strong> parking near the Ashram is limited and fills quickly, especially on weekends. Share cars where you can.</li>
           <li><strong>Allow 2 to 3 hours:</strong> for darshan, prasad and a quiet walk by the Kosi river.</li>
           <li><strong>Head back by late morning:</strong> you avoid the late-morning build-up and reach Ramgarh in time for a relaxed lunch.</li>
-          <li><strong>Afternoon and evening:</strong> an orchard walk, the pine forest pool, and the bonfire after dark. Skip the drive back for evening aarti unless you are comfortable on mountain roads at night.</li>
+          <li><strong>Afternoon and evening:</strong> an orchard walk, tea on the Nanda Devi lawn, and the bonfire after dark. Skip the drive back for evening aarti unless you are comfortable on mountain roads at night.</li>
         </ol>
         <p className="text-gray-700 leading-relaxed font-light">
           Plan extra time on summer weekends and around 15 June, the Ashram's foundation day Bhandara, when queues can run for hours. For the quietest darshan, choose a weekday outside the summer peak.
@@ -2139,7 +2135,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             <ul className="text-xs text-gray-600 space-y-2 list-disc pl-4">
               <li><strong>Morning:</strong> Visit Mukteshwar Dham Temple (25 km / 45 mins) and explore Chauli Ki Jali cliff for panoramic views of the Himalayas.</li>
               <li><strong>Afternoon:</strong> Embark on the light <a href="/things-to-do-near-mukteshwar/" className="text-[#0E2C21] font-semibold underline">Bhalu Gaad waterfall trek</a> (16 km / 35 mins) for forest streams.</li>
-              <li><strong>Evening:</strong> Return to Whispering Pines for a dip in the pine forest swimming pool and a private dinner on the lawn.</li>
+              <li><strong>Evening:</strong> Return to Whispering Pines for a cedar bonfire and a private dinner on the lawn.</li>
             </ul>
           </div>
         </div>
@@ -2149,7 +2145,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="space-y-4">
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q1. Is Whispering Pines the best 4-star resort hotel near Kainchi Dham Ashram Neem Karoli Baba?</h3>
-            <p className="text-sm text-gray-600 font-light">Yes. Whispering Pines Resort Hotel is a top-rated 4-star resort hotel near Kainchi Dham Ashram. Located in Malla Ramgarh (22 km / 45-minute drive), it offers 180° Himalayan views, ground-floor step-free hotel rooms, pure veg/Satvik dining, a pine forest pool, 150 Mbps Wi-Fi, and a <a href="/reviews/" className="text-[#7A6038] font-semibold underline">4.6 star Google rating</a> across 425 reviews.</p>
+            <p className="text-sm text-gray-600 font-light">Yes. Whispering Pines Resort Hotel is a top-rated 4-star resort hotel near Kainchi Dham Ashram. Located in Malla Ramgarh (22 km / 45-minute drive), it offers 180° Himalayan views, ground-floor step-free hotel rooms, pure veg/Satvik dining, 150 Mbps Wi-Fi, and a <a href="/reviews/" className="text-[#7A6038] font-semibold underline">4.6 star Google rating</a> across 425 reviews.</p>
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q2. Is Whispering Pines Resort Hotel suitable for senior citizen pilgrims?</h3>
@@ -2206,7 +2202,7 @@ export const BLOG_POSTS: BlogPostData[] = [
               🏡 3-BHK Private Villa Estate
             </a>
             <a href="/resort-amenities-mukteshwar/" className="p-3 bg-white rounded-sm border border-[#EAE8E3] text-[#0E2C21] font-semibold hover:border-[#8A6F4A] transition-colors shadow-sm">
-              🏊 Pine Forest Swimming Pool
+              🌲 Resort Amenities &amp; Orchards
             </a>
             <a href="/things-to-do-near-mukteshwar/" className="p-3 bg-white rounded-sm border border-[#EAE8E3] text-[#0E2C21] font-semibold hover:border-[#8A6F4A] transition-colors shadow-sm">
               ⛰️ Mukteshwar Sightseeing Guide
@@ -2218,7 +2214,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="bg-[#0E2C21] text-white p-8 rounded-sm text-center space-y-4 my-8 shadow-md border border-[#B0966D]/30">
           <h3 className="text-2xl font-bold text-white">Reserve Your Senior-Friendly Stay Near Kainchi Dham Ashram</h3>
           <p className="text-sm text-gray-300 max-w-xl mx-auto">
-            Enjoy 180° snow peak views, ground-floor step-free rooms, wheelchair access, pure veg/Satvik dining, a pine forest pool, and private 3-BHK villa stays — located just 45 minutes from Kainchi Dham.
+            Enjoy 180° snow peak views, ground-floor step-free rooms, wheelchair access, pure veg/Satvik dining, working fruit orchards, and private 3-BHK villa stays — located just 45 minutes from Kainchi Dham.
           </p>
           <div className="text-xs text-gray-400">
             Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137 (<a href="/contact-whispering-pines-resort-mukteshwar/" className="text-[#B0966D] underline">Get Directions</a>)
@@ -2238,8 +2234,8 @@ export const BLOG_POSTS: BlogPostData[] = [
   {
     id: 6,
     slug: "best-resort-to-stay-near-mukteshwar",
-    title: "Best Resorts in Mukteshwar: 8 Stays Compared by View, Distance and Price (2026)",
-    seoTitle: "Best Resorts in Mukteshwar (2026): 8 Stays Compared",
+    title: "Best Resort Near Mukteshwar: A Whispering Pines Guide (2026)",
+    seoTitle: "Best Resort Near Mukteshwar: Whispering Pines Guide (2026)",
     seoDescription: "Comparing 8 resorts in and around Mukteshwar on Himalayan views, distance from the temple, family fit and price. Updated 2026 by the Whispering Pines team.",
     excerpt: "Comparing 8 resorts in and around Mukteshwar on Himalayan views, distance from Mukteshwar Dham, family fit and price. Updated 2026 by the Whispering Pines team.",
     date: "August 12, 2026",
@@ -2271,14 +2267,6 @@ export const BLOG_POSTS: BlogPostData[] = [
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Kainchi Dham, the Neem Karoli Baba Ashram, is 22 km from Whispering Pines Resort — approximately 45 minutes by road. Our in-house travel desk arranges cab bookings and coordinates early morning darshan departures directly from the resort."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does the resort have a swimming pool?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Whispering Pines Resort has an on-site swimming pool surrounded by pine forest and private orchards at 1,780 metres — one of the very few resorts near Mukteshwar to offer a pool alongside 180° Himalayan views."
           }
         },
         {
@@ -2326,7 +2314,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           "name": "Is this the same as Clarks Exotica Mukteshwar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Whispering Pines by Casa De Bello is the upgraded successor to Clarks Exotica on the Mukteshwar Road in Ramgarh. Same iconic Bhowali-Ramgarh-Mukteshwar Road address — now with enhanced luxury suite and villa architecture, Casa De Bello management, swimming pool, private villa, and 150 Mbps Wi-Fi."
+            "text": "Yes. Whispering Pines by Casa De Bello is the upgraded successor to Clarks Exotica on the Mukteshwar Road in Ramgarh. Same iconic Bhowali-Ramgarh-Mukteshwar Road address — now with enhanced luxury suite and villa architecture, Casa De Bello management, private villa, and 150 Mbps Wi-Fi."
           }
         }
       ]
@@ -2357,7 +2345,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="aeo-direct-answer bg-[#FAF9F6] p-6 rounded-sm border-l-4 border-[#8A6F4A] shadow-sm space-y-2">
           <div className="text-xs font-bold text-[#7A6038] uppercase tracking-widest">Quick Answer: Best Resort to Stay Near Mukteshwar</div>
           <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light">
-            <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (1,780m), rated <strong>4.6★ across 425 verified Google reviews</strong>, is the best 4-star resort to stay near Mukteshwar. Every room and balcony commands an unobstructed <strong>180° view of Nanda Devi and Trishul</strong>, complemented by a pine forest swimming pool, a standalone 3-BHK Private Alpine Villa sleeping up to 10 guests, 150 Mbps fiber Wi-Fi, and flat <strong>25% direct booking savings</strong> via WhatsApp (+91-7505029696).
+            <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (1,780m), rated <strong>4.6★ across 425 verified Google reviews</strong>, is the best 4-star resort to stay near Mukteshwar. Every room and balcony commands an unobstructed <strong>180° view of Nanda Devi and Trishul</strong>, complemented by a standalone 3-BHK Private Alpine Villa sleeping up to 10 guests, working fruit orchards, 150 Mbps fiber Wi-Fi, and flat <strong>25% direct booking savings</strong> via WhatsApp (+91-7505029696).
           </p>
         </div>
 
@@ -2421,7 +2409,7 @@ export const BLOG_POSTS: BlogPostData[] = [
               </tr>
               <tr className="bg-yellow-50/50">
                 <td className="p-3 font-bold text-[#0E2C21]">The Outdoors</td>
-                <td className="p-3 font-light text-gray-700">Private apple, peach, plum and apricot orchards — plus a swimming pool surrounded by pine forest</td>
+                <td className="p-3 font-light text-gray-700">Private apple, peach, plum and apricot orchards with a 2,200 sq ft panoramic Nanda Devi lawn</td>
               </tr>
               <tr>
                 <td className="p-3 font-bold text-[#0E2C21]">Connectivity</td>
@@ -2452,17 +2440,6 @@ export const BLOG_POSTS: BlogPostData[] = [
         <p className="text-gray-700 leading-relaxed font-light">
           No other resort in the Mukteshwar corridor at this price range sits at this altitude with this view. It is the defining physical advantage that makes Whispering Pines the best resort to stay near Mukteshwar for anyone who travels for the Himalayan panorama.
         </p>
-
-        <h3 className="text-xl font-bold text-[#0E2C21] mt-6 mb-3">Swimming Pool Surrounded by Pine Forest</h3>
-        <p className="text-gray-700 leading-relaxed font-light">
-          A swimming pool at 1,780 metres altitude surrounded by pine canopy and private orchards is extraordinarily rare in the Mukteshwar corridor. Whispering Pines has one — and it is one of the property's most differentiating features for families and summer getaways (explore our <a href="/resort-amenities-mukteshwar/" className="text-[#0E2C21] font-semibold underline">resort amenities</a>).
-        </p>
-        <ul className="list-disc pl-6 space-y-2 text-gray-700 font-light">
-          <li><strong>Completely private pool:</strong> No shared access with outside visitors</li>
-          <li><strong>Pine forest and orchard surroundings:</strong> Mountain ambience unlike any hotel pool</li>
-          <li><strong>Seasonal availability:</strong> Open during summer and shoulder season stays</li>
-          <li><strong>Rare feature:</strong> One of very few resorts near Mukteshwar with an on-site pool</li>
-        </ul>
 
         <h3 className="text-xl font-bold text-[#0E2C21] mt-6 mb-3">Private Villa — Sleeps Up to 10 Guests</h3>
         <p className="text-gray-700 leading-relaxed font-light">
@@ -2532,7 +2509,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <li><strong>Flat garden pathways:</strong> Wheelchair-friendly terrain throughout the property</li>
           <li><strong>Private Villa with ground-level entry:</strong> 3 bedrooms across a single level for senior comfort</li>
           <li><strong>High capacity:</strong> 25 rooms plus Private Villa for large multi-generational groups under one roof</li>
-          <li><strong>Swimming pool with pine forest surroundings:</strong> Safe, uncrowded, and family-paced</li>
+          <li><strong>2,200 sq ft Nanda Devi lawn and orchards:</strong> Safe, uncrowded, and family-paced</li>
           <li><strong>Multi-cuisine restaurant with customised meal plans:</strong> Jain, gluten-free, vegetarian all accommodated</li>
           <li><strong>In-house travel desk:</strong> Coordinates excursions with appropriate pacing for all age groups</li>
         </ul>
@@ -3067,7 +3044,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q1. Is Whispering Pines the best resort to stay near Mukteshwar?</h3>
             <p className="text-sm text-gray-600 font-light leading-relaxed">
-              Whispering Pines Resort by Casa De Bello is rated 4.6★ from 425 verified Google reviews — the highest rating of any resort on the Bhowali-Ramgarh-Mukteshwar Road. It is the only property in this corridor that combines a swimming pool, a private villa sleeping 10, 150 Mbps fiber Wi-Fi, pet-friendly enclosed gardens, senior-friendly ground floor rooms, and 180° Himalayan views in a single 4-star boutique property. (<a href="/reviews/" className="text-[#7A6038] font-semibold underline">Read all guest reviews →</a>)
+              Whispering Pines Resort by Casa De Bello is rated 4.6★ from 425 verified Google reviews — the highest rating of any resort on the Bhowali-Ramgarh-Mukteshwar Road. It is the only property in this corridor that combines a private villa sleeping 10, 150 Mbps fiber Wi-Fi, working fruit orchards, pet-friendly enclosed gardens, senior-friendly ground floor rooms, and 180° Himalayan views in a single 4-star boutique property. (<a href="/reviews/" className="text-[#7A6038] font-semibold underline">Read all guest reviews →</a>)
             </p>
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
@@ -3083,13 +3060,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             </p>
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
-            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q4. Does the resort have a swimming pool?</h3>
-            <p className="text-sm text-gray-600 font-light leading-relaxed">
-              Yes. Whispering Pines Resort has an on-site swimming pool surrounded by pine forest and private orchards at 1,780 metres — one of the very few resorts near Mukteshwar to offer a pool alongside 180° Himalayan views.
-            </p>
-          </div>
-          <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
-            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q5. Is the resort suitable for senior citizens?</h3>
+            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q4. Is the resort suitable for senior citizens?</h3>
             <p className="text-sm text-gray-600 font-light leading-relaxed">
               Yes. Whispering Pines is specifically designed for accessibility. Ground floor Family Twin Rooms have step-free direct lawn access and flat garden pathways throughout the property. The Private Villa also offers ground-level entry — making it one of the most senior-friendly resorts near Mukteshwar.
             </p>
@@ -3121,7 +3092,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q10. Is this the same as Clarks Exotica Mukteshwar?</h3>
             <p className="text-sm text-gray-600 font-light leading-relaxed">
-              Yes. Whispering Pines by Casa De Bello is the upgraded successor to Clarks Exotica on the Mukteshwar Road in Ramgarh. Same iconic Bhowali-Ramgarh-Mukteshwar Road address — now with enhanced luxury suite architecture, Casa De Bello management, swimming pool, private villa, and 150 Mbps Wi-Fi.
+              Yes. Whispering Pines by Casa De Bello is the upgraded successor to Clarks Exotica on the Mukteshwar Road in Ramgarh. Same iconic Bhowali-Ramgarh-Mukteshwar Road address — now with enhanced luxury suite architecture, Casa De Bello management, private villa, and 150 Mbps Wi-Fi.
             </p>
           </div>
         </div>
@@ -3143,7 +3114,7 @@ export const BLOG_POSTS: BlogPostData[] = [
               🏡 3-BHK Private Villa Estate
             </a>
             <a href="/resort-amenities-mukteshwar/" className="p-3 bg-white rounded-sm border border-[#EAE8E3] text-[#0E2C21] font-semibold hover:border-[#8A6F4A] transition-colors shadow-sm">
-              🏊 Pine Forest Swimming Pool
+              🌲 Resort Amenities &amp; Orchards
             </a>
             <a href="/things-to-do-near-mukteshwar/" className="p-3 bg-white rounded-sm border border-[#EAE8E3] text-[#0E2C21] font-semibold hover:border-[#8A6F4A] transition-colors shadow-sm">
               ⛰️ Mukteshwar Sightseeing Guide
@@ -3167,7 +3138,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             Whether you are planning a peaceful family holiday with senior citizens, a romantic Himalayan retreat, a spiritual trip to Kainchi Dham and Mukteshwar Dham, an extended workcation in the pine forests, or a mountain escape with your dog — Whispering Pines Resort by Casa De Bello is the one address near Mukteshwar that delivers all of it without compromise.
           </p>
           <p className="text-sm text-gray-300 max-w-xl mx-auto">
-            25 premium rooms, a private villa sleeping 10 with full resort services, swimming pool, 150 Mbps fiber Wi-Fi, stone fireplace rooms, private apple and peach orchards, Kumaoni farm-to-table dining, bonfire evenings, and 180° Nanda Devi Himalayan views — all on the Bhowali-Ramgarh-Mukteshwar Road, 25 km from Mukteshwar Dham.
+            25 premium rooms, a private villa sleeping 10 with full resort services, 150 Mbps fiber Wi-Fi, stone fireplace rooms, private apple and peach orchards, Kumaoni farm-to-table dining, bonfire evenings, and 180° Nanda Devi Himalayan views — all on the Bhowali-Ramgarh-Mukteshwar Road, 25 km from Mukteshwar Dham.
           </p>
           <div className="text-xs text-gray-400 leading-relaxed pt-2">
             <strong>Whispering Pines Resort by Casa De Bello</strong><br />

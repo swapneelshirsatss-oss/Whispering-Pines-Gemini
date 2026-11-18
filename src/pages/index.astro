@@ -17,7 +17,6 @@ import TestimonialList from "../components/TestimonialList";
 import BlogCarousel from "../components/BlogCarousel";
 import { BLOG_CARDS } from "../data/blogPosts";
 import FAQAccordion from "../components/FAQAccordion";
-import RecentBookingNotification from "../components/RecentBookingNotification";
 
 import { getImage } from "astro:assets";
 import heroImgSrc from "../assets/images/Whispering-pines-balcony-view-nanital.avif";
@@ -92,9 +91,5 @@ const roomImages = {
       {/* FAQ Accordion panel */}
       <FAQAccordion client:visible />
     </main>
-
-
-    {/* Social Proof Popup */}
-    <RecentBookingNotification client:idle />
   </div>
 </Layout>

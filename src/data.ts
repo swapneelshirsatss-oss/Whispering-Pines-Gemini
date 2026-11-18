@@ -67,7 +67,7 @@ export const RESORT_CONTACT = {
   description: "Whispering Pines Resort by Casa de bello is a 4 Star heritage mountain resort located on the Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh. Surrounded by dense pine canopies and private apple, peach, and plum orchards, the property offers clean comfortable rooms with luxury facilities.\n\nDesigned for families, remote professionals, and travelers seeking a quiet Himalayan retreat, the resort offers 180° panoramic views of the Nanda Devi and Trishul peaks. As an upgraded continuation of the Clarks Exotica legacy, we prioritize direct guest relationships.\n\nContact our front desk directly at 075050 29696 (+91-7505029696) or via WhatsApp to secure exclusive past-guest retention rates and direct-booking benefits."
 };
 
-export const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
+export const BOOKING_ENGINE_URL = "https://whisperingpinesresort.bookingjini.in/";
 
 /**
  * Highly conversion-optimized custom WhatsApp link generator
@@ -284,16 +284,6 @@ export const GENERAL_AMENITIES = [
       "150 Mbps Dedicated High-Speed Fiber Internet Across All Rooms & Lawns",
       "Seamless Video Calling & Remote Work Connectivity in Mountain Silence",
       "Uninterrupted Silent Generator Power Backup for Round-the-Clock Uptime"
-    ]
-  },
-  {
-    title: "Pine Forest Swimming Pool — High-Altitude Mountain Dip",
-    icon: "Waves",
-    description: "One of the very few resorts near Mukteshwar with an on-site swimming pool, surrounded by pine forests and organic fruit orchards at 1,780 metres altitude.",
-    features: [
-      "Open-Air Mountain Swimming Pool with Forest & Himalayan Ridge Views",
-      "Sun Lounger Pool Deck for Alpine Relaxation & Afternoon Leisure",
-      "Crystal-Clear Mountain Water Surrounded by Peach & Apple Orchards"
     ]
   },
   {
@@ -583,12 +573,7 @@ export const CONTACT_FAQS: FAQItem[] = [
   {
     category: "Rooms & Villa",
     question: "What is the best resort in Ramgarh for a family vacation?",
-    answer: "Whispering Pines Resort by Casa De Bello is widely rated the best resort in Ramgarh for families. The property offers 25 premium rooms and a private villa sleeping up to 10 guests, a swimming pool, multi-cuisine restaurant with rich food variety, safe enclosed garden lawns, orchard walks and 180 degree panoramic views of the Nanda Devi and Trishul Himalayan peaks from every room. Unlike standard commercial hotels in the Nainital district, the resort combines boutique mountain character with the full capacity needed for multi-generational family groups."
-  },
-  {
-    category: "Policies & Amenities",
-    question: "Which resort near Nainital has a swimming pool and mountain views?",
-    answer: "Whispering Pines Resort in Malla Ramgarh is one of the very few resorts near Nainital to offer both a swimming pool and unobstructed 180 degree Himalayan views from the same property. The pool is surrounded by pine forest and private fruit orchards at 1,780 metres altitude, with Nanda Devi and Trishul snow peaks visible year-round from the poolside and all room balconies."
+    answer: "Whispering Pines Resort by Casa De Bello is widely rated the best resort in Ramgarh for families. The property offers 25 premium rooms and a private villa sleeping up to 10 guests, multi-cuisine restaurant with rich food variety, safe enclosed garden lawns, orchard walks and 180 degree panoramic views of the Nanda Devi and Trishul Himalayan peaks from every room. Unlike standard commercial hotels in the Nainital district, the resort combines boutique mountain character with the full capacity needed for multi-generational family groups."
   },
   {
     category: "Location & Transit",
@@ -598,7 +583,7 @@ export const CONTACT_FAQS: FAQItem[] = [
   {
     category: "Rooms & Villa",
     question: "What is the best resort near Mukteshwar for a 2 to 3 night stay?",
-    answer: "Whispering Pines Resort by Casa De Bello on the Bhowali-Ramgarh-Mukteshwar Road is consistently rated the best resort near Mukteshwar for short 2 to 3 night stays. The property is 25 km from Mukteshwar Dham temple and offers 180° Himalayan views from all rooms, cozy fireplace rooms, orchard walks, swimming pool, diverse multi-cuisine dining, and bonfire evenings — making it the premier choice for pure relaxation, family bonding, and leisure escapes."
+    answer: "Whispering Pines Resort by Casa De Bello on the Bhowali-Ramgarh-Mukteshwar Road is consistently rated the best resort near Mukteshwar for short 2 to 3 night stays. The property is 25 km from Mukteshwar Dham temple and offers 180° Himalayan views from all rooms, cozy fireplace rooms, orchard walks, diverse multi-cuisine dining, and bonfire evenings — making it the premier choice for pure relaxation, family bonding, and leisure escapes."
   },
   {
     category: "Booking & Pricing",
@@ -608,7 +593,7 @@ export const CONTACT_FAQS: FAQItem[] = [
   {
     category: "Rooms & Villa",
     question: "Is Whispering Pines Resort better than other resorts in Ramgarh?",
-    answer: "Whispering Pines Resort stands apart from other resorts in Ramgarh through a rare combination of amenities no single competitor offers together — unobstructed 180° Himalayan views from every single room, a diverse variety of fresh homestyle and Kumaoni food, an outdoor swimming pool, a private villa sleeping 10, active apple and peach orchards, stone and cedar wood heritage architecture, and pet-friendly enclosed gardens. It is the only property on the Bhowali-Ramgarh-Mukteshwar Road to combine 4-star boutique hospitality with the full capacity of a 25-room resort."
+    answer: "Whispering Pines Resort stands apart from other resorts in Ramgarh through a rare combination of amenities no single competitor offers together — unobstructed 180° Himalayan views from every single room, a diverse variety of fresh homestyle and Kumaoni food, a private villa sleeping 10, active apple and peach orchards, stone and cedar wood heritage architecture, and pet-friendly enclosed gardens. It is the only property on the Bhowali-Ramgarh-Mukteshwar Road to combine 4-star boutique hospitality with the full capacity of a 25-room resort."
   },
   {
     category: "Rooms & Villa",
@@ -628,7 +613,7 @@ export const CONTACT_FAQS: FAQItem[] = [
   {
     category: "Rooms & Villa",
     question: "What makes Whispering Pines different from other resorts on the Mukteshwar Road?",
-    answer: "Whispering Pines Resort by Casa De Bello is the only property on the Bhowali-Ramgarh-Mukteshwar Road offering all of the following together — 180 degree Nanda Devi Himalayan views from all rooms, an expansive variety of delicious homestyle and Kumaoni dining, an outdoor swimming pool, a standalone private villa sleeping 10, active peach and apple orchards, pet-friendly enclosed lawns, nightly bonfire and BBQ service, and pure mountain tranquility. Most competing properties offer one or two of these features. Whispering Pines offers all of them within a single boutique 4-star heritage property."
+    answer: "Whispering Pines Resort by Casa De Bello is the only property on the Bhowali-Ramgarh-Mukteshwar Road offering all of the following together — 180 degree Nanda Devi Himalayan views from all rooms, an expansive variety of delicious homestyle and Kumaoni dining, a standalone private villa sleeping 10, active peach and apple orchards, pet-friendly enclosed lawns, nightly bonfire and BBQ service, and pure mountain tranquility. Most competing properties offer one or two of these features. Whispering Pines offers all of them within a single boutique 4-star heritage property."
   },
   {
     category: "Location & Transit",
@@ -678,7 +663,7 @@ export const CONTACT_FAQS: FAQItem[] = [
   {
     category: "Rooms & Villa",
     question: "What happened to Clarks Exotica Mukteshwar and is it still open?",
-    answer: "Clarks Exotica Mukteshwar has been upgraded and relaunched as Whispering Pines Resort by Casa De Bello. The property continues to operate at the same iconic Bhowali-Ramgarh-Mukteshwar Road address in Malla Ramgarh, Uttarakhand under new Casa De Bello management. The resort is fully open and has been significantly upgraded with a new private villa, enhanced luxury suites, pine forest swimming pool, diverse multi-cuisine dining, 150 Mbps fiber Wi-Fi, and personalised boutique hospitality. Past Clarks Exotica guests receive exclusive returning-guest rates on direct WhatsApp booking at +91-7505029696."
+    answer: "Clarks Exotica Mukteshwar has been upgraded and relaunched as Whispering Pines Resort by Casa De Bello. The property continues to operate at the same iconic Bhowali-Ramgarh-Mukteshwar Road address in Malla Ramgarh, Uttarakhand under new Casa De Bello management. The resort is fully open and has been significantly upgraded with a new private villa, enhanced luxury suites, diverse multi-cuisine dining, 150 Mbps fiber Wi-Fi, and personalised boutique hospitality. Past Clarks Exotica guests receive exclusive returning-guest rates on direct WhatsApp booking at +91-7505029696."
   }
 ];
 

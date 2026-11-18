@@ -5,7 +5,7 @@ import { CONTACT_FAQS } from "../data";
 
 export default function FAQAccordion({ 
   faqs = CONTACT_FAQS, 
-  title = "Stay Details & Frequently Asked Questions", 
+  title = "Stay details and frequently asked questions", 
   description = "Everything you need to know about direct booking discounts, 180° Himalayan views, fresh food dining, pet policies, driving directions from Delhi, and our direct WhatsApp booking concierge." 
 }: { 
   faqs?: FAQItem[],
@@ -34,7 +34,7 @@ export default function FAQAccordion({
         
         {/* Header Block */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-sans tracking-[0.1em] text-[#7A6038] uppercase block mb-2 font-semibold">
+          <span className="hidden">
             Answering Your Questions
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#0E2C21]">
@@ -55,7 +55,7 @@ export default function FAQAccordion({
                 setActiveCategory("all");
                 setOpenIdx(null);
               }}
-              className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-300 ${
+              className={`px-4 py-2 rounded-sm text-xs font-sans uppercase tracking-wider transition-all duration-300 ${
                 activeCategory === "all"
                   ? "bg-[#0E2C21] text-[#FAF9F6] shadow-sm font-bold"
                   : "bg-white text-[#2C3531]/75 border border-[#2C3531]/15 hover:border-[#0E2C21] hover:text-[#0E2C21]"
@@ -71,7 +71,7 @@ export default function FAQAccordion({
                   setActiveCategory(cat);
                   setOpenIdx(null);
                 }}
-                className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-300 ${
+                className={`px-4 py-2 rounded-sm text-xs font-sans uppercase tracking-wider transition-all duration-300 ${
                   activeCategory === cat
                     ? "bg-[#0E2C21] text-[#FAF9F6] shadow-sm font-bold"
                     : "bg-white text-[#2C3531]/75 border border-[#2C3531]/15 hover:border-[#0E2C21] hover:text-[#0E2C21]"

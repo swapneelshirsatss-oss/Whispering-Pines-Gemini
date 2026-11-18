@@ -11,7 +11,7 @@ interface Props {
 
 const {
   hideLink = false,
-  title = "Tailored Mountain Luxuries",
+  title = "Tailored mountain comforts",
   isH1 = false,
   asH1 = false
 } = Astro.props;
@@ -19,7 +19,7 @@ const {
 const useH1 = isH1 || asH1;
 
 /**
- * Only amenities we can actually show get a photograph. The pool, the stone
+ * Only amenities we can actually show get a photograph. The stone
  * fireplace and the pet lawns have no image in the library, so they are stated
  * as specifications rather than illustrated with stock-style icons.
  */
@@ -112,7 +112,7 @@ const specs = GENERAL_AMENITIES.filter((a) => !PHOTOS[a.title]);
   {/* Everything else, stated plainly. One green band for tonal rhythm. */}
   <div class="bg-[#0E2C21] text-[#FAF9F6]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-      <span class="text-xs font-sans tracking-[0.1em] text-[#B0966D] uppercase block mb-10 text-center">
+      <span class="text-sm font-display text-[#B0966D] block mb-10 text-center">
         Also on the estate
       </span>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12">

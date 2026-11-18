@@ -18,9 +18,9 @@ interface RoomInventoryListProps {
 export default function RoomInventoryList({
   initialFilter = "all",
   hideLink = false,
-  title = "Suites & Cottages at Uttarakhand's Most Loved Family Resort",
+  title = "Rooms, suites and a private villa",
   isH1 = false,
-  categoryIntro = "Suites & Cottages at Uttarakhand's Most Loved Family Resort",
+  categoryIntro = "Rooms, suites and a private villa",
   optimizedImages,
   rooms = ROOMS_INVENTORY,
 }: RoomInventoryListProps = {}) {
@@ -51,7 +51,7 @@ export default function RoomInventoryList({
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-sans tracking-[0.1em] text-[#7A6038] uppercase block mb-2">
+          <span className="hidden">
             Sanctuaries of Slumber
           </span>
           {isH1 ? (
@@ -80,9 +80,9 @@ export default function RoomInventoryList({
             <button
               key={opt.value}
               onClick={() => setFilter(opt.value)}
-              className={`px-4 sm:px-5 py-3 sm:py-2.5 rounded-sm text-[11px] sm:text-xs font-mono uppercase tracking-wider transition-all duration-300 ${
+              className={`px-4 sm:px-5 py-3 sm:py-2.5 rounded-sm text-[11px] sm:text-xs font-sans uppercase tracking-wider transition-all duration-300 ${
                 filter === opt.value
-                  ? "bg-[#0E2C21] text-[#FAF9F6] shadow-md border border-[#0E2C21]"
+                  ? "bg-[#0E2C21] text-[#FAF9F6] border border-[#0E2C21]"
                   : "bg-white text-[#2C3531]/75 hover:bg-[#0E2C21]/10 border border-[#2C3531]/10 hover:text-[#0E2C21]"
               }`}
             >
@@ -158,13 +158,13 @@ export default function RoomInventoryList({
                   {room.directPerks && room.directPerks.length > 0 && (
                     <div className="mb-6 p-3 rounded-sm bg-[#0E2C21]/5 border border-[#0E2C21]/10">
                       <p className="text-[10px] font-sans font-bold uppercase tracking-wider text-[#0E2C21] mb-1.5 flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#0E2C21] shrink-0" />
                         <span>Direct Booking Privileges:</span>
                       </p>
                       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-[11px] text-[#2C3531]/80 font-sans">
                         {room.directPerks.slice(0, 2).map((perk, pIdx) => (
                           <li key={pIdx} className="flex items-center gap-1.5">
-                            <Check className="w-3 h-3 text-[#25D366] shrink-0" />
+                            <Check className="w-3 h-3 text-[#0E2C21] shrink-0" />
                             <span>{perk}</span>
                           </li>
                         ))}
@@ -192,9 +192,9 @@ export default function RoomInventoryList({
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => trackAdsConversion("generate_lead", "booking", `room_card_whatsapp_${room.id}`)}
-                    className="inline-flex items-center justify-center gap-2 bg-[#0E2C21] hover:bg-[#193F30] text-[#FAF9F6] font-sans text-[11px] font-bold uppercase tracking-wider px-5 py-3 rounded-sm shadow-md transition-all duration-300"
+                    className="inline-flex items-center justify-center gap-2 bg-[#0E2C21] hover:bg-[#193F30] text-[#FAF9F6] font-sans text-[11px] font-bold uppercase tracking-wider px-5 py-3 rounded-sm transition-all duration-300"
                   >
-                    <svg className="w-3.5 h-3.5 text-[#25D366] shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <svg className="w-3.5 h-3.5 text-white shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.1 1.523 5.823L0 24l6.344-1.498A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.792 9.792 0 01-5.002-1.374l-.359-.213-3.765.889.953-3.676-.234-.376A9.794 9.794 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/>
                     </svg>
                     <span>Reserve on WhatsApp</span>
