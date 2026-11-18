@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Phone, Menu, X, ArrowUpRight, ChevronDown } from 'lucide-react';
+import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 import { trackAdsConversion } from "../utils/analytics";
 
 const PHONE_DISPLAY = "075050 29696";
 const PHONE_TEL = "+917505029696";
-const BOOKING_ENGINE_URL = "https://whisperingpinesresort.bookingjini.in/";
 const WHATSAPP_BOOKING_URL = "https://wa.me/917505029696";
 
 interface NavbarProps {
@@ -193,29 +192,10 @@ export default function Navbar({ children }: NavbarProps) {
               <Phone className="w-3.5 h-3.5 mr-1.5 text-[#C4A77D]" />
               {PHONE_DISPLAY}
             </a>
-            <a
-              href={BOOKING_ENGINE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={handleNavBookingClick}
-              className="bg-[#B0966D] hover:bg-[#FAF9F6] text-[#0E2C21] hover:text-[#0E2C21] text-[10px] font-sans font-bold uppercase tracking-[0.1em] px-5 py-2.5 rounded-sm flex items-center transition-all duration-300 shadow-sm"
-            >
-              <span>Book Stay</span>
-              <ArrowUpRight className="w-3.5 h-3.5 ml-1.5 opacity-80" />
-            </a>
           </div>
 
-          {/* Mobile Actions: Book Now & Menu Toggle */}
+          {/* Mobile Actions: Menu Toggle */}
           <div className="flex items-center gap-2.5 md:hidden">
-            <a
-              href={BOOKING_ENGINE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={handleNavBookingClick}
-              className="bg-[#B0966D] text-[#0E2C21] text-[10px] font-sans font-bold uppercase tracking-wider px-3.5 py-2 rounded-sm flex items-center shadow-md active:scale-95 transition-transform"
-            >
-              Book Stay
-            </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-[#FAF9F6] hover:text-[#C4A77D] p-2 focus:outline-none -mr-2"

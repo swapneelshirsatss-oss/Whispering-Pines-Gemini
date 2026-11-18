@@ -42,3 +42,4 @@ Read this first in every session. Update it after finishing a task or stopping w
 - Weekly SEO reports: `D:\01_Clients\Whsipeing Pines Resort By Casa De Bello\05_Marketing\SEO-Reports`
 
 - [x] 2026-11-18: Removed 'Digital Swapneel' testimonial from src/components/TestimonialList.tsx and src/data.ts (TESTIMONIALS). Yoga card image -> /images/yoga-in-resort-mukteshwar.avif. Build passed (34 pages). Not tested: live site.
+- [x] 2026-11-18: Removed 'Book Stay' header buttons (desktop + mobile) in Navbar.tsx (BookingJini link reported inactive; 7 other files still use it - pending decision). SlowLivingRhythm.astro redesigned as minimal distance list and moved below TestimonialList on homepage. Build passed (34 pages). Not tested: live site/visual check.

@@ -62,9 +62,6 @@ const roomImages = {
       {/* Verified Resident Host Welcome Note (Anurra & Maati Living Human Touch) */}
       <HostFieldNote />
 
-      {/* The Rhythm of a Mountain Day (Slow Living Vignette) */}
-      <SlowLivingRhythm />
-
       {/* Complete Room, Suite & Cottage Inventory Cards */}
       <RoomInventoryList client:visible optimizedImages={roomImages} />
 
@@ -84,6 +81,9 @@ const roomImages = {
 
       {/* Guest Reviews */}
       <TestimonialList client:visible />
+
+      {/* Nearby Sights: minimal drive-time list (moved lower) */}
+      <SlowLivingRhythm />
 
       {/* Blog & Travel Guides Carousel */}
       <BlogCarousel posts={BLOG_CARDS} client:visible />
