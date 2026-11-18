@@ -1,0 +1,101 @@
+---
+// Christmas & New Year 2026-27 booking card (non-modal, slide-up). Rates confirmed by Swapneel on 2026-11-16
+// and match /blog/new-year-packages-near-delhi/. Shows after 8s or 40% scroll, never on arrival (Google's mobile
+// intrusive-interstitial rule), dismiss hides it for 3 days, and it switches itself off on 1 Jan 2027.
+// Remove this component (and its line in Layout.astro) after the season.
+const OFFER_ENDS = '2027-01-01T00:00:00+05:30';
+const expired = Date.now() >= Date.parse(OFFER_ENDS); // build-time check; the script re-checks in the browser
+const waText = encodeURIComponent(
+  "Hi! I'd like to book a Christmas / New Year 2026-27 stay at Whispering Pines.\nDates: \nGuests: "
+);
+const waLink = `https://wa.me/917505029696?text=${waText}`;
+---
+
+{!expired && (
+  <aside id="wp-festive" class="wpf" role="dialog" aria-labelledby="wpf-title" aria-modal="false" hidden data-ends={OFFER_ENDS}>
+    <button type="button" class="wpf-close" aria-label="Close offer" data-wpf-close>
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+    </button>
+    <p class="wpf-label">Bookings open</p>
+    <p id="wpf-title" class="wpf-title">Christmas &amp; New Year stays</p>
+    <ul class="wpf-list">
+      <li>
+        <strong>Christmas · 24–30 Dec</strong>
+        <span>₹6,000/room/night · breakfast, dinner, bonfire</span>
+      </li>
+      <li>
+        <strong>New Year · 31 Dec–2 Jan</strong>
+        <span>₹16,000 for 2, 2 nights · fireworks, live music</span>
+      </li>
+    </ul>
+    <div class="wpf-actions">
+      <a class="wpf-cta" href={waLink} target="_blank" rel="noopener noreferrer"
+        data-track-fn="trackAdsConversion" data-track-args='["generate_lead","booking","festive_popup_whatsapp",{"conversion_type":"whatsapp"}]'>Book on WhatsApp</a>
+      <a class="wpf-more" href="/blog/new-year-packages-near-delhi/">Package details</a>
+    </div>
+    <p class="wpf-note">Taxes as applicable.</p>
+  </aside>
+)}
+
+<script is:inline>
+  (function () {
+    var el = document.getElementById('wp-festive');
+    if (!el) return;
+    if (Date.now() >= Date.parse(el.getAttribute('data-ends'))) { el.remove(); return; }
+    var KEY = 'wp-festive-dismissed', THREE_DAYS = 3 * 24 * 60 * 60 * 1000;
+    try { if (Date.now() - Number(localStorage.getItem(KEY) || 0) < THREE_DAYS) return; } catch (e) {}
+
+    var shown = false;
+    function show() {
+      if (shown) return; shown = true;
+      window.removeEventListener('scroll', onScroll);
+      el.hidden = false;
+      requestAnimationFrame(function () { el.classList.add('wpf-in'); });
+    }
+    function hide() {
+      el.classList.remove('wpf-in');
+      setTimeout(function () { el.hidden = true; }, 300);
+      try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {}
+    }
+    function onScroll() {
+      var max = document.documentElement.scrollHeight - innerHeight;
+      if (max > 0 && scrollY / max >= 0.4) show();
+    }
+    setTimeout(show, 8000);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    el.querySelector('[data-wpf-close]').addEventListener('click', hide);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !el.hidden) hide(); });
+  })();
+</script>
+
+<style>
+  .wpf {
+    position: fixed; z-index: 9998; left: 12px; right: 12px; bottom: calc(59px + 12px); /* above the phone Call/WhatsApp bar */
+    max-width: 400px; margin-inline: auto; padding: 16px 18px 12px;
+    background: #0E2C21; color: #FAF9F6; border: 1px solid rgb(196 167 125 / .45); border-radius: 4px;
+    box-shadow: 0 12px 32px rgb(0 0 0 / .28);
+    font-family: var(--font-sans);
+    opacity: 0; transform: translateY(16px); transition: opacity .35s ease, transform .35s ease;
+  }
+  .wpf.wpf-in { opacity: 1; transform: none; }
+  @media (min-width: 768px) { .wpf { left: 24px; right: auto; bottom: 24px; width: 380px; margin: 0; } }
+  @media (prefers-reduced-motion: reduce) { .wpf { transition: none; transform: none; } }
+
+  .wpf-close { position: absolute; top: 4px; right: 4px; width: 44px; height: 44px; display: grid; place-items: center;
+    color: #FAF9F6; opacity: .8; background: none; border: 0; cursor: pointer; }
+  .wpf-close:hover { opacity: 1; color: #C4A77D; }
+  .wpf-label { margin: 0 0 4px; font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #C4A77D; }
+  .wpf-title { margin: 0 36px 10px 0; font-family: var(--font-display); font-size: 19px; line-height: 1.25; }
+  .wpf-list { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 8px; }
+  .wpf-list li { padding-left: 10px; border-left: 2px solid #B0966D; font-size: 13px; line-height: 1.4; }
+  .wpf-list strong { display: block; font-weight: 600; color: #FAF9F6; }
+  .wpf-list span { opacity: .85; }
+  .wpf-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .wpf-cta { display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; background: #B0966D; color: #0E2C21;
+    font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: background-color .3s; }
+  .wpf-cta:hover { background: #FAF9F6; }
+  .wpf-more { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; font-weight: 600; color: #C4A77D;
+    text-decoration: underline; text-underline-offset: 4px; }
+  .wpf-more:hover { color: #FAF9F6; }
+  .wpf-note { margin: 4px 0 0; font-size: 11px; opacity: .6; }
+</style>
