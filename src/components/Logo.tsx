@@ -71,7 +71,7 @@ export default function Logo({ className = "", iconOnly = false }: LogoProps) {
       role="img"
       aria-labelledby={titleId}
     >
-      <title id={titleId}>Whispering Pines Resort by Casa De Bello — Ramgarh</title>
+      <title id={titleId}>Whispering Pines Resort by Casa De Bello — Mukteshwar</title>
 
       <defs>
         <linearGradient id={goldId} x1="0" y1="0" x2="1" y2="1">
@@ -169,7 +169,7 @@ export default function Logo({ className = "", iconOnly = false }: LogoProps) {
           fontSize="18"
           letterSpacing="8"
         >
-          RAMGARH
+          MUKTESHWAR
         </text>
       </g>
     </svg>

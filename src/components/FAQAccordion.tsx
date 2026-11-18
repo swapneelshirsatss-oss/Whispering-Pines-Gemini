@@ -55,7 +55,7 @@ export default function FAQAccordion({
                 setActiveCategory("all");
                 setOpenIdx(null);
               }}
-              className={`px-4 py-2 rounded-sm text-xs font-sans uppercase tracking-wider transition-all duration-300 ${
+              className={`px-4 py-3 min-h-11 rounded-sm text-xs font-sans uppercase tracking-wider transition-all duration-300 ${
                 activeCategory === "all"
                   ? "bg-[#0E2C21] text-[#FAF9F6] shadow-sm font-bold"
                   : "bg-white text-[#2C3531]/75 border border-[#2C3531]/15 hover:border-[#0E2C21] hover:text-[#0E2C21]"
@@ -71,7 +71,7 @@ export default function FAQAccordion({
                   setActiveCategory(cat);
                   setOpenIdx(null);
                 }}
-                className={`px-4 py-2 rounded-sm text-xs font-sans uppercase tracking-wider transition-all duration-300 ${
+                className={`px-4 py-3 min-h-11 rounded-sm text-xs font-sans uppercase tracking-wider transition-all duration-300 ${
                   activeCategory === cat
                     ? "bg-[#0E2C21] text-[#FAF9F6] shadow-sm font-bold"
                     : "bg-white text-[#2C3531]/75 border border-[#2C3531]/15 hover:border-[#0E2C21] hover:text-[#0E2C21]"
