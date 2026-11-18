@@ -86,10 +86,10 @@ const rating = RESORT_CONTACT.rating;
       <h2>Rooms, suites and a private villa</h2>
       <p>Every room has the 180° view. Pick by how many of you are coming.</p>
     </header>
-    <div class="lx-grid4">
+    <div class="lx-grid4 lx-swipe">
       {rooms.map((r) => (
         <a class="lx-room lx-reveal" href="/suites-cottages-ramgarh-resort/">
-          <Image src={r.img} alt={`${r.short} at Whispering Pines Resort, Mukteshwar`} widths={[480, 800]} sizes="(max-width: 560px) 100vw, (max-width: 1000px) 50vw, 300px" quality={72} format="webp" />
+          <Image src={r.img} alt={`${r.short} at Whispering Pines Resort, Mukteshwar`} widths={[480, 800]} sizes="(max-width: 559px) 82vw, (max-width: 1000px) 50vw, 300px" quality={72} format="webp" />
           <h3>{r.short}</h3>
           <p class="lx-meta">{r.sizeSqFt.toLocaleString('en-IN')} sq ft · up to {r.maxOccupancy} guests</p>
           <p class="lx-more">View room →</p>
@@ -102,7 +102,7 @@ const rating = RESORT_CONTACT.rating;
 <section class="lx-perks">
   <div class="lx-wrap">
     <span class="lx-label">Why book direct</span>
-    <div class="lx-grid4">
+    <div class="lx-grid4 lx-perk-grid">
       {perks.map((p) => <div class="lx-reveal"><h3>{p.title}</h3><p>{p.text}</p></div>)}
     </div>
     <p class="lx-center"><a class="lx-btn lx-solid" href="/book-now/">Book direct</a></p>
@@ -112,11 +112,11 @@ const rating = RESORT_CONTACT.rating;
 <section class="lx-section lx-dark" id="experiences">
   <div class="lx-wrap">
     <header class="lx-head lx-reveal"><h2>Slow days on the ridge</h2></header>
-    <div class="lx-grid4">
+    <div class="lx-grid4 lx-swipe">
       {experiences.map((e) => (
         <a class="lx-exp lx-reveal" href={e.href}>
           {e.img
-            ? <Image src={e.img} alt={e.sub} widths={[400, 700]} sizes="(max-width: 560px) 100vw, (max-width: 1000px) 50vw, 300px" quality={70} format="webp" />
+            ? <Image src={e.img} alt={e.sub} widths={[400, 700]} sizes="(max-width: 559px) 82vw, (max-width: 1000px) 50vw, 300px" quality={70} format="webp" />
             : <img src={e.src} alt={e.sub} width="700" height="933" loading="lazy" decoding="async" />}
           <span class="lx-cap"><strong>{e.title}</strong>{e.sub}</span>
         </a>
@@ -131,7 +131,7 @@ const rating = RESORT_CONTACT.rating;
       <span class="lx-label lx-ink">Guest words</span>
       <h2>{rating.value} on Google from {rating.reviewCount} reviews</h2>
     </header>
-    <div class="lx-reviews">
+    <div class="lx-reviews lx-swipe">
       {reviews.map((r) => (
         <blockquote class="lx-review lx-reveal"><p>“{r.comment}”</p><cite>{r.name} · {r.source}, {r.date}</cite></blockquote>
       ))}
@@ -140,9 +140,9 @@ const rating = RESORT_CONTACT.rating;
   </div>
 </section>
 
-<div class="lx-bands">
-  <Image src={band1} alt="Wooden booth seating in the Whispering Pines restaurant" widths={[640, 1280]} sizes="(max-width: 760px) 100vw, 50vw" quality={70} format="webp" />
-  <Image src={band2} alt="Villa bedroom opening onto a balcony among the pines" widths={[640, 1280]} sizes="(max-width: 760px) 100vw, 50vw" quality={70} format="webp" />
+<div class="lx-bands lx-swipe">
+  <Image src={band1} alt="Wooden booth seating in the Whispering Pines restaurant" widths={[640, 1280]} sizes="(max-width: 559px) 82vw, 50vw" quality={70} format="webp" />
+  <Image src={band2} alt="Villa bedroom opening onto a balcony among the pines" widths={[640, 1280]} sizes="(max-width: 559px) 82vw, 50vw" quality={70} format="webp" />
 </div>
 
 <script>
@@ -226,6 +226,42 @@ const rating = RESORT_CONTACT.rating;
 
   .lx-bands { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
   .lx-bands :global(img) { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+
+  /* ---------- phones (70% of visitors) ---------- */
+  @media (max-width: 559px) {
+    .lx-section { padding-block: 56px; }
+    h2 { font-size: 28px; }
+    .lx-head { margin-bottom: 28px; }
+    .lx-lead { font-size: 17px; }
+    .lx-label { font-size: 13px; }
+    /* shorter hero so the next section peeks and invites a scroll; sits above the sticky Call/WhatsApp bar */
+    .lx-hero { height: calc(88svh - 64px); min-height: 480px; }
+    .lx-hero-copy { bottom: 6vh; }
+    .lx-hero h1 { font-size: 34px; }
+    .lx-hero-copy p { font-size: 14px; margin-bottom: 22px; }
+    .lx-btn { width: 100%; max-width: 340px; padding-block: 18px; }
+    .lx-quote { padding-block: 88px; }
+    .lx-quote p { font-size: 26px; }
+
+    /* long card lists become one swipeable row with the next card peeking in */
+    .lx-swipe { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+      margin-inline: -16px; padding: 0 16px 8px; scroll-padding-inline: 16px; scrollbar-width: none; }
+    .lx-swipe::-webkit-scrollbar { display: none; }
+    .lx-swipe > * { flex: 0 0 82%; scroll-snap-align: start; }
+    .lx-bands.lx-swipe { margin-inline: 0; padding-bottom: 0; }
+    .lx-reviews.lx-swipe { margin-bottom: 20px; }
+    .lx-review { padding: 22px; }
+    .lx-review p { font-size: 17px; }
+    .lx-swipe .lx-reveal { animation: none; } /* fade-in fights horizontal scroll */
+
+    /* perks: compact 2 x 2 instead of four stacked blocks */
+    .lx-perks { padding-block: 48px; }
+    .lx-perk-grid { grid-template-columns: 1fr 1fr; gap: 22px 16px; margin: 16px 0 28px; }
+    .lx-perks h3 { font-size: 18px; }
+    .lx-perks p { font-size: 14px; }
+  }
+  /* comfortable thumb targets for text links */
+  .lx-link { display: inline-block; padding-block: 12px; }
 
   /* scroll fade-in, CSS only; older browsers just show content */
   @supports (animation-timeline: view()) {
