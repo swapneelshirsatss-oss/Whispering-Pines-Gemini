@@ -44,7 +44,11 @@ Build currently emits 34 pages; a changed page count is a signal, not noise.
 
 ## Deployment
 
-`.github/workflows/deploy.yml` builds and deploys to GitHub Pages on push to `main`. Swapneel commits, pushes and deploys — **never auto-commit or auto-push**; make edits locally and present them.
+**Merging to `main` publishes the live site.** Hostinger's Git integration watches `main`, runs the build on its own servers and deploys `dist/` to whisperingpinesresort.in, typically 1–5 minutes after a merge. No manual upload is needed, and `npm run package` / `dist_deploy.zip` is only a fallback.
+
+Verified 18 Nov 2026: `.github/workflows/deploy.yml` targets GitHub Pages, which is **not** enabled for this repo (the Pages API returns 404) — Hostinger is what actually serves the domain, so that workflow file is misleading.
+
+Because a merge is a deploy: work on a branch, open a PR, and let Swapneel decide when to merge. **Never auto-commit or auto-push** without being asked.
 
 ## Approval & workflow
 
