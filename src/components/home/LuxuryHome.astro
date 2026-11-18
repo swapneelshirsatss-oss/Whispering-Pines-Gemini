@@ -2,7 +2,7 @@
 // Homepage redesign (Nov 2026), editorial style modelled on araiyahotels.com but built static and light:
 // no React, no carousel library, CSS scroll-snap slider, Astro-optimised images.
 // Data comes from src/data.ts so rooms, reviews and contact stay in one place.
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import { ROOMS_INVENTORY, TESTIMONIALS, BOOKING_ENGINE_URL, RESORT_CONTACT } from '../../data';
 import hero1 from '../../assets/images/Whispering-pines-balcony-view-nanital.avif';
 import hero2 from '../../assets/images/lounge-area-inwhispering-pines-resort-by-casa-de-bello.avif';
@@ -15,11 +15,15 @@ import diningImg from '../../assets/images/Restaurant-cafe-ramgarh.avif';
 import band1 from '../../assets/images/Private-Dining-Area-resort-near-mukteshwar.avif';
 import band2 from '../../assets/images/Premiuam-villa-room.avif';
 
+// Phones get their own photo per slide: landscape terrace shots crop to empty floor tiles on a tall screen,
+// so the valley/mountain view (the headline's promise) leads on mobile. Alt text is true for both photos.
 const heroSlides = [
-  { img: hero1, alt: 'Stone terrace at Whispering Pines Resort at sunrise, looking over the Ramgarh valley toward the Himalaya' },
-  { img: hero2, alt: 'Covered lounge on the resort terrace with Himalayan ridges at dusk' },
-  { img: hero3, alt: 'Deodar tree and pine-covered hills seen from Whispering Pines in Malla Ramgarh' },
+  { img: hero1, mobile: hero3, alt: 'View from Whispering Pines over the Ramgarh valley toward the Himalaya, near Mukteshwar' },
+  { img: hero2, mobile: hero2, alt: 'Covered lounge on the resort terrace with Himalayan ridges at dusk' },
+  { img: hero3, mobile: hero1, alt: 'Whispering Pines terrace and pine-covered hills in Malla Ramgarh' },
 ];
+const mobileSrc = await Promise.all(heroSlides.map((s) =>
+  getImage({ src: s.mobile, widths: [480, 750, 1080], format: 'webp', quality: 70 })));
 
 const roomImg: Record<string, ImageMetadata> = {
   'entire-cottage': villaImg, 'delux-room': skylightImg, 'orchard-room': familyImg, 'cedar-room': cedarImg,
@@ -60,16 +64,20 @@ const rating = RESORT_CONTACT.rating;
 <section class="lx-hero" data-lx-hero aria-roledescription="carousel" aria-label="Resort photos">
   <div class="lx-track">
     {heroSlides.map((s, i) => (
-      <Image src={s.img} alt={s.alt} widths={[640, 1024, 1600, 2200]} sizes="100vw" quality={72} format="webp"
-        loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : 'auto'} />
+      <picture>
+        <source media="(max-width: 559px)" srcset={mobileSrc[i].srcSet.attribute} sizes="100vw" type="image/webp" />
+        <Image src={s.img} alt={s.alt} widths={[640, 1024, 1600, 2200]} sizes="100vw" quality={72} format="webp"
+          loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : 'auto'} />
+      </picture>
     ))}
   </div>
   <div class="lx-hero-copy">
+    <p id="speakable-hero-intro" class="lx-hero-loc">Malla Ramgarh · 1,780 m · 45 min from Mukteshwar Dham</p>
     <h1>Resort in Mukteshwar <span>with 180° Himalayan Views from Every Room</span></h1>
-    <p id="speakable-hero-intro">Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road · 1,780 m</p>
     <!-- generate_lead keeps homepage WhatsApp leads counting as Google Ads conversions, as the old room-list and booking-form buttons did (handled by /js/click-tracking.js) -->
     <a class="lx-btn lx-solid" href={BOOKING_ENGINE_URL} target="_blank" rel="noopener noreferrer"
       data-track-fn="trackAdsConversion" data-track-args='["generate_lead","booking","home_hero_whatsapp",{"conversion_type":"whatsapp"}]'>Check availability</a>
+    <p class="lx-hero-proof"><span aria-hidden="true">★</span> {rating.value} on Google · {rating.reviewCount} reviews · Save 25% booking direct</p>
   </div>
 </section>
 
@@ -77,9 +85,9 @@ const rating = RESORT_CONTACT.rating;
   <div class="lx-wrap lx-narrow lx-reveal">
     <h2>Twenty-five rooms, one private villa, and Nanda Devi from every window.</h2>
     <p id="speakable-about-summary" class="lx-lead">
-      Whispering Pines is an alpine resort at 1,780 m in Malla Ramgarh, a 25 km (about 45 minute) drive from Mukteshwar Dham.
-      Every room faces 180° of Nanda Devi and Trishul snow peaks, with fruit orchards and a 2,200 sq ft lawn, plus a 3-BHK
-      alpine villa for up to 10. Booking direct on WhatsApp saves 25%.
+      Whispering Pines is an alpine resort at 1,780 m in Malla Ramgarh, Uttarakhand, a 25 km (45 minute) drive from Mukteshwar Dham.
+      Every room faces 180° Nanda Devi and Trishul snow peaks, with fruit orchards and a 2,200 sq ft lawn, plus a 3-BHK
+      villa for up to 10. Booking direct on WhatsApp saves 25%.
     </p>
     <a class="lx-link" href="/about-whispering-pines-resort-ramgarh/">Our story, formerly Clarks Exotica →</a>
   </div>
@@ -213,17 +221,21 @@ const rating = RESORT_CONTACT.rating;
   .lx-hero { position: relative; height: 100svh; min-height: 560px; background: var(--color-pine); color: var(--color-cream); }
   .lx-track { display: flex; height: 100%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
   .lx-track::-webkit-scrollbar { display: none; }
-  .lx-track :global(img) { flex: 0 0 100%; width: 100%; height: 100%; object-fit: cover; object-position: 70% center; scroll-snap-align: start; }
+  .lx-track > picture { flex: 0 0 100%; display: block; width: 100%; height: 100%; scroll-snap-align: start; }
+  .lx-track :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: 70% center; }
   .lx-hero::after { content: ''; position: absolute; inset: 0; pointer-events: none;
     background:
       linear-gradient(to bottom, rgb(10 33 24 / .65), transparent 22%),  /* keeps the transparent header legible */
       linear-gradient(to top, rgb(14 44 33 / .9), rgb(14 44 33 / .45) 35%, transparent 65%); }
   .lx-hero-copy { position: absolute; inset: auto 0 9vh; z-index: 1; text-align: center; padding-inline: 16px; }
   /* clear the sitewide mobile Call/WhatsApp bar */
-  @media (max-width: 767px) { .lx-hero-copy { bottom: calc(9vh + 56px); } }
+  @media (max-width: 767px) { .lx-hero { height: calc(100svh - 59px); min-height: 520px; } .lx-hero-copy { bottom: 8vh; } }
   .lx-hero h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(34px, 5.2vw, 68px); line-height: 1.1; margin: 0 auto 14px; max-width: 18ch; text-shadow: 0 2px 14px rgb(0 0 0 / .45); }
   .lx-hero h1 span { display: block; font-size: .7em; margin-top: .25em; }
-  .lx-hero-copy p { font-size: 15px; letter-spacing: .04em; margin: 0 0 28px; opacity: .95; }
+  .lx-hero-loc { font: 600 12px/1.5 var(--font-sans); letter-spacing: .16em; text-transform: uppercase; color: var(--color-brass-light); margin: 0 0 14px; }
+  .lx-hero-proof { font-size: 14px; margin: 16px 0 0; opacity: .92; }
+  .lx-hero-proof span { color: var(--color-brass-light); }
+  .lx-hero h1 { margin-bottom: 26px !important; }
 
   /* quote band */
   .lx-quote { position: relative; overflow: hidden; background: var(--color-pine); color: var(--color-cream); padding-block: clamp(110px, 16vw, 220px); }
@@ -271,10 +283,18 @@ const rating = RESORT_CONTACT.rating;
     .lx-lead { font-size: 17px; }
     .lx-label { font-size: 13px; }
     /* shorter hero so the next section peeks and invites a scroll; sits above the sticky Call/WhatsApp bar */
-    .lx-hero { height: 88svh; min-height: 520px; }
-    .lx-hero-copy { bottom: 6vh; }
-    .lx-hero h1 { font-size: 34px; }
-    .lx-hero-copy p { font-size: 14px; margin-bottom: 22px; }
+    /* first-screen hierarchy for phones: location hook -> headline -> one CTA -> proof, in the top half */
+    /* ~74% of the screen: enough photo to prove the view (~220px under the text), and the next
+       section's heading peeks above the sticky bar so the page doesn't look finished (no "false floor") */
+    .lx-hero { height: min(74svh, 620px); min-height: 500px; }
+    .lx-hero-copy { top: calc(85px + 4svh); bottom: auto; }
+    .lx-hero h1 { font-size: 34px; max-width: none; margin-bottom: 22px !important; }
+    .lx-hero h1 span { font-size: .56em; margin-top: .4em; }
+    .lx-hero-loc { font-size: 11px; letter-spacing: .12em; }
+    .lx-hero-proof { font-size: 13px; }
+    .lx-hero::after { background:
+      linear-gradient(to bottom, rgb(10 33 24 / .72) 0%, rgb(10 33 24 / .42) 46%, transparent 64%, rgb(10 33 24 / .25) 100%); }
+    .lx-track :global(img) { object-position: 50% center; }
     .lx-btn { width: 100%; max-width: 340px; padding-block: 18px; }
     .lx-quote { padding-block: 88px; }
     .lx-quote p { font-size: 26px; }
