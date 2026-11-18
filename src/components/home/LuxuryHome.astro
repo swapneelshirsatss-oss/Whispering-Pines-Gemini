@@ -56,7 +56,9 @@ const rating = RESORT_CONTACT.rating;
   <div class="lx-hero-copy">
     <h1>Resort in Mukteshwar <span>with 180° Himalayan Views from Every Room</span></h1>
     <p id="speakable-hero-intro">Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road · 1,780 m</p>
-    <a class="lx-btn lx-solid" href={BOOKING_ENGINE_URL} target="_blank" rel="noopener noreferrer">Check availability</a>
+    <!-- generate_lead keeps homepage WhatsApp leads counting as Google Ads conversions, as the old room-list and booking-form buttons did (handled by /js/click-tracking.js) -->
+    <a class="lx-btn lx-solid" href={BOOKING_ENGINE_URL} target="_blank" rel="noopener noreferrer"
+      data-track-fn="trackAdsConversion" data-track-args='["generate_lead","booking","home_hero_whatsapp",{"conversion_type":"whatsapp"}]'>Check availability</a>
   </div>
 </section>
 
