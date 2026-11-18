@@ -178,12 +178,15 @@ const rating = RESORT_CONTACT.rating;
   .lx-head p { color: var(--color-ink); margin: 0; }
 
   /* hero */
-  .lx-hero { position: relative; height: calc(100svh - 64px); min-height: 520px; background: var(--color-pine); color: var(--color-cream); }
+  /* full-bleed: the homepage header floats transparent over the hero */
+  .lx-hero { position: relative; height: 100svh; min-height: 560px; background: var(--color-pine); color: var(--color-cream); }
   .lx-track { display: flex; height: 100%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
   .lx-track::-webkit-scrollbar { display: none; }
   .lx-track :global(img) { flex: 0 0 100%; width: 100%; height: 100%; object-fit: cover; object-position: 70% center; scroll-snap-align: start; }
   .lx-hero::after { content: ''; position: absolute; inset: 0; pointer-events: none;
-    background: linear-gradient(to top, rgb(14 44 33 / .9), rgb(14 44 33 / .45) 35%, transparent 65%); }
+    background:
+      linear-gradient(to bottom, rgb(10 33 24 / .65), transparent 22%),  /* keeps the transparent header legible */
+      linear-gradient(to top, rgb(14 44 33 / .9), rgb(14 44 33 / .45) 35%, transparent 65%); }
   .lx-hero-copy { position: absolute; inset: auto 0 9vh; z-index: 1; text-align: center; padding-inline: 16px; }
   /* clear the sitewide mobile Call/WhatsApp bar */
   @media (max-width: 767px) { .lx-hero-copy { bottom: calc(9vh + 56px); } }
@@ -237,7 +240,7 @@ const rating = RESORT_CONTACT.rating;
     .lx-lead { font-size: 17px; }
     .lx-label { font-size: 13px; }
     /* shorter hero so the next section peeks and invites a scroll; sits above the sticky Call/WhatsApp bar */
-    .lx-hero { height: calc(88svh - 64px); min-height: 480px; }
+    .lx-hero { height: 88svh; min-height: 520px; }
     .lx-hero-copy { bottom: 6vh; }
     .lx-hero h1 { font-size: 34px; }
     .lx-hero-copy p { font-size: 14px; margin-bottom: 22px; }

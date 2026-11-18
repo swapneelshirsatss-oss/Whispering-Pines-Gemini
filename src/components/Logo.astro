@@ -57,7 +57,7 @@ const { className = "", iconOnly = false } = Astro.props;
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 1200 300"
-    class={`h-9 sm:h-10 md:h-11 lg:h-12 w-auto max-w-[220px] sm:max-w-[260px] md:max-w-[290px] select-none hover:opacity-95 transition-opacity duration-300 ${className}`}
+    class={`h-11 sm:h-12 lg:h-14 w-auto max-w-[236px] sm:max-w-[260px] lg:max-w-[300px] select-none hover:opacity-95 transition-opacity duration-300 ${className}`}
     role="img"
     aria-labelledby="wpr-logo-title-astro"
   >
@@ -66,9 +66,8 @@ const { className = "", iconOnly = false } = Astro.props;
     <defs>
       <linearGradient id="astro-gold" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0" stop-color="#FFF0BE" />
-        <stop offset=".35" stop-color="#C4A77D" />
-        <stop offset=".65" stop-color="#7A6038" />
-        <stop offset="1" stop-color="#F8E3A3" />
+        <stop offset=".45" stop-color="#E2C893" />
+        <stop offset="1" stop-color="#C4A77D" />
       </linearGradient>
 
       <path
@@ -115,19 +114,20 @@ const { className = "", iconOnly = false } = Astro.props;
     >
       <text
         x="745"
-        y="68"
+        y="74"
         fill="#FFF9E9"
-        font-size="25"
-        letter-spacing="4"
+        font-size="46"
+        font-weight="bold"
+        letter-spacing="3"
       >
         WHISPERING PINES RESORT
       </text>
 
       <text
         x="745"
-        y="106"
-        fill="#C4A77D"
-        font-size="23"
+        y="116"
+        fill="#E2C893"
+        font-size="30"
         font-style="italic"
       >
         by
@@ -136,9 +136,9 @@ const { className = "", iconOnly = false } = Astro.props;
       {/* Dominant brand */}
       <text
         x="745"
-        y="184"
+        y="190"
         fill="url(#astro-gold)"
-        font-size="78"
+        font-size="80"
         font-weight="bold"
         letter-spacing="3"
       >
@@ -146,7 +146,7 @@ const { className = "", iconOnly = false } = Astro.props;
       </text>
 
       <path
-        d="M510,214 H980"
+        d="M430,216 H1060"
         fill="none"
         stroke="url(#astro-gold)"
         stroke-width="1.5"
@@ -154,10 +154,10 @@ const { className = "", iconOnly = false } = Astro.props;
 
       <text
         x="749"
-        y="252"
+        y="266"
         fill="#FFF9E9"
-        font-size="18"
-        letter-spacing="8"
+        font-size="36"
+        letter-spacing="14"
       >
         RAMGARH
       </text>

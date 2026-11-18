@@ -208,7 +208,7 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
     <!-- End Google Tag Manager (noscript) -->
     
     <div class="bg-[#FAF9F6] min-h-screen flex flex-col">
-      <Navbar client:idle>
+      <Navbar client:idle overlay={Astro.url.pathname === '/'}>
         <Logo />
       </Navbar>
       

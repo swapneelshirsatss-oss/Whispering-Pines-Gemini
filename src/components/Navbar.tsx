@@ -8,6 +8,8 @@ const WHATSAPP_BOOKING_URL = "https://wa.me/917505029696";
 
 interface NavbarProps {
   children?: React.ReactNode;
+  /** Homepage only: header floats transparent over the hero photo until the visitor scrolls. */
+  overlay?: boolean;
 }
 
 interface NavSubItem {
@@ -24,7 +26,7 @@ interface NavLink {
   dropdown?: NavSubItem[];
 }
 
-export default function Navbar({ children }: NavbarProps) {
+export default function Navbar({ children, overlay = false }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -37,7 +39,8 @@ export default function Navbar({ children }: NavbarProps) {
         setScrolled(false);
       }
     };
-    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // correct state when the page loads mid-scroll
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -96,7 +99,15 @@ export default function Navbar({ children }: NavbarProps) {
 
   return (
     <nav
-      className="sticky top-0 left-0 w-full z-50 bg-[#0E2C21] border-b border-[#FAF9F6]/10 py-3.5"
+      className={
+        overlay
+          ? `fixed top-0 left-0 w-full z-50 border-b transition-[background-color,border-color,padding] duration-300 ${
+              scrolled || isOpen
+                ? "bg-[#0E2C21] border-[#FAF9F6]/10 py-3"
+                : "bg-transparent border-transparent py-5"
+            }`
+          : "sticky top-0 left-0 w-full z-50 bg-[#0E2C21] border-b border-[#FAF9F6]/10 py-3.5"
+      }
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
