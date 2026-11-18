@@ -4,13 +4,6 @@ import type { Testimonial } from "../types";
 
 const FALLBACK_TESTIMONIALS: Testimonial[] = [
   {
-    name: "Digital Swapneel",
-    rating: 5,
-    source: "Google Reviews",
-    date: "June 2026",
-    comment: "Absolutely stunning upgrade! Whispering Pines Resort Mukteshwar has completely transformed the old Clarks Exotica property. Same beautiful location, but much better luxury amenities. Book direct on their site for the best rates. 10/10 mountain escape."
-  },
-  {
     name: "Anurag Arya",
     rating: 5,
     source: "Google Reviews",

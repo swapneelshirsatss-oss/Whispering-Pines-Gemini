@@ -445,18 +445,11 @@ export const LOCAL_EXPERIENCES: LocalExperience[] = [
     distance: "On-site",
     description: "Rejuvenate your mind and body with our guided group yoga sessions amidst the serene mountain environment of Whispering Pines Ramgarh.",
     tag: "Wellness",
-    image: "/images/best-resort-in-ramgarh.avif"
+    image: "/images/yoga-in-resort-mukteshwar.avif"
   }
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
-  {
-    name: "Digital Swapneel",
-    rating: 5,
-    source: "Google Reviews",
-    date: "June 2026",
-    comment: "Absolutely stunning upgrade! Whispering Pines Resort Mukteshwar has completely transformed the old Clarks Exotica property. Same beautiful location, but much better luxury amenities. Book direct on their site for the best rates. 10/10 mountain escape."
-  },
   {
     name: "Anurag Arya",
     rating: 5,

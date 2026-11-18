@@ -40,3 +40,5 @@ Read this first in every session. Update it after finishing a task or stopping w
 ## 5. Next Session Resume Prompt
 - **Do next:** the first open task in section 2.
 - Weekly SEO reports: `D:\01_Clients\Whsipeing Pines Resort By Casa De Bello\05_Marketing\SEO-Reports`
+
+- [x] 2026-11-18: Removed 'Digital Swapneel' testimonial from src/components/TestimonialList.tsx and src/data.ts (TESTIMONIALS). Yoga card image -> /images/yoga-in-resort-mukteshwar.avif. Build passed (34 pages). Not tested: live site.
