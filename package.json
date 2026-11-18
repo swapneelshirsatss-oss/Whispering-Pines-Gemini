@@ -27,5 +27,8 @@
     "react-dom": "^19.2.7",
     "sharp": "^0.35.3",
     "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "simple-icons": "^16.38.0"
   }
 }
