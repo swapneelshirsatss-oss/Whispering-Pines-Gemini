@@ -284,6 +284,9 @@ const rating = RESORT_CONTACT.rating;
     .lx-label { font-size: 13px; }
     /* shorter hero so the next section peeks and invites a scroll; sits above the sticky Call/WhatsApp bar */
     /* first-screen hierarchy for phones: location hook -> headline -> one CTA -> proof, in the top half */
+    /* ~74% of the screen: enough photo to prove the view (~220px under the text), and the next
+       section's heading peeks above the sticky bar so the page doesn't look finished (no "false floor") */
+    .lx-hero { height: min(74svh, 620px); min-height: 500px; }
     .lx-hero-copy { top: calc(85px + 4svh); bottom: auto; }
     .lx-hero h1 { font-size: 34px; max-width: none; margin-bottom: 22px !important; }
     .lx-hero h1 span { font-size: .56em; margin-top: .4em; }
