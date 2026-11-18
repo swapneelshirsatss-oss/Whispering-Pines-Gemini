@@ -75,7 +75,7 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
           <div className="flex items-center gap-3">
             <a
               href="/blog/"
-              className="inline-flex items-center gap-2 text-xs font-bold text-[#0E2C21] hover:text-[#7A6038] transition-colors group px-4 py-2.5 rounded-sm border border-[#EAE8E3] bg-white mr-2"
+              className="inline-flex items-center gap-2 text-xs font-bold text-[#0E2C21] hover:text-[#7A6038] transition-colors group px-4 py-3 min-h-11 rounded-sm border border-[#EAE8E3] bg-white mr-2"
             >
               View All Articles
               <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
@@ -86,7 +86,7 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
                 onClick={() => scroll("left")}
                 disabled={!canScrollLeft}
                 aria-label="Previous Articles"
-                className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all duration-300 ${
+                className={`w-11 h-11 rounded-full flex items-center justify-center border transition-all duration-300 ${
                   canScrollLeft
                     ? "bg-white border-[#EAE8E3] text-[#0E2C21] hover:bg-[#0E2C21] hover:text-[#B0966D] hover:border-[#0E2C21] shadow-sm cursor-pointer"
                     : "bg-gray-100 border-gray-200 text-gray-400 cursor-not-allowed opacity-50"
@@ -98,7 +98,7 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
                 onClick={() => scroll("right")}
                 disabled={!canScrollRight}
                 aria-label="Next Articles"
-                className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all duration-300 ${
+                className={`w-11 h-11 rounded-full flex items-center justify-center border transition-all duration-300 ${
                   canScrollRight
                     ? "bg-white border-[#EAE8E3] text-[#0E2C21] hover:bg-[#0E2C21] hover:text-[#B0966D] hover:border-[#0E2C21] shadow-sm cursor-pointer"
                     : "bg-gray-100 border-gray-200 text-gray-400 cursor-not-allowed opacity-50"
@@ -173,7 +173,7 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
 
                       <a
                         href={articleUrl}
-                        className="inline-flex items-center gap-1 text-xs font-bold text-[#0E2C21] group-hover:text-[#7A6038] transition-colors"
+                        className="inline-flex items-center gap-1 min-h-11 py-2 text-xs font-bold text-[#0E2C21] group-hover:text-[#7A6038] transition-colors"
                       >
                         Read Guide
                         <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
