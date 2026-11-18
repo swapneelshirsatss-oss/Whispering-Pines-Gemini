@@ -36,6 +36,8 @@ const perks = [
 
 const experiences = [
   { title: 'Kumaoni dining', sub: 'Multi-cuisine kitchen and bonfire BBQ evenings', img: diningImg, href: '/resort-services-ramgarh/' },
+  // yoga: only "guided group yoga sessions" is confirmed (data.ts LOCAL_EXPERIENCES); no spa/massage claims
+  { title: 'Yoga & wellness', sub: 'Guided group yoga sessions in the mountain air', src: '/images/yoga-in-resort-mukteshwar.avif', href: '/things-to-do-near-mukteshwar/' },
   { title: 'Pine trails', sub: 'Deodar and oak forest walks from the gate', src: '/images/Local-Sight-Himalayan-Excursions/pine-forest-nature-trails.webp', href: '/things-to-do-near-mukteshwar/' },
   { title: 'Orchards', sub: 'Apple, peach and plum, 0.5 km walk', src: '/images/Local-Sight-Himalayan-Excursions/malla-ramgarh-fruit-orchards.webp', href: '/things-to-do-near-mukteshwar/' },
   { title: 'Kainchi Dham', sub: 'Neem Karoli Baba Ashram, about 45 minutes', src: '/images/Local-Sight-Himalayan-Excursions/kainchi-dham-mukteshwar.webp', href: '/blog/resort-stay-near-kainchi-dham/' },
@@ -123,7 +125,7 @@ const rating = RESORT_CONTACT.rating;
 <section class="lx-section lx-dark" id="experiences">
   <div class="lx-wrap">
     <header class="lx-head lx-reveal"><h2>Slow days near Mukteshwar</h2></header>
-    <div class="lx-grid4 lx-swipe">
+    <div class="lx-grid4 lx-grid5 lx-swipe">
       {experiences.map((e) => (
         <a class="lx-exp lx-reveal" href={e.href}>
           {e.img
@@ -299,4 +301,12 @@ const rating = RESORT_CONTACT.rating;
   /* Motion (motion.dev) entrance animations: start hidden only while html.lx-motion is set (see inline script) */
   :global(html.lx-motion) .lx-reveal,
   :global(html.lx-motion) .lx-hero-copy > * { opacity: 0; }
+
+  /* experiences has 5 cards: 5 across on desktop, swipe row below that (never 2 + 2 + 1) */
+  @media (min-width: 560px) and (max-width: 999px) {
+    .lx-grid5 { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+    .lx-grid5::-webkit-scrollbar { display: none; }
+    .lx-grid5 > * { flex: 0 0 42%; scroll-snap-align: start; }
+  }
+  @media (min-width: 1000px) { .lx-grid5 { grid-template-columns: repeat(5, 1fr); gap: 20px; } }
 </style>
