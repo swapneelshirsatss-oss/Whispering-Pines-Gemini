@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import { RESORT_CONTACT, generateWhatsAppLink } from '../../data';
 import BlogShareBar from '../../components/BlogShareBar.astro';
 
-const pageTitle = "Himalayan View Resort in Uttarakhand | Whispering Pines Ramgarh";
-const pageDescription = "Discover Whispering Pines in Ramgarh — the best Himalayan view resort in Uttarakhand with 180° snow peak views from all rooms, balconies, and fruit orchards.";
+const pageTitle = "Himalayan View Resort in Mukteshwar, Uttarakhand (180° View)";
+const pageDescription = "Discover Whispering Pines near Mukteshwar — the Himalayan view resort in Uttarakhand with 180° snow peak views from every room, balcony, and fruit orchard.";
 const canonicalUrl = "https://whisperingpinesresort.in/blog/himalayan-view-resort-uttarakhand/";
 const ogImageUrl = "https://whisperingpinesresort.in/images/Himalayan-View-Resort-in-Uttarakhand/himalayan-view-resort-uttarakhand-whispering-pines-casa-de-bello-ramgarh-2026.avif";
 const ogAltText = "Himalayan view resort Uttarakhand — 180° Nanda Devi panorama at Whispering Pines by Casa De Bello, Malla Ramgarh 2026";
@@ -44,7 +44,7 @@ const geoPlaceSchema = {
   "@context": "https://schema.org",
   "@type": "Place",
   "name": "Whispering Pines Resort — Malla Ramgarh Ridge, Uttarakhand",
-  "description": "Premier Himalayan view resort estate in Malla Ramgarh at 1,780 metres on the Bhowali-Ramgarh-Mukteshwar corridor, delivering 180° unobstructed panorama of Nanda Devi (7,816m) and Trishul (7,120m) from every room, balcony, pool deck, and orchard lawn.",
+  "description": "Premier Himalayan view resort estate in Malla Ramgarh at 1,780 metres on the Bhowali-Ramgarh-Mukteshwar corridor, delivering 180° unobstructed panorama of Nanda Devi (7,816m) and Trishul (7,120m) from every room, balcony, and orchard lawn.",
   "hasMap": "https://maps.google.com/?cid=8386667112972057918",
   "geo": {
     "@type": "GeoCoordinates",
@@ -83,14 +83,14 @@ const resortSchema = {
   "@context": "https://schema.org",
   "@type": ["Resort", "Hotel", "LodgingBusiness"],
   "name": "Whispering Pines Resort by Casa De Bello",
-  "description": "The finest Himalayan view resort in Uttarakhand at 1,780m in Malla Ramgarh. 180° unobstructed Nanda Devi and Trishul panorama from every room, balcony, pool deck. Swimming pool, private villa sleeping 10, 150 Mbps fiber Wi-Fi, stone fireplace rooms, pet-friendly orchards.",
+  "description": "The finest Himalayan view resort in Uttarakhand at 1,780m in Malla Ramgarh near Mukteshwar. 180° unobstructed Nanda Devi and Trishul panorama from every room and balcony. Private villa sleeping 10, 150 Mbps fiber Wi-Fi, fireplace rooms, pet-friendly orchards.",
   "url": "https://whisperingpinesresort.in",
   "telephone": "+91-7505029696",
   "email": "booking@whisperingpinesresort.in",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
-    "addressLocality": "Ramgarh",
+    "addressLocality": "Mukteshwar",
     "addressRegion": "Uttarakhand",
     "postalCode": "263137",
     "addressCountry": "IN"
@@ -101,7 +101,6 @@ const resortSchema = {
   "priceRange": "₹3,000 – ₹15,999",
   "amenityFeature": [
     { "@type": "LocationFeatureSpecification", "name": "180° Himalayan Views — Nanda Devi & Trishul", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Swimming Pool at 1,780m altitude", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "150 Mbps Enterprise Fiber Wi-Fi", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Private Villa — 3 bedrooms, sleeps 10", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Stone Fireplace Rooms", "value": true },
@@ -115,12 +114,11 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "Which is the best Himalayan view resort in Uttarakhand?", "acceptedAnswer": { "@type": "Answer", "text": "Whispering Pines Resort by Casa De Bello in Malla Ramgarh, rated 4.6★ from 425 verified Google reviews, delivers a 180° unobstructed view of Nanda Devi (7,816m) and Trishul (7,120m) from every room, balcony, pool deck, and outdoor lawn at 1,780 metres altitude. It combines this panorama with a swimming pool, private villa sleeping 10, 150 Mbps fiber Wi-Fi, and senior-friendly accessible rooms." } },
+    { "@type": "Question", "name": "Which is the best Himalayan view resort in Uttarakhand?", "acceptedAnswer": { "@type": "Answer", "text": "Whispering Pines Resort by Casa De Bello in Malla Ramgarh near Mukteshwar, rated 4.6★ from 425 verified Google reviews, delivers a 180° unobstructed view of Nanda Devi (7,816m) and Trishul (7,120m) from every room, balcony, and outdoor lawn at 1,780 metres altitude. It combines this panorama with a private villa sleeping 10, 150 Mbps fiber Wi-Fi, working fruit orchards, and senior-friendly accessible rooms." } },
     { "@type": "Question", "name": "Which Himalayan peaks are visible from the resort?", "acceptedAnswer": { "@type": "Answer", "text": "Nanda Devi (7,816m — the highest peak entirely within India), Trishul (7,120m), and the Panchachuli range are all visible from the property. The full Kumaon Himalayan ridgeline spans 180° of the western horizon." } },
     { "@type": "Question", "name": "Is the Himalayan view visible year-round?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Malla Ramgarh ridge position delivers year-round Himalayan view clarity. Summer mornings (6–10 AM) are clear before afternoon cloud builds. Winter months October to February provide the sharpest views." } },
-    { "@type": "Question", "name": "Does the resort have a swimming pool with Himalayan views?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. An on-site pool surrounded by pine forest — Nanda Devi and Trishul visible above the pool horizon. One of the very few Himalayan view resorts in Uttarakhand at 1,780 metres with a pool alongside 180° mountain panorama." } },
     { "@type": "Question", "name": "How far is the resort from Mukteshwar?", "acceptedAnswer": { "@type": "Answer", "text": "25 km from Mukteshwar Dham temple — approximately 45 minutes on the Bhowali-Ramgarh-Mukteshwar Road." } },
-    { "@type": "Question", "name": "Is Whispering Pines the same property as Clarks Exotica Ramgarh?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whispering Pines Resort by Casa De Bello is the upgraded successor to Clarks Exotica on the Mukteshwar Road — same iconic Himalayan view address in Malla Ramgarh, now with swimming pool, private villa, 150 Mbps fiber Wi-Fi, and Casa De Bello management." } },
+    { "@type": "Question", "name": "Is Whispering Pines the same property as Clarks Exotica Ramgarh?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whispering Pines Resort by Casa De Bello is the upgraded successor to Clarks Exotica on the Mukteshwar Road — same iconic Himalayan view address in Malla Ramgarh, now with a private 10-guest villa, 150 Mbps fiber Wi-Fi, and Casa De Bello management." } },
     { "@type": "Question", "name": "How do I book at the best price?", "acceptedAnswer": { "@type": "Answer", "text": "Book directly via WhatsApp at +91-7505029696. Save flat 25% versus all OTA platforms including MakeMyTrip, Booking.com, and Goibibo." } }
   ]
 };
@@ -159,10 +157,10 @@ const faqSchema = {
           ★ Official 2026 Himalayan Travel Guide — Uttarakhand
         </div>
         <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight max-w-4xl mx-auto">
-          Himalayan View Resort in Uttarakhand That Will Make You Forget the City Exists
+          Himalayan View Resort in Mukteshwar, Uttarakhand: 180° Nanda Devi Views from Every Room
         </h1>
         <p class="text-base sm:text-xl text-gray-200 font-light max-w-3xl mx-auto leading-relaxed">
-          Casa De Bello Whispering Pines, Malla Ramgarh — 180° Nanda Devi panorama · Private villa · Pool · 150 Mbps Wi-Fi · 4.6★ from 425 reviews
+          Casa De Bello Whispering Pines, Malla Ramgarh (Mukteshwar) — 180° Nanda Devi panorama · Private 3-BHK villa · 150 Mbps Wi-Fi · 4.6★ from 425 reviews
         </p>
         <div class="pt-2 flex flex-wrap justify-center gap-3">
           <a

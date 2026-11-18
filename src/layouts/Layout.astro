@@ -90,7 +90,7 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Whispering Pines Resort by Casa De Bello - Near Mukteshwar" />
+    <meta property="og:site_name" content="Whispering Pines Resort by Casa De Bello Mukteshwar Road" />
     <meta property="og:url" content={canonicalURL.href} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -121,8 +121,11 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
       "@context": "https://schema.org",
       "@type": "WebSite",
       "@id": "https://whisperingpinesresort.in/#website",
-      "name": "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+      "name": "Whispering Pines Resort",
       "alternateName": [
+        "Whispering Pines Resort by Casa De Bello Mukteshwar Road",
+        "Whispering pines resort by casa de bello Mukteshwar road",
+        "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
         "Whispering Pines Resort by Casa De Bello",
         "Whispering Pines Resort Mukteshwar",
         "Whispering Pines Resort near Mukteshwar",
@@ -135,33 +138,39 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
       "url": "https://whisperingpinesresort.in/"
     })} />
 
-    <!-- Hotel / Resort Entity & Aggregate Rating Schema (Updated to 4.6 stars & 425 reviews) -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Hotel",
-      "@id": "https://whisperingpinesresort.in/#hotel",
-      "name": "Whispering Pines Resort by Casa De Bello",
-      "url": "https://whisperingpinesresort.in/",
-      "image": "https://whisperingpinesresort.in/og-image.webp",
-      "priceRange": "₹3,000 - ₹15,999",
-      "telephone": "+91-7505029696",
-      "hasMap": "https://maps.google.com/?cid=8386667112972057918",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd",
-        "addressLocality": "Mukteshwar",
-        "addressRegion": "Uttarakhand",
-        "postalCode": "263137",
-        "addressCountry": "IN"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "reviewCount": "425",
-        "bestRating": "5",
-        "worstRating": "1"
-      }
-    })} />
+    <!-- Hotel / Resort Entity & Aggregate Rating Schema (Omitted on / where ResortLodgingSchema provides the single unified Hotel entity) -->
+    {pathname !== '/' && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Hotel",
+        "@id": "https://whisperingpinesresort.in/#hotel",
+        "name": "Whispering Pines Resort by Casa De Bello Mukteshwar Road",
+        "alternateName": [
+          "Whispering pines resort by casa de bello Mukteshwar road",
+          "Whispering Pines Resort by Casa De Bello"
+        ],
+        "url": "https://whisperingpinesresort.in/",
+        "image": "https://whisperingpinesresort.in/og-image.webp",
+        "priceRange": "₹3,000 - ₹15,999",
+        "telephone": "+91-7505029696",
+        "hasMap": "https://maps.google.com/?cid=8386667112972057918",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+          "addressLocality": "Mukteshwar",
+          "addressRegion": "Uttarakhand",
+          "postalCode": "263137",
+          "addressCountry": "IN"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.6",
+          "reviewCount": "425",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      })} />
+    )}
 
     <!-- Generative Engine Optimization (GEO) & LLM Knowledge Base Discovery -->
     <link rel="alternate" type="text/markdown" href="/llms.txt" title="Whispering Pines Resort LLM Knowledge Base" />

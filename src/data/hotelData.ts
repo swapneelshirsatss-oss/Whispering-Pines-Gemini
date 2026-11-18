@@ -58,9 +58,12 @@ export type {
 
 // 2. Standardized Property Details (cross-property consistency)
 export const propertyDetails = {
-  officialName: "Whispering Pines Resort by Casa De Bello",
-  serpTitle: "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+  officialName: "Whispering Pines Resort by Casa De Bello Mukteshwar Road",
+  serpTitle: "Whispering Pines Resort by Casa De Bello Mukteshwar Road",
   alternateNames: [
+    "Whispering Pines Resort by Casa De Bello Mukteshwar Road",
+    "Whispering pines resort by casa de bello Mukteshwar road",
+    "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
     "Whispering Pines Resort by Casa De Bello",
     "Whispering Pines Resort Mukteshwar",
     "Whispering Pines Resort near Mukteshwar",
@@ -73,7 +76,7 @@ export const propertyDetails = {
   legacyBrand: "Clarks Exotica Resort Ramgarh Mukteshwar",
   tagline: "180° Panoramic Himalayan Views from Every Room | Boutique Luxury Mountain Resort",
   description:
-    "Whispering Pines Resort by Casa De Bello is a 4-star boutique heritage mountain resort situated on the Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh, Uttarakhand (1,780m elevation). Set amidst pine canopies and fruit orchards (peaches, plums, apples, apricots), every single room and private balcony commands direct, unobstructed 180° views of the Nanda Devi and Trishul Himalayan snow peaks. Features a standalone 3-BHK private alpine villa (sleeping 10), heated quarters, swimming pool, diverse multi-cuisine dining, safe pet-friendly lawns, and nightly bonfires.",
+    "Whispering Pines Resort by Casa De Bello Mukteshwar Road is a 4-star boutique heritage mountain resort situated on the Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh, Mukteshwar, Uttarakhand (1,780m elevation). Set amidst pine canopies and fruit orchards (peaches, plums, apples, apricots), every single room and private balcony commands direct, unobstructed 180° views of the Nanda Devi and Trishul Himalayan snow peaks. Features a standalone 3-BHK private alpine villa (sleeping 10), heated quarters, diverse multi-cuisine dining, safe pet-friendly lawns, and nightly bonfires.",
   starRating: 4,
   elevation: "1,780m (5,840 ft)",
   totalRooms: 25,

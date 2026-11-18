@@ -24,14 +24,14 @@ Consult these guides before working on related tasks:
 ## Google Site Name & SERP Branding Rules
 
 Whenever updating site metadata, `Layout.astro`, or JSON-LD schemas:
-- **`WebSite` Schema**: Set `name` to `"Whispering Pines Resort by Casa De Bello - Near Mukteshwar"`. Provide an `alternateName` array containing `["Whispering Pines Resort by Casa De Bello", "Whispering Pines Resort Mukteshwar", "Whispering Pines Resort near Mukteshwar", "Whispering Pines by Casa De Bello", "Casa De Bello - Whispering Pines Mukteshwar Road", "Casa De bello - Whsipering pines Mukteshwar Road", "Casa De Bello Mukteshwar - ramgarh", "Casa De Bello Mukteshwar - Ramgarh"]`.
-- **OpenGraph `og:site_name`**: Ensure `<meta property="og:site_name" content="Whispering Pines Resort by Casa De Bello - Near Mukteshwar" />` is declared in `Layout.astro`.
+- **`WebSite` Schema**: Set `name` to `"Whispering Pines Resort"`. Provide an `alternateName` array containing `["Whispering Pines Resort by Casa De Bello Mukteshwar Road", "Whispering pines resort by casa de bello Mukteshwar road", "Whispering Pines Resort by Casa De Bello - Near Mukteshwar", "Whispering Pines Resort by Casa De Bello", "Whispering Pines Resort Mukteshwar", "Whispering Pines Resort near Mukteshwar", "Whispering Pines by Casa De Bello", "Casa De Bello - Whispering Pines Mukteshwar Road", "Casa De bello - Whsipering pines Mukteshwar Road", "Casa De Bello Mukteshwar - ramgarh", "Casa De Bello Mukteshwar - Ramgarh"]`.
+- **OpenGraph `og:site_name`**: Ensure `<meta property="og:site_name" content="Whispering Pines Resort by Casa De Bello Mukteshwar Road" />` is declared in `Layout.astro`.
 - **Primary Address Format**: Always format the official property address as `"Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137"`.
 
 ## Google Business Profile (GBP) & NAP Standards
 
 Whenever updating contact details, footer components, or local schemas:
-- **Official Entity Name**: Set to `"Whispering Pines Resort by Casa De Bello"`.
+- **Official Entity / GMB Name**: Set to `"Whispering Pines Resort by Casa De Bello Mukteshwar Road"` (with exact GMB casing `"Whispering pines resort by casa de bello Mukteshwar road"` included in `alternateName`).
 - **Primary Address Format**: Always format as `"Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137"`.
 - **Primary Phone Format**: Display `"075050 29696"` (with optional `(+91 75050 29696)` international notation), click-to-call `href="tel:+917505029696"`, and WhatsApp `https://wa.me/917505029696`.
 - **Google Maps CID Link (No Shortlinks)**: Always reference `https://maps.google.com/?cid=8386667112972057918` in footer address links, component links, and JSON-LD `hasMap`. NEVER use `maps.app.goo.gl` shortlinks anywhere in the codebase to avoid breaking Google Knowledge Graph entity reconciliation.
@@ -164,7 +164,7 @@ All copy, metadata, structured data, calculator models, and LLM text files must 
 - **Total Capacity & Inventory**: `25 premium rooms` + `1 standalone 3-BHK private alpine villa` (Sleeps up to 70 residential guests; outdoor lawn events & weddings up to 100 guests)
 - **Room Categories**: `3-BHK Private Alpine Villa`, `Deluxe Skylight Suite`, `Family Twin Room`, `Executive Cedar Suite` (Avoid calling them "stone cottages" or "homestays")
 - **Wi-Fi**: Dedicated `150 Mbps Enterprise Fiber Wi-Fi` across all rooms, lawns, and desks (Never say "ambient Wi-Fi")
-- **Amenities**: On-site `Pine Forest Swimming Pool` at 1,780m, working organic fruit orchards, wood-fired fireplaces, bonfire pits, pet-friendly lawns
+- **Amenities**: 2,200 sq ft Nanda Devi Lawn at 1,780m, working organic fruit orchards, wood-fired fireplaces, bonfire pits, pet-friendly lawns (**STRICT RULE [Neel, 18 Nov 2026]: The resort has NO swimming pool available. Never mention a pool in any copy, title, meta, schema, or ad.**)
 - **Key Distances & Transit Times**:
   - **Kainchi Dham (Neem Karoli Baba Ashram)**: `22 km (~45 mins drive)`
   - **Bhalu Gaad Waterfall**: `16 km (~35 mins drive)`

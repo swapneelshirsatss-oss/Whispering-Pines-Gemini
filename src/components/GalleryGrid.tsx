@@ -118,11 +118,11 @@ export default function GalleryGrid() {
           Visual Journey
         </span>
         <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0E2C21] mb-5">
-          A Glimpse into Paradise
+          Photo Gallery — Whispering Pines, Mukteshwar
         </h1>
         <div className="w-20 h-[2px] bg-[#B0966D] mx-auto mb-5" />
         <p className="text-[17px] sm:text-lg text-[#2C3531]/80 font-sans leading-relaxed">
-          Explore the tranquil corners, grand alpine architecture, and the panoramic views that make Whispering Pines the best resort in Ramgarh near Mukteshwar.
+          Explore the tranquil corners, grand alpine architecture, and the 180° Himalayan views at Whispering Pines Resort near Mukteshwar (Malla Ramgarh).
         </p>
       </div>
 

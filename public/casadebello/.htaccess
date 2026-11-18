@@ -1,0 +1,6 @@
+# Apache / LiteSpeed configuration for casadebello.whisperingpinesresort.in
+# Prevent search engine indexing of the subdomain to eliminate keyword cannibalization with main site
+
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>

@@ -89,7 +89,6 @@ export default function Navbar({ children }: NavbarProps) {
     { name: "About Us", href: "/about-whispering-pines-resort-ramgarh/" },
     { name: "Reviews", href: "/reviews/" },
     { name: "Contact", href: "/contact-whispering-pines-resort-mukteshwar/" },
-    { name: "Casa De Bello", href: "https://casadebello.whisperingpinesresort.in/", external: true },
   ];
 
   const handleNavBookingClick = () => {

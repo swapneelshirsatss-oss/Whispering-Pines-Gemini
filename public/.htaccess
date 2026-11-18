@@ -103,6 +103,11 @@
   <FilesMatch "\.svg$">
     Header set Cache-Control "max-age=86400, public, must-revalidate"
   </FilesMatch>
+
+  # Prevent search engine indexing of casadebello subdomain / directory
+  SetEnvIfNoCase Host "^casadebello\.whisperingpinesresort\.in$" SUBDOMAIN_NOINDEX
+  SetEnvIfNoCase Request_URI "^/casadebello(/.*)?$" SUBDOMAIN_NOINDEX
+  Header set X-Robots-Tag "noindex, nofollow" env=SUBDOMAIN_NOINDEX
 </IfModule>
 
 # Deny access to hidden files and sensitive dotfiles

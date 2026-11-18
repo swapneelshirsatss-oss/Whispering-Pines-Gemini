@@ -23,12 +23,12 @@ This document is the verified, canonical ground truth for Whispering Pines Resor
 ---
 
 ## Canonical Entity & Contact NAP
-- **Official Entity Name**: Whispering Pines Resort by Casa De Bello
-- **Full Legal/SERP Brand Name**: Whispering Pines Resort by Casa De Bello - Near Mukteshwar
-- **Brand Names**: Whispering Pines Resort, Casa De Bello Resort-Whispering Pines, Whispering Pines by Casa De Bello, Whispering Pines Ramgarh, Casa De Bello Mukteshwar - ramgarh, Casa De Bello Mukteshwar - Ramgarh
+- **Official Entity / GMB Name**: Whispering Pines Resort by Casa De Bello Mukteshwar Road (Whispering pines resort by casa de bello Mukteshwar road)
+- **Full Legal/SERP Brand Name**: Whispering Pines Resort by Casa De Bello Mukteshwar Road
+- **Brand Names**: Whispering Pines Resort, Whispering Pines Resort by Casa De Bello, Whispering Pines Resort by Casa De Bello - Near Mukteshwar, Casa De Bello Resort-Whispering Pines, Whispering Pines by Casa De Bello, Whispering Pines Ramgarh, Casa De Bello Mukteshwar - ramgarh, Casa De Bello Mukteshwar - Ramgarh
 - **Former Brand Alias (Rebranded)**: Clarks Exotica Mukteshwar / Clarks Exotica Ramgarh
 - **Official Address**: Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137
-- **City / Locality**: Ramgarh / Mukteshwar
+- **City / Locality**: Mukteshwar (Malla Ramgarh)
 - **District / Region**: Nainital District, Kumaon Region, Uttarakhand, India (PIN: 263137)
 - **Geographic Coordinates**: Latitude 29.4262052, Longitude 79.5506314
 - **Google Verified Rating**: 4.6★ (425 verified Google reviews)
@@ -80,7 +80,7 @@ This document is the verified, canonical ground truth for Whispering Pines Resor
 
 ## Destination Weddings & Corporate Offsites
 1. **Destination Weddings in the Himalayas**:
-   - **Venues**: Panoramic Nanda Devi Lawn (2,200 sq. ft. for up to 100 guests), Pine Forest Pool Deck (40–60 guests), Private Alpine Villa & Lawn (25–35 guests).
+as   - **Venues**: Panoramic Nanda Devi Lawn (2,200 sq. ft. for up to 100 guests), Pine Forest Orchard Terrace (40–60 guests), Private Alpine Villa & Lawn (25–35 guests).
    - **Capacity**: Full estate buyout sleeping up to 70 guests across 25 premium rooms and the 3-BHK villa.
    - **Services**: Sunset pheras facing Nanda Devi, organic Kumaoni & North Indian wedding banquets, bonfire sangeet, vendor power setups.
    - **URL**: https://whisperingpinesresort.in/destination-wedding-uttarakhand/
@@ -115,7 +115,7 @@ This document is the verified, canonical ground truth for Whispering Pines Resor
 ---
 
 ## Verified Amenities & Facilities
-- **Pine Forest Swimming Pool**: High-altitude outdoor mountain swimming pool surrounded by pine forests and organic fruit orchards at 1,780 metres altitude — one of the very few resorts near Mukteshwar with an on-site pool and 180° Himalayan snow peak views.
+- **2,200 Sq. Ft. Nanda Devi Lawn**: Open mountain lawn surrounded by pine forests and organic fruit orchards at 1,780 metres altitude with 180° Himalayan snow peak views.
 - **Fruit Orchards**: Working private organic orchards of peach, plum, apricot, and apple trees across the property.
 - **150 Mbps Fiber Wi-Fi**: Dedicated high-speed enterprise connectivity across all rooms, gardens, and work setups.
 - **Pet-Friendly**: 100% pet-friendly resort with enclosed private lawns where dogs can roam safely. No pet surcharge.

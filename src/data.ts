@@ -6,8 +6,8 @@ import familyTwinRoomImg from "./assets/images/Group_booking_nainital_resort.avi
 import orchardRoomImg from "./assets/images/Family_Twin_Room_Near_nainital.avif?url";
 
 export const RESORT_CONTACT = {
-  gbpName: "Whispering Pines Resort by Casa De Bello",
-  name: "Whispering Pines Resort by Casa De Bello - Near Mukteshwar",
+  gbpName: "Whispering Pines Resort by Casa De Bello Mukteshwar Road",
+  name: "Whispering Pines Resort by Casa De Bello Mukteshwar Road",
   legalName: "Casa De Bello - Whispering Pines",
   phone: "075050 29696",
   phoneDisplay: "075050 29696",
@@ -20,8 +20,8 @@ export const RESORT_CONTACT = {
   email: "booking@whisperingpinesresort.in",
   domain: "https://whisperingpinesresort.in/",
   streetAddress: "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd",
-  addressLocality: "Ramgarh, Mukteshwar",
-  addressRegion: "Nainital, Uttarakhand",
+  addressLocality: "Mukteshwar",
+  addressRegion: "Uttarakhand",
   postalCode: "263137",
   addressCountry: "IN",
   location: "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
