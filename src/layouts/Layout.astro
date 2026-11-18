@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar.tsx';
 import FooterSection from '../components/FooterSection.astro';
 import Logo from '../components/Logo.astro';
 import StickyDirectBookingBar from '../components/StickyDirectBookingBar.astro';
+import FestiveOfferPopup from '../components/FestiveOfferPopup.astro'; // Xmas/NY 2026-27, auto-off 1 Jan 2027
 
 interface Props {
   title: string;
@@ -219,6 +220,7 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
       <FooterSection />
     </div>
 
+    {Astro.url.pathname !== '/book-now/' && <FestiveOfferPopup />}
     <StickyDirectBookingBar hideBar={pathname === '/book-now/'} />
   </body>
 </html>
