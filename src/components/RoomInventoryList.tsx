@@ -207,7 +207,7 @@ export default function RoomInventoryList({
                     onClick={handleRoomBookingClick}
                     className="inline-flex items-center text-[#0E2C21] hover:text-[#B0966D] font-sans text-[11px] font-semibold uppercase tracking-wider px-3 py-3 transition-colors duration-300 group/btn"
                   >
-                    <span>Check Web Engine</span>
+                    <span>Check Availability</span>
                     <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform duration-300 group-hover/btn:translate-x-1" />
                   </a>
                 </div>

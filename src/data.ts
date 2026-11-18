@@ -67,7 +67,7 @@ export const RESORT_CONTACT = {
   description: "Whispering Pines Resort by Casa de bello is a 4 Star heritage mountain resort located on the Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh. Surrounded by dense pine canopies and private apple, peach, and plum orchards, the property offers clean comfortable rooms with luxury facilities.\n\nDesigned for families, remote professionals, and travelers seeking a quiet Himalayan retreat, the resort offers 180° panoramic views of the Nanda Devi and Trishul peaks. As an upgraded continuation of the Clarks Exotica legacy, we prioritize direct guest relationships.\n\nContact our front desk directly at 075050 29696 (+91-7505029696) or via WhatsApp to secure exclusive past-guest retention rates and direct-booking benefits."
 };
 
-export const BOOKING_ENGINE_URL = "https://whisperingpinesresort.bookingjini.in/";
+export const BOOKING_ENGINE_URL = "https://wa.me/917505029696?text=Hi%20Whispering%20Pines%20Resort%21%20I%20would%20like%20to%20check%20room%20availability%20and%20direct%20booking%20rates.";
 
 /**
  * Highly conversion-optimized custom WhatsApp link generator

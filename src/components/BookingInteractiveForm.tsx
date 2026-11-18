@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Calendar, Users, Home, ArrowUpRight, ChevronDown, MessageCircle, Sparkles, Check } from "lucide-react";
 import { trackAdsConversion } from "../utils/analytics";
 
-const BOOKING_ENGINE_URL = "https://whisperingpinesresort.bookingjini.in/";
+const BOOKING_ENGINE_URL = "https://wa.me/917505029696?text=Hi%20Whispering%20Pines%20Resort%21%20I%20would%20like%20to%20check%20availability%20and%20direct%20booking%20rates.";
 
 const FORM_ROOM_OPTIONS = [
   { id: "entire-cottage", name: "Private 3-BHK Alpine Villa (Up to 10 Guests)", pricePerNight: 15999 },
@@ -302,13 +302,13 @@ Please confirm availability and share direct booking privileges.`;
               </a>
 
               <a
-                href={BOOKING_ENGINE_URL}
+                href={whatsAppLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleEngineBookingClick}
                 className="w-full bg-transparent hover:bg-white/10 text-[#FAF9F6] border border-[#FAF9F6]/25 font-sans text-center text-[10px] font-semibold uppercase tracking-wider py-2.5 px-4 rounded-sm flex items-center justify-center transition-colors"
               >
-                <span>Or Book via Direct Engine</span>
+                <span>Check Availability on WhatsApp</span>
                 <ArrowUpRight className="w-3.5 h-3.5 ml-1.5 opacity-70" />
               </a>
 
