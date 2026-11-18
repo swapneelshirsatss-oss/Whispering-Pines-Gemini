@@ -46,6 +46,15 @@ const reviews = pick.map((n) => TESTIMONIALS.find((t) => t.name === n)).filter((
 const rating = RESORT_CONTACT.rating;
 ---
 
+<script is:inline>
+  // Motion entrance animations: hide animated elements only when JS runs and the visitor allows motion.
+  // Safety net: if the motion bundle hasn't loaded in 3s, show everything without animation.
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('lx-motion');
+    window.__lxMotionFallback = setTimeout(function () { document.documentElement.classList.remove('lx-motion'); }, 3000);
+  }
+</script>
+
 <section class="lx-hero" data-lx-hero aria-roledescription="carousel" aria-label="Resort photos">
   <div class="lx-track">
     {heroSlides.map((s, i) => (
@@ -146,6 +155,26 @@ const rating = RESORT_CONTACT.rating;
   <Image src={band1} alt="Wooden booth seating in the Whispering Pines restaurant" widths={[640, 1280]} sizes="(max-width: 559px) 82vw, 50vw" quality={70} format="webp" />
   <Image src={band2} alt="Villa bedroom opening onto a balcony among the pines" widths={[640, 1280]} sizes="(max-width: 559px) 82vw, 50vw" quality={70} format="webp" />
 </div>
+
+<script>
+  // motion/mini = Motion's small WAAPI animate (~2-3 KB) instead of the full engine (~70 KB raw)
+  import { animate } from 'motion/mini';
+  import { inView } from 'motion';
+
+  clearTimeout((window as any).__lxMotionFallback);
+  if (document.documentElement.classList.contains('lx-motion')) {
+    const ease = [0.22, 1, 0.36, 1] as const; // soft "expo-out", calm rather than bouncy
+    document.querySelectorAll('.lx-hero-copy > *').forEach((el, i) =>
+      animate(el, { opacity: [0, 1], transform: ['translateY(24px)', 'none'] }, { duration: 0.9, ease, delay: 0.15 + i * 0.12 }));
+
+    inView('.lx-reveal', (el) => {
+      // cards in the same row enter one after another
+      const row = [...(el.parentElement?.children ?? [])].filter((c) => c.classList.contains('lx-reveal'));
+      const i = Math.min(Math.max(row.indexOf(el), 0), 4);
+      animate(el, { opacity: [0, 1], transform: ['translateY(28px)', 'none'] }, { duration: 0.8, ease, delay: i * 0.08 });
+    }, { margin: '0px 0px -8% 0px' });
+  }
+</script>
 
 <script>
   // Auto-advance the hero; swipe/scroll-snap does the rest. Stops on first touch and for reduced motion.
@@ -257,7 +286,6 @@ const rating = RESORT_CONTACT.rating;
     .lx-reviews.lx-swipe { margin-bottom: 20px; }
     .lx-review { padding: 22px; }
     .lx-review p { font-size: 17px; }
-    .lx-swipe .lx-reveal { animation: none; } /* fade-in fights horizontal scroll */
 
     /* perks: compact 2 x 2 instead of four stacked blocks */
     .lx-perks { padding-block: 48px; }
@@ -268,11 +296,7 @@ const rating = RESORT_CONTACT.rating;
   /* comfortable thumb targets for text links */
   .lx-link { display: inline-block; padding-block: 12px; }
 
-  /* scroll fade-in, CSS only; older browsers just show content */
-  @supports (animation-timeline: view()) {
-    @media (prefers-reduced-motion: no-preference) {
-      .lx-reveal { animation: lx-in linear both; animation-timeline: view(); animation-range: entry 0% entry 35%; }
-      @keyframes lx-in { from { opacity: 0; transform: translateY(32px); } }
-    }
-  }
+  /* Motion (motion.dev) entrance animations: start hidden only while html.lx-motion is set (see inline script) */
+  :global(html.lx-motion) .lx-reveal,
+  :global(html.lx-motion) .lx-hero-copy > * { opacity: 0; }
 </style>
