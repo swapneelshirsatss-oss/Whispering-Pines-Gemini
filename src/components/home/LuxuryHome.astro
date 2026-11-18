@@ -122,11 +122,11 @@ const rating = RESORT_CONTACT.rating;
 
 <section class="lx-perks">
   <div class="lx-wrap">
-    <span class="lx-label">Why book direct</span>
+    <span class="lx-label lx-ink">Why book direct</span>
     <div class="lx-grid4 lx-perk-grid">
       {perks.map((p) => <div class="lx-reveal"><h3>{p.title}</h3><p>{p.text}</p></div>)}
     </div>
-    <p class="lx-center"><a class="lx-btn lx-solid" href="/book-now/">Book direct</a></p>
+    <p class="lx-center"><a class="lx-btn lx-pine" href="/book-now/">Book direct</a></p>
   </div>
 </section>
 
@@ -256,10 +256,14 @@ const rating = RESORT_CONTACT.rating;
   .lx-meta { font-size: 14px; color: var(--color-ink); opacity: .8; margin: 0; }
   .lx-more { font-size: 14px; font-weight: 600; color: var(--color-brass-ink); margin: 6px 0 0; }
 
-  .lx-perks { background: var(--color-pine-deep); color: var(--color-cream); padding-block: 72px; }
+  /* Sand band: breaks the long dark run between the rooms and experiences sections, and gives
+     the page a third tone instead of only cream and pine. Contrast on sand: text 9.6:1, headings 4.5:1. */
+  .lx-perks { background: var(--color-sand); color: var(--color-ink); padding-block: 72px; }
   .lx-perks .lx-grid4 { margin: 24px 0 44px; }
-  .lx-perks h3 { color: var(--color-brass-light); font-size: 22px; }
-  .lx-perks p { font-size: 15px; opacity: .85; margin: 0; }
+  .lx-perks h3 { color: var(--color-brass-ink); font-size: 22px; }
+  .lx-perks p { font-size: 15px; margin: 0; }
+  .lx-btn.lx-pine { background: var(--color-pine); color: var(--color-cream); border: 1px solid var(--color-pine); }
+  .lx-btn.lx-pine:hover { background: var(--color-brass-ink); border-color: var(--color-brass-ink); }
 
   .lx-exp { position: relative; display: block; overflow: hidden; color: var(--color-cream); }
   .lx-exp :global(img), .lx-exp img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
