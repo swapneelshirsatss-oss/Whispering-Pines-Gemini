@@ -1,331 +1,84 @@
 ---
-import { MapPin, Phone, Mail, ArrowUpRight, ShieldCheck, Compass, Star, Navigation } from 'lucide-react';
+// Compact footer (2026-11-18). Was 2,958px tall on a phone (3.6 screens).
+// Kept: every unique internal link (SEO), the schema.org/Resort microdata with exact GBP NAP, phone tracking, socials.
+// Removed: duplicate links to the same URL, the embedded Google Map (heavy; the Contact page has the map),
+// internal labels ("Verified Resort NAP", "Conversion Optimized..."), decorative glow and pill badge.
+// Phones: link groups are <details> (collapsed but in the HTML for crawlers); desktop opens them via the script below.
+import { MapPin, Phone, Mail, ArrowUpRight } from 'lucide-react';
 import { RESORT_CONTACT } from "../data";
 import Logo from "./Logo.astro";
 
 const currentYear = new Date().getFullYear();
+
+const groups = [
+  {
+    title: 'Stay',
+    links: [
+      ['/suites-cottages-ramgarh-resort/', 'Rooms & suites'],
+      ['/private-villas-near-nainital/', '3-BHK villa (sleeps 10)'],
+      ['/resort-amenities-mukteshwar/', 'Amenities'],
+      ['/resort-services-ramgarh/', 'Dining & services'],
+      ['/destination-wedding-uttarakhand/', 'Weddings in Uttarakhand'],
+      ['/corporate-offsite-resort-mukteshwar/', 'Corporate retreats'],
+      ['/book-now/', 'Book direct (save 25%)'],
+    ],
+  },
+  {
+    title: 'Explore',
+    links: [
+      ['/things-to-do-near-mukteshwar/', 'Things to do near Mukteshwar'],
+      ['/blog/best-resort-to-stay-near-mukteshwar/', 'Best resort near Mukteshwar'],
+      ['/blog/resort-near-nainital/', 'Resort near Nainital'],
+      ['/blog/himalayan-view-resort-uttarakhand/', 'Himalayan view resort, Uttarakhand'],
+      ['/blog/resort-stay-near-kainchi-dham/', 'Stay near Kainchi Dham'],
+      ['/blog/ramgarh-fruit-bowl-of-kumaon/', 'Ramgarh, fruit bowl of Kumaon'],
+      ['/blog/winter-in-the-himalayas/', 'Winter in the Himalayas'],
+      ['/blog/destination-wedding-uttarakhand-cost/', 'Uttarakhand wedding cost guide'],
+      ['/blog/', 'All guides →'],
+    ],
+  },
+  {
+    title: 'About',
+    links: [
+      ['/about-whispering-pines-resort-ramgarh/', 'About us (formerly Clarks Exotica)'],
+      ['/reviews/', 'Guest reviews (4.6★)'],
+      ['/gallery/', 'Photo gallery'],
+      ['/contact-whispering-pines-resort-mukteshwar/', 'Contact & directions'],
+    ],
+  },
+];
+
+const socials = [
+  ['Facebook', RESORT_CONTACT.socials?.facebook],
+  ['Instagram', RESORT_CONTACT.socials?.instagram],
+  ['YouTube', RESORT_CONTACT.socials?.youtube],
+  ['TripAdvisor', RESORT_CONTACT.socials?.tripadvisor],
+].filter(([, url]) => url);
 ---
-<footer class="bg-[#0E2C21] text-[#FAF9F6] pt-16 pb-12 border-t border-[#B0966D]/20 relative overflow-hidden">
-  {/* Ambient Background Gradient Glow */}
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-[#B0966D]/5 blur-3xl pointer-events-none"></div>
+<footer class="bg-[#0E2C21] text-[#FAF9F6] pt-12 pb-8 border-t border-[#B0966D]/20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    
-    {/* 5-Column Responsive SEO Silo Grid Layout */}
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 xl:gap-9 pb-14 border-b border-[#FAF9F6]/10">
-      
-      {/* ========================================================================= */}
-      {/* COLUMN 1: Brand Authority, Altitude & Target Keywords Silo */}
-      {/* ========================================================================= */}
-      <div class="space-y-4 text-left">
+    <div class="grid gap-6 md:gap-10 md:grid-cols-[1.2fr_2fr] pb-4 md:pb-10 border-b border-[#FAF9F6]/10">
+
+      {/* Brand + contact (schema.org/Resort microdata, exact Google Business Profile NAP) */}
+      <div class="space-y-5">
         <Logo />
-        <div class="space-y-1.5">
-          <span class="text-xs font-sans text-[#C4A77D] uppercase tracking-[0.1em] block font-semibold">
-            Casa De Bello • Whispering Pines
-          </span>
-          <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#FAF9F6]/5 border border-[#8A6F4A]/30 text-[10px] font-sans text-[#C4A77D]">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#B0966D]"></span>
-            Resort Near Mukteshwar & Nainital (1,780m)
-          </span>
-        </div>
-
-        <p class="text-sm font-sans text-[#FAF9F6]/75 leading-relaxed">
-          A luxury 25-room boutique <strong class="text-[#FAF9F6] font-medium">resort near Mukteshwar and Nainital</strong> situated at 1,780m in Malla Ramgarh along the fruit orchards of Kumaon. Offering 180° panoramic views of Nanda Devi and Trishul peaks from all rooms, rich multi-cuisine dining, and peaceful mountain relaxation.
+        <p class="text-sm text-[#FAF9F6]/75 leading-relaxed max-w-sm">
+          A 25-room <strong class="text-[#FAF9F6] font-medium">resort near Mukteshwar and Nainital</strong> at 1,780 m in Malla Ramgarh,
+          with 180° Nanda Devi and Trishul views from every room.
         </p>
 
-        <div class="pt-0.5 space-y-1">
-          <div class="flex items-center gap-1.5 text-[11px] text-[#C4A77D] font-semibold">
-            <span>★ Top-Rated Resort Near Mukteshwar & Nainital</span>
-          </div>
-          <p class="text-[10px] text-[#FAF9F6]/65 leading-tight">
-            180° Himalayan Views From All Rooms • 3-BHK Luxury Villa • Multi-Cuisine Dining • Peaceful Mountain Retreat
-          </p>
-        </div>
-
-        {/* Social Icons */}
-        {RESORT_CONTACT.socials && (
-          <div class="pt-1">
-            <span class="text-[10px] font-sans uppercase tracking-[0.1em] text-[#C4A77D] block mb-2 font-semibold">
-              Official Channels
-            </span>
-            <div class="flex items-center space-x-2">
-              {RESORT_CONTACT.socials.facebook && (
-                <a
-                  href={RESORT_CONTACT.socials.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="w-11 h-11 rounded-full bg-[#FAF9F6]/5 hover:bg-[#B0966D] text-[#FAF9F6] hover:text-[#0E2C21] border border-[#FAF9F6]/15 hover:border-[#8A6F4A] transition-colors duration-300 flex items-center justify-center"
-                  aria-label="Facebook"
-                  title="Follow Whispering Pines on Facebook"
-                >
-                  <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24">
-                    <path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.593 0 9 1.582 9 4.615V8z"/>
-                  </svg>
-                </a>
-              )}
-              {RESORT_CONTACT.socials.instagram && (
-                <a
-                  href={RESORT_CONTACT.socials.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="w-11 h-11 rounded-full bg-[#FAF9F6]/5 hover:bg-[#B0966D] text-[#FAF9F6] hover:text-[#0E2C21] border border-[#FAF9F6]/15 hover:border-[#8A6F4A] transition-colors duration-300 flex items-center justify-center"
-                  aria-label="Instagram"
-                  title="Follow Whispering Pines on Instagram"
-                >
-                  <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                  </svg>
-                </a>
-              )}
-              {RESORT_CONTACT.socials.youtube && (
-                <a
-                  href={RESORT_CONTACT.socials.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="w-11 h-11 rounded-full bg-[#FAF9F6]/5 hover:bg-[#B0966D] text-[#FAF9F6] hover:text-[#0E2C21] border border-[#FAF9F6]/15 hover:border-[#8A6F4A] transition-colors duration-300 flex items-center justify-center"
-                  aria-label="YouTube"
-                  title="Subscribe to Whispering Pines on YouTube"
-                >
-                  <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                  </svg>
-                </a>
-              )}
-              {RESORT_CONTACT.socials.tripadvisor && (
-                <a
-                  href={RESORT_CONTACT.socials.tripadvisor}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="w-11 h-11 rounded-full bg-[#FAF9F6]/5 hover:bg-[#B0966D] text-[#FAF9F6] hover:text-[#0E2C21] border border-[#FAF9F6]/15 hover:border-[#8A6F4A] transition-colors duration-300 flex items-center justify-center"
-                  aria-label="TripAdvisor"
-                  title="Review Whispering Pines on TripAdvisor"
-                >
-                  <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-3.5 14a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0-3.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 3.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0-3.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm3.3-3.9c-.8.8-1.9 1.4-3.1 1.4-1.7 0-3.2-1-3.9-2.5-.7 1.5-2.2 2.5-3.9 2.5-1.2 0-2.3-.6-3.1-1.4L3.5 13H2.1c0-.4.3-.7.7-.7h1.4c.5-2.3 2.5-4.1 5-4.1 1.5 0 2.9.6 3.8 1.7.9-1.1 2.3-1.7 3.8-1.7 2.5 0 4.5 1.8 5 4.1h1.4c.4 0 .7.3.7.7h-1.4l-1.3-1.4z"/>
-                  </svg>
-                </a>
-              )}
-            </div>
-
-            {/* Google Preferred Source Button */}
-            <div class="pt-3">
-              <span class="text-[10px] font-sans uppercase tracking-[0.1em] text-[#C4A77D] block mb-1.5 font-semibold">
-                Google Preferred Source
-              </span>
-              <div 
-                class="g-preferred-source inline-block min-h-[36px]" 
-                google-add-preferred-source-btn 
-                data-domain="whisperingpinesresort.in" 
-                data-theme="dark" 
-                data-lang="en"
-              ></div>
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* ========================================================================= */}
-      {/* COLUMN 2: Stays & Accommodations Near Mukteshwar & Nainital */}
-      {/* ========================================================================= */}
-      <div class="space-y-4">
-        <h4 class="text-xs font-sans uppercase tracking-[0.1em] text-[#C4A77D] font-semibold border-b border-[#8A6F4A]/30 pb-2 inline-block">
-          Stays & Accommodations
-        </h4>
-        <nav aria-label="Accommodations Silo Links" class="space-y-0.5 text-[13px] font-sans text-[#FAF9F6]/80 pt-1">
-          <a href="/suites-cottages-ramgarh-resort/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Luxury Suites Near Mukteshwar</span>
-          </a>
-          <a href="/private-villas-near-nainital/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>3-BHK Villa Near Nainital (10 Pax)</span>
-          </a>
-          <a href="/suites-cottages-ramgarh-resort/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Mountain Cottages Near Mukteshwar</span>
-          </a>
-          <a href="/suites-cottages-ramgarh-resort/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Family Attic Suites Near Nainital</span>
-          </a>
-          <a href="/suites-cottages-ramgarh-resort/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Heated Winter Rooms in Ramgarh</span>
-          </a>
-          <a href="/resort-amenities-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Orchard Lawn Rooms Near Mukteshwar</span>
-          </a>
-          <a href="/resort-amenities-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Pet-Friendly Resort Near Nainital</span>
-          </a>
-          <a href="/about-whispering-pines-resort-ramgarh/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Workcation Resort Near Mukteshwar</span>
-          </a>
-          <a href="/resort-amenities-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Nanda Devi View Lawns &amp; Orchards</span>
-          </a>
-          <a href="/resort-services-ramgarh/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Dining & In-Room Resort Services</span>
-          </a>
-          <a href="/destination-wedding-uttarakhand/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group font-medium text-[#B0966D]">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Destination Weddings in Uttarakhand</span>
-          </a>
-          <a href="/corporate-offsite-resort-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group font-medium text-[#B0966D]">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Corporate Retreats & MICE Offsites</span>
-          </a>
-        </nav>
-      </div>
-
-      {/* ========================================================================= */}
-      {/* COLUMN 3: Guides & Sights Near Mukteshwar & Nainital */}
-      {/* ========================================================================= */}
-      <div class="space-y-4">
-        <h4 class="text-xs font-sans uppercase tracking-[0.1em] text-[#C4A77D] font-semibold border-b border-[#8A6F4A]/30 pb-2 inline-block">
-          Guides & Discovery
-        </h4>
-        <nav aria-label="Travel Guides & Regional Sights Silo Links" class="space-y-0.5 text-[13px] font-sans text-[#FAF9F6]/80 pt-1">
-          <a href="/blog/best-resort-to-stay-near-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Resort Near Mukteshwar (2026 Guide)</span>
-          </a>
-          <a href="/blog/resort-near-nainital/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Resort Near Nainital Travel Guide</span>
-          </a>
-          <a href="/blog/himalayan-view-resort-uttarakhand/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Himalayan View Resort Uttarakhand</span>
-          </a>
-          <a href="/things-to-do-near-mukteshwar/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Things to Do in Mukteshwar & Nainital</span>
-          </a>
-          <a href="/blog/resort-stay-near-kainchi-dham/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Resort Stay Near Kainchi Dham Ashram</span>
-          </a>
-          <a href="/blog/ramgarh-fruit-bowl-of-kumaon/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Ramgarh Fruit Bowl Heritage Guide</span>
-          </a>
-          <a href="/blog/winter-in-the-himalayas/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Winter Snow Peaks & Fireplace Stays</span>
-          </a>
-          <a href="/blog/destination-wedding-uttarakhand-cost/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Uttarakhand Wedding Cost Guide (2026-27)</span>
-          </a>
-          <a href="/gallery/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Resort Photo Gallery (180° Views)</span>
-          </a>
-          <a href="/reviews/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Resort Reviews & Ratings (4.6★)</span>
-          </a>
-          <a href="/blog/" data-astro-prefetch="hover" class="flex items-center gap-2 py-1.5 hover:text-[#C4A77D] transition-colors group font-medium text-[#B0966D]">
-            <span class="w-1 h-1 bg-[#B0966D] rounded-full transition-transform"></span>
-            <span>Browse All Mukteshwar Guides →</span>
-          </a>
-        </nav>
-      </div>
-
-      {/* ========================================================================= */}
-      {/* COLUMN 4: Feeder Corridors & Transit to Resort Near Mukteshwar */}
-      {/* ========================================================================= */}
-      <div class="space-y-4">
-        <h4 class="text-xs font-sans uppercase tracking-[0.1em] text-[#C4A77D] font-semibold border-b border-[#8A6F4A]/30 pb-2 inline-block">
-          Drive-To Hubs (6–8h)
-        </h4>
-        
-        {/* Primary Feeder Cities */}
-        <div class="space-y-1.5 text-xs text-[#FAF9F6]/80 pt-1 font-sans">
-          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block py-1.5 hover:text-[#C4A77D] transition-colors group leading-snug">
-            <strong class="text-[#FAF9F6] group-hover:text-[#C4A77D]">Delhi to Resort Near Mukteshwar:</strong> 340 km • 6.5h
-          </a>
-          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block py-1.5 hover:text-[#C4A77D] transition-colors group leading-snug">
-            <strong class="text-[#FAF9F6] group-hover:text-[#C4A77D]">Gurugram to Resort Near Nainital:</strong> 360 km • 7.0h
-          </a>
-          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block py-1.5 hover:text-[#C4A77D] transition-colors group leading-snug">
-            <strong class="text-[#FAF9F6] group-hover:text-[#C4A77D]">Noida to Resort Near Mukteshwar:</strong> 330 km • 6.0h
-          </a>
-          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block py-1.5 hover:text-[#C4A77D] transition-colors group leading-snug">
-            <strong class="text-[#FAF9F6] group-hover:text-[#C4A77D]">Ghaziabad & Meerut to Ramgarh:</strong> 310 km • 5.5h
-          </a>
-          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block py-1.5 hover:text-[#C4A77D] transition-colors group leading-snug">
-            <strong class="text-[#FAF9F6] group-hover:text-[#C4A77D]">Faridabad & Agra Expressway:</strong> 370 km • 7.5h
-          </a>
-          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block py-1.5 hover:text-[#C4A77D] transition-colors group leading-snug">
-            <strong class="text-[#FAF9F6] group-hover:text-[#C4A77D]">Lucknow to Resort Near Mukteshwar:</strong> 380 km • 7.5h
-          </a>
-          <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix" class="block py-1.5 hover:text-[#C4A77D] transition-colors group leading-snug">
-            <strong class="text-[#FAF9F6] group-hover:text-[#C4A77D]">Chandigarh to Mukteshwar / Nainital:</strong> 420 km • 8.5h
-          </a>
-        </div>
-
-        {/* Transit Hubs & Secondary Metros */}
-        <div class="pt-2.5 border-t border-[#FAF9F6]/10 space-y-1 text-[11px] text-[#FAF9F6]/75">
-          <span class="text-[10px] font-sans uppercase tracking-[0.1em] text-[#C4A77D] block font-semibold">
-            Rail & Air Gateways
-          </span>
-          <p class="leading-relaxed">
-            <strong class="text-[#FAF9F6]">Kathgodam to Resort (KGM):</strong> 43 km • 1.5 hrs<br/>
-            <strong class="text-[#FAF9F6]">Pantnagar to Resort (PGH):</strong> 76 km • 2.5 hrs
-          </p>
-          <p class="text-[10px] text-[#FAF9F6]/60 pt-0.5 font-sans">
-            Direct Flights: BOM • BLR • CCU • PNQ • AMD
-          </p>
-        </div>
-      </div>
-
-      {/* ========================================================================= */}
-      {/* COLUMN 5: Verified GBP Entity, NAP & Direct Booking Silo */}
-      {/* ========================================================================= */}
-      <div class="space-y-4">
-        <h4 class="text-xs font-sans uppercase tracking-[0.1em] text-[#C4A77D] font-semibold border-b border-[#8A6F4A]/30 pb-2 inline-flex items-center gap-1.5">
-          <ShieldCheck className="w-3.5 h-3.5 text-[#C4A77D]" />
-          <span>Verified Resort NAP</span>
-        </h4>
-
-        {/* Semantic Schema.org / Microdata Address Card matching Google Business Profile */}
-        <address 
-          class="not-italic space-y-2.5 text-xs font-sans text-[#FAF9F6]/85 pt-1" 
-          itemscope 
-          itemtype="https://schema.org/Resort"
-        >
+        <address class="not-italic space-y-2 text-sm text-[#FAF9F6]/85" itemscope itemtype="https://schema.org/Resort">
           <meta itemprop="url" content="https://whisperingpinesresort.in/" />
           <meta itemprop="priceRange" content="₹₹₹" />
           <meta itemprop="currenciesAccepted" content="INR" />
+          <p itemprop="name" class="font-semibold text-[#FAF9F6]">Whispering Pines Resort by Casa De Bello Mukteshwar Road</p>
 
-          {/* 1. Official Entity Name (Strict GBP Match) */}
-          <div class="flex items-center gap-2 text-[#FAF9F6] font-semibold">
-            <span class="w-2 h-2 rounded-full bg-[#B0966D] shrink-0" title="Open & Accepting Direct Bookings"></span>
-            <span itemprop="name" class="font-sans font-bold text-xs text-[#FAF9F6] leading-snug">
-              Whispering Pines Resort by Casa De Bello Mukteshwar Road
-            </span>
-          </div>
-
-          {/* 2. Official Postal Address (Strict GBP Match) */}
-          <a
-            href={RESORT_CONTACT.gmapsCid}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex items-start hover:text-[#C4A77D] transition-colors group"
-            title="View verified Google Maps location (CID: 8386667112972057918)"
-            itemprop="address"
-            itemscope
-            itemtype="https://schema.org/PostalAddress"
-          >
-            <MapPin className="w-3.5 h-3.5 text-[#C4A77D] mr-2 shrink-0 mt-0.5 transition-transform" />
-            <span class="leading-relaxed text-[11px] text-[#FAF9F6]/90 group-hover:text-[#C4A77D]">
+          <a href={RESORT_CONTACT.gmapsCid} target="_blank" rel="noopener noreferrer"
+            class="flex items-start gap-2 min-h-11 py-1 hover:text-[#C4A77D] transition-colors"
+            itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <MapPin className="w-4 h-4 text-[#C4A77D] shrink-0 mt-0.5" />
+            <span class="leading-relaxed">
               <span itemprop="streetAddress">Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd</span>,{' '}
               <span itemprop="addressLocality">Mukteshwar</span>,{' '}
               <span itemprop="addressRegion">Nainital, Uttarakhand</span>{' '}
@@ -334,140 +87,103 @@ const currentYear = new Date().getFullYear();
             </span>
           </a>
 
-          {/* 3. Official Phone Number (Strict GBP Match: 075050 29696) */}
-          <a
-            href={`tel:${RESORT_CONTACT.phoneTel || '+917505029696'}`}
-            data-track-dl='{"event":"phone_call_click","event_category":"engagement","event_label":"footer_phone_call"}'
-            class="flex items-center py-1.5 hover:text-[#C4A77D] transition-colors group"
-            itemprop="telephone"
-            title="Call Whispering Pines Direct Concierge: 075050 29696"
-          >
-            <Phone className="w-3.5 h-3.5 text-[#C4A77D] mr-2 shrink-0 transition-transform" />
-            <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="font-mono tracking-wide font-semibold text-xs">075050 29696</span>
-              <span class="text-[10px] font-mono text-[#FAF9F6]/60">(+91 75050 29696)</span>
-            </div>
-          </a>
-
-          {/* 4. Official Email */}
-          <a
-            href={`mailto:${RESORT_CONTACT.email}`}
-            class="flex items-center py-1.5 hover:text-[#C4A77D] transition-colors group"
-            itemprop="email"
-            title="Email Whispering Pines Reservations"
-          >
-            <Mail className="w-3.5 h-3.5 text-[#C4A77D] mr-2 shrink-0 transition-transform" />
-            <span class="text-[11px] truncate">{RESORT_CONTACT.email}</span>
-          </a>
-
-          {/* Google Traveler & Google Review Authority Badges */}
-          <div class="pt-1 flex flex-wrap items-center gap-2">
-            <a
-              href={RESORT_CONTACT.googleTravel}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-sm bg-[#FAF9F6]/5 hover:bg-[#FAF9F6]/10 border border-[#FAF9F6]/15 hover:border-[#8A6F4A] text-[10px] text-[#FAF9F6] transition-all group shadow-sm"
-              title="View Whispering Pines Resort on Google Travel & Google Hotels"
-            >
-              <svg class="w-3 h-3 text-[#4285F4] shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-              </svg>
-              <span class="font-medium text-[#FAF9F6]/90">Google Traveler</span>
+          <div class="flex flex-wrap gap-x-6">
+            <a href={`tel:${RESORT_CONTACT.phoneTel || '+917505029696'}`}
+              data-track-dl='{"event":"phone_call_click","event_category":"engagement","event_label":"footer_phone_call"}'
+              class="inline-flex items-center gap-2 min-h-11 hover:text-[#C4A77D] transition-colors" itemprop="telephone">
+              <Phone className="w-4 h-4 text-[#C4A77D] shrink-0" />
+              <span class="font-semibold tracking-wide">075050 29696</span>
             </a>
-            <a
-              href={RESORT_CONTACT.gmapsCid}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-1 px-2 py-0.5 rounded-sm bg-[#FAF9F6]/5 hover:bg-[#FAF9F6]/10 border border-[#FAF9F6]/15 hover:border-[#8A6F4A] text-[10px] text-[#FAF9F6] transition-all shadow-sm"
-              title="Verified Google Business Profile Rating (425 Reviews)"
-            >
-              <span class="text-amber-400 font-bold">★ 4.6</span>
-              <span class="text-[#FAF9F6]/70 font-sans text-[9px]">(425 Reviews)</span>
-            </a>
-          </div>
-
-          {/* Direct WhatsApp CTA Button inside Footer */}
-          <div class="pt-1.5">
-            <a
-              href="https://wa.me/917505029696"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="w-full inline-flex items-center justify-center gap-2 bg-[#0E2C21] hover:bg-[#193F30] text-white border border-[#FAF9F6]/30 font-sans text-xs font-bold uppercase tracking-wider px-3.5 py-2.5 rounded-sm shadow-sm transition-colors text-center"
-            >
-              <svg class="w-4 h-4 shrink-0 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.1 1.523 5.823L0 24l6.344-1.498A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.792 9.792 0 01-5.002-1.374l-.359-.213-3.765.889.953-3.676-.234-.376A9.794 9.794 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/></svg>
-              <span>WhatsApp</span>
+            <a href={`mailto:${RESORT_CONTACT.email}`}
+              class="inline-flex items-center gap-2 min-h-11 hover:text-[#C4A77D] transition-colors" itemprop="email">
+              <Mail className="w-4 h-4 text-[#C4A77D] shrink-0" />
+              <span>{RESORT_CONTACT.email}</span>
             </a>
           </div>
         </address>
-      </div>
 
-    </div>
-
-    {/* Estate Map Full Width Row */}
-    <div class="py-8 border-b border-[#FAF9F6]/10">
-      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
-        <h4 class="text-xs font-sans uppercase tracking-[0.1em] text-[#C4A77D] font-semibold flex items-center gap-2">
-          <MapPin className="w-3.5 h-3.5 text-[#C4A77D]" /> 
-          <span>Estate Map & Verified Google Business Profile (GBP)</span>
-        </h4>
-        <span class="text-[11px] font-sans text-[#FAF9F6]/60">
-          Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Uttarakhand 263137 • GPS: 29.4262° N, 79.5506° E
-        </span>
-      </div>
-      <div class="w-full h-56 sm:h-72 rounded-sm overflow-hidden shadow-md border border-[#8A6F4A]/20">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3475.0886542866456!2d79.5506314!3d29.4262052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0a3285f1c95a9%3A0x74636d4e06267d3e!2sWhispering%20Pines%20Resort%20by%20casa%20de%20bello!5e0!3m2!1sen!2sin!4v1784812384641!5m2!1sen!2sin" 
-          width="100%" 
-          height="100%" 
-          style="border: 0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Whispering Pines Resort by Casa De Bello Google Map"
-        >
-        </iframe>
-      </div>
-      <div class="pt-3 flex flex-wrap items-center justify-between gap-3 text-xs text-[#FAF9F6]/70">
-        <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-[#B0966D]"></span>
-          <span class="font-sans text-[11px]">Altitude: 1,780m • 180° Nanda Devi & Trishul Himalayan Views</span>
-        </div>
-        <div class="flex items-center gap-4 text-[11px] font-sans">
-          <a href={RESORT_CONTACT.gmapsLink} target="_blank" rel="noopener noreferrer" class="hover:text-[#C4A77D] transition-colors underline flex items-center gap-1">
-            <span>Get Directions (Google Maps)</span>
-            <ArrowUpRight className="w-3 h-3" />
+        <div class="flex flex-wrap items-center gap-3">
+          <a href="https://wa.me/917505029696" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 min-h-11 px-5 bg-[#B0966D] hover:bg-[#FAF9F6] text-[#0E2C21] text-xs font-bold uppercase tracking-wider rounded-sm transition-colors">
+            WhatsApp us
           </a>
-          <a href={RESORT_CONTACT.gmapsCid} target="_blank" rel="noopener noreferrer" class="hover:text-[#C4A77D] transition-colors underline flex items-center gap-1">
-            <span>Google Business Profile (CID)</span>
-            <ArrowUpRight className="w-3 h-3" />
+          <a href={RESORT_CONTACT.gmapsCid} target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 min-h-11 px-4 border border-[#FAF9F6]/25 hover:border-[#C4A77D] hover:text-[#C4A77D] text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors">
+            Get directions <ArrowUpRight className="w-3.5 h-3.5" />
+          </a>
+          <a href={RESORT_CONTACT.gmapsCid} target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-1 min-h-11 text-sm hover:text-[#C4A77D] transition-colors"
+            title="Google rating from 425 reviews">
+            <span class="text-[#C4A77D] font-bold">★ 4.6</span>
+            <span class="text-[#FAF9F6]/70">· 425 Google reviews</span>
           </a>
         </div>
       </div>
+
+      {/* Link groups: collapsed on phones, open columns on desktop */}
+      <div class="grid md:grid-cols-3 md:gap-8">
+        {groups.map((g) => (
+          <details class="wp-fgroup border-b border-[#FAF9F6]/10 last:border-b-0 md:border-0 group">
+            <summary class="flex items-center justify-between min-h-12 cursor-pointer list-none text-xs uppercase tracking-[0.14em] text-[#C4A77D] font-semibold md:min-h-0 md:mb-3 md:cursor-default md:pointer-events-none">
+              {g.title}
+              <span class="md:hidden text-lg leading-none transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <nav aria-label={g.title} class="pb-3 md:pb-0">
+              <ul class="space-y-0.5 text-sm text-[#FAF9F6]/80">
+                {g.links.map(([href, label]) => (
+                  <li><a href={href} data-astro-prefetch="hover" class="flex items-center min-h-10 md:min-h-8 hover:text-[#C4A77D] transition-colors">{label}</a></li>
+                ))}
+              </ul>
+            </nav>
+          </details>
+        ))}
+      </div>
     </div>
 
-    {/* Footer Bottom Copyrights & Legal Panel */}
-    <div class="pt-8 flex flex-col lg:flex-row items-center justify-between gap-6 text-xs font-sans text-[#FAF9F6]/65 text-center lg:text-left">
+    {/* Getting here: one line instead of seven links to the same page */}
+    <div class="py-6 border-b border-[#FAF9F6]/10 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-[#FAF9F6]/75">
+      <p>
+        <span class="text-[#C4A77D] font-semibold">Getting here:</span>{' '}
+        Delhi 340 km · 6.5 h &nbsp;·&nbsp; Kathgodam station 43 km · 1.5 h &nbsp;·&nbsp; Pantnagar airport 76 km · 2.5 h
+      </p>
+      <a href="/contact-whispering-pines-resort-mukteshwar/#distance-matrix"
+        class="inline-flex items-center gap-1 min-h-11 font-semibold text-[#C4A77D] hover:text-[#FAF9F6] transition-colors shrink-0">
+        All routes from Delhi NCR, Lucknow &amp; Chandigarh <ArrowUpRight className="w-3.5 h-3.5" />
+      </a>
+    </div>
+
+    {/* Bottom bar */}
+    <div class="pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-[#FAF9F6]/60">
       <div class="space-y-2">
-        <p>© {currentYear} Whispering Pines Resort by Casa De Bello. Operated by <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#C4A77D] transition-colors">Casa De Bello - Luxury Resort Hotel in Mukteshwar, Nainital</a>.</p>
-        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-[11px] font-sans">
-          <a href="/privacy-policy/" data-astro-prefetch="hover" class="hover:text-[#C4A77D] transition-colors">Privacy Policy</a>
-          <span class="text-[#FAF9F6]/30">•</span>
-          <a href="/terms/" data-astro-prefetch="hover" class="hover:text-[#C4A77D] transition-colors">Terms & Conditions</a>
-          <span class="text-[#FAF9F6]/30">•</span>
-          <a href="/sitemap/" data-astro-prefetch="hover" class="hover:text-[#C4A77D] transition-colors">Sitemap</a>
-        </div>
-        <p class="text-[11px] text-[#FAF9F6]/70 pt-0.5">
-          Website Developed by <a href="https://growguest.in/" target="_blank" rel="noopener" class="text-[#C4A77D] hover:underline transition-colors font-medium">Growguest</a>
+        <p>© {currentYear} Whispering Pines Resort by Casa De Bello. Operated by <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#C4A77D]">Casa De Bello</a>.</p>
+        <p class="flex flex-wrap items-center gap-x-3">
+          <a href="/privacy-policy/" class="inline-flex min-h-11 items-center hover:text-[#C4A77D]">Privacy</a>
+          <a href="/terms/" class="inline-flex min-h-11 items-center hover:text-[#C4A77D]">Terms</a>
+          <a href="/sitemap/" class="inline-flex min-h-11 items-center hover:text-[#C4A77D]">Sitemap</a>
+          <span>Website by <a href="https://growguest.in/" target="_blank" rel="noopener" class="text-[#C4A77D] hover:underline">Growguest</a></span>
         </p>
       </div>
-
-      <div class="text-center lg:text-right space-y-1">
-        <p class="font-sans text-sm text-[#C4A77D]">
-          Official Domain: <a href={RESORT_CONTACT.domain} class="hover:underline text-[#FAF9F6]">{RESORT_CONTACT.domain.replace("https://", "")}</a>
-        </p>
-        <p class="text-[10px] text-[#FAF9F6]/40 font-sans">Conversion Optimized WhatsApp Direct Reservations</p>
+      <div class="flex flex-wrap items-center gap-2">
+        {socials.map(([name, url]) => (
+          <a href={url} target="_blank" rel="noopener noreferrer" aria-label={name} title={`Whispering Pines on ${name}`}
+            class="inline-flex items-center justify-center min-h-11 px-3 border border-[#FAF9F6]/15 rounded-sm hover:border-[#C4A77D] hover:text-[#C4A77D] transition-colors text-[11px] uppercase tracking-wider">
+            {name}
+          </a>
+        ))}
       </div>
     </div>
-
   </div>
 </footer>
+
+<script is:inline>
+  // Desktop: link groups are plain open columns. Phones: they stay collapsed (still in the HTML for crawlers).
+  (function () {
+    var mq = matchMedia('(min-width: 768px)');
+    function sync() { document.querySelectorAll('.wp-fgroup').forEach(function (d) { d.open = mq.matches; }); }
+    sync(); mq.addEventListener('change', sync);
+  })();
+</script>
+
+<style>
+  .wp-fgroup > summary::-webkit-details-marker { display: none; }
+</style>
