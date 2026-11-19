@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 import { trackAdsConversion } from "../utils/analytics";
 
-const PHONE_DISPLAY = "075050 29696";
+const PHONE_DISPLAY = "+91 75050 29696";
 const PHONE_TEL = "+917505029696";
 const WHATSAPP_BOOKING_URL = "https://wa.me/917505029696";
 
@@ -193,23 +193,33 @@ export default function Navbar({ children, overlay = false }: NavbarProps) {
           </div>
 
           {/* Contact CTAs */}
-          <div className="hidden lg:flex items-center space-x-5">
+          <div className="hidden lg:flex items-center gap-3">
             <a
               href={`tel:${PHONE_TEL}`}
+              data-cta="call_header"
               onClick={() => trackAdsConversion("phone_call_click", "engagement", "header_phone_call")}
-              className="flex items-center text-[11px] font-sans text-[#FAF9F6]/85 hover:text-[#C4A77D] transition-colors"
-              title="Call Whispering Pines Direct Front Desk: 075050 29696"
+              className="flex items-center gap-1.5 whitespace-nowrap text-[14px] font-sans font-semibold text-[#FAF9F6] bg-transparent border border-[#B0966D] rounded-[4px] px-4 py-2 transition-colors hover:bg-[#B0966D] hover:text-[#0E2C21]"
+              title={`Call Whispering Pines Direct Front Desk: ${PHONE_DISPLAY}`}
             >
-              <Phone className="w-3.5 h-3.5 mr-1.5 text-[#C4A77D]" />
-              {PHONE_DISPLAY}
+              <Phone className="w-3.5 h-3.5 shrink-0" />
+              Call {PHONE_DISPLAY}
             </a>
           </div>
 
-          {/* Mobile Actions: Menu Toggle */}
-          <div className="flex items-center gap-2.5 md:hidden">
+          {/* Mobile & Tablet Actions: Call + Menu Toggle */}
+          <div className="flex items-center gap-1 lg:hidden">
+            <a
+              href={`tel:${PHONE_TEL}`}
+              data-cta="call_header"
+              onClick={() => trackAdsConversion("phone_call_click", "engagement", "header_phone_call")}
+              className="flex items-center justify-center min-w-[44px] min-h-[44px] text-[#B0966D] hover:text-[#C4A77D] transition-colors"
+              aria-label={`Call Whispering Pines on ${PHONE_DISPLAY}`}
+            >
+              <Phone className="w-5 h-5" />
+            </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-[#FAF9F6] hover:text-[#C4A77D] p-2 focus:outline-none -mr-2"
+              className="text-[#FAF9F6] hover:text-[#C4A77D] p-2 focus:outline-none -mr-2 md:hidden"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
@@ -337,7 +347,7 @@ export default function Navbar({ children, overlay = false }: NavbarProps) {
               className="flex items-center text-base font-sans text-[#FAF9F6]/85 p-2 -ml-2"
             >
               <Phone className="w-5 h-5 mr-3 text-[#C4A77D]" />
-              {PHONE_DISPLAY} <span className="text-xs text-[#FAF9F6]/50 ml-2">(+91 75050 29696)</span>
+              {PHONE_DISPLAY}
             </a>
 
             <a
