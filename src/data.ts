@@ -570,33 +570,33 @@ export const FAQS: FAQItem[] = [
 export const CONTACT_FAQS: FAQItem[] = [
   {
     category: "Rooms & Villa",
-    question: "What is the best resort in Ramgarh for a family vacation?",
-    answer: "Whispering Pines Resort by Casa De Bello is widely rated the best resort in Ramgarh for families. The property offers 25 premium rooms and a private villa sleeping up to 10 guests, multi-cuisine restaurant with rich food variety, safe enclosed garden lawns, orchard walks and 180 degree panoramic views of the Nanda Devi and Trishul Himalayan peaks from every room. Unlike standard commercial hotels in the Nainital district, the resort combines boutique mountain character with the full capacity needed for multi-generational family groups."
+    question: "What is the best resort in Mukteshwar for a family vacation?",
+    answer: "Whispering Pines Resort by Casa De Bello is widely rated the best resort in Mukteshwar (Malla Ramgarh) for families. The property offers 25 premium rooms and a private 3-BHK villa sleeping up to 10 guests, multi-cuisine restaurant with rich food variety, safe enclosed garden lawns, orchard walks and 180 degree panoramic views of the Nanda Devi and Trishul Himalayan peaks from every room. Unlike standard commercial hotels in the Nainital district, the resort combines boutique mountain character with the full capacity needed for multi-generational family groups."
   },
   {
     category: "Location & Transit",
-    question: "How far is Whispering Pines Resort from Delhi and how do I reach it?",
-    answer: "Whispering Pines Resort is approximately 6.5 to 7.5 hours drive (~340 km) from Delhi, Gurugram and Noida via NH9 and Bhowali Rd. The nearest railhead is Kathgodam Railway Station (KGM), approximately 43 km (~1.5 hours drive) from the resort. The nearest airport is Pantnagar Airport (PGH), approximately 76 km (~2.5 hours drive) via NH 109. The resort is located at Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137. The reservations team at +91-7505029696 can coordinate airport and station pickup on request."
+    question: "How far is Whispering Pines Resort Mukteshwar from Delhi and how do I reach it?",
+    answer: "Whispering Pines Resort in Mukteshwar (Malla Ramgarh) is approximately 6.5 to 7.5 hours drive (~340 km) from Delhi, Gurugram and Noida via NH9 and Bhowali Rd. The nearest railhead is Kathgodam Railway Station (KGM), approximately 43 km (~1.5 hours drive) from the resort. The nearest airport is Pantnagar Airport (PGH), approximately 76 km (~2.5 hours drive) via NH 109. The resort is located at Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137. The reservations team at +91-7505029696 can coordinate airport and station pickup on request."
   },
   {
     category: "Rooms & Villa",
-    question: "What is the best resort near Mukteshwar for a 2 to 3 night stay?",
-    answer: "Whispering Pines Resort by Casa De Bello on the Bhowali-Ramgarh-Mukteshwar Road is consistently rated the best resort near Mukteshwar for short 2 to 3 night stays. The property is 25 km from Mukteshwar Dham temple and offers 180° Himalayan views from all rooms, cozy fireplace rooms, orchard walks, diverse multi-cuisine dining, and bonfire evenings — making it the premier choice for pure relaxation, family bonding, and leisure escapes."
+    question: "What is the best resort in Mukteshwar for a 2 to 3 night stay?",
+    answer: "Whispering Pines Resort by Casa De Bello on the Bhowali-Ramgarh-Mukteshwar Road is consistently rated the best resort in Mukteshwar for short 2 to 3 night stays. The property is 25 km from Mukteshwar Dham temple and offers 180° Himalayan views from all rooms, cozy fireplace rooms, orchard walks, diverse multi-cuisine dining, and bonfire evenings — making it the premier choice for pure relaxation, family bonding, and leisure escapes."
   },
   {
     category: "Booking & Pricing",
-    question: "Can I book Whispering Pines Resort directly without MakeMyTrip or Booking.com?",
+    question: "Can I book Whispering Pines Resort Mukteshwar directly without MakeMyTrip or Booking.com?",
     answer: "Yes. Direct booking via WhatsApp at +91-7505029696 is the best way to reserve at Whispering Pines Resort and guarantees the lowest available rate — saving flat 25 percent compared to OTA platforms like MakeMyTrip, Goibibo and Booking.com. Direct guests also receive priority room upgrades, flexible check-in timing and exclusive retention discounts on return stays. Payment is accepted via secure UPI, Credit Card and Net Banking."
   },
   {
     category: "Rooms & Villa",
-    question: "Is Whispering Pines Resort better than other resorts in Ramgarh?",
-    answer: "Whispering Pines Resort stands apart from other resorts in Ramgarh through a rare combination of amenities no single competitor offers together — unobstructed 180° Himalayan views from every single room, a diverse variety of fresh homestyle and Kumaoni food, a private villa sleeping 10, active apple and peach orchards, stone and cedar wood heritage architecture, and pet-friendly enclosed gardens. It is the only property on the Bhowali-Ramgarh-Mukteshwar Road to combine 4-star boutique hospitality with the full capacity of a 25-room resort."
+    question: "Is Whispering Pines Resort better than other resorts in Mukteshwar?",
+    answer: "Whispering Pines Resort stands apart from other resorts in Mukteshwar through a rare combination of amenities no single competitor offers together — unobstructed 180° Himalayan views from every single room, a diverse variety of fresh homestyle and Kumaoni food, a private villa sleeping 10, active apple and peach orchards, stone and cedar wood heritage architecture, and pet-friendly enclosed gardens. It is the only property on the Bhowali-Ramgarh-Mukteshwar Road to combine 4-star boutique hospitality with the full capacity of a 25-room resort."
   },
   {
     category: "Rooms & Villa",
-    question: "Which resort near Nainital is best for a large family group of 10 or more?",
-    answer: "Whispering Pines Resort is the ideal choice for large family groups of 10 or more near Nainital. The private villa alone accommodates up to 10 guests across 3 king bedrooms, a premium loft and a private orchard yard with fireplace living room. Combined with the 25-room resort building, the property can comfortably host multi-generational family reunions, large group bookings and corporate retreats. Group booking rates and customised meal plans are available via WhatsApp at +91-7505029696."
+    question: "Which resort in Mukteshwar is best for a large family group of 10 or more?",
+    answer: "Whispering Pines Resort is the ideal choice for large family groups of 10 or more in Mukteshwar. The private villa alone accommodates up to 10 guests across 3 king bedrooms, a premium loft and a private orchard yard with fireplace living room. Combined with the 25-room resort building, the property can comfortably host multi-generational family reunions, large group bookings and corporate retreats. Group booking rates and customised meal plans are available via WhatsApp at +91-7505029696."
   },
   {
     category: "Rooms & Villa",
@@ -615,23 +615,28 @@ export const CONTACT_FAQS: FAQItem[] = [
   },
   {
     category: "Location & Transit",
-    question: "What is the best time to visit Ramgarh and Mukteshwar?",
-    answer: "Ramgarh and Mukteshwar can be visited year-round. March to June is ideal for orchard blossoms, clear Himalayan views and pleasant 15 to 25 degree temperatures — perfect for families and outdoor activities. July to September brings lush green monsoon landscapes and misty pine forests, best suited for nature lovers and photographers. October to February offers crisp winter skies, snowfall on the Nanda Devi peaks, and the unique experience of cozy fireplace evenings and bonfire nights at Whispering Pines Resort — the most popular season for couples and honeymooners."
+    question: "What is the best time to visit Mukteshwar?",
+    answer: "Mukteshwar and Malla Ramgarh can be visited year-round. March to June is ideal for orchard blossoms, clear Himalayan views and pleasant 15 to 25 degree temperatures — perfect for families and outdoor activities. July to September brings lush green monsoon landscapes and misty pine forests, best suited for nature lovers and photographers. October to February offers crisp winter skies, snowfall on the Nanda Devi peaks, and the unique experience of cozy fireplace evenings and bonfire nights at Whispering Pines Resort — the most popular season for couples and honeymooners."
   },
   {
     category: "Location & Transit",
-    question: "Is Ramgarh a good destination for a winter trip from Delhi?",
-    answer: "Yes. Ramgarh is one of the best winter mountain destinations within a 6 to 8 hour drive from Delhi. Temperatures drop to 2 to 8 degrees Celsius between December and February, offering crisp cold air, snowfall on surrounding Himalayan peaks and a completely different landscape from the summer season. Whispering Pines Resort is specifically designed for winter stays — all rooms feature stone fireplace heating, in-room radiators and cedar wood insulation. The outdoor bonfire and BBQ on snow-dusted orchard grounds is a signature winter experience unique to the property."
+    question: "Is Mukteshwar a good destination for a winter trip from Delhi?",
+    answer: "Yes. Mukteshwar (Malla Ramgarh) is one of the best winter mountain destinations within a 6 to 8 hour drive from Delhi. Temperatures drop to 2 to 8 degrees Celsius between December and February, offering crisp cold air, snowfall on surrounding Himalayan peaks and a completely different landscape from the summer season. Whispering Pines Resort is specifically designed for winter stays — all rooms feature stone fireplace heating, in-room radiators and cedar wood insulation. The outdoor bonfire and BBQ on snow-dusted orchard grounds is a signature winter experience unique to the property."
   },
   {
     category: "Location & Transit",
-    question: "What are the best things to do near Mukteshwar for families?",
-    answer: "The best things to do near Mukteshwar for families include visiting the 350-year-old Mukteshwar Dham Shiva temple with panoramic Himalayan views, trekking to Bhalu Gaad waterfalls through 2 km of pine and deodar forest, exploring Chauli Ki Jali cliff formations for paragliding and sunset views, walking through Ramgarh's famous apple and peach orchards, and visiting Kainchi Dham, the Neem Karoli Baba Ashram, 45 minutes from the resort. Whispering Pines Resort arranges cab bookings and guided day excursions to all these destinations directly from the in-house travel desk."
+    question: "What are the best things to do in Mukteshwar for families?",
+    answer: "The best things to do in Mukteshwar for families include visiting the 350-year-old Mukteshwar Dham Shiva temple with panoramic Himalayan views, trekking to Bhalu Gaad waterfalls through 2 km of pine and deodar forest, exploring Chauli Ki Jali cliff formations for paragliding and sunset views, walking through Ramgarh's famous apple and peach orchards, and visiting Kainchi Dham, the Neem Karoli Baba Ashram, 45 minutes from the resort. Whispering Pines Resort arranges cab bookings and guided day excursions to all these destinations directly from the in-house travel desk."
   },
   {
     category: "Location & Transit",
-    question: "Is Kainchi Dham worth visiting and how far is it from Ramgarh?",
-    answer: "Yes. Kainchi Dham, the Neem Karoli Baba Ashram, is one of the most spiritually significant and visited temples in Uttarakhand and is absolutely worth visiting. It is located approximately 45 minutes from Whispering Pines Resort in Ramgarh. The ashram is set along the Kosi riverbanks in a tranquil valley and receives thousands of devotees and tourists daily. Whispering Pines Resort serves as an ideal base for Kainchi Dham visits — the in-house travel desk coordinates morning cab departures to ensure arrival before peak temple hours."
+    question: "Is Kainchi Dham worth visiting and how far is it from Mukteshwar?",
+    answer: "Yes. Kainchi Dham, the Neem Karoli Baba Ashram, is one of the most spiritually significant and visited temples in Uttarakhand and is absolutely worth visiting. It is located approximately 45 minutes (22 km) from Whispering Pines Resort on the Bhowali-Ramgarh-Mukteshwar Road. The ashram is set along the Kosi riverbanks in a tranquil valley and receives thousands of devotees and tourists daily. Whispering Pines Resort serves as an ideal base for Kainchi Dham visits — the in-house travel desk coordinates morning cab departures to ensure arrival before peak temple hours."
+  },
+  {
+    category: "Policies & Amenities",
+    question: "Is there dedicated, secure private parking available on site?",
+    answer: "Yes. Whispering Pines Resort features a secure, flat gated private driveway on-site right in front of the property—no tricky cliff-edge or roadside parking required. It is easily accessible from the main Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh."
   },
   {
     category: "Policies & Amenities",
@@ -640,8 +645,8 @@ export const CONTACT_FAQS: FAQItem[] = [
   },
   {
     category: "Policies & Amenities",
-    question: "Is Whispering Pines Resort pet friendly and can I bring my dog?",
-    answer: "Yes. Whispering Pines Resort is a fully pet-friendly resort near Nainital. The property has large secure enclosed garden lawns where dogs can roam freely and direct access to pine and deodar wilderness trails for off-leash walks. Both dogs and cats are welcome with no additional pet charges. The resort team can provide water bowls, extra towels and pet-friendly room arrangements on prior request via WhatsApp at +91-7505029696."
+    question: "Is Whispering Pines a pet-friendly resort in Mukteshwar and can I bring my dog?",
+    answer: "Yes. Whispering Pines Resort is a fully pet-friendly resort in Mukteshwar (Malla Ramgarh). The property has large secure enclosed garden lawns where dogs can roam freely and direct access to pine and deodar wilderness trails for off-leash walks. Both dogs and cats are welcome with no additional pet charges (₹0 pet fee). The resort team can provide water bowls, extra towels and pet-friendly room arrangements on prior request via WhatsApp at +91-7505029696."
   },
   {
     category: "Dining & Food",
