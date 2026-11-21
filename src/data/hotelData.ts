@@ -91,9 +91,9 @@ export const propertyDetails = {
     country: "IN"
   },
   geo: {
-    latitude: 29.4262052,
-    longitude: 79.5506314,
-    coordinates: "29.4262052, 79.5506314"
+    latitude: 29.4260969,
+    longitude: 79.5506794,
+    coordinates: "29.4260969, 79.5506794"
   },
   contact: {
     phoneDisplay: "075050 29696",

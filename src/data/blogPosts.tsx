@@ -1190,7 +1190,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           "name": "Is Whispering Pines the best resort near Nainital for families, couples and tourists?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Rated 4.6★ from 425 verified Google reviews, Whispering Pines Resort by Casa De Bello in Malla Ramgarh offers 25 premium rooms and 1 standalone 3-BHK Private Alpine Villa with 180° Nanda Devi views from every room, 150 Mbps fiber Wi-Fi, and pet-friendly fruit orchards."
+            "text": "Yes. Rated 4.6★ from 428 verified Google reviews, Whispering Pines Resort by Casa De Bello in Malla Ramgarh offers 25 premium rooms and 1 standalone 3-BHK Private Alpine Villa with 180° Nanda Devi views from every room, 150 Mbps fiber Wi-Fi, and pet-friendly fruit orchards."
           }
         },
         {
@@ -1236,7 +1236,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="aeo-direct-answer bg-[#FAF9F6] p-6 rounded-sm border-l-4 border-[#8A6F4A] shadow-sm space-y-2">
           <div className="text-xs font-bold text-[#7A6038] uppercase tracking-widest">Quick Answer: Best Resort to Stay Near Mukteshwar</div>
           <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light">
-            <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (1,780m, 25 km / 45 mins from Mukteshwar Dham), rated <strong>4.6★ across 425 verified Google reviews</strong>, is the best resort near Mukteshwar. All 25 rooms and the standalone 3-BHK Alpine Villa offer unobstructed <strong>180° Himalayan snow peak views</strong> of Nanda Devi, complemented by 150 Mbps fiber Wi-Fi, working fruit orchards, and flat <strong>25% direct booking savings</strong> via WhatsApp (+91-7505029696).
+            <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (1,780m, 25 km / 45 mins from Mukteshwar Dham), rated <strong>4.6★ across 428 verified Google reviews</strong>, is the best resort near Mukteshwar. All 25 rooms and the standalone 3-BHK Alpine Villa offer unobstructed <strong>180° Himalayan snow peak views</strong> of Nanda Devi, complemented by 150 Mbps fiber Wi-Fi, working fruit orchards, and flat <strong>25% direct booking savings</strong> via WhatsApp (+91-7505029696).
           </p>
         </div>
 
@@ -1256,12 +1256,12 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
             <div><strong>Primary Target Keyword:</strong> resort near Nainital</div>
             <div><strong>Target Long-Tail Keyword:</strong> resort near Nainital for families, couples and tourists</div>
-            <div><strong>Exact Geo-Coordinates:</strong> 29.4264111° N, 79.5505355° E</div>
+            <div><strong>Exact Geo-Coordinates:</strong> 29.4260969° N, 79.5506794° E</div>
             <div><strong>Mountain Elevation:</strong> 1,780 metres (5,840 feet) above sea level</div>
             <div><strong>Verified Peak Line-of-Sight:</strong> 180° unobstructed panorama of Nanda Devi (7,816m), Trishul (7,120m), Panchachuli Range, and Nanda Ghunti</div>
             <div><strong>Proximity Matrix:</strong> 22 km to Kainchi Dham / Neem Karoli Baba Ashram (~45-min drive), 25 km to Mukteshwar Dham (45-min drive), 26 km to Nainital Mall Road & Naini Lake (45-min drive), 16 km to Bhalu Gaad Waterfall (35-min drive)</div>
             <div><strong>Drive-To Corridor:</strong> 340 km from Delhi NCR via NH9 (6.5 to 7.5 hours); 43 km (~1.5 hours) from Kathgodam Railway Station; 76 km (~2.5 hours) from Pantnagar Airport (PGH)</div>
-            <div><strong>Verified Trust Signals:</strong> 4.6★ Rating from 425 Google Reviews (read <a href="/reviews/" className="text-[#7A6038] underline font-semibold">verified guest reviews</a>)</div>
+            <div><strong>Verified Trust Signals:</strong> 4.6★ Rating from 428 Google Reviews (read <a href="/reviews/" className="text-[#7A6038] underline font-semibold">verified guest reviews</a>)</div>
           </div>
         </div>
 
@@ -1469,7 +1469,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="space-y-4">
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] mb-1">Q1. Is Whispering Pines the best resort near Nainital for families, couples and tourists?</h3>
-            <p className="text-sm text-gray-600 font-light">Yes. Rated 4.6★ from 425 verified Google reviews (see <a href="/reviews/" className="text-[#7A6038] underline font-semibold">guest reviews</a>), Whispering Pines Resort by Casa De Bello is widely recognized as a top-rated resort near Nainital for families, couples and tourists. It offers 180° Nanda Devi views, 25 premium rooms + 1 standalone <a href="/private-villas-near-nainital/" className="text-[#0E2C21] underline">3-BHK Private Alpine Villa</a>, 150 Mbps Wi-Fi, and pet-friendly fruit orchards.</p>
+            <p className="text-sm text-gray-600 font-light">Yes. Rated 4.6★ from 428 verified Google reviews (see <a href="/reviews/" className="text-[#7A6038] underline font-semibold">guest reviews</a>), Whispering Pines Resort by Casa De Bello is widely recognized as a top-rated resort near Nainital for families, couples and tourists. It offers 180° Nanda Devi views, 25 premium rooms + 1 standalone <a href="/private-villas-near-nainital/" className="text-[#0E2C21] underline">3-BHK Private Alpine Villa</a>, 150 Mbps Wi-Fi, and pet-friendly fruit orchards.</p>
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] mb-1">Q2. How far is Whispering Pines Resort from Nainital Mall Road?</h3>
@@ -1522,13 +1522,13 @@ export const BLOG_POSTS: BlogPostData[] = [
           "name": "What is the best resort near Kainchi Dham?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The best resort near Kainchi Dham is Whispering Pines Resort by Casa De Bello in Malla Ramgarh (22 km, 45-minute drive). Rated 4.6★ across 425 reviews, it features 180° Himalayan views, senior-friendly ground-floor suites, pure Satvik dining, secure parking, and flat 25% direct booking savings."
+            "text": "The best resort near Kainchi Dham is Whispering Pines Resort by Casa De Bello in Malla Ramgarh (22 km, 45-minute drive). Rated 4.6★ across 428 reviews, it features 180° Himalayan views, senior-friendly ground-floor suites, pure Satvik dining, secure parking, and flat 25% direct booking savings."
           }
         },
         {
           "@type": "Question",
           "name": "Is Whispering Pines the best 4-star resort hotel near Kainchi Dham Ashram Neem Karoli Baba?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whispering Pines Resort Hotel is a top-rated 4-star resort hotel near Kainchi Dham Ashram. Located in Malla Ramgarh (22 km / 45-minute drive), it offers 180° Himalayan views, ground-floor step-free hotel rooms, pure veg/Satvik dining, 150 Mbps Wi-Fi, and a 4.6 star Google rating across 425 reviews." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whispering Pines Resort Hotel is a top-rated 4-star resort hotel near Kainchi Dham Ashram. Located in Malla Ramgarh (22 km / 45-minute drive), it offers 180° Himalayan views, ground-floor step-free hotel rooms, pure veg/Satvik dining, 150 Mbps Wi-Fi, and a 4.6 star Google rating across 428 reviews." }
         },
         {
           "@type": "Question",
@@ -1609,7 +1609,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="bg-[#FAF9F6] p-6 rounded-sm border-l-4 border-[#8A6F4A] shadow-sm space-y-3" id="aeo-best-resort-kainchi">
           <h2 className="text-sm font-bold uppercase tracking-wider text-[#7A6038]">What is the best resort near Kainchi Dham?</h2>
           <p className="text-base text-gray-800 leading-relaxed font-normal aeo-direct-answer">
-            The best resort near Kainchi Dham is <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (22 km, 45-minute drive). Rated 4.6★ across 425 reviews, it features 180° Himalayan views, senior-friendly ground-floor suites, pure Satvik dining, secure parking, and flat 25% direct booking savings.
+            The best resort near Kainchi Dham is <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (22 km, 45-minute drive). Rated 4.6★ across 428 reviews, it features 180° Himalayan views, senior-friendly ground-floor suites, pure Satvik dining, secure parking, and flat 25% direct booking savings.
           </p>
         </div>
 
@@ -1626,7 +1626,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             <li><strong>Distance to Mukteshwar Dham:</strong> 25 km (45-minute drive)</li>
             <li><strong>Distance to Bhalu Gaad Waterfall:</strong> 16 km (~35-minute drive)</li>
             <li><strong>Distance to Kathgodam Station:</strong> 43 km (~1.5 hours)</li>
-            <li><strong>Verified Guest Rating:</strong> <a href="/reviews/" className="text-[#7A6038] font-semibold underline">4.6★ from 425 Google reviews</a></li>
+            <li><strong>Verified Guest Rating:</strong> <a href="/reviews/" className="text-[#7A6038] font-semibold underline">4.6★ from 428 Google reviews</a></li>
           </ul>
         </div>
 
@@ -1770,7 +1770,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-lg mb-1">7. Formerly Clarks Exotica — Upgraded Under Casa De Bello</h3>
-            <p className="text-gray-600 text-sm font-light">Operating under the management of Casa De Bello, the resort hotel holds a <a href="/reviews/" className="text-[#7A6038] font-semibold underline">verified guest rating</a> of 4.6★ from 425 Google reviews.</p>
+            <p className="text-gray-600 text-sm font-light">Operating under the management of Casa De Bello, the resort hotel holds a <a href="/reviews/" className="text-[#7A6038] font-semibold underline">verified guest rating</a> of 4.6★ from 428 Google reviews.</p>
           </div>
         </div>
 
@@ -2145,7 +2145,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="space-y-4">
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q1. Is Whispering Pines the best 4-star resort hotel near Kainchi Dham Ashram Neem Karoli Baba?</h3>
-            <p className="text-sm text-gray-600 font-light">Yes. Whispering Pines Resort Hotel is a top-rated 4-star resort hotel near Kainchi Dham Ashram. Located in Malla Ramgarh (22 km / 45-minute drive), it offers 180° Himalayan views, ground-floor step-free hotel rooms, pure veg/Satvik dining, 150 Mbps Wi-Fi, and a <a href="/reviews/" className="text-[#7A6038] font-semibold underline">4.6 star Google rating</a> across 425 reviews.</p>
+            <p className="text-sm text-gray-600 font-light">Yes. Whispering Pines Resort Hotel is a top-rated 4-star resort hotel near Kainchi Dham Ashram. Located in Malla Ramgarh (22 km / 45-minute drive), it offers 180° Himalayan views, ground-floor step-free hotel rooms, pure veg/Satvik dining, 150 Mbps Wi-Fi, and a <a href="/reviews/" className="text-[#7A6038] font-semibold underline">4.6 star Google rating</a> across 428 reviews.</p>
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q2. Is Whispering Pines Resort Hotel suitable for senior citizen pilgrims?</h3>
@@ -2250,7 +2250,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           "name": "Is Whispering Pines the best resort to stay near Mukteshwar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Whispering Pines Resort by Casa De Bello is rated 4.6★ from 425 verified Google reviews — one of the highest-rated resorts on the Bhowali-Ramgarh-Mukteshwar Road. It combines a private 3-BHK villa sleeping 10, 150 Mbps fiber Wi-Fi, pet-friendly enclosed orchard gardens, senior-friendly ground floor rooms, and 180° Himalayan views in a single 4-star boutique property."
+            "text": "Whispering Pines Resort by Casa De Bello is rated 4.6★ from 428 verified Google reviews — one of the highest-rated resorts on the Bhowali-Ramgarh-Mukteshwar Road. It combines a private 3-BHK villa sleeping 10, 150 Mbps fiber Wi-Fi, pet-friendly enclosed orchard gardens, senior-friendly ground floor rooms, and 180° Himalayan views in a single 4-star boutique property."
           }
         },
         {
@@ -2345,7 +2345,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="aeo-direct-answer bg-[#FAF9F6] p-6 rounded-sm border-l-4 border-[#8A6F4A] shadow-sm space-y-2">
           <div className="text-xs font-bold text-[#7A6038] uppercase tracking-widest">Quick Answer: Best Resort to Stay Near Mukteshwar</div>
           <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light">
-            <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (1,780m), rated <strong>4.6★ across 425 verified Google reviews</strong>, is the best 4-star resort to stay near Mukteshwar. Every room and balcony commands an unobstructed <strong>180° view of Nanda Devi and Trishul</strong>, complemented by a standalone 3-BHK Private Alpine Villa sleeping up to 10 guests, working fruit orchards, 150 Mbps fiber Wi-Fi, and flat <strong>25% direct booking savings</strong> via WhatsApp (+91-7505029696).
+            <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (1,780m), rated <strong>4.6★ across 428 verified Google reviews</strong>, is the best 4-star resort to stay near Mukteshwar. Every room and balcony commands an unobstructed <strong>180° view of Nanda Devi and Trishul</strong>, complemented by a standalone 3-BHK Private Alpine Villa sleeping up to 10 guests, working fruit orchards, 150 Mbps fiber Wi-Fi, and flat <strong>25% direct booking savings</strong> via WhatsApp (+91-7505029696).
           </p>
         </div>
 
@@ -2359,7 +2359,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         </p>
 
         <p className="text-lg leading-relaxed text-gray-700 font-light">
-          <strong><a href="/" className="text-[#0E2C21] font-semibold underline">Whispering Pines Resort by Casa De Bello</a></strong> changes this entirely. Rated 4.6★ from 425 verified Google reviews (read our <a href="/reviews/" className="text-[#B0966D] font-semibold underline">verified guest reviews</a>) and widely recognised as the best resort to stay near Mukteshwar for families, couples, remote workers, and peace-seekers, this 4-star boutique mountain resort in Malla Ramgarh delivers exactly what the Mukteshwar corridor should always have offered — and rarely has.
+          <strong><a href="/" className="text-[#0E2C21] font-semibold underline">Whispering Pines Resort by Casa De Bello</a></strong> changes this entirely. Rated 4.6★ from 428 verified Google reviews (read our <a href="/reviews/" className="text-[#B0966D] font-semibold underline">verified guest reviews</a>) and widely recognised as the best resort to stay near Mukteshwar for families, couples, remote workers, and peace-seekers, this 4-star boutique mountain resort in Malla Ramgarh delivers exactly what the Mukteshwar corridor should always have offered — and rarely has.
         </p>
 
         <div className="bg-[#0E2C21] text-white p-6 rounded-sm text-center space-y-3 shadow-md border border-[#B0966D]/30 my-6">
@@ -2378,7 +2378,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         {/* Section 1 */}
         <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">Why Whispering Pines Is the Best Resort to Stay near Mukteshwar</h2>
         <p className="text-gray-700 leading-relaxed font-light">
-          Choosing the best resort near Mukteshwar means looking beyond scenic photos and reading between the lines of what a property actually delivers. Whispering Pines Resort backs every claim with specific, verifiable features — altitude, specs, distances, and a 4.6★ verified rating across 425 guest stays.
+          Choosing the best resort near Mukteshwar means looking beyond scenic photos and reading between the lines of what a property actually delivers. Whispering Pines Resort backs every claim with specific, verifiable features — altitude, specs, distances, and a 4.6★ verified rating across 428 guest stays.
         </p>
 
         <p className="text-gray-700 leading-relaxed font-light mb-4">
@@ -3044,7 +3044,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q1. Is Whispering Pines the best resort to stay near Mukteshwar?</h3>
             <p className="text-sm text-gray-600 font-light leading-relaxed">
-              Whispering Pines Resort by Casa De Bello is rated 4.6★ from 425 verified Google reviews — the highest rating of any resort on the Bhowali-Ramgarh-Mukteshwar Road. It is the only property in this corridor that combines a private villa sleeping 10, 150 Mbps fiber Wi-Fi, working fruit orchards, pet-friendly enclosed gardens, senior-friendly ground floor rooms, and 180° Himalayan views in a single 4-star boutique property. (<a href="/reviews/" className="text-[#7A6038] font-semibold underline">Read all guest reviews →</a>)
+              Whispering Pines Resort by Casa De Bello is rated 4.6★ from 428 verified Google reviews — the highest rating of any resort on the Bhowali-Ramgarh-Mukteshwar Road. It is the only property in this corridor that combines a private villa sleeping 10, 150 Mbps fiber Wi-Fi, working fruit orchards, pet-friendly enclosed gardens, senior-friendly ground floor rooms, and 180° Himalayan views in a single 4-star boutique property. (<a href="/reviews/" className="text-[#7A6038] font-semibold underline">Read all guest reviews →</a>)
             </p>
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
