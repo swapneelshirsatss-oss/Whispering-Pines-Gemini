@@ -1224,7 +1224,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             loading="lazy"
           />
           <div>
-            <div className="text-xs font-semibold text-[#B0966D] uppercase tracking-wider">Author & Verified Host</div>
+            <div className="text-xs font-semibold text-[#B0966D] uppercase tracking-wider">Author &amp; host</div>
             <h4 className="text-base font-bold text-[#0E2C21]">Gaurav Pandey — Director, Casa De Bello Pvt Ltd</h4>
             <p className="text-sm text-gray-600 font-light mt-1">
               As a seasoned hospitality director and native Kumaon travel advocate, Gaurav Pandey oversees <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="text-[#B0966D] underline font-semibold">Casa De Bello Pvt Ltd</a>. Having hosted thousands of multi-generational families, honeymooners, and digital nomads across Uttarakhand, Gaurav curates Whispering Pines Resort to combine high-altitude Himalayan tranquility with 4-star infrastructure, 150 Mbps fiber connectivity, authentic farm-to-table dining, and direct-booking transparency.
@@ -1591,7 +1591,7 @@ export const BLOG_POSTS: BlogPostData[] = [
               loading="lazy"
             />
             <div>
-              <div className="text-xs font-semibold text-[#B0966D] uppercase tracking-wider">Author & Verified Host</div>
+              <div className="text-xs font-semibold text-[#B0966D] uppercase tracking-wider">Author &amp; host</div>
               <h4 className="text-base font-bold text-[#0E2C21]">Gaurav Pandey — Director of Casa De Bello Pvt Ltd</h4>
               <p className="text-sm text-gray-600 font-light mt-1">
                 Traveller host & hospitality entrepreneur leading <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="text-[#B0966D] underline">Casa De Bello Pvt Ltd</a>. Elevation: 1,780m Malla Ramgarh ridge near Mukteshwar & Kainchi Dham.
@@ -2333,7 +2333,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             loading="lazy"
           />
           <div>
-            <div className="text-xs font-semibold text-[#B0966D] uppercase tracking-wider">Author & Verified Host</div>
+            <div className="text-xs font-semibold text-[#B0966D] uppercase tracking-wider">Author &amp; host</div>
             <h4 className="text-base font-bold text-[#0E2C21]">Gaurav Pandey — Director of Casa De Bello Pvt Ltd</h4>
             <p className="text-sm text-gray-600 font-light mt-1">
               As a seasoned hospitality director and Kumaon travel advocate, Gaurav Pandey oversees <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="text-[#B0966D] underline font-semibold">Casa De Bello Pvt Ltd</a>. Having hosted thousands of multi-generational families, honeymooners, and digital nomads across Uttarakhand, Gaurav curates Whispering Pines Resort to combine high-altitude Himalayan tranquility with 4-star infrastructure, 150 Mbps fiber connectivity, authentic farm-to-table dining, and direct-booking transparency.
