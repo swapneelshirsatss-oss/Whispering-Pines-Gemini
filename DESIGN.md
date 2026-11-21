@@ -20,6 +20,9 @@ Headings: Playfair Display · Body: Inter · Mono: JetBrains Mono
 
 See also `docs/DESIGN_UPGRADE_PLAN.md`.
 
+## Pine surfaces
+Large pine areas (header when solid, mobile menu, footer, phone Call/WhatsApp bar, festive popup, dark homepage bands) use the `.wp-pine-surface` class in `src/styles/global.css`: a pine → pine-deep gradient with a pine-light lift at the top left, a 7% film grain (`public/textures/grain.svg`) and faint contour lines (`public/textures/contours.svg`). Do not set a flat `bg-[#0E2C21]` on new large dark areas; use the class. Buttons and small chips stay flat.
+
 ## Components
 Reuse the existing components. Do not build a second version of anything that exists.
 

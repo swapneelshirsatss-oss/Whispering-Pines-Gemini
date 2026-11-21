@@ -12,7 +12,7 @@ const waLink = `https://wa.me/917505029696?text=${waText}`;
 ---
 
 {!expired && (
-  <aside id="wp-festive" class="wpf" role="dialog" aria-labelledby="wpf-title" aria-modal="false" hidden data-ends={OFFER_ENDS}>
+  <aside id="wp-festive" class="wpf wp-pine-surface" role="dialog" aria-labelledby="wpf-title" aria-modal="false" hidden data-ends={OFFER_ENDS}>
     <button type="button" class="wpf-close" aria-label="Close offer" data-wpf-close>
       <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
     </button>
@@ -72,8 +72,8 @@ const waLink = `https://wa.me/917505029696?text=${waText}`;
   .wpf {
     position: fixed; z-index: 9998; left: 12px; right: 12px; bottom: calc(59px + 12px); /* above the phone Call/WhatsApp bar */
     max-width: 400px; margin-inline: auto; padding: 16px 18px 12px;
-    background: #0E2C21; color: #FAF9F6; border: 1px solid rgb(196 167 125 / .45); border-radius: 4px;
-    box-shadow: 0 12px 32px rgb(0 0 0 / .28);
+    color: #FAF9F6; border: 1px solid rgb(196 167 125 / .45); border-radius: 4px;
+    box-shadow: 0 24px 48px -18px rgb(10 33 24 / .6), 0 2px 6px rgb(10 33 24 / .2); /* soft, pine-tinted */
     font-family: var(--font-sans);
     opacity: 0; transform: translateY(16px); transition: opacity .35s ease, transform .35s ease;
   }

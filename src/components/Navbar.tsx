@@ -103,10 +103,10 @@ export default function Navbar({ children, overlay = false }: NavbarProps) {
         overlay
           ? `fixed top-0 left-0 w-full z-50 border-b transition-[background-color,border-color,padding] duration-300 ${
               scrolled || isOpen
-                ? "bg-[#0E2C21] border-[#FAF9F6]/10 py-3"
+                ? "wp-pine-surface border-[#FAF9F6]/10 py-3"
                 : "bg-transparent border-transparent py-5"
             }`
-          : "sticky top-0 left-0 w-full z-50 bg-[#0E2C21] border-b border-[#FAF9F6]/10 py-3.5"
+          : "sticky top-0 left-0 w-full z-50 wp-pine-surface border-b border-[#FAF9F6]/10 py-3.5"
       }
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -230,7 +230,7 @@ export default function Navbar({ children, overlay = false }: NavbarProps) {
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-[#0E2C21]/98 backdrop-blur-xl border-b border-[#FAF9F6]/10 shadow-md transition-all duration-300 ease-in-out z-40 ${isOpen ? "opacity-100 max-h-screen py-5" : "opacity-0 max-h-0 overflow-hidden"
+        className={`md:hidden absolute top-full left-0 w-full wp-pine-surface border-b border-[#FAF9F6]/10 shadow-md transition-all duration-300 ease-in-out z-40 ${isOpen ? "opacity-100 max-h-screen py-5" : "opacity-0 max-h-0 overflow-hidden"
           }`}
       >
         <div className="px-4 pt-1 pb-4 space-y-2">
