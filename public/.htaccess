@@ -1,4 +1,9 @@
 # Apache configuration for Astro SSG static site
+# AVIF must be served as image/avif: with "X-Content-Type-Options: nosniff" a text/plain AVIF is blocked by browsers
+<IfModule mod_mime.c>
+  AddType image/avif .avif
+</IfModule>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
