@@ -23,6 +23,390 @@ export type BlogPostData = {
 
 export const BLOG_POSTS: BlogPostData[] = [
   {
+    id: 20,
+    slug: "best-hotels-for-couples-in-mukteshwar",
+    title: "5 Best Hotels for Couples in Mukteshwar & Nearby",
+    seoTitle: "5 Best Hotels for Couples in Mukteshwar & Nearby",
+    seoDescription: "Best hotels for couples in Mukteshwar compared: 5 stays in town, Dhanachuli and Malla Ramgarh, with rooms, dining, policies and what to check before booking.",
+    excerpt: "Best hotels for couples in Mukteshwar compared: 5 stays in town, Dhanachuli and Malla Ramgarh, with rooms, dining, policies and what to check before booking.",
+    date: "November 21, 2026",
+    updatedDate: "November 21, 2026",
+    readTime: "9 min read",
+    imageUrl: "/images/best-hotels-for-couples-in-mukteshwar.webp",
+    imageAlt: "Two chairs on the private cedar deck of the Deluxe Skylight Suite at Whispering Pines Resort, Malla Ramgarh, with pine trees and hills behind",
+    faqSchema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which are the best hotels for couples in Mukteshwar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Five options suit different couples. Whispering Pines in Malla Ramgarh offers an orchard setting and a skylight suite. Digantaa in Dhanachuli has a spa and a couples package. Ojaswi on Sheetla Road has jacuzzi rooms. Te Aroha by Shervani in Dhanachuli is smaller and quieter. KMVN's rest house in town is the budget choice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I choose a honeymoon hotel in Mukteshwar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start with the exact room category and view, then check heating, meal plans and the cancellation terms. Decide whether you want to stay in Mukteshwar town near the temple or in a quieter village such as Dhanachuli or Malla Ramgarh. Confirm any romantic extras, with their prices, in writing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a couples' stay in Mukteshwar cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the hotel, the room and the dates, so check current rates. As examples, Digantaa lists its Elite cottage from ₹18,500 a night including taxes and breakfast for two (no dates given). Whispering Pines offers ₹6,000 per room per night with breakfast, dinner and a bonfire from 24 to 30 December 2026, plus taxes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Whispering Pines in Mukteshwar or Ramgarh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Whispering Pines is in Malla Ramgarh, on the Bhowali-Ramgarh-Mukteshwar Road in Nainital district (pincode 263137). It is not in Mukteshwar town. The resort lists Mukteshwar Dham at about 25 km, or 45 to 50 minutes by road."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should couples confirm before booking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Confirm the room category and its view, the bed type, the heating, what the meal plan includes, the cancellation and advance-payment terms, and the ID each guest must carry. Ask about any couples policy directly, and get the price of extras such as dinners or decoration in writing."
+          }
+        }
+      ]
+    },
+    content: (
+      <div className="space-y-6 text-[#2C3531]/85 font-sans leading-relaxed">
+        <p className="text-xs text-gray-500 italic border-l-2 border-[#B0966D] pl-3">
+          By Gaurav Pandey, Managing Director &amp; Founder, Casa De Bello Pvt Ltd (native Kumaon travel enthusiast). Research date: 21 November 2026. Every hotel fact below was checked on that hotel&apos;s official website on that date. No hotel was visited or stayed in.
+        </p>
+
+        <p className="text-base sm:text-lg leading-relaxed text-[#0E2C21]/90 font-medium">
+          Choosing between the <strong>best hotels for couples in Mukteshwar</strong> comes down to three practical questions. Which room will you actually get? Where does the property sit on the map? And what is the setting like once you arrive? A suite with its own deck above an orchard is a very different trip from a boutique room in a village or a simple rest house near the temple.
+        </p>
+
+        <p>
+          This guide compares five stays across Mukteshwar town, Dhanachuli and Malla Ramgarh. Each suits a different kind of trip, from a quiet anniversary to a spa-led honeymoon or a budget weekend. For a broader look at neighborhoods and resort categories, see our{" "}
+          <a href="/blog/hotels-in-mukteshwar/" className="text-[#0E2C21] font-semibold underline hover:text-[#7A6038]">
+            area-by-area hotels in Mukteshwar guide
+          </a>{" "}
+          and our{" "}
+          <a href="/blog/best-resort-to-stay-near-mukteshwar/" className="text-[#0E2C21] font-semibold underline hover:text-[#7A6038]">
+            8-stay Mukteshwar resort comparison
+          </a>.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#0E2C21] pt-4 border-t border-gray-100">
+          Which are the best hotels for couples in Mukteshwar?
+        </h2>
+        <p>
+          Five stays stand out for couples: Whispering Pines Resort in Malla Ramgarh, Digantaa Resort and Te Aroha by Shervani in Dhanachuli, Ojaswi Himalayan Resort on Sheetla Road, and the KMVN Tourist Rest House near the Mahadev temple. We compared them on rooms for two, setting, dining, location and published policies. Your budget and plans decide the right one.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#0E2C21] pt-4 border-t border-gray-100">
+          How we chose these hotels
+        </h2>
+        <p>
+          This is desk research, not a tested ranking. We have not stayed at the four alternatives. In November 2026 we read each hotel&apos;s official website and kept only what the hotel itself publishes: a room category for two guests, the setting and view, dining on site, the precise location, and policies on cancellation and ID where available.
+        </p>
+
+        <blockquote className="bg-[#FAF9F6] border-l-4 border-[#B0966D] p-4 rounded-r-sm text-sm text-[#2C3531]">
+          <strong>Disclosure:</strong> This guide is published by{" "}
+          <a href="/" className="text-[#0E2C21] font-semibold underline">
+            Whispering Pines Resort by Casa De Bello
+          </a>{" "}
+          (rated{" "}
+          <a href="/reviews/" className="text-[#0E2C21] font-semibold underline">
+            4.6★ across 428 Google reviews
+          </a>
+          ), which appears first. Compare the locations, facilities, and current rates to choose the stay that suits your trip.
+        </blockquote>
+
+        {/* Comparison Table */}
+        <div className="overflow-x-auto my-6">
+          <table className="w-full text-left border-collapse text-xs sm:text-sm bg-white border border-[#EAE8E3] shadow-xs">
+            <thead>
+              <tr className="bg-[#0E2C21] text-white">
+                <th className="p-3 border border-[#EAE8E3]/20 font-semibold">Hotel</th>
+                <th className="p-3 border border-[#EAE8E3]/20 font-semibold">Location</th>
+                <th className="p-3 border border-[#EAE8E3]/20 font-semibold">Best suited to</th>
+                <th className="p-3 border border-[#EAE8E3]/20 font-semibold">Verified highlight</th>
+                <th className="p-3 border border-[#EAE8E3]/20 font-semibold">What to check before booking</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[#EAE8E3]">
+              <tr className="bg-[#FAF9F6]">
+                <td className="p-3 font-bold text-[#0E2C21]">Whispering Pines Resort by Casa De Bello</td>
+                <td className="p-3">Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Road</td>
+                <td className="p-3">Couples who want an orchard setting, Kumaoni food or to bring a pet</td>
+                <td className="p-3">Deluxe Skylight Suite with a glass skylight ceiling and a private cedar deck</td>
+                <td className="p-3">Bed type, meal inclusions, cancellation terms</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold text-[#0E2C21]">Digantaa Resort</td>
+                <td className="p-3">Village Kaul, Dhanachuli</td>
+                <td className="p-3">A spa-led honeymoon</td>
+                <td className="p-3">&quot;Couples Reconnection&quot; package with a couples spa session and a candlelit dinner</td>
+                <td className="p-3">Package price; only the Elite cottage lists a bathtub</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold text-[#0E2C21]">Ojaswi Himalayan Resort</td>
+                <td className="p-3">Sheetla Road, Mukteshwar</td>
+                <td className="p-3">Couples who want jacuzzi rooms and large-resort facilities</td>
+                <td className="p-3">Kafal and Buransh Retreat rooms list a private jacuzzi</td>
+                <td className="p-3">45-day cancellation window; pet and liquor rules</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold text-[#0E2C21]">Te Aroha by Shervani</td>
+                <td className="p-3">Dhanachuli Bend, near Mukteshwar</td>
+                <td className="p-3">A smaller boutique stay with nature walks</td>
+                <td className="p-3">Suite with a private balcony and Himalayan views</td>
+                <td className="p-3">Rates and current terms are not listed online</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-semibold text-[#0E2C21]">KMVN Tourist Rest House</td>
+                <td className="p-3">Near Mahadev Temple, Mukteshwar town</td>
+                <td className="p-3">A budget stay in town</td>
+                <td className="p-3">Double rooms sold on a MAP meal plan</td>
+                <td className="p-3">100% advance; ID compulsory; no pets</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 className="text-2xl font-bold text-[#0E2C21] pt-4 border-t border-gray-100">
+          1. Whispering Pines Resort by Casa De Bello: best for an orchard stay with Kumaoni food
+        </h2>
+        <p className="font-semibold text-[#0E2C21]">
+          A 25-room resort with one private villa in Malla Ramgarh, about 25 km from Mukteshwar Dham, with a skylight suite designed for two.
+        </p>
+        <p>
+          The resort is on the Bhowali-Ramgarh-Mukteshwar Road in Nainital district (pincode 263137), at about 1,780 m. It is not in Mukteshwar town. The resort&apos;s own{" "}
+          <a href="/contact-whispering-pines-resort-mukteshwar/" className="text-[#0E2C21] font-semibold underline hover:text-[#7A6038]">
+            distance table
+          </a>{" "}
+          puts Mukteshwar Dham at 25 km, or 45 to 50 minutes by road. Every room and balcony faces the Nanda Devi and Trishul snow peaks.
+        </p>
+        <p>What matters for couples:</p>
+        <ul className="list-disc pl-6 space-y-2 text-sm sm:text-base">
+          <li><strong>Setting:</strong> a 2,200 sq ft lawn, peach, plum, apple and apricot orchard walks, and forest trails starting at the gate.</li>
+          <li><strong>Food:</strong> an open-air restaurant serving Kumaoni dishes such as bhatt ki churkani, pahadi dal and mandua roti, plus North Indian and continental food. The resort lists 24-hour in-room dining, with meals served on your balcony.</li>
+          <li><strong>Evenings:</strong> a brick firepit bonfire, complimentary on arrival, with refills at a small charge.</li>
+          <li><strong>Practical:</strong> 150 Mbps fibre Wi-Fi, check-in at 1 pm and check-out at 11 am. Dogs and cats stay with ₹0 pet fee.</li>
+        </ul>
+        <p>
+          <strong>Room worth considering:</strong> the{" "}
+          <a href="/suites-cottages-ramgarh-resort/" className="text-[#0E2C21] font-semibold underline hover:text-[#7A6038]">
+            Deluxe Skylight Suite
+          </a>. It is a 450 sq ft top-floor attic suite with a glass skylight ceiling, a private cedar deck, a rain shower and radiator heating. The resort describes it as its couples&apos; room.
+        </p>
+        <p>
+          <strong>Rates:</strong> Check current rates on our{" "}
+          <a href="/book-now/" className="text-[#0E2C21] font-semibold underline hover:text-[#7A6038]">
+            direct booking page
+          </a>{" "}
+          (flat 25% below OTA listings). For Christmas, 24 to 30 December 2026, the resort offers ₹6,000 per room per night with breakfast, dinner and a bonfire, plus taxes.
+        </p>
+        <p>
+          <strong>Before you book:</strong> if you want sunrise at Chauli Ki Jali or several temple visits, plan for the drive each way. Confirm the exact bed configuration and meal inclusions when booking.
+        </p>
+        <p className="text-xs text-gray-500">
+          Source:{" "}
+          <a href="/suites-cottages-ramgarh-resort/" className="underline hover:text-[#0E2C21]">rooms</a>,{" "}
+          <a href="/resort-services-ramgarh/" className="underline hover:text-[#0E2C21]">services and dining</a>,{" "}
+          <a href="/contact-whispering-pines-resort-mukteshwar/" className="underline hover:text-[#0E2C21]">contact and distances</a>
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#0E2C21] pt-4 border-t border-gray-100">
+          2. Digantaa Resort: best for a spa-led honeymoon
+        </h2>
+        <p className="font-semibold text-[#0E2C21]">
+          A large cottage resort in Dhanachuli with an on-site spa and a published couples package.
+        </p>
+        <p>
+          Digantaa&apos;s address is Village Kaul, Dhanachuli (pincode 263136), at a listed 2,286 m. Its spa has three treatment rooms, a steam room and a sauna, and the restaurant, Oregano, serves Kumaoni and continental food.
+        </p>
+        <p>
+          The <strong>Couples Reconnection</strong> package covers three nights in a Magpie or Elite cottage, a 90-minute couples spa session, one private candlelit dinner and a sunrise experience. No price is published.
+        </p>
+        <p>
+          <strong>Room worth considering:</strong> the Elite cottage. It has 850 sq ft, a king bed, a private sit-out and a bathroom with a bathtub. The resort names Trishul, Nanda Devi and Panchachuli in the view. Its &quot;from&quot; rate is ₹18,500 a night, including taxes and breakfast for two. Validity dates are not stated, so check current rates.
+        </p>
+        <p>
+          <strong>Before you book:</strong> only the Elite tier lists a bathtub, and the entry-level Tesia cottage has no balcony. Cottage pages show free cancellation up to 7 days before arrival. All adults need photo ID.
+        </p>
+        <p className="text-xs text-gray-500">
+          Source:{" "}
+          <a href="https://digantaa.com/rooms/elite-cottages-in-mukteshwar/" target="_blank" rel="noopener noreferrer nofollow" className="underline">Elite cottage</a>,{" "}
+          <a href="https://digantaa.com/special-offers-in-mukteshwar/" target="_blank" rel="noopener noreferrer nofollow" className="underline">offers</a>,{" "}
+          <a href="https://digantaa.com/spa-in-mukteshwar/" target="_blank" rel="noopener noreferrer nofollow" className="underline">spa</a>
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#0E2C21] pt-4 border-t border-gray-100">
+          3. Ojaswi Himalayan Resort: best for jacuzzi rooms
+        </h2>
+        <p className="font-semibold text-[#0E2C21]">
+          A 44-room resort on Sheetla Road in Mukteshwar with several room types that list a private jacuzzi.
+        </p>
+        <p>
+          The address is Gram-Chatola, Sheetla Road, Mukteshwar (pincode 263138). The Kafal Retreat (450 sq ft) lists a private jacuzzi and a balcony, and the Buransh Retreat (550 sq ft) an enclosed jacuzzi with 180-degree balcony views. Mero Kumaon, the restaurant, serves Kumaoni, North Indian and continental food. The offers page lists a private candle-lit dinner for proposals, with no price given.
+        </p>
+        <p>
+          <strong>Room worth considering:</strong> the Himalayan Suite. It has 550 sq ft, a king bed and a private balcony with valley and sunset views, and the resort says it suits couples. Heating is a hot-and-cold split AC.
+        </p>
+        <p>
+          <strong>Before you book:</strong> the terms ask for 25% at booking and the balance 45 days before arrival. Cancelling within 45 days of arrival forfeits the full amount. The website contradicts itself on pets and liquor, so ask before you pay.
+        </p>
+        <p className="text-xs text-gray-500">
+          Source:{" "}
+          <a href="https://ojaswiresort.com/himalayan-suite.php" target="_blank" rel="noopener noreferrer nofollow" className="underline">Himalayan Suite</a>,{" "}
+          <a href="https://ojaswiresort.com/rooms.php" target="_blank" rel="noopener noreferrer nofollow" className="underline">rooms</a>,{" "}
+          <a href="https://ojaswiresort.com/terms-and-conditions" target="_blank" rel="noopener noreferrer nofollow" className="underline">terms</a>
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#0E2C21] pt-4 border-t border-gray-100">
+          4. Te Aroha by Shervani: best for a quiet boutique stay
+        </h2>
+        <p className="font-semibold text-[#0E2C21]">
+          An 18-room Shervani Hotels property in Dhanachuli for couples who want a smaller hotel and guided walks.
+        </p>
+        <p>
+          The address is Dhanchuli Bend, near Mukteshwar, Tehsil Dhari (pincode 263132). Café Flashback serves multi-cuisine meals from 7 am to 10:30 pm, with outdoor seating and private dining arrangements. There is a library, and the hotel lists a 4 km jungle walk, a 7.5 km Rata trek and guided village walks.
+        </p>
+        <p>
+          <strong>Room worth considering:</strong> the Suite (280 sq ft), which has a private balcony with Himalayan views.
+        </p>
+        <p>
+          <strong>Before you book:</strong> rates are not published on the property pages. The group&apos;s terms page still carries 2020-21 validity dates, so confirm the current cancellation terms in writing.
+        </p>
+        <p className="text-xs text-gray-500">
+          Source:{" "}
+          <a href="https://shervanihotels.com/te-aroha-by-shervani-mukteshwar/rooms.html" target="_blank" rel="noopener noreferrer nofollow" className="underline">rooms</a>,{" "}
+          <a href="https://shervanihotels.com/te-aroha-by-shervani-mukteshwar/experiences/experiences.html" target="_blank" rel="noopener noreferrer nofollow" className="underline">experiences</a>
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#0E2C21] pt-4 border-t border-gray-100">
+          5. KMVN Tourist Rest House, Mukteshwar: best for a budget stay in town
+        </h2>
+        <p className="font-semibold text-[#0E2C21]">
+          The state tourism rest house, and the only stay on this list whose address puts it next to the Mahadev temple.
+        </p>
+        <p>
+          Kumaon Mandal Vikas Nigam lists double rooms in Semi Deluxe, Executive, Royal and Super Deluxe categories, all on a MAP meal plan, plus a four-bed room. You book on kmvn.in and pay 100% in advance. Carry your booking receipt and photo ID, because the rest house will not honour the booking without them. Check-out is at 11 am.
+        </p>
+        <p>
+          <strong>Before you book:</strong> tariffs are not shown on the property page, and pets are not allowed. Refunds are 90% if you cancel 15 or more days ahead, 75% at 10 to 14 days, 50% at 5 to 9 days, and nothing within 5 days. Expect a simple stay, not romantic extras.
+        </p>
+        <p className="text-xs text-gray-500">
+          Source:{" "}
+          <a href="https://www.kmvn.in/hotels/trh-mukteshwar" target="_blank" rel="noopener noreferrer nofollow" className="underline">TRH Mukteshwar</a>,{" "}
+          <a href="https://www.kmvn.in/cancellation-rule" target="_blank" rel="noopener noreferrer nofollow" className="underline">cancellation rules</a>
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#0E2C21] pt-4 border-t border-gray-100">
+          How to choose a honeymoon hotel in Mukteshwar
+        </h2>
+        <p>
+          If you are shortlisting the <strong>best honeymoon hotels in Mukteshwar</strong>, these checks matter more than the photographs. They are general booking advice. Where we name a hotel, it is because that hotel publishes the detail.
+        </p>
+        <ul className="list-disc pl-6 space-y-2 text-sm sm:text-base">
+          <li><strong>Room privacy and the exact view.</strong> Ask for the category name and what &quot;mountain view&quot; means: snow peaks, valley or treeline.</li>
+          <li><strong>Heating and hot water.</strong> Hill nights get cold in winter. Ask what heats your specific room and what happens during a power cut.</li>
+          <li><strong>Meals and dietary needs.</strong> Village stays are a drive from any market, so the meal plan matters. Mention Jain, satvik or vegan needs in advance.</li>
+          <li><strong>Road access and sightseeing.</strong> Mountain roads slow down in fog, rain and snow. Match your base to how often you plan to drive.</li>
+          <li><strong>Cancellation terms.</strong> These vary widely: Digantaa&apos;s cottage pages allow free cancellation up to 7 days out, while Ojaswi&apos;s window is 45 days.</li>
+          <li><strong>Romantic extras.</strong> Of these five, only Digantaa and Ojaswi publish candlelit dinners. Elsewhere, ask about cake, decoration or a private dinner and get the price in writing.</li>
+        </ul>
+        <p>
+          Carry original photo ID for both of you. Never assume a hotel&apos;s policy for couples; ask when you book.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#0E2C21] pt-4 border-t border-gray-100">
+          Staying in Mukteshwar or nearby Ramgarh
+        </h2>
+        <p>
+          <strong>Mukteshwar town</strong> suits you if the temple and Chauli Ki Jali are the main reasons for the trip. You will stay closest to them, though the town is also where day visitors go.
+        </p>
+        <p>
+          <strong>Dhanachuli</strong> is a village base for Digantaa and Te Aroha. It suits couples who want a resort or a boutique stay and are happy to drive to the main sights.
+        </p>
+        <p>
+          <strong>Malla Ramgarh</strong> is the orchard belt on the Bhowali-Ramgarh-Mukteshwar Road, where Whispering Pines sits. The resort lists Kainchi Dham at 22 km, Nainital at 26 km and Mukteshwar Dham at 25 km, so it suits a trip that covers all three. See our{" "}
+          <a href="/things-to-do-near-mukteshwar/" className="text-[#0E2C21] font-semibold underline hover:text-[#7A6038]">
+            Kumaon sightseeing distances guide
+          </a>{" "}
+          and check live road conditions on the day you travel.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#0E2C21] pt-4 border-t border-gray-100">
+          Planning your stay at Whispering Pines
+        </h2>
+        <p>
+          For privacy, look at the Deluxe Skylight Suite, with its private deck and skylight ceiling. Meals can come to your balcony, the bonfire is complimentary on arrival, and the kitchen cooks Kumaoni dishes alongside North Indian food. Your dog or cat can come too, with ₹0 pet fee.
+        </p>
+        <p>
+          Planning a honeymoon? Ask us what our winter honeymoon packages currently include before you book.
+        </p>
+        <p>
+          When you are ready,{" "}
+          <a href="/suites-cottages-ramgarh-resort/" className="text-[#0E2C21] font-semibold underline hover:text-[#7A6038]">
+            look at the rooms and suites
+          </a>, read about{" "}
+          <a href="/resort-services-ramgarh/" className="text-[#0E2C21] font-semibold underline hover:text-[#7A6038]">
+            dining and services at the resort
+          </a>, or{" "}
+          <a href="/book-now/" className="text-[#0E2C21] font-semibold underline hover:text-[#7A6038]">
+            check availability and current rates on our booking page
+          </a>. You can also WhatsApp us on{" "}
+          <a href="https://wa.me/917505029696?text=Hi%20Whispering%20Pines%20Resort%21%20We%20are%20planning%20a%20couples%20stay%20near%20Mukteshwar%20and%20would%20like%20to%20check%20Deluxe%20Skylight%20Suite%20availability." target="_blank" rel="noopener noreferrer" className="text-[#0E2C21] font-semibold underline hover:text-[#7A6038]">
+            +91 75050 29696
+          </a>.
+        </p>
+
+        <h2 className="text-2xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-4">
+          <div className="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-xs space-y-1.5">
+            <h3 className="text-base font-bold text-[#0E2C21]">Which are the best hotels for couples in Mukteshwar?</h3>
+            <p className="text-sm text-gray-700 font-light leading-relaxed">
+              Five options suit different couples. Whispering Pines in Malla Ramgarh offers an orchard setting and a skylight suite. Digantaa in Dhanachuli has a spa and a couples package. Ojaswi on Sheetla Road has jacuzzi rooms. Te Aroha by Shervani in Dhanachuli is smaller and quieter. KMVN&apos;s rest house in town is the budget choice.
+            </p>
+          </div>
+          <div className="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-xs space-y-1.5">
+            <h3 className="text-base font-bold text-[#0E2C21]">How do I choose a honeymoon hotel in Mukteshwar?</h3>
+            <p className="text-sm text-gray-700 font-light leading-relaxed">
+              Start with the exact room category and view, then check heating, meal plans and the cancellation terms. Decide whether you want to stay in Mukteshwar town near the temple or in a quieter village such as Dhanachuli or Malla Ramgarh. Confirm any romantic extras, with their prices, in writing.
+            </p>
+          </div>
+          <div className="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-xs space-y-1.5">
+            <h3 className="text-base font-bold text-[#0E2C21]">How much does a couples&apos; stay in Mukteshwar cost?</h3>
+            <p className="text-sm text-gray-700 font-light leading-relaxed">
+              It depends on the hotel, the room and the dates, so check current rates. As examples, Digantaa lists its Elite cottage from ₹18,500 a night including taxes and breakfast for two (no dates given). Whispering Pines offers ₹6,000 per room per night with breakfast, dinner and a bonfire from 24 to 30 December 2026, plus taxes.
+            </p>
+          </div>
+          <div className="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-xs space-y-1.5">
+            <h3 className="text-base font-bold text-[#0E2C21]">Is Whispering Pines in Mukteshwar or Ramgarh?</h3>
+            <p className="text-sm text-gray-700 font-light leading-relaxed">
+              Whispering Pines is in Malla Ramgarh, on the Bhowali-Ramgarh-Mukteshwar Road in Nainital district (pincode 263137). It is not in Mukteshwar town. The resort lists Mukteshwar Dham at about 25 km, or 45 to 50 minutes by road.
+            </p>
+          </div>
+          <div className="bg-white p-5 rounded-sm border border-[#EAE8E3] shadow-xs space-y-1.5">
+            <h3 className="text-base font-bold text-[#0E2C21]">What should couples confirm before booking?</h3>
+            <p className="text-sm text-gray-700 font-light leading-relaxed">
+              Confirm the room category and its view, the bed type, the heating, what the meal plan includes, the cancellation and advance-payment terms, and the ID each guest must carry. Ask about any couples policy directly, and get the price of extras such as dinners or decoration in writing.
+            </p>
+          </div>
+        </div>
+      </div>
+    )
+  },
+  {
     id: 19,
     slug: "new-year-packages-near-delhi",
     customUrl: "/blog/new-year-packages-near-delhi/",
@@ -3121,6 +3505,9 @@ export const BLOG_POSTS: BlogPostData[] = [
             </a>
             <a href="/blog/best-resort-to-stay-near-mukteshwar/" className="p-3 bg-white rounded-sm border border-[#EAE8E3] text-[#0E2C21] font-semibold hover:border-[#8A6F4A] transition-colors shadow-sm">
               📖 Resort Near Mukteshwar Guide
+            </a>
+            <a href="/blog/best-hotels-for-couples-in-mukteshwar/" className="p-3 bg-white rounded-sm border border-[#EAE8E3] text-[#0E2C21] font-semibold hover:border-[#8A6F4A] transition-colors shadow-sm">
+              💑 Best Hotels for Couples in Mukteshwar
             </a>
             <a href="/blog/resort-near-nainital/" className="p-3 bg-white rounded-sm border border-[#EAE8E3] text-[#0E2C21] font-semibold hover:border-[#8A6F4A] transition-colors shadow-sm">
               📖 Resort Near Nainital Guide
