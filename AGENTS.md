@@ -87,7 +87,7 @@ Whenever publishing a new blog article or travel guide:
 1. **Page Creation**: Place the page at `src/pages/blog/<slug>.astro`. Always include:
    - Full JSON-LD schemas (`WebSite`, `BlogPosting`, `Resort`, `FAQPage`).
    - LCP hero image preload tag in `<Fragment slot="head">` with `fetchpriority="high"`.
-   - Verified Host E-E-A-T banner (`Gaurav Pandey, Director`).
+   - Verified Host E-E-A-T banner (`Gaurav Pandey, Managing Director & Founder`).
    - Mid-article and sticky WhatsApp direct-booking CRO conversion cards.
 2. **Data Registry**: Add the post object to `src/data/blogPosts.tsx` (`BLOG_POSTS` array) with unique `id`, `slug`, `customUrl`, `title`, `excerpt`, `date`, and `imageUrl`.
 3. **Sitemap**: Add the new page entry to `public/sitemap-blog.xml` with current `<lastmod>` and `<priority>1.0</priority>`.
@@ -220,7 +220,7 @@ Whenever maintaining or refactoring bottom conversion bars or global tracking:
 - Booking page: https://whisperingpinesresort.in/book-now/
 - Always "alpine resort and luxury villa property". NEVER "stone cottage".
 - Direct saving: 25% (not 20%) · ₹0 pet fee
-- Host / author: Gaurav Pandey, Director
+- Host / author: Gaurav Pandey, Managing Director & Founder, Casa De Bello Pvt Ltd (confirmed 21 Nov 2026; use this exact title everywhere, including schema `jobTitle`)
 - Master page for Mukteshwar resort searches: `/blog/best-resort-to-stay-near-mukteshwar/` (all old URLs 301 there)
 - GBP posts: no phone numbers or URLs in the text
 - GTM: GTM-PL8FVLPX · Google Ads: AW-18455442099
