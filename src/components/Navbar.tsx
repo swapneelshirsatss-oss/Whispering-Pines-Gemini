@@ -212,10 +212,11 @@ export default function Navbar({ children, overlay = false }: NavbarProps) {
               href={`tel:${PHONE_TEL}`}
               data-cta="call_header"
               onClick={() => trackAdsConversion("phone_call_click", "engagement", "header_phone_call")}
-              className="flex items-center justify-center min-w-[44px] min-h-[44px] text-[#B0966D] hover:text-[#C4A77D] transition-colors"
+              className="flex items-center justify-center gap-1.5 min-w-[44px] min-h-[44px] sm:px-3.5 rounded-[4px] bg-[#B0966D] text-[#0E2C21] hover:bg-[#C4A77D] transition-colors"
               aria-label={`Call Whispering Pines on ${PHONE_DISPLAY}`}
             >
               <Phone className="w-5 h-5" />
+              <span className="hidden sm:inline text-[13px] font-semibold tracking-wide">Call</span>
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
