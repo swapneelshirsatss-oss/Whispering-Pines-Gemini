@@ -61,7 +61,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     date: "November 6, 2026",
     updatedDate: "November 6, 2026",
     readTime: "14 min read",
-    imageUrl: "/images/corporate-team-outing-conference-hall-india.webp",
+    imageUrl: "/images/corporate-offsite-hall-whispering-pines.webp",
     imageAlt: "Indian corporate team conference and offsite retreat meeting with panoramic Himalayan views at Whispering Pines Resort near Delhi"
   },
   {

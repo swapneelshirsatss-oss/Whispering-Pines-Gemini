@@ -67,7 +67,7 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
             <h2 className="text-3xl sm:text-4xl font-bold font-display text-[#0E2C21]">
               Latest stories, itineraries and local insights
             </h2>
-            <p className="text-sm sm:text-base text-gray-600 font-light leading-relaxed">
+            <p className="text-sm sm:text-base text-[#2C3531]/80 font-light leading-relaxed">
               Explore expert travel guides for Mukteshwar, Kainchi Dham Ashram, Ramgarh fruit orchards, and Kumaon Himalayan retreats.
             </p>
           </div>
@@ -78,7 +78,7 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
               className="inline-flex items-center gap-2 text-xs font-bold text-[#0E2C21] hover:text-[#7A6038] transition-colors group px-4 py-3 min-h-11 rounded-sm border border-[#EAE8E3] bg-white mr-2"
             >
               View All Articles
-              <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5" />
             </a>
 
             <div className="flex items-center gap-2">
@@ -89,7 +89,7 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
                 className={`w-11 h-11 rounded-full flex items-center justify-center border transition-all duration-300 ${
                   canScrollLeft
                     ? "bg-white border-[#EAE8E3] text-[#0E2C21] hover:bg-[#0E2C21] hover:text-[#B0966D] hover:border-[#0E2C21] shadow-sm cursor-pointer"
-                    : "bg-gray-100 border-gray-200 text-gray-400 cursor-not-allowed opacity-50"
+                    : "bg-[#E6E0D6] border-[#E6E0D6] text-[#2C3531]/40 cursor-not-allowed opacity-50"
                 }`}
               >
                 <ChevronLeft className="w-5 h-5" />
@@ -101,7 +101,7 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
                 className={`w-11 h-11 rounded-full flex items-center justify-center border transition-all duration-300 ${
                   canScrollRight
                     ? "bg-white border-[#EAE8E3] text-[#0E2C21] hover:bg-[#0E2C21] hover:text-[#B0966D] hover:border-[#0E2C21] shadow-sm cursor-pointer"
-                    : "bg-gray-100 border-gray-200 text-gray-400 cursor-not-allowed opacity-50"
+                    : "bg-[#E6E0D6] border-[#E6E0D6] text-[#2C3531]/40 cursor-not-allowed opacity-50"
                 }`}
               >
                 <ChevronRight className="w-5 h-5" />
@@ -124,7 +124,7 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
                 key={post.id}
                 className="w-[85vw] sm:w-[380px] lg:w-[400px] shrink-0 snap-start"
               >
-                <article className="bg-white rounded-sm border border-[#EAE8E3] overflow-hidden hover:shadow-md hover:border-[#8A6F4A]/40 transition-all duration-300 flex flex-col h-full group">
+                <article className="flex flex-col h-full group">
                   <a
                     href={articleUrl}
                     className="h-52 w-full overflow-hidden block relative shrink-0"
@@ -132,7 +132,7 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
                     <img
                       src={post.imageUrl}
                       alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full object-cover"
                       loading="lazy"
                     />
                     <div className="hidden">
@@ -140,15 +140,15 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
                     </div>
                   </a>
 
-                  <div className="p-6 flex flex-col justify-between flex-1 space-y-4">
+                  <div className="pt-5 flex flex-col justify-between flex-1 space-y-4">
                     <div className="space-y-3">
-                      <div className="flex items-center gap-3 text-xs text-gray-500 font-medium">
+                      <div className="flex items-center gap-3 text-xs text-[#2C3531]/70 font-medium">
                         <span className="inline-flex items-center gap-1 text-[#0E2C21]">
                           <Calendar className="w-3.5 h-3.5 text-[#7A6038]" />
                           {post.date}
                         </span>
                         <span>•</span>
-                        <span className="inline-flex items-center gap-1 text-gray-500">
+                        <span className="inline-flex items-center gap-1 text-[#2C3531]/70">
                           <Clock className="w-3.5 h-3.5 text-[#7A6038]" />
                           {post.readTime}
                         </span>
@@ -160,12 +160,12 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
                         </h3>
                       </a>
 
-                      <p className="text-sm text-gray-600 font-light leading-relaxed line-clamp-3">
+                      <p className="text-sm text-[#2C3531]/80 font-light leading-relaxed line-clamp-3">
                         {post.excerpt}
                       </p>
                     </div>
 
-                    <div className="pt-4 border-t border-gray-100 flex items-center justify-between mt-auto">
+                    <div className="pt-4 border-t border-[#0E2C21]/10 flex items-center justify-between mt-auto">
                       <div className="flex items-center gap-2">
                         
                         <span className="text-xs font-semibold text-[#0E2C21]">Gaurav Pandey</span>
@@ -176,7 +176,7 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
                         className="inline-flex items-center gap-1 min-h-11 py-2 text-xs font-bold text-[#0E2C21] group-hover:text-[#7A6038] transition-colors"
                       >
                         Read Guide
-                        <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-3.5 h-3.5" />
                       </a>
                     </div>
                   </div>
