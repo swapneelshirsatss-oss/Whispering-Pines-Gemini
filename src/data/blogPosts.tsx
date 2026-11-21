@@ -154,7 +154,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="bg-[#0E2C21]/5 p-6 rounded-sm border border-[#0E2C21]/10 flex flex-col md:flex-row items-center gap-4">
           <img
             src="/images/Gaurav-pandey-casa-de-bello.webp"
-            alt="Gaurav Pandey, Director of Casa De Bello Pvt Ltd"
+            alt="Gaurav Pandey, Managing Director & Founder of Casa De Bello Pvt Ltd"
             className="w-16 h-16 rounded-full object-cover border-2 border-[#B0966D] shrink-0 shadow-sm"
             width="64"
             height="64"
@@ -162,7 +162,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           />
           <div>
             <div className="text-xs font-semibold text-[#B0966D] uppercase tracking-wider">Written by</div>
-            <h4 className="text-base font-bold text-[#0E2C21]">Gaurav Pandey, Director of Casa De Bello Pvt Ltd</h4>
+            <h4 className="text-base font-bold text-[#0E2C21]">Gaurav Pandey, Managing Director & Founder of Casa De Bello Pvt Ltd</h4>
             <p className="text-sm text-gray-600 font-light mt-1">
               Hospitality entrepreneur behind <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="text-[#B0966D] underline">Casa De Bello Pvt Ltd</a> and Whispering Pines Resort in Malla Ramgarh. Cost ranges reviewed for the 2026-27 wedding season (October 2026 to September 2027). Whispering Pines quotes come from our reservations team.
             </p>
@@ -1217,7 +1217,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="bg-[#0E2C21]/5 p-6 rounded-sm border border-[#0E2C21]/10 flex flex-col md:flex-row items-center gap-4">
           <img
             src="/images/Gaurav-pandey-casa-de-bello.webp"
-            alt="Gaurav Pandey — Director of Casa De Bello Pvt Ltd"
+            alt="Gaurav Pandey — Managing Director & Founder of Casa De Bello Pvt Ltd"
             className="w-16 h-16 rounded-full object-cover border-2 border-[#B0966D] shrink-0 shadow-sm"
             width="64"
             height="64"
@@ -1225,7 +1225,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           />
           <div>
             <div className="text-xs font-semibold text-[#B0966D] uppercase tracking-wider">Author &amp; host</div>
-            <h4 className="text-base font-bold text-[#0E2C21]">Gaurav Pandey — Director, Casa De Bello Pvt Ltd</h4>
+            <h4 className="text-base font-bold text-[#0E2C21]">Gaurav Pandey — Managing Director & Founder, Casa De Bello Pvt Ltd</h4>
             <p className="text-sm text-gray-600 font-light mt-1">
               As a seasoned hospitality director and native Kumaon travel advocate, Gaurav Pandey oversees <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="text-[#B0966D] underline font-semibold">Casa De Bello Pvt Ltd</a>. Having hosted thousands of multi-generational families, honeymooners, and digital nomads across Uttarakhand, Gaurav curates Whispering Pines Resort to combine high-altitude Himalayan tranquility with 4-star infrastructure, 150 Mbps fiber connectivity, authentic farm-to-table dining, and direct-booking transparency.
             </p>
@@ -1584,7 +1584,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div className="flex flex-col md:flex-row items-center gap-4">
             <img
               src="/images/Gaurav-pandey-casa-de-bello.webp"
-              alt="Gaurav Pandey — Director of Casa De Bello Pvt Ltd"
+              alt="Gaurav Pandey — Managing Director & Founder of Casa De Bello Pvt Ltd"
               className="w-16 h-16 rounded-full object-cover border-2 border-[#B0966D] shrink-0 shadow-sm"
               width="64"
               height="64"
@@ -1592,7 +1592,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             />
             <div>
               <div className="text-xs font-semibold text-[#B0966D] uppercase tracking-wider">Author &amp; host</div>
-              <h4 className="text-base font-bold text-[#0E2C21]">Gaurav Pandey — Director of Casa De Bello Pvt Ltd</h4>
+              <h4 className="text-base font-bold text-[#0E2C21]">Gaurav Pandey — Managing Director & Founder of Casa De Bello Pvt Ltd</h4>
               <p className="text-sm text-gray-600 font-light mt-1">
                 Traveller host & hospitality entrepreneur leading <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="text-[#B0966D] underline">Casa De Bello Pvt Ltd</a>. Elevation: 1,780m Malla Ramgarh ridge near Mukteshwar & Kainchi Dham.
               </p>
@@ -2326,7 +2326,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="bg-[#0E2C21]/5 p-6 rounded-sm border border-[#0E2C21]/10 flex flex-col md:flex-row items-center gap-4">
           <img
             src="/images/Gaurav-pandey-casa-de-bello.webp"
-            alt="Gaurav Pandey — Director of Casa De Bello Pvt Ltd"
+            alt="Gaurav Pandey — Managing Director & Founder of Casa De Bello Pvt Ltd"
             className="w-16 h-16 rounded-full object-cover border-2 border-[#B0966D] shrink-0 shadow-sm"
             width="64"
             height="64"
@@ -2334,7 +2334,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           />
           <div>
             <div className="text-xs font-semibold text-[#B0966D] uppercase tracking-wider">Author &amp; host</div>
-            <h4 className="text-base font-bold text-[#0E2C21]">Gaurav Pandey — Director of Casa De Bello Pvt Ltd</h4>
+            <h4 className="text-base font-bold text-[#0E2C21]">Gaurav Pandey — Managing Director & Founder of Casa De Bello Pvt Ltd</h4>
             <p className="text-sm text-gray-600 font-light mt-1">
               As a seasoned hospitality director and Kumaon travel advocate, Gaurav Pandey oversees <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" className="text-[#B0966D] underline font-semibold">Casa De Bello Pvt Ltd</a>. Having hosted thousands of multi-generational families, honeymooners, and digital nomads across Uttarakhand, Gaurav curates Whispering Pines Resort to combine high-altitude Himalayan tranquility with 4-star infrastructure, 150 Mbps fiber connectivity, authentic farm-to-table dining, and direct-booking transparency.
             </p>
@@ -2819,7 +2819,7 @@ export const BLOG_POSTS: BlogPostData[] = [
               />
               <div>
                 <span className="text-xs font-bold text-[#0E2C21] uppercase tracking-wider block">Gaurav’s Host Note · Local Insight</span>
-                <span className="text-[11px] text-gray-500 font-light">Resident Host & Director, Casa De Bello</span>
+                <span className="text-[11px] text-gray-500 font-light">Resident Host · Managing Director & Founder, Casa De Bello</span>
               </div>
             </div>
             <p className="text-sm text-gray-700 font-light leading-relaxed">
