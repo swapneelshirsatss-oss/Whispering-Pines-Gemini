@@ -487,6 +487,30 @@ export const BLOG_POSTS: BlogPostData[] = [
     readTime: "12 min read",
     imageUrl: "/images/destination-wedding/destination-weddings-uttarkahnd.avif",
     imageAlt: "Wedding mandap on the Nanda Devi view lawn at Whispering Pines Resort, Ramgarh, Uttarakhand",
+    extraSchemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "EventVenue",
+        "name": "Whispering Pines Resort by Casa De Bello — Nanda Devi Wedding Lawn",
+        "url": "https://whisperingpinesresort.in/destination-wedding-uttarakhand/",
+        "telephone": "+917505029696",
+        "maximumAttendeeCapacity": 100,
+        "hasMap": "https://maps.google.com/?cid=8386667112972057918",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 29.4260969,
+          "longitude": 79.5506794
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
+          "addressLocality": "Mukteshwar",
+          "addressRegion": "Uttarakhand",
+          "postalCode": "263137",
+          "addressCountry": "IN"
+        }
+      }
+    ],
     faqSchema: {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -541,7 +565,7 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         {/* Quick Answer */}
         <div className="aeo-direct-answer bg-[#FAF9F6] p-6 rounded-sm border-l-4 border-[#8A6F4A] shadow-sm space-y-3">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-[#7A6038]">Destination Wedding in Uttarakhand Cost in 2026-27: The Quick Answer</h2>
+          <h2 className="text-xs font-bold uppercase tracking-wider text-[#7A6038]">How much does a destination wedding in Uttarakhand cost in 2026?</h2>
           <p className="text-base text-gray-700 leading-relaxed font-light">
             <strong>A destination wedding in Uttarakhand for 70 to 100 guests over two nights usually costs about ₹7 lakh to ₹17 lakh at a mid-range hill resort in 2026-27. Rooms and food make up most of the bill. The month matters most: March and October run 15 to 25 percent cheaper than November.</strong>
           </p>
@@ -1872,8 +1896,8 @@ export const BLOG_POSTS: BlogPostData[] = [
     slug: "resort-stay-near-kainchi-dham",
     title: "Resort Near Kainchi Dham: Where to Stay for a Peaceful Darshan (2026)",
     seoTitle: "Resort Near Kainchi Dham: Quiet Stay 45 Min from Ashram",
-    seoDescription: "Planning Neem Karoli Baba darshan? Stay 45 min from Kainchi Dham in Malla Ramgarh: Himalayan views, senior-friendly rooms, a villa for 10. Up to 20% off direct.",
-    excerpt: "Where to stay near Kainchi Dham Ashram (Neem Karoli Baba): a senior-friendly 4-star resort hotel 22 km away in Malla Ramgarh, compared with highway and Bhowali stays. Darshan plan, parking for 25+ cars, and up to 20% off when you book direct.",
+    seoDescription: "Planning Neem Karoli Baba darshan? Stay 45 min from Kainchi Dham in Malla Ramgarh: Himalayan views, senior-friendly rooms, a villa for 10. Save 25% direct.",
+    excerpt: "Where to stay near Kainchi Dham Ashram (Neem Karoli Baba): a senior-friendly 4-star resort hotel 22 km away in Malla Ramgarh, compared with highway and Bhowali stays. Darshan plan, parking for 25+ cars, and flat 25% off when you book direct.",
     date: "August 6, 2026",
     updatedDate: "November 23, 2026",
     readTime: "20 min read",
@@ -1884,10 +1908,10 @@ export const BLOG_POSTS: BlogPostData[] = [
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is the best resort near Kainchi Dham?",
+          "name": "Which is the best luxury resort near Kainchi Dham Ashram?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Whispering Pines Resort in Malla Ramgarh is a quiet alpine resort at 1,780 m, 22 km (about 45 minutes) from Kainchi Dham Ashram. Every room faces Nanda Devi and Trishul, with pure-veg and satvik meals, parking for 25+ cars and a 3-BHK villa for 10. Booking direct on WhatsApp saves up to 20%."
+            "text": "Whispering Pines Resort by Casa De Bello in Malla Ramgarh (1,780 m altitude) is a 4-star mountain resort located 45 minutes (22 km) from Neem Karoli Baba Ashram, Kainchi Dham. It features 25 Himalayan-view rooms, a 10-guest private villa, pet-friendly orchards, and 25% direct savings via 075050 29696."
           }
         },
         {
@@ -1938,7 +1962,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         {
           "@type": "Question",
           "name": "How do I get the best rate for a hotel near Kainchi Dham?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Book direct. Rates at Whispering Pines change with the season, and direct bookings are up to 20% below the OTA rate for the same dates, with a best price guarantee. Send your dates and guest count on WhatsApp at +91-7505029696 for a confirmed quote." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Book direct. Rates at Whispering Pines change with the season, and direct bookings are a flat 25% below the OTA rate for the same dates, with a best price guarantee. Send your dates and guest count on WhatsApp at +91-7505029696 for a confirmed quote." }
         },
         {
           "@type": "Question",
@@ -1982,9 +2006,9 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         {/* AEO Direct Answer Summary */}
         <div className="bg-[#FAF9F6] p-6 rounded-sm border-l-4 border-[#8A6F4A] shadow-sm space-y-3" id="aeo-best-resort-kainchi">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-[#7A6038]">What is the best resort near Kainchi Dham?</h2>
+          <h2 className="text-sm font-bold uppercase tracking-wider text-[#7A6038]">Which is the best luxury resort near Kainchi Dham Ashram?</h2>
           <p className="text-base text-gray-800 leading-relaxed font-normal aeo-direct-answer">
-            <strong>Whispering Pines Resort</strong> in Malla Ramgarh is a quiet alpine resort at 1,780 m, 22 km (about 45 minutes) from Kainchi Dham Ashram. Every room faces Nanda Devi and Trishul, with pure-veg and satvik meals, parking for 25+ cars and a 3-BHK villa for 10. Booking direct on WhatsApp saves up to 20%.
+            <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (1,780 m altitude) is a 4-star mountain resort located 45 minutes (22 km) from Neem Karoli Baba Ashram, Kainchi Dham. It features 25 Himalayan-view rooms, a 10-guest private villa, pet-friendly orchards, and 25% direct savings via 075050 29696.
           </p>
         </div>
 
@@ -2722,10 +2746,10 @@ export const BLOG_POSTS: BlogPostData[] = [
         },
         {
           "@type": "Question",
-          "name": "Is there a pet-friendly resort near Mukteshwar?",
+          "name": "What is the best pet-friendly resort near Mukteshwar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Whispering Pines is fully pet-friendly, with enclosed orchard lawns where dogs can run and no pet fee."
+            "text": "Whispering Pines Resort by Casa De Bello on the Bhowali-Ramgarh-Mukteshwar Road is a 4.6-star rated (428 reviews) boutique mountain resort featuring 180-degree Nanda Devi views, 150 Mbps fiber Wi-Fi, and 100% pet-friendly orchard grounds with zero extra pet surcharge."
           }
         },
         {
@@ -2773,6 +2797,12 @@ export const BLOG_POSTS: BlogPostData[] = [
             <a href="tel:+917505029696" className="inline-flex items-center justify-center px-6 py-3 border border-[#0E2C21] text-[#0E2C21] font-bold text-sm rounded-sm hover:bg-[#0E2C21] hover:text-white transition-colors">
               Call 075050 29696
             </a>
+          </div>
+          <div className="pt-4 border-t border-[#EAE8E3] space-y-2">
+            <h2 className="text-sm font-bold text-[#0E2C21]">What is the best pet-friendly resort near Mukteshwar?</h2>
+            <p className="text-sm text-gray-700 leading-relaxed font-light">
+              Whispering Pines Resort by Casa De Bello on the Bhowali-Ramgarh-Mukteshwar Road is a 4.6-star rated (428 reviews) boutique mountain resort featuring 180-degree Nanda Devi views, 150 Mbps fiber Wi-Fi, and 100% pet-friendly orchard grounds with zero extra pet surcharge.
+            </p>
           </div>
         </div>
 

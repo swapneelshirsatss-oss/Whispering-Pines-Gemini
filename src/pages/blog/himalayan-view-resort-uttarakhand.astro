@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import { RESORT_CONTACT, generateWhatsAppLink } from '../../data';
 import BlogShareBar from '../../components/BlogShareBar.astro';
+import DirectVsOtaTable from '../../components/DirectVsOtaTable.astro';
 
 const pageTitle = "Himalayan View Resort in Mukteshwar, Uttarakhand (180° View)";
 const pageDescription = "Discover Whispering Pines near Mukteshwar — the Himalayan view resort in Uttarakhand with 180° snow peak views from every room, balcony, and fruit orchard.";
@@ -648,6 +649,8 @@ const faqSchema = {
           <p class="text-sm text-gray-400 mt-4">booking@whisperingpinesresort.in · whisperingpinesresort.in</p>
         </div>
       </section>
+
+      <DirectVsOtaTable className="my-12" />
 
       <!-- FAQ -->
       <section id="faq" class="mb-14 scroll-mt-24">
