@@ -2676,11 +2676,12 @@ export const BLOG_POSTS: BlogPostData[] = [
   {
     id: 6,
     slug: "best-resort-to-stay-near-mukteshwar",
-    title: "Best Resort Near Mukteshwar: A Whispering Pines Guide (2026)",
-    seoTitle: "Best Resort Near Mukteshwar: Whispering Pines Guide (2026)",
-    seoDescription: "Comparing 8 resorts in and around Mukteshwar on Himalayan views, distance from the temple, family fit and price. Updated 2026 by the Whispering Pines team.",
-    excerpt: "Comparing 8 resorts in and around Mukteshwar on Himalayan views, distance from Mukteshwar Dham, family fit and price. Updated 2026 by the Whispering Pines team.",
+    title: "Best Resorts in Mukteshwar: How to Choose the Right Area and Room (2026)",
+    seoTitle: "Best Resorts in Mukteshwar: Area Guide & Room Picks (2026)",
+    seoDescription: "Choosing a resort in Mukteshwar? Compare Mukteshwar town, Dhanachuli, Sitla and Malla Ramgarh on views, quiet and drive time, then book direct: up to 20% off.",
+    excerpt: "Choosing a resort in Mukteshwar? Compare Mukteshwar town, Dhanachuli, Sitla and Malla Ramgarh on views, quiet and drive time, then book direct: up to 20% off.",
     date: "August 12, 2026",
+    updatedDate: "November 23, 2026",
     readTime: "16 min read",
     imageUrl: "/images/Best-resort-to-stay/Why-Whispering-Pines -is-the-Best-Resort-to-Stay-near-Mukteshwar.avif",
     faqSchema: {
@@ -2689,79 +2690,54 @@ export const BLOG_POSTS: BlogPostData[] = [
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Is Whispering Pines the best resort to stay near Mukteshwar?",
+          "name": "Where should I stay for the best resort experience in Mukteshwar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Whispering Pines Resort by Casa De Bello is rated 4.6★ from 428 verified Google reviews — one of the highest-rated resorts on the Bhowali-Ramgarh-Mukteshwar Road. It combines a private 3-BHK villa sleeping 10, 150 Mbps fiber Wi-Fi, pet-friendly enclosed orchard gardens, senior-friendly ground floor rooms, and 180° Himalayan views in a single 4-star boutique property."
+            "text": "It depends on your trip. Mukteshwar town is closest to the temple, Dhanachuli and Sitla are quieter, and Malla Ramgarh has fruit orchards and wide Himalayan views. Whispering Pines is in Malla Ramgarh, 25 km (about 45 minutes) from Mukteshwar Dham."
           }
         },
         {
           "@type": "Question",
-          "name": "How far is the resort from Mukteshwar?",
+          "name": "Which is the best resort in Mukteshwar, Uttarakhand for families?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Whispering Pines Resort in Malla Ramgarh is 25 km from Mukteshwar Dham temple — approximately a 45-minute scenic drive on the Bhowali-Ramgarh-Mukteshwar Road."
+            "text": "For a large family or a group of friends, the 3-BHK Private Villa at Whispering Pines sleeps up to 10 and has its own lawn. Ground-floor Family Twin Rooms have step-free lawn access for older guests."
           }
         },
         {
           "@type": "Question",
-          "name": "How far is the resort from Kainchi Dham?",
+          "name": "Is Whispering Pines in Mukteshwar or Ramgarh?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Kainchi Dham, the Neem Karoli Baba Ashram, is 22 km from Whispering Pines Resort — approximately 45 minutes by road. Our in-house travel desk arranges cab bookings and coordinates early morning darshan departures directly from the resort."
+            "text": "It's in Malla Ramgarh, on the Bhowali-Ramgarh-Mukteshwar Road, 25 km (about 45 minutes) from Mukteshwar Dham. Its postal address is Mukteshwar, Nainital 263137."
           }
         },
         {
           "@type": "Question",
-          "name": "Is the resort suitable for senior citizens?",
+          "name": "Is Garhmukteshwar the same as Mukteshwar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Whispering Pines is specifically designed for accessibility. Ground floor Family Twin Rooms have step-free direct lawn access and flat garden pathways throughout the property. The Private Villa also offers ground-level entry — making it one of the most senior-friendly resorts near Mukteshwar."
+            "text": "No. Garhmukteshwar is a town on the Ganga in Uttar Pradesh. Mukteshwar is a hill station in Nainital district, Uttarakhand. This guide covers Mukteshwar in Uttarakhand."
           }
         },
         {
           "@type": "Question",
-          "name": "Is the resort pet-friendly?",
+          "name": "Is there a pet-friendly resort near Mukteshwar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Whispering Pines is a fully pet-friendly resort near Mukteshwar with safe enclosed garden lawns, direct pine forest trail access, and no additional pet charges for dogs or cats."
+            "text": "Yes. Whispering Pines is fully pet-friendly, with enclosed orchard lawns where dogs can run and no pet fee."
           }
         },
         {
           "@type": "Question",
-          "name": "Are Satvik meals available for pilgrims?",
+          "name": "How do I get the best price at Whispering Pines?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. The resident kitchen prepares pure vegetarian and Satvik meals — no onion, no garlic — for guests visiting Kainchi Dham and Mukteshwar Dham. Request in advance via WhatsApp at +91-7505029696."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the Wi-Fi speed?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Whispering Pines has enterprise-grade 150 Mbps fiber optic Wi-Fi covering all 25 rooms, the private villa, outdoor terraces, and the orchard lawn — making it the best-connected workcation resort near Mukteshwar."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I book at the best price?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Book directly via WhatsApp at +91-7505029696 to save up to 20% versus OTA platforms. Direct guests also receive priority room upgrades, flexible check-in and checkout, exclusive return-guest rates, and instant 5-minute response."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is this the same as Clarks Exotica Mukteshwar?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Whispering Pines by Casa De Bello is the upgraded successor to Clarks Exotica on the Mukteshwar Road in Ramgarh. Same iconic Bhowali-Ramgarh-Mukteshwar Road address — now with enhanced luxury suite and villa architecture, Casa De Bello management, private villa, and 150 Mbps Wi-Fi."
+            "text": "Book directly on WhatsApp or by phone. You get up to 20% off, our best rate guarantee, and perks you only get by booking with us: priority for Nanda Devi view rooms and flexible check-in and check-out on request."
           }
         }
       ]
     },
-
     content: (
       <div className="space-y-8 text-[#2C3531]">
         {/* Author E-E-A-T Banner */}
@@ -2784,11 +2760,20 @@ export const BLOG_POSTS: BlogPostData[] = [
         </div>
 
         {/* AEO Direct Answer Summary */}
-        <div className="aeo-direct-answer bg-[#FAF9F6] p-6 rounded-sm border-l-4 border-[#8A6F4A] shadow-sm space-y-2">
-          <div className="text-xs font-bold text-[#7A6038] uppercase tracking-widest">Quick Answer: Best Resort to Stay Near Mukteshwar</div>
+        <div className="aeo-direct-answer bg-[#FAF9F6] p-6 rounded-sm border-l-4 border-[#8A6F4A] shadow-sm space-y-4">
+          <div className="text-xs font-bold text-[#7A6038] uppercase tracking-widest">Quick answer: best resorts in Mukteshwar</div>
           <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light">
-            <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (1,780m), rated <strong>4.6★ across 428 verified Google reviews</strong>, is the best 4-star resort to stay near Mukteshwar. Every room and balcony commands an unobstructed <strong>180° view of Nanda Devi and Trishul</strong>, complemented by a standalone 3-BHK Private Alpine Villa sleeping up to 10 guests, working fruit orchards, 150 Mbps fiber Wi-Fi, and <strong>up to 20% direct booking savings</strong> via WhatsApp (+91-7505029696).
+            The best resort in Mukteshwar depends on the area. Mukteshwar town puts you near the temple, Dhanachuli and Sitla are quieter, and Malla Ramgarh has fruit orchards and wide views. Whispering Pines is in Malla Ramgarh at 1,780m, 25 km (45 min) from Mukteshwar Dham, with 180° Nanda Devi views and up to 20% off.
           </p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a href="https://wa.me/917505029696?text=Hi%2C%20I%20saw%20your%20Mukteshwar%20resort%20guide.%20Dates%3A%20___%2C%20guests%3A%20___" target="_blank" rel="noopener noreferrer" className="inline-flex flex-col items-center justify-center px-6 py-3 bg-[#0E2C21] text-white rounded-sm hover:bg-[#1a4535] transition-colors text-center">
+              <span className="text-sm font-bold">WhatsApp us: up to 20% off direct</span>
+              <span className="text-[11px] text-white/80">Best rate guaranteed + direct-only perks</span>
+            </a>
+            <a href="tel:+917505029696" className="inline-flex items-center justify-center px-6 py-3 border border-[#0E2C21] text-[#0E2C21] font-bold text-sm rounded-sm hover:bg-[#0E2C21] hover:text-white transition-colors">
+              Call 075050 29696
+            </a>
+          </div>
         </div>
 
         {/* Intro */}
@@ -2801,7 +2786,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         </p>
 
         <p className="text-lg leading-relaxed text-gray-700 font-light">
-          <strong><a href="/" className="text-[#0E2C21] font-semibold underline">Whispering Pines Resort by Casa De Bello</a></strong> changes this entirely. Rated 4.6★ from 428 verified Google reviews (read our <a href="/reviews/" className="text-[#B0966D] font-semibold underline">verified guest reviews</a>) and widely recognised as the best resort to stay near Mukteshwar for families, couples, remote workers, and peace-seekers, this 4-star boutique mountain resort in Malla Ramgarh delivers exactly what the Mukteshwar corridor should always have offered — and rarely has.
+          <strong><a href="/" className="text-[#0E2C21] font-semibold underline">Whispering Pines Resort by Casa De Bello</a></strong> changes this entirely. Rated 4.6★ from 428 verified Google reviews (read our <a href="/reviews/" className="text-[#B0966D] font-semibold underline">verified guest reviews</a>) and widely recognised as the best resort to stay near Mukteshwar for families, couples, remote workers, and peace-seekers, this 4-star boutique <a href="/" className="text-[#0E2C21] font-semibold underline">resort in Mukteshwar</a>, set in Malla Ramgarh, delivers exactly what the corridor should always have offered — and rarely has.
         </p>
 
         <div className="bg-[#0E2C21] text-white p-6 rounded-sm text-center space-y-3 shadow-md border border-[#B0966D]/30 my-6">
@@ -2816,6 +2801,44 @@ export const BLOG_POSTS: BlogPostData[] = [
             WhatsApp +91-7505029696 — Save Up to 20% Direct
           </a>
         </div>
+
+        {/* Area guide + room picks (no rival resorts named) */}
+        <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">Where to Stay Around Mukteshwar: Pick Your Area</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          Resorts around Mukteshwar sit in a few distinct areas, and the area shapes your trip more than any single amenity. Here&apos;s how they compare.
+        </p>
+        <div className="overflow-x-auto rounded-sm border border-[#EAE8E3]">
+          <table className="w-full text-sm text-gray-700">
+            <thead className="bg-[#0E2C21] text-white"><tr><th className="p-3 text-left font-semibold">Area</th><th className="p-3 text-left font-semibold">Best suited to</th><th className="p-3 text-left font-semibold">What it&apos;s like</th><th className="p-3 text-left font-semibold">Trade-off</th></tr></thead>
+            <tbody className="divide-y divide-[#EAE8E3]">
+                <tr><td className="p-3 align-top">Mukteshwar town</td><td className="p-3 align-top">Short trips focused on the temple and Chauli Ki Jali</td><td className="p-3 align-top">Closest to Mukteshwar Dham, with shops and eateries nearby</td><td className="p-3 align-top">Busier on weekends; more traffic in season</td></tr>
+                <tr><td className="p-3 align-top">Dhanachuli</td><td className="p-3 align-top">Couples who want a spa or a boutique stay</td><td className="p-3 align-top">Quieter, on the road between Bhowali and Mukteshwar</td><td className="p-3 align-top">Fewer places to eat outside your stay</td></tr>
+                <tr><td className="p-3 align-top">Sitla and Satoli</td><td className="p-3 align-top">Slow travellers, small groups who want a farm or estate</td><td className="p-3 align-top">Forest and orchard villages, very quiet</td><td className="p-3 align-top">Narrow roads; you&apos;ll mostly eat where you stay</td></tr>
+                <tr className="bg-[#0E2C21]/5 font-semibold"><td className="p-3 align-top">Malla Ramgarh (Whispering Pines)</td><td className="p-3 align-top">Families, groups of up to 10, pet owners, Kainchi Dham visitors</td><td className="p-3 align-top">Fruit orchards at 1,780m, 180° Nanda Devi and Trishul views, 22 km (about 45 min) from Kainchi Dham</td><td className="p-3 align-top">25 km (45 min) to Mukteshwar Dham, so plan the temple as a day trip</td></tr>
+            </tbody>
+          </table>
+        </div>
+          <div className="bg-[#FAF9F6] p-4 rounded-sm border border-[#EAE8E3] flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-sm text-gray-700 font-light">Malla Ramgarh sounds right? Check your dates with our host team.</p>
+            <a href="https://wa.me/917505029696?text=Hi%2C%20I%20saw%20your%20Mukteshwar%20resort%20guide.%20Dates%3A%20___%2C%20guests%3A%20___" target="_blank" rel="noopener noreferrer" className="shrink-0 px-5 py-2.5 bg-[#0E2C21] text-white font-bold text-xs rounded-sm hover:bg-[#1a4535] transition-colors">Check dates on WhatsApp</a>
+          </div>
+
+        <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">Which Room at Whispering Pines?</h2>
+        <div className="overflow-x-auto rounded-sm border border-[#EAE8E3]">
+          <table className="w-full text-sm text-gray-700">
+            <thead className="bg-[#0E2C21] text-white"><tr><th className="p-3 text-left font-semibold">Room</th><th className="p-3 text-left font-semibold">Best for</th><th className="p-3 text-left font-semibold">Why</th><th className="p-3 text-left font-semibold">Per night incl. breakfast</th></tr></thead>
+            <tbody className="divide-y divide-[#EAE8E3]">
+                <tr><td className="p-3 align-top">3-BHK Private Alpine Villa</td><td className="p-3 align-top">Families and groups of up to 10</td><td className="p-3 align-top">Own lawn, fireplace, the whole villa to yourselves</td><td className="p-3 align-top">₹15,999</td></tr>
+                <tr><td className="p-3 align-top">Deluxe Skylight Suite</td><td className="p-3 align-top">Couples and honeymooners</td><td className="p-3 align-top">Glass skylight ceiling and a private cedar deck</td><td className="p-3 align-top">₹6,499</td></tr>
+                <tr><td className="p-3 align-top">Family Twin Room</td><td className="p-3 align-top">Families with older parents</td><td className="p-3 align-top">Ground floor, step-free access to the lawn</td><td className="p-3 align-top">₹4,999</td></tr>
+                <tr><td className="p-3 align-top">Executive Cedar Suite</td><td className="p-3 align-top">Couples and solo travellers on a budget</td><td className="p-3 align-top">Best value: cedar interiors with valley views</td><td className="p-3 align-top">₹3,999</td></tr>
+            </tbody>
+          </table>
+        </div>
+          <div className="bg-[#FAF9F6] p-4 rounded-sm border border-[#EAE8E3] flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-sm text-gray-700 font-light">Not sure which room? Tell us your dates on WhatsApp: up to 20% off, best rate guaranteed.</p>
+            <a href="https://wa.me/917505029696?text=Hi%2C%20I%20saw%20your%20Mukteshwar%20resort%20guide.%20Dates%3A%20___%2C%20guests%3A%20___" target="_blank" rel="noopener noreferrer" className="shrink-0 px-5 py-2.5 bg-[#0E2C21] text-white font-bold text-xs rounded-sm hover:bg-[#1a4535] transition-colors">Ask on WhatsApp</a>
+          </div>
 
         {/* Section 1 */}
         <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">Why Whispering Pines Is the Best Resort to Stay near Mukteshwar</h2>
@@ -3384,6 +3407,10 @@ export const BLOG_POSTS: BlogPostData[] = [
               </tbody>
             </table>
           </div>
+          <div className="bg-[#FAF9F6] p-4 rounded-sm border border-[#EAE8E3] flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-sm text-gray-700 font-light">Rates change with the season. Check these rates for your dates.</p>
+            <a href="https://wa.me/917505029696?text=Hi%2C%20I%20saw%20your%20Mukteshwar%20resort%20guide.%20Dates%3A%20___%2C%20guests%3A%20___" target="_blank" rel="noopener noreferrer" className="shrink-0 px-5 py-2.5 bg-[#0E2C21] text-white font-bold text-xs rounded-sm hover:bg-[#1a4535] transition-colors">Check these rates for your dates</a>
+          </div>
           <div className="bg-[#FAF9F6] p-4 rounded-sm border border-[#EAE8E3] text-xs text-gray-600 font-light leading-relaxed">
             ⚡ <strong>100% Power & Connectivity Guarantee:</strong> Dual silent power backup generators guarantee 24/7 electricity uptime, hot water, and continuous 150 Mbps fiber Wi-Fi throughout your stay. Planning a year-end trip? Review our verified <a href="/blog/new-year-packages-near-delhi/" className="text-[#0E2C21] font-semibold underline">festive rates and dates</a> with MAP meals and bonfire inclusions.
           </div>
@@ -3471,61 +3498,31 @@ export const BLOG_POSTS: BlogPostData[] = [
         </div>
 
         {/* FAQ Section */}
-        <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">Frequently Asked Questions — Best Resort to Stay near Mukteshwar</h2>
+        <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">Frequently Asked Questions: Best Resorts in Mukteshwar</h2>
         <div className="space-y-4">
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
-            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q1. Is Whispering Pines the best resort to stay near Mukteshwar?</h3>
-            <p className="text-sm text-gray-600 font-light leading-relaxed">
-              Whispering Pines Resort by Casa De Bello is rated 4.6★ from 428 verified Google reviews — the highest rating of any resort on the Bhowali-Ramgarh-Mukteshwar Road. It is the only property in this corridor that combines a private villa sleeping 10, 150 Mbps fiber Wi-Fi, working fruit orchards, pet-friendly enclosed gardens, senior-friendly ground floor rooms, and 180° Himalayan views in a single 4-star boutique property. (<a href="/reviews/" className="text-[#7A6038] font-semibold underline">Read all guest reviews →</a>)
-            </p>
+            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Where should I stay for the best resort experience in Mukteshwar?</h3>
+            <p className="text-sm text-gray-600 font-light leading-relaxed">It depends on your trip. Mukteshwar town is closest to the temple, Dhanachuli and Sitla are quieter, and Malla Ramgarh has fruit orchards and wide Himalayan views. Whispering Pines is in Malla Ramgarh, 25 km (about 45 minutes) from Mukteshwar Dham.</p>
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
-            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q2. How far is the resort from Mukteshwar?</h3>
-            <p className="text-sm text-gray-600 font-light leading-relaxed">
-              Whispering Pines Resort in Malla Ramgarh is 25 km from Mukteshwar Dham temple — approximately a 45-minute scenic drive on the Bhowali-Ramgarh-Mukteshwar Road.
-            </p>
+            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Which is the best resort in Mukteshwar, Uttarakhand for families?</h3>
+            <p className="text-sm text-gray-600 font-light leading-relaxed">For a large family or a group of friends, the 3-BHK Private Villa at Whispering Pines sleeps up to 10 and has its own lawn. Ground-floor Family Twin Rooms have step-free lawn access for older guests.</p>
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
-            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q3. How far is the resort from Kainchi Dham?</h3>
-            <p className="text-sm text-gray-600 font-light leading-relaxed">
-              Kainchi Dham, the Neem Karoli Baba Ashram, is 22 km from Whispering Pines Resort — approximately 45 minutes by road. Our in-house travel desk arranges cab bookings and coordinates early morning darshan departures directly from the resort.
-            </p>
+            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Is Whispering Pines in Mukteshwar or Ramgarh?</h3>
+            <p className="text-sm text-gray-600 font-light leading-relaxed">It&apos;s in Malla Ramgarh, on the Bhowali-Ramgarh-Mukteshwar Road, 25 km (about 45 minutes) from Mukteshwar Dham. Its postal address is Mukteshwar, Nainital 263137.</p>
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
-            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q4. Is the resort suitable for senior citizens?</h3>
-            <p className="text-sm text-gray-600 font-light leading-relaxed">
-              Yes. Whispering Pines is specifically designed for accessibility. Ground floor Family Twin Rooms have step-free direct lawn access and flat garden pathways throughout the property. The Private Villa also offers ground-level entry — making it one of the most senior-friendly resorts near Mukteshwar.
-            </p>
+            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Is Garhmukteshwar the same as Mukteshwar?</h3>
+            <p className="text-sm text-gray-600 font-light leading-relaxed">No. Garhmukteshwar is a town on the Ganga in Uttar Pradesh. Mukteshwar is a hill station in Nainital district, Uttarakhand. This guide covers Mukteshwar in Uttarakhand.</p>
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
-            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q6. Is the resort pet-friendly?</h3>
-            <p className="text-sm text-gray-600 font-light leading-relaxed">
-              Yes. Whispering Pines is a fully pet-friendly resort near Mukteshwar with safe enclosed garden lawns, direct pine forest trail access, and no additional pet charges for dogs or cats.
-            </p>
+            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Is there a pet-friendly resort near Mukteshwar?</h3>
+            <p className="text-sm text-gray-600 font-light leading-relaxed">Yes. Whispering Pines is fully pet-friendly, with enclosed orchard lawns where dogs can run and no pet fee.</p>
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
-            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q7. Are Satvik meals available for pilgrims?</h3>
-            <p className="text-sm text-gray-600 font-light leading-relaxed">
-              Yes. The resident kitchen prepares pure vegetarian and Satvik meals — no onion, no garlic — for guests visiting Kainchi Dham and Mukteshwar Dham. Request in advance via WhatsApp at +91-7505029696.
-            </p>
-          </div>
-          <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
-            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q8. What is the Wi-Fi speed?</h3>
-            <p className="text-sm text-gray-600 font-light leading-relaxed">
-              Whispering Pines has enterprise-grade 150 Mbps fiber optic Wi-Fi covering all 25 rooms, the private villa, outdoor terraces, and the orchard lawn — making it the best-connected workcation resort near Mukteshwar.
-            </p>
-          </div>
-          <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
-            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q9. How do I book at the best price?</h3>
-            <p className="text-sm text-gray-600 font-light leading-relaxed">
-              Book directly via WhatsApp at +91-7505029696 to save up to 20% versus OTA platforms. Direct guests also receive priority room upgrades, flexible check-in and checkout, exclusive return-guest rates, and instant 5-minute response.
-            </p>
-          </div>
-          <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
-            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q10. Is this the same as Clarks Exotica Mukteshwar?</h3>
-            <p className="text-sm text-gray-600 font-light leading-relaxed">
-              Yes. Whispering Pines by Casa De Bello is the upgraded successor to Clarks Exotica on the Mukteshwar Road in Ramgarh. Same iconic Bhowali-Ramgarh-Mukteshwar Road address — now with enhanced luxury suite architecture, Casa De Bello management, private villa, and 150 Mbps Wi-Fi.
-            </p>
+            <h3 className="font-bold text-[#0E2C21] text-base mb-1">How do I get the best price at Whispering Pines?</h3>
+            <p className="text-sm text-gray-600 font-light leading-relaxed">Book directly on WhatsApp or by phone. You get up to 20% off, our best rate guarantee, and perks you only get by booking with us: priority for Nanda Devi view rooms and flexible check-in and check-out on request.</p>
           </div>
         </div>
 
