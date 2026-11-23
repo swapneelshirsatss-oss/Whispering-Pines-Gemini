@@ -210,7 +210,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <a href="/book-now/" className="text-[#0E2C21] font-semibold underline hover:text-[#7A6038]">
             direct booking page
           </a>{" "}
-          (flat 25% below OTA listings). For Christmas, 24 to 30 December 2026, the resort offers ₹6,000 per room per night with breakfast, dinner and a bonfire, plus taxes.
+          (up to 20% below OTA listings). For Christmas, 24 to 30 December 2026, the resort offers ₹6,000 per room per night with breakfast, dinner and a bonfire, plus taxes.
         </p>
         <p>
           <strong>Before you book:</strong> if you want sunrise at Chauli Ki Jali or several temple visits, plan for the drive each way. Confirm the exact bed configuration and meal inclusions when booking.
@@ -455,7 +455,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     title: "Nainital Itinerary: A 3-Day Nainital Trip with Kainchi Dham and Mukteshwar (2026)",
     seoTitle: "Nainital Itinerary: 3-Day Trip with Kainchi Dham (2026 Plan)",
     seoDescription: "Planning a 3-day Nainital trip from Delhi? Complete itinerary with Kainchi Dham and Mukteshwar, drive times, costs, and why Ramgarh is the smartest base.",
-    excerpt: "Most Nainital itineraries trap you in town traffic. This 3-day circuit bases you centrally in Malla Ramgarh—putting Nainital (26 km), Kainchi Dham (22 km), and Mukteshwar (25 km) under an hour each way with 180° Himalayan views and flat 25% direct savings.",
+    excerpt: "Most Nainital itineraries trap you in town traffic. This 3-day circuit bases you centrally in Malla Ramgarh—putting Nainital (26 km), Kainchi Dham (22 km), and Mukteshwar (25 km) under an hour each way with 180° Himalayan views and up to 20% direct savings.",
     date: "November 5, 2026",
     updatedDate: "November 5, 2026",
     readTime: "13 min read",
@@ -1074,7 +1074,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           "name": "Are existing Clarks Exotica reservations and returning guest benefits honored?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. All prior bookings are 100% honored, and returning guests enjoy flat 25% direct booking savings plus priority room upgrades when reserving via WhatsApp at +91-7505029696."
+            "text": "Yes. All prior bookings are 100% honored, and returning guests enjoy up to 20% direct booking savings plus priority room upgrades when reserving via WhatsApp at +91-7505029696."
           }
         },
         {
@@ -1163,7 +1163,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         </div>
 
         <div className="bg-[#0E2C21] text-white p-6 rounded-sm text-center space-y-3">
-          <h3 className="text-xl font-bold">Book Direct on WhatsApp & Save Flat 25%</h3>
+          <h3 className="text-xl font-bold">Book Direct on WhatsApp & Save Up to 20%</h3>
           <p className="text-sm text-gray-300">Skip OTA commissions. Instant front desk response within 5 minutes.</p>
           <a 
             href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20in%20Ramgarh." 
@@ -1457,7 +1457,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     slug: "winter-in-the-himalayas",
     title: "Winter in the Himalayas: What to Expect",
     seoTitle: "Winter in the Himalayas: What to Expect | Whispering Pines",
-    seoDescription: "Plan your winter trip to Mukteshwar & Ramgarh: 180° snow peak views of Nanda Devi, heated suites, wood-fired bonfires & flat 25% direct booking savings.",
+    seoDescription: "Plan your winter trip to Mukteshwar & Ramgarh: 180° snow peak views of Nanda Devi, heated suites, wood-fired bonfires & up to 20% direct booking savings.",
     excerpt: "From crisp snowy mornings to cozy bonfires, here's everything you need to know about visiting during the winter months.",
     date: "January 10, 2026",
     readTime: "6 min read",
@@ -1487,7 +1487,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           "name": "How can I book a winter stay at Whispering Pines at the lowest tariff?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Book directly via WhatsApp at +91-7505029696 or our official booking engine to save a flat 25% compared to OTA portals and receive complimentary arrival fireplace setup in the Private Villa."
+            "text": "Book directly via WhatsApp at +91-7505029696 or our official booking engine to save up to 20% compared to OTA portals and receive complimentary arrival fireplace setup in the Private Villa."
           }
         }
       ]
@@ -1606,7 +1606,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="aeo-direct-answer bg-[#FAF9F6] p-6 rounded-sm border-l-4 border-[#8A6F4A] shadow-sm space-y-2">
           <div className="text-xs font-bold text-[#7A6038] uppercase tracking-widest">Quick Answer: Best Resort to Stay Near Mukteshwar</div>
           <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light">
-            <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (1,780m, 25 km / 45 mins from Mukteshwar Dham), rated <strong>4.6★ across 428 verified Google reviews</strong>, is the best resort near Mukteshwar. All 25 rooms and the standalone 3-BHK Alpine Villa offer unobstructed <strong>180° Himalayan snow peak views</strong> of Nanda Devi, complemented by 150 Mbps fiber Wi-Fi, working fruit orchards, and flat <strong>25% direct booking savings</strong> via WhatsApp (+91-7505029696).
+            <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (1,780m, 25 km / 45 mins from Mukteshwar Dham), rated <strong>4.6★ across 428 verified Google reviews</strong>, is the best resort near Mukteshwar. All 25 rooms and the standalone 3-BHK Alpine Villa offer unobstructed <strong>180° Himalayan snow peak views</strong> of Nanda Devi, complemented by 150 Mbps fiber Wi-Fi, working fruit orchards, and <strong>up to 20% direct booking savings</strong> via WhatsApp (+91-7505029696).
           </p>
         </div>
 
@@ -1732,7 +1732,7 @@ export const BLOG_POSTS: BlogPostData[] = [
               <tr className="bg-gray-50">
                 <td className="p-3 font-semibold">Direct Tariff Value</td>
                 <td className="p-3 text-red-600">Fixed portal prices with OTA markup</td>
-                <td className="p-3 font-semibold text-emerald-700">Flat 25% direct discount via WhatsApp (+91-7505029696)</td>
+                <td className="p-3 font-semibold text-emerald-700">Up to 20% direct discount via WhatsApp (+91-7505029696)</td>
               </tr>
             </tbody>
           </table>
@@ -1812,7 +1812,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-[#7A6038] font-semibold">Direct WhatsApp Bookings (+91-7505029696) receive an instant flat 25% discount on all published tariffs.</p>
+        <p className="text-sm text-[#7A6038] font-semibold">Direct WhatsApp Bookings (+91-7505029696) receive up to 20% off published tariffs, with our best rate guaranteed.</p>
 
         {/* Mandatory Image 3 */}
         <div className="my-6">
@@ -1876,9 +1876,9 @@ export const BLOG_POSTS: BlogPostData[] = [
     id: 5,
     slug: "resort-stay-near-kainchi-dham",
     title: "Resort Near Kainchi Dham: Where to Stay for a Peaceful Darshan (2026)",
-    seoTitle: "Resort Near Kainchi Dham: Quiet Stay 45 Min Away | Save 25%",
-    seoDescription: "Planning Neem Karoli Baba darshan? Stay 45 min from Kainchi Dham in Malla Ramgarh: Himalayan views, senior-friendly rooms, a villa for 10. Save 25% direct.",
-    excerpt: "Where to stay near Kainchi Dham Ashram (Neem Karoli Baba): a senior-friendly 4-star resort hotel 22 km away in Malla Ramgarh, compared with highway and Bhowali stays. Darshan plan, parking for 25+ cars, and a flat 25% off when you book direct.",
+    seoTitle: "Resort Near Kainchi Dham: Quiet Stay 45 Min from Ashram",
+    seoDescription: "Planning Neem Karoli Baba darshan? Stay 45 min from Kainchi Dham in Malla Ramgarh: Himalayan views, senior-friendly rooms, a villa for 10. Up to 20% off direct.",
+    excerpt: "Where to stay near Kainchi Dham Ashram (Neem Karoli Baba): a senior-friendly 4-star resort hotel 22 km away in Malla Ramgarh, compared with highway and Bhowali stays. Darshan plan, parking for 25+ cars, and up to 20% off when you book direct.",
     date: "August 6, 2026",
     updatedDate: "November 23, 2026",
     readTime: "20 min read",
@@ -1892,7 +1892,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           "name": "What is the best resort near Kainchi Dham?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Whispering Pines Resort in Malla Ramgarh is a quiet alpine resort at 1,780 m, 22 km (about 45 minutes) from Kainchi Dham Ashram. Every room faces Nanda Devi and Trishul, with pure-veg and satvik meals, parking for 25+ cars and a 3-BHK villa for 10. Booking direct on WhatsApp saves 25%."
+            "text": "Whispering Pines Resort in Malla Ramgarh is a quiet alpine resort at 1,780 m, 22 km (about 45 minutes) from Kainchi Dham Ashram. Every room faces Nanda Devi and Trishul, with pure-veg and satvik meals, parking for 25+ cars and a 3-BHK villa for 10. Booking direct on WhatsApp saves up to 20%."
           }
         },
         {
@@ -1943,7 +1943,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         {
           "@type": "Question",
           "name": "How do I get the best rate for a hotel near Kainchi Dham?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Book direct. Rates at Whispering Pines change with the season, and direct bookings are always a flat 25% below the OTA rate for the same dates, with a best price guarantee. Send your dates and guest count on WhatsApp at +91-7505029696 for a confirmed quote." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Book direct. Rates at Whispering Pines change with the season, and direct bookings are up to 20% below the OTA rate for the same dates, with a best price guarantee. Send your dates and guest count on WhatsApp at +91-7505029696 for a confirmed quote." }
         },
         {
           "@type": "Question",
@@ -1989,13 +1989,13 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="bg-[#FAF9F6] p-6 rounded-sm border-l-4 border-[#8A6F4A] shadow-sm space-y-3" id="aeo-best-resort-kainchi">
           <h2 className="text-sm font-bold uppercase tracking-wider text-[#7A6038]">What is the best resort near Kainchi Dham?</h2>
           <p className="text-base text-gray-800 leading-relaxed font-normal aeo-direct-answer">
-            <strong>Whispering Pines Resort</strong> in Malla Ramgarh is a quiet alpine resort at 1,780 m, 22 km (about 45 minutes) from Kainchi Dham Ashram. Every room faces Nanda Devi and Trishul, with pure-veg and satvik meals, parking for 25+ cars and a 3-BHK villa for 10. Booking direct on WhatsApp saves 25%.
+            <strong>Whispering Pines Resort</strong> in Malla Ramgarh is a quiet alpine resort at 1,780 m, 22 km (about 45 minutes) from Kainchi Dham Ashram. Every room faces Nanda Devi and Trishul, with pure-veg and satvik meals, parking for 25+ cars and a 3-BHK villa for 10. Booking direct on WhatsApp saves up to 20%.
           </p>
         </div>
 
         {/* Above-the-fold booking CTA */}
         <div className="bg-[#0E2C21] text-white p-6 rounded-sm text-center space-y-3">
-          <p className="text-sm text-gray-200">22 km from Kainchi Dham · Every room faces Nanda Devi · Save 25% booking direct</p>
+          <p className="text-sm text-gray-200">22 km from Kainchi Dham · Every room faces Nanda Devi · Save up to 20% booking direct</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="https://wa.me/917505029696?text=Hi%2C%20we're%20planning%20Kainchi%20Dham%20darshan.%20Dates%3A%20__%20to%20__%2C%20guests%3A%20__.%20Please%20share%20the%20best%20direct%20rate."
@@ -2242,7 +2242,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           Budget rooms beside the Ashram usually cost less per night than a resort. The difference buys a quieter night, a Himalayan view, working fruit orchards, and a base you can stay in for more than one night. At Whispering Pines, room rates change with the season and the room type, ranging from about ₹3,000 to ₹16,000 a night, with the private villa at the top of that range.
         </p>
         <p className="text-gray-700 leading-relaxed font-light">
-          Online travel agencies charge hotels a commission, and that cost sits inside the price you see. Book direct and you get a flat 25% off the OTA rate for the same dates, plus a best price guarantee. For example, a room listed at ₹8,000 a night on an OTA costs ₹6,000 direct, which saves ₹6,000 over a three-night stay.
+          Online travel agencies charge hotels a commission, and that cost sits inside the price you see. Book direct and you get up to 20% off the OTA rate for the same dates, plus a best price guarantee. For example, a room listed at ₹8,000 a night on an OTA costs ₹6,000 direct, which saves ₹6,000 over a three-night stay.
         </p>
         <div className="bg-[#FAF9F6] p-5 rounded-sm border-l-4 border-[#8A6F4A] my-4">
           <p className="text-sm text-gray-700 font-light">
@@ -2620,7 +2620,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q10. How do I get the best rate for a hotel near Kainchi Dham?</h3>
-            <p className="text-sm text-gray-600 font-light">Book direct. Rates at Whispering Pines change with the season, and direct bookings are always a flat 25% below the OTA rate for the same dates, with a best price guarantee. Send your dates and guest count on WhatsApp at +91-7505029696 for a confirmed quote.</p>
+            <p className="text-sm text-gray-600 font-light">Book direct. Rates at Whispering Pines change with the season, and direct bookings are up to 20% below the OTA rate for the same dates, with a best price guarantee. Send your dates and guest count on WhatsApp at +91-7505029696 for a confirmed quote.</p>
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q11. How far is Ramgarh from Kainchi Dham?</h3>
@@ -2672,7 +2672,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             rel="noopener noreferrer" 
             className="inline-block px-8 py-3.5 bg-[#B0966D] text-[#0E2C21] font-bold text-sm rounded-sm hover:bg-yellow-400 transition-all shadow-md transform"
           >
-            WhatsApp +91-7505029696 — Save Flat 25% Direct
+            WhatsApp +91-7505029696 — Save Up to 20% Direct
           </a>
         </div>
       </div>
@@ -2753,7 +2753,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           "name": "How do I book at the best price?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Book directly via WhatsApp at +91-7505029696 to save a flat 25% versus OTA platforms. Direct guests also receive priority room upgrades, flexible check-in and checkout, exclusive return-guest rates, and instant 5-minute response."
+            "text": "Book directly via WhatsApp at +91-7505029696 to save up to 20% versus OTA platforms. Direct guests also receive priority room upgrades, flexible check-in and checkout, exclusive return-guest rates, and instant 5-minute response."
           }
         },
         {
@@ -2792,7 +2792,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="aeo-direct-answer bg-[#FAF9F6] p-6 rounded-sm border-l-4 border-[#8A6F4A] shadow-sm space-y-2">
           <div className="text-xs font-bold text-[#7A6038] uppercase tracking-widest">Quick Answer: Best Resort to Stay Near Mukteshwar</div>
           <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-light">
-            <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (1,780m), rated <strong>4.6★ across 428 verified Google reviews</strong>, is the best 4-star resort to stay near Mukteshwar. Every room and balcony commands an unobstructed <strong>180° view of Nanda Devi and Trishul</strong>, complemented by a standalone 3-BHK Private Alpine Villa sleeping up to 10 guests, working fruit orchards, 150 Mbps fiber Wi-Fi, and flat <strong>25% direct booking savings</strong> via WhatsApp (+91-7505029696).
+            <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (1,780m), rated <strong>4.6★ across 428 verified Google reviews</strong>, is the best 4-star resort to stay near Mukteshwar. Every room and balcony commands an unobstructed <strong>180° view of Nanda Devi and Trishul</strong>, complemented by a standalone 3-BHK Private Alpine Villa sleeping up to 10 guests, working fruit orchards, 150 Mbps fiber Wi-Fi, and <strong>up to 20% direct booking savings</strong> via WhatsApp (+91-7505029696).
           </p>
         </div>
 
@@ -2811,14 +2811,14 @@ export const BLOG_POSTS: BlogPostData[] = [
 
         <div className="bg-[#0E2C21] text-white p-6 rounded-sm text-center space-y-3 shadow-md border border-[#B0966D]/30 my-6">
           <h3 className="text-xl font-bold text-white">Book Direct on WhatsApp: +91-7505029696 — Best Price Guaranteed</h3>
-          <p className="text-sm text-gray-300">Save flat 25% vs OTAs like MakeMyTrip, Booking.com & Goibibo. Instant front desk response within 5 minutes.</p>
+          <p className="text-sm text-gray-300">Save up to 20% vs OTAs like MakeMyTrip, Booking.com & Goibibo. Instant front desk response within 5 minutes.</p>
           <a 
             href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20near%20Mukteshwar." 
             target="_blank" 
             rel="noopener noreferrer" 
             className="inline-block px-8 py-3.5 bg-[#B0966D] text-[#0E2C21] font-bold text-xs rounded-full hover:bg-yellow-400 transition-all uppercase tracking-wider shadow-md"
           >
-            WhatsApp +91-7505029696 — Save Flat 25% Direct
+            WhatsApp +91-7505029696 — Save Up to 20% Direct
           </a>
         </div>
 
@@ -3354,7 +3354,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <section id="tariffs" className="mb-8">
           <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">2026 Direct Room Tariffs & Best Price Guarantee</h2>
           <p className="text-gray-700 leading-relaxed font-light mb-4">
-            Booking directly via WhatsApp (+91-7505029696) guarantees flat 25% savings over MakeMyTrip, Goibibo, and Booking.com with zero hidden platform commissions:
+            Booking directly via WhatsApp (+91-7505029696) guarantees our best rate, with up to 20% savings over MakeMyTrip, Goibibo, and Booking.com with zero hidden platform commissions:
           </p>
           <div className="overflow-x-auto rounded-sm border border-[#EAE8E3] mb-6">
             <table className="w-full text-left text-xs sm:text-sm">
@@ -3458,7 +3458,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         {/* Section 8 */}
         <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">Direct Booking — Best Price Guaranteed</h2>
         <p className="text-gray-700 leading-relaxed font-light">
-          <strong>Pro-Tip for 2026:</strong> Skip the online travel portals. Booking directly via WhatsApp at <a href="https://wa.me/917505029696" target="_blank" rel="noopener noreferrer" className="text-[#7A6038] font-bold underline">+91-7505029696</a> guarantees the best available price — saving a flat 25% compared to MakeMyTrip, Booking.com, and Goibibo. OTA platforms add a 25% commission markup to every listed price. Direct booking eliminates this entirely.
+          <strong>Pro-Tip for 2026:</strong> Skip the online travel portals. Booking directly via WhatsApp at <a href="https://wa.me/917505029696" target="_blank" rel="noopener noreferrer" className="text-[#7A6038] font-bold underline">+91-7505029696</a> guarantees the best available price — saving up to 20% compared to MakeMyTrip, Booking.com, and Goibibo. Direct booking eliminates this entirely.
         </p>
 
         <p className="text-sm font-semibold text-[#0E2C21] mb-2">Direct booking benefits at the best resort near Mukteshwar:</p>
@@ -3533,7 +3533,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q9. How do I book at the best price?</h3>
             <p className="text-sm text-gray-600 font-light leading-relaxed">
-              Book directly via WhatsApp at +91-7505029696 to save a flat 25% versus OTA platforms. Direct guests also receive priority room upgrades, flexible check-in and checkout, exclusive return-guest rates, and instant 5-minute response.
+              Book directly via WhatsApp at +91-7505029696 to save up to 20% versus OTA platforms. Direct guests also receive priority room upgrades, flexible check-in and checkout, exclusive return-guest rates, and instant 5-minute response.
             </p>
           </div>
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
@@ -3601,7 +3601,7 @@ export const BLOG_POSTS: BlogPostData[] = [
             rel="noopener noreferrer" 
             className="inline-block px-8 py-3.5 bg-[#B0966D] text-[#0E2C21] font-bold text-sm rounded-sm hover:bg-yellow-400 transition-all shadow-md transform"
           >
-            WhatsApp +91-7505029696 — Save Flat 25% Best Price Guaranteed
+            WhatsApp +91-7505029696 — Up to 20% Off · Best Rate Guaranteed
           </a>
         </div>
       </div>

@@ -242,7 +242,7 @@ export default function Navbar({ children, overlay = false }: NavbarProps) {
             className="flex items-center justify-between p-3 rounded-sm bg-[#B0966D]/15 border border-[#8A6F4A]/40 text-[#C4A77D] font-sans text-xs tracking-wider uppercase font-bold mb-3 hover:bg-[#B0966D] hover:text-[#0E2C21] transition-colors"
           >
             <span>Direct Booking VIP Privileges</span>
-            <span className="text-[10px] font-normal lowercase bg-[#B0966D]/20 px-2 py-0.5 rounded-sm">save 25%</span>
+            <span className="text-[10px] font-normal lowercase bg-[#B0966D]/20 px-2 py-0.5 rounded-sm">save up to 20%</span>
           </a>
           {mobileNavLinks.map((link) => {
             if (link.dropdown) {

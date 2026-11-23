@@ -37,7 +37,7 @@ const roomImg: Record<string, ImageMetadata> = {
 const rooms = ROOMS_INVENTORY.map((r) => ({ ...r, short: r.name.split(' — ')[0], img: roomImg[r.id] }));
 
 const perks = [
-  { title: '25% less than OTAs', text: 'No MakeMyTrip or Booking.com commission added to your rate.' },
+  { title: 'Up to 20% off direct', text: 'No MakeMyTrip or Booking.com commission added to your rate.' },
   { title: 'Best view, first', text: 'Priority allocation of 180° Nanda Devi and Trishul balcony rooms.' },
   { title: 'Pets stay free', text: 'Enclosed orchard lawns and no pet charge.' },
   { title: 'Talk to the host', text: 'Arrival times and day trips arranged directly with Gaurav Pandey, Managing Director & Founder.' },
@@ -88,7 +88,7 @@ const rating = RESORT_CONTACT.rating;
     <!-- generate_lead keeps homepage WhatsApp leads counting as Google Ads conversions, as the old room-list and booking-form buttons did (handled by /js/click-tracking.js) -->
     <a class="lx-btn lx-solid" href={BOOKING_ENGINE_URL} target="_blank" rel="noopener noreferrer"
       data-track-fn="trackAdsConversion" data-track-args='["generate_lead","booking","home_hero_whatsapp",{"conversion_type":"whatsapp"}]'>Check availability</a>
-    <p class="lx-hero-proof"><span aria-hidden="true">★</span> {rating.value} on Google · {rating.reviewCount} reviews · Save 25% booking direct</p>
+    <p class="lx-hero-proof"><span aria-hidden="true">★</span> {rating.value} on Google · {rating.reviewCount} reviews · Save up to 20% booking direct</p>
   </div>
 </section>
 
@@ -98,7 +98,7 @@ const rating = RESORT_CONTACT.rating;
     <p id="speakable-about-summary" class="lx-lead">
       Whispering Pines is an alpine resort at 1,780 m in Malla Ramgarh, Uttarakhand, a 25 km (45 minute) drive from Mukteshwar Dham.
       Every room faces 180° Nanda Devi and Trishul snow peaks, with fruit orchards and a 2,200 sq ft lawn, plus a 3-BHK
-      villa for up to 10. Booking direct on WhatsApp saves 25%.
+      villa for up to 10. Booking direct on WhatsApp saves up to 20%.
     </p>
     <a class="lx-link" href="/about-whispering-pines-resort-ramgarh/">Our story, formerly Clarks Exotica →</a>
   </div>

@@ -46,9 +46,9 @@ export const RESORT_CONTACT = {
     source: "Google Reviews",
     ratingUrl: "https://maps.google.com/?cid=8386667112972057918"
   },
-  otaDisparityCallout: "Save Flat 25% Direct vs OTAs (Zero Middleman Commission)",
+  otaDisparityCallout: "Up to 20% Off Direct · Best Rate Guaranteed + Direct-Only Perks",
   directPerks: [
-    "Best Rate Guarantee (Save Flat 25% vs MakeMyTrip/Booking.com)",
+    "Best Rate Guaranteed + Direct-Only Perks (Up to 20% Off)",
     "Guaranteed 180° Himalayan Snow Peak View Allocation",
     "Complimentary Evening Bonfire Wood Setup",
     "Flexible Check-In / Check-Out Timings Upon Availability",
@@ -144,8 +144,8 @@ export const ROOMS_INVENTORY: RoomOption[] = [
     capacity: "Up to 9-10 Adults",
     bedType: "3 Grand King Bedrooms + Premium Loft",
     pricePerNight: 15999,
-    otaPricePerNight: 21332,
-    directSavings: "Save ₹5,333 (25%) Direct",
+    otaPricePerNight: 19999,
+    directSavings: "Up to 20% Off Direct",
     maxOccupancy: 10,
     minOccupancy: 1,
     bedrooms: 3,
@@ -175,8 +175,8 @@ export const ROOMS_INVENTORY: RoomOption[] = [
     capacity: "2-3 Adults",
     bedType: "1 Grand Bed + Cozy Daybed",
     pricePerNight: 6499,
-    otaPricePerNight: 8665,
-    directSavings: "Save ₹2,166 (25%) Direct",
+    otaPricePerNight: 8124,
+    directSavings: "Up to 20% Off Direct",
     maxOccupancy: 3,
     minOccupancy: 1,
     bedrooms: 1,
@@ -188,7 +188,7 @@ export const ROOMS_INVENTORY: RoomOption[] = [
     directPerks: [
       "Top-floor cathedral ceiling with glass skylights for star-gazing",
       "Private cedar pine deck overlooking snow peaks",
-      "Save Flat 25% Direct vs MakeMyTrip & OTAs",
+      "Save Up to 20% Direct vs MakeMyTrip & OTAs",
       "Complimentary welcome mountain high tea"
     ],
     amenities: [
@@ -205,8 +205,8 @@ export const ROOMS_INVENTORY: RoomOption[] = [
     capacity: "2 Adults",
     bedType: "1 Premium Double Bed",
     pricePerNight: 4999,
-    otaPricePerNight: 6665,
-    directSavings: "Save ₹1,666 (25%) Direct",
+    otaPricePerNight: 6249,
+    directSavings: "Up to 20% Off Direct",
     maxOccupancy: 3,
     minOccupancy: 1,
     bedrooms: 1,
@@ -219,7 +219,7 @@ export const ROOMS_INVENTORY: RoomOption[] = [
       "Direct ground-floor lawn & private fruit orchard access",
       "Exposed old-stone brick archways & geo-heater warmth",
       "Safe enclosed open lawn space for children & dogs",
-      "Save Flat 25% Direct vs OTA platforms"
+      "Save Up to 20% Direct vs OTA platforms"
     ],
     amenities: [
       "180° Himalayan Ridge Views & Direct Orchard Lawn Access",
@@ -235,8 +235,8 @@ export const ROOMS_INVENTORY: RoomOption[] = [
     capacity: "2 Adults",
     bedType: "1 Premium Double Bed",
     pricePerNight: 3999,
-    otaPricePerNight: 5332,
-    directSavings: "Save ₹1,333 (25%) Direct",
+    otaPricePerNight: 4999,
+    directSavings: "Up to 20% Off Direct",
     maxOccupancy: 2,
     minOccupancy: 1,
     bedrooms: 1,
@@ -249,7 +249,7 @@ export const ROOMS_INVENTORY: RoomOption[] = [
       "Cedar wood pine finish infused with forest aromatics",
       "High-capacity heaters for cozy Himalayan winters",
       "Most economical direct mountain escape rate",
-      "Save Flat 25% Direct vs Booking.com"
+      "Save Up to 20% Direct vs Booking.com"
     ],
     amenities: [
       "180° Himalayan Snow Peak Views from Private Windows",
