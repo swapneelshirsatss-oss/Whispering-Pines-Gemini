@@ -38,6 +38,7 @@ function indexNowIntegration() {
     '/corporate-retreats-mukteshwar/',
     '/stay-near-mukteshwar-kainchi-dham/',
     '/blog/stay-near-mukteshwar-kainchi-dham/',
+    '/blog/hotel-near-kainchi-dham/',
     '/himalayan-view-resort-uttarakhand/',
     '/resort-near-mukteshwar/',
     '/blog/resort-near-mukteshwar/',
@@ -120,6 +121,7 @@ export default defineConfig({
   redirects: {
     '/stay-near-mukteshwar-kainchi-dham': '/blog/best-resort-to-stay-near-mukteshwar/',
     '/blog/stay-near-mukteshwar-kainchi-dham': '/blog/best-resort-to-stay-near-mukteshwar/',
+    '/blog/hotel-near-kainchi-dham': '/blog/resort-stay-near-kainchi-dham/',
     '/himalayan-view-resort-uttarakhand': '/blog/himalayan-view-resort-uttarakhand/',
     '/resort-near-mukteshwar': '/blog/best-resort-to-stay-near-mukteshwar/',
     '/blog/resort-near-mukteshwar': '/blog/best-resort-to-stay-near-mukteshwar/',
