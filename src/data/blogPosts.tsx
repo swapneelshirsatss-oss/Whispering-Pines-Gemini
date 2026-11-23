@@ -477,20 +477,6 @@ export const BLOG_POSTS: BlogPostData[] = [
     imageAlt: "Winter Himalayan snow peaks view from balcony of Whispering Pines Resort near Nainital in December"
   },
   {
-    id: 14,
-    slug: "hotel-near-kainchi-dham",
-    customUrl: "/blog/hotel-near-kainchi-dham/",
-    title: "Hotel Near Kainchi Dham: Parking, Shuttle & Family Darshan Plan (2026)",
-    seoTitle: "Hotel Near Kainchi Dham | Family Stay, Parking & Darshan Plan",
-    seoDescription: "Looking for a hotel near Kainchi Dham? Stay 45 mins away in Ramgarh with 180° Himalayan views, parking & satvik meals. Kainchi shuttle & 2026 darshan guide.",
-    excerpt: "Kainchi Dham parking, shuttle routes, and 2026 darshan rules for families visiting Neem Karoli Baba Ashram. Compare staying bases, avoid weekend traffic jams, and discover Whispering Pines Resort in Malla Ramgarh (22 km) with flat 25% direct savings.",
-    date: "November 4, 2026",
-    updatedDate: "November 4, 2026",
-    readTime: "11 min read",
-    imageUrl: "/images/blog-resort-near-kainchi-dham-image/resorts-near-kainchi-dham-ashram-neem-karoli-baba-Whispering-Pines-2026.avif",
-    imageAlt: "Whispering Pines 4-Star Resort Hotel near Kainchi Dham Ashram in Malla Ramgarh with 180° Himalayan snow peak views"
-  },
-  {
     id: 13,
     slug: "destination-wedding-uttarakhand-cost",
     title: "Destination Wedding in Uttarakhand Cost: What 50 to 100 Guests Really Spend in 2026-27",
@@ -1889,13 +1875,13 @@ export const BLOG_POSTS: BlogPostData[] = [
   {
     id: 5,
     slug: "resort-stay-near-kainchi-dham",
-    title: "Best Hotel & Resort Near Kainchi Dham: Where to Stay (2026 Guide)",
-    seoTitle: "Resort Near Kainchi Dham | Save 25% Direct — Whispering Pines",
-    seoDescription: "Looking for a peaceful resort near Kainchi Dham? Stay 45 mins from Ashram at Whispering Pines Ramgarh with 180° Himalayan views & parking. Save 25% direct!",
+    title: "Resort Near Kainchi Dham: Where to Stay for a Peaceful Darshan (2026)",
+    seoTitle: "Resort Near Kainchi Dham: Quiet Stay 45 Min Away | Save 25%",
+    seoDescription: "Planning Neem Karoli Baba darshan? Stay 45 min from Kainchi Dham in Malla Ramgarh: Himalayan views, senior-friendly rooms, a villa for 10. Save 25% direct.",
     excerpt: "Where to stay near Kainchi Dham Ashram (Neem Karoli Baba): a senior-friendly 4-star resort hotel 22 km away in Malla Ramgarh, compared with highway and Bhowali stays. Darshan plan, parking for 25+ cars, and a flat 25% off when you book direct.",
     date: "August 6, 2026",
-    updatedDate: "October 26, 2026",
-    readTime: "18 min read",
+    updatedDate: "November 23, 2026",
+    readTime: "20 min read",
     imageUrl: "/images/blog-resort-near-kainchi-dham-image/resorts-near-kainchi-dham-ashram-neem-karoli-baba-2026.avif",
     faqSchema: {
       "@context": "https://schema.org",
@@ -1906,7 +1892,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           "name": "What is the best resort near Kainchi Dham?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The best resort near Kainchi Dham is Whispering Pines Resort by Casa De Bello in Malla Ramgarh (22 km, 45-minute drive). Rated 4.6★ across 428 reviews, it features 180° Himalayan views, senior-friendly ground-floor suites, pure Satvik dining, secure parking, and flat 25% direct booking savings."
+            "text": "Whispering Pines Resort in Malla Ramgarh is a quiet alpine resort at 1,780 m, 22 km (about 45 minutes) from Kainchi Dham Ashram. Every room faces Nanda Devi and Trishul, with pure-veg and satvik meals, parking for 25+ cars and a 3-BHK villa for 10. Booking direct on WhatsApp saves 25%."
           }
         },
         {
@@ -1958,6 +1944,16 @@ export const BLOG_POSTS: BlogPostData[] = [
           "@type": "Question",
           "name": "How do I get the best rate for a hotel near Kainchi Dham?",
           "acceptedAnswer": { "@type": "Answer", "text": "Book direct. Rates at Whispering Pines change with the season, and direct bookings are always a flat 25% below the OTA rate for the same dates, with a best price guarantee. Send your dates and guest count on WhatsApp at +91-7505029696 for a confirmed quote." }
+        },
+        {
+          "@type": "Question",
+          "name": "How far is Ramgarh from Kainchi Dham?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Malla Ramgarh is about 22 km from Kainchi Dham Ashram, roughly a 45-minute drive via Bhowali. On weekends, police often stop private cars at Bhowali and run shuttles to the Ashram, so leave by 7:30 AM and allow extra time." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there resorts right at Kainchi Dham?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Only a few small guesthouses and lodges sit near the Ashram, and the stretch gets crowded on weekends. Most families stay in Bhowali, Bhimtal or Ramgarh and drive in for darshan. Ramgarh is the quietest of these, with fruit orchards and open Himalayan views." }
         }
       ]
     },
@@ -1993,8 +1989,29 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="bg-[#FAF9F6] p-6 rounded-sm border-l-4 border-[#8A6F4A] shadow-sm space-y-3" id="aeo-best-resort-kainchi">
           <h2 className="text-sm font-bold uppercase tracking-wider text-[#7A6038]">What is the best resort near Kainchi Dham?</h2>
           <p className="text-base text-gray-800 leading-relaxed font-normal aeo-direct-answer">
-            The best resort near Kainchi Dham is <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (22 km, 45-minute drive). Rated 4.6★ across 428 reviews, it features 180° Himalayan views, senior-friendly ground-floor suites, pure Satvik dining, secure parking, and flat 25% direct booking savings.
+            <strong>Whispering Pines Resort</strong> in Malla Ramgarh is a quiet alpine resort at 1,780 m, 22 km (about 45 minutes) from Kainchi Dham Ashram. Every room faces Nanda Devi and Trishul, with pure-veg and satvik meals, parking for 25+ cars and a 3-BHK villa for 10. Booking direct on WhatsApp saves 25%.
           </p>
+        </div>
+
+        {/* Above-the-fold booking CTA */}
+        <div className="bg-[#0E2C21] text-white p-6 rounded-sm text-center space-y-3">
+          <p className="text-sm text-gray-200">22 km from Kainchi Dham · Every room faces Nanda Devi · Save 25% booking direct</p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="https://wa.me/917505029696?text=Hi%2C%20we're%20planning%20Kainchi%20Dham%20darshan.%20Dates%3A%20__%20to%20__%2C%20guests%3A%20__.%20Please%20share%20the%20best%20direct%20rate."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-[#25D366] text-white font-bold text-sm rounded-sm hover:bg-[#1EBE5D] transition-all"
+            >
+              WhatsApp for Kainchi Stay Dates
+            </a>
+            <a
+              href="tel:+917505029696"
+              className="inline-block px-6 py-3 bg-[#B0966D] text-[#0E2C21] font-bold text-sm rounded-sm hover:bg-[#C4AC85] transition-all"
+            >
+              Call 075050 29696
+            </a>
+          </div>
         </div>
 
         {/* GEO Entity & Location Matrix */}
@@ -2022,20 +2039,6 @@ export const BLOG_POSTS: BlogPostData[] = [
             className="w-full h-80 sm:h-96 object-cover rounded-sm border border-[#EAE8E3]" 
           />
           <p className="text-sm text-center text-gray-500 mt-2">Whispering Pines Resort Hotel — Scenic 45-minute drive to Kainchi Dham Ashram in Malla Ramgarh.</p>
-        </div>
-
-        {/* WhatsApp Banner */}
-        <div className="bg-[#0E2C21] text-white p-6 rounded-sm text-center space-y-3">
-          <h3 className="text-xl font-bold">Book Direct on WhatsApp & Save Flat 25% vs OTAs</h3>
-          <p className="text-sm text-gray-300">Skip third-party commissions. Instant reservation response from our front desk team.</p>
-          <a 
-            href="https://wa.me/917505029696?text=Hi!%20I'm%20interested%20in%20booking%20Whispering%20Pines%20Resort%20near%20Kainchi%20Dham." 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="inline-block px-6 py-3 bg-[#25D366] text-white font-bold text-sm rounded-sm hover:bg-[#1EBE5D] transition-all"
-          >
-            WhatsApp +91-7505029696 — Best Price Guaranteed
-          </a>
         </div>
 
         {/* Where to Stay (question-led section) */}
@@ -2486,6 +2489,58 @@ export const BLOG_POSTS: BlogPostData[] = [
           </table>
         </div>
 
+        {/* Parking & shuttle rules (merged from /blog/hotel-near-kainchi-dham/) */}
+        <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">Kainchi Dham Parking and Shuttle Rules in 2026</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          <strong>On Saturdays, Sundays and major festivals, police stop private cars at outlying lots, mainly Bhowali Sanatorium and Bhimtal Vikas Bhawan, and devotees take official shuttles to the shrine. Taxis and two-wheelers are also barred from the inner approach on weekends. On weekdays, private cars can usually drive to the Ashram, though parking near the main bridge is scarce after 8:30 AM.</strong>
+        </p>
+        <p className="text-gray-700 leading-relaxed font-light">
+          The rules are reviewed every week. Since October 2026, officers at the SDM, CO and ARTO level meet before each weekend to set parking, shuttles and one-way diversions based on the expected crowd.
+        </p>
+        <div className="overflow-x-auto rounded-sm border border-[#EAE8E3] my-6">
+          <table className="w-full text-left text-xs sm:text-sm">
+            <thead className="bg-[#0E2C21] text-white">
+              <tr>
+                <th className="p-3">Day type</th>
+                <th className="p-3">Can private cars reach the Ashram?</th>
+                <th className="p-3">Where you park</th>
+                <th className="p-3">Shuttle</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100 text-gray-700">
+              <tr>
+                <td className="p-3 font-bold text-[#0E2C21]">Weekdays (Mon–Fri)</td>
+                <td className="p-3">Usually yes, subject to space</td>
+                <td className="p-3">Roadside bays near Kainchi; overflow to Bhowali</td>
+                <td className="p-3">8 AM to 2 PM when needed (~₹20–₹30 per head)</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-bold text-[#0E2C21]">Saturdays, Sundays &amp; long weekends</td>
+                <td className="p-3">No private cars or cabs past the checkpoints</td>
+                <td className="p-3">Bhowali Sanatorium (from Ramgarh or Nainital) or Bhimtal Vikas Bhawan</td>
+                <td className="p-3">7 AM to 8 PM (~₹20–₹30 one way)</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-bold text-[#0E2C21]">Foundation Day (15 June)</td>
+                <td className="p-3">No private vehicles (typically 13 to 16 June)</td>
+                <td className="p-3">Lots at Haldwani, Kathgodam, Bhimtal &amp; Bhowali</td>
+                <td className="p-3">Continuous shuttles</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div className="bg-[#FAF9F6] p-5 rounded-sm border-l-4 border-[#B0966D] my-4">
+          <h3 className="text-sm font-bold text-[#0E2C21] mb-1">What this means if you stay in Malla Ramgarh</h3>
+          <p className="text-sm text-gray-700 font-light leading-relaxed">
+            You drive down to Bhowali junction. On a weekday at 7 AM the Bhowali–Kainchi road is usually clear and you reach the shrine in about 45 minutes. On a Saturday or Sunday, park at Bhowali Sanatorium and take the 10-minute shuttle down. Our front desk checks the evening before which lot is open the next morning.
+          </p>
+        </div>
+
+        <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">Do You Need Online Registration for Kainchi Dham Darshan?</h2>
+        <p className="text-gray-700 leading-relaxed font-light">
+          <strong>No. As of November 2026 there is no online registration, token or pass for Kainchi Dham darshan, and entry is free.</strong> After weekend crowds above 50,000 visitors, district officials proposed a registration system modelled on the Char Dham Yatra, but nothing has been notified yet. We will update this guide if that changes.
+        </p>
+
         {/* Darshan plan (step-by-step) */}
         <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">How to Plan Your Kainchi Dham Darshan From Ramgarh</h2>
         <p className="text-gray-700 leading-relaxed font-light">
@@ -2566,6 +2621,14 @@ export const BLOG_POSTS: BlogPostData[] = [
           <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
             <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q10. How do I get the best rate for a hotel near Kainchi Dham?</h3>
             <p className="text-sm text-gray-600 font-light">Book direct. Rates at Whispering Pines change with the season, and direct bookings are always a flat 25% below the OTA rate for the same dates, with a best price guarantee. Send your dates and guest count on WhatsApp at +91-7505029696 for a confirmed quote.</p>
+          </div>
+          <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q11. How far is Ramgarh from Kainchi Dham?</h3>
+            <p className="text-sm text-gray-600 font-light">Malla Ramgarh is about 22 km from Kainchi Dham Ashram, roughly a 45-minute drive via Bhowali. On weekends, police often stop private cars at Bhowali and run shuttles to the Ashram, so leave by 7:30 AM and allow extra time.</p>
+          </div>
+          <div className="bg-white p-5 rounded-sm border border-[#EAE8E3]">
+            <h3 className="font-bold text-[#0E2C21] text-base mb-1">Q12. Are there resorts right at Kainchi Dham?</h3>
+            <p className="text-sm text-gray-600 font-light">Only a few small guesthouses and lodges sit near the Ashram, and the stretch gets crowded on weekends. Most families stay in Bhowali, Bhimtal or Ramgarh and drive in for darshan. Ramgarh is the quietest of these, with fruit orchards and open Himalayan views.</p>
           </div>
         </div>
 
@@ -3187,7 +3250,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <section id="kainchi-dham-connectivity" className="mb-8">
           <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">Visiting Kainchi Dham: The Quiet 22-Kilometre Corridor</h2>
           <p className="text-gray-700 leading-relaxed font-light">
-            One of the primary reasons pilgrims and spiritual travellers choose Whispering Pines is its comfortable connectivity to <strong>Kainchi Dham Ashram</strong>, the sacred seat of <strong>Neem Karoli Baba</strong>. Located approximately <strong>22 km away</strong> via the scenic Bhowali-Ramgarh road (~45 minutes drive), staying in Ramgarh allows you to depart early before highway congestion builds, attend morning aarti in calm contemplation, and return to peaceful mountain lawns away from crowded tour buses. Explore our complete <a href="/blog/hotel-near-kainchi-dham/" className="text-[#0E2C21] font-semibold underline">Kainchi Dham Hotel Guide</a>.
+            One of the primary reasons pilgrims and spiritual travellers choose Whispering Pines is its comfortable connectivity to <strong>Kainchi Dham Ashram</strong>, the sacred seat of <strong>Neem Karoli Baba</strong>. Located approximately <strong>22 km away</strong> via the scenic Bhowali-Ramgarh road (~45 minutes drive), staying in Ramgarh allows you to depart early before highway congestion builds, attend morning aarti in calm contemplation, and return to peaceful mountain lawns away from crowded tour buses. Explore our complete <a href="/blog/resort-stay-near-kainchi-dham/" className="text-[#0E2C21] font-semibold underline">guide to where to stay near Kainchi Dham</a>.
           </p>
 
           {/* Gaurav's Host Note 1 */}

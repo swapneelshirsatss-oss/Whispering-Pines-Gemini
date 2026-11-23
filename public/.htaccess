@@ -20,6 +20,7 @@
   # 3. Redirect legacy URLs to canonical routes (GSC 404 & Crawl Fixes)
   RewriteRule ^stay-near-mukteshwar-kainchi-dham/?$ https://whisperingpinesresort.in/blog/best-resort-to-stay-near-mukteshwar/ [R=301,L]
   RewriteRule ^blog/stay-near-mukteshwar-kainchi-dham/?$ https://whisperingpinesresort.in/blog/best-resort-to-stay-near-mukteshwar/ [R=301,L]
+  RewriteRule ^blog/hotel-near-kainchi-dham/?$ https://whisperingpinesresort.in/blog/resort-stay-near-kainchi-dham/ [R=301,L]
   RewriteRule ^himalayan-view-resort-uttarakhand/?$ https://whisperingpinesresort.in/blog/himalayan-view-resort-uttarakhand/ [R=301,L]
   RewriteRule ^resort-near-mukteshwar/?$ https://whisperingpinesresort.in/blog/best-resort-to-stay-near-mukteshwar/ [R=301,L]
   RewriteRule ^blog/resort-near-mukteshwar/?$ https://whisperingpinesresort.in/blog/best-resort-to-stay-near-mukteshwar/ [R=301,L]
