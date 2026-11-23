@@ -1775,8 +1775,7 @@ export const BLOG_POSTS: BlogPostData[] = [
               <tr className="bg-[#0E2C21] text-white">
                 <th className="p-3 border border-[#0E2C21]">Room Category</th>
                 <th className="p-3 border border-[#0E2C21]">Inventory</th>
-                <th className="p-3 border border-[#0E2C21]">Room Only (EP)</th>
-                <th className="p-3 border border-[#0E2C21]">With Breakfast (CP)</th>
+                <th className="p-3 border border-[#0E2C21]">Per Night incl. Breakfast</th>
                 <th className="p-3 border border-[#0E2C21]">Extra Guest (3rd Pax)</th>
               </tr>
             </thead>
@@ -1784,29 +1783,25 @@ export const BLOG_POSTS: BlogPostData[] = [
               <tr className="bg-white">
                 <td className="p-3 font-semibold"><a href="/suites-cottages-ramgarh-resort/" className="text-[#0E2C21] underline">Executive Cedar Suite (180° Himalayan View)</a></td>
                 <td className="p-3">8 Rooms (Part of 25 Premium Rooms)</td>
-                <td className="p-3">₹3,000 / night</td>
-                <td className="p-3">₹3,500 / night</td>
+                <td className="p-3">₹3,999 / night</td>
                 <td className="p-3">₹1,000 / night</td>
               </tr>
               <tr className="bg-gray-50">
                 <td className="p-3 font-semibold"><a href="/suites-cottages-ramgarh-resort/" className="text-[#0E2C21] underline">Deluxe Skylight Suite (180° Himalayan View)</a></td>
                 <td className="p-3">13 Rooms (Part of 25 Premium Rooms)</td>
-                <td className="p-3">₹4,500 / night</td>
-                <td className="p-3">₹6,900 / night</td>
+                <td className="p-3">₹6,499 / night</td>
                 <td className="p-3">₹1,000 / night</td>
               </tr>
               <tr className="bg-white">
                 <td className="p-3 font-semibold"><a href="/suites-cottages-ramgarh-resort/" className="text-[#0E2C21] underline">Family Twin Room (Step-Free Ground Floor)</a></td>
                 <td className="p-3">4 Rooms (Part of 25 Premium Rooms)</td>
-                <td className="p-3">₹5,000 / night</td>
-                <td className="p-3">₹6,500 / night</td>
+                <td className="p-3">₹4,999 / night</td>
                 <td className="p-3">₹1,000 / night</td>
               </tr>
               <tr className="bg-gray-50">
                 <td className="p-3 font-semibold text-[#0E2C21]"><a href="/private-villas-near-nainital/" className="text-[#0E2C21] underline">3-BHK Private Alpine Villa (Standalone Estate)</a></td>
                 <td className="p-3 font-semibold">1 Standalone Villa (Sleeps up to 10)</td>
-                <td className="p-3 font-semibold text-[#7A6038]">₹14,500 / night</td>
-                <td className="p-3 font-semibold text-[#7A6038]">₹16,500 / night</td>
+                <td className="p-3 font-semibold text-[#7A6038]">₹15,999 / night</td>
                 <td className="p-3 font-semibold">₹1,200 / night</td>
               </tr>
             </tbody>
@@ -2239,7 +2234,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         {/* Price section (question-led) */}
         <h2 className="text-2xl font-bold text-[#0E2C21] mt-8 mb-4">Nearest Hotel Price Near Kainchi Dham</h2>
         <p className="text-gray-700 leading-relaxed font-light">
-          Budget rooms beside the Ashram usually cost less per night than a resort. The difference buys a quieter night, a Himalayan view, working fruit orchards, and a base you can stay in for more than one night. At Whispering Pines, room rates change with the season and the room type, ranging from about ₹3,000 to ₹16,000 a night, with the private villa at the top of that range.
+          Budget rooms beside the Ashram usually cost less per night than a resort. The difference buys a quieter night, a Himalayan view, working fruit orchards, and a base you can stay in for more than one night. At Whispering Pines, room rates change with the season and the room type, ranging from about ₹4,000 to ₹16,000 a night, with the private villa at the top of that range.
         </p>
         <p className="text-gray-700 leading-relaxed font-light">
           Online travel agencies charge hotels a commission, and that cost sits inside the price you see. Book direct and you get up to 20% off the OTA rate for the same dates, plus a best price guarantee. For example, a room listed at ₹8,000 a night on an OTA costs ₹6,000 direct, which saves ₹6,000 over a three-night stay.
@@ -2383,7 +2378,7 @@ export const BLOG_POSTS: BlogPostData[] = [
                 <td className="p-3"><a href="/suites-cottages-ramgarh-resort/" className="text-[#0E2C21] font-semibold underline">View Suite</a></td>
               </tr>
               <tr className="bg-yellow-50/50">
-                <td className="p-3 font-semibold">Group Cottage Room</td>
+                <td className="p-3 font-semibold">Executive Cedar Suite</td>
                 <td className="p-3">2 adults</td>
                 <td className="p-3">Cedar wood pine interiors, valley views</td>
                 <td className="p-3">Couples, solo travelers, workations</td>
@@ -3099,7 +3094,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           <li><strong>Best suited for:</strong> Families with children, senior guests, pet owners</li>
         </ul>
 
-        <h3 className="text-xl font-bold text-[#0E2C21] mt-6 mb-3">Group Cottage Room — Best Value near Mukteshwar</h3>
+        <h3 className="text-xl font-bold text-[#0E2C21] mt-6 mb-3">Executive Cedar Suite — Best Value near Mukteshwar</h3>
         <p className="text-gray-700 leading-relaxed font-light">
           Cedar wood pine finish rooms with mountain valley windows — the best group value at any resort near Mukteshwar.
         </p>
@@ -3143,7 +3138,7 @@ export const BLOG_POSTS: BlogPostData[] = [
                 <td className="p-3">Step-free ground floor orchard access</td>
               </tr>
               <tr>
-                <td className="p-3 font-bold text-[#0E2C21]">Group Cottage Room</td>
+                <td className="p-3 font-bold text-[#0E2C21]">Executive Cedar Suite</td>
                 <td className="p-3">2 adults</td>
                 <td className="p-3">Groups, workcation</td>
                 <td className="p-3">Cedar wood pine interiors with valley views</td>
@@ -3361,39 +3356,29 @@ export const BLOG_POSTS: BlogPostData[] = [
               <thead className="bg-[#0E2C21] text-white">
                 <tr>
                   <th className="p-3 font-semibold">Room Category</th>
-                  <th className="p-3 font-semibold">Room Only (Direct)</th>
-                  <th className="p-3 font-semibold">With Breakfast (Direct)</th>
+                  <th className="p-3 font-semibold">Per Night incl. Breakfast (Direct)</th>
                   <th className="p-3 font-semibold">Key Highlights</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#EAE8E3]">
                 <tr>
-                  <td className="p-3 font-bold text-[#0E2C21]">Group Cottage Room</td>
-                  <td className="p-3">₹ 3,000</td>
-                  <td className="p-3">₹ 3,500</td>
+                  <td className="p-3 font-bold text-[#0E2C21]">Executive Cedar Suite</td>
+                  <td className="p-3">₹ 3,999</td>
                   <td className="p-3 text-gray-600 font-light">Cedar pine finish, valley view, high-speed Wi-Fi</td>
                 </tr>
                 <tr className="bg-yellow-50/50">
                   <td className="p-3 font-bold text-[#0E2C21]">Family Twin Room</td>
-                  <td className="p-3">₹ 3,899</td>
-                  <td className="p-3">₹ 4,200</td>
+                  <td className="p-3">₹ 4,999</td>
                   <td className="p-3 text-gray-600 font-light">Step-free ground floor orchard access (senior- & pet-friendly)</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold text-[#0E2C21]">Deluxe Skylight Suite</td>
-                  <td className="p-3">₹ 4,500</td>
-                  <td className="p-3">₹ 6,900</td>
+                  <td className="p-3">₹ 6,499</td>
                   <td className="p-3 text-gray-600 font-light">Glass roof attic star-gazing, private deck & radiator</td>
-                </tr>
-                <tr className="bg-yellow-50/50">
-                  <td className="p-3 font-bold text-[#0E2C21]">Premium Himalayan View Suite</td>
-                  <td className="p-3">₹ 5,000</td>
-                  <td className="p-3">₹ 6,500</td>
-                  <td className="p-3 text-gray-600 font-light">Direct 180° Nanda Devi panoramic morning peak view</td>
                 </tr>
                 <tr className="bg-[#0E2C21]/10 font-bold">
                   <td className="p-3 text-[#0E2C21]">Private Villa (Entire 3-BHK Estate)</td>
-                  <td className="p-3" colSpan={2}>₹ 15,999 / night (Sleeps up to 10 guests)</td>
+                  <td className="p-3">₹ 15,999 (sleeps up to 10)</td>
                   <td className="p-3 text-emerald-800">Stone fireplace, private orchard yard, BBQ & full resort service</td>
                 </tr>
               </tbody>
