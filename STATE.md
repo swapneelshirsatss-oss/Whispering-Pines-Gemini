@@ -11,7 +11,11 @@ Read this first in every session. Update it after finishing a task or stopping w
 - [x] Merge the two hotel schema blocks on the homepage into one (`@id: "https://whisperingpinesresort.in/#hotel"`, `addressLocality: "Mukteshwar"`, `WebSite` name `"Whispering Pines Resort"`).
 - [x] Update review count 409 → 425 sitewide (60 occurrences across 29 files safely synced with word boundaries).
 - [x] Synchronize Backlink & Anchor Text Google Sheet tracker (`1gNVt5CLMvDEDBT5FtNLHKRpT95ynFB45RMtOo5HLF_g`).
-- [ ] The client sheet's GBP calendar says "Save 20%"; the profile says 25%. Fix the posts.
+- [ ] **Branch `copy/direct-offer-up-to-20` (local commit e53a837, NOT pushed, no PR yet):** "flat 25%" changed to "Up to 20% off · Best rate guaranteed + direct-only perks" across 23 files (Swapneel, 23 Nov: rates are dynamic). `data.ts` OTA reference prices now imply 20%. Kainchi seoTitle changed again to "Resort Near Kainchi Dham: Quiet Stay 45 Min from Ashram" (the 25% had to go), so GSC measurement for that page restarts from the merge date. Waiting on Swapneel's approval before push + PR.
+- [ ] GBP posts: use "up to 20%" wording, never a fixed %.
+- [ ] Two room-rate sets disagree: best-resort blog tariff (₹3,000–₹15,999, confirmed current 23 Nov) vs `src/data.ts` (₹3,999/₹4,999/₹6,499/₹15,999). Ask which is right.
+- [ ] Untouched on purpose: "25% Dining Privilege" (BookingInteractiveForm.tsx), guest quote "a rate 25% lower" (book-now.astro:771). Confirm with Swapneel.
+- [ ] Best-resort page rework (area guide, no rival resorts): fix pack in `05_Marketing/SEO/GSC-Step-B-Best-Resort-Mukteshwar-Fix-Pack.md`, not built yet.
 - [x] The client sheet plans a heading "Stone Cottage Rooms". Fixed in Google Sheet tracker to "private 3-BHK alpine villa".
 - [x] Confirm the room count (25 rooms + 1 villa) and add it to the profile (`whispering-pines.md`).
 - [x] Sweep remaining deep body-copy pool references across all active pages, schemas, `src/data.ts`, `src/data/blogPosts.tsx`, `llms.txt`, and `llms-full.txt` (0 resort pool mentions remain; only 6 natural waterfall plunge-pool mentions preserved).
