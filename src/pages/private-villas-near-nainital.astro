@@ -4,12 +4,48 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
 import RoomInventoryList from "../components/RoomInventoryList";
 import BookingInteractiveForm from "../components/BookingInteractiveForm";
 import RecentBookingNotification from "../components/RecentBookingNotification";
+import FAQAccordion from "../components/FAQAccordion";
 import { Home, Trees, ShieldCheck, Heart } from "lucide-react";
+
+const villaFaqs = [
+  {
+    "question": "Is there a 3 BHK villa near Nainital for a family of 10?",
+    "answer": "Yes. Our 3-BHK Private Alpine Villa in Malla Ramgarh sleeps up to 10 in three king bedrooms and a loft, with three en-suite bathrooms. You book the whole villa, so your group has it to yourselves.",
+    "category": "Private Villa"
+  },
+  {
+    "question": "Is the private villa near Nainital pet-friendly?",
+    "answer": "Yes. Pets stay free, and the villa has its own enclosed orchard lawn where dogs can run.",
+    "category": "Private Villa"
+  },
+  {
+    "question": "How far is the villa from Nainital?",
+    "answer": "26 km, about 55 minutes by road via Bhowali. Mukteshwar Dham is 25 km (about 45 minutes) and Kainchi Dham 22 km (about 45 minutes).",
+    "category": "Private Villa"
+  },
+  {
+    "question": "How much does the private villa cost per night?",
+    "answer": "₹15,999 a night including breakfast, with ₹1,200 a night for each extra guest. Rates change with the season, so message us on WhatsApp for your dates. Booking direct gets you up to 20% off and our best rate guarantee.",
+    "category": "Private Villa"
+  },
+  {
+    "question": "Does the villa have a kitchen?",
+    "answer": "Yes. It has its own kitchen for self-catering, and you can also order from the resort restaurant.",
+    "category": "Private Villa"
+  },
+  {
+    "question": "Is the villa good for a weekend stay near Nainital?",
+    "answer": "Yes. It's close enough to Nainital for a day trip to the lake, but quiet, with a fireplace in the living room and bonfire evenings at the resort.",
+    "category": "Private Villa"
+  }
+];
+const waVilla = "https://wa.me/917505029696?text=" + encodeURIComponent("Hi, I'd like the private villa. Dates: ___, guests: ___");
 ---
 
 <Layout 
-  title="Private 3-BHK Villa Near Mukteshwar & Nainital | 10 Pax" 
-  description="Book our 3-BHK private luxury alpine villa near Mukteshwar & Nainital (10 Pax) at Whispering Pines. Private orchard lawn, 180° Himalayan views & fireplace."
+  title="Private 3-BHK Villa Near Nainital for 10 | Pet-Friendly" 
+  description="Private 3-BHK villa 26 km from Nainital in Malla Ramgarh: sleeps 10, own orchard lawn, fireplace, Nanda Devi views, pets free. ₹15,999/night incl. breakfast."
+  faqs={villaFaqs}
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#0E2C21] overflow-x-hidden selection:bg-[#B0966D] selection:text-[#0E2C21]">
     <Breadcrumbs />
@@ -20,10 +56,40 @@ import { Home, Trees, ShieldCheck, Heart } from "lucide-react";
         client:visible
         hideLink={true} 
         initialFilter="villa" 
-        title="Private 3-BHK Luxury Alpine Villa Near Mukteshwar & Nainital"
+        title="Private 3-BHK Villa Near Nainital, Sleeps 10 (Malla Ramgarh)"
         categoryIntro="Mukteshwar & Malla Ramgarh's Most Exclusive Nature Retreat — Your Private Alpine Estate"
         isH1={true}
       />
+
+      {/* Quick answer + at a glance + direct booking CTAs */}
+      <section class="bg-white border-t border-[#2C3531]/5">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-5">
+          <div class="aeo-direct-answer bg-[#FAF9F6] p-6 rounded-sm border-l-4 border-[#8A6F4A] space-y-4">
+            <div class="text-xs font-bold text-[#7A6038] uppercase tracking-widest">Quick answer: private villa near Nainital</div>
+            <p class="text-sm sm:text-base text-[#2C3531]/85 leading-relaxed font-light">Whispering Pines' 3-BHK Private Alpine Villa is in Malla Ramgarh, 26 km (about 55 min) from Nainital, at 1,780m. It sleeps 10 in three king bedrooms and a loft, with its own orchard lawn, fireplace, kitchen and 180° Nanda Devi views. Pets stay free. ₹15,999 a night incl. breakfast, up to 20% off direct.</p>
+            <ul class="flex flex-wrap gap-2 text-xs text-[#0E2C21]">
+              <li class="px-3 py-1.5 bg-white border border-[#EAE8E3] rounded-full">Sleeps 10</li>
+              <li class="px-3 py-1.5 bg-white border border-[#EAE8E3] rounded-full">3 king bedrooms + loft</li>
+              <li class="px-3 py-1.5 bg-white border border-[#EAE8E3] rounded-full">26 km from Nainital</li>
+              <li class="px-3 py-1.5 bg-white border border-[#EAE8E3] rounded-full">Pets stay free</li>
+              <li class="px-3 py-1.5 bg-white border border-[#EAE8E3] rounded-full">₹15,999 incl. breakfast</li>
+            </ul>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a href={waVilla} target="_blank" rel="noopener noreferrer"
+                data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","villa_answer_whatsapp",{"conversion_type":"whatsapp"}]'
+                class="inline-flex flex-col items-center justify-center px-6 py-3 bg-[#0E2C21] text-white rounded-sm hover:bg-[#1a4535] transition-colors text-center">
+                <span class="text-sm font-bold">WhatsApp for villa dates: up to 20% off</span>
+                <span class="text-[11px] text-white/80">Best rate guaranteed + direct-only perks</span>
+              </a>
+              <a href="tel:+917505029696"
+                data-track-fn="trackBookingConversion" data-track-args='["phone_call_click","engagement","villa_answer_phone_call",{"conversion_type":"phone","phone_number":"7505029696"}]'
+                class="inline-flex items-center justify-center px-6 py-3 border border-[#0E2C21] text-[#0E2C21] font-bold text-sm rounded-sm hover:bg-[#0E2C21] hover:text-white transition-colors">
+                Call 075050 29696
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Villa Architecture Section */}
       <section class="py-20 lg:py-28 bg-white border-t border-[#2C3531]/5">
@@ -40,7 +106,7 @@ import { Home, Trees, ShieldCheck, Heart } from "lucide-react";
               </h2>
               <div class="w-12 h-[2px] bg-[#B0966D]" />
               <p class="text-sm sm:text-base text-[#2C3531]/80 leading-relaxed font-sans font-light">
-                Our premium <strong>villas near Nainital</strong> are engineered for the high-altitude Himalayan environment using hand-hewn mountain stones and solid pine wood finishes. As a signature feature of our <strong>Ramgarh nature retreat</strong>, this Kumaoni-inspired architectural design naturally retains cozy warmth during the winter and stays cool during summer fruit harvests.
+                Our private villa near Nainital is built for the high-altitude Himalayan environment using hand-hewn mountain stones and solid pine wood finishes. As a signature feature of our Ramgarh retreat, this Kumaoni-inspired architectural design naturally retains cozy warmth during the winter and stays cool during summer fruit harvests.
               </p>
               <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-[#2C3531]/5 pt-6">
                 {[
@@ -70,7 +136,7 @@ import { Home, Trees, ShieldCheck, Heart } from "lucide-react";
               </h2>
               <div class="w-12 h-[2px] bg-[#B0966D]" />
               <p class="text-sm sm:text-base text-[#2C3531]/80 leading-relaxed font-sans font-light">
-                Step into the premium interiors of our exclusive <strong>villas near Nainital</strong>. Designed as a luxury <strong>Ramgarh nature retreat</strong>, the property features three grand king bedrooms with dedicated en-suite bathrooms, a wood attic loft, a stone fireplace, and a full kitchen built for self-catering family holidays.
+                Step into the premium interiors of the villa. Designed as a luxury Ramgarh retreat, the property features three grand king bedrooms with dedicated en-suite bathrooms, a wood attic loft, a stone fireplace, and a full kitchen built for self-catering family holidays.
               </p>
               <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-[#0E2C21]/10 pt-6">
                 {[
@@ -110,7 +176,7 @@ import { Home, Trees, ShieldCheck, Heart } from "lucide-react";
               </h2>
               <div class="w-12 h-[2px] bg-[#B0966D]" />
               <p class="text-sm sm:text-base text-[#2C3531]/80 leading-relaxed font-sans font-light">
-                Enjoy absolute peace at our <strong>Ramgarh nature retreat</strong>, surrounded by private working orchards of apple, peach, and plum trees. Guests booking our luxury <strong>villas near Nainital</strong> enjoy direct access to deodar walking trails and 180° views of the snow-clad Nanda Devi range.
+                Enjoy absolute peace at our Ramgarh retreat, surrounded by private working orchards of apple, peach, and plum trees. Villa guests get direct access to deodar walking trails and 180° views of the snow-clad Nanda Devi range.
               </p>
               <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-[#2C3531]/5 pt-6">
                 {[
@@ -140,7 +206,7 @@ import { Home, Trees, ShieldCheck, Heart } from "lucide-react";
               </h2>
               <div class="w-12 h-[2px] bg-[#B0966D]" />
               <p class="text-sm sm:text-base text-[#2C3531]/80 leading-relaxed font-sans font-light">
-                Our spacious <strong>villas near Nainital</strong> are optimized for multi-generational family getaways, peaceful honeymoons, and corporate groups seeking a <strong>Ramgarh nature retreat</strong> with high-speed 150 Mbps fiber connectivity, gated privacy, and dedicated on-site catering.
+                The villa suits multi-generational family getaways, peaceful honeymoons, and corporate groups seeking a Ramgarh retreat with high-speed 150 Mbps fiber connectivity, gated privacy, and dedicated on-site catering.
               </p>
               <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-[#0E2C21]/10 pt-6">
                 {[
@@ -165,6 +231,14 @@ import { Home, Trees, ShieldCheck, Heart } from "lucide-react";
         </div>
       </section>
 
+      {/* Villa FAQs (visible; Layout prints the matching FAQPage schema) */}
+      <FAQAccordion
+        client:visible
+        faqs={villaFaqs}
+        title="Private Villa Near Nainital: Questions We Get Asked"
+        description="Capacity, pets, distance from Nainital, price and what's included."
+      />
+
       {/* Travel Guides Link Section */}
       <section class="bg-white rounded-sm p-8 border border-[#EAE8E3] shadow-sm text-center space-y-4">
         <span class="text-xs font-sans text-[#7A6038] uppercase tracking-[0.1em] font-semibold block">Himalayan Travel Journal</span>
@@ -175,7 +249,7 @@ import { Home, Trees, ShieldCheck, Heart } from "lucide-react";
             Resort near Nainital Guide →
           </a>
           <a href="/blog/best-resort-to-stay-near-mukteshwar/" class="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#FAF9F6] text-[#0E2C21] font-semibold text-xs rounded-full border border-[#EAE8E3] hover:border-[#8A6F4A] transition-colors">
-            Resort near Mukteshwar Guide →
+            Best resorts in Mukteshwar →
           </a>
         </div>
       </section>
@@ -194,76 +268,48 @@ import { Home, Trees, ShieldCheck, Heart } from "lucide-react";
     <RecentBookingNotification client:idle />
   </div>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Resort",
-        "@id": "https://whisperingpinesresort.in/#resort",
-        "name": "Whispering Pines Resort by Casa De Bello",
-        "url": "https://whisperingpinesresort.in/",
-        "telephone": "+91-7505029696",
-        "priceRange": "₹₹₹",
-        "hasMap": "https://maps.google.com/?cid=8386667112972057918",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
-          "addressLocality": "Mukteshwar",
-          "addressRegion": "Nainital, Uttarakhand",
-          "postalCode": "263137",
-          "addressCountry": "IN"
-        },
-        "containsPlace": {
-          "@type": "Accommodation",
-          "@id": "https://whisperingpinesresort.in/private-villas-near-nainital/#villa",
-          "name": "3-BHK Private Alpine Heritage Villa",
-          "description": "Standalone hand-hewn stone and cedar wood private villa in Malla Ramgarh near Nainital and Mukteshwar. Features 3 grand king bedrooms, wood attic loft, cozy living room with stone fireplace, self-catering kitchen, and private orchard lawn with 180° Nanda Devi Himalayan views.",
-          "occupancy": {
-            "@type": "QuantitativeValue",
-            "maxValue": 10,
-            "unitText": "Person"
-          },
-          "numberOfBedrooms": 3,
-          "numberOfBathroomsTotal": 3,
-          "petsAllowed": true,
-          "amenityFeature": [
-            { "@type": "LocationFeatureSpecification", "name": "180° Nanda Devi & Trishul Peak Views", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Private Fruit Orchard Lawn", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Stone Fireplace Living Room", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Fully Equipped Kitchen", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "150 Mbps Fiber Wi-Fi", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Outdoor Bonfire Pit & BBQ", "value": true }
-          ]
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How many guests can stay at the private villa near Nainital?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The 3-BHK Alpine Villa at Whispering Pines comfortably accommodates up to 10 guests across 3 master king bedrooms and an attic loft space, making it ideal for families and small corporate retreats."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is the private villa near Nainital pet-friendly?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, our private villa is 100% pet-friendly with safe, private enclosed orchard lawns where dogs can roam freely in fresh mountain air."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does the villa offer self-catering kitchen facilities?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, the villa includes a dedicated kitchen equipped for family meal prep, along with full access to our on-site resort restaurant and room service."
-            }
-          }
-        ]
-      }
-    ]
-  })} />
+  "@context": "https://schema.org",
+  "@type": "Accommodation",
+  "@id": "https://whisperingpinesresort.in/private-villas-near-nainital/#villa",
+  "name": "3-BHK Private Alpine Villa",
+  "description": "Standalone private villa in Malla Ramgarh, 26 km from Nainital and 25 km from Mukteshwar Dham. Three king bedrooms plus a loft, three en-suite bathrooms, living room with fireplace, kitchen and private orchard lawn with 180° Nanda Devi views. Sleeps up to 10.",
+  "containedInPlace": {
+    "@id": "https://whisperingpinesresort.in/#hotel"
+  },
+  "occupancy": {
+    "@type": "QuantitativeValue",
+    "maxValue": 10,
+    "unitText": "Person"
+  },
+  "numberOfBedrooms": 3,
+  "numberOfBathroomsTotal": 3,
+  "petsAllowed": true,
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "180° Nanda Devi & Trishul Peak Views",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Private Fruit Orchard Lawn",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Fireplace Living Room",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Fully Equipped Kitchen",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "150 Mbps Fiber Wi-Fi",
+      "value": true
+    }
+  ]
+})} />
 </Layout>
