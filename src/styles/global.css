@@ -1,8 +1,39 @@
 @import "tailwindcss";
 
+/* Metric-matched stand-in for Playfair Display while the webfont loads.
+   The unadjusted serif fallback wrapped headings to a different line count,
+   reflowing every h1 on arrival (measured CLS 0.1039 on a blog post).
+   size-adjust was tuned empirically against the resolved fallback, not
+   computed from Georgia's metrics — Chrome does not always honour the
+   local() lookup, and Android has neither Georgia nor Times. It is therefore
+   an approximation that is closest on desktop Chrome.
+   Re-tune with: canvas measureText width ratio vs Playfair at 700 weight. */
+@font-face {
+  font-family: "Playfair Fallback";
+  src: local("Georgia"), local("Times New Roman"), local("Times");
+  font-weight: 100 900;
+  size-adjust: 104%;
+  ascent-override: 103.8%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+/* Same treatment for Inter. The system sans is ~7% narrower with a taller
+   ascent, which grew the byline/meta row and pushed everything below it down
+   28px when Inter arrived. Same caveat: tuned empirically, closest on desktop. */
+@font-face {
+  font-family: "Inter Fallback";
+  src: local("Segoe UI"), local("Roboto"), local("Helvetica Neue"), local("Arial");
+  font-weight: 100 900;
+  size-adjust: 106.8%;
+  ascent-override: 90.9%;
+  descent-override: 22.5%;
+  line-gap-override: 0%;
+}
+
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", "Inter Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", "Playfair Fallback", Georgia, serif;
   --font-mono: "Inter", ui-sans-serif, system-ui, sans-serif;
   
   /* ---------------------------------------------------------------
