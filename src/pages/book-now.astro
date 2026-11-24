@@ -4,6 +4,9 @@ import { Image, getImage } from 'astro:assets';
 
 // Image Assets
 import heroImgSrc from '../assets/images/Whispering-pines-balcony-view-nanital.avif';
+// Phones get the valley view: the terrace shot crops to the chimney and floor tiles
+// on a tall screen, which is the opposite of the 180-degree view the H1 promises.
+import heroMobileSrc from '../assets/images/whispering-pines-balcony-valley-view.jpg';
 import villaImgSrc from '../assets/images/villa_in_nanital.avif';
 import suiteImgSrc from '../assets/images/Delux_room_Whispering_pines_mukteshwar.avif';
 import familyImgSrc from '../assets/images/Family_Twin_Room_Near_nainital.avif';
@@ -17,7 +20,7 @@ import quoteImgSrc from '../assets/images/view-from-resort-cloud-sea.jpg';
 // Hero renders at opacity-30 behind two gradient scrims, so quality/width are tuned down:
 // the preloaded LCP bytes drop sharply with no visible difference.
 const heroImage = await getImage({ src: heroImgSrc, format: 'webp', width: 1440, quality: 62 });
-const heroMobile = await getImage({ src: heroImgSrc, format: 'webp', width: 760, quality: 60 });
+const heroMobile = await getImage({ src: heroMobileSrc, format: 'webp', width: 760, quality: 64 });
 const villaImg = await getImage({ src: villaImgSrc, format: 'webp', width: 900, quality: 80 });
 const suiteImg = await getImage({ src: suiteImgSrc, format: 'webp', width: 900, quality: 80 });
 const familyImg = await getImage({ src: familyImgSrc, format: 'webp', width: 900, quality: 80 });
@@ -217,75 +220,123 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
   </aside>
 
   <!-- =========================================================================
-       SECTION 1: HERO ENCLAVE — THE HIMALAYAN SANCTUARY (ARISTOCRATIC RESTRAINT)
+       SECTION 1: HERO — mobile-first.
+       Phones: the photo is its own 170px band at full brightness (no scrim), and
+       the copy sits below it on cream. Separating them is what makes the photo
+       visible at all — text over a photo on a phone needs a scrim so heavy it
+       was rendering the image at ~6% effective visibility.
+       sm+ : the photo goes back to full-bleed behind the copy, with scrims.
+       Order is conversion-first: badge, H1, promise, price, CTAs — then the
+       long keyword copy and the OTA comparison, which cost 543px and do not
+       belong above the fold.
        ========================================================================= -->
-  <section class="relative min-h-[88svh] flex items-center justify-center bg-[#03110B] text-[#FAF7F2] overflow-hidden">
-    <!-- Cinematic Panoramic Background with Subtle Vignette -->
-    <div class="absolute inset-0 z-0 pointer-events-none">
+  <section class="relative bg-[#FAF9F6] sm:bg-[#03110B] sm:min-h-[88svh] sm:flex sm:items-center sm:justify-center overflow-hidden">
+
+    <div class="relative h-[170px] sm:absolute sm:inset-0 sm:h-auto sm:z-0 pointer-events-none">
       <picture>
         <source srcset={heroMobile.src} media="(max-width: 768px)" type="image/webp" />
         <img
           src={heroImage.src}
-          alt="Panoramic private balcony view of Nanda Devi Himalayan mountain range from Whispering Pines Resort Ramgarh"
-          class="w-full h-full object-cover opacity-50"
-          loading="eager" fetchpriority="high"
-          decoding="async"
-          width="1800"
-          height="1200"
+          alt="180° view of the Nanda Devi Himalayan range from a private balcony at Whispering Pines Resort, Malla Ramgarh"
+          class="w-full h-full object-cover sm:opacity-60"
+          loading="eager" fetchpriority="high" decoding="async"
+          width="1800" height="1200"
         />
       </picture>
-      {/* Dual Atmospheric Scrims for Razor-Sharp Typography Legibility */}
-      <div class="absolute inset-0 bg-gradient-to-t from-[#03110B] via-[#03110B]/75 to-[#03110B]/85"></div>
-      <div class="absolute inset-0 bg-radial from-[#03110B]/30 via-[#03110B]/55 to-[#03110B]/95 pointer-events-none"></div>
+      {/* Scrims exist only where text sits on the photo, i.e. sm and up */}
+      <div class="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#03110B] via-[#03110B]/60 to-[#03110B]/40"></div>
+      <div class="hidden sm:block absolute inset-0 bg-radial from-[#03110B]/20 via-[#03110B]/45 to-[#03110B]/90"></div>
     </div>
 
-    <!-- Aristocratic Watermark Filigree Border -->
-    <div class="absolute inset-4 sm:inset-8 border border-[#B0966D]/20 pointer-events-none z-10 hidden sm:block">
+    <div class="hidden sm:block absolute inset-8 border border-[#B0966D]/20 pointer-events-none z-10">
       <div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-[#B0966D]"></div>
       <div class="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-[#B0966D]"></div>
       <div class="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-[#B0966D]"></div>
       <div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-[#B0966D]"></div>
     </div>
 
-    <!-- Main Hero Presentation Container -->
-    <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-14 pb-24">
-      
-      <!-- Taj Imperial Crest & Verified Google Rating Badge -->
-      <div class="inline-flex flex-col sm:flex-row items-center gap-2 bg-[#051E14]/90 border border-[#B0966D]/40 backdrop-blur-xl px-5 py-2 rounded-full mb-8 shadow-md">
-        <div class="flex items-center gap-1 text-[#C4A77D]">
-          <span class="text-sm tracking-tighter">★★★★★</span>
-        </div>
-        <span class="font-mono text-xs text-[#FAF7F2] font-semibold tracking-wider uppercase">
-          4.6★ Excellence Score (428 Verified Google Reviews)
-        </span>
-        <span class="hidden sm:inline text-[#B0966D]/60">•</span>
-        <span class="text-[11px] text-[#FAF7F2]/80 font-sans tracking-wide">
-          Malla Ramgarh, Mukteshwar (1,780m Altitude)
-        </span>
-      </div>
+    <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-7 pb-12 sm:pt-14 sm:pb-24">
 
-      <!-- Main Benefit-Driven Royal Headline -->
-      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-[#FAF7F2] leading-[1.12] max-w-4xl mx-auto mb-6 text-balance drop-shadow-[0_2px_14px_rgba(0,0,0,0.7)]">
-        4-Star Resort &amp; Luxury Hotel Near Mukteshwar <br class="hidden sm:inline" />
-        <span class="font-normal text-[#FAF7F2]">
-          180° Nanda Devi Snow Views • Save Up to 20% Direct
-        </span>
+      <!-- Proof: one line on phones, where the old three-line badge cost 103px -->
+      <p class="inline-flex flex-wrap items-center justify-center gap-x-2 text-xs sm:text-sm font-sans font-semibold text-[#7A6038] sm:text-[#C4A77D] mb-3 sm:mb-6">
+        <span class="tracking-tighter text-[#B0966D]">★★★★★</span>
+        <span>4.6 from 428 Google reviews</span>
+        <span class="text-[#8A6F4A]/60 sm:text-[#B0966D]/60">•</span>
+        <span class="font-normal text-[#44564E] sm:text-[#FAF7F2]/80">Malla Ramgarh, 1,780 m</span>
+      </p>
+
+      <h1 class="font-display text-[27px] leading-[1.14] sm:text-5xl md:text-6xl lg:text-7xl sm:leading-[1.12] font-semibold tracking-tight text-[#0E2C21] sm:text-[#FAF7F2] max-w-4xl mx-auto mb-3 sm:mb-5 text-balance sm:drop-shadow-[0_2px_14px_rgba(0,0,0,0.7)]">
+        4-Star Resort &amp; Luxury Hotel Near Mukteshwar
       </h1>
 
-      <!-- Editorial Subcopy (Concrete, Grounded, Zero AI Slop) -->
-      <p class="font-sans text-base sm:text-lg md:text-xl text-[#FAF7F2]/95 font-light max-w-2xl mx-auto leading-relaxed mb-10 text-pretty drop-shadow-[0_1px_6px_rgba(0,0,0,0.6)]">
+      <!-- Was an <h1> span rendering at the full 36px, which alone cost ~130px -->
+      <p class="font-sans text-[15px] sm:text-lg text-[#44564E] sm:text-[#FAF7F2]/90 max-w-xl mx-auto leading-snug mb-4 sm:mb-6 text-pretty">
+        180° Nanda Devi snow views • 25 km (45 min) from Mukteshwar Dham • Save up to 20% direct
+      </p>
+
+      <!-- Compact price line. The full OTA comparison still exists, lower down. -->
+      <p class="font-sans text-[15px] sm:text-base text-[#0E2C21] sm:text-[#FAF7F2] mb-5 sm:mb-7">
+        <span class="font-bold">From ₹3,999 / night</span>&nbsp;<span class="text-[#44564E] sm:text-[#FAF7F2]/75">incl. breakfast</span>
+      </p>
+
+      <!-- CTAs, now above the fold on a 360px phone -->
+      <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 max-w-3xl mx-auto mb-5 sm:mb-8">
+        <a
+          href={`tel:${RESORT_PHONE_TEL}`}
+          data-track-fn="trackBookingConversion" data-track-args='["phone_call_click","engagement","hero_phone_call",{"conversion_type":"phone","phone_number":"7505029696"}]'
+          class="w-full sm:w-auto sm:flex-1 bg-[#03110B] sm:bg-[#FAF7F2] hover:bg-[#051E14] sm:hover:bg-[#E5CFA0] text-[#FAF7F2] sm:text-[#03110B] border-2 border-[#B0966D] font-bold min-h-14 py-4 px-5 rounded-sm shadow-[0_8px_24px_rgba(0,0,0,0.25)] flex items-center justify-center gap-2 text-sm uppercase tracking-wider active:scale-[0.98] transition-all text-center"
+        >
+          <svg class="w-4 h-4 text-[#E5CFA0] sm:text-[#03110B] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <span>Call Desk: {RESORT_PHONE_DISPLAY}</span>
+        </a>
+
+        <a
+          href="https://wa.me/917505029696?text=Hi!%20I%20am%20viewing%20your%20direct%20booking%20page%20for%20Whispering%20Pines%20Resort.%20Could%20you%20please%20share%20room%20availability%20and%20your%20best%20direct%20rates%20for%20an%20upcoming%20stay%3F"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","hero_whatsapp_direct",{"conversion_type":"whatsapp","value":3999,"currency":"INR"}]'
+          class="w-full sm:w-auto sm:flex-1 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold min-h-14 py-4 px-6 rounded-sm shadow-[0_8px_24px_rgba(10,18,15,0.28)] flex items-center justify-center gap-2.5 text-sm uppercase tracking-wider active:scale-[0.98] transition-all border border-white/20 text-center"
+        >
+          <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+          <span class="tracking-wide">WhatsApp (Up to 20% Off)</span>
+        </a>
+
+        <a
+          href={BOOKING_ENGINE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-track-fn="trackBookingConversion" data-track-args='["begin_checkout","booking","hero_bookingjini_checkout",{"conversion_type":"bookingjini"}]'
+          class="w-full sm:w-auto sm:flex-1 bg-transparent sm:bg-[#B0966D] hover:bg-[#E6E0D6] sm:hover:bg-[#C4A77D] text-[#7A6038] sm:text-[#03110B] border border-[#8A6F4A]/50 sm:border-0 font-bold min-h-12 py-3 px-6 rounded-sm sm:shadow-md flex items-center justify-center gap-2 text-sm uppercase tracking-wider active:scale-[0.98] transition-all text-center"
+        >
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <span>Book Online</span>
+        </a>
+      </div>
+
+      <div class="flex flex-wrap justify-center items-center gap-y-2 gap-x-5 text-xs text-[#44564E] sm:text-[#FAF7F2]/80 font-sans mb-8 sm:mb-0">
+        <span class="flex items-center gap-1.5"><span class="text-[#7A6038]">✓</span> Zero advance deposit</span>
+        <span class="flex items-center gap-1.5"><span class="text-[#7A6038]">✓</span> Reply in &lt; 5 minutes</span>
+        <span class="flex items-center gap-1.5"><span class="text-[#7A6038]">✓</span> Free Kumaoni welcome tea</span>
+      </div>
+
+      <!-- Keyword copy and the OTA comparison: below the CTAs, where their 543px is affordable -->
+      <p class="font-sans text-[15px] sm:text-lg md:text-xl text-[#44564E] sm:text-[#FAF7F2]/95 font-light max-w-2xl mx-auto leading-relaxed mt-0 sm:mt-10 mb-7 text-pretty sm:drop-shadow-[0_1px_6px_rgba(0,0,0,0.6)]">
         Whispering Pines Resort stands apart from the hotels and resorts in Mukteshwar town: we are in Malla Ramgarh, a 25 km (45 minute) drive from Mukteshwar Dham, with 5-star mountain comforts on a paved highway. Heated Himalayan-view suites, Glass-Roof Skylight Suites and a 3-BHK Private Villa for ten, plus gated parking for 25+ cars and 150 Mbps fiber Wi-Fi.
       </p>
 
-      <!-- The Taj-Inspired "Direct Resident Privilege Pass" (Price Disparity Card) -->
-      <div class="max-w-xl mx-auto mb-10 bg-[#051E14]/85 backdrop-blur-md border border-[#B0966D]/40 rounded-sm p-5 sm:p-6 text-left shadow-[0_12px_40px_rgba(0,0,0,0.6)] relative overflow-hidden">
-        <!-- Subtle Top Gold Trim -->
+      <div class="max-w-xl mx-auto bg-[#051E14] sm:bg-[#051E14]/85 sm:backdrop-blur-md border border-[#B0966D]/40 rounded-sm p-5 sm:p-6 text-left shadow-[0_12px_40px_rgba(0,0,0,0.3)] relative overflow-hidden">
         <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#B0966D] to-transparent"></div>
 
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-[#FAF7F2]/10 pb-4 mb-4">
           <div>
             <span class="text-xs font-sans uppercase tracking-[0.18em] text-[#FAF7F2]/70 block">Third-Party Portals (MakeMyTrip / Agoda)</span>
-            <span class="text-sm line-through text-[#FAF7F2]/50 font-sans">Higher rates + taxes & platform surcharges</span>
+            <span class="text-sm line-through text-[#FAF7F2]/50 font-sans">Higher rates + taxes &amp; platform surcharges</span>
           </div>
           <span class="bg-red-500/15 text-red-300 border border-red-500/30 text-xs font-mono uppercase tracking-wider px-2.5 py-1 rounded-sm">
             OTA Commission Markups
@@ -307,58 +358,6 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
         </div>
       </div>
 
-      <!-- High-Intent Primary Conversion CTAs (Call Desk + WhatsApp + BookingJini) -->
-      <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3.5 max-w-3xl mx-auto mb-8">
-        <!-- Direct Phone Call CTA (High-Contrast Primary Mobile Driver) -->
-        <a
-          href={`tel:${RESORT_PHONE_TEL}`}
-          data-track-fn="trackBookingConversion" data-track-args='["phone_call_click","engagement","hero_phone_call",{"conversion_type":"phone","phone_number":"7505029696"}]'
-          class="w-full sm:w-auto flex-1 bg-[#FAF7F2] hover:bg-[#E5CFA0] text-[#03110B] border-2 border-[#B0966D] font-bold py-4 px-5 rounded-sm shadow-[0_8px_24px_rgba(0,0,0,0.35)] flex items-center justify-center gap-2 text-sm uppercase tracking-wider active:scale-[0.98] transition-all text-center"
-        >
-          <svg class="w-4 h-4 text-[#03110B] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-          </svg>
-          <span>Call Desk: {RESORT_PHONE_DISPLAY}</span>
-        </a>
-
-        <!-- WhatsApp Concierge CTA -->
-        <a
-          href="https://wa.me/917505029696?text=Hi!%20I%20am%20viewing%20your%20direct%20booking%20page%20for%20Whispering%20Pines%20Resort.%20Could%20you%20please%20share%20room%20availability%20and%20your%20best%20direct%20rates%20for%20an%20upcoming%20stay%3F"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","hero_whatsapp_direct",{"conversion_type":"whatsapp","value":3500,"currency":"INR"}]'
-          class="w-full sm:w-auto flex-1 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold py-4 px-6 rounded-sm shadow-[0_8px_24px_rgba(10,18,15,0.28)] flex items-center justify-center gap-2.5 text-sm uppercase tracking-wider active:scale-[0.98] transition-all border border-white/20 text-center relative group"
-        >
-          <span class="relative flex h-2.5 w-2.5">
-            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
-          </span>
-          <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-          </svg>
-          <span class="tracking-wide">WhatsApp (Up to 20% Off)</span>
-        </a>
-
-        <!-- BookingJini Instant Online Booking CTA -->
-        <a
-          href={BOOKING_ENGINE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          data-track-fn="trackBookingConversion" data-track-args='["begin_checkout","booking","hero_bookingjini_checkout",{"conversion_type":"bookingjini"}]'
-          class="w-full sm:w-auto flex-1 bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-bold py-4 px-6 rounded-sm shadow-md flex items-center justify-center gap-2 text-sm uppercase tracking-wider active:scale-[0.98] transition-all text-center"
-        >
-          <svg class="w-4 h-4 text-[#03110B] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-          <span>Book Online</span>
-        </a>
-      </div>
-
-      <!-- Luxury Trust Micro-Assurances -->
-      <div class="flex flex-wrap justify-center items-center gap-y-2 gap-x-6 text-xs text-[#FAF7F2]/85 font-sans">
-        <span class="flex items-center gap-1.5"><span class="text-[#7A6038]">✓</span> Zero advance deposit required to hold dates</span>
-        <span class="flex items-center gap-1.5"><span class="text-[#7A6038]">✓</span> Immediate front desk reply in &lt; 5 minutes</span>
-        <span class="flex items-center gap-1.5"><span class="text-[#7A6038]">✓</span> Free Kumaoni Welcome Herbal Tea Basket</span>
-      </div>
     </div>
   </section>
 
