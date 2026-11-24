@@ -1,0 +1,303 @@
+---
+// Paid-search landing page for Kainchi Dham pilgrim traffic (Google Ads only).
+// noindex + excluded from sitemap/IndexNow in astro.config.mjs so /blog/resort-stay-near-kainchi-dham/
+// stays the sole organic owner of this keyword set. Not linked from the nav, footer or llms.txt.
+// Design language copied from the homepage (components/home/LuxuryHome.astro): same lx-* editorial
+// rhythm and the same global.css tokens, so paid traffic sees the brand it will see on the site.
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import heroImg from '../assets/images/view-from-resort-cloud-sea.jpg';
+import cedarImg from '../assets/images/Group_booking_nainital_resort.avif';
+import familyImg from '../assets/images/Family_Twin_Room_Near_nainital.avif';
+import skylightImg from '../assets/images/Delux_room_Whispering_pines_mukteshwar.avif';
+import villaImg from '../assets/images/villa_in_nanital.avif';
+
+const PHONE_DISPLAY = '075050 29696';
+const PHONE_TEL = '+917505029696';
+const BOOKING_ENGINE_URL = 'https://casadebello-book.whisperingpinesresort.in/';
+
+const wa = (text: string) => `https://wa.me/917505029696?text=${encodeURIComponent(text)}`;
+const WA_HERO = wa(
+  'Hi! I am travelling for Kainchi Dham darshan and want to stay at Whispering Pines Resort, Malla Ramgarh. Please share room availability and your best direct rate (up to 20% off).'
+);
+
+const trust = [
+  { title: '22 km · 45 min smooth drive', text: 'Paved Bhowali–Ramgarh highway all the way to the Neem Karoli Baba Ashram. No off-roading, no dirt tracks — any hatchback or sedan drives right up to our gate.' },
+  { title: 'Safe gated parking for 25+ cars', text: 'Park inside the property, not on a hill shoulder. Tempo travellers and group vehicles fit comfortably.' },
+  { title: 'Pure-veg & satvik meals ready', text: 'Satvik thalis cooked without onion or garlic on request, plus an early breakfast pack before you leave for darshan.' },
+  { title: 'Senior-friendly ground-floor rooms', text: 'Minimal stairs, level approach from the parking, and 24/7 hot geyser water in every bathroom.' },
+];
+
+const rooms = [
+  { name: 'Executive Cedar Suite', price: '₹3,999', meta: 'Himalayan-view suite · 2 guests', img: cedarImg },
+  { name: 'Family Twin Room', price: '₹4,999', meta: 'Twin beds · ground-floor ease · 3 guests', img: familyImg },
+  { name: 'Deluxe Skylight Suite', price: '₹6,499', meta: 'Glass-roof stargazing suite · 3 guests', img: skylightImg },
+  { name: 'Private Villa (3-BHK)', price: '₹15,999', meta: 'Whole villa · sleeps 10 · private lawn', img: villaImg },
+];
+
+const perks = [
+  { title: 'Up to 20% off direct', text: 'No MakeMyTrip or Booking.com commission added to your tariff. The front desk rate is the lowest rate.' },
+  { title: 'Priority 180° Himalayan view allocation', text: 'Direct guests get first pick of the Nanda Devi and Trishul balcony rooms.' },
+  { title: 'Flexible darshan check-in', text: 'Early arrival after a night drive, or a late start after morning aarti — arranged on WhatsApp instead of a fixed 2 PM gate.' },
+  { title: 'Early breakfast pack with the host', text: 'Gaurav Pandey coordinates your 5 AM departure, flask of tea and breakfast pack personally.' },
+];
+
+const faqs = [
+  {
+    q: 'What is the exact drive route and morning darshan timing from Malla Ramgarh?',
+    a: 'Malla Ramgarh → Bhowali (about 18 km on the Bhowali–Ramgarh road) → Kainchi Dham on the Bhowali–Almora highway: 22 km and roughly 45 minutes in total, entirely on paved road. Leave the resort by 6:00–6:30 AM and you reach the ashram well before the morning rush; the front desk wakes you, arranges tea and hands over a breakfast pack before you set off.',
+  },
+  {
+    q: 'Do you have ground-floor rooms for senior citizens?',
+    a: 'Yes. Several rooms sit on the ground floor with a level walk from the gated parking, so elderly parents avoid stairs with luggage. Mention it when you call and we block one for you — ground-floor rooms are limited and go first on darshan weekends.',
+  },
+  {
+    q: 'Is pure-veg and satvik food available, and can you cook without onion and garlic?',
+    a: 'Yes. Our kitchen serves pure-vegetarian Kumaoni and multi-cuisine food, and satvik thalis without onion or garlic are prepared on request — tell us at booking so the kitchen keeps separate preparation. Early tea and a breakfast pack for darshan mornings are complimentary for direct guests.',
+  },
+  {
+    q: 'Where do cars and tempo travellers park?',
+    a: 'Inside the property, on a paved gated drive-in with room for 25+ cars, including tempo travellers and small buses for family groups. Nothing is parked on the highway shoulder, and the gate is manned overnight.',
+  },
+];
+---
+
+<Layout
+  noindex={true}
+  title="4-Star Hotel & Resort Near Kainchi Dham (45 Min) | Whispering Pines"
+  description="Peaceful 4-star resort stay 22 km (45 mins) from Kainchi Dham Ashram via Bhowali. 25+ car parking, pure-veg & satvik meals, ground-floor rooms from ₹3,999."
+  canonical="https://whisperingpinesresort.in/kainchi-dham-stay/"
+>
+  <!-- Pre-header ribbon: direct privilege + always-live call & WhatsApp -->
+  <div class="kd-ribbon">
+    <span class="kd-ribbon-text">Direct Resident Privilege — save up to 20% vs OTAs</span>
+    <div class="kd-ribbon-actions">
+      <a class="kd-ribbon-wa" href={WA_HERO} target="_blank" rel="noopener noreferrer"
+        data-track-fn="trackBookingConversion"
+        data-track-args='["generate_lead","booking","kainchi_ribbon_whatsapp",{"conversion_type":"whatsapp","value":3999,"currency":"INR"}]'>WhatsApp Concierge</a>
+      <a class="kd-ribbon-call" href={`tel:${PHONE_TEL}`}
+        data-track-fn="trackBookingConversion"
+        data-track-args='["phone_call_click","engagement","kainchi_ribbon_phone_call",{"conversion_type":"phone","phone_number":"7505029696"}]'>Direct Desk: {PHONE_DISPLAY}</a>
+    </div>
+  </div>
+
+  <section class="kd-hero wp-pine-surface">
+    <Image src={heroImg} alt="Cloud-filled valley seen from Whispering Pines Resort, Malla Ramgarh, on the route to Kainchi Dham"
+      widths={[640, 1024, 1600, 2200]} sizes="100vw" quality={70} format="webp" loading="eager" fetchpriority="high" />
+    <div class="kd-hero-copy">
+      <p class="kd-badge">★ 4.6 (428 Verified Google Reviews) · 22 km (45 mins) from Kainchi Dham</p>
+      <h1>4-Star Hotel &amp; Peaceful Resort <span>Near Kainchi Dham Ashram</span></h1>
+      <p class="kd-lead">
+        Most hotels near Kainchi Dham sit on the noisy roadside by the ashram. We are 22 km away on a quiet pine and
+        orchard ridge in Malla Ramgarh — a smooth 45-minute morning darshan drive via Bhowali, with gated parking for
+        25+ cars, pure-veg and satvik dining, and senior-friendly ground-floor rooms. A real resort near Kainchi Dham to
+        sleep in, rather than a room above a shopfront.
+      </p>
+
+      <div class="kd-tariff">
+        <div>
+          <span class="kd-tariff-label">Direct host tariff</span>
+          <strong class="kd-tariff-price">From ₹3,999 / night</strong>
+          <span class="kd-tariff-note">incl. breakfast</span>
+        </div>
+        <span class="kd-tariff-save">Save up to 20% direct vs OTAs</span>
+      </div>
+
+      <div class="kd-ctas">
+        <a class="kd-btn kd-call" href={`tel:${PHONE_TEL}`}
+          data-track-fn="trackBookingConversion"
+          data-track-args='["phone_call_click","engagement","kainchi_hero_phone_call",{"conversion_type":"phone","phone_number":"7505029696"}]'>
+          Call Desk: {PHONE_DISPLAY}
+        </a>
+        <a class="kd-btn kd-wa" href={WA_HERO} target="_blank" rel="noopener noreferrer"
+          data-track-fn="trackBookingConversion"
+          data-track-args='["generate_lead","booking","kainchi_hero_whatsapp",{"conversion_type":"whatsapp","value":3999,"currency":"INR"}]'>
+          WhatsApp (Up to 20% Off)
+        </a>
+        <a class="kd-btn kd-book" href={BOOKING_ENGINE_URL} target="_blank" rel="noopener noreferrer"
+          data-track-fn="trackBookingConversion"
+          data-track-args='["begin_checkout","booking","kainchi_hero_checkout",{"conversion_type":"bookingjini"}]'>
+          Book Online
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Four pilgrim trust cards -->
+  <section class="kd-section">
+    <div class="kd-wrap">
+      <header class="kd-head">
+        <span class="kd-label">Built around the darshan trip</span>
+        <h2>What pilgrim families actually ask us first</h2>
+      </header>
+      <div class="kd-grid4">
+        {trust.map((t) => (
+          <div class="kd-card">
+            <h3>{t.title}</h3>
+            <p>{t.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Four room & villa tariff cards -->
+  <section class="kd-section kd-dark wp-pine-surface">
+    <div class="kd-wrap">
+      <header class="kd-head">
+        <span class="kd-label">Rooms &amp; villa</span>
+        <h2>Pick your room, then call the desk</h2>
+        <p>All tariffs include breakfast. Every room faces the 180° Nanda Devi and Trishul snow line.</p>
+      </header>
+      <div class="kd-grid4">
+        {rooms.map((r) => (
+          <div class="kd-room">
+            <Image src={r.img} alt={`${r.name} at Whispering Pines Resort, Malla Ramgarh, near Kainchi Dham`}
+              widths={[480, 800]} sizes="(max-width: 559px) 86vw, (max-width: 1000px) 46vw, 280px" quality={72} format="webp" />
+            <h3>{r.name}</h3>
+            <p class="kd-price">{r.price} <span>/ night incl. breakfast</span></p>
+            <p class="kd-meta">{r.meta}</p>
+            <div class="kd-room-ctas">
+              <a class="kd-mini kd-mini-call" href={`tel:${PHONE_TEL}`}
+                data-track-fn="trackBookingConversion"
+                data-track-args={`["phone_call_click","engagement","kainchi_room_phone_call",{"conversion_type":"phone","phone_number":"7505029696","room":"${r.name}"}]`}>
+                Call Desk
+              </a>
+              <a class="kd-mini kd-mini-wa" href={wa(`Hi! I am visiting Kainchi Dham and would like the ${r.name} (${r.price} / night incl. breakfast) at Whispering Pines Resort. Please confirm availability and the direct rate.`)}
+                target="_blank" rel="noopener noreferrer"
+                data-track-fn="trackBookingConversion"
+                data-track-args={`["generate_lead","booking","kainchi_room_whatsapp",{"conversion_type":"whatsapp","room":"${r.name}","currency":"INR"}]`}>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Direct vs OTA perks -->
+  <section class="kd-section">
+    <div class="kd-wrap">
+      <header class="kd-head">
+        <span class="kd-label">Direct vs OTA</span>
+        <h2>What the front desk gives you that an app cannot</h2>
+      </header>
+      <div class="kd-grid4">
+        {perks.map((p) => (
+          <div class="kd-card kd-perk">
+            <h3>{p.title}</h3>
+            <p>{p.text}</p>
+          </div>
+        ))}
+      </div>
+      <p class="kd-center">
+        <a class="kd-btn kd-call" href={`tel:${PHONE_TEL}`}
+          data-track-fn="trackBookingConversion"
+          data-track-args='["phone_call_click","engagement","kainchi_perks_phone_call",{"conversion_type":"phone","phone_number":"7505029696"}]'>
+          Call Desk: {PHONE_DISPLAY}
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Pilgrim FAQs -->
+  <section class="kd-section kd-faq-section">
+    <div class="kd-wrap kd-narrow">
+      <header class="kd-head">
+        <span class="kd-label">Before you drive up</span>
+        <h2>Darshan trip questions</h2>
+      </header>
+      {faqs.map((f, i) => (
+        <details class="kd-faq" open={i === 0}>
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+      <p class="kd-center kd-faq-cta">
+        Still deciding? Talk to the host desk directly —
+        <a href={`tel:${PHONE_TEL}`}
+          data-track-fn="trackBookingConversion"
+          data-track-args='["phone_call_click","engagement","kainchi_faq_phone_call",{"conversion_type":"phone","phone_number":"7505029696"}]'>{PHONE_DISPLAY}</a>
+      </p>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Tokens and section rhythm match the homepage (components/home/LuxuryHome.astro). */
+  .kd-wrap { width: min(1200px, 100% - 32px); margin-inline: auto; }
+  .kd-narrow { max-width: 760px; }
+  .kd-center { text-align: center; }
+  .kd-section { padding-block: clamp(56px, 8vw, 112px); }
+  .kd-dark { color: var(--color-cream); }
+  .kd-section h2 { font-family: var(--font-display); font-weight: 500; font-size: clamp(28px, 3.6vw, 46px); line-height: 1.15; margin: 0 0 .4em; color: var(--color-pine); }
+  .kd-dark h2 { color: var(--color-cream); }
+  .kd-head { text-align: center; margin-bottom: 48px; }
+  .kd-head p { color: var(--color-ink); margin: 0; }
+  .kd-dark .kd-head p { color: rgb(250 249 246 / .8); }
+  .kd-label { display: block; font: 600 12px/1.4 var(--font-sans); letter-spacing: .2em; text-transform: uppercase; color: var(--color-brass-ink); margin-bottom: 14px; }
+  .kd-dark .kd-label { color: var(--color-brass); }
+  h3 { font-family: var(--font-display); font-weight: 500; font-size: 22px; line-height: 1.25; margin: 0 0 .4em; }
+
+  /* ribbon */
+  .kd-ribbon { background: var(--color-pine-deep); color: var(--color-cream); display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 20px; padding: 10px 16px; text-align: center; }
+  .kd-ribbon-text { font: 600 12px/1.4 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--color-brass); }
+  .kd-ribbon-actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  .kd-ribbon-wa, .kd-ribbon-call { font: 700 12px/1 var(--font-sans); letter-spacing: .06em; padding: 9px 14px; border-radius: 2px; }
+  .kd-ribbon-wa { background: #1EBE5D; color: #fff; }
+  .kd-ribbon-call { background: var(--color-cream); color: var(--color-pine); border: 2px solid var(--color-brass); }
+
+  /* hero */
+  .kd-hero { position: relative; min-height: 86svh; display: grid; align-items: end; color: var(--color-cream); overflow: hidden; }
+  .kd-hero :global(img) { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 70% center; }
+  .kd-hero::after { content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(to bottom, rgb(10 33 24 / .72), rgb(10 33 24 / .45) 30%, rgb(14 44 33 / .92)); }
+  .kd-hero-copy { position: relative; z-index: 1; width: min(880px, 100% - 32px); margin-inline: auto; padding-block: clamp(40px, 7vw, 88px); text-align: center; }
+  .kd-badge { display: inline-block; font: 600 12px/1.5 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--color-brass); border: 1px solid rgb(176 150 109 / .5); border-radius: 999px; padding: 8px 16px; margin: 0 0 20px; }
+  .kd-hero h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(30px, 5vw, 60px); line-height: 1.12; margin: 0 0 18px; color: var(--color-cream); }
+  .kd-hero h1 span { display: block; font-weight: 400; }
+  .kd-lead { font-size: 16px; line-height: 1.7; color: rgb(250 249 246 / .92); max-width: 68ch; margin: 0 auto 26px; }
+
+  .kd-tariff { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; text-align: left; max-width: 560px; margin: 0 auto 24px; padding: 18px 20px; background: rgb(10 33 24 / .72); border: 1px solid rgb(176 150 109 / .45); border-radius: 2px; }
+  .kd-tariff-label { display: block; font: 600 10px/1.4 var(--font-sans); letter-spacing: .2em; text-transform: uppercase; color: var(--color-brass); }
+  .kd-tariff-price { display: block; font: 700 26px/1.2 var(--font-sans); color: #fff; }
+  .kd-tariff-note { font: 400 12px/1.4 var(--font-sans); color: rgb(250 249 246 / .75); }
+  .kd-tariff-save { font: 700 12px/1 var(--font-sans); letter-spacing: .06em; text-transform: uppercase; color: #6EE7A8; border: 1px solid rgb(110 231 168 / .4); background: rgb(110 231 168 / .12); padding: 9px 12px; border-radius: 2px; }
+
+  .kd-ctas { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .kd-btn { display: inline-block; padding: 16px 26px; font: 700 13px/1 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; border-radius: 2px; transition: background-color .3s, color .3s; }
+  /* Call is the primary mobile action: highest contrast on the page. */
+  .kd-call { background: #FAF7F2; color: #03110B; border: 2px solid var(--color-brass); }
+  .kd-call:hover { background: var(--color-brass-light); }
+  .kd-wa { background: #1EBE5D; color: #fff; }
+  .kd-wa:hover { background: #17A350; }
+  .kd-book { background: var(--color-brass); color: var(--color-pine); }
+  .kd-book:hover { background: var(--color-brass-light); }
+
+  /* cards */
+  .kd-grid4 { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .kd-card { background: #fff; border: 1px solid rgb(138 111 74 / .28); border-radius: 2px; padding: 24px; }
+  .kd-card h3 { color: var(--color-pine); }
+  .kd-card p { margin: 0; font-size: 14px; line-height: 1.7; color: var(--color-ink); }
+
+  .kd-room { background: rgb(10 33 24 / .55); border: 1px solid rgb(176 150 109 / .35); border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; }
+  .kd-room :global(img) { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .kd-room h3 { margin: 18px 18px 6px; color: var(--color-cream); }
+  .kd-price { margin: 0 18px 4px; font: 700 20px/1.2 var(--font-sans); color: #fff; }
+  .kd-price span { font: 400 12px/1.4 var(--font-sans); color: rgb(250 249 246 / .75); }
+  .kd-meta { margin: 0 18px 16px; font-size: 13px; color: rgb(250 249 246 / .75); }
+  .kd-room-ctas { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: auto 18px 18px; }
+  .kd-mini { text-align: center; padding: 12px 8px; font: 700 11px/1 var(--font-sans); letter-spacing: .06em; text-transform: uppercase; border-radius: 2px; }
+  .kd-mini-call { background: #FAF7F2; color: #03110B; border: 2px solid var(--color-brass); }
+  .kd-mini-wa { background: #1EBE5D; color: #fff; }
+
+  /* FAQ */
+  .kd-faq-section { background: #F3F0EA; }
+  .kd-faq { background: #fff; border: 1px solid rgb(138 111 74 / .28); border-radius: 2px; padding: 18px 20px; margin-bottom: 12px; }
+  .kd-faq summary { font-family: var(--font-display); font-size: 18px; line-height: 1.35; color: var(--color-pine); cursor: pointer; }
+  .kd-faq p { margin: 12px 0 0; font-size: 14px; line-height: 1.75; color: var(--color-ink); }
+  .kd-faq-cta { margin-top: 28px; font-size: 14px; color: var(--color-ink); }
+  .kd-faq-cta a { font-weight: 700; color: var(--color-brass-ink); text-decoration: underline; text-underline-offset: 4px; }
+</style>

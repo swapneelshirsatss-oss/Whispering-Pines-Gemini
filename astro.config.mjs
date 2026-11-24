@@ -34,6 +34,7 @@ function indexNowIntegration() {
 
   const excludedRedirectPaths = new Set([
     '/404/',
+    '/kainchi-dham-stay/',
     '/book-direct/',
     '/corporate-retreats-mukteshwar/',
     '/stay-near-mukteshwar-kainchi-dham/',
@@ -148,6 +149,7 @@ export default defineConfig({
       filter: (page) =>
         !page.includes('/corporate-retreats-mukteshwar') &&
         !page.includes('/book-direct') &&
+        !page.includes('/kainchi-dham-stay') &&
         !page.includes('/404'),
     }),
     masterSitemap(),
