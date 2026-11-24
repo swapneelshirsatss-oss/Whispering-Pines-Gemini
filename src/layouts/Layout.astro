@@ -37,32 +37,91 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
     })(window,document,'script','dataLayer','GTM-PL8FVLPX');</script>
     <!-- End Google Tag Manager -->
 
-    <!-- Attribution Persistence for Google Ads / UTM tracking across all sessions -->
+    <!-- Attribution Persistence & Global Google Ads / GTM Conversion Dispatcher -->
     <script is:inline>
-      try {
-        var urlParams = new URLSearchParams(window.location.search);
-        var gclid = urlParams.get('gclid');
-        var gbraid = urlParams.get('gbraid');
-        var wbraid = urlParams.get('wbraid');
-        var utmSource = urlParams.get('utm_source');
-        var utmCampaign = urlParams.get('utm_campaign');
-        var utmMedium = urlParams.get('utm_medium');
-        var utmContent = urlParams.get('utm_content');
+      (function() {
+        var ADS_ID = 'AW-18455442099';
+        var ADS_PHONE = 'AW-18455442099/Vc_dCNLMo_UcEN7JhfND';
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = window.gtag || function() { window.dataLayer.push(arguments); };
 
-        if (gclid || gbraid || wbraid || utmSource || utmCampaign) {
-          var attribution = {
-            gclid: gclid || '',
-            gbraid: gbraid || '',
-            wbraid: wbraid || '',
-            utm_source: utmSource || '',
-            utm_campaign: utmCampaign || '',
-            utm_medium: utmMedium || '',
-            utm_content: utmContent || '',
-            timestamp: Date.now()
-          };
-          sessionStorage.setItem('wpr_ads_attribution', JSON.stringify(attribution));
-        }
-      } catch (e) {}
+        try {
+          var urlParams = new URLSearchParams(window.location.search);
+          var gclid = urlParams.get('gclid');
+          var gbraid = urlParams.get('gbraid');
+          var wbraid = urlParams.get('wbraid');
+          var utmSource = urlParams.get('utm_source');
+          var utmCampaign = urlParams.get('utm_campaign');
+          var utmMedium = urlParams.get('utm_medium');
+          var utmContent = urlParams.get('utm_content');
+
+          if (gclid || gbraid || wbraid || utmSource || utmCampaign) {
+            var attribution = {
+              gclid: gclid || '',
+              gbraid: gbraid || '',
+              wbraid: wbraid || '',
+              utm_source: utmSource || '',
+              utm_campaign: utmCampaign || '',
+              utm_medium: utmMedium || '',
+              utm_content: utmContent || '',
+              timestamp: Date.now()
+            };
+            sessionStorage.setItem('wpr_ads_attribution', JSON.stringify(attribution));
+          }
+        } catch (e) {}
+
+        window.trackBookingConversion = function(action, category, label, extra) {
+          extra = extra || {};
+          window.dataLayer = window.dataLayer || [];
+
+          try {
+            var rawAttr = sessionStorage.getItem('wpr_ads_attribution');
+            if (rawAttr) {
+              var saved = JSON.parse(rawAttr);
+              if (saved.gclid && !extra.gclid) extra.gclid = saved.gclid;
+              if (saved.gbraid && !extra.gbraid) extra.gbraid = saved.gbraid;
+              if (saved.wbraid && !extra.wbraid) extra.wbraid = saved.wbraid;
+              if (saved.utm_source && !extra.utm_source) extra.utm_source = saved.utm_source;
+              if (saved.utm_campaign && !extra.utm_campaign) extra.utm_campaign = saved.utm_campaign;
+            }
+          } catch (e) {}
+
+          var payload = Object.assign({
+            event: action,
+            event_category: category || 'booking',
+            event_label: label || 'direct_booking',
+            page_path: window.location.pathname
+          }, extra);
+
+          window.dataLayer.push(payload);
+
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', action, payload);
+
+            if (action === 'generate_lead') {
+              window.gtag('event', 'conversion', {
+                send_to: ADS_ID,
+                value: extra.value,
+                currency: extra.currency || (extra.value ? 'INR' : undefined),
+                transaction_id: 'lead_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7)
+              });
+            } else if (action === 'phone_call_click') {
+              window.gtag('event', 'conversion', {
+                send_to: ADS_PHONE,
+                phone_conversion_number: extra.phone_number || '7505029696'
+              });
+            } else if (action === 'begin_checkout') {
+              window.gtag('event', 'conversion', {
+                send_to: ADS_ID,
+                value: extra.value,
+                currency: extra.currency || (extra.value ? 'INR' : undefined)
+              });
+            }
+          }
+        };
+
+        window.trackAdsConversion = window.trackBookingConversion;
+      })();
     </script>
     
     <meta charset="UTF-8" />

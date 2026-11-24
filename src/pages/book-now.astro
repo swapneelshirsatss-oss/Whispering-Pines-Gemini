@@ -115,89 +115,6 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
       ]
     })} />
 
-    <!-- Google Ads Conversion Mapping & Session Attribution Engine -->
-    <script is:inline>
-      (function() {
-        var ADS_ID = 'AW-18455442099';
-        var ADS_PHONE = 'AW-18455442099/Vc_dCNLMo_UcEN7JhfND';
-
-        // 1. Session-Level Attribution Store
-        try {
-          var params = new URLSearchParams(window.location.search);
-          var gclid = params.get('gclid') || params.get('gbraid') || params.get('wbraid');
-          var utmSource = params.get('utm_source');
-          var utmCampaign = params.get('utm_campaign');
-          var utmMedium = params.get('utm_medium');
-          var utmContent = params.get('utm_content');
-
-          if (gclid || utmSource || utmCampaign) {
-            var attribution = {
-              gclid: gclid || '',
-              utm_source: utmSource || '',
-              utm_campaign: utmCampaign || '',
-              utm_medium: utmMedium || '',
-              utm_content: utmContent || '',
-              timestamp: Date.now()
-            };
-            sessionStorage.setItem('wpr_ads_attribution', JSON.stringify(attribution));
-          }
-        } catch (e) {}
-
-        // 2. Global Universal Conversion Dispatcher
-        window.trackBookingConversion = function(action, category, label, extra) {
-          extra = extra || {};
-          window.dataLayer = window.dataLayer || [];
-
-          // Enrich with stored attribution if available
-          try {
-            var rawAttr = sessionStorage.getItem('wpr_ads_attribution');
-            if (rawAttr) {
-              var saved = JSON.parse(rawAttr);
-              if (saved.gclid && !extra.gclid) extra.gclid = saved.gclid;
-              if (saved.utm_source && !extra.utm_source) extra.utm_source = saved.utm_source;
-              if (saved.utm_campaign && !extra.utm_campaign) extra.utm_campaign = saved.utm_campaign;
-            }
-          } catch (e) {}
-
-          var payload = Object.assign({
-            event: action,
-            event_category: category || 'booking',
-            event_label: label || 'direct_booking',
-          }, extra);
-
-          // Push to GTM dataLayer
-          window.dataLayer.push(payload);
-
-          // Dispatch to Google Tag (gtag)
-          if (typeof window.gtag === 'function') {
-            window.gtag('event', action, payload);
-
-            if (action === 'generate_lead') {
-              window.gtag('event', 'conversion', {
-                send_to: ADS_ID,
-                value: extra.value,
-                currency: extra.currency || (extra.value ? 'INR' : undefined),
-                transaction_id: 'lead_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7)
-              });
-            } else if (action === 'phone_call_click') {
-              window.gtag('event', 'conversion', {
-                send_to: ADS_PHONE,
-                phone_conversion_number: extra.phone_number || '7505029696'
-              });
-            } else if (action === 'begin_checkout') {
-              window.gtag('event', 'conversion', {
-                send_to: ADS_ID,
-                value: extra.value,
-                currency: extra.currency || (extra.value ? 'INR' : undefined)
-              });
-            }
-          }
-        };
-
-        // Backward compatibility alias
-        window.trackAdsConversion = window.trackBookingConversion;
-      })();
-    </script>
   </Fragment>
 
   <!-- =========================================================================
@@ -239,9 +156,9 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
         <a
           href={`tel:${RESORT_PHONE_TEL}`}
           data-track-fn="trackBookingConversion" data-track-args='["phone_call_click","engagement","top_ribbon_phone_call",{"conversion_type":"phone","phone_number":"7505029696"}]'
-          class="inline-flex items-center gap-1.5 font-sans text-xs font-bold text-[#7A6038] hover:text-[#FAF7F2] transition-colors underline decoration-[#7A6038]/50 underline-offset-4"
+          class="inline-flex items-center gap-1.5 font-sans text-xs font-bold text-[#E5CFA0] hover:text-[#FAF7F2] transition-colors underline decoration-[#E5CFA0]/60 underline-offset-4"
         >
-          <svg class="w-3.5 h-3.5 text-[#7A6038]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-3.5 h-3.5 text-[#E5CFA0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
           </svg>
           <span class="hidden sm:inline">Direct Desk:</span> {RESORT_PHONE_DISPLAY}
@@ -308,7 +225,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
 
       <!-- Editorial Subcopy (Concrete, Grounded, Zero AI Slop) -->
       <p class="font-sans text-base sm:text-lg md:text-xl text-[#FAF7F2]/95 font-light max-w-2xl mx-auto leading-relaxed mb-10 text-pretty drop-shadow-[0_1px_6px_rgba(0,0,0,0.6)]">
-        Positioned directly on the smooth, paved Mukteshwar highway with 180° unobstructed Nanda Devi vistas. Enjoy pristine sanitised rooms, 24/7 high-pressure hot water geysers, 150 Mbps fiber Wi-Fi, and authentic home-style Kumaoni culinary heritage.
+        A 4-Star Resort Near Mukteshwar, positioned directly on the smooth, paved Mukteshwar highway with 180° unobstructed Nanda Devi vistas. Enjoy pristine sanitised rooms, 24/7 high-pressure hot water geysers, 150 Mbps fiber Wi-Fi, and authentic home-style Kumaoni culinary heritage.
       </p>
 
       <!-- The Taj-Inspired "Direct Resident Privilege Pass" (Price Disparity Card) -->
@@ -341,23 +258,21 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
         </div>
       </div>
 
-      <!-- High-Intent Primary Conversion CTAs (BookingJini + WhatsApp + Call Desk) -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 max-w-2xl mx-auto mb-8">
-        <!-- BookingJini Instant Online Booking CTA -->
+      <!-- High-Intent Primary Conversion CTAs (Call Desk + WhatsApp + BookingJini) -->
+      <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3.5 max-w-3xl mx-auto mb-8">
+        <!-- Direct Phone Call CTA (High-Contrast Primary Mobile Driver) -->
         <a
-          href={BOOKING_ENGINE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          data-track-fn="trackBookingConversion" data-track-args='["begin_checkout","booking","hero_bookingjini_checkout",{"conversion_type":"bookingjini"}]'
-          class="w-full sm:w-auto flex-1 bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-bold py-4 px-6 rounded-sm shadow-md flex items-center justify-center gap-2 text-sm uppercase tracking-wider active:scale-[0.98] transition-all text-center"
+          href={`tel:${RESORT_PHONE_TEL}`}
+          data-track-fn="trackBookingConversion" data-track-args='["phone_call_click","engagement","hero_phone_call",{"conversion_type":"phone","phone_number":"7505029696"}]'
+          class="w-full sm:w-auto flex-1 bg-[#FAF7F2] hover:bg-[#E5CFA0] text-[#03110B] border-2 border-[#B0966D] font-bold py-4 px-5 rounded-sm shadow-[0_8px_24px_rgba(0,0,0,0.35)] flex items-center justify-center gap-2 text-sm uppercase tracking-wider active:scale-[0.98] transition-all text-center"
         >
-          <svg class="w-4 h-4 text-[#03110B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          <svg class="w-4 h-4 text-[#03110B] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
           </svg>
-          <span>Book Online</span>
+          <span>Call Desk: {RESORT_PHONE_DISPLAY}</span>
         </a>
 
-        <!-- WhatsApp Concierge CTA (Primary Hero Driver) -->
+        <!-- WhatsApp Concierge CTA -->
         <a
           href="https://wa.me/917505029696?text=Hi!%20I%20am%20viewing%20your%20direct%20booking%20page%20for%20Whispering%20Pines%20Resort.%20Could%20you%20please%20share%20room%20availability%20and%20your%20best%20direct%20rates%20for%20an%20upcoming%20stay%3F"
           target="_blank"
@@ -368,22 +283,24 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           <span class="relative flex h-2.5 w-2.5">
             <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
           </span>
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
           </svg>
-          <span class="tracking-wide">WhatsApp (Save up to 20% Direct)</span>
+          <span class="tracking-wide">WhatsApp (Up to 20% Off)</span>
         </a>
 
-        <!-- Direct Phone Call CTA -->
+        <!-- BookingJini Instant Online Booking CTA -->
         <a
-          href={`tel:${RESORT_PHONE_TEL}`}
-          data-track-fn="trackBookingConversion" data-track-args='["phone_call_click","engagement","hero_phone_call",{"conversion_type":"phone","phone_number":"7505029696"}]'
-          class="w-full sm:w-auto bg-[#042418] hover:bg-[#FAF7F2] text-[#FAF7F2] hover:text-[#03110B] border border-[#8A6F4A]/60 hover:border-[#FAF7F2] font-bold py-4 px-5 rounded-sm shadow-md flex items-center justify-center gap-2 text-sm uppercase tracking-wider transition-all text-center"
+          href={BOOKING_ENGINE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-track-fn="trackBookingConversion" data-track-args='["begin_checkout","booking","hero_bookingjini_checkout",{"conversion_type":"bookingjini"}]'
+          class="w-full sm:w-auto flex-1 bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-bold py-4 px-6 rounded-sm shadow-md flex items-center justify-center gap-2 text-sm uppercase tracking-wider active:scale-[0.98] transition-all text-center"
         >
-          <svg class="w-4 h-4 text-[#7A6038]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          <svg class="w-4 h-4 text-[#03110B] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
-          <span>Call Desk</span>
+          <span>Book Online</span>
         </a>
       </div>
 
@@ -768,7 +685,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
         <blockquote class="bg-white border-l-4 border-[#8A6F4A] p-6 rounded-r-sm shadow-sm">
           <div class="flex items-center gap-1 text-[#7A6038] text-sm mb-3">★★★★★</div>
           <p class="font-sans text-sm text-[#151E1A] leading-relaxed mb-4">
-            "I saw the listing on MakeMyTrip, but decided to call their desk directly. They offered a rate 25% lower than the app, gave us a complimentary hot tea basket, and let us check in early at 10 AM. Wi-Fi was fast enough for a full day of remote client video calls."
+            "I saw the listing on MakeMyTrip, but decided to call their desk directly. They offered a rate up to 20% lower than the app, gave us a complimentary hot tea basket, and let us check in early at 10 AM. Wi-Fi was fast enough for a full day of remote client video calls."
           </p>
           <footer class="flex items-center justify-between text-xs text-[#44564E] font-sans pt-3 border-t border-gray-100">
             <span class="font-bold text-[#03110B]">— Vikram S., Noida</span>
@@ -1601,7 +1518,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
             <span class="text-[#7A6038] font-mono text-lg transition-transform group-open:rotate-45">+</span>
           </summary>
           <p class="text-sm sm:text-sm text-[#44564E] leading-relaxed mt-3 pt-3 border-t border-gray-100">
-            Online Travel Agencies (OTAs) charge hotels up to 25% in commissions and tack on convenience fees at checkout. By booking directly with our property front desk via WhatsApp or phone, you eliminate intermediary fees and enjoy up to 20% off, our best rate guarantee, plus free welcome high tea.
+            Online Travel Agencies (OTAs) charge hotels high platform commissions and tack on convenience fees at checkout. By booking directly with our property front desk via WhatsApp or phone, you eliminate intermediary fees and enjoy up to 20% off, our best rate guarantee, plus free welcome high tea.
           </p>
         </details>
 

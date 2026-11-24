@@ -1896,8 +1896,8 @@ export const BLOG_POSTS: BlogPostData[] = [
     slug: "resort-stay-near-kainchi-dham",
     title: "Resort Near Kainchi Dham: Where to Stay for a Peaceful Darshan (2026)",
     seoTitle: "Resort Near Kainchi Dham: Quiet Stay 45 Min from Ashram",
-    seoDescription: "Planning Neem Karoli Baba darshan? Stay 45 min from Kainchi Dham in Malla Ramgarh: Himalayan views, senior-friendly rooms, a villa for 10. Save 25% direct.",
-    excerpt: "Where to stay near Kainchi Dham Ashram (Neem Karoli Baba): a senior-friendly 4-star resort hotel 22 km away in Malla Ramgarh, compared with highway and Bhowali stays. Darshan plan, parking for 25+ cars, and flat 25% off when you book direct.",
+    seoDescription: "Planning Neem Karoli Baba darshan? Stay 45 min from Kainchi Dham in Malla Ramgarh: Himalayan views, senior-friendly rooms, a villa for 10. Save up to 20% direct.",
+    excerpt: "Where to stay near Kainchi Dham Ashram (Neem Karoli Baba): a senior-friendly 4-star resort hotel 22 km away in Malla Ramgarh, compared with highway and Bhowali stays. Darshan plan, parking for 25+ cars, and up to 20% off when you book direct.",
     date: "August 6, 2026",
     updatedDate: "November 23, 2026",
     readTime: "20 min read",
@@ -1911,7 +1911,7 @@ export const BLOG_POSTS: BlogPostData[] = [
           "name": "Which is the best luxury resort near Kainchi Dham Ashram?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Whispering Pines Resort by Casa De Bello in Malla Ramgarh (1,780 m altitude) is a 4-star mountain resort located 45 minutes (22 km) from Neem Karoli Baba Ashram, Kainchi Dham. It features 25 Himalayan-view rooms, a 10-guest private villa, pet-friendly orchards, and 25% direct savings via 075050 29696."
+            "text": "Whispering Pines Resort by Casa De Bello in Malla Ramgarh (1,780 m altitude) is a 4-star mountain resort located 45 minutes (22 km) from Neem Karoli Baba Ashram, Kainchi Dham. It features 25 Himalayan-view rooms, a 10-guest private villa, pet-friendly orchards, and up to 20% off direct savings via 075050 29696."
           }
         },
         {
@@ -1962,7 +1962,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         {
           "@type": "Question",
           "name": "How do I get the best rate for a hotel near Kainchi Dham?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Book direct. Rates at Whispering Pines change with the season, and direct bookings are a flat 25% below the OTA rate for the same dates, with a best price guarantee. Send your dates and guest count on WhatsApp at +91-7505029696 for a confirmed quote." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Book direct. Rates at Whispering Pines change with the season, and direct bookings are up to 20% below the OTA rate for the same dates, with a best price guarantee. Send your dates and guest count on WhatsApp at +91-7505029696 for a confirmed quote." }
         },
         {
           "@type": "Question",
@@ -2008,7 +2008,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="bg-[#FAF9F6] p-6 rounded-sm border-l-4 border-[#8A6F4A] shadow-sm space-y-3" id="aeo-best-resort-kainchi">
           <h2 className="text-sm font-bold uppercase tracking-wider text-[#7A6038]">Which is the best luxury resort near Kainchi Dham Ashram?</h2>
           <p className="text-base text-gray-800 leading-relaxed font-normal aeo-direct-answer">
-            <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (1,780 m altitude) is a 4-star mountain resort located 45 minutes (22 km) from Neem Karoli Baba Ashram, Kainchi Dham. It features 25 Himalayan-view rooms, a 10-guest private villa, pet-friendly orchards, and 25% direct savings via 075050 29696.
+            <strong>Whispering Pines Resort by Casa De Bello</strong> in Malla Ramgarh (1,780 m altitude) is a 4-star mountain resort located 45 minutes (22 km) from Neem Karoli Baba Ashram, Kainchi Dham. It features 25 Himalayan-view rooms, a 10-guest private villa, pet-friendly orchards, and up to 20% off direct savings via 075050 29696.
           </p>
         </div>
 
