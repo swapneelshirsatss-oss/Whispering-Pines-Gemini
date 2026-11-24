@@ -11,6 +11,8 @@ import diningImgSrc from '../assets/images/Restaurant-cafe-ramgarh.avif';
 import bathroomImgSrc from '../assets/images/delux-room-bathroom.avif';
 import viewImgSrc from '../assets/images/outside-view-from-resort-hotel.avif';
 import cedarImgSrc from '../assets/images/Group_booking_nainital_resort.avif';
+// Low-detail cloud-sea frame: the one photo in the library that stays readable behind text.
+import quoteImgSrc from '../assets/images/view-from-resort-cloud-sea.jpg';
 
 // Hero renders at opacity-30 behind two gradient scrims, so quality/width are tuned down:
 // the preloaded LCP bytes drop sharply with no visible difference.
@@ -23,6 +25,8 @@ const diningImg = await getImage({ src: diningImgSrc, format: 'webp', width: 900
 const bathroomImg = await getImage({ src: bathroomImgSrc, format: 'webp', width: 900, quality: 80 });
 const viewImg = await getImage({ src: viewImgSrc, format: 'webp', width: 900, quality: 80 });
 const cedarImg = await getImage({ src: cedarImgSrc, format: 'webp', width: 900, quality: 80 });
+const quoteImg = await getImage({ src: quoteImgSrc, format: 'webp', width: 1600, quality: 62 });
+const quoteImgMobile = await getImage({ src: quoteImgSrc, format: 'webp', width: 800, quality: 58 });
 
 // Room cards ordered entry tariff -> flagship so mobile searchers see the ₹3,999 rate first.
 // Tariffs are the approved client-profile rates, all inclusive of breakfast.
@@ -223,7 +227,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
         <img
           src={heroImage.src}
           alt="Panoramic private balcony view of Nanda Devi Himalayan mountain range from Whispering Pines Resort Ramgarh"
-          class="w-full h-full object-cover opacity-30"
+          class="w-full h-full object-cover opacity-50"
           loading="eager" fetchpriority="high"
           decoding="async"
           width="1800"
@@ -232,7 +236,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
       </picture>
       {/* Dual Atmospheric Scrims for Razor-Sharp Typography Legibility */}
       <div class="absolute inset-0 bg-gradient-to-t from-[#03110B] via-[#03110B]/75 to-[#03110B]/85"></div>
-      <div class="absolute inset-0 bg-radial from-transparent via-[#03110B]/40 to-[#03110B]/95 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-radial from-[#03110B]/30 via-[#03110B]/55 to-[#03110B]/95 pointer-events-none"></div>
     </div>
 
     <!-- Aristocratic Watermark Filigree Border -->
@@ -361,18 +365,18 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
   <!-- =========================================================================
        SECTION 3: CURATED SUITES & VILLA COLLECTION (CLUB MAHINDRA STYLE SHOWCASE)
        ========================================================================= -->
-  <section id="accommodations" class="py-20 lg:py-28 bg-[#03160E] text-[#FAF7F2] border-b border-[#B0966D]/30">
+  <section id="accommodations" class="py-20 lg:py-28 bg-[#FAF9F6] text-[#2C3531] border-b border-[#8A6F4A]/20">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-10">
-        <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#C4A77D] uppercase block mb-3">
+        <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#7A6038] uppercase block mb-3">
           Rooms, Suites &amp; Private Villa
         </span>
-        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight">
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0E2C21] leading-tight">
           Rooms, Skylight Suites &amp; Villa at Our Resort in Mukteshwar
         </h2>
         <div class="w-16 h-0.5 bg-[#B0966D] mx-auto my-4"></div>
-        <p class="text-sm text-[#FAF7F2]/80 leading-relaxed">
+        <p class="text-sm text-[#44564E] leading-relaxed">
           Every residence below is at Whispering Pines Resort, Malla Ramgarh (Mukteshwar Rd). All tariffs include breakfast.
         </p>
       </div>
@@ -381,7 +385,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12" id="accommodations-grid">
         
         {ROOM_CARDS.map((room) => (
-        <div class={`accommodation-card bg-[#062116] rounded-sm overflow-hidden shadow-md flex flex-col group ${room.featured ? 'border border-[#B0966D]/50 relative ring-2 ring-[#B0966D]/30' : 'border border-[#B0966D]/35'}`}>
+        <div class={`accommodation-card bg-white rounded-sm overflow-hidden shadow-md flex flex-col group ${room.featured ? 'border border-[#8A6F4A]/40 relative ring-2 ring-[#B0966D]/45' : 'border border-[#8A6F4A]/25'}`}>
           <div class="relative h-64 overflow-hidden">
             <Image
               src={room.img}
@@ -403,23 +407,23 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
             <div>
-              <span class="text-xs font-sans text-[#C4A77D] uppercase tracking-[0.1em] block mb-1">{room.eyebrow}</span>
-              <h3 class="font-display text-2xl font-semibold text-white mb-2">{room.name}</h3>
-              <p class="text-sm text-[#FAF7F2]/75 leading-relaxed mb-4">{room.text}</p>
-              <div class="flex flex-wrap gap-2 text-xs font-sans text-[#C4A77D] mb-6">
+              <span class="text-xs font-sans text-[#7A6038] uppercase tracking-[0.1em] block mb-1">{room.eyebrow}</span>
+              <h3 class="font-display text-2xl font-semibold text-[#0E2C21] mb-2">{room.name}</h3>
+              <p class="text-sm text-[#44564E] leading-relaxed mb-4">{room.text}</p>
+              <div class="flex flex-wrap gap-2 text-xs font-sans text-[#7A6038] mb-6">
                 {room.tags.map((tag) => (
-                  <span class="bg-[#03110B] px-2.5 py-1 rounded-sm border border-[#B0966D]/25">{tag}</span>
+                  <span class="bg-[#FAF9F6] px-2.5 py-1 rounded-sm border border-[#8A6F4A]/25">{tag}</span>
                 ))}
               </div>
             </div>
-            <div class="pt-4 border-t border-[#FAF7F2]/10 flex flex-col gap-3">
+            <div class="pt-4 border-t border-[#8A6F4A]/15 flex flex-col gap-3">
               <div class="flex items-end justify-between gap-2">
                 <div>
-                  <span class="text-xs font-sans text-[#FAF7F2]/70 uppercase block">Direct Resident Tariff</span>
-                  <span class="font-sans text-xl sm:text-2xl font-bold text-white">{room.price}</span>
-                  <span class="text-xs font-sans text-[#FAF7F2]/70"> / night incl. breakfast</span>
+                  <span class="text-xs font-sans text-[#44564E] uppercase block">Direct Resident Tariff</span>
+                  <span class="font-sans text-xl sm:text-2xl font-bold text-[#0E2C21]">{room.price}</span>
+                  <span class="text-xs font-sans text-[#44564E]"> / night incl. breakfast</span>
                 </div>
-                <span class="text-xs font-sans text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-sm shrink-0">
+                <span class="text-xs font-sans font-semibold text-emerald-800 bg-emerald-50 border border-emerald-700/30 px-2.5 py-1 rounded-sm shrink-0">
                   Save up to 20% Direct
                 </span>
               </div>
@@ -468,18 +472,18 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
   <!-- =========================================================================
        SECTION 4: THE DIRECT PRIVILEGE DOSSIER (OTA COMPARISON MATRIX)
        ========================================================================= -->
-  <section class="py-20 lg:py-28 bg-[#03110B] text-[#FAF7F2]">
+  <section class="py-20 lg:py-28 bg-[#E6E0D6] text-[#2C3531]">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#C4A77D] uppercase block mb-3">
+        <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#7A6038] uppercase block mb-3">
           Transparent Price Architecture
         </span>
-        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight">
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0E2C21] leading-tight">
           Why Direct Guests Rate Us Among the Best Hotels &amp; Resorts Near Mukteshwar
         </h2>
         <div class="w-16 h-0.5 bg-[#B0966D] mx-auto my-4"></div>
-        <p class="text-sm text-[#FAF7F2]/80 leading-relaxed">
+        <p class="text-sm text-[#44564E] leading-relaxed">
           OTA platforms charge property owners a commission on every transaction. When you contact our front desk directly, we cut out the tech middleman and pass those savings straight to you.
         </p>
       </div>
@@ -552,9 +556,51 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
   </section>
 
   <!-- =========================================================================
+       SECTION 4B: GUEST PULL-QUOTE BAND (text over photography)
+       Mirrors the homepage .lx-quote pattern: pine ground, low-detail photo at
+       ~50%, text in a narrow column above it. Breaks the dark/light rhythm and
+       drops third-party proof right after the price comparison.
+       ========================================================================= -->
+  <section class="relative overflow-hidden bg-[#0E2C21] text-[#FAF9F6] py-24 sm:py-32 lg:py-40">
+    <picture>
+      <source srcset={quoteImgMobile.src} media="(max-width: 768px)" type="image/webp" />
+      <img
+        src={quoteImg.src}
+        alt="Cloud-filled valley seen at sunrise from Whispering Pines Resort, Malla Ramgarh"
+        class="absolute inset-0 w-full h-full object-cover opacity-50"
+        loading="lazy" decoding="async" width="1600" height="1067"
+      />
+    </picture>
+    {/* Scrim keeps the pull-quote legible over the photo */}
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0A2118]/70 via-[#0A2118]/45 to-[#0A2118]/80 pointer-events-none"></div>
+
+    <blockquote class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+      <p class="font-display italic text-2xl sm:text-3xl md:text-4xl leading-snug text-[#FAF9F6] drop-shadow-[0_2px_14px_rgba(0,0,0,0.6)]">
+        &ldquo;The view was amazing, the staff and the owner were very sweet with their service.&rdquo;
+      </p>
+      <cite class="not-italic block mt-6 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-[#C4A77D]">
+        Khushi Joshi &middot; Google review
+      </cite>
+      <p class="mt-8 font-sans text-sm text-[#FAF9F6]/85">
+        4.6&#9733; from 428 verified Google reviews &mdash; and the owner you message is the one who answers.
+      </p>
+      <a
+        href={`tel:${RESORT_PHONE_TEL}`}
+        data-track-fn="trackBookingConversion" data-track-args='["phone_call_click","engagement","quote_band_phone_call",{"conversion_type":"phone","phone_number":"7505029696"}]'
+        class="inline-flex items-center gap-2 mt-7 bg-[#FAF7F2] hover:bg-[#E5CFA0] text-[#03110B] border-2 border-[#B0966D] font-bold font-sans text-xs uppercase tracking-[0.1em] min-h-12 py-4 px-8 rounded-sm shadow-[0_8px_24px_rgba(0,0,0,0.35)] transition-all active:scale-[0.98]"
+      >
+        <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        <span>Call Desk: {RESORT_PHONE_DISPLAY}</span>
+      </a>
+    </blockquote>
+  </section>
+
+  <!-- =========================================================================
        SECTION 5: MOUNTAIN ACCESSIBILITY & ROUTE DOSSIER (ZERO OFF-ROADING)
        ========================================================================= -->
-  <section class="py-20 lg:py-28 bg-[#FAF8F5] text-[#151E1A]">
+  <section class="py-20 lg:py-28 bg-[#FAF9F6] text-[#151E1A]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -641,7 +687,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
   <!-- =========================================================================
        SECTION 6: THE ROYAL CONCIERGE RATE CALCULATOR (INTERACTIVE ENGINE)
        ========================================================================= -->
-  <section id="reserve" class="py-20 lg:py-28 bg-[#03110B] text-[#FAF7F2] border-t border-[#B0966D]/30 relative">
+  <section id="reserve" class="py-20 lg:py-28 wp-pine-surface text-[#FAF7F2] border-t border-[#B0966D]/30 relative">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-14">
@@ -801,14 +847,19 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
   <!-- =========================================================================
        SECTION 7: HERITAGE DIRECT BOOKING FAQ ACCORDION
        ========================================================================= -->
-  <section class="py-20 lg:py-28 bg-[#FAF8F5] text-[#151E1A] border-t border-[#151E1A]/10">
+  <section class="py-20 lg:py-28 bg-[#FAF9F6] text-[#2C3531] border-t border-[#8A6F4A]/15">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto mb-14">
+      <div class="relative text-center max-w-2xl mx-auto mb-14">
+        {/* Type-as-texture: the altitude as a watermark behind the heading. Pure CSS, zero bytes. */}
+        <span
+          aria-hidden="true"
+          class="pointer-events-none select-none absolute inset-x-0 -top-7 font-display font-semibold text-[#0E2C21]/[0.05] text-[80px] sm:text-[128px] leading-none tracking-tight"
+        >1,780 m</span>
         <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#7A6038] uppercase block mb-2">
           Frequently Answered Inquiries
         </span>
-        <h2 class="font-display text-3xl font-semibold text-[#03110B]">
+        <h2 class="relative font-display text-3xl font-semibold text-[#0E2C21]">
           Direct Reservation Clarity
         </h2>
         <div class="w-16 h-0.5 bg-[#B0966D] mx-auto my-3"></div>
