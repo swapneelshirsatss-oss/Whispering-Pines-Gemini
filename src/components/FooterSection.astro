@@ -9,6 +9,10 @@ import { RESORT_CONTACT } from "../data";
 import { siFacebook, siInstagram, siYoutube, siTripadvisor } from 'simple-icons';
 import Logo from "./Logo.astro";
 
+// hideOurHotels: paid landing pages must not surface sister properties (Google Ads single-property focus).
+interface Props { hideOurHotels?: boolean }
+const { hideOurHotels = false } = Astro.props;
+
 const currentYear = new Date().getFullYear();
 
 const groups = [
@@ -162,6 +166,7 @@ const ourHotels = [
     </div>
 
     {/* Our hotels: sister properties on identical cream cards */}
+    {!hideOurHotels && (
     <div class="py-8 border-b border-[#FAF9F6]/10">
       <p class="text-xs uppercase tracking-[0.14em] text-[#C4A77D] font-semibold mb-4">Our hotels</p>
       <ul class="grid grid-cols-3 gap-3 md:gap-5 max-w-2xl">
@@ -178,6 +183,7 @@ const ourHotels = [
         ))}
       </ul>
     </div>
+    )}
 
     {/* Bottom bar */}
     <div class="pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-[#FAF9F6]/60">
