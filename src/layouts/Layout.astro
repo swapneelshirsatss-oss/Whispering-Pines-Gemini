@@ -276,10 +276,11 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
         <slot />
       </main>
 
-      <FooterSection />
+      {/* Paid landing pages stay single-property: no sister-hotel row (Google Ads focus). */}
+      <FooterSection hideOurHotels={Astro.url.pathname === '/kainchi-dham-stay/'} />
     </div>
 
     {Astro.url.pathname !== '/book-now/' && <FestiveOfferPopup />}
-    <StickyDirectBookingBar hideBar={pathname === '/book-now/'} />
+    <StickyDirectBookingBar />
   </body>
 </html>

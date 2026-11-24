@@ -1,0 +1,521 @@
+---
+// Paid-search landing page for the Kainchi Dham ad group (Google Ads only).
+// noindex + excluded from sitemap/IndexNow in astro.config.mjs and absent from nav/footer/llms.txt,
+// so /blog/resort-stay-near-kainchi-dham/ keeps 100% of the organic rankings for this keyword set.
+// Whispering Pines Resort only — no sister-property mentions anywhere in this file.
+// Palette and section rhythm follow src/pages/book-now.astro.
+import Layout from '../layouts/Layout.astro';
+import { Image, getImage } from 'astro:assets';
+
+import heroImgSrc from '../assets/images/view-from-resort-cloud-sea.jpg';
+import cedarImgSrc from '../assets/images/Group_booking_nainital_resort.avif';
+import familyImgSrc from '../assets/images/Family_Twin_Room_Near_nainital.avif';
+import suiteImgSrc from '../assets/images/Delux_room_Whispering_pines_mukteshwar.avif';
+import villaImgSrc from '../assets/images/villa_in_nanital.avif';
+
+// Hero renders at opacity-30 behind two gradient scrims, so quality/width are tuned down:
+// the preloaded LCP bytes drop sharply with no visible difference.
+const heroImage = await getImage({ src: heroImgSrc, format: 'webp', width: 1440, quality: 62 });
+const heroMobile = await getImage({ src: heroImgSrc, format: 'webp', width: 760, quality: 60 });
+
+const RESORT_PHONE_DISPLAY = "075050 29696";
+const RESORT_PHONE_TEL = "+917505029696";
+const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
+
+const waLink = (text: string) => `https://wa.me/917505029696?text=${encodeURIComponent(text)}`;
+const WA_HERO = waLink(
+  'Hi! I am planning a Kainchi Dham visit and would like to stay at Whispering Pines Resort, Malla Ramgarh. Please share room availability and your best direct tariff (up to 20% off direct).'
+);
+
+// Ascending tariff order so mobile searchers see ₹3,999 before ₹15,999. All rates include breakfast.
+const ROOM_CARDS = [
+  {
+    id: 'cedar', name: 'Executive Cedar Suite', price: '₹3,999', value: 3999,
+    img: cedarImgSrc, sleeps: 'Sleeps 2 to 3',
+    eyebrow: 'Malla Ramgarh • Entry Himalayan-View Suite',
+    alt: 'Executive Cedar Suite with cedar panelling and Himalayan views at Whispering Pines Resort, 22 km from Kainchi Dham',
+    text: 'Our most-booked room for couples and small families visiting the Neem Karoli Baba Ashram: cedar-panelled walls, a heated Himalayan-view room and an en-suite bath with 24/7 instant hot water.',
+    tags: ['Heated Room', '180° Snow View', 'En-Suite Bath'],
+  },
+  {
+    id: 'family', name: 'Family Twin Room', price: '₹4,999', value: 4999,
+    img: familyImgSrc, sleeps: 'Sleeps 4 Guests',
+    eyebrow: 'Malla Ramgarh • Ground Floor Garden Ease',
+    alt: 'Family Twin Room with twin double beds and ground-floor garden access near Kainchi Dham',
+    text: 'Ground-floor garden access with no steep stairs — the room most senior devotees ask for. Twin double beds, a garden sit-out and a short level walk from the gated parking.',
+    tags: ['Ground Floor Level', 'Twin Double Beds', 'Senior-Friendly'],
+  },
+  {
+    id: 'skylight', name: 'Deluxe Skylight Suite', price: '₹6,499', value: 6499,
+    img: suiteImgSrc, sleeps: 'Sleeps 2 to 3',
+    featured: true,
+    eyebrow: 'Malla Ramgarh • Stargazing Glass-Roof Suite',
+    alt: 'Deluxe Skylight Suite with glass roof and private valley balcony at Whispering Pines Resort near Kainchi Dham',
+    text: 'Cedar pine panels, a private stargazing glass roof and a valley-view balcony facing Nanda Devi and Trishul. The quietest room in the house after a long darshan day.',
+    tags: ['Stargazing Glass Roof', 'Valley Balcony', 'King Bed'],
+  },
+  {
+    id: 'villa', name: '3-BHK Private Alpine Villa', price: '₹15,999', value: 15999,
+    img: villaImgSrc, sleeps: 'Sleeps up to 10',
+    eyebrow: 'Malla Ramgarh • Signature Standalone 3-BHK Villa',
+    alt: 'Standalone 3-BHK Private Alpine Villa with private orchard lawn at Whispering Pines Resort near Kainchi Dham',
+    text: 'A standalone 3-BHK luxury alpine villa for the whole family or a group travelling together for darshan: living-room fireplace, private orchard lawn, three en-suite baths and dedicated chef service.',
+    tags: ['Private Fireplace', 'Orchard Lawn', '3 En-Suite Baths'],
+  },
+];
+
+const TRUST_CARDS = [
+  {
+    icon: '🛣️',
+    title: '45-Min Morning Darshan Drive (22 Km)',
+    text: 'Leave early on the smooth, paved Bhowali highway, finish a peaceful morning darshan at Kainchi Dham Temple ahead of the rush-hour jams, and return to quiet mountain air by mid-morning.',
+  },
+  {
+    icon: '🅿️',
+    title: 'Safe Gated Parking (25+ Cars)',
+    text: 'No narrow valley congestion and no steep unpaved tracks. Sedans, SUVs and family tempo travellers drive right inside our gate, which is manned overnight.',
+  },
+  {
+    icon: '🍲',
+    title: 'Pure-Veg & Satvik Meals Ready',
+    text: 'Freshly cooked home-style Kumaoni vegetarian and satvik meals prepared cleanly for ashram visitors, plus early tea and a breakfast pack before your morning darshan.',
+  },
+  {
+    icon: '🛏️',
+    title: 'Senior-Friendly Comfort & 24/7 Backup',
+    text: 'Ground-floor rooms available, 24/7 high-pressure hot geysers, room heating, 100% generator power backup and 150 Mbps fiber Wi-Fi throughout.',
+  },
+];
+
+// HTML <details> below and the FAQPage JSON-LD in <head> are generated from this one list, so they cannot drift.
+const FAQS = [
+  {
+    q: 'Why are there very few 4-star hotels in Kainchi Dham valley itself, and how far is Whispering Pines?',
+    a: 'The Kainchi Dham valley is a narrow river gorge along the Bhowali–Almora highway, so there is very little flat land for a full-sized resort or for parking — most stays there are small roadside lodges. Whispering Pines Resort is 22 km away, about a 45 minute drive via Bhowali, in Malla Ramgarh at 1,780 m. You get genuine 4-star alpine resort and luxury villa comfort, 180° Nanda Devi and Trishul snow-peak views and gated drive-in parking for 25+ cars, at the cost of a short morning drive to the temple.',
+  },
+  {
+    q: 'Do you serve pure-veg and satvik food for Neem Karoli Baba Ashram devotees?',
+    a: 'Yes. Our kitchen serves fresh pure-vegetarian Kumaoni and multi-cuisine food, and satvik preparations without onion or garlic are made on request — tell us when you book so the kitchen keeps separate preparation. We also coordinate early morning tea and a breakfast pack for guests leaving before dawn for darshan.',
+  },
+  {
+    q: 'Are ground-floor rooms available for senior citizens visiting Kainchi Dham Temple?',
+    a: 'Yes. Ground-floor rooms are available and are the ones we block for elderly parents, with a level approach from the gated parking and no steep climbs anywhere between the car and the room. The resort sits directly on the paved Bhowali–Ramgarh–Mukteshwar highway, so the drive-in entrance itself is flat. Ground-floor rooms are limited and go first on darshan weekends, so mention it when you call.',
+  },
+  {
+    q: 'How do we get the best direct rate vs MakeMyTrip or Booking.com?',
+    a: `Call or WhatsApp our front desk on ${RESORT_PHONE_DISPLAY}. Booking direct removes the OTA commission and the platform convenience fee, so you get up to 20% off direct, priority allocation of the 180° Himalayan view rooms, and flexible darshan check-in and early-breakfast coordination arranged directly with the host.`,
+  },
+];
+---
+
+<Layout
+  noindex={true}
+  title="4-Star Hotel & Resort Near Kainchi Dham (45 Min) | Whispering Pines"
+  description="Searching for hotels near Kainchi Dham? Stay at Whispering Pines Resort (22 km / 45 mins via Bhowali). Pure-veg & satvik meals, 25+ car parking & rooms from ₹3,999. Save up to 20% direct."
+  canonical="https://whisperingpinesresort.in/kainchi-dham-stay/"
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href={heroMobile.src} media="(max-width: 768px)" fetchpriority="high" type="image/webp" />
+    <link rel="preload" as="image" href={heroImage.src} media="(min-width: 769px)" fetchpriority="high" type="image/webp" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Hotel",
+          "@id": "https://whisperingpinesresort.in/#hotel",
+          "name": "Whispering Pines Resort by Casa De Bello",
+          "url": "https://whisperingpinesresort.in/kainchi-dham-stay/",
+          "image": "https://whisperingpinesresort.in/og-image.webp",
+          "telephone": "+91-7505029696",
+          "starRating": { "@type": "Rating", "ratingValue": "4" },
+          "priceRange": "₹3,999 - ₹15,999",
+          "currenciesAccepted": "INR",
+          "paymentAccepted": "Cash, Credit Card, UPI, Bank Transfer",
+          "petsAllowed": true,
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd",
+            "addressLocality": "Mukteshwar, Nainital",
+            "postalCode": "263137",
+            "addressRegion": "Uttarakhand",
+            "addressCountry": "IN"
+          },
+          "geo": { "@type": "GeoCoordinates", "latitude": 29.4260969, "longitude": 79.5506794 },
+          "hasMap": "https://maps.google.com/?cid=8386667112972057918",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "428",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "Pure-Veg & Satvik Meals Available", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Gated Drive-in Parking for 25+ Cars", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Senior-Friendly Ground-Floor Rooms", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "24/7 Instant Hot Geyser Water", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "100% Generator Power Backup", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "150 Mbps Fiber Wi-Fi", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "180° Nanda Devi & Trishul Snow-Peak Views", "value": true }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://whisperingpinesresort.in/kainchi-dham-stay/#faq",
+          "mainEntity": FAQS.map((f) => ({
+            "@type": "Question",
+            "name": f.q,
+            "acceptedAnswer": { "@type": "Answer", "text": f.a }
+          }))
+        }
+      ]
+    })} />
+  </Fragment>
+
+  <!-- =========================================================================
+       SECTION 0: PRE-HEADER DIRECT DESK RIBBON
+       ========================================================================= -->
+  <div class="bg-[#020B07] border-b border-[#B0966D]/30 py-2.5 px-3">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-5 text-center">
+      <span class="font-sans text-xs font-bold uppercase tracking-[0.1em] text-[#B0966D]">
+        Direct Pilgrim &amp; Family Privilege • Save Up to 20% vs. MakeMyTrip &amp; Agoda
+      </span>
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        <a
+          href={WA_HERO}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","kainchi_ribbon_whatsapp",{"conversion_type":"whatsapp","value":3999,"currency":"INR"}]'
+          class="inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-sans text-xs font-bold uppercase tracking-wider min-h-11 px-4 py-2 rounded-full transition-all"
+        >
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+          <span>WhatsApp Concierge</span>
+        </a>
+        <a
+          href={`tel:${RESORT_PHONE_TEL}`}
+          data-track-fn="trackBookingConversion" data-track-args='["phone_call_click","engagement","kainchi_ribbon_phone_call",{"conversion_type":"phone","phone_number":"7505029696"}]'
+          class="inline-flex items-center min-h-11 px-2 font-sans text-xs font-bold uppercase tracking-wider text-[#E5CFA0] hover:text-[#FAF7F2] transition-colors"
+        >
+          Direct Desk: {RESORT_PHONE_DISPLAY}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SECTION 1: HERO ENCLAVE
+       ========================================================================= -->
+  <section class="relative min-h-[88svh] flex items-center justify-center bg-[#03110B] text-[#FAF7F2] overflow-hidden">
+    <div class="absolute inset-0 z-0 pointer-events-none">
+      <picture>
+        <source srcset={heroMobile.src} media="(max-width: 768px)" type="image/webp" />
+        <img
+          src={heroImage.src}
+          alt="Cloud-filled valley and pine ridge seen from Whispering Pines Resort, Malla Ramgarh, 22 km from Kainchi Dham"
+          class="w-full h-full object-cover opacity-30"
+          loading="eager" fetchpriority="high" decoding="async"
+          width="1800" height="1200"
+        />
+      </picture>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#03110B] via-[#03110B]/75 to-[#03110B]/85"></div>
+      <div class="absolute inset-0 bg-radial from-transparent via-[#03110B]/40 to-[#03110B]/95 pointer-events-none"></div>
+    </div>
+
+    <div class="absolute inset-4 sm:inset-8 border border-[#B0966D]/20 pointer-events-none z-10 hidden sm:block">
+      <div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-[#B0966D]"></div>
+      <div class="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-[#B0966D]"></div>
+      <div class="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-[#B0966D]"></div>
+      <div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-[#B0966D]"></div>
+    </div>
+
+    <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-12 pb-20">
+
+      <!-- Verified rating & distance badge -->
+      <div class="inline-flex flex-col sm:flex-row items-center gap-2 bg-[#051E14]/90 border border-[#B0966D]/40 backdrop-blur-xl px-5 py-2 rounded-full mb-8 shadow-md">
+        <div class="flex items-center gap-1 text-[#C4A77D]">
+          <span class="text-sm tracking-tighter">★★★★★</span>
+        </div>
+        <span class="font-mono text-xs text-[#FAF7F2] font-semibold tracking-wider uppercase">
+          4.6★ (428 Google Reviews)
+        </span>
+        <span class="hidden sm:inline text-[#B0966D]/60">•</span>
+        <span class="text-xs text-[#FAF7F2]/85 font-sans tracking-wide">
+          22 Km (45 Mins) from Kainchi Dham via Bhowali
+        </span>
+      </div>
+
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-[#FAF7F2] leading-[1.12] max-w-4xl mx-auto mb-6 text-balance drop-shadow-[0_2px_14px_rgba(0,0,0,0.7)]">
+        4-Star Hotel &amp; Peaceful Resort Near Kainchi Dham Ashram <br class="hidden sm:inline" />
+        <span class="font-normal text-[#FAF7F2] text-[0.62em]">
+          22 Km Smooth Drive • Pure-Veg Satvik Meals • Save Up to 20% Direct
+        </span>
+      </h1>
+
+      <p class="font-sans text-base sm:text-lg md:text-xl text-[#FAF7F2]/95 font-light max-w-2xl mx-auto leading-relaxed mb-10 text-pretty drop-shadow-[0_1px_6px_rgba(0,0,0,0.6)]">
+        If you are looking at hotels near Kainchi Dham, or want a quiet stay near the Neem Karoli Baba Ashram rather
+        than a room over a shopfront, Whispering Pines Resort sits at 1,780 m on the peaceful Malla Ramgarh pine ridge —
+        a smooth 22 km (45 minute) highway drive via Bhowali. Skip the cramped roadside noise and parking bottlenecks:
+        gated parking for 25+ cars, senior-friendly ground-floor rooms, pure-veg and satvik dining, and 180° Nanda Devi
+        snow-peak views.
+      </p>
+
+      <!-- Direct tariff disparity card -->
+      <div class="max-w-xl mx-auto mb-10 bg-[#051E14]/85 backdrop-blur-md border border-[#B0966D]/40 rounded-sm p-5 sm:p-6 text-left shadow-[0_12px_40px_rgba(0,0,0,0.6)] relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#B0966D] to-transparent"></div>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-[#FAF7F2]/10 pb-4 mb-4">
+          <div>
+            <span class="text-xs font-sans uppercase tracking-[0.18em] text-[#FAF7F2]/70 block">Third-Party Portals (MakeMyTrip / Agoda)</span>
+            <span class="text-sm line-through text-[#FAF7F2]/50 font-sans">Higher rates + taxes &amp; platform surcharges</span>
+          </div>
+          <span class="bg-red-500/15 text-red-300 border border-red-500/30 text-xs font-mono uppercase tracking-wider px-2.5 py-1 rounded-sm">
+            OTA Commission Markups
+          </span>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <div>
+            <span class="text-xs font-sans uppercase tracking-[0.18em] text-[#C4A77D] font-bold block">Direct Host Resident Rate (Call / WhatsApp)</span>
+            <div class="flex items-baseline gap-2 mt-0.5">
+              <span class="text-2xl sm:text-3xl font-bold font-sans text-white">From ₹3,999 / night</span>
+              <span class="text-xs text-[#FAF7F2]/70 font-sans">incl. breakfast</span>
+            </div>
+          </div>
+          <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-sans font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-sm flex items-center gap-1.5 shadow-md">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            Save up to 20% Direct
+          </span>
+        </div>
+      </div>
+
+      <!-- Primary hero CTAs: Call first on mobile -->
+      <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3.5 max-w-3xl mx-auto mb-8">
+        <a
+          href={`tel:${RESORT_PHONE_TEL}`}
+          data-track-fn="trackBookingConversion" data-track-args='["phone_call_click","engagement","kainchi_hero_phone_call",{"conversion_type":"phone","phone_number":"7505029696"}]'
+          class="w-full sm:w-auto flex-1 bg-[#FAF7F2] hover:bg-[#E5CFA0] text-[#03110B] border-2 border-[#B0966D] font-bold py-4 px-5 rounded-sm shadow-[0_8px_24px_rgba(0,0,0,0.35)] flex items-center justify-center gap-2 text-sm uppercase tracking-wider active:scale-[0.98] transition-all text-center"
+        >
+          <svg class="w-4 h-4 text-[#03110B] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <span>Call Desk: {RESORT_PHONE_DISPLAY}</span>
+        </a>
+
+        <a
+          href={WA_HERO}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","kainchi_hero_whatsapp",{"conversion_type":"whatsapp","value":3999,"currency":"INR"}]'
+          class="w-full sm:w-auto flex-1 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold py-4 px-6 rounded-sm shadow-[0_8px_24px_rgba(10,18,15,0.28)] flex items-center justify-center gap-2.5 text-sm uppercase tracking-wider active:scale-[0.98] transition-all border border-white/20 text-center"
+        >
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+          <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+          <span class="tracking-wide">WhatsApp (Up to 20% Off)</span>
+        </a>
+
+        <a
+          href={BOOKING_ENGINE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-track-fn="trackBookingConversion" data-track-args='["begin_checkout","booking","kainchi_hero_bookingjini",{"conversion_type":"bookingjini"}]'
+          class="w-full sm:w-auto flex-1 bg-[#B0966D] hover:bg-[#C4A77D] text-[#03110B] font-bold py-4 px-6 rounded-sm shadow-md flex items-center justify-center gap-2 text-sm uppercase tracking-wider active:scale-[0.98] transition-all text-center"
+        >
+          <svg class="w-4 h-4 text-[#03110B] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <span>Book Online</span>
+        </a>
+      </div>
+
+      <div class="flex flex-wrap justify-center items-center gap-y-2 gap-x-6 text-xs text-[#FAF7F2]/85 font-sans">
+        <span class="flex items-center gap-1.5"><span class="text-[#7A6038]">✓</span> Zero advance deposit required to hold dates</span>
+        <span class="flex items-center gap-1.5"><span class="text-[#7A6038]">✓</span> Front desk replies in &lt; 5 minutes</span>
+        <span class="flex items-center gap-1.5"><span class="text-[#7A6038]">✓</span> Early darshan tea &amp; breakfast pack arranged</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: WHY DEVOTEES PREFER MALLA RAMGARH
+       ========================================================================= -->
+  <section class="py-20 lg:py-28 bg-[#FAF8F5] text-[#151E1A] border-b border-[#151E1A]/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#7A6038] uppercase block mb-3">
+          Built around the darshan trip
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[#03110B] leading-tight text-balance">
+          Why Families &amp; Senior Devotees Choose Our Resort Near Kainchi Dham
+        </h2>
+        <div class="w-20 h-0.5 bg-[#B0966D] mx-auto my-4"></div>
+        <p class="font-sans text-base text-[#44564E] leading-relaxed text-pretty">
+          Most hotels in Kainchi Dham sit on the busy highway bend beside the temple. We are 22 km up the ridge, which
+          changes the whole trip: real parking, quiet nights, and a kitchen that cooks satvik food for ashram visitors.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {TRUST_CARDS.map((card) => (
+          <div class="bg-white border border-[#8A6F4A]/30 rounded-sm p-6 shadow-sm flex flex-col">
+            <span class="text-2xl mb-3" aria-hidden="true">{card.icon}</span>
+            <h3 class="font-display text-xl font-semibold text-[#03110B] mb-2 leading-snug">{card.title}</h3>
+            <p class="text-sm text-[#44564E] leading-relaxed">{card.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-center mt-12">
+        <a
+          href={`tel:${RESORT_PHONE_TEL}`}
+          data-track-fn="trackBookingConversion" data-track-args='["phone_call_click","engagement","kainchi_benefits_phone_call",{"conversion_type":"phone","phone_number":"7505029696"}]'
+          class="inline-flex items-center gap-2 bg-[#03110B] hover:bg-[#051E14] text-[#FAF7F2] border-2 border-[#B0966D] font-bold font-sans text-xs uppercase tracking-[0.1em] py-4 px-8 rounded-sm shadow-md transition-all active:scale-[0.98]"
+        >
+          <svg class="w-4 h-4 text-[#E5CFA0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <span>Call Desk: {RESORT_PHONE_DISPLAY}</span>
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: ROOMS, SUITES & FAMILY VILLA (ASCENDING TARIFF)
+       ========================================================================= -->
+  <section id="accommodations" class="py-20 lg:py-28 bg-[#03160E] text-[#FAF7F2] border-b border-[#B0966D]/30">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#C4A77D] uppercase block mb-3">
+          Rooms, Suites &amp; Villa
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight">
+          Rooms, Skylight Suites &amp; Villa for Your Stay Near Kainchi Dham
+        </h2>
+        <div class="w-16 h-0.5 bg-[#B0966D] mx-auto my-4"></div>
+        <p class="text-sm text-[#FAF7F2]/80 leading-relaxed">
+          Every room is at Whispering Pines Resort, Malla Ramgarh, and every tariff includes breakfast.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {ROOM_CARDS.map((room) => (
+        <div class={`bg-[#062116] rounded-sm overflow-hidden shadow-md flex flex-col group ${room.featured ? 'border border-[#B0966D]/50 relative ring-2 ring-[#B0966D]/30' : 'border border-[#B0966D]/35'}`}>
+          <div class="relative h-64 overflow-hidden">
+            <Image
+              src={room.img}
+              alt={room.alt}
+              widths={[400, 700, 900]}
+              sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 420px"
+              quality={70}
+              format="webp"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="absolute top-3 left-3 bg-[#03110B]/90 backdrop-blur-md border border-[#B0966D]/40 text-[#C4A77D] font-sans text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+              Whispering Pines Resort • 22 Km to Kainchi Dham
+            </div>
+            <div class="absolute bottom-3 right-3 bg-emerald-500/90 text-white font-sans text-xs font-bold px-2.5 py-0.5 rounded-sm">
+              {room.sleeps}
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-sans text-[#C4A77D] uppercase tracking-[0.1em] block mb-1">{room.eyebrow}</span>
+              <h3 class="font-display text-2xl font-semibold text-white mb-2">{room.name}</h3>
+              <p class="text-sm text-[#FAF7F2]/75 leading-relaxed mb-4">{room.text}</p>
+              <div class="flex flex-wrap gap-2 text-xs font-sans text-[#C4A77D] mb-6">
+                {room.tags.map((tag) => (
+                  <span class="bg-[#03110B] px-2.5 py-1 rounded-sm border border-[#B0966D]/25">{tag}</span>
+                ))}
+              </div>
+            </div>
+            <div class="pt-4 border-t border-[#FAF7F2]/10 flex flex-col gap-3">
+              <div class="flex items-end justify-between gap-2">
+                <div>
+                  <span class="text-xs font-sans text-[#FAF7F2]/70 uppercase block">Direct Resident Tariff</span>
+                  <span class="font-sans text-xl sm:text-2xl font-bold text-white">{room.price}</span>
+                  <span class="text-xs font-sans text-[#FAF7F2]/70"> / night incl. breakfast</span>
+                </div>
+                <span class="text-xs font-sans text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-sm shrink-0">
+                  Save up to 20% Direct
+                </span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <a
+                  href={`tel:${RESORT_PHONE_TEL}`}
+                  data-track-fn="trackBookingConversion"
+                  data-track-args={`["phone_call_click","engagement","kainchi_room_${room.id}_phone_call",{"conversion_type":"phone","phone_number":"7505029696","room":"${room.name}"}]`}
+                  class="bg-[#FAF7F2] hover:bg-[#E5CFA0] text-[#03110B] border-2 border-[#B0966D] font-bold font-sans text-xs uppercase tracking-wider min-h-12 py-3 px-3 rounded-sm shadow-md transition-all flex items-center justify-center gap-1.5 text-center"
+                >
+                  <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                  <span>Call Desk: {RESORT_PHONE_DISPLAY}</span>
+                </a>
+                <a
+                  href={waLink(`Hi! I am visiting Kainchi Dham and would like the ${room.name} (${room.price} / night incl. breakfast) at Whispering Pines Resort, Malla Ramgarh. Please confirm availability and the best direct rate.`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-track-fn="trackBookingConversion"
+                  data-track-args={`["generate_lead","booking","kainchi_room_${room.id}_whatsapp",{"conversion_type":"whatsapp","room":"${room.name}","value":${room.value},"currency":"INR"}]`}
+                  class="bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold font-sans text-xs uppercase tracking-wider min-h-12 py-3 px-3 rounded-sm shadow-md transition-all flex items-center justify-center gap-1 text-center"
+                >
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: KAINCHI DHAM PILGRIM FAQs (mirrors the FAQPage JSON-LD above)
+       ========================================================================= -->
+  <section class="py-20 lg:py-28 bg-[#FAF8F5] text-[#151E1A] border-t border-[#151E1A]/10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#7A6038] uppercase block mb-2">
+          Before you drive up
+        </span>
+        <h2 class="font-display text-3xl font-semibold text-[#03110B]">
+          Kainchi Dham Pilgrim Questions
+        </h2>
+        <div class="w-16 h-0.5 bg-[#B0966D] mx-auto my-3"></div>
+      </div>
+
+      <div class="space-y-4">
+        {FAQS.map((faq, i) => (
+          <details class="bg-white border border-[#151E1A]/10 rounded-sm p-5 shadow-sm group" open={i === 0}>
+            <summary class="font-display text-base font-semibold text-[#03110B] cursor-pointer flex items-center justify-between gap-3">
+              <span>{faq.q}</span>
+              <span class="text-[#7A6038] font-mono text-lg transition-transform group-open:rotate-45 shrink-0">+</span>
+            </summary>
+            <p class="text-sm text-[#44564E] leading-relaxed mt-3 pt-3 border-t border-gray-100">
+              {faq.a}
+            </p>
+          </details>
+        ))}
+      </div>
+
+      <p class="text-center mt-12">
+        <a
+          href={`tel:${RESORT_PHONE_TEL}`}
+          data-track-fn="trackBookingConversion" data-track-args='["phone_call_click","engagement","kainchi_faq_phone_call",{"conversion_type":"phone","phone_number":"7505029696"}]'
+          class="inline-flex items-center gap-2 bg-[#03110B] hover:bg-[#051E14] text-[#FAF7F2] border-2 border-[#B0966D] font-bold font-sans text-xs uppercase tracking-[0.1em] py-4 px-8 rounded-sm shadow-md transition-all active:scale-[0.98]"
+        >
+          <svg class="w-4 h-4 text-[#E5CFA0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <span>Call Desk: {RESORT_PHONE_DISPLAY}</span>
+        </a>
+      </p>
+    </div>
+  </section>
+
+</Layout>
