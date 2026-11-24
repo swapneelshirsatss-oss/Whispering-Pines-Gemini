@@ -280,6 +280,6 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
     </div>
 
     {Astro.url.pathname !== '/book-now/' && <FestiveOfferPopup />}
-    <StickyDirectBookingBar hideBar={pathname === '/book-now/'} />
+    <StickyDirectBookingBar />
   </body>
 </html>
