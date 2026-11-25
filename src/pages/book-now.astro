@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import LandingLayout from '../layouts/LandingLayout.astro';
 import { Image, getImage } from 'astro:assets';
 
 // Image Assets
@@ -46,9 +46,9 @@ const ROOM_CARDS = [
     id: 'family', name: 'Family Twin Room', price: '₹4,999', value: 4999,
     img: familyImgSrc, sleeps: 'Sleeps 4 Guests',
     eyebrow: 'Malla Ramgarh • Ground Floor Garden Ease',
-    alt: 'Family Twin Room with twin double beds and ground-floor garden access near Nainital',
+    alt: 'Family Twin Room with twin double beds and ground-floor garden access at Whispering Pines Resort, Mukteshwar',
     text: 'Ground-floor garden access with no steep stairs, suited to elderly parents and young children. Twin double beds, a garden sit-out and quick access to the dining room.',
-    tags: ['Ground Floor Level', 'Twin Double Beds', 'Garden Sit-out'],
+    tags: ['Ground Floor Level', 'Twin Double Beds', 'Garden Sit-out', 'Himalayan View'],
   },
   {
     id: 'skylight', name: 'Deluxe Skylight Suite', price: '₹6,499', value: 6499,
@@ -64,7 +64,7 @@ const ROOM_CARDS = [
     eyebrow: 'Malla Ramgarh • Signature Standalone 3-BHK Villa',
     alt: 'Standalone 3-BHK Private Alpine Villa with private orchard lawn at Whispering Pines Resort, Mukteshwar',
     text: 'Standalone 3-BHK luxury alpine villa with a living-room fireplace, private orchard lawn, three en-suite baths and dedicated chef service for family retreats and group stays.',
-    tags: ['Private Fireplace', 'Orchard Lawn', '3 En-Suite Baths'],
+    tags: ['Private Fireplace', 'Orchard Lawn', '3 En-Suite Baths', '180° Snow View'],
   },
 ];
 
@@ -73,8 +73,8 @@ const RESORT_PHONE_TEL = "+917505029696";
 const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
 ---
 
-<Layout
-  title="4-Star Resort & Hotel Near Mukteshwar | Whispering Pines (Up to 20% Off)"
+<LandingLayout
+  title="4-Star Resort Near Mukteshwar | Hotels in Mukteshwar ₹3,999+"
   description="Official direct booking for Whispering Pines Resort in Malla Ramgarh — a 4-star resort & luxury hotel near Mukteshwar. 180° Himalayan views, suites from ₹3,999 incl. breakfast. Save up to 20% direct."
   canonical="https://whisperingpinesresort.in/book-now/"
 >
@@ -89,7 +89,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
         {
           "@type": "Hotel",
           "@id": "https://whisperingpinesresort.in/#hotel",
-          "name": "Whispering Pines Resort by Casa De Bello",
+          "name": "Whispering Pines Resort by Casa De Bello Mukteshwar Road",
           "url": "https://whisperingpinesresort.in/book-now/",
           "image": "https://whisperingpinesresort.in/og-image.webp",
           "telephone": "+91-7505029696",
@@ -132,10 +132,10 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "How far is Whispering Pines Resort from Mukteshwar Dham, and how does it compare to hotels in Mukteshwar town?",
+              "name": "Is Whispering Pines one of the hotels in Mukteshwar, and how far is Mukteshwar Dham?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Whispering Pines Resort is 25 km from Mukteshwar Dham, about a 45 minute drive along the smooth, paved Bhowali–Ramgarh–Mukteshwar highway, in Malla Ramgarh at 1,780 m. Staying here instead of in Mukteshwar town buys you unobstructed 180° Nanda Devi and Trishul snow-peak views, no narrow town traffic jams, gated drive-in parking for 25+ cars, 24/7 hot water, 100% power backup, 150 Mbps fiber Wi-Fi, and 100% pet-friendly orchard lawns with a ₹0 pet surcharge. The trade-off is honest: Mukteshwar town’s shops and the Dham itself are a 45 minute drive away rather than a short walk."
+                "text": "Whispering Pines Resort is 25 km from Mukteshwar Dham, about a 45 minute drive along the smooth, paved Bhowali–Ramgarh–Mukteshwar highway, in Malla Ramgarh at 1,780 m. Compared with a room in the town centre, you get unobstructed 180° Nanda Devi and Trishul snow-peak views, no narrow town traffic jams, gated drive-in parking for 25+ cars, 24/7 hot water, 100% power backup, 150 Mbps fiber Wi-Fi, and 100% pet-friendly orchard lawns with a ₹0 pet surcharge. The trade-off is honest: Mukteshwar town’s shops and the Dham itself are a 45 minute drive away rather than a short walk."
               }
             },
             {
@@ -160,6 +160,14 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Every private room and suite features a dedicated high-capacity electric geyser for 24/7 instant hot water. In addition, the property is backed by an automated 100% generator power backup system that operates heaters, lighting, and 150 Mbps optical fiber Wi-Fi throughout any regional power outages."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are the cancellation, refund and GST terms?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cancellation and refund terms follow standard hotel industry practice and depend on your stay dates and how far ahead you cancel. Our booking desk confirms the exact terms for your dates on WhatsApp or phone before you pay anything. GST is charged on room tariffs as per Government of India rules and is shown on your booking confirmation and invoice."
               }
             }
           ]
@@ -266,12 +274,12 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
       </p>
 
       <h1 class="font-display text-[27px] leading-[1.14] sm:text-5xl md:text-6xl lg:text-7xl sm:leading-[1.12] font-semibold tracking-tight text-[#0E2C21] sm:text-[#FAF7F2] max-w-4xl mx-auto mb-3 sm:mb-5 text-balance sm:drop-shadow-[0_2px_14px_rgba(0,0,0,0.7)]">
-        4-Star Resort &amp; Luxury Hotel Near Mukteshwar
+        4-Star Resort Near Mukteshwar
       </h1>
 
       <!-- Was an <h1> span rendering at the full 36px, which alone cost ~130px -->
       <p class="font-sans text-[15px] sm:text-lg text-[#44564E] sm:text-[#FAF7F2]/90 max-w-xl mx-auto leading-snug mb-4 sm:mb-6 text-pretty">
-        180° Nanda Devi snow views • 25 km (45 min) from Mukteshwar Dham • Save up to 20% direct
+        Luxury hotel &amp; villa • 180° Nanda Devi snow views • 25 km (45 min) from Mukteshwar Dham • Save up to 20% direct
       </p>
 
       <!-- Compact price line. The full OTA comparison still exists, lower down. -->
@@ -320,14 +328,14 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
       </div>
 
       <div class="flex flex-wrap justify-center items-center gap-y-2 gap-x-5 text-xs text-[#44564E] sm:text-[#FAF7F2]/80 font-sans mb-8 sm:mb-0">
-        <span class="flex items-center gap-1.5"><span class="text-[#7A6038]">✓</span> Zero advance deposit</span>
         <span class="flex items-center gap-1.5"><span class="text-[#7A6038]">✓</span> Reply in &lt; 5 minutes</span>
-        <span class="flex items-center gap-1.5"><span class="text-[#7A6038]">✓</span> Free Kumaoni welcome tea</span>
+        <span class="flex items-center gap-1.5"><span class="text-[#7A6038]">✓</span> 100% pet-friendly · ₹0 pet fee</span>
+        <a href="#accommodations" class="flex items-center gap-1.5 underline decoration-[#8A6F4A]/40 underline-offset-4"><span class="text-[#7A6038]">✓</span> Private 3-BHK villa, sleeps 10</a>
       </div>
 
       <!-- Keyword copy and the OTA comparison: below the CTAs, where their 543px is affordable -->
       <p class="font-sans text-[15px] sm:text-lg md:text-xl text-[#44564E] sm:text-[#FAF7F2]/95 font-light max-w-2xl mx-auto leading-relaxed mt-0 sm:mt-10 mb-7 text-pretty sm:drop-shadow-[0_1px_6px_rgba(0,0,0,0.6)]">
-        Whispering Pines Resort stands apart from the hotels and resorts in Mukteshwar town: we are in Malla Ramgarh, a 25 km (45 minute) drive from Mukteshwar Dham, with 5-star mountain comforts on a paved highway. Heated Himalayan-view suites, Glass-Roof Skylight Suites and a 3-BHK Private Villa for ten, plus gated parking for 25+ cars and 150 Mbps fiber Wi-Fi.
+        Whispering Pines Resort is one of the hotels in Mukteshwar that sits on the open ridge instead of the town centre: we are in Malla Ramgarh on the Bhowali–Ramgarh–Mukteshwar Rd, 25 km (45 min) from Mukteshwar Dham, at 1,780 m. Heated Himalayan-view suites, Glass-Roof Skylight Suites and a 3-BHK Private Villa for ten, plus a complimentary evening bonfire setup, gated parking for 25+ cars and 150 Mbps fiber Wi-Fi.
       </p>
 
       <div class="max-w-xl mx-auto bg-[#051E14] sm:bg-[#051E14]/85 sm:backdrop-blur-md border border-[#B0966D]/40 rounded-sm p-5 sm:p-6 text-left shadow-[0_12px_40px_rgba(0,0,0,0.3)] relative overflow-hidden">
@@ -476,7 +484,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
       
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#7A6038] uppercase block mb-3">
-          Transparent Price Architecture
+          Searching for the Best Hotel in Mukteshwar? Compare Direct vs OTA
         </span>
         <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0E2C21] leading-tight">
           Why Direct Guests Rate Us Among the Best Hotels &amp; Resorts Near Mukteshwar
@@ -619,15 +627,15 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           <!-- Transit Breakdown List -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
             <div class="border border-[#151E1A]/10 bg-white p-5 rounded-sm shadow-sm">
-              <span class="font-sans text-xs text-[#7A6038] uppercase font-bold block mb-1">From Nainital</span>
-              <strong class="text-lg text-[#03110B] block">45 Minutes (26 km)</strong>
-              <span class="text-xs text-[#44564E]">Smooth scenic drive via Bhowali fruit market</span>
+              <span class="font-sans text-xs text-[#7A6038] uppercase font-bold block mb-1">From Mukteshwar Dham</span>
+              <strong class="text-lg text-[#03110B] block">45–50 Minutes (25 km)</strong>
+              <span class="text-xs text-[#44564E]">Chauli Ki Jali & ancient Shiva temple</span>
             </div>
 
             <div class="border border-[#151E1A]/10 bg-white p-5 rounded-sm shadow-sm">
-              <span class="font-sans text-xs text-[#7A6038] uppercase font-bold block mb-1">From Kainchi Dham</span>
-              <strong class="text-lg text-[#03110B] block">45 Minutes (22 km)</strong>
-              <span class="text-xs text-[#44564E]">Neem Karoli Baba Ashram pilgrimage corridor</span>
+              <span class="font-sans text-xs text-[#7A6038] uppercase font-bold block mb-1">From Nainital</span>
+              <strong class="text-lg text-[#03110B] block">45 Minutes (26 km)</strong>
+              <span class="text-xs text-[#44564E]">Smooth scenic drive via Bhowali fruit market</span>
             </div>
 
             <div class="border border-[#151E1A]/10 bg-white p-5 rounded-sm shadow-sm">
@@ -637,9 +645,9 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
             </div>
 
             <div class="border border-[#151E1A]/10 bg-white p-5 rounded-sm shadow-sm">
-              <span class="font-sans text-xs text-[#7A6038] uppercase font-bold block mb-1">From Mukteshwar Dham</span>
-              <strong class="text-lg text-[#03110B] block">45–50 Minutes (25 km)</strong>
-              <span class="text-xs text-[#44564E]">Chauli Ki Jali & ancient Shiva temple</span>
+              <span class="font-sans text-xs text-[#7A6038] uppercase font-bold block mb-1">From Pantnagar Airport (PGH)</span>
+              <strong class="text-lg text-[#03110B] block">2.5–3 hrs (76 km)</strong>
+              <span class="text-xs text-[#44564E]">Nearest airport — prepaid airport taxis available</span>
             </div>
           </div>
 
@@ -674,7 +682,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
             <div class="p-2">
               <span class="text-[10px] font-sans text-[#7A6038] uppercase tracking-wider font-bold">Pahadi Flavours</span>
               <h3 class="font-display text-lg font-semibold text-[#03110B]">Cooked Fresh to Order</h3>
-              <p class="text-sm text-[#44564E] mt-1">Enjoy piping hot Kumaoni dal, pahadi aloo ke gutke, fresh tawa rotis, and pure Himalayan honey.</p>
+              <p class="text-sm text-[#44564E] mt-1">Enjoy piping hot Kumaoni dal, pahadi aloo ke gutke, fresh tawa rotis, and pure Himalayan honey, from a 100% pure-veg and satvik kitchen.</p>
             </div>
           </div>
         </div>
@@ -867,11 +875,11 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
       <div class="space-y-4">
         <details class="bg-white border border-[#151E1A]/10 rounded-sm p-5 shadow-sm group" open>
           <summary class="font-display text-base font-semibold text-[#03110B] cursor-pointer flex items-center justify-between">
-            <span>How far is Whispering Pines Resort from Mukteshwar Dham, and how does it compare to hotels in Mukteshwar town?</span>
+            <span>Is Whispering Pines one of the hotels in Mukteshwar, and how far is Mukteshwar Dham?</span>
             <span class="text-[#7A6038] font-mono text-lg transition-transform group-open:rotate-45">+</span>
           </summary>
           <p class="text-sm sm:text-sm text-[#44564E] leading-relaxed mt-3 pt-3 border-t border-gray-100">
-            Whispering Pines Resort is 25 km from Mukteshwar Dham, about a 45 minute drive along the smooth, paved Bhowali–Ramgarh–Mukteshwar highway, in Malla Ramgarh at 1,780 m. Staying here instead of in Mukteshwar town buys you unobstructed 180° Nanda Devi and Trishul snow-peak views, no narrow town traffic jams, gated drive-in parking for 25+ cars, 24/7 hot water, 100% power backup, 150 Mbps fiber Wi-Fi, and 100% pet-friendly orchard lawns with a ₹0 pet surcharge. The trade-off is honest: Mukteshwar town’s shops and the Dham itself are a 45 minute drive away rather than a short walk.
+            Whispering Pines Resort is 25 km from Mukteshwar Dham, about a 45 minute drive along the smooth, paved Bhowali–Ramgarh–Mukteshwar highway, in Malla Ramgarh at 1,780 m. Compared with a room in the town centre, you get unobstructed 180° Nanda Devi and Trishul snow-peak views, no narrow town traffic jams, gated drive-in parking for 25+ cars, 24/7 hot water, 100% power backup, 150 Mbps fiber Wi-Fi, and 100% pet-friendly orchard lawns with a ₹0 pet surcharge. The trade-off is honest: Mukteshwar town’s shops and the Dham itself are a 45 minute drive away rather than a short walk.
           </p>
         </details>
 
@@ -912,6 +920,16 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           </summary>
           <p class="text-sm sm:text-sm text-[#44564E] leading-relaxed mt-3 pt-3 border-t border-gray-100">
             Standard check-in is 1:00 PM and check-out is 11:00 AM. Direct bookers receive highest priority for complimentary early check-in starting at 10:00 AM whenever the previous night's room is vacant and sanitised.
+          </p>
+        </details>
+
+        <details class="bg-white border border-[#151E1A]/10 rounded-sm p-5 shadow-sm group">
+          <summary class="font-display text-base font-semibold text-[#03110B] cursor-pointer flex items-center justify-between">
+            <span>What are the cancellation, refund and GST terms?</span>
+            <span class="text-[#7A6038] font-mono text-lg transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <p class="text-sm sm:text-sm text-[#44564E] leading-relaxed mt-3 pt-3 border-t border-gray-100">
+            Cancellation and refund terms follow standard hotel industry practice and depend on your stay dates and how far ahead you cancel. Our booking desk confirms the exact terms for your dates on WhatsApp or phone before you pay anything. GST is charged on room tariffs as per Government of India rules and is shown on your booking confirmation and invoice.
           </p>
         </details>
       </div>
@@ -1046,7 +1064,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
 
         // Build Structured Pre-Filled WhatsApp Payload
         const message = 
-`Hi! I would like to check availability and direct booking rates at Casa De Bello Hospitality:
+`Hi! I would like to check availability and direct booking rates at Whispering Pines Resort, Malla Ramgarh (Mukteshwar Rd):
 
 🏨 *Selected Hotel:* ${hotelInfo.name}
 📍 *Location:* ${hotelInfo.location}
@@ -1104,4 +1122,4 @@ Please confirm live availability and share your best direct host tariff & photos
 
     })();
   </script>
-</Layout>
+</LandingLayout>

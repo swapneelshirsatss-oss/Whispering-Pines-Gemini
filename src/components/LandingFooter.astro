@@ -1,0 +1,41 @@
+---
+// Minimal footer for Google Ads landing pages (used via LandingLayout).
+// Keeps only what Google's landing-page guidance rewards — who you are, where you are,
+// how to reach you, privacy and terms — and drops the site link groups and the
+// sister-hotel row, which pull a paid visitor off the page.
+// Call/WhatsApp clicks are tracked by StickyDirectBookingBar's page-wide listener,
+// so these stay plain links.
+import { RESORT_CONTACT } from "../data";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-[#0E2C21] text-[#FAF9F6]/80 border-t border-[#B0966D]/20 py-10 font-sans text-sm">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center gap-3">
+    <p class="font-display text-lg text-[#FAF9F6]">Whispering Pines Resort by Casa De Bello Mukteshwar Road</p>
+
+    <a href="https://maps.google.com/?cid=8386667112972057918" target="_blank" rel="noopener noreferrer"
+      class="inline-flex items-center min-h-11 leading-snug hover:text-[#C4A77D] transition-colors">
+      Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137
+    </a>
+
+    <div class="flex flex-wrap justify-center gap-x-6">
+      <a href="tel:+917505029696" class="inline-flex items-center min-h-11 font-semibold text-[#FAF9F6] hover:text-[#C4A77D] transition-colors">
+        Call 075050 29696
+      </a>
+      <a href="https://wa.me/917505029696" target="_blank" rel="noopener noreferrer"
+        class="inline-flex items-center min-h-11 font-semibold text-[#FAF9F6] hover:text-[#C4A77D] transition-colors">
+        WhatsApp 075050 29696
+      </a>
+      <a href={`mailto:${RESORT_CONTACT.email}`} class="inline-flex items-center min-h-11 hover:text-[#C4A77D] transition-colors">
+        {RESORT_CONTACT.email}
+      </a>
+    </div>
+
+    <p class="flex flex-wrap justify-center items-center gap-x-4 text-xs text-[#FAF9F6]/60 pt-2 border-t border-[#FAF9F6]/10 w-full">
+      <span class="min-h-11 inline-flex items-center">© {year} Casa De Bello Hospitality. All rights reserved.</span>
+      <a href="/privacy-policy/" class="inline-flex min-h-11 items-center hover:text-[#C4A77D]">Privacy Policy</a>
+      <a href="/terms/" class="inline-flex min-h-11 items-center hover:text-[#C4A77D]">Terms</a>
+    </p>
+  </div>
+</footer>

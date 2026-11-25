@@ -6,7 +6,8 @@ import Navbar from '../components/Navbar.tsx';
 import FooterSection from '../components/FooterSection.astro';
 import Logo from '../components/Logo.astro';
 import StickyDirectBookingBar from '../components/StickyDirectBookingBar.astro';
-import FestiveOfferPopup from '../components/FestiveOfferPopup.astro'; // Xmas/NY 2026-27, auto-off 1 Jan 2027
+import FestiveOfferPopup from '../components/FestiveOfferPopup.astro';
+import LandingFooter from '../components/LandingFooter.astro'; // Xmas/NY 2026-27, auto-off 1 Jan 2027
 
 interface Props {
   title: string;
@@ -16,9 +17,11 @@ interface Props {
   canonical?: string;
   breadcrumbs?: BreadcrumbItem[];
   faqs?: Array<{ question: string; answer: string }>;
+  /** Set by LandingLayout: minimal contact/legal footer, no festive popup. */
+  landing?: boolean;
 }
 
-const { title, description, image, noindex = false, canonical, breadcrumbs, faqs } = Astro.props;
+const { title, description, image, noindex = false, canonical, breadcrumbs, faqs, landing = false } = Astro.props;
 const siteBase = 'https://whisperingpinesresort.in';
 const rawPathname = canonical || Astro.url.pathname;
 const pathname = (!rawPathname.endsWith('/') && !rawPathname.includes('.')) ? `${rawPathname}/` : rawPathname;
@@ -276,11 +279,11 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
         <slot />
       </main>
 
-      {/* Paid landing pages stay single-property: no sister-hotel row (Google Ads focus). */}
-      <FooterSection hideOurHotels={Astro.url.pathname === '/kainchi-dham-stay/'} />
+      {/* Ads landing pages (LandingLayout) get a contact/legal-only footer. */}
+      {landing ? <LandingFooter /> : <FooterSection />}
     </div>
 
-    {Astro.url.pathname !== '/book-now/' && <FestiveOfferPopup />}
+    {!landing && <FestiveOfferPopup />}
     <StickyDirectBookingBar />
   </body>
 </html>

@@ -1,0 +1,15 @@
+---
+// Google Ads landing pages: the normal site header, a minimal contact/legal footer,
+// no festive popup. A thin wrapper over Layout.astro on purpose — GTM, the Ads
+// conversion dispatcher, attribution capture, CSP-safe click tracking, canonical
+// and robots tags all live in Layout's <head> exactly once, so they cannot drift.
+import type { ComponentProps } from 'astro/types';
+import Layout from './Layout.astro';
+
+type Props = Omit<ComponentProps<typeof Layout>, 'landing'>;
+---
+
+<Layout {...Astro.props} landing>
+  <slot name="head" slot="head" />
+  <slot />
+</Layout>

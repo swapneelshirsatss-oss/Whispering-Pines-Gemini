@@ -4,7 +4,7 @@
 // so /blog/resort-stay-near-kainchi-dham/ keeps 100% of the organic rankings for this keyword set.
 // Whispering Pines Resort only — no sister-property mentions anywhere in this file.
 // Palette and section rhythm follow src/pages/book-now.astro.
-import Layout from '../layouts/Layout.astro';
+import LandingLayout from '../layouts/LandingLayout.astro';
 import { Image, getImage } from 'astro:assets';
 
 import heroImgSrc from '../assets/images/view-from-resort-cloud-sea.jpg';
@@ -108,7 +108,7 @@ const FAQS = [
 ];
 ---
 
-<Layout
+<LandingLayout
   noindex={true}
   title="4-Star Hotel & Resort Near Kainchi Dham (45 Min) | Whispering Pines"
   description="Searching for hotels near Kainchi Dham? Stay at Whispering Pines Resort (22 km / 45 mins via Bhowali). Pure-veg & satvik meals, 25+ car parking & rooms from ₹3,999. Save up to 20% direct."
@@ -523,4 +523,4 @@ const FAQS = [
     </div>
   </section>
 
-</Layout>
+</LandingLayout>
