@@ -9,7 +9,6 @@ import { Image, getImage } from 'astro:assets';
 
 import heroImgSrc from '../assets/images/view-from-resort-cloud-sea.jpg';
 import cedarImgSrc from '../assets/images/Group_booking_nainital_resort.avif';
-import familyImgSrc from '../assets/images/Family_Twin_Room_Near_nainital.avif';
 import suiteImgSrc from '../assets/images/Delux_room_Whispering_pines_mukteshwar.avif';
 import villaImgSrc from '../assets/images/villa_in_nanital.avif';
 
@@ -20,47 +19,41 @@ const heroMobile = await getImage({ src: heroImgSrc, format: 'webp', width: 760,
 
 const RESORT_PHONE_DISPLAY = "075050 29696";
 const RESORT_PHONE_TEL = "+917505029696";
-const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
+const BOOKING_ENGINE_URL = "https://url.bookingjini.com/be/8811";
 
 const waLink = (text: string) => `https://wa.me/917505029696?text=${encodeURIComponent(text)}`;
 const WA_HERO = waLink(
   'Hi! I am planning a Kainchi Dham visit and would like to stay at Whispering Pines Resort, Malla Ramgarh. Please share room availability and your best direct tariff (up to 20% off direct).'
 );
 
-// Ascending tariff order so mobile searchers see ₹3,999 before ₹15,999. All rates include breakfast.
+// Rooms ordered entry tariff -> flagship. Rates set by the client on 25 Nov 2026 for the
+// Google Ads landing pages only: price = CP (room + daily breakfast), mapPrice = MAP
+// (room + breakfast + dinner). The rest of the site still carries the older tariffs.
 const ROOM_CARDS = [
   {
-    id: 'cedar', name: 'Executive Cedar Suite', price: '₹3,999', value: 3999,
+    id: 'premium', name: 'Premium Room', price: '₹5,500', mapPrice: '₹6,500', value: 5500,
     img: cedarImgSrc, sleeps: 'Sleeps 2 to 3',
-    eyebrow: 'Malla Ramgarh • Entry Himalayan-View Suite',
-    alt: 'Executive Cedar Suite with cedar panelling and Himalayan views at Whispering Pines Resort, 22 km from Kainchi Dham',
+    eyebrow: 'Malla Ramgarh • Himalayan-View Premium Room',
+    alt: 'Premium Room with cedar panelling and Himalayan views at Whispering Pines Resort, 22 km from Kainchi Dham',
     text: 'Our most-booked room for couples and small families visiting the Neem Karoli Baba Ashram: cedar-panelled walls, a heated Himalayan-view room and an en-suite bath with 24/7 instant hot water.',
     tags: ['Heated Room', '180° Snow View', 'En-Suite Bath'],
   },
   {
-    id: 'family', name: 'Family Twin Room', price: '₹4,999', value: 4999,
-    img: familyImgSrc, sleeps: 'Sleeps 4 Guests',
-    eyebrow: 'Malla Ramgarh • Ground Floor Garden Ease',
-    alt: 'Family Twin Room with twin double beds and ground-floor garden access near Kainchi Dham',
-    text: 'Ground-floor garden access with no steep stairs — the room most senior devotees ask for. Twin double beds, a garden sit-out and a short level walk from the gated parking.',
-    tags: ['Ground Floor Level', 'Twin Double Beds', 'Senior-Friendly'],
+    id: 'cottage', name: 'Premium Cottage Villa', price: '₹5,500', mapPrice: '₹6,500', value: 5500,
+    img: villaImgSrc, sleeps: 'Sleeps 4 Guests',
+    eyebrow: 'Malla Ramgarh • Garden Cottage Villa',
+    alt: 'Premium Cottage Villa with garden sit-out and Himalayan views at Whispering Pines Resort near Kainchi Dham',
+    text: 'Cottage-style villa stay with a garden sit-out, an en-suite bath with 24/7 instant hot water and the same 180° Himalayan view every room enjoys — a quiet base between darshan days.',
+    tags: ['Garden Sit-out', 'Himalayan View', 'En-Suite Bath'],
   },
   {
-    id: 'skylight', name: 'Deluxe Skylight Suite', price: '₹6,499', value: 6499,
-    img: suiteImgSrc, sleeps: 'Sleeps 2 to 3',
+    id: 'familysuite', name: 'Family Suite', price: '₹10,000', mapPrice: '₹12,000', value: 10000,
+    img: suiteImgSrc, sleeps: 'Sleeps 4 Guests',
     featured: true,
-    eyebrow: 'Malla Ramgarh • Stargazing Glass-Roof Suite',
-    alt: 'Deluxe Skylight Suite with glass roof and private valley balcony at Whispering Pines Resort near Kainchi Dham',
-    text: 'Cedar pine panels, a private stargazing glass roof and a valley-view balcony facing Nanda Devi and Trishul. The quietest room in the house after a long darshan day.',
-    tags: ['Stargazing Glass Roof', 'Valley Balcony', 'King Bed'],
-  },
-  {
-    id: 'villa', name: '3-BHK Private Alpine Villa', price: '₹15,999', value: 15999,
-    img: villaImgSrc, sleeps: 'Sleeps up to 10',
-    eyebrow: 'Malla Ramgarh • Signature Standalone 3-BHK Villa',
-    alt: 'Standalone 3-BHK Private Alpine Villa with private orchard lawn at Whispering Pines Resort near Kainchi Dham',
-    text: 'A standalone 3-BHK luxury alpine villa for the whole family or a group travelling together for darshan: living-room fireplace, private orchard lawn, three en-suite baths and dedicated chef service.',
-    tags: ['Private Fireplace', 'Orchard Lawn', '3 En-Suite Baths'],
+    eyebrow: 'Malla Ramgarh • Glass-Roof Family Suite',
+    alt: 'Family Suite with stargazing glass roof and private valley balcony at Whispering Pines Resort near Kainchi Dham',
+    text: 'Cedar pine panels, a private stargazing glass roof and a valley-view balcony facing Nanda Devi and Trishul — space for a family of four after a long darshan day.',
+    tags: ['Stargazing Glass Roof', 'Valley Balcony', 'Himalayan View'],
   },
 ];
 
@@ -111,7 +104,7 @@ const FAQS = [
 <LandingLayout
   noindex={true}
   title="4-Star Hotel & Resort Near Kainchi Dham (45 Min) | Whispering Pines"
-  description="Searching for hotels near Kainchi Dham? Stay at Whispering Pines Resort (22 km / 45 mins via Bhowali). Pure-veg & satvik meals, 25+ car parking & rooms from ₹3,999. Save up to 20% direct."
+  description="Searching for hotels near Kainchi Dham? Stay at Whispering Pines Resort (22 km / 45 mins via Bhowali). Pure-veg & satvik meals, 25+ car parking & rooms from ₹5,500. Save up to 20% direct."
   canonical="https://whisperingpinesresort.in/kainchi-dham-stay/"
 >
   <Fragment slot="head">
@@ -129,7 +122,7 @@ const FAQS = [
           "image": "https://whisperingpinesresort.in/og-image.webp",
           "telephone": "+91-7505029696",
           "starRating": { "@type": "Rating", "ratingValue": "4" },
-          "priceRange": "₹3,999 - ₹15,999",
+          "priceRange": "₹5,500 - ₹12,000",
           "currenciesAccepted": "INR",
           "paymentAccepted": "Cash, Credit Card, UPI, Bank Transfer",
           "petsAllowed": true,
@@ -188,7 +181,7 @@ const FAQS = [
           href={WA_HERO}
           target="_blank"
           rel="noopener noreferrer"
-          data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","kainchi_ribbon_whatsapp",{"conversion_type":"whatsapp","value":3999,"currency":"INR"}]'
+          data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","kainchi_ribbon_whatsapp",{"conversion_type":"whatsapp","value":5500,"currency":"INR"}]'
           class="inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-sans text-xs font-bold uppercase tracking-wider min-h-11 px-4 py-2 rounded-full transition-all"
         >
           <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
@@ -222,7 +215,7 @@ const FAQS = [
           src={heroImage.src}
           alt="Cloud-filled valley at sunrise seen from Whispering Pines Resort, Malla Ramgarh, 22 km from Kainchi Dham"
           class="w-full h-full object-cover sm:opacity-60"
-          loading="eager" fetchpriority="high" decoding="async"
+          loading="eager" fetchpriority="high"
           width="1800" height="1200"
         />
       </picture>
@@ -256,7 +249,7 @@ const FAQS = [
       </p>
 
       <p class="font-sans text-[15px] sm:text-base text-[#0E2C21] sm:text-[#FAF7F2] mb-5 sm:mb-7">
-        <span class="font-bold">From ₹3,999 / night</span>&nbsp;<span class="text-[#44564E] sm:text-[#FAF7F2]/75">incl. breakfast</span>
+        <span class="font-bold">From ₹5,500 / night</span>&nbsp;<span class="text-[#44564E] sm:text-[#FAF7F2]/75">incl. breakfast</span>
       </p>
 
       <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 max-w-3xl mx-auto mb-5 sm:mb-8">
@@ -275,7 +268,7 @@ const FAQS = [
           href={WA_HERO}
           target="_blank"
           rel="noopener noreferrer"
-          data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","kainchi_hero_whatsapp",{"conversion_type":"whatsapp","value":3999,"currency":"INR"}]'
+          data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","kainchi_hero_whatsapp",{"conversion_type":"whatsapp","value":5500,"currency":"INR"}]'
           class="w-full sm:w-auto sm:flex-1 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold min-h-14 py-4 px-6 rounded-sm shadow-[0_8px_24px_rgba(10,18,15,0.28)] flex items-center justify-center gap-2.5 text-sm uppercase tracking-wider active:scale-[0.98] transition-all border border-white/20 text-center"
         >
           <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24">
@@ -329,7 +322,7 @@ const FAQS = [
           <div>
             <span class="text-xs font-sans uppercase tracking-[0.18em] text-[#C4A77D] font-bold block">Direct Host Resident Rate (Call / WhatsApp)</span>
             <div class="flex items-baseline gap-2 mt-0.5">
-              <span class="text-2xl sm:text-3xl font-bold font-sans text-white">From ₹3,999 / night</span>
+              <span class="text-2xl sm:text-3xl font-bold font-sans text-white">From ₹5,500 / night</span>
               <span class="text-xs text-[#FAF7F2]/70 font-sans">incl. breakfast</span>
             </div>
           </div>
@@ -394,10 +387,10 @@ const FAQS = [
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-12">
         <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#C4A77D] uppercase block mb-3">
-          Rooms, Suites &amp; Villa
+          Rooms, Family Suite &amp; Cottage Villas
         </span>
         <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight">
-          Rooms, Skylight Suites &amp; Villa for Your Stay Near Kainchi Dham
+          Rooms, Family Suite &amp; Cottage Villas for Your Stay Near Kainchi Dham
         </h2>
         <div class="w-16 h-0.5 bg-[#B0966D] mx-auto my-4"></div>
         <p class="text-sm text-[#FAF7F2]/80 leading-relaxed">
@@ -405,7 +398,7 @@ const FAQS = [
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {ROOM_CARDS.map((room) => (
         <div class={`bg-[#062116] rounded-sm overflow-hidden shadow-md flex flex-col group ${room.featured ? 'border border-[#B0966D]/50 relative ring-2 ring-[#B0966D]/30' : 'border border-[#B0966D]/35'}`}>
           <div class="relative h-64 overflow-hidden">
@@ -439,11 +432,12 @@ const FAQS = [
               </div>
             </div>
             <div class="pt-4 border-t border-[#FAF7F2]/10 flex flex-col gap-3">
-              <div class="flex items-end justify-between gap-2">
+              <div class="flex flex-col items-start gap-2">
                 <div>
                   <span class="text-xs font-sans text-[#FAF7F2]/70 uppercase block">Direct Resident Tariff</span>
                   <span class="font-sans text-xl sm:text-2xl font-bold text-white">{room.price}</span>
-                  <span class="text-xs font-sans text-[#FAF7F2]/70"> / night incl. breakfast</span>
+                  <span class="text-xs font-sans text-[#FAF7F2]/70"> / night · <span class="whitespace-nowrap">CP (breakfast)</span></span>
+                  <span class="block text-sm font-sans font-semibold text-white mt-0.5">{room.mapPrice}<span class="text-xs font-normal text-[#FAF7F2]/70"> / night · <span class="whitespace-nowrap">MAP (breakfast + dinner)</span></span></span>
                 </div>
                 <span class="text-xs font-sans text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 rounded-sm shrink-0">
                   Save up to 20% Direct
@@ -460,7 +454,7 @@ const FAQS = [
                   <span>Call Desk: {RESORT_PHONE_DISPLAY}</span>
                 </a>
                 <a
-                  href={waLink(`Hi! I am visiting Kainchi Dham and would like the ${room.name} (${room.price} / night incl. breakfast) at Whispering Pines Resort, Malla Ramgarh. Please confirm availability and the best direct rate.`)}
+                  href={waLink(`Hi! I am visiting Kainchi Dham and would like the ${room.name} (CP ${room.price} / MAP ${room.mapPrice} per night) at Whispering Pines Resort, Malla Ramgarh. Please confirm availability and the best direct rate.`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track-fn="trackBookingConversion"

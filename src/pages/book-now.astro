@@ -9,7 +9,6 @@ import heroImgSrc from '../assets/images/Whispering-pines-balcony-view-nanital.a
 import heroMobileSrc from '../assets/images/whispering-pines-balcony-valley-view.jpg';
 import villaImgSrc from '../assets/images/villa_in_nanital.avif';
 import suiteImgSrc from '../assets/images/Delux_room_Whispering_pines_mukteshwar.avif';
-import familyImgSrc from '../assets/images/Family_Twin_Room_Near_nainital.avif';
 import diningImgSrc from '../assets/images/Restaurant-cafe-ramgarh.avif';
 import bathroomImgSrc from '../assets/images/delux-room-bathroom.avif';
 import viewImgSrc from '../assets/images/outside-view-from-resort-hotel.avif';
@@ -23,7 +22,6 @@ const heroImage = await getImage({ src: heroImgSrc, format: 'webp', width: 1440,
 const heroMobile = await getImage({ src: heroMobileSrc, format: 'webp', width: 760, quality: 64 });
 const villaImg = await getImage({ src: villaImgSrc, format: 'webp', width: 900, quality: 80 });
 const suiteImg = await getImage({ src: suiteImgSrc, format: 'webp', width: 900, quality: 80 });
-const familyImg = await getImage({ src: familyImgSrc, format: 'webp', width: 900, quality: 80 });
 const diningImg = await getImage({ src: diningImgSrc, format: 'webp', width: 900, quality: 80 });
 const bathroomImg = await getImage({ src: bathroomImgSrc, format: 'webp', width: 900, quality: 80 });
 const viewImg = await getImage({ src: viewImgSrc, format: 'webp', width: 900, quality: 80 });
@@ -31,51 +29,44 @@ const cedarImg = await getImage({ src: cedarImgSrc, format: 'webp', width: 900, 
 const quoteImg = await getImage({ src: quoteImgSrc, format: 'webp', width: 1600, quality: 62 });
 const quoteImgMobile = await getImage({ src: quoteImgSrc, format: 'webp', width: 800, quality: 58 });
 
-// Room cards ordered entry tariff -> flagship so mobile searchers see the ₹3,999 rate first.
-// Tariffs are the approved client-profile rates, all inclusive of breakfast.
+// Rooms ordered entry tariff -> flagship. Rates set by the client on 25 Nov 2026 for the
+// Google Ads landing pages only: price = CP (room + daily breakfast), mapPrice = MAP
+// (room + breakfast + dinner). The rest of the site still carries the older tariffs.
 const ROOM_CARDS = [
   {
-    id: 'cedar', name: 'Executive Cedar Suite', price: '₹3,999', value: 3999,
+    id: 'premium', name: 'Premium Room', price: '₹5,500', mapPrice: '₹6,500', value: 5500,
     img: cedarImgSrc, sleeps: 'Sleeps 2 to 3',
-    eyebrow: 'Malla Ramgarh • Entry Himalayan-View Suite',
-    alt: 'Executive Cedar Suite with cedar panelling and Himalayan view at Whispering Pines Resort, Mukteshwar',
-    text: 'Our most-booked suite among hotels near Mukteshwar: cedar-panelled walls, a heated Himalayan-view room and an en-suite bath with 24/7 hot water. The easiest way into a 4-star resort stay at 1,780 m.',
+    eyebrow: 'Malla Ramgarh • Himalayan-View Premium Room',
+    alt: 'Premium Room with cedar panelling and Himalayan view at Whispering Pines Resort, Mukteshwar',
+    text: 'Our most-booked room among hotels near Mukteshwar: cedar-panelled walls, a heated Himalayan-view room and an en-suite bath with 24/7 hot water. The easiest way into a 4-star resort stay at 1,780 m.',
     tags: ['Heated Room', '180° Snow View', 'En-Suite Bath'],
   },
   {
-    id: 'family', name: 'Family Twin Room', price: '₹4,999', value: 4999,
-    img: familyImgSrc, sleeps: 'Sleeps 4 Guests',
-    eyebrow: 'Malla Ramgarh • Ground Floor Garden Ease',
-    alt: 'Family Twin Room with twin double beds and ground-floor garden access at Whispering Pines Resort, Mukteshwar',
-    text: 'Ground-floor garden access with no steep stairs, suited to elderly parents and young children. Twin double beds, a garden sit-out and quick access to the dining room.',
-    tags: ['Ground Floor Level', 'Twin Double Beds', 'Garden Sit-out', 'Himalayan View'],
+    id: 'cottage', name: 'Premium Cottage Villa', price: '₹5,500', mapPrice: '₹6,500', value: 5500,
+    img: villaImgSrc, sleeps: 'Sleeps 4 Guests',
+    eyebrow: 'Malla Ramgarh • Garden Cottage Villa',
+    alt: 'Premium Cottage Villa with garden sit-out and Himalayan view at Whispering Pines Resort, Mukteshwar',
+    text: 'Cottage-style villa stay with a garden sit-out, an en-suite bath with 24/7 hot water and the same 180° Himalayan view every room at the resort enjoys.',
+    tags: ['Garden Sit-out', 'Himalayan View', 'En-Suite Bath'],
   },
   {
-    id: 'skylight', name: 'Deluxe Skylight Suite', price: '₹6,499', value: 6499,
-    img: suiteImgSrc, sleeps: 'Sleeps 2 to 3', featured: true,
-    eyebrow: 'Malla Ramgarh • Romantic Stargazing Suite',
-    alt: 'Deluxe Skylight Suite with glass ceiling and private balcony overlooking the Himalayas',
-    text: 'Cedar pine panels, a private stargazing glass roof and a valley-view balcony facing Nanda Devi — the suite guests name when they call us the best resort in Mukteshwar.',
-    tags: ['Stargazing Glass Roof', 'Valley Balcony', 'King Bed'],
-  },
-  {
-    id: 'villa', name: '3-BHK Private Alpine Villa', price: '₹15,999', value: 15999,
-    img: villaImgSrc, sleeps: 'Sleeps up to 10',
-    eyebrow: 'Malla Ramgarh • Signature Standalone 3-BHK Villa',
-    alt: 'Standalone 3-BHK Private Alpine Villa with private orchard lawn at Whispering Pines Resort, Mukteshwar',
-    text: 'Standalone 3-BHK luxury alpine villa with a living-room fireplace, private orchard lawn, three en-suite baths and dedicated chef service for family retreats and group stays.',
-    tags: ['Private Fireplace', 'Orchard Lawn', '3 En-Suite Baths', '180° Snow View'],
+    id: 'familysuite', name: 'Family Suite', price: '₹10,000', mapPrice: '₹12,000', value: 10000,
+    img: suiteImgSrc, sleeps: 'Sleeps 4 Guests', featured: true,
+    eyebrow: 'Malla Ramgarh • Glass-Roof Family Suite',
+    alt: 'Family Suite with stargazing glass roof and private balcony overlooking the Himalayas at Whispering Pines Resort, Mukteshwar',
+    text: 'Cedar pine panels, a private stargazing glass roof and a valley-view balcony facing Nanda Devi — room for a family of four under the Himalayan sky.',
+    tags: ['Stargazing Glass Roof', 'Valley Balcony', 'Himalayan View'],
   },
 ];
 
 const RESORT_PHONE_DISPLAY = "075050 29696";
 const RESORT_PHONE_TEL = "+917505029696";
-const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
+const BOOKING_ENGINE_URL = "https://url.bookingjini.com/be/8811";
 ---
 
 <LandingLayout
-  title="4-Star Resort Near Mukteshwar | Hotels in Mukteshwar ₹3,999+"
-  description="Official direct booking for Whispering Pines Resort in Malla Ramgarh — a 4-star resort & luxury hotel near Mukteshwar. 180° Himalayan views, suites from ₹3,999 incl. breakfast. Save up to 20% direct."
+  title="4-Star Resort Near Mukteshwar | Hotels in Mukteshwar ₹5,500+"
+  description="Official direct booking for Whispering Pines Resort in Malla Ramgarh — a 4-star resort & luxury hotel near Mukteshwar. 180° Himalayan views, rooms from ₹5,500 incl. breakfast. Save up to 20% direct."
   canonical="https://whisperingpinesresort.in/book-now/"
 >
   <Fragment slot="head">
@@ -93,7 +84,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           "url": "https://whisperingpinesresort.in/book-now/",
           "image": "https://whisperingpinesresort.in/og-image.webp",
           "telephone": "+91-7505029696",
-          "priceRange": "₹3,999 - ₹15,999",
+          "priceRange": "₹5,500 - ₹12,000",
           "currenciesAccepted": "INR",
           "paymentAccepted": "Cash, Credit Card, UPI, Bank Transfer",
           "address": {
@@ -247,7 +238,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           src={heroImage.src}
           alt="180° view of the Nanda Devi Himalayan range from a private balcony at Whispering Pines Resort, Malla Ramgarh"
           class="w-full h-full object-cover sm:opacity-60"
-          loading="eager" fetchpriority="high" decoding="async"
+          loading="eager" fetchpriority="high"
           width="1800" height="1200"
         />
       </picture>
@@ -284,7 +275,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
 
       <!-- Compact price line. The full OTA comparison still exists, lower down. -->
       <p class="font-sans text-[15px] sm:text-base text-[#0E2C21] sm:text-[#FAF7F2] mb-5 sm:mb-7">
-        <span class="font-bold">From ₹3,999 / night</span>&nbsp;<span class="text-[#44564E] sm:text-[#FAF7F2]/75">incl. breakfast</span>
+        <span class="font-bold">From ₹5,500 / night</span>&nbsp;<span class="text-[#44564E] sm:text-[#FAF7F2]/75">incl. breakfast</span>
       </p>
 
       <!-- CTAs, now above the fold on a 360px phone -->
@@ -304,7 +295,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           href="https://wa.me/917505029696?text=Hi!%20I%20am%20viewing%20your%20direct%20booking%20page%20for%20Whispering%20Pines%20Resort.%20Could%20you%20please%20share%20room%20availability%20and%20your%20best%20direct%20rates%20for%20an%20upcoming%20stay%3F"
           target="_blank"
           rel="noopener noreferrer"
-          data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","hero_whatsapp_direct",{"conversion_type":"whatsapp","value":3999,"currency":"INR"}]'
+          data-track-fn="trackBookingConversion" data-track-args='["generate_lead","booking","hero_whatsapp_direct",{"conversion_type":"whatsapp","value":5500,"currency":"INR"}]'
           class="w-full sm:w-auto sm:flex-1 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold min-h-14 py-4 px-6 rounded-sm shadow-[0_8px_24px_rgba(10,18,15,0.28)] flex items-center justify-center gap-2.5 text-sm uppercase tracking-wider active:scale-[0.98] transition-all border border-white/20 text-center"
         >
           <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24">
@@ -330,12 +321,12 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
       <div class="flex flex-wrap justify-center items-center gap-y-2 gap-x-5 text-xs text-[#44564E] sm:text-[#FAF7F2]/80 font-sans mb-8 sm:mb-0">
         <span class="flex items-center gap-1.5"><span class="text-[#7A6038]">✓</span> Reply in &lt; 5 minutes</span>
         <span class="flex items-center gap-1.5"><span class="text-[#7A6038]">✓</span> 100% pet-friendly · ₹0 pet fee</span>
-        <a href="#accommodations" class="flex items-center gap-1.5 underline decoration-[#8A6F4A]/40 underline-offset-4"><span class="text-[#7A6038]">✓</span> Private 3-BHK villa, sleeps 10</a>
+        <a href="#accommodations" class="flex items-center gap-1.5 underline decoration-[#8A6F4A]/40 underline-offset-4"><span class="text-[#7A6038]">✓</span> Premium cottage villas</a>
       </div>
 
       <!-- Keyword copy and the OTA comparison: below the CTAs, where their 543px is affordable -->
       <p class="font-sans text-[15px] sm:text-lg md:text-xl text-[#44564E] sm:text-[#FAF7F2]/95 font-light max-w-2xl mx-auto leading-relaxed mt-0 sm:mt-10 mb-7 text-pretty sm:drop-shadow-[0_1px_6px_rgba(0,0,0,0.6)]">
-        Whispering Pines Resort is one of the hotels in Mukteshwar that sits on the open ridge instead of the town centre: we are in Malla Ramgarh on the Bhowali–Ramgarh–Mukteshwar Rd, 25 km (45 min) from Mukteshwar Dham, at 1,780 m. Heated Himalayan-view suites, Glass-Roof Skylight Suites and a 3-BHK Private Villa for ten, plus a complimentary evening bonfire setup, gated parking for 25+ cars and 150 Mbps fiber Wi-Fi.
+        Whispering Pines Resort is one of the hotels in Mukteshwar that sits on the open ridge instead of the town centre: we are in Malla Ramgarh on the Bhowali–Ramgarh–Mukteshwar Rd, 25 km (45 min) from Mukteshwar Dham, at 1,780 m. Heated Himalayan-view Premium Rooms, Premium Cottage Villas and a glass-roof Family Suite for four, plus a complimentary evening bonfire setup, gated parking for 25+ cars and 150 Mbps fiber Wi-Fi.
       </p>
 
       <div class="max-w-xl mx-auto bg-[#051E14] sm:bg-[#051E14]/85 sm:backdrop-blur-md border border-[#B0966D]/40 rounded-sm p-5 sm:p-6 text-left shadow-[0_12px_40px_rgba(0,0,0,0.3)] relative overflow-hidden">
@@ -355,7 +346,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
           <div>
             <span class="text-xs font-sans uppercase tracking-[0.18em] text-[#C4A77D] font-bold block">Direct Host Resident Rate (WhatsApp / Call)</span>
             <div class="flex items-baseline gap-2 mt-0.5">
-              <span class="text-2xl sm:text-3xl font-bold font-sans text-white">From ₹3,999 / night</span>
+              <span class="text-2xl sm:text-3xl font-bold font-sans text-white">From ₹5,500 / night</span>
               <span class="text-xs text-[#FAF7F2]/70 font-sans">incl. breakfast</span>
             </div>
           </div>
@@ -377,19 +368,19 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
       
       <div class="text-center max-w-3xl mx-auto mb-10">
         <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#7A6038] uppercase block mb-3">
-          Rooms, Suites &amp; Private Villa
+          Rooms, Family Suite &amp; Cottage Villas
         </span>
         <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0E2C21] leading-tight">
-          Rooms, Skylight Suites &amp; Villa at Our Resort in Mukteshwar
+          Rooms, Family Suite &amp; Cottage Villas at Our Resort in Mukteshwar
         </h2>
         <div class="w-16 h-0.5 bg-[#B0966D] mx-auto my-4"></div>
         <p class="text-sm text-[#44564E] leading-relaxed">
-          Every residence below is at Whispering Pines Resort, Malla Ramgarh (Mukteshwar Rd). All tariffs include breakfast.
+          Every residence below is at Whispering Pines Resort, Malla Ramgarh (Mukteshwar Rd). All tariffs include breakfast: CP is room + daily breakfast; MAP is room + breakfast + dinner.
         </p>
       </div>
 
       <!-- Accommodations Grid (Grouped & Filterable by Hotel) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12" id="accommodations-grid">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" id="accommodations-grid">
         
         {ROOM_CARDS.map((room) => (
         <div class={`accommodation-card bg-white rounded-sm overflow-hidden shadow-md flex flex-col group ${room.featured ? 'border border-[#8A6F4A]/40 relative ring-2 ring-[#B0966D]/45' : 'border border-[#8A6F4A]/25'}`}>
@@ -424,11 +415,12 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               </div>
             </div>
             <div class="pt-4 border-t border-[#8A6F4A]/15 flex flex-col gap-3">
-              <div class="flex items-end justify-between gap-2">
+              <div class="flex flex-col items-start gap-2">
                 <div>
                   <span class="text-xs font-sans text-[#44564E] uppercase block">Direct Resident Tariff</span>
                   <span class="font-sans text-xl sm:text-2xl font-bold text-[#0E2C21]">{room.price}</span>
-                  <span class="text-xs font-sans text-[#44564E]"> / night incl. breakfast</span>
+                  <span class="text-xs font-sans text-[#44564E]"> / night · <span class="whitespace-nowrap">CP (breakfast)</span></span>
+                  <span class="block text-sm font-sans font-semibold text-[#0E2C21] mt-0.5">{room.mapPrice}<span class="text-xs font-normal text-[#44564E]"> / night · <span class="whitespace-nowrap">MAP (breakfast + dinner)</span></span></span>
                 </div>
                 <span class="text-xs font-sans font-semibold text-emerald-800 bg-emerald-50 border border-emerald-700/30 px-2.5 py-1 rounded-sm shrink-0">
                   Save up to 20% Direct
@@ -445,7 +437,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
                   <span>Call Desk: {RESORT_PHONE_DISPLAY}</span>
                 </a>
                 <a
-                  href={`https://wa.me/917505029696?text=${encodeURIComponent(`Hi! I am interested in the ${room.name} (${room.price} / night incl. breakfast) at Whispering Pines Resort, Malla Ramgarh near Mukteshwar. Please confirm availability and the best direct rate.`)}`}
+                  href={`https://wa.me/917505029696?text=${encodeURIComponent(`Hi! I am interested in the ${room.name} (CP ${room.price} / MAP ${room.mapPrice} per night) at Whispering Pines Resort, Malla Ramgarh near Mukteshwar. Please confirm availability and the best direct rate.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track-fn="trackBookingConversion"
@@ -769,7 +761,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               <option value="2 Adults + 1 Child">2 Adults + 1 Child</option>
               <option value="4 Guests">4 Guests (Family)</option>
               <option value="5-6 Guests">5 to 6 Guests</option>
-              <option value="7-10 Guests (Villa Recommended)">7 to 10 Guests (Private Villa Recommended)</option>
+              <option value="7-10 Guests (Group Booking)">7 to 10 Guests (Group Booking)</option>
             </select>
           </div>
 
@@ -780,7 +772,7 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
               <div class="flex flex-col gap-1 mt-1">
                 <span id="calc-display-hotel" class="text-xs sm:text-sm font-sans text-emerald-400 font-bold">Whispering Pines Resort, Malla Ramgarh (Mukteshwar Rd)</span>
                 <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
-                  <span id="calc-display-room" class="text-xl sm:text-2xl font-bold text-[#FAF7F2]">Executive Cedar Suite — ₹3,999 / night</span>
+                  <span id="calc-display-room" class="text-xl sm:text-2xl font-bold text-[#FAF7F2]">Premium Room — CP ₹5,500 / night</span>
                   <span id="calc-display-nights" class="text-xs text-[#FAF7F2]/70 font-mono">1 night stay</span>
                 </div>
               </div>
@@ -980,15 +972,17 @@ const BOOKING_ENGINE_URL = "https://casadebello-book.whisperingpinesresort.in/";
        ========================================================================= -->
   <script is:inline>
     (function () {
-      // Whispering Pines Resort only — approved tariffs, all incl. breakfast
+      // Whispering Pines Resort only — CP (breakfast) and MAP (breakfast + dinner) tariffs
       const hotelInfo = {
         name: 'Whispering Pines Resort by Casa De Bello',
         location: 'Malla Ramgarh, Mukteshwar Rd (1,780 m)',
         rooms: [
-          { id: 'cedar', name: 'Executive Cedar Suite — ₹3,999 / night (incl. breakfast)', default: true, basePrice: 3999 },
-          { id: 'family', name: 'Family Twin Room — ₹4,999 / night (incl. breakfast)', basePrice: 4999 },
-          { id: 'skylight', name: 'Deluxe Skylight Suite — ₹6,499 / night (incl. breakfast)', basePrice: 6499 },
-          { id: 'villa', name: 'Private Villa 3-BHK, sleeps 10 — ₹15,999 / night (incl. breakfast)', basePrice: 15999 }
+          { id: 'premium-cp', name: 'Premium Room — CP ₹5,500 / night (breakfast)', default: true, basePrice: 5500 },
+          { id: 'premium-map', name: 'Premium Room — MAP ₹6,500 / night (breakfast + dinner)', basePrice: 6500 },
+          { id: 'cottage-cp', name: 'Premium Cottage Villa — CP ₹5,500 / night (breakfast)', basePrice: 5500 },
+          { id: 'cottage-map', name: 'Premium Cottage Villa — MAP ₹6,500 / night (breakfast + dinner)', basePrice: 6500 },
+          { id: 'familysuite-cp', name: 'Family Suite, sleeps 4 — CP ₹10,000 / night (breakfast)', basePrice: 10000 },
+          { id: 'familysuite-map', name: 'Family Suite, sleeps 4 — MAP ₹12,000 / night (breakfast + dinner)', basePrice: 12000 }
         ]
       };
 

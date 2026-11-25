@@ -2265,7 +2265,7 @@ export const BLOG_POSTS: BlogPostData[] = [
         </p>
         <div className="bg-[#FAF9F6] p-5 rounded-sm border-l-4 border-[#8A6F4A] my-4">
           <p className="text-sm text-gray-700 font-light">
-            <strong>Get today's rate:</strong> send your dates and guest count on <a href="https://wa.me/917505029696?text=Hi!%20Please%20share%20your%20direct%20rate%20for%20my%20Kainchi%20Dham%20trip." target="_blank" rel="noopener noreferrer" className="text-[#0E2C21] font-semibold underline">WhatsApp +91-7505029696</a> or check live availability on the <a href="https://casadebello-book.whisperingpinesresort.in/" target="_blank" rel="noopener noreferrer" className="text-[#0E2C21] font-semibold underline">direct booking page</a>.
+            <strong>Get today's rate:</strong> send your dates and guest count on <a href="https://wa.me/917505029696?text=Hi!%20Please%20share%20your%20direct%20rate%20for%20my%20Kainchi%20Dham%20trip." target="_blank" rel="noopener noreferrer" className="text-[#0E2C21] font-semibold underline">WhatsApp +91-7505029696</a> or check live availability on the <a href="https://url.bookingjini.com/be/8811" target="_blank" rel="noopener noreferrer" className="text-[#0E2C21] font-semibold underline">direct booking page</a>.
           </p>
         </div>
 
@@ -3518,12 +3518,12 @@ export const BLOG_POSTS: BlogPostData[] = [
         <div className="bg-[#0E2C21] text-white p-6 rounded-sm text-center space-y-3 my-6">
           <p className="text-sm font-bold text-white">Call or WhatsApp: +91-7505029696 | Email: booking@whisperingpinesresort.in</p>
           <a 
-            href="https://casadebello-book.whisperingpinesresort.in/" 
+            href="https://url.bookingjini.com/be/8811" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="inline-block px-6 py-3 bg-[#B0966D] text-[#0E2C21] font-bold text-xs rounded-full hover:bg-yellow-400 transition-all uppercase tracking-wider"
           >
-            Book Online Direct — casadebello-book.whisperingpinesresort.in
+            Book Online Direct
           </a>
         </div>
 

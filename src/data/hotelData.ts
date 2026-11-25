@@ -103,7 +103,7 @@ export const propertyDetails = {
     whatsappLink: "https://wa.me/917505029696",
     email: "booking@whisperingpinesresort.in",
     website: "https://whisperingpinesresort.in/",
-    bookingEngine: "https://casadebello-book.whisperingpinesresort.in/"
+    bookingEngine: "https://url.bookingjini.com/be/8811"
   },
   verificationLinks: {
     gmapsCid: "https://maps.google.com/?cid=8386667112972057918",

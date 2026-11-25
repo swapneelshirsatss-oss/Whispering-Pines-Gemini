@@ -7,7 +7,8 @@ import FooterSection from '../components/FooterSection.astro';
 import Logo from '../components/Logo.astro';
 import StickyDirectBookingBar from '../components/StickyDirectBookingBar.astro';
 import FestiveOfferPopup from '../components/FestiveOfferPopup.astro';
-import LandingFooter from '../components/LandingFooter.astro'; // Xmas/NY 2026-27, auto-off 1 Jan 2027
+import LandingFooter from '../components/LandingFooter.astro';
+import LandingHeader from '../components/LandingHeader.astro'; // Xmas/NY 2026-27, auto-off 1 Jan 2027
 
 interface Props {
   title: string;
@@ -17,7 +18,7 @@ interface Props {
   canonical?: string;
   breadcrumbs?: BreadcrumbItem[];
   faqs?: Array<{ question: string; answer: string }>;
-  /** Set by LandingLayout: minimal contact/legal footer, no festive popup. */
+  /** Set by LandingLayout: logo + Call header, minimal contact/legal footer, no festive popup. */
   landing?: boolean;
 }
 
@@ -214,7 +215,8 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
         ],
         "url": "https://whisperingpinesresort.in/",
         "image": "https://whisperingpinesresort.in/og-image.webp",
-        "priceRange": "₹3,999 - ₹15,999",
+        // Ad landing pages carry the client's 25 Nov 2026 CP/MAP tariffs; the rest of the site keeps the older range.
+        "priceRange": landing ? "₹5,500 - ₹12,000" : "₹3,999 - ₹15,999",
         "telephone": "+91-7505029696",
         "hasMap": "https://maps.google.com/?cid=8386667112972057918",
         "address": {
@@ -241,8 +243,13 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
     <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="Whispering Pines Resort Full LLM Knowledge Base" />
 
     <!-- Google Preferred Sources (Official Google Publisher Script) -->
-    <link rel="preconnect" href="https://news.google.com" />
-    <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
+    {/* Google News publisher script: useless on ad landing pages, so skipped there. */}
+    {!landing && (
+      <Fragment>
+        <link rel="preconnect" href="https://news.google.com" />
+        <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
+      </Fragment>
+    )}
 
     <!-- Delegated data-track-* click tracking (no inline onclick handlers, CSP-safe) -->
     <script is:inline defer src="/js/click-tracking.js"></script>
@@ -271,9 +278,12 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
     <!-- End Google Tag Manager (noscript) -->
     
     <div class="bg-[#FAF9F6] min-h-screen flex flex-col">
-      <Navbar client:idle overlay={Astro.url.pathname === '/'}>
-        <Logo />
-      </Navbar>
+      {/* Ads landing pages (LandingLayout) get a logo + Call header with no React island. */}
+      {landing ? <LandingHeader /> : (
+        <Navbar client:idle overlay={Astro.url.pathname === '/'}>
+          <Logo />
+        </Navbar>
+      )}
       
       <main class="flex-grow">
         <slot />
