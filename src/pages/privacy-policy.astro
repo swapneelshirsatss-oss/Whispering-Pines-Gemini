@@ -1,61 +1,112 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+// Keep this page in step with what the site actually loads. If a new tracker
+// (e.g. a Meta pixel) or a new form is added, add it to section 2 and 4 here too.
+const lastUpdated = "26 November 2026";
+
 const privacyContent = `
-<h2>1. Introduction</h2>
-<p>Welcome to Whispering Pines Resort by Casa De Bello. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website (regardless of where you visit it from) and tell you about your privacy rights and how the law protects you.</p>
+<p>This policy explains what information Whispering Pines Resort by Casa De Bello ("we", "us") collects when you visit whisperingpinesresort.in or contact us to book a stay, why we collect it, and the choices you have. It is written to meet India's Digital Personal Data Protection Act, 2023.</p>
 
-<h2>2. The Data We Collect About You</h2>
-<p>We may collect, use, store and transfer different kinds of personal data about you which we have grouped together follows:</p>
+<h2>1. Who we are</h2>
+<p>Whispering Pines Resort by Casa De Bello, operated by Casa De Bello Hospitality, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137. We decide how your personal data is used, and we are responsible for it.</p>
+
+<h2>2. What we collect</h2>
 <ul>
-  <li><strong>Identity Data</strong> includes first name, last name, username or similar identifier.</li>
-  <li><strong>Contact Data</strong> includes billing address, delivery address, email address and telephone numbers.</li>
-  <li><strong>Transaction Data</strong> includes details about payments to and from you and other details of products and services you have purchased from us.</li>
+  <li><strong>Details you give us when you enquire or book</strong>: your name, phone number, email address, travel dates, number of guests and any requests you share by WhatsApp, phone call or email.</li>
+  <li><strong>Details needed at check-in</strong>: a government photo ID for every adult guest, as required by Indian law for hotels and resorts.</li>
+  <li><strong>Payment details</strong>: when you pay through our online booking engine, your card or UPI details are handled by the booking engine and its payment provider. We do not see or store your full card number.</li>
+  <li><strong>How you use our website</strong>: pages visited, device and browser type, approximate location (city level) and the ad or link that brought you here (for example a Google Ads click ID or campaign name). This is collected through cookies and similar technology, described in section 4.</li>
 </ul>
+<p>Our website has no sign-up or account forms. We only receive your contact details when you choose to message, call or email us.</p>
 
-<h2>3. How We Use Your Personal Data</h2>
-<p>We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:</p>
+<h2>3. Why we use it</h2>
 <ul>
-  <li>Where we need to perform the contract we are about to enter into or have entered into with you (e.g., booking your room).</li>
-  <li>Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.</li>
-  <li>Where we need to comply with a legal or regulatory obligation.</li>
+  <li>To answer your enquiry, confirm your booking and look after you during your stay.</li>
+  <li>To meet legal duties, such as guest registration and tax records.</li>
+  <li>To understand which pages and ads bring guests to us, so we can improve the website and stop spending on ads that do not help.</li>
+  <li>To show you our ads on other websites after you have visited ours (remarketing), only where you have not opted out.</li>
 </ul>
+<p>We do not sell your personal data, and we do not send promotional messages unless you have asked us to.</p>
 
-<h2>4. Data Security</h2>
-<p>We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorised way, altered or disclosed.</p>
+<h2>4. Cookies, analytics and advertising</h2>
+<p>We use these Google services on our website:</p>
+<ul>
+  <li><strong>Google Tag Manager</strong>, which loads the tools below.</li>
+  <li><strong>Google Analytics</strong>, which measures visits and how pages are used.</li>
+  <li><strong>Google Ads conversion tracking and remarketing</strong>, which records when a visitor who came from one of our ads calls us, messages us on WhatsApp or opens our booking engine, and may show our ads to past visitors.</li>
+</ul>
+<p>These tools set cookies, small files stored in your browser. Google processes this data under its own policy: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites that use its services</a>.</p>
+<p><strong>Your choices:</strong> you can turn off personalised Google ads at <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">adssettings.google.com</a>, block Google Analytics with the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics opt-out add-on</a>, or block or delete cookies in your browser settings. The website still works without them.</p>
 
-<h2>5. Contact Us</h2>
-<p>If you have any questions about this privacy policy or our privacy practices, please contact us at <a href="mailto:booking@whisperingpinesresort.in">booking@whisperingpinesresort.in</a>.</p>
+<h2>5. Who we share it with</h2>
+<ul>
+  <li><strong>WhatsApp (Meta)</strong>, when you choose to message us on WhatsApp. Your chat is also covered by WhatsApp's own privacy policy.</li>
+  <li><strong>BookingJini</strong>, our online booking engine, when you book or pay online.</li>
+  <li><strong>Google</strong>, for the analytics and advertising described in section 4.</li>
+  <li><strong>Government authorities</strong>, when the law requires it (for example guest registration records or a lawful request).</li>
+</ul>
+<p>Some of these providers may store data outside India. They are bound by their own privacy and security commitments.</p>
+
+<h2>6. How long we keep it</h2>
+<p>We keep booking and guest registration records for as long as Indian tax and hotel regulations require. We keep enquiry messages that did not lead to a booking for no longer than 12 months. Google Analytics data is kept for up to 14 months.</p>
+
+<h2>7. Your rights</h2>
+<p>You can ask us to:</p>
+<ul>
+  <li>tell you what personal data we hold about you and how we use it,</li>
+  <li>correct or update it,</li>
+  <li>delete it, unless we must keep it by law,</li>
+  <li>withdraw any consent you have given, for example to receive offers from us.</li>
+</ul>
+<p>You may also name another person to exercise these rights on your behalf if you are unable to. We will reply within 30 days. If you are not satisfied with our answer, you can complain to the Data Protection Board of India.</p>
+
+<h2>8. Security</h2>
+<p>Our website runs over a secure (HTTPS) connection, and access to guest records is limited to staff who need them to run your booking and stay. No method of sending or storing data is completely secure, but we take reasonable steps to protect what you share with us.</p>
+
+<h2>9. Children</h2>
+<p>Our website is not aimed at children. Bookings must be made by an adult, and we collect children's details only when a parent or guardian gives them for a stay.</p>
+
+<h2>10. Changes to this policy</h2>
+<p>We will update this page if the way we handle your data changes. The date at the top shows when it last changed.</p>
+
+<h2>11. Contact and grievances</h2>
+<p>For any question, request or complaint about your personal data, contact us:</p>
+<ul>
+  <li>Email: <a href="mailto:booking@whisperingpinesresort.in">booking@whisperingpinesresort.in</a></li>
+  <li>Phone / WhatsApp: <a href="tel:+917505029696">075050 29696</a></li>
+  <li>Post: Whispering Pines Resort by Casa De Bello, Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137</li>
+</ul>
 `;
 ---
 
 <Layout
   title="Privacy Policy | Whispering Pines Resort"
-  description="Read the privacy policy for Whispering Pines Resort to understand how we collect, use, and protect your data when booking your stay."
+  description="How Whispering Pines Resort collects, uses and protects your data when you visit our website or book a stay, including cookies, Google Ads and your rights."
 >
   <div class="pt-24 pb-20 bg-[#FAF9F6] min-h-screen">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
+
       {/* Header */}
       <div class="mb-12 border-b border-[#2C3531]/10 pb-8">
         <h1 class="font-display text-4xl sm:text-5xl font-bold text-[#0E2C21] mb-4">
           Privacy Policy
         </h1>
         <p class="text-sm text-[#2C3531]/60 font-sans uppercase tracking-wider">
-          Last Updated: March 1, 2024
+          Last Updated: {lastUpdated}
         </p>
       </div>
 
       {/* Content Body */}
-      <div 
-        class="prose prose-lg prose-stone max-w-none 
+      <div
+        class="prose prose-lg prose-stone max-w-none
                    prose-headings:font-display prose-headings:text-[#0E2C21] prose-headings:font-bold
                    prose-p:font-sans prose-p:text-[#2C3531]/90 prose-p:leading-relaxed
                    prose-a:text-[#7A6038] prose-a:no-underline hover:prose-a:underline
                    prose-li:text-[#2C3531]/90"
         set:html={privacyContent}
       />
-      
+
     </div>
   </div>
 </Layout>
