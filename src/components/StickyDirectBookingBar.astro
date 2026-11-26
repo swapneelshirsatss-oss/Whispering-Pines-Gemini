@@ -110,20 +110,9 @@ const { hideBar = false } = Astro.props;
           timestamp: Date.now()
         };
 
-        // GTM DataLayer Push
+        // GTM forwards this to GA4 ("GA4 - site events"). No gtag() copy: GA4 would count it twice.
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push(eventPayload);
-
-        // GA4 gtag Dispatch (if available)
-        if (typeof window.gtag === 'function') {
-          window.gtag('event', eventName, {
-            event_category: category,
-            event_label: label,
-            link_url: href,
-            page_location: window.location.href,
-            page_path: window.location.pathname
-          });
-        }
       }
     }, true);
   })();
