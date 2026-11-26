@@ -138,10 +138,9 @@ Whenever designing or refactoring direct booking pages, room cards, or conversio
 - **Dynamic Payload Synchronization**: Ensure the client-side JavaScript calculator updates the pre-filled WhatsApp message payload across `#btn-whatsapp-submit`, `#mobile-sticky-whatsapp`, and `#desktop-floating-whatsapp` simultaneously.
 - **Conversion Measurement Invariant**: Every WhatsApp CTA click must fire `generate_lead` / `trackAdsConversion` to Google Ads and Google Tag Manager.
 - **Google Ads Conversion Mapping Standards**:
-  - **Account ID**: `AW-18455442099` initialized with `allow_enhanced_conversions: true` and `conversion_linker: true`.
-  - **Phone Call Conversion Action**: `AW-18455442099/Vc_dCNLMo_UcEN7JhfND` mapped to phone number `7505029696`.
-  - **Lead Conversion Mapping**: WhatsApp inquiries dispatch `generate_lead` + `conversion` (`AW-18455442099`) with dynamic estimated room value and currency `INR` for Smart Bidding / Target ROAS.
-  - **Booking Engine Conversion Mapping**: BookingJini clicks dispatch `begin_checkout` + `conversion` (`AW-18455442099`).
+  - **Account ID**: `AW-18455442099`. Conversions are fired **only by GTM-PL8FVLPX tags**, never by site code (no `gtag('event','conversion')` calls — verified 26 Nov 2026 that the old code-side calls used a wrong phone label and unlabelled leads).
+  - **Website Call Click**: label `6IIeCM_Hw7EdELPlnuBE`, GTM tag "Click to call", trigger: link click URL contains `tel:`.
+  - **WhatsApp Lead Click**: label `IVsxCI2DxaIdELPlnuBE`, GTM tag "Google Ads", triggers: link click URL contains `wa.me`, plus custom event `generate_lead` whose `event_label` is `calculator_whatsapp_submit`, `wedding_proposal_submission` or `corporate_offsite_proposal_submission` (these open WhatsApp via `window.open`, so no link click). Adding a new `window.open` WhatsApp flow means adding its `event_label` to that GTM trigger.
   - **Attribution Persistence**: Capture `gclid`, `gbraid`, `wbraid`, and UTM parameters into `sessionStorage` on landing page arrival so attribution is preserved throughout the session and injected into WhatsApp payloads.
 
 ## Google Tag Manager (GTM) & Tag Hygiene Standards

@@ -1,7 +1,6 @@
 /**
- * Google Ads & GTM Conversion Tracking Utility
- * Google Ads Account: AW-18455442099
- * Phone Call Conversion: AW-18455442099/Vc_dCNLMo_UcEN7JhfND
+ * GTM event dispatcher. Google Ads conversions (AW-18455442099) are fired by
+ * GTM-PL8FVLPX tags: WhatsApp IVsxCI2DxaIdELPlnuBE, Call 6IIeCM_Hw7EdELPlnuBE.
  */
 
 export interface ConversionExtraParams {
@@ -17,9 +16,6 @@ export interface ConversionExtraParams {
   utm_campaign?: string;
   [key: string]: any;
 }
-
-export const GOOGLE_ADS_ID = 'AW-18455442099';
-export const GOOGLE_ADS_PHONE_CONVERSION = 'AW-18455442099/Vc_dCNLMo_UcEN7JhfND';
 
 export const trackAdsConversion = (
   action: string,
@@ -51,27 +47,7 @@ export const trackAdsConversion = (
       currency: extra?.currency || (extra?.value ? 'INR' : undefined),
       ...extra,
     });
-
-    // Dedicated Google Ads Conversion Action Mapping
-    if (action === 'generate_lead') {
-      win.gtag('event', 'conversion', {
-        send_to: GOOGLE_ADS_ID,
-        value: extra?.value,
-        currency: extra?.currency || 'INR',
-        transaction_id: 'lead_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7),
-      });
-    } else if (action === 'phone_call_click') {
-      win.gtag('event', 'conversion', {
-        send_to: GOOGLE_ADS_PHONE_CONVERSION,
-        phone_conversion_number: extra?.phone_number || '7505029696',
-      });
-    } else if (action === 'begin_checkout') {
-      win.gtag('event', 'conversion', {
-        send_to: GOOGLE_ADS_ID,
-        value: extra?.value,
-        currency: extra?.currency || 'INR',
-      });
-    }
+    // Google Ads conversions are fired by GTM-PL8FVLPX tags (labelled), not from here.
   }
 };
 
