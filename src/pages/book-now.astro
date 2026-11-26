@@ -1005,13 +1005,6 @@ Please confirm live availability and share your best direct host tariff & photos
                 value: totalEstimatedTariff,
                 currency: 'INR'
               });
-            } else if (typeof window.gtag === 'function') {
-              window.gtag('event', 'generate_lead', {
-                event_category: 'booking',
-                event_label: 'calculator_whatsapp_submit',
-                value: totalEstimatedTariff,
-                currency: 'INR'
-              });
             }
             window.open(encodedUrl, '_blank', 'noopener,noreferrer');
           };
