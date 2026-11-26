@@ -365,11 +365,8 @@ export default function Navbar({ children, overlay = false }: NavbarProps) {
               <span>WhatsApp</span>
             </a>
 
-            {/* Google Preferred Source Button in Mobile Menu */}
+            {/* Google publisher button in mobile menu */}
             <div className="pt-2 flex flex-col items-center">
-              <span className="text-[10px] font-sans uppercase tracking-[0.2em] text-[#C4A77D] block mb-2 font-semibold text-center">
-                Google Preferred Source
-              </span>
               <div
                 className="g-preferred-source inline-block min-h-[36px]"
                 {...{ "google-add-preferred-source-btn": "" }}

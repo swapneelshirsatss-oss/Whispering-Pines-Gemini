@@ -288,7 +288,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                   >
                     <option value="15-30">15 – 30 Delegates (Executive Sprints / CXO)</option>
                     <option value="30-50">30 – 50 Delegates (Mid-size Team Offsite)</option>
-                    <option value="50-70">50 – 70 Delegates (Full Company / Estate Buyout)</option>
+                    <option value="50-80">50 – 80 Delegates (Full Company / Estate Buyout)</option>
                   </select>
                 </div>
               </div>

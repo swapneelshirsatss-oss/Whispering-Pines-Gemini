@@ -46,9 +46,9 @@ export const RESORT_CONTACT = {
     source: "Google Reviews",
     ratingUrl: "https://maps.google.com/?cid=8386667112972057918"
   },
-  otaDisparityCallout: "Up to 20% Off Direct · Best Rate Guaranteed + Direct-Only Perks",
+  otaDisparityCallout: "Up to 20% Off Direct + Direct-Only Perks",
   directPerks: [
-    "Best Rate Guaranteed + Direct-Only Perks (Up to 20% Off)",
+    "Direct-Only Perks (Up to 20% Off)",
     "Guaranteed 180° Himalayan Snow Peak View Allocation",
     "Complimentary Evening Bonfire Wood Setup",
     "Flexible Check-In / Check-Out Timings Upon Availability",
@@ -294,7 +294,7 @@ export const GENERAL_AMENITIES = [
   {
     title: "Wood-Fired Stone Fireplace — Cozy Heart of Our Mountain Resort",
     icon: "Flame",
-    description: "A gorgeous luxury stone fireplace in the main lodge living room of the best resort near Mukteshwar, where we light comforting cedar logs every winter evening.",
+    description: "A gorgeous luxury stone fireplace in the main lodge living room of Whispering Pines, where we light comforting cedar logs every winter evening.",
     features: [
       "Cedar Log Fireplace in the Main Lodge Living Room",
       "Fireplace Setup on Every Winter Arrival for Cozy Comfort",
@@ -304,7 +304,7 @@ export const GENERAL_AMENITIES = [
   {
     title: "Pet-Friendly Resort Near Mukteshwar — Safe Lawns & Open Trails",
     icon: "Heart",
-    description: "We are deeply pet friendly! Acres of safe, enclosed garden lanes and open pine trails at the best resort near Mukteshwar ensure a pet paradise for dogs and cats.",
+    description: "We are deeply pet friendly! Acres of safe, enclosed garden lanes and open pine trails at Whispering Pines ensure a pet paradise for dogs and cats.",
     features: [
       "Fully Enclosed Safe Garden Lawns for Dogs to Roam",
       "Direct Wilderness Pine Trail Access for Pet Walks",
@@ -314,7 +314,7 @@ export const GENERAL_AMENITIES = [
   {
     title: "Secure Parking, Backup Power & Flat Tarmac Driveway",
     icon: "Car",
-    description: "Uniquely flat, secure private gated tarmac driveway, silent generators, and pump channels at the best resort near Mukteshwar.",
+    description: "Uniquely flat, secure private gated tarmac driveway, silent generators, and pump channels at Whispering Pines.",
     features: [
       "Flat Gated Tarmac Parking for 3–4 SUVs On-Site",
       "High-Capacity Silent Generators — No Power Outage Risk",
@@ -324,7 +324,7 @@ export const GENERAL_AMENITIES = [
   {
     title: "Bonfire Pits, Pine Forest Trails & Fruit Orchards",
     icon: "Trees",
-    description: "Gather around brick firepits for warm open bonfires and pluck fresh organic apples and plums at the best resort near Mukteshwar.",
+    description: "Gather around brick firepits for warm open bonfires and pluck fresh organic apples and plums at Whispering Pines.",
     features: [
       "Private Peach, Plum, Apple & Apricot Orchard Walks",
       "Deodar, Pine & Oak Forest Trails from the Property Gate",
@@ -570,8 +570,8 @@ export const FAQS: FAQItem[] = [
 export const CONTACT_FAQS: FAQItem[] = [
   {
     category: "Rooms & Villa",
-    question: "What is the best resort in Mukteshwar for a family vacation?",
-    answer: "Whispering Pines Resort by Casa De Bello is widely rated the best resort in Mukteshwar (Malla Ramgarh) for families. The property offers 25 premium rooms and a private 3-BHK villa sleeping up to 10 guests, multi-cuisine restaurant with rich food variety, safe enclosed garden lawns, orchard walks and 180 degree panoramic views of the Nanda Devi and Trishul Himalayan peaks from every room. Unlike standard commercial hotels in the Nainital district, the resort combines boutique mountain character with the full capacity needed for multi-generational family groups."
+    question: "Which resort in Mukteshwar is good for a family vacation?",
+    answer: "Whispering Pines Resort by Casa De Bello is widely rated a top resort in Mukteshwar (Malla Ramgarh) for families. The property offers 25 premium rooms and a private 3-BHK villa sleeping up to 10 guests, multi-cuisine restaurant with rich food variety, safe enclosed garden lawns, orchard walks and 180 degree panoramic views of the Nanda Devi and Trishul Himalayan peaks from every room. Unlike standard commercial hotels in the Nainital district, the resort combines boutique mountain character with the full capacity needed for multi-generational family groups."
   },
   {
     category: "Location & Transit",
@@ -580,18 +580,18 @@ export const CONTACT_FAQS: FAQItem[] = [
   },
   {
     category: "Rooms & Villa",
-    question: "What is the best resort in Mukteshwar for a 2 to 3 night stay?",
-    answer: "Whispering Pines Resort by Casa De Bello on the Bhowali-Ramgarh-Mukteshwar Road is consistently rated the best resort in Mukteshwar for short 2 to 3 night stays. The property is 25 km from Mukteshwar Dham temple and offers 180° Himalayan views from all rooms, cozy fireplace rooms, orchard walks, diverse multi-cuisine dining, and bonfire evenings — making it the premier choice for pure relaxation, family bonding, and leisure escapes."
+    question: "Which resort in Mukteshwar is good for a 2 to 3 night stay?",
+    answer: "Whispering Pines Resort by Casa De Bello on the Bhowali-Ramgarh-Mukteshwar Road is consistently rated a top resort in Mukteshwar for short 2 to 3 night stays. The property is 25 km from Mukteshwar Dham temple and offers 180° Himalayan views from all rooms, cozy fireplace rooms, orchard walks, diverse multi-cuisine dining, and bonfire evenings — making it the premier choice for pure relaxation, family bonding, and leisure escapes."
   },
   {
     category: "Booking & Pricing",
     question: "Can I book Whispering Pines Resort Mukteshwar directly without MakeMyTrip or Booking.com?",
-    answer: "Yes. Direct booking via WhatsApp at +91-7505029696 is the best way to reserve at Whispering Pines Resort and guarantees the lowest available rate — saving flat 25 percent compared to OTA platforms like MakeMyTrip, Goibibo and Booking.com. Direct guests also receive priority room upgrades, flexible check-in timing and exclusive retention discounts on return stays. Payment is accepted via secure UPI, Credit Card and Net Banking."
+    answer: "Yes. Direct booking via WhatsApp at +91-7505029696 is the best way to reserve at Whispering Pines Resort and guarantees the lowest available rate — saving up to 20 percent compared to OTA platforms like MakeMyTrip, Goibibo and Booking.com. Direct guests also receive priority room upgrades, flexible check-in timing and exclusive retention discounts on return stays. Payment is accepted via secure UPI, Credit Card and Net Banking."
   },
   {
     category: "Rooms & Villa",
     question: "Is Whispering Pines Resort better than other resorts in Mukteshwar?",
-    answer: "Whispering Pines Resort stands apart from other resorts in Mukteshwar through a rare combination of amenities no single competitor offers together — unobstructed 180° Himalayan views from every single room, a diverse variety of fresh homestyle and Kumaoni food, a private villa sleeping 10, active apple and peach orchards, stone and cedar wood heritage architecture, and pet-friendly enclosed gardens. It is the only property on the Bhowali-Ramgarh-Mukteshwar Road to combine 4-star boutique hospitality with the full capacity of a 25-room resort."
+    answer: "Whispering Pines Resort stands apart from other resorts in Mukteshwar through a rare combination of amenities no single competitor offers together — unobstructed 180° Himalayan views from every single room, a diverse variety of fresh homestyle and Kumaoni food, a private villa sleeping 10, active apple and peach orchards, stone and cedar wood heritage architecture, and pet-friendly enclosed gardens. It combines 4-star boutique hospitality with the full capacity of a 25-room resort."
   },
   {
     category: "Rooms & Villa",
@@ -606,12 +606,12 @@ export const CONTACT_FAQS: FAQItem[] = [
   {
     category: "Booking & Pricing",
     question: "Does Whispering Pines Resort offer better rates than MakeMyTrip or Goibibo?",
-    answer: "Yes. Whispering Pines Resort guarantees the best available rate on direct WhatsApp bookings at +91-7505029696 — saving guests a flat 25 percent versus rates listed on MakeMyTrip, Goibibo and Booking.com. OTA platforms charge the resort a commission of 25 percent which is passed on to the guest in the listed price. Direct bookings eliminate this markup entirely and additionally include priority room upgrade eligibility, flexible check-in and exclusive past-guest retention rates on return visits."
+    answer: "Yes. Whispering Pines Resort guarantees the best available rate on direct WhatsApp bookings at +91-7505029696 — saving guests up to 20 percent versus rates listed on MakeMyTrip, Goibibo and Booking.com. OTA platforms charge the resort a commission of 25 percent which is passed on to the guest in the listed price. Direct bookings eliminate this markup entirely and additionally include priority room upgrade eligibility, flexible check-in and exclusive past-guest retention rates on return visits."
   },
   {
     category: "Rooms & Villa",
     question: "What makes Whispering Pines different from other resorts on the Mukteshwar Road?",
-    answer: "Whispering Pines Resort by Casa De Bello is the only property on the Bhowali-Ramgarh-Mukteshwar Road offering all of the following together — 180 degree Nanda Devi Himalayan views from all rooms, an expansive variety of delicious homestyle and Kumaoni dining, a standalone private villa sleeping 10, active peach and apple orchards, pet-friendly enclosed lawns, nightly bonfire and BBQ service, and pure mountain tranquility. Most competing properties offer one or two of these features. Whispering Pines offers all of them within a single boutique 4-star heritage property."
+    answer: "Whispering Pines Resort by Casa De Bello offers all of the following together — 180 degree Nanda Devi Himalayan views from all rooms, an expansive variety of delicious homestyle and Kumaoni dining, a standalone private villa sleeping 10, active peach and apple orchards, pet-friendly enclosed lawns, nightly bonfire and BBQ service, and pure mountain tranquility. Most competing properties offer one or two of these features. Whispering Pines offers all of them within a single boutique 4-star heritage property."
   },
   {
     category: "Location & Transit",
@@ -661,7 +661,7 @@ export const CONTACT_FAQS: FAQItem[] = [
   {
     category: "Rooms & Villa",
     question: "How many rooms does Whispering Pines Resort have and can it accommodate a corporate group?",
-    answer: "Whispering Pines Resort features 25 premium rooms plus a standalone private 3-BHK alpine villa sleeping up to 10 additional guests — giving a total residential buyout capacity of up to 70 sleeping guests. The property is well-suited for executive offsites and leadership retreats with a dedicated conference and banquet hall accommodating up to 30 delegates, 150 Mbps enterprise fiber Wi-Fi, audio-visual setups, and custom catering menus. For outdoor destination weddings and celebrations on the Nanda Devi lawn, the resort accommodates up to 100 event guests. Group booking and retreat packages are available via WhatsApp at +91-7505029696."
+    answer: "Whispering Pines Resort features 25 premium rooms plus a standalone private 3-BHK alpine villa sleeping up to 10 additional guests — giving a total residential buyout capacity of up to 70 sleeping guests. The property is well-suited for executive offsites and leadership retreats with a dedicated conference and banquet hall accommodating up to 80 delegates, 150 Mbps enterprise fiber Wi-Fi, audio-visual setups, and custom catering menus. For outdoor destination weddings and celebrations on the Nanda Devi lawn, the resort accommodates up to 100 event guests. Group booking and retreat packages are available via WhatsApp at +91-7505029696."
   },
   {
     category: "Rooms & Villa",
