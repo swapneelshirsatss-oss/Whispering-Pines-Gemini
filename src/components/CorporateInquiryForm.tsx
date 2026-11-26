@@ -86,7 +86,6 @@ Looking forward to receiving the customized corporate offsite proposal.`;
 
     // Track conversion in Google Ads / GTM
     trackAdsConversion("generate_lead", "corporate", "corporate_offsite_proposal_submission", {
-      phone_number: formData.phone,
       method: "corporate_proposal_form",
       conversion_type: "whatsapp",
     });
