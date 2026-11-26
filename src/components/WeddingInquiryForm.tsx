@@ -47,7 +47,6 @@ I look forward to discussing the bridal villa allocation and customized wedding 
 
     // Track conversion in Google Ads / GTM
     trackAdsConversion("generate_lead", "wedding", "wedding_proposal_submission", {
-      phone_number: formData.phone,
       method: "proposal_form",
       conversion_type: "whatsapp",
     });

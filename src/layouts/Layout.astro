@@ -44,8 +44,6 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
     <!-- Attribution Persistence & Global Google Ads / GTM Conversion Dispatcher -->
     <script is:inline>
       (function() {
-        var ADS_ID = 'AW-18455442099';
-        var ADS_PHONE = 'AW-18455442099/Vc_dCNLMo_UcEN7JhfND';
         window.dataLayer = window.dataLayer || [];
         window.gtag = window.gtag || function() { window.dataLayer.push(arguments); };
 
@@ -99,28 +97,9 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
 
           window.dataLayer.push(payload);
 
+          // Google Ads conversions are fired by GTM-PL8FVLPX tags (labelled), not from here.
           if (typeof window.gtag === 'function') {
             window.gtag('event', action, payload);
-
-            if (action === 'generate_lead') {
-              window.gtag('event', 'conversion', {
-                send_to: ADS_ID,
-                value: extra.value,
-                currency: extra.currency || (extra.value ? 'INR' : undefined),
-                transaction_id: 'lead_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7)
-              });
-            } else if (action === 'phone_call_click') {
-              window.gtag('event', 'conversion', {
-                send_to: ADS_PHONE,
-                phone_conversion_number: extra.phone_number || '7505029696'
-              });
-            } else if (action === 'begin_checkout') {
-              window.gtag('event', 'conversion', {
-                send_to: ADS_ID,
-                value: extra.value,
-                currency: extra.currency || (extra.value ? 'INR' : undefined)
-              });
-            }
           }
         };
 
