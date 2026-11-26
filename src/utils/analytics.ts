@@ -33,22 +33,9 @@ export const trackAdsConversion = (
     ...extra,
   };
 
-  // 1. Push to Google Tag Manager dataLayer
+  // GTM-PL8FVLPX forwards this to Google Ads and GA4. No gtag() copy: it would fire the tags twice.
   win.dataLayer = win.dataLayer || [];
   win.dataLayer.push(payload);
-
-  // 2. Dispatch to Google Tag (gtag.js)
-  if (typeof win.gtag === 'function') {
-    // Standard GA4 / Google Tag event
-    win.gtag('event', action, {
-      event_category: category,
-      event_label: label,
-      value: extra?.value,
-      currency: extra?.currency || (extra?.value ? 'INR' : undefined),
-      ...extra,
-    });
-    // Google Ads conversions are fired by GTM-PL8FVLPX tags (labelled), not from here.
-  }
 };
 
 // Global browser window attachment for inline HTML/Astro onclick handlers

@@ -97,10 +97,7 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
 
           window.dataLayer.push(payload);
 
-          // Google Ads conversions are fired by GTM-PL8FVLPX tags (labelled), not from here.
-          if (typeof window.gtag === 'function') {
-            window.gtag('event', action, payload);
-          }
+          // GTM-PL8FVLPX forwards this to Google Ads and GA4. No gtag() copy: it would fire the tags twice.
         };
 
         window.trackAdsConversion = window.trackBookingConversion;
