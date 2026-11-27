@@ -24,9 +24,9 @@ Direct bookings and WhatsApp/phone enquiries instead of OTA bookings.
 
 ## 3. Open Questions
 - OPEN QUESTION: Rate parity: Agoda ₹2,415 vs official site ₹3,675 on Google Hotels (2026-11-15).
-- OPEN QUESTION: Merge the two hotel schema blocks on the homepage into one.
-- OPEN QUESTION: Update review count 409 → 422.
-- OPEN QUESTION: The client sheet's GBP calendar says "Save 20%"; the profile says 25%. Fix the posts.
+- RESOLVED: one #hotel entity (18 Nov 2026).
+- RESOLVED: review count is 428 (client profile, 21 Nov 2026).
+- RESOLVED: the offer is "up to 20% off direct" (23 Nov 2026); GBP posts use that wording.
 - OPEN QUESTION: The client sheet plans a heading "Stone Cottage Rooms". Do not use it (forbidden term).
 - OPEN QUESTION: Confirm the room count (sheet says 25 rooms + 1 villa) and add it to the profile.
 

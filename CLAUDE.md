@@ -25,7 +25,7 @@ Astro 7 (static output, `trailingSlash: 'always'`) + React 19 islands + Tailwind
 | `npm run package` | Build + `dist_deploy.zip` via `scripts/package-deploy.mjs`. |
 | `npm run indexnow [url]` | Submit URLs to IndexNow without a build. |
 
-Build currently emits 34 pages; a changed page count is a signal, not noise.
+Build currently emits 36 pages (28 Nov 2026); a changed page count is a signal, not noise.
 
 ## Layout of the code
 

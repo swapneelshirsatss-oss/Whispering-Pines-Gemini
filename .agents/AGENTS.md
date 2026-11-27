@@ -1,3 +1,5 @@
+> **Outdated copy.** The root `AGENTS.md` and the client profile win wherever this file disagrees.
+
 ## Development
 
 When starting the dev server, use background mode:
@@ -118,7 +120,7 @@ Whenever refactoring or adding links to header navigation:
 ## Direct Booking & WhatsApp CRO Standards
 
 Whenever designing or refactoring direct booking pages, room cards, or conversion CTAs:
-- **WhatsApp Visual Dominance**: All primary direct booking buttons must use authentic WhatsApp green (`#25D366` hover `#1EBE5D`), an animated concentric pulse ring, and explicit direct saving microcopy (*"Save Flat 25% Direct • ⚡ < 5m reply"*).
+- **WhatsApp Visual Dominance**: All primary direct booking buttons must use authentic WhatsApp green (`#25D366` hover `#1EBE5D`), an animated concentric pulse ring, and explicit direct saving microcopy (*"Save up to 20% direct • ⚡ < 5m reply"*; never a fixed or flat percentage).
 - **Multi-Viewport Availability**:
   - **Desktop**: Maintain the persistent floating WhatsApp concierge pill at `bottom-6 right-6 z-50 hidden md:flex`.
   - **Mobile**: Maintain the mobile sticky bottom bar with WhatsApp highlighted as the hero CTA.
@@ -127,7 +129,7 @@ Whenever designing or refactoring direct booking pages, room cards, or conversio
 - **Conversion Measurement Invariant**: Every WhatsApp CTA click must fire `generate_lead` / `trackAdsConversion` to Google Ads and Google Tag Manager.
 - **Google Ads Conversion Mapping Standards**:
   - **Account ID**: `AW-18455442099` initialized with `allow_enhanced_conversions: true` and `conversion_linker: true`.
-  - **Phone Call Conversion Action**: `AW-18455442099/Vc_dCNLMo_UcEN7JhfND` mapped to phone number `7505029696`.
+  - **OUTDATED, see root AGENTS.md**: conversions fire only from GTM-PL8FVLPX tags (Call `6IIeCM_Hw7EdELPlnuBE`, WhatsApp `IVsxCI2DxaIdELPlnuBE`). Site code never calls `gtag('event', 'conversion')`; the old phone label counts nothing.
   - **Lead Conversion Mapping**: WhatsApp inquiries dispatch `generate_lead` + `conversion` (`AW-18455442099`) with dynamic estimated room value and currency `INR` for Smart Bidding / Target ROAS.
   - **Booking Engine Conversion Mapping**: BookingJini clicks dispatch `begin_checkout` + `conversion` (`AW-18455442099`).
   - **Attribution Persistence**: Capture `gclid`, `gbraid`, `wbraid`, and UTM parameters into `sessionStorage` on landing page arrival so attribution is preserved throughout the session and injected into WhatsApp payloads.
