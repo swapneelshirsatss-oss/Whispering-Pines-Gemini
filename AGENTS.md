@@ -217,7 +217,7 @@ Whenever maintaining or refactoring bottom conversion bars or global tracking:
 - Phone / WhatsApp: 075050 29696 (+91 75050 29696)
 - Google Maps CID: `8386667112972057918`. Never use `maps.app.goo.gl` shortlinks.
 - Booking page: https://whisperingpinesresort.in/book-now/
-- Always "alpine resort and luxury villa property". NEVER "stone cottage".
+- Always "4-star alpine resort" (27 Nov 2026: do NOT focus on "luxury villa" in keywords, GBP descriptions, or marketing copy). NEVER "stone cottage".
 - Direct saving: 25% (not 20%) · ₹0 pet fee
 - Host / author: Gaurav Pandey, Managing Director & Founder, Casa De Bello Pvt Ltd (confirmed 21 Nov 2026; use this exact title everywhere, including schema `jobTitle`)
 - Master page for Mukteshwar resort searches: `/blog/best-resort-to-stay-near-mukteshwar/` (all old URLs 301 there)
