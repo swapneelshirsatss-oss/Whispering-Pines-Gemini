@@ -1,4 +1,6 @@
 # Apache configuration for Astro SSG static site
+# Serve the site's own 404 page (with header, GTM and links) instead of the host default
+ErrorDocument 404 /404.html
 # AVIF must be served as image/avif: with "X-Content-Type-Options: nosniff" a text/plain AVIF is blocked by browsers
 <IfModule mod_mime.c>
   AddType image/avif .avif

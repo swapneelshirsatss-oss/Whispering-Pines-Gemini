@@ -70,7 +70,8 @@ function indexNowIntegration() {
         }
         const urlList = (pages || [])
           .map(p => {
-            const rawPath = p.pathname ? (p.pathname.startsWith('/') ? p.pathname : '/' + p.pathname) : '';
+            // The homepage has an empty pathname; treat it as '/' so it gets submitted too
+            const rawPath = '/' + (p.pathname || '').replace(/^\//, '');
             if (!rawPath || rawPath.includes('404')) return '';
             const normalizedPath = rawPath.endsWith('/') ? rawPath : rawPath + '/';
             if (excludedRedirectPaths.has(normalizedPath)) return '';
