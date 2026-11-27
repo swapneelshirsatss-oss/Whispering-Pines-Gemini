@@ -87,7 +87,8 @@ const { hideBar = false } = Astro.props;
       var eventName = null;
       var category = 'engagement';
 
-      if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp.com') !== -1) {
+      // Only chats with the resort's number; "Share on WhatsApp" links are not leads.
+      if ((href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp.com') !== -1) && href.indexOf('917505029696') !== -1) {
         eventName = 'whatsapp_chat_click';
         category = 'lead_generation';
       } else if (href.indexOf('tel:') === 0) {
