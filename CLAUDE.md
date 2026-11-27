@@ -14,7 +14,7 @@ SEO and direct-booking (WhatsApp) are the point of the site; nearly every rule b
 
 ## Stack
 
-Astro 7 (static output, `trailingSlash: 'always'`) + React 19 islands + Tailwind v4 (via `@tailwindcss/vite`, no config file — tokens live in the `@theme` block in `src/styles/global.css`). Node 20–23. Sharp for images.
+Astro 7 (static output, `trailingSlash: 'always'`) + React 19 islands + Tailwind v4 (via `@tailwindcss/vite`, no config file — tokens live in the `@theme` block in `src/styles/global.css`). Node 22.23.4+ (Astro 7.4.7+ refuses older Node), below 24. Sharp for images.
 
 ## Commands
 
