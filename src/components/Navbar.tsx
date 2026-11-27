@@ -131,7 +131,7 @@ export default function Navbar({ children, overlay = false }: NavbarProps) {
                       <ChevronDown className="w-3.5 h-3.5 text-[#B0966D]/80 group-hover:rotate-180 transition-transform duration-200" />
                     </a>
                     {/* Dropdown Menu */}
-                    <div className="absolute top-full -left-3 pt-2 w-72 opacity-0 translate-y-1 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-200 z-50">
+                    <div className="absolute top-full -left-3 pt-2 w-72 opacity-0 translate-y-1 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:visible transition-all duration-200 z-50">
                       <div className="bg-[#0A2118] border border-[#FAF9F6]/15 rounded-sm shadow-md p-2 backdrop-blur-xl divide-y divide-white/5">
                         {link.dropdown.map((subItem) => (
                           <a
@@ -222,6 +222,8 @@ export default function Navbar({ children, overlay = false }: NavbarProps) {
               onClick={() => setIsOpen(!isOpen)}
               className="text-[#FAF9F6] hover:text-[#C4A77D] p-2 focus:outline-none -mr-2 md:hidden"
               aria-label="Toggle menu"
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
             >
               {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
             </button>
@@ -231,7 +233,8 @@ export default function Navbar({ children, overlay = false }: NavbarProps) {
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full wp-pine-surface border-b border-[#FAF9F6]/10 shadow-md transition-all duration-300 ease-in-out z-40 ${isOpen ? "opacity-100 max-h-screen py-5" : "opacity-0 max-h-0 overflow-hidden"
+        id="mobile-menu"
+        className={`md:hidden absolute top-full left-0 w-full wp-pine-surface border-b border-[#FAF9F6]/10 shadow-md transition-all duration-300 ease-in-out z-40 ${isOpen ? "opacity-100 max-h-screen py-5 visible" : "opacity-0 max-h-0 overflow-hidden invisible"
           }`}
       >
         <div className="px-4 pt-1 pb-4 space-y-2">

@@ -237,17 +237,17 @@
 
         <form id="resort-inquiry-form" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs font-sans">
           <div>
-            <label class="block font-mono text-[#B0966D] uppercase mb-1">Check-In Date</label>
+            <label for="form-checkin" class="block font-mono text-[#B0966D] uppercase mb-1">Check-In Date</label>
             <input type="date" id="form-checkin" required
               class="w-full bg-[#0A2118] border border-[#FAF9F6]/20 rounded-xl p-3 text-white focus:outline-none focus:border-[#B0966D]" />
           </div>
           <div>
-            <label class="block font-mono text-[#B0966D] uppercase mb-1">Check-Out Date</label>
+            <label for="form-checkout" class="block font-mono text-[#B0966D] uppercase mb-1">Check-Out Date</label>
             <input type="date" id="form-checkout" required
               class="w-full bg-[#0A2118] border border-[#FAF9F6]/20 rounded-xl p-3 text-white focus:outline-none focus:border-[#B0966D]" />
           </div>
           <div>
-            <label class="block font-mono text-[#B0966D] uppercase mb-1">Room Option</label>
+            <label for="form-room" class="block font-mono text-[#B0966D] uppercase mb-1">Room Option</label>
             <select id="form-room"
               class="w-full bg-[#0A2118] border border-[#FAF9F6]/20 rounded-xl p-3 text-white focus:outline-none focus:border-[#B0966D]">
               <option value="Entire Villa Cottage">Entire Villa Cottage (Up to 10 Guests)</option>
@@ -257,7 +257,7 @@
             </select>
           </div>
           <div>
-            <label class="block font-mono text-[#B0966D] uppercase mb-1">Number of Guests</label>
+            <label for="form-guests" class="block font-mono text-[#B0966D] uppercase mb-1">Number of Guests</label>
             <select id="form-guests"
               class="w-full bg-[#0A2118] border border-[#FAF9F6]/20 rounded-xl p-3 text-white focus:outline-none focus:border-[#B0966D]">
               <option value="2 Adults">2 Adults</option>
@@ -624,7 +624,7 @@
 
       </div>
 
-      {/* Map Full Width Row */}
+      <!-- Map Full Width Row -->
       <div class="py-8 border-b border-[#FAF9F6]/10">
         <div class="flex items-center justify-between mb-4">
           <h4 class="text-xs font-mono uppercase tracking-[0.2em] text-[#B0966D] font-semibold flex items-center gap-2">
@@ -633,7 +633,7 @@
           <span class="text-[11px] font-mono text-[#FAF9F6]/50 hidden sm:inline">Malla Ramgarh, Uttarakhand</span>
         </div>
         <div class="w-full h-56 sm:h-72 rounded-xl overflow-hidden shadow-xl border border-[#B0966D]/25">
-          <iframe
+          <iframe title="Whispering Pines Resort location map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3475.0889621951014!2d79.5506794!3d29.4260969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0a3285f1c95a9%3A0x74636d4e06267d3e!2sWhispering%20Pines!5e0!3m2!1sen!2sin!4v1782035643721!5m2!1sen!2sin"
             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
@@ -641,7 +641,7 @@
         </div>
       </div>
 
-      {/* Footer Bottom Copyrights & Legal Panel */}
+      <!-- Footer Bottom Copyrights & Legal Panel -->
       <div
         class="pt-8 flex flex-col lg:flex-row items-center justify-between gap-6 text-xs font-sans text-[#FAF9F6]/65 text-center lg:text-left">
         <div class="space-y-2">

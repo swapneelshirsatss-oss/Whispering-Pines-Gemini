@@ -172,7 +172,16 @@ export default function GalleryGrid() {
           <div
             key={`${img.src}-${idx}`}
             onClick={() => setLightboxIndex(idx)}
-            className={`relative overflow-hidden rounded-sm group cursor-pointer border border-black/5 transition-shadow duration-300 hover:shadow-md ${
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                setLightboxIndex(idx);
+              }
+            }}
+            role="button"
+            tabIndex={0}
+            aria-label={`View photo: ${img.alt}`}
+            className={`relative overflow-hidden rounded-sm group cursor-pointer focus-visible:outline-2 focus-visible:outline-[#B0966D] border border-black/5 transition-shadow duration-300 hover:shadow-md ${
               activeTab === "all" ? img.span || "col-span-1 row-span-1" : "col-span-1 row-span-1"
             }`}
           >
@@ -197,7 +206,7 @@ export default function GalleryGrid() {
 
       {/* Full-Screen Interactive Lightbox Modal */}
       {lightboxIndex !== null && filteredImages[lightboxIndex] && (
-        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-8 animate-fade-in">
+        <div role="dialog" aria-modal="true" aria-label="Photo viewer" className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-8 animate-fade-in">
           {/* Close Button */}
           <button
             onClick={() => setLightboxIndex(null)}

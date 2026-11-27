@@ -168,7 +168,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
               {/* Company Name */}
               <div className="space-y-2">
-                <label className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
+                <label htmlFor="cf-companyName" className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                   Company / Organization Name <span className="text-[#C27847]">*</span>
                 </label>
                 <div className="relative">
@@ -177,7 +177,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                   </div>
                   <input
                     type="text"
-                    name="companyName"
+                    id="cf-companyName" name="companyName"
                     required
                     value={formData.companyName}
                     onChange={handleChange}
@@ -189,7 +189,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
 
               {/* Organizer Full Name */}
               <div className="space-y-2">
-                <label className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
+                <label htmlFor="cf-organizerName" className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                   Organizer Full Name <span className="text-[#C27847]">*</span>
                 </label>
                 <div className="relative">
@@ -198,7 +198,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                   </div>
                   <input
                     type="text"
-                    name="organizerName"
+                    id="cf-organizerName" name="organizerName"
                     required
                     value={formData.organizerName}
                     onChange={handleChange}
@@ -210,7 +210,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
 
               {/* Work Email */}
               <div className="space-y-2">
-                <label className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
+                <label htmlFor="cf-workEmail" className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                   Work Email <span className="text-[#C27847]">*</span>
                 </label>
                 <div className="relative">
@@ -219,7 +219,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                   </div>
                   <input
                     type="email"
-                    name="workEmail"
+                    id="cf-workEmail" name="workEmail"
                     required
                     value={formData.workEmail}
                     onChange={handleChange}
@@ -231,7 +231,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
 
               {/* Mobile / WhatsApp Number */}
               <div className="space-y-2">
-                <label className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
+                <label htmlFor="cf-phone" className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                   Mobile / WhatsApp Number <span className="text-[#C27847]">*</span>
                 </label>
                 <div className="relative">
@@ -240,7 +240,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                   </div>
                   <input
                     type="tel"
-                    name="phone"
+                    id="cf-phone" name="phone"
                     required
                     value={formData.phone}
                     onChange={handleChange}
@@ -252,7 +252,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
 
               {/* Preferred Dates */}
               <div className="space-y-2">
-                <label className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
+                <label htmlFor="cf-preferredDate" className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                   Preferred Dates (Tentative) <span className="text-[#C27847]">*</span>
                 </label>
                 <div className="relative">
@@ -261,7 +261,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                   </div>
                   <input
                     type="date"
-                    name="preferredDate"
+                    id="cf-preferredDate" name="preferredDate"
                     required
                     value={formData.preferredDate}
                     onChange={handleChange}
@@ -272,7 +272,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
 
               {/* Estimated Delegate Count */}
               <div className="space-y-2">
-                <label className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
+                <label htmlFor="cf-delegateCount" className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                   Estimated Delegate Count <span className="text-[#C27847]">*</span>
                 </label>
                 <div className="relative">
@@ -280,7 +280,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                     <Users className="w-4 h-4" />
                   </div>
                   <select
-                    name="delegateCount"
+                    id="cf-delegateCount" name="delegateCount"
                     value={formData.delegateCount}
                     onChange={handleChange}
                     className="w-full pl-10 pr-4 py-3 bg-[#FAF9F6] border border-[#0E2C21]/15 rounded-sm text-sm text-[#0E2C21] focus:outline-none focus:border-[#8A6F4A] focus:ring-1 focus:ring-[#7A6038] transition-all appearance-none cursor-pointer"
@@ -295,9 +295,9 @@ Looking forward to receiving the customized corporate offsite proposal.`;
 
             {/* Event Requirements (Checkboxes) */}
             <div className="space-y-3">
-              <label className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
+              <p className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                 Event Requirements (Select all that apply)
-              </label>
+              </p>
               <div className="flex flex-wrap gap-2.5 sm:gap-3">
                 {requirementOptions.map((req) => {
                   const isChecked = formData.requirements.includes(req);
@@ -306,6 +306,7 @@ Looking forward to receiving the customized corporate offsite proposal.`;
                       type="button"
                       key={req}
                       onClick={() => handleRequirementToggle(req)}
+                      aria-pressed={isChecked}
                       className={`px-3.5 py-2 rounded-sm text-xs font-mono uppercase tracking-wider transition-all duration-200 border flex items-center gap-2 cursor-pointer ${
                         isChecked
                           ? "bg-[#0E2C21] text-[#FAF9F6] border-[#0E2C21] shadow-xs"
@@ -326,11 +327,11 @@ Looking forward to receiving the customized corporate offsite proposal.`;
 
             {/* Additional Notes */}
             <div className="space-y-2">
-              <label className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
+              <label htmlFor="cf-notes" className="block text-xs font-sans uppercase tracking-wider text-[#0E2C21] font-semibold">
                 Specific Itinerary or AV Needs (Optional)
               </label>
               <textarea
-                name="notes"
+                id="cf-notes" name="notes"
                 rows={3}
                 value={formData.notes}
                 onChange={handleChange}
