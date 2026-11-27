@@ -14,7 +14,7 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#0E2C21] overflow-x-hidden selection:bg-[#B0966D] selection:text-[#0E2C21]">
     <Breadcrumbs />
-    <main class="bg-[#FAF9F6]">
+    <div class="bg-[#FAF9F6]">
       <LocalExperiencesList 
         hideLink={true} 
         asH1={true}
@@ -30,7 +30,7 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
       />
 
       <SEOExperiencesContent />
-    </main>
+    </div>
     <RecentBookingNotification client:idle />
   </div>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({

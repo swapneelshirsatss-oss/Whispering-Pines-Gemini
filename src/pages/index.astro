@@ -22,7 +22,7 @@ import FAQAccordion from "../components/FAQAccordion";
   <div class="relative w-full text-[#0E2C21] overflow-x-hidden pb-20 md:pb-0 selection:bg-[#B0966D] selection:text-[#0E2C21]">
     <Breadcrumbs />
 
-    <main>
+    <div>
       <LuxuryHome />
 
       {/* Verified resident host note (E-E-A-T) */}
@@ -31,6 +31,6 @@ import FAQAccordion from "../components/FAQAccordion";
       <BlogCarousel posts={BLOG_CARDS} client:visible />
 
       <FAQAccordion client:visible />
-    </main>
+    </div>
   </div>
 </Layout>
