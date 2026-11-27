@@ -124,7 +124,7 @@ const rating = RESORT_CONTACT.rating;
         <a class="lx-room lx-reveal" href="/suites-cottages-ramgarh-resort/">
           <Image src={r.img} alt={`${r.short} at Whispering Pines Resort, Mukteshwar`} widths={[480, 800]} sizes="(max-width: 559px) 82vw, (max-width: 1000px) 50vw, 300px" quality={72} format="webp" />
           <h3>{r.short}</h3>
-          <p class="lx-meta">{r.sizeSqFt.toLocaleString('en-IN')} sq ft · up to {r.maxOccupancy} guests</p>
+          <p class="lx-meta">{r.sizeSqFt && `${r.sizeSqFt.toLocaleString('en-IN')} sq ft · `}up to {r.maxOccupancy} guests</p>
           <p class="lx-more">View room →</p>
         </a>
       ))}

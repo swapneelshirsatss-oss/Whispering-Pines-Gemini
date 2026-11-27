@@ -279,9 +279,7 @@ export default function Navbar({ children, overlay = false }: NavbarProps) {
               <a
                 key={link.name}
                 href={link.href}
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
-                data-astro-prefetch={link.external ? undefined : "hover"}
+                data-astro-prefetch="hover"
                 onClick={(e) => {
                   if (link.href.startsWith('/#') && window.location.pathname === '/') {
                     e.preventDefault();
@@ -294,10 +292,7 @@ export default function Navbar({ children, overlay = false }: NavbarProps) {
                   }
                   setIsOpen(false);
                 }}
-                className={`block px-4 py-3 text-base font-medium rounded-sm transition-colors ${link.external
-                    ? "text-[#C4A77D] font-semibold hover:bg-[#FAF9F6]/5"
-                    : "text-[#FAF9F6]/95 hover:text-[#C4A77D] hover:bg-[#FAF9F6]/5"
-                  }`}
+                className="block px-4 py-3 text-base font-medium rounded-sm transition-colors text-[#FAF9F6]/95 hover:text-[#C4A77D] hover:bg-[#FAF9F6]/5"
               >
                 {link.name}
               </a>
