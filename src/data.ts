@@ -230,7 +230,7 @@ export const ROOMS_INVENTORY: RoomOption[] = [
   },
   {
     id: "cedar-room",
-    name: "Executive Cedar Suite — Ramgarh's Best Rate for Families & Groups",
+    name: "Executive Cedar Suite — For Families & Groups",
     subtitle: "Premium Comfort Infused with Pine Aromatics",
     capacity: "2 Adults",
     bedType: "1 Premium Double Bed",
@@ -316,7 +316,7 @@ export const GENERAL_AMENITIES = [
     icon: "Car",
     description: "Uniquely flat, secure private gated tarmac driveway, silent generators, and pump channels at Whispering Pines.",
     features: [
-      "Flat Gated Tarmac Parking for 3–4 SUVs On-Site",
+      "Flat Gated On-Site Parking for 25+ Cars",
       "High-Capacity Silent Generators — No Power Outage Risk",
       "Double Water Pumping Channels for Uninterrupted Supply"
     ]
@@ -538,7 +538,7 @@ export const FAQS: FAQItem[] = [
   {
     category: "Policies & Amenities",
     question: "Is there dedicated, secure private parking available on site?",
-    answer: "Absolutely! The property features a secure, flat gated private gravel driveway that comfortably accommodates 3 to 4 tourist SUVs/sedans right in front of the villa. No tricky cliff-edge parking required."
+    answer: "Absolutely! The property features a secure, flat gated private gravel driveway that has room for 25+ cars, right inside the gate. No tricky cliff-edge parking required."
   },
   {
     category: "Policies & Amenities",
@@ -586,7 +586,7 @@ export const CONTACT_FAQS: FAQItem[] = [
   {
     category: "Booking & Pricing",
     question: "Can I book Whispering Pines Resort Mukteshwar directly without MakeMyTrip or Booking.com?",
-    answer: "Yes. Direct booking via WhatsApp at +91-7505029696 is the best way to reserve at Whispering Pines Resort and guarantees the lowest available rate — saving up to 20 percent compared to OTA platforms like MakeMyTrip, Goibibo and Booking.com. Direct guests also receive priority room upgrades, flexible check-in timing and exclusive retention discounts on return stays. Payment is accepted via secure UPI, Credit Card and Net Banking."
+    answer: "Yes. Direct booking via WhatsApp at +91-7505029696 is the best way to reserve at Whispering Pines Resort and saves up to 20 percent compared to OTA platforms like MakeMyTrip, Goibibo and Booking.com. Direct guests also receive priority room upgrades, flexible check-in timing and exclusive retention discounts on return stays. Payment is accepted via secure UPI, Credit Card and Net Banking."
   },
   {
     category: "Rooms & Villa",
@@ -606,7 +606,7 @@ export const CONTACT_FAQS: FAQItem[] = [
   {
     category: "Booking & Pricing",
     question: "Does Whispering Pines Resort offer better rates than MakeMyTrip or Goibibo?",
-    answer: "Yes. Whispering Pines Resort guarantees the best available rate on direct WhatsApp bookings at +91-7505029696 — saving guests up to 20 percent versus rates listed on MakeMyTrip, Goibibo and Booking.com. OTA platforms charge the resort a commission of 25 percent which is passed on to the guest in the listed price. Direct bookings eliminate this markup entirely and additionally include priority room upgrade eligibility, flexible check-in and exclusive past-guest retention rates on return visits."
+    answer: "Yes. Direct WhatsApp bookings at +91-7505029696 save guests up to 20 percent versus rates listed on MakeMyTrip, Goibibo and Booking.com. OTA platforms charge the resort a commission of 25 percent which is passed on to the guest in the listed price. Direct bookings eliminate this markup entirely and additionally include priority room upgrade eligibility, flexible check-in and exclusive past-guest retention rates on return visits."
   },
   {
     category: "Rooms & Villa",

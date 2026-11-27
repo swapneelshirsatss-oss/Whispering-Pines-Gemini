@@ -22,7 +22,7 @@ export const TRANSIT_ROUTES: TransitRoute[] = [
     duration: "6.5 – 7.5 hrs",
     recommendedRouteName: "Delhi to Ramgarh via NH 9 & Bhowali Rd",
     routeDescription: "New Delhi ➔ Ghaziabad ➔ Moradabad Bypass ➔ Rampur ➔ Bilaspur ➔ Rudrapur ➔ Haldwani ➔ Kathgodam ➔ Bhowali ➔ Malla Ramgarh",
-    googleMapsUrl: "https://www.google.com/maps/dir/New+Delhi,+Delhi,+India/Malla+Ramgarh,+13%2F4,+Ramgarh,+Uttarakhand+263137,+India/data=!4m14!4m13!1m5!1m1!19sChIJLbZ-NFv9DDkRzk0gTkm3wlI!2m2!1d77.2088282!2d28.613929799999998!1m5!1m1!19sChIJK8jRXyijoDkRA3lwD-NkUtk!2m2!1d79.5506794!2d29.4260969!3e0",
+    googleMapsUrl: "https://www.google.com/maps/dir/?api=1&origin=New+Delhi,+Delhi,+India&destination=Whispering+Pines+Resort+by+Casa+De+Bello&destination_place_id=ChIJqZUcXyijoDkRPn0mBk5tY3Q&travelmode=driving",
     iconType: "car",
     badge: "Direct Highway"
   },
@@ -35,7 +35,7 @@ export const TRANSIT_ROUTES: TransitRoute[] = [
     duration: "7.0 – 8.0 hrs",
     recommendedRouteName: "IGI Airport via Delhi-Meerut Exp & NH 9",
     routeDescription: "IGI Terminal 3 ➔ Delhi-Meerut Expressway ➔ Hapur ➔ Moradabad ➔ Rampur ➔ Kathgodam ➔ Bhowali ➔ Malla Ramgarh",
-    googleMapsUrl: "https://www.google.com/maps/dir/Indira+Gandhi+Int'l+Airport,+New+Delhi,+Delhi+110037,+India/Malla+Ramgarh,+13%2F4,+Ramgarh,+Uttarakhand+263137,+India/data=!4m14!4m13!1m5!1m1!19sChIJiS0q_IUbDTkRne1DLBh2874!2m2!1d77.0999623!2d28.5561437!1m5!1m1!19sChIJK8jRXyijoDkRA3lwD-NkUtk!2m2!1d79.5506794!2d29.4260969!3e0",
+    googleMapsUrl: "https://www.google.com/maps/dir/?api=1&origin=Indira+Gandhi+Int'l+Airport,+New+Delhi,+Delhi+110037,+India&destination=Whispering+Pines+Resort+by+Casa+De+Bello&destination_place_id=ChIJqZUcXyijoDkRPn0mBk5tY3Q&travelmode=driving",
     iconType: "plane",
     badge: "Air Terminal"
   },
@@ -48,7 +48,7 @@ export const TRANSIT_ROUTES: TransitRoute[] = [
     duration: "2.5 – 3.0 hrs",
     recommendedRouteName: "Pantnagar via NH 109 & Bhowali Rd",
     routeDescription: "Pantnagar Airport ➔ Rudrapur ➔ Haldwani ➔ Kathgodam ➔ Jeolikote ➔ Bhowali ➔ Malla Ramgarh",
-    googleMapsUrl: "https://www.google.com/maps/dir/Pantnagar+Airport,+Pantnagar,+Uttarakhand+263145,+India/Malla+Ramgarh,+13%2F4,+Ramgarh,+Uttarakhand+263137,+India/data=!4m14!4m13!1m5!1m1!19sChIJ87HLZTOHoDkRqPbMBjFb2OI!2m2!1d79.4689842!2d29.033527!1m5!1m1!19sChIJK8jRXyijoDkRA3lwD-NkUtk!2m2!1d79.5506794!2d29.4260969!3e0",
+    googleMapsUrl: "https://www.google.com/maps/dir/?api=1&origin=Pantnagar+Airport,+Pantnagar,+Uttarakhand+263145,+India&destination=Whispering+Pines+Resort+by+Casa+De+Bello&destination_place_id=ChIJqZUcXyijoDkRPn0mBk5tY3Q&travelmode=driving",
     iconType: "plane",
     badge: "Closest Airport"
   },
@@ -61,7 +61,7 @@ export const TRANSIT_ROUTES: TransitRoute[] = [
     duration: "1.5 – 2.0 hrs",
     recommendedRouteName: "Kathgodam via Bhowali-Ramgarh Rd",
     routeDescription: "Kathgodam Station ➔ HMT Ranibagh ➔ Bhumiadhar ➔ Bhowali Sanatorium ➔ Ramgarh Road ➔ Malla Ramgarh",
-    googleMapsUrl: "https://www.google.com/maps/dir/Kathgodam+Railway+Station,+7G8W%2BPM6,+Railway+Colony+Rd,+Kathgodam,+Haldwani,+Uttarakhand+263126,+India/Malla+Ramgarh,+13%2F4,+Ramgarh,+Uttarakhand+263137,+India/data=!4m14!4m13!1m5!1m1!19sChIJqXhOMHmboDkRG90cWfyDZZo!2m2!1d79.546652299999991!2d29.2667824!1m5!1m1!19sChIJK8jRXyijoDkRA3lwD-NkUtk!2m2!1d79.5506794!2d29.4260969!3e0",
+    googleMapsUrl: "https://www.google.com/maps/dir/?api=1&origin=Kathgodam+Railway+Station,+7G8W%2BPM6,+Railway+Colony+Rd,+Kathgodam,+Haldwani,+Uttarakhand+263126,+India&destination=Whispering+Pines+Resort+by+Casa+De+Bello&destination_place_id=ChIJqZUcXyijoDkRPn0mBk5tY3Q&travelmode=driving",
     iconType: "train",
     badge: "Closest Railhead"
   },
@@ -74,7 +74,7 @@ export const TRANSIT_ROUTES: TransitRoute[] = [
     duration: "2.0 – 2.2 hrs",
     recommendedRouteName: "Haldwani ➔ Kathgodam ➔ Bhowali ➔ Ramgarh",
     routeDescription: "Haldwani Bus Terminal ➔ Kathgodam ➔ Jeolikote By-pass ➔ Bhowali ➔ Malla Ramgarh",
-    googleMapsUrl: "https://www.google.com/maps/dir/Haldwani,+Uttarakhand,+India/Malla+Ramgarh,+13%2F4,+Ramgarh,+Uttarakhand+263137,+India/data=!4m14!4m13!1m5!1m1!19sChIJQ-d1q3WboDkR4VqC7tT-WbU!2m2!1d79.528628!2d29.2182644!1m5!1m1!19sChIJK8jRXyijoDkRA3lwD-NkUtk!2m2!1d79.5506794!2d29.4260969!3e0",
+    googleMapsUrl: "https://www.google.com/maps/dir/?api=1&origin=Haldwani,+Uttarakhand,+India&destination=Whispering+Pines+Resort+by+Casa+De+Bello&destination_place_id=ChIJqZUcXyijoDkRPn0mBk5tY3Q&travelmode=driving",
     iconType: "bus",
     badge: "Foothill Gateway"
   },
@@ -87,7 +87,7 @@ export const TRANSIT_ROUTES: TransitRoute[] = [
     duration: "~45 mins",
     recommendedRouteName: "Kainchi Dham via NH 109 & Ramgarh Rd",
     routeDescription: "Kainchi Dham Ashram ➔ Bhowali Junction ➔ Malla Ramgarh Ridge (Scenic valley drive)",
-    googleMapsUrl: "https://www.google.com/maps/dir/Shree+Kainchi+Dham+-+Param+Pujya+Baba+Shri+Neem+Karori+Maharaj,+Chaukhuta,+Uttarakhand+263132,+India/Malla+Ramgarh,+13%2F4,+Ramgarh,+Uttarakhand+263137,+India/data=!4m14!4m13!1m5!1m1!19sChIJ2cWOG6ujoDkR0H3tJvqGd-o!2m2!1d79.5124091!2d29.422562499999998!1m5!1m1!19sChIJK8jRXyijoDkRA3lwD-NkUtk!2m2!1d79.5506794!2d29.4260969!3e0",
+    googleMapsUrl: "https://www.google.com/maps/dir/?api=1&origin=Shree+Kainchi+Dham+-+Param+Pujya+Baba+Shri+Neem+Karori+Maharaj,+Chaukhuta,+Uttarakhand+263132,+India&destination=Whispering+Pines+Resort+by+Casa+De+Bello&destination_place_id=ChIJqZUcXyijoDkRPn0mBk5tY3Q&travelmode=driving",
     iconType: "temple",
     badge: "Spiritual Pilgrimage"
   },
@@ -100,7 +100,7 @@ export const TRANSIT_ROUTES: TransitRoute[] = [
     duration: "~55 mins",
     recommendedRouteName: "Nainital via Bhowali & Ramgarh Rd",
     routeDescription: "Naini Lake ➔ Tallital ➔ Bhowali Pine Forest ➔ Gagar Viewpoint ➔ Malla Ramgarh",
-    googleMapsUrl: "https://www.google.com/maps/dir/Nainital,+Uttarakhand,+India/Malla+Ramgarh,+13%2F4,+Ramgarh,+Uttarakhand+263137,+India/data=!4m14!4m13!1m5!1m1!19sChIJYZ39KLyhoDkRs32YFql7rnw!2m2!1d79.4533773!2d29.392413899999998!1m5!1m1!19sChIJK8jRXyijoDkRA3lwD-NkUtk!2m2!1d79.5506794!2d29.4260969!3e0",
+    googleMapsUrl: "https://www.google.com/maps/dir/?api=1&origin=Nainital,+Uttarakhand,+India&destination=Whispering+Pines+Resort+by+Casa+De+Bello&destination_place_id=ChIJqZUcXyijoDkRPn0mBk5tY3Q&travelmode=driving",
     iconType: "lake",
     badge: "Hill Station Hub"
   },
@@ -113,7 +113,7 @@ export const TRANSIT_ROUTES: TransitRoute[] = [
     duration: "45 – 50 mins",
     recommendedRouteName: "Mukteshwar via Bhowali-Ramgarh Rd",
     routeDescription: "Malla Ramgarh ➔ Talla Ramgarh ➔ Bhatelia Junction ➔ Mukteshwar Temple & Cliff Ridge",
-    googleMapsUrl: "https://www.google.com/maps/dir/Mukteshwar+Dham+Temple,+Dham+Temple,+Mukteshwar,+Uttarakhand+263138,+India/Malla+Ramgarh,+13%2F4,+Ramgarh,+Uttarakhand+263137,+India/data=!4m14!4m13!1m5!1m1!19sChIJyaxvawe8oDkR_46CWjbNK2Y!2m2!1d79.6447621!2d29.474845499999997!1m5!1m1!19sChIJK8jRXyijoDkRA3lwD-NkUtk!2m2!1d79.5506794!2d29.4260969!3e0",
+    googleMapsUrl: "https://www.google.com/maps/dir/?api=1&origin=Mukteshwar+Dham+Temple,+Dham+Temple,+Mukteshwar,+Uttarakhand+263138,+India&destination=Whispering+Pines+Resort+by+Casa+De+Bello&destination_place_id=ChIJqZUcXyijoDkRPn0mBk5tY3Q&travelmode=driving",
     iconType: "mountain",
     badge: "180° Snow View Point"
   },
@@ -126,7 +126,7 @@ export const TRANSIT_ROUTES: TransitRoute[] = [
     duration: "~50 mins",
     recommendedRouteName: "Bhimtal via Bhowali-Bhimtal Rd",
     routeDescription: "Bhimtal Dam ➔ Bhowali ➔ Ramgarh Orchards ➔ Malla Ramgarh",
-    googleMapsUrl: "https://www.google.com/maps/dir/Bhimtal,+Uttarakhand,+India/Malla+Ramgarh,+13%2F4,+Ramgarh,+Uttarakhand+263137,+India/data=!4m14!4m13!1m5!1m1!19sChIJDf-QRiGYoDkR3EGXQkQy3Do!2m2!1d79.5519144!2d29.346082!1m5!1m1!19sChIJK8jRXyijoDkRA3lwD-NkUtk!2m2!1d79.5506794!2d29.4260969!3e0",
+    googleMapsUrl: "https://www.google.com/maps/dir/?api=1&origin=Bhimtal,+Uttarakhand,+India&destination=Whispering+Pines+Resort+by+Casa+De+Bello&destination_place_id=ChIJqZUcXyijoDkRPn0mBk5tY3Q&travelmode=driving",
     iconType: "lake",
     badge: "Boating & Water Sports"
   }

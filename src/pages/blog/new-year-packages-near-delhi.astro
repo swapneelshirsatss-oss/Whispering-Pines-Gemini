@@ -4,8 +4,8 @@ import { RESORT_CONTACT, generateWhatsAppLink } from '../../data';
 import BlogShareBar from '../../components/BlogShareBar.astro';
 import DirectVsOtaTable from '../../components/DirectVsOtaTable.astro';
 
-const pageTitle = "New Year Packages Near Delhi: Hill Stay From Rs 6,000";
-const pageDescription = "Looking for New Year packages near Delhi? 25 heated rooms and a 10-guest villa at 1,780m, from Rs 6,000 a night with meals and bonfire. WhatsApp for festive dates.";
+const pageTitle = "New Year Packages Near Delhi: 2 Nights for Two at Rs 16,000";
+const pageDescription = "New Year near Delhi: Rs 16,000 for two, 2 nights (31 Dec to 2 Jan), with fireworks and live music at 1,780m. Christmas from Rs 6,000 a night. WhatsApp for dates.";
 const canonicalUrl = "https://whisperingpinesresort.in/blog/new-year-packages-near-delhi/";
 const ogImageUrl = "https://whisperingpinesresort.in/images/2027-new-year-in-the-himalayan-foothills.webp";
 const ogAltText = "2027 New Year in the Himalayan Foothills: bonfire lawn and festive stay at Whispering Pines Resort near Delhi";
@@ -20,7 +20,7 @@ const blogPostingSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
-  "headline": "New Year Packages Near Delhi: What a Rs 6,000 Hill Night Actually Includes",
+  "headline": "New Year Packages Near Delhi: What Rs 16,000 for Two Nights Includes",
   "description": pageDescription,
   "image": { "@type": "ImageObject", "url": ogImageUrl, "width": 1200, "height": 675 },
   "datePublished": "2026-11-17T10:00:00+05:30",
@@ -67,18 +67,36 @@ const resortSchema = {
   "numberOfRooms": "26"
 };
 
+// Client-approved festive prices (21 Nov 2026); taxes extra.
+const festiveSeller = { "@type": "Organization", "name": "Whispering Pines Resort by Casa De Bello" };
 const festiveOffer = {
   "@context": "https://schema.org",
-  "@type": "Offer",
-  "name": "Christmas and New Year Festive Stay 2026-27",
-  "description": "Festive night stay near Delhi including breakfast, dinner and the nightly bonfire on the Nanda Devi lawn.",
-  "price": "6000",
-  "priceCurrency": "INR",
-  "availability": "https://schema.org/LimitedAvailability",
-  "validFrom": "2026-11-17",
-  "priceValidUntil": "2027-01-05",
-  "url": canonicalUrl,
-  "seller": { "@type": "Organization", "name": "Whispering Pines Resort by Casa De Bello" }
+  "@graph": [
+    {
+      "@type": "Offer",
+      "name": "Christmas Stay 2026 (24 to 30 December)",
+      "description": "Per room per night, including breakfast, dinner and the bonfire. Taxes as applicable.",
+      "price": "6000",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/LimitedAvailability",
+      "validFrom": "2026-12-24",
+      "validThrough": "2026-12-30",
+      "url": canonicalUrl,
+      "seller": festiveSeller
+    },
+    {
+      "@type": "Offer",
+      "name": "New Year Package 2026-27 (31 December to 2 January)",
+      "description": "2 guests, 2 nights, including fireworks and live music. Taxes as applicable.",
+      "price": "16000",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/LimitedAvailability",
+      "validFrom": "2026-12-31",
+      "validThrough": "2027-01-02",
+      "url": canonicalUrl,
+      "seller": festiveSeller
+    }
+  ]
 };
 
 const festiveFaqs = [
@@ -87,8 +105,8 @@ const festiveFaqs = [
     answer: "It depends on whether you want a crowd or a view. Nainital, Mussoorie and Rishikesh have the organised parties and the traffic that comes with them. The Ramgarh and Mukteshwar ridge, around 45 minutes out, trades the DJ floor for snow-peak views, live music, fireworks, a bonfire and an empty road on 1 January. We are on that ridge at 1,780 m."
   },
   {
-    question: "What does the Rs 6,000 festive rate include?",
-    answer: "Rs 6,000 per night covers your heated room with a 180 degree snow-peak view, breakfast, dinner, and the wood-fired bonfire on the lawn facing Nanda Devi. That is the direct rate, booked with us rather than an OTA portal. Alcohol, lunch and spa treatments are charged separately."
+    question: "What do the Christmas and New Year packages include?",
+    answer: "Christmas (24 to 30 December) is Rs 6,000 per room per night with breakfast, dinner and the bonfire. New Year (31 December to 2 January) is Rs 16,000 for two guests for two nights, with fireworks and live music. Every room has the 180 degree snow-peak view. Taxes are extra. That is the direct rate, booked with us rather than an OTA portal. Alcohol, lunch and spa treatments are charged separately."
   },
   {
     question: "How far is the resort from Delhi, and how long is the drive?",
@@ -121,7 +139,7 @@ const festiveFaqs = [
 ];
 
 const waFestiveLink = generateWhatsAppLink(
-  "Hi Gaurav! I am looking at New Year and Christmas dates at Whispering Pines from Delhi. Could you confirm availability and what the Rs 6,000 festive rate includes?"
+  "Hi Gaurav! I am looking at New Year and Christmas dates at Whispering Pines from Delhi. Could you confirm availability and what the festive packages include?"
 );
 ---
 
@@ -171,7 +189,7 @@ const waFestiveLink = generateWhatsAppLink(
           </div>
 
           <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-[#0E2C21] leading-tight">
-            New Year Packages Near Delhi: What a Rs 6,000 Hill Night Actually Includes
+            New Year Packages Near Delhi: What Rs 16,000 for Two Nights Includes
           </h1>
 
           <div class="pt-4 flex items-center gap-3 border-t border-gray-100">
@@ -218,8 +236,9 @@ const waFestiveLink = generateWhatsAppLink(
 
           <div class="bg-[#FAF9F6] border-l-4 border-[#B0966D] p-5 sm:p-6 rounded-sm">
             <p class="text-base sm:text-lg font-bold text-[#0E2C21] leading-relaxed">
-              New Year packages near Delhi start at Rs 6,000 per night at Whispering Pines, including
-              a heated room with 180 degree snow-peak views, breakfast, dinner and the nightly bonfire.
+              The New Year package at Whispering Pines is Rs 16,000 for two guests for two nights
+              (31 December to 2 January), with fireworks and live music. Christmas stays (24 to 30
+              December) are Rs 6,000 per room per night with breakfast, dinner and the bonfire.
               We are 340 km from Delhi at Malla Ramgarh, Mukteshwar 263137, which is 26 km from
               Nainital and outside its holiday traffic restrictions.
             </p>
@@ -237,14 +256,15 @@ const waFestiveLink = generateWhatsAppLink(
           </p>
 
           <h2 class="text-2xl sm:text-3xl font-bold text-[#0E2C21] pt-6 border-t border-gray-100">
-            What is included in the Rs 6,000 festive rate
+            What the festive packages include
           </h2>
 
-          <p>Every festive night at Rs 6,000 includes:</p>
+          <p>Christmas is Rs 6,000 per room per night and New Year is Rs 16,000 for two guests over two nights. Taxes are extra. A festive stay includes:</p>
 
           <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700 my-4">
             <li class="bg-white p-3 border border-gray-100 rounded-sm">Heated premium room, 180 degree Nanda Devi and Trishul view</li>
-            <li class="bg-white p-3 border border-gray-100 rounded-sm">Breakfast and dinner</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">Christmas: breakfast, dinner and the bonfire</li>
+            <li class="bg-white p-3 border border-gray-100 rounded-sm">New Year: fireworks and live music</li>
             <li class="bg-white p-3 border border-gray-100 rounded-sm">Wood-fired bonfire nightly on the 2,200 sq ft lawn</li>
             <li class="bg-white p-3 border border-gray-100 rounded-sm">24-hour hot water and dual DG power backup</li>
             <li class="bg-white p-3 border border-gray-100 rounded-sm">150 Mbps fibre Wi-Fi</li>
@@ -335,7 +355,7 @@ const waFestiveLink = generateWhatsAppLink(
           </h2>
 
           <p>
-            Rs 6,000 a night with meals and the bonfire is our direct rate. Booking with us rather
+            Rs 6,000 a night at Christmas and Rs 16,000 for two over New Year are our direct rates. Booking with us rather
             than through MakeMyTrip, Goibibo or Booking.com also puts you first in line for the 180
             degree view room upgrades, which over these dates is the thing worth having.
           </p>
@@ -360,7 +380,7 @@ const waFestiveLink = generateWhatsAppLink(
 
           <div class="bg-[#0E2C21] text-white p-8 sm:p-10 rounded-sm shadow-md my-8 space-y-4 text-center">
             <span class="text-xs font-bold uppercase tracking-wider text-[#B0966D] block">
-              Festive Dates 2026-27 &bull; From Rs 6,000 With Meals and Bonfire
+              Christmas From Rs 6,000 &bull; New Year Rs 16,000 for Two, 2 Nights
             </span>
             <h3 class="text-2xl sm:text-3xl font-bold font-display text-white">
               Check what is left for Christmas and New Year
@@ -389,7 +409,7 @@ const waFestiveLink = generateWhatsAppLink(
               <span class="text-[11px] font-bold uppercase tracking-wider text-[#7A6038] block">About the Author and On-Site Host</span>
               <h4 class="text-lg font-bold text-[#0E2C21]">Gaurav Pandey</h4>
               <p class="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">
-                Gaurav Pandey is Director of <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" class="text-[#7A6038] underline font-semibold">Casa De Bello Pvt Ltd</a>
+                Gaurav Pandey is the Managing Director &amp; Founder of <a href="https://casadebello.com/" target="_blank" rel="noopener noreferrer" class="text-[#7A6038] underline font-semibold">Casa De Bello Pvt Ltd</a>
                 and heads Whispering Pines Resort at Malla Ramgarh on the Bhowali-Ramgarh-Mukteshwar
                 Road, formerly Clarks Exotica. He has run Christmas and New Year on this ridge through
                 more than a decade of winters, including the years the last stretch of road closed.
