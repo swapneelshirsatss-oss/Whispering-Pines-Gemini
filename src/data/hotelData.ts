@@ -114,7 +114,7 @@ export const propertyDetails = {
   directPerks: RESORT_CONTACT.directPerks,
   transitHighlights: RESORT_CONTACT.transitHighlights,
   operations: {
-    checkInTime: "13:00 PM",
+    checkInTime: "13:00",
     checkOutTime: "11:00 AM",
     dining: "Multi-Cuisine, Kumaoni Specialties, In-Room Dining & Live Charcoal BBQ",
     petPolicy: "100% Pet Friendly (Enclosed lawns & direct forest trails; no extra pet charges)",
