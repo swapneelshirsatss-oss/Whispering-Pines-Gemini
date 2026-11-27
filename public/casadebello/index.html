@@ -250,10 +250,10 @@
             <label for="form-room" class="block font-mono text-[#B0966D] uppercase mb-1">Room Option</label>
             <select id="form-room"
               class="w-full bg-[#0A2118] border border-[#FAF9F6]/20 rounded-xl p-3 text-white focus:outline-none focus:border-[#B0966D]">
-              <option value="Entire Villa Cottage">Entire Villa Cottage (Up to 10 Guests)</option>
-              <option value="Deluxe Mountain Room" selected>Deluxe Mountain Room (2-3 Guests)</option>
+              <option value="3-BHK Private Villa">3-BHK Private Villa (Up to 10 Guests)</option>
+              <option value="Deluxe Skylight Suite" selected>Deluxe Skylight Suite (2-3 Guests)</option>
               <option value="Family Twin Room">Family Twin Room (2-4 Guests)</option>
-              <option value="Group Cottage Suite">Group Cottage Suite (Group Booking)</option>
+              <option value="Executive Cedar Suite">Executive Cedar Suite (Group Booking)</option>
             </select>
           </div>
           <div>
@@ -393,13 +393,13 @@
         <div
           class="bg-white text-[#2C3531] rounded-2xl overflow-hidden border border-[#FAF9F6]/10 shadow-lg hover:shadow-xl transition-shadow">
           <div class="h-56 overflow-hidden">
-            <img src="images/villa_in_nanital.avif" alt="Entire Villa Suite" width="400" height="224" decoding="async"
+            <img src="images/villa_in_nanital.avif" alt="3-BHK Private Villa" width="400" height="224" decoding="async"
               loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-6 space-y-3">
             <span class="text-xs font-mono text-[#7A6038] uppercase tracking-wider font-semibold">Private Living
               Hearth</span>
-            <h3 class="font-display text-2xl text-[#0E2C21] font-medium">Entire Villa Cottage</h3>
+            <h3 class="font-display text-2xl text-[#0E2C21] font-medium">3-BHK Private Villa</h3>
             <p class="text-xs text-[#2C3531]/75 leading-relaxed">Spacious private villa with wood-burning hearth,
               mountain balcony, and dining lounge for up to 10 guests.</p>
             <a href="https://wa.me/917505029696?text=Hi!%20I%20want%20to%20inquire%20about%20booking%20the%20Entire%20Villa%20Cottage%20with%20the%20up%20to%2020%25%20direct%20discount."
@@ -414,14 +414,14 @@
         <div
           class="bg-white text-[#2C3531] rounded-2xl overflow-hidden border border-[#FAF9F6]/10 shadow-lg hover:shadow-xl transition-shadow">
           <div class="h-56 overflow-hidden">
-            <img src="images/Delux_room_Whispering_pines_mukteshwar.avif" alt="Deluxe Mountain Room" width="400"
+            <img src="images/Delux_room_Whispering_pines_mukteshwar.avif" alt="Deluxe Skylight Suite" width="400"
               height="224" decoding="async" loading="lazy"
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-6 space-y-3">
             <span class="text-xs font-mono text-[#7A6038] uppercase tracking-wider font-semibold">Valley & Orchard
               Views</span>
-            <h3 class="font-display text-2xl text-[#0E2C21] font-medium">Deluxe Mountain Room</h3>
+            <h3 class="font-display text-2xl text-[#0E2C21] font-medium">Deluxe Skylight Suite</h3>
             <p class="text-xs text-[#2C3531]/75 leading-relaxed">Cedar timber wood finish room with high-capacity
               heating, 180° peak views, and private balcony.</p>
             <a href="https://wa.me/917505029696?text=Hi!%20I%20want%20to%20inquire%20about%20the%20Deluxe%20Mountain%20Room%20with%20the%20up%20to%2020%25%20direct%20discount."
@@ -436,14 +436,14 @@
         <div
           class="bg-white text-[#2C3531] rounded-2xl overflow-hidden border border-[#FAF9F6]/10 shadow-lg hover:shadow-xl transition-shadow">
           <div class="h-56 overflow-hidden">
-            <img src="images/Group_booking_nainital_resort.avif" alt="Group Cottage Suite" width="400" height="224"
+            <img src="images/Group_booking_nainital_resort.avif" alt="Executive Cedar Suite" width="400" height="224"
               decoding="async" loading="lazy"
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-6 space-y-3">
             <span class="text-xs font-mono text-[#7A6038] uppercase tracking-wider font-semibold">Group & Family
               Stay</span>
-            <h3 class="font-display text-2xl text-[#0E2C21] font-medium">Group Cottage Suite</h3>
+            <h3 class="font-display text-2xl text-[#0E2C21] font-medium">Executive Cedar Suite</h3>
             <p class="text-xs text-[#2C3531]/75 leading-relaxed">High-capacity group cottage room overlooking apple
               orchards, ideal for large families and retreats.</p>
             <a href="https://wa.me/917505029696?text=Hi!%20I%20want%20to%20inquire%20about%20the%20Group%20Cottage%20Suite%20with%20the%20up%20to%2020%25%20direct%20discount."
@@ -687,7 +687,7 @@
           if (checkin) msg += `📅 Check-In: *${checkin}*\n`;
           if (checkout) msg += `📅 Check-Out: *${checkout}*\n`;
           msg += `👥 Guests: *${guests}*\n\n`;
-          msg += `Please confirm availability and best price guaranteed!`;
+          msg += `Please confirm availability and the direct rate.`;
 
           const waUrl = `https://wa.me/917505029696?text=${encodeURIComponent(msg)}`;
           window.open(waUrl, '_blank');

@@ -110,7 +110,7 @@ Please confirm availability and share direct booking privileges.`;
           )}
           <div className="w-16 rule-brass-left mx-auto mt-4 mb-6" />
           <p className="text-sm sm:text-base text-[#2C3531]/80 font-sans leading-relaxed">
-            Customize your stay dates and preferred accommodation below. When booking direct on WhatsApp or our official portal, you eliminate third-party commissions, lock in guaranteed best rates, and receive complimentary bonfire & orchard privileges.
+            Customize your stay dates and preferred accommodation below. When booking direct on WhatsApp or our official portal, you eliminate third-party commissions, save up to 20%, and receive complimentary bonfire & orchard privileges.
           </p>
         </div>
 
@@ -239,7 +239,7 @@ Please confirm availability and share direct booking privileges.`;
                   Reservation summary
                 </h3>
                 <span className="bg-[#B0966D]/20 text-[#C4A77D] border border-[#8A6F4A]/30 text-[10px] font-sans uppercase px-2 py-0.5 rounded-sm">
-                  Best Rate
+                  Direct Rate
                 </span>
               </div>
               
@@ -282,7 +282,7 @@ Please confirm availability and share direct booking privileges.`;
                 </div>
 
                 <div className="mt-2 pt-2 border-t border-[#FAF9F6]/10 flex items-center justify-between text-[11px] font-sans text-[#7A6038]">
-                  <span>Direct Savings Guarantee:</span>
+                  <span>Direct-Only Perks:</span>
                   <span className="font-bold">~₹{directSavings.toLocaleString("en-IN")} Saved</span>
                 </div>
               </div>

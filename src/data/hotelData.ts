@@ -119,7 +119,7 @@ export const propertyDetails = {
     dining: "Multi-Cuisine, Kumaoni Specialties, In-Room Dining & Live Charcoal BBQ",
     petPolicy: "100% Pet Friendly (Enclosed lawns & direct forest trails; no extra pet charges)",
     wifi: "High-speed optical fiber Wi-Fi throughout all rooms & grounds",
-    parking: "Secure flat gated tarmac parking for 3-4 SUVs on-site"
+    parking: "Secure flat gated on-site parking for 25+ cars"
   },
   socials: RESORT_CONTACT.socials
 };
