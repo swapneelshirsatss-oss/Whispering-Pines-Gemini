@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Calendar, Users, Home, ArrowUpRight, ChevronDown, MessageCircle, Sparkles, Check } from "lucide-react";
-import { trackAdsConversion } from "../utils/analytics";
 
 const BOOKING_ENGINE_URL = "https://wa.me/917505029696?text=Hi%20Whispering%20Pines%20Resort%21%20I%20would%20like%20to%20check%20availability%20and%20direct%20booking%20rates.";
 
@@ -77,14 +76,6 @@ export default function BookingInteractiveForm({
 Please confirm availability and share direct booking privileges.`;
 
   const whatsAppLink = `https://wa.me/917505029696?text=${encodeURIComponent(whatsAppMessage)}`;
-
-  const handleWhatsAppBookingClick = () => {
-    trackAdsConversion("generate_lead", "booking", "whatsapp_form_booking");
-  };
-
-  const handleEngineBookingClick = () => {
-    trackAdsConversion("generate_lead", "booking", "engine_form_booking");
-  };
 
   return (
     <section id="book-form" className="py-20 lg:py-28 bg-[#0E2C21]/5 relative">
@@ -294,7 +285,7 @@ Please confirm availability and share direct booking privileges.`;
                 href={whatsAppLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={handleWhatsAppBookingClick}
+                data-track-fn="trackAdsConversion" data-track-args={JSON.stringify(["generate_lead", "booking", "whatsapp_form_booking"])}
                 className="w-full bg-[#0E2C21] hover:bg-[#193F30] text-white border border-[#FAF9F6]/30 font-sans text-center text-xs font-bold uppercase tracking-wider py-4 px-6 rounded-sm shadow-sm flex items-center justify-center gap-2 transition-colors duration-300 transform active:scale-[0.99] group"
               >
                 <svg className="w-4 h-4 shrink-0 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.554 4.1 1.523 5.823L0 24l6.344-1.498A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.792 9.792 0 01-5.002-1.374l-.359-.213-3.765.889.953-3.676-.234-.376A9.794 9.794 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/></svg>
@@ -305,7 +296,7 @@ Please confirm availability and share direct booking privileges.`;
                 href={whatsAppLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={handleEngineBookingClick}
+                data-track-fn="trackAdsConversion" data-track-args={JSON.stringify(["generate_lead", "booking", "engine_form_booking"])}
                 className="w-full bg-transparent hover:bg-white/10 text-[#FAF9F6] border border-[#FAF9F6]/25 font-sans text-center text-[10px] font-semibold uppercase tracking-wider py-2.5 px-4 rounded-sm flex items-center justify-center transition-colors"
               >
                 <span>Check Availability on WhatsApp</span>

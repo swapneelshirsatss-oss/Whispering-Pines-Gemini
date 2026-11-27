@@ -26,6 +26,9 @@ export const trackAdsConversion = (
   if (typeof window === 'undefined') return;
 
   const win = window as any;
+  // Layout.astro defines the real helper (adds gclid/gbraid/wbraid/UTM + page_path); use it when present.
+  if (typeof win.trackBookingConversion === 'function') return win.trackBookingConversion(action, category, label, extra);
+
   const payload: Record<string, any> = {
     event: action,
     event_category: category,
@@ -37,11 +40,6 @@ export const trackAdsConversion = (
   win.dataLayer = win.dataLayer || [];
   win.dataLayer.push(payload);
 };
-
-// Global browser window attachment for inline HTML/Astro onclick handlers
-if (typeof window !== 'undefined') {
-  (window as any).trackAdsConversion = trackAdsConversion;
-  (window as any).trackBookingConversion = trackAdsConversion;
-}
+// Not attached to window: that used to overwrite Layout's enriched window.trackBookingConversion.
 
 

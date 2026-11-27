@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Users, Bed, Check, ArrowRight, Apple, Snowflake, Info, MessageCircle, ShieldCheck } from "lucide-react";
 import LazyImage from "./LazyImage";
-import { trackAdsConversion } from "../utils/analytics";
 import type { RoomOption } from "../types";
 import { BOOKING_ENGINE_URL, ROOMS_INVENTORY, generateWhatsAppLink } from "../data";
 
@@ -40,10 +39,6 @@ export default function RoomInventoryList({
     if (filter === "deluxe") return room.id === "delux-room" || room.id === "orchard-room" || room.id === "cedar-room";
     return true;
   });
-
-  const handleRoomBookingClick = () => {
-    trackAdsConversion("generate_lead", "booking", "room_list_whatsapp_booking");
-  };
 
   return (
     <section id="rooms" className="py-20 lg:py-28 bg-[#FAF9F6] border-b border-[#E6E0D6]">
@@ -191,7 +186,7 @@ export default function RoomInventoryList({
                     href={generateWhatsAppLink({ roomName: room.name, source: "Room Inventory Card" })}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() => trackAdsConversion("generate_lead", "booking", `room_card_whatsapp_${room.id}`)}
+                    data-track-fn="trackAdsConversion" data-track-args={JSON.stringify(["generate_lead", "booking", `room_card_whatsapp_${room.id}`])}
                     className="inline-flex items-center justify-center gap-2 bg-[#0E2C21] hover:bg-[#193F30] text-[#FAF9F6] font-sans text-[11px] font-bold uppercase tracking-wider px-5 py-3 rounded-sm transition-all duration-300"
                   >
                     <svg className="w-3.5 h-3.5 text-white shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -204,7 +199,7 @@ export default function RoomInventoryList({
                     href={BOOKING_ENGINE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={handleRoomBookingClick}
+                    data-track-fn="trackAdsConversion" data-track-args={JSON.stringify(["generate_lead", "booking", "room_list_whatsapp_booking"])}
                     className="inline-flex items-center text-[#0E2C21] hover:text-[#B0966D] font-sans text-[11px] font-semibold uppercase tracking-wider px-3 py-3 transition-colors duration-300 group/btn"
                   >
                     <span>Check Availability</span>
