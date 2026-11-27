@@ -13,10 +13,10 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
   <div class="relative w-full bg-[#FAF9F6] text-[#0E2C21] overflow-x-hidden selection:bg-[#B0966D] selection:text-[#0E2C21]">
     <Breadcrumbs />
     
-    <main class="pt-8">
+    <div class="pt-8">
       <AmenitiesList hideLink={true} asH1={true} title="Amenities at Our Luxury Resort in Mukteshwar" />
       <SEOAmenitiesContent />
-    </main>
+    </div>
     <RecentBookingNotification client:idle />
   </div>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({

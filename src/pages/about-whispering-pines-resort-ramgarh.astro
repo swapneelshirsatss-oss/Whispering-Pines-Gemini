@@ -215,7 +215,7 @@ const villaUrl = new URL(villaImg, siteBase).href;
   <div class="relative w-full text-[#0E2C21] overflow-x-hidden pb-20 md:pb-0 selection:bg-[#B0966D] selection:text-[#0E2C21]">
     <Breadcrumbs />
     
-    <main class="pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <AboutSection 
         hideLink={true}
         asH1={true}
@@ -223,7 +223,7 @@ const villaUrl = new URL(villaImg, siteBase).href;
       />
       <HostFieldNote className="my-8" />
       <SEOAboutContent />
-    </main>
+    </div>
     <RecentBookingNotification client:idle />
   </div>
 </Layout>

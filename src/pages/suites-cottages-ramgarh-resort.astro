@@ -14,7 +14,7 @@ import DirectVsOtaTable from "../components/DirectVsOtaTable.astro";
   <div class="relative w-full bg-[#FAF9F6] text-[#0E2C21] overflow-x-hidden selection:bg-[#B0966D] selection:text-[#0E2C21]">
     <Breadcrumbs />
     
-    <main class="pt-8">
+    <div class="pt-8">
       <RoomInventoryList 
         title="Rooms, Skylight Suites and a Private Villa in Mukteshwar" 
         isH1={true}
@@ -54,7 +54,7 @@ import DirectVsOtaTable from "../components/DirectVsOtaTable.astro";
           <BookingInteractiveForm title="Complete Your Vacation Booking" client:visible />
         </div>
       </div>
-    </main>
+    </div>
     <RecentBookingNotification client:idle />
   </div>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({

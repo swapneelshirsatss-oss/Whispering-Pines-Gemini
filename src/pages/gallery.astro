@@ -14,10 +14,10 @@ import GallerySchema from "../components/GallerySchema.astro";
   <GallerySchema slot="head" />
   <div class="relative w-full bg-[#FAF9F6] text-[#0E2C21] overflow-x-hidden selection:bg-[#B0966D] selection:text-[#0E2C21]">
     <Breadcrumbs />
-    <main class="pt-24 pb-20 bg-[#FAF9F6]">
+    <div class="pt-24 pb-20 bg-[#FAF9F6]">
       <GalleryGrid client:visible />
       <SEOGalleryContent />
-    </main>
+    </div>
     <RecentBookingNotification client:idle />
   </div>
 </Layout>

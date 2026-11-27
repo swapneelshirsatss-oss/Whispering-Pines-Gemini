@@ -51,7 +51,7 @@ const waVilla = "https://wa.me/917505029696?text=" + encodeURIComponent("Hi, I'd
   <div class="relative w-full bg-[#FAF9F6] text-[#0E2C21] overflow-x-hidden selection:bg-[#B0966D] selection:text-[#0E2C21]">
     <Breadcrumbs />
     
-    <main class="pt-24">
+    <div class="pt-24">
       {/* Room Inventory List filtered to 'villa' */}
       <RoomInventoryList 
         client:visible
@@ -267,7 +267,7 @@ const waVilla = "https://wa.me/917505029696?text=" + encodeURIComponent("Hi, I'd
           "Secure UPI & Credit Card Payment — Instant Confirmation"
         ]}
       />
-    </main>
+    </div>
     <RecentBookingNotification client:idle />
   </div>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({
