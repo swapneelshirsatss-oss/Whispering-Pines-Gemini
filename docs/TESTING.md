@@ -5,7 +5,8 @@ Run before every deploy. Write results in `STATE.md`.
 ## Fact Check
 - [ ] Search for "stone cottage": zero results.
 - [ ] Search for "23-13/4": zero results.
-- [ ] Discount shows 25% everywhere.
+- [ ] Room discount says "up to 20%" everywhere (no "flat 25%", no "best price guaranteed"); the 25% dining privilege is the only 25%.
+- [ ] Review count is 428 and rating 4.6 (check the client profile first).
 - [ ] Address and Maps CID match the client profile.
 - [ ] No `[TODO` text visible on any page.
 

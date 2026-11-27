@@ -130,7 +130,7 @@ Whenever refactoring or adding links to header navigation:
 ## Direct Booking & WhatsApp CRO Standards
 
 Whenever designing or refactoring direct booking pages, room cards, or conversion CTAs:
-- **WhatsApp Visual Dominance**: All primary direct booking buttons must use authentic WhatsApp green (`#25D366` hover `#1EBE5D`), an animated concentric pulse ring, and explicit direct saving microcopy (*"Save Flat 25% Direct • ⚡ < 5m reply"*).
+- **WhatsApp Visual Dominance**: All primary direct booking buttons must use authentic WhatsApp green (`#25D366` hover `#1EBE5D`), an animated concentric pulse ring, and explicit direct saving microcopy (*"Save up to 20% direct • ⚡ < 5m reply"*; never a fixed or flat percentage).
 - **Multi-Viewport Availability**:
   - **Desktop**: Maintain the persistent floating WhatsApp concierge pill at `bottom-6 right-6 z-50 hidden md:flex`.
   - **Mobile**: Maintain the mobile sticky bottom bar with WhatsApp highlighted as the hero CTA.
@@ -157,9 +157,9 @@ Whenever updating `<head>`, `Layout.astro`, landing page templates, or analytics
 
 All copy, metadata, structured data, calculator models, and LLM text files must strictly maintain the following facts with zero deviations:
 - **Canonical Address**: `Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137`
-- **Direct Booking Discount**: Flat `25%` (Zero OTA commission; $P_{OTA} = \frac{P_{direct}}{0.75}$)
+- **Direct Booking Offer**: "Up to 20% off direct + direct-only perks" (rates are dynamic; never "flat 25%", never "Best Rate Guaranteed" or any price guarantee). The separate 25% dining privilege at the restaurant is real.
 - **Official Booking Engines**: `https://casadebello-book.whisperingpinesresort.in/` (whitelabel) / `https://whisperingpinesresort.bookingjini.in/`
-- **Google Verified Rating**: `4.6★ (425 verified Google reviews)`
+- **Google Verified Rating**: `4.6★ (428 verified Google reviews)` (check the client profile before changing)
 - **Total Capacity & Inventory**: `25 premium rooms` + `1 standalone 3-BHK private alpine villa` (Sleeps up to 70 residential guests; outdoor lawn events & weddings up to 100 guests)
 - **Room Categories**: `3-BHK Private Alpine Villa`, `Deluxe Skylight Suite`, `Family Twin Room`, `Executive Cedar Suite` (Avoid calling them "stone cottages" or "homestays")
 - **Wi-Fi**: Dedicated `150 Mbps Enterprise Fiber Wi-Fi` across all rooms, lawns, and desks (Never say "ambient Wi-Fi")
@@ -184,7 +184,7 @@ Whenever maintaining or refactoring bottom conversion bars or global tracking:
   - `a[href*="wa.me"]`, `a[href*="whatsapp.com"]` -> dispatches `whatsapp_chat_click` (`lead_generation`)
   - `a[href^="tel:"]` -> dispatches `phone_call_click` (`phone_conversion`)
   - `a[href*="bookingjini.in"]`, `a[href*="/book-now"]` -> dispatches `booking_engine_click` (`ecommerce`)
-  Dispatches synchronously to both `window.dataLayer` (GTM container `GTM-PL8FVLPX`) and `window.gtag` without inline `onclick` attributes.
+  Dispatches synchronously to `window.dataLayer` only (GTM container `GTM-PL8FVLPX`), with no `gtag()` copy and no inline `onclick` attributes.
 
 ## Dynamic FAQPage Schema Standards in Layout
 
@@ -218,7 +218,7 @@ Whenever maintaining or refactoring bottom conversion bars or global tracking:
 - Google Maps CID: `8386667112972057918`. Never use `maps.app.goo.gl` shortlinks.
 - Booking page: https://whisperingpinesresort.in/book-now/
 - Always "4-star alpine resort" (27 Nov 2026: do NOT focus on "luxury villa" in keywords, GBP descriptions, or marketing copy). NEVER "stone cottage".
-- Direct saving: 25% (not 20%) · ₹0 pet fee
+- Direct saving: up to 20% (never a fixed %) · ₹0 pet fee · conference hall up to 80 delegates · check-in 13:00, check-out 11:00
 - Host / author: Gaurav Pandey, Managing Director & Founder, Casa De Bello Pvt Ltd (confirmed 21 Nov 2026; use this exact title everywhere, including schema `jobTitle`)
 - Master page for Mukteshwar resort searches: `/blog/best-resort-to-stay-near-mukteshwar/` (all old URLs 301 there)
 - GBP posts: no phone numbers or URLs in the text
