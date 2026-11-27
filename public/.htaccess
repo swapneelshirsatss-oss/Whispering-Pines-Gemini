@@ -116,8 +116,10 @@
   Header set X-Robots-Tag "noindex, nofollow" env=SUBDOMAIN_NOINDEX
 </IfModule>
 
-# Deny access to hidden files and sensitive dotfiles
-<FilesMatch "(^\.|\.env|\.git|\.astro)">
+# Deny access to hidden files and sensitive dotfiles (.env, .git*, .htaccess).
+# Anchored to the start: the old "\.astro" alternative also matched Astro bundles
+# like /_astro/LuxuryHome.astro_astro_type_script_*.js and 403'd the homepage script.
+<FilesMatch "^\.">
   <IfModule mod_authz_core.c>
     Require all denied
   </IfModule>
