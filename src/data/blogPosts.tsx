@@ -1574,7 +1574,7 @@ export const BLOG_POSTS: BlogPostData[] = [
     excerpt: "Looking for a resort near Nainital for families, couples and tourists? Whispering Pines by Casa De Bello in Malla Ramgarh offers 180° Himalayan views, 25 premium rooms, a private 3-BHK villa & 150 Mbps Wi-Fi.",
     date: "August 5, 2026",
     readTime: "12 min read",
-    imageUrl: "/images/Resort_near-nainital-for-families.avif",
+    imageUrl: "/images/Resort-in-nanital-on-mukteshwar-road.avif",
     faqSchema: {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -1637,8 +1637,8 @@ export const BLOG_POSTS: BlogPostData[] = [
         {/* Primary Mandatory Image 1 */}
         <div className="my-6">
           <img 
-            src="/images/Resort_near-nainital-for-families.avif" 
-            alt="Resort near Nainital for Families, Couples and Tourists — Whispering Pines by Casa De Bello" 
+            src="/images/Resort-in-nanital-on-mukteshwar-road.avif" 
+            alt="A twin-bed room with Himalayan views at Whispering Pines Resort, a resort near Nainital in Malla Ramgarh" 
             className="w-full h-80 sm:h-96 object-cover rounded-sm border border-[#EAE8E3] shadow-md" 
           />
           <p className="text-sm text-center text-gray-500 mt-2">Whispering Pines Resort by Casa De Bello — Premier 4-star mountain resort near Nainital for families, couples and tourists.</p>
@@ -1695,8 +1695,8 @@ export const BLOG_POSTS: BlogPostData[] = [
         {/* Mandatory Image 2 */}
         <div className="my-6">
           <img 
-            src="/images/Why-choose-whispering-pines-casa-de-bell-near-nainital.avif" 
-            alt="Why Choose Whispering Pines as Your Resort near Nainital" 
+            src="/images/Whispering-pines-balcony-view-nanital.avif" 
+            alt="Valley and Himalayan views from a balcony at Whispering Pines Resort near Nainital" 
             className="w-full h-80 sm:h-96 object-cover rounded-sm border border-[#EAE8E3] shadow-md" 
           />
           <p className="text-sm text-center text-gray-500 mt-2">180° Himalayan views, fruit orchards, and cedar-and-stone architecture at Whispering Pines Resort near Nainital.</p>
