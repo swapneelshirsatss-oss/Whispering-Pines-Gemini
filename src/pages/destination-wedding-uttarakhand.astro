@@ -262,6 +262,10 @@ const REAL_WEDDING_GALLERY = [
 // Verbatim FAQs
 const FAQS = [
   {
+    question: "What wedding venues does Whispering Pines have?",
+    answer: "The 2,200 sq ft Nanda Devi Lawn takes up to 100 guests for pheras and receptions, the Pine Orchard Terrace suits 30–50 guests for mehndi, haldi or cocktails, and the banquet hall seats up to 80 indoors."
+  },
+  {
     question: "What is the accommodation capacity for a wedding buyout?",
     answer: "Our 25 premium rooms and 1 standalone 3-bedroom villa comfortably sleep up to 70 guests. The outdoor lawn accommodates up to 100 attendees for celebrations."
   },
@@ -285,33 +289,9 @@ const venueSchema = {
   "@graph": [
     {
       "@type": ["Hotel", "EventVenue"],
-      "@id": "https://whisperingpinesresort.in/destination-wedding-uttarakhand/#venue",
-      "name": "Whispering Pines Resort by Casa De Bello - Destination Wedding Uttarakhand",
-      "url": "https://whisperingpinesresort.in/destination-wedding-uttarakhand/",
+      // Same @id as Layout's sitewide Hotel node, so the venue facts merge into that one entity.
+      "@id": "https://whisperingpinesresort.in/#hotel",
       "image": "https://whisperingpinesresort.in/images/destination-wedding/destination-weddings-uttarkahnd.avif",
-      "telephone": "+917505029696",
-      "priceRange": "₹₹₹",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd",
-        "addressLocality": "Ramgarh, Mukteshwar",
-        "addressRegion": "Nainital, Uttarakhand",
-        "postalCode": "263137",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 29.4260969,
-        "longitude": 79.5506794
-      },
-      "hasMap": "https://maps.google.com/?cid=8386667112972057918",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "reviewCount": "428",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
       "maximumAttendeeCapacity": 100,
       "amenityFeature": [
         { "@type": "LocationFeatureSpecification", "name": "180° Panoramic Himalayan Snow Peak Views", "value": true },
@@ -399,8 +379,8 @@ const venueSchema = {
         <div class="w-20 h-[1.5px] bg-[#B0966D] mx-auto mb-6 opacity-90 shadow-xs" />
 
         {/* Lead Paragraph with High-Contrast Legibility */}
-        <p class="font-sans text-base sm:text-lg lg:text-xl text-[#FAF9F6]/95 font-light leading-relaxed max-w-3xl mx-auto mb-10 text-pretty drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
-          Exchange sacred vows amidst fragrant pine forests and 180° unobstructed panoramic views of the Nanda Devi and Trishul snow peaks. Whispering Pines Resort by Casa De Bello offers an intimate 4-star mountain sanctuary where refined alpine architecture meets timeless family celebrations.
+        <p class="aeo-direct-answer font-sans text-base sm:text-lg lg:text-xl text-[#FAF9F6]/95 font-light leading-relaxed max-w-3xl mx-auto mb-10 text-pretty drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
+          Whispering Pines, a 4-star resort in Malla Ramgarh near Mukteshwar, hosts intimate destination weddings for up to 100 guests on its 2,200 sq ft Nanda Devi Lawn, with sunset pheras facing the Himalayas. A full buyout sleeps up to 70 guests in 25 rooms and a 3-BHK villa, with Kumaoni and North Indian banquets.
         </p>
 
         {/* CTA Buttons */}
@@ -472,7 +452,7 @@ const venueSchema = {
                 </span>
               </div>
               <p class="font-sans text-xs text-[#FAF9F6]/80 leading-snug">
-                Rated on Google (428 Verified Reviews)
+                Rated on Google (433 Verified Reviews)
               </p>
             </div>
           </div>

@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import RecentBookingNotification from "../components/RecentBookingNotification";
 import DirectVsOtaTable from "../components/DirectVsOtaTable.astro";
+import FAQAccordion from "../components/FAQAccordion";
 import { Image } from 'astro:assets';
 import { BOOKING_ENGINE_URL, generateWhatsAppLink } from '../data';
 import deluxeRoomImgSrc from '../assets/images/rooms/Deluxe-Rooms-with-Himalayan-View.avif';
@@ -66,11 +67,56 @@ const ROOMS = [
     tags: ['Twin King Beds', 'Valley Balcony', 'Family of 4'],
   },
 ];
+
+// Side-by-side facts for answer engines; must match ROOMS above.
+const ROOM_COMPARE = [
+  { id: 'deluxe', room: 'Deluxe Room', bed: '1 King', sleeps: '2', bestFor: 'Couples', standout: 'Nanda Devi from the window' },
+  { id: 'premium', room: 'Premium Cedar Room', bed: '1 Queen', sleeps: '2', bestFor: "Couples' getaway", standout: 'Cedar panels, 180° snow view' },
+  { id: 'cottage', room: 'Cottage Room', bed: '1 King', sleeps: '2', bestFor: 'Couples with a pet', standout: 'Private garden sit-out' },
+  { id: 'family', room: 'Family Twin-Bed Room', bed: '2 King', sleeps: '4', bestFor: 'Family of 4', standout: 'Valley balcony, one booking for all four' },
+];
+
+// Visible FAQs; Layout prints the matching FAQPage schema from the same array.
+const roomFaqs = [
+  {
+    question: 'What room types does Whispering Pines Resort in Mukteshwar have?',
+    answer: 'Whispering Pines has 25 rooms in four types: Deluxe Room, Premium Cedar Room, Cottage Room with garden sit-out, and Family Twin-Bed Room. Every room faces the Himalayas, with Nanda Devi and Trishul in view.',
+  },
+  {
+    question: 'Which room is best for a family of 4 in Mukteshwar?',
+    answer: 'The Family Twin-Bed Room. It has two king beds and a valley balcony facing Nanda Devi, so parents and two children stay together in one room, with no second booking and no rollaway bed.',
+  },
+  {
+    question: 'Do all rooms at Whispering Pines have a Himalayan view?',
+    answer: 'Yes. All four room types at Whispering Pines face the Himalayan range, including Nanda Devi and Trishul, from Malla Ramgarh at 1,780 m.',
+  },
+  {
+    question: 'What is the room tariff at Whispering Pines Resort?',
+    answer: "Room rates change by season and date, and include breakfast. For today's rate, message the front desk on WhatsApp at +91 75050 29696. Booking direct gets up to 20% off compared with OTA prices, plus direct-only perks.",
+  },
+  {
+    question: 'What are the check-in and check-out times?',
+    answer: 'Check-in is at 1:00 PM and check-out is at 11:00 AM. The front desk is open 24 hours. Early check-in can be requested when you book direct, subject to availability.',
+  },
+  {
+    question: 'Are pets allowed in the rooms?',
+    answer: 'Yes. Pets are welcome under our house policy with no pet fee. Please tell us before you travel. The Cottage Room, with its own garden sit-out, suits couples travelling with a pet.',
+  },
+  {
+    question: 'Is there a charge for an extra guest?',
+    answer: 'Yes. An extra guest in a room is charged from ₹1,000 per night. Message the front desk on WhatsApp to confirm the rate for your dates.',
+  },
+  {
+    question: 'How far are the rooms from Nainital and Mukteshwar?',
+    answer: 'Whispering Pines is in Malla Ramgarh, 26 km (about 55 minutes) from Nainital and 25 km (about 45 minutes) from Mukteshwar Dham, on the Bhowali-Ramgarh-Mukteshwar Road.',
+  },
+];
 ---
 
 <Layout
   title="Rooms in Mukteshwar near Nainital | Himalayan Views"
   description="Family & Couples rooms in Mukteshwar near Nainital: Deluxe, Premium, Cottage and Family, all facing Nanda Devi from Malla Ramgarh. Save up to 20% direct."
+  faqs={roomFaqs}
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#0E2C21] overflow-x-hidden selection:bg-[#B0966D] selection:text-[#0E2C21]">
     <Breadcrumbs />
@@ -86,12 +132,41 @@ const ROOMS = [
               Himalayan-View Rooms for Family &amp; Couples in Mukteshwar near Nainital
             </h1>
             <div class="w-16 h-0.5 bg-[#B0966D] mx-auto my-5"></div>
-            <p class="text-sm sm:text-base text-[#44564E] leading-relaxed">
-              Whispering Pines has 25 Himalayan-view rooms at Malla Ramgarh, 1,780 m up, 25 km (45 min) from Mukteshwar near Nainital. Deluxe, Premium, Cottage and Family Twin-Bed rooms all face Nanda Devi and Trishul. Families, couples and pets are welcome, and booking direct on WhatsApp saves up to 20%.
+            <p class="aeo-direct-answer text-sm sm:text-base text-[#44564E] leading-relaxed">
+              Whispering Pines has 25 Himalayan-view rooms at Malla Ramgarh, 1,780 m up, 25 km (45 min) from Mukteshwar and 26 km (55 min) from Nainital. Deluxe, Premium, Cottage and Family Twin-Bed rooms all face Nanda Devi and Trishul. Families, couples and pets are welcome, and booking direct on WhatsApp saves up to 20%.
             </p>
             <p class="mt-4 inline-block text-xs sm:text-sm font-sans text-[#7A6038] bg-white border border-[#8A6F4A]/30 px-4 py-2 rounded-sm">
               Room prices change by season and rates are dynamic. Availability is confirmed by our reception team only.
             </p>
+          </div>
+
+          <div class="max-w-4xl mx-auto mb-12">
+            <h2 class="font-display text-2xl font-semibold text-[#0E2C21] text-center mb-4">Compare the 4 room types</h2>
+            <div class="overflow-x-auto rounded-sm border border-[#8A6F4A]/25 bg-white">
+              <table class="w-full min-w-[560px] text-left text-sm">
+                <caption class="sr-only">Room types at Whispering Pines Resort, Mukteshwar: bed, guests, best for and stand-out feature</caption>
+                <thead class="bg-[#0E2C21] text-[#FAF9F6] font-sans text-xs uppercase tracking-wider">
+                  <tr>
+                    <th scope="col" class="px-4 py-3">Room</th>
+                    <th scope="col" class="px-4 py-3">Bed</th>
+                    <th scope="col" class="px-4 py-3">Sleeps</th>
+                    <th scope="col" class="px-4 py-3">Best for</th>
+                    <th scope="col" class="px-4 py-3">Stand-out</th>
+                  </tr>
+                </thead>
+                <tbody class="text-[#44564E]">
+                  {ROOM_COMPARE.map((r) => (
+                    <tr class="border-t border-[#8A6F4A]/15">
+                      <th scope="row" class="px-4 py-3 font-semibold text-[#0E2C21]">{r.room}</th>
+                      <td class="px-4 py-3">{r.bed}</td>
+                      <td class="px-4 py-3">{r.sleeps}</td>
+                      <td class="px-4 py-3">{r.bestFor}</td>
+                      <td class="px-4 py-3">{r.standout}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -174,9 +249,17 @@ const ROOMS = [
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <DirectVsOtaTable
           title="Direct Booking Advantage vs Third-Party OTAs"
-          subtitle="Reserve directly through our official website or WhatsApp concierge to unlock up to 20% off, guaranteed 180° Nanda Devi balcony upgrades, and zero pet fees."
+          subtitle="Reserve directly through our official website or WhatsApp concierge to unlock up to 20% off, priority for 180° Nanda Devi view rooms, and zero pet fees."
         />
       </section>
+
+      {/* Room FAQs (visible; Layout prints the matching FAQPage schema) */}
+      <FAQAccordion
+        client:visible
+        faqs={roomFaqs}
+        title="Rooms in Mukteshwar: Questions We Get Asked"
+        description="Room types, family rooms, tariff, check-in, pets and distances."
+      />
 
       {/* Featured Travel Guides Section */}
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -191,6 +274,9 @@ const ROOMS = [
             <a href="/blog/best-resort-to-stay-near-mukteshwar/" class="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#FAF9F6] text-[#0E2C21] font-semibold text-xs rounded-full border border-[#EAE8E3] hover:border-[#8A6F4A] transition-colors">
               Best resorts in Mukteshwar →
             </a>
+            <a href="/blog/resort-stay-near-kainchi-dham/" class="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#FAF9F6] text-[#0E2C21] font-semibold text-xs rounded-full border border-[#EAE8E3] hover:border-[#8A6F4A] transition-colors">
+              Resort near Kainchi Dham →
+            </a>
             <a href="/book-now/" class="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#FAF9F6] text-[#0E2C21] font-semibold text-xs rounded-full border border-[#EAE8E3] hover:border-[#8A6F4A] transition-colors">
               Check room rates &amp; book direct →
             </a>
@@ -203,23 +289,9 @@ const ROOMS = [
   </div>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "Resort",
-    "@id": "https://whisperingpinesresort.in/suites-cottages-ramgarh-resort/#resort",
-    "name": "Whispering Pines Resort by Casa De Bello",
-    "url": "https://whisperingpinesresort.in/suites-cottages-ramgarh-resort/",
-    "telephone": "+91-7505029696",
-    "priceRange": "₹₹₹",
-    "petsAllowed": true,
-    "hasMap": "https://maps.google.com/?cid=8386667112972057918",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
-      "addressLocality": "Mukteshwar",
-      "addressRegion": "Uttarakhand",
-      "postalCode": "263137",
-      "addressCountry": "IN"
-    },
-    "containsPlace": [
+    // Rooms as standalone HotelRoom nodes linked back via containedInPlace. Putting them in the Hotel's
+    // containsPlace makes Google validate the Hotel as hotel-listing markup and flag it invalid.
+    "@graph": [
       {
         "@type": "HotelRoom",
         "name": "Deluxe Room with Himalayan View",
@@ -248,6 +320,6 @@ const ROOMS = [
         "occupancy": { "@type": "QuantitativeValue", "maxValue": 4, "unitText": "Person" },
         "bed": { "@type": "BedDetails", "numberOfBeds": 2, "typeOfBed": "King" }
       }
-    ]
+    ].map((room) => ({ ...room, "containedInPlace": { "@id": "https://whisperingpinesresort.in/#hotel" } }))
   })} />
 </Layout>

@@ -5,6 +5,7 @@ import AboutSection from "../components/AboutSection.astro";
 import HostFieldNote from "../components/HostFieldNote.astro";
 import SEOAboutContent from "../components/SEOAboutContent.astro";
 import RecentBookingNotification from "../components/RecentBookingNotification";
+import FAQAccordion from "../components/FAQAccordion";
 
 import balconyViewImg from "../assets/images/Whispering-pines-balcony-view-nanital.avif?url";
 import villaImg from "../assets/images/villa_in_nanital.avif?url";
@@ -12,19 +13,45 @@ import villaImg from "../assets/images/villa_in_nanital.avif?url";
 const siteBase = 'https://whisperingpinesresort.in';
 const balconyUrl = new URL(balconyViewImg, siteBase).href;
 const villaUrl = new URL(villaImg, siteBase).href;
+
+// Visible FAQs; Layout prints the matching FAQPage schema from the same array.
+const aboutFaqs = [
+  {
+    question: 'Is Whispering Pines the same resort as Clarks Exotica Mukteshwar?',
+    answer: 'Yes. Whispering Pines Resort is the former Clarks Exotica Mukteshwar (also listed as Clarks Exotica Ramgarh), rebranded and upgraded under Casa De Bello management. It is the same property in Malla Ramgarh on the Bhowali-Ramgarh-Mukteshwar Road.',
+  },
+  {
+    question: 'Who manages Whispering Pines Resort?',
+    answer: 'Whispering Pines is managed by Casa De Bello (CASADEBELLO PRIVATE LIMITED). Gaurav Pandey, Managing Director & Founder, is the host.',
+  },
+  {
+    question: 'Where exactly is Whispering Pines Resort?',
+    answer: 'Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137, at 1,780 m. It is 25 km from Mukteshwar Dham, 26 km from Nainital and 43 km from Kathgodam Railway Station.',
+  },
+  {
+    question: 'Is Whispering Pines a 4-star resort?',
+    answer: 'Yes. Whispering Pines is a 4-star resort with 25 rooms and suites plus a 3-BHK private villa, rated 4.6★ on Google from 433 reviews.',
+  },
+  {
+    question: 'How do I book Whispering Pines direct?',
+    answer: 'Message the front desk on WhatsApp at +91 75050 29696 or use whisperingpinesresort.in/book-now/. Booking direct gets up to 20% off compared with OTA prices, plus direct-only perks.',
+  },
+];
 ---
 
-<Layout 
-  title="About Whispering Pines, Mukteshwar (formerly Clarks Exotica)" 
+<Layout
+  title="About Whispering Pines, Mukteshwar (formerly Clarks Exotica)"
   description="Discover Whispering Pines (formerly Clarks Exotica) in Malla Ramgarh, Mukteshwar. Enjoy Kumaoni hospitality, luxury rooms, and 180° Himalayan views."
+  faqs={aboutFaqs}
 >
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "LodgingBusiness",
-          "@id": "https://whisperingpinesresort.in/about-whispering-pines-resort-ramgarh/#lodging",
+          "@type": "Hotel",
+          // Same @id as Layout's sitewide Hotel node: this page enriches the one entity instead of creating a second.
+          "@id": "https://whisperingpinesresort.in/#hotel",
           "name": "Whispering Pines Resort by Casa De Bello Mukteshwar Road",
           "alternateName": [
             "Whispering pines resort by casa de bello Mukteshwar road",
@@ -38,7 +65,6 @@ const villaUrl = new URL(villaImg, siteBase).href;
             "Casa De Bello Mukteshwar - ramgarh",
             "Casa De Bello Mukteshwar - Ramgarh"
           ],
-          "url": "https://whisperingpinesresort.in/about-whispering-pines-resort-ramgarh/",
           "logo": {
             "@type": "ImageObject",
             "url": "https://whisperingpinesresort.in/logo.svg",
@@ -67,7 +93,6 @@ const villaUrl = new URL(villaImg, siteBase).href;
           "description": "Whispering Pines Resort by Casa De Bello is a 4-star boutique heritage mountain resort built as the upgraded successor to Clarks Exotica Mukteshwar. Located on the Bhowali-Ramgarh-Mukteshwar Road in Malla Ramgarh, Uttarakhand at 1,780 metres altitude, the property features artisanal hand-crafted stone walls and solid cedar pine wood architecture built by native Kumaoni craftsmen. The 25-room resort and standalone private villa offer 180 degree panoramic views of the Nanda Devi and Trishul Himalayan peaks, set within active peach, plum, apple and apricot orchards and dense pine canopies. Under Casa De Bello management, the property delivers upgraded boutique hospitality while preserving the authentic Kumaoni mountain character that made it a beloved destination during the Clarks Exotica era.",
           "telephone": "+91-7505029696",
           "email": "booking@whisperingpinesresort.in",
-          "priceRange": "₹₹₹",
           "currenciesAccepted": "INR",
           "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Net Banking",
           "numberOfRooms": 25,
@@ -77,13 +102,6 @@ const villaUrl = new URL(villaImg, siteBase).href;
           "starRating": {
             "@type": "Rating",
             "ratingValue": "4",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.6",
-            "reviewCount": "428",
             "bestRating": "5",
             "worstRating": "1"
           },
@@ -137,36 +155,6 @@ const villaUrl = new URL(villaImg, siteBase).href;
             { "@type": "LocationFeatureSpecification", "name": "Private Villa", "value": true },
             { "@type": "LocationFeatureSpecification", "name": "Workcation Setup Remote Work Ready", "value": true }
           ],
-          "containsPlace": [
-            {
-              "@type": "Suite",
-              "name": "Private Villa — Complete Alpine Estate",
-              "description": "Entire stone and cedar wood private villa with 3 king bedrooms, premium loft, private orchard yard and fireplace living room. Sleeps up to 10 guests.",
-              "occupancy": { "@type": "QuantitativeValue", "maxValue": 10 },
-              "bed": { "@type": "BedDetails", "numberOfBeds": 3, "typeOfBed": "King Bed" }
-            },
-            {
-              "@type": "Suite",
-              "name": "Deluxe Skylight Suite — Attic Hideaway",
-              "description": "Top-floor suite with skylight ceilings for star-gazing, cedar pine deck overlooking Bhowali-Ramgarh valley and rain shower bath.",
-              "occupancy": { "@type": "QuantitativeValue", "maxValue": 3 },
-              "bed": { "@type": "BedDetails", "numberOfBeds": 1, "typeOfBed": "King Bed" }
-            },
-            {
-              "@type": "HotelRoom",
-              "name": "Family Twin Room — Ground Floor Orchard Access",
-              "description": "Ground floor family room with direct lawn and orchard access, exposed stone brick archways and geo-heater. Safe open space for children.",
-              "occupancy": { "@type": "QuantitativeValue", "maxValue": 2 },
-              "bed": { "@type": "BedDetails", "numberOfBeds": 1, "typeOfBed": "Double Bed" }
-            },
-            {
-              "@type": "HotelRoom",
-              "name": "Executive Cedar Suite",
-              "description": "Cedar wood pine finish room with mountain valley views and high-capacity heaters. Ideal for group bookings and large families.",
-              "occupancy": { "@type": "QuantitativeValue", "maxValue": 2 },
-              "bed": { "@type": "BedDetails", "numberOfBeds": 1, "typeOfBed": "Double Bed" }
-            }
-          ],
           "founder": {
             "@type": "Person",
             "name": "Gaurav Pandey",
@@ -203,7 +191,7 @@ const villaUrl = new URL(villaImg, siteBase).href;
             "@id": "https://whisperingpinesresort.in/#website"
           },
           "about": {
-            "@id": "https://whisperingpinesresort.in/about-whispering-pines-resort-ramgarh/#lodging"
+            "@id": "https://whisperingpinesresort.in/#hotel"
           },
           "inLanguage": "en-IN",
           "description": "About Whispering Pines Resort by Casa De Bello — the upgraded successor to Clarks Exotica Mukteshwar. A 4-star boutique heritage mountain resort in Malla Ramgarh, Uttarakhand with 180 degree Himalayan views, private orchards and luxury alpine suite architecture."
@@ -223,6 +211,12 @@ const villaUrl = new URL(villaImg, siteBase).href;
       />
       <HostFieldNote className="my-8" />
       <SEOAboutContent />
+      <FAQAccordion
+        client:visible
+        faqs={aboutFaqs}
+        title="About Whispering Pines: Questions We Get Asked"
+        description="Clarks Exotica, management, location, star rating and direct booking."
+      />
     </div>
     <RecentBookingNotification client:idle />
   </div>

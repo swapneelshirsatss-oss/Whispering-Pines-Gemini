@@ -7,12 +7,15 @@ interface Props {
   hideLink?: boolean;
   title?: string;
   asH1?: boolean;
+  /** Direct-answer paragraph replacing the default intro (AEO; matched by SpeakableSchema). */
+  intro?: string;
 }
 
-const { 
-  hideLink = false, 
+const {
+  hideLink = false,
   title = "Local sights and highland excursions",
-  asH1 = false 
+  asH1 = false,
+  intro
 } = Astro.props;
 
 const HeadingTag = asH1 ? "h1" : "h2";
@@ -29,11 +32,15 @@ const HeadingTag = asH1 ? "h1" : "h2";
         {title}
       </HeadingTag>
       <div class="w-16 rule-brass-left mx-auto mt-4 mb-6" />
+      {intro ? (
+        <p class="aeo-direct-answer text-sm sm:text-base text-[#2C3531]/80 font-sans leading-relaxed">{intro}</p>
+      ) : (
       <p class="text-sm sm:text-base text-[#2C3531]/80 font-sans leading-relaxed">
-        If you are searching for the best <strong>things to do in Ramgarh</strong>, our location serves as a spectacular 
-        central node. From historic mountain shrines and hidden waterfall treks to some of the most scenic 
+        If you are searching for the best <strong>things to do in Ramgarh</strong>, our location serves as a spectacular
+        central node. From historic mountain shrines and hidden waterfall treks to some of the most scenic
         <strong>places to visit near Ramgarh Uttarakhand</strong>, your highland excursion begins here.
       </p>
+      )}
     </div>
 
     {/* Experience Cards Grid */}
@@ -74,10 +81,16 @@ const HeadingTag = asH1 ? "h1" : "h2";
             </div>
 
             <div class="pt-3 border-t border-[#2C3531]/5">
+              {item.guide ? (
+                <a href={item.guide.href} class="inline-flex items-center min-h-11 text-xs font-sans font-semibold text-[#0E2C21] hover:text-[#7A6038] underline underline-offset-4 decoration-[#B0966D]">
+                  {item.guide.label} →
+                </a>
+              ) : (
               <span class="text-[10px] font-sans text-[#2C3531]/50 uppercase tracking-wider flex items-center">
                 <Compass className="w-3.5 h-3.5 text-[#7A6038] mr-1.5" />
                 Trip consulting offered
               </span>
+              )}
             </div>
           </div>
         </article>

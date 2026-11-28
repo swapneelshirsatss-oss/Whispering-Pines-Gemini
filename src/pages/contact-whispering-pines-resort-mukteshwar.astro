@@ -25,8 +25,8 @@ import HostFieldNote from "../components/HostFieldNote.astro";
             Contact Whispering Pines Resort Mukteshwar — Book Your Stay Directly
           </h1>
           <div class="w-16 rule-brass-left mx-auto mb-6" />
-          <p class="text-[#FAF9F6]/90 text-lg max-w-2xl mx-auto font-sans drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
-            Looking for a direct booking quote, have questions about our pet policy, or need directions? Our front desk team is ready to assist you.
+          <p class="aeo-direct-answer text-[#FAF9F6]/90 text-lg max-w-2xl mx-auto font-sans drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
+            Call or WhatsApp Whispering Pines on +91 75050 29696; the front desk is open 24 hours. The resort is at Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Nainital, Uttarakhand 263137: 26 km from Nainital, 25 km from Mukteshwar and 43 km from Kathgodam station.
           </p>
         </div>
       </div>
@@ -232,29 +232,10 @@ import HostFieldNote from "../components/HostFieldNote.astro";
   </div>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "Resort",
-    "name": "Whispering Pines Resort by Casa De Bello",
-    "url": "https://whisperingpinesresort.in/contact-whispering-pines-resort-mukteshwar/",
-    "telephone": "+91-7505029696",
+    "@type": "Hotel",
+    // Same @id as Layout's sitewide Hotel node, so the contact point merges into that one entity.
+    "@id": "https://whisperingpinesresort.in/#hotel",
     "email": "booking@whisperingpinesresort.in",
-    "hasMap": "https://maps.google.com/?cid=8386667112972057918",
-    "image": "https://whisperingpinesresort.in/og-image.webp",
-    "priceRange": "₹3,999 - ₹15,999",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.6",
-      "reviewCount": "428",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
-      "addressLocality": "Ramgarh, Mukteshwar",
-      "addressRegion": "Uttarakhand",
-      "postalCode": "263137",
-      "addressCountry": "IN"
-    },
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91-7505029696",

@@ -77,9 +77,9 @@ const ourHotels = [
           with 180° Nanda Devi and Trishul views from every room.
         </p>
 
-        <address class="not-italic space-y-2 text-sm text-[#FAF9F6]/85" itemscope itemtype="https://schema.org/Resort">
+        {/* itemid = the JSON-LD #hotel @id, so Google merges this into the one resort entity instead of listing a second. */}
+        <address class="not-italic space-y-2 text-sm text-[#FAF9F6]/85" itemscope itemtype="https://schema.org/Resort" itemid="https://whisperingpinesresort.in/#hotel">
           <meta itemprop="url" content="https://whisperingpinesresort.in/" />
-          <meta itemprop="priceRange" content="₹₹₹" />
           <meta itemprop="currenciesAccepted" content="INR" />
           <p itemprop="name" class="font-semibold text-[#FAF9F6]">Whispering Pines Resort by Casa De Bello Mukteshwar Road</p>
 
@@ -99,9 +99,9 @@ const ourHotels = [
           <div class="flex flex-wrap gap-x-6">
             <a href={`tel:${RESORT_CONTACT.phoneTel || '+917505029696'}`}
               data-track-dl='{"event":"phone_call_click","event_category":"engagement","event_label":"footer_phone_call"}'
-              class="inline-flex items-center gap-2 min-h-11 hover:text-[#C4A77D] transition-colors" itemprop="telephone">
+              class="inline-flex items-center gap-2 min-h-11 hover:text-[#C4A77D] transition-colors">
               <Phone className="w-4 h-4 text-[#C4A77D] shrink-0" />
-              <span class="font-semibold tracking-wide">+91 75050 29696</span>
+              <span class="font-semibold tracking-wide" itemprop="telephone">+91 75050 29696</span>
             </a>
             <a href="tel:+919690194954"
               data-track-dl='{"event":"phone_call_click","event_category":"engagement","event_label":"footer_reservations_phone_call"}'
@@ -110,9 +110,9 @@ const ourHotels = [
               <span class="font-semibold tracking-wide">09690194954</span>
             </a>
             <a href={`mailto:${RESORT_CONTACT.email}`}
-              class="inline-flex items-center gap-2 min-h-11 hover:text-[#C4A77D] transition-colors" itemprop="email">
+              class="inline-flex items-center gap-2 min-h-11 hover:text-[#C4A77D] transition-colors">
               <Mail className="w-4 h-4 text-[#C4A77D] shrink-0" />
-              <span>{RESORT_CONTACT.email}</span>
+              <span itemprop="email">{RESORT_CONTACT.email}</span>
             </a>
           </div>
         </address>
@@ -128,9 +128,9 @@ const ourHotels = [
           </a>
           <a href={RESORT_CONTACT.gmapsCid} target="_blank" rel="noopener noreferrer"
             class="inline-flex items-center gap-1 min-h-11 text-sm hover:text-[#C4A77D] transition-colors"
-            title="Google rating from 428 reviews">
+            title="Google rating from 433 reviews">
             <span class="text-[#C4A77D] font-bold">★ 4.6</span>
-            <span class="text-[#FAF9F6]/70">· 428 Google reviews</span>
+            <span class="text-[#FAF9F6]/70">· 433 Google reviews</span>
           </a>
         </div>
       </div>

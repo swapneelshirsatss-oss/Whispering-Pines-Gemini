@@ -41,8 +41,8 @@ export const RESORT_CONTACT = {
   rating: {
     value: "4.6",
     ratingValue: 4.6,
-    reviewCount: "428",
-    reviewCountNumeric: 428,
+    reviewCount: "433",
+    reviewCountNumeric: 433,
     source: "Google Reviews",
     ratingUrl: "https://maps.google.com/?cid=8386667112972057918"
   },
@@ -378,7 +378,8 @@ export const LOCAL_EXPERIENCES: LocalExperience[] = [
     distance: "22 km (~45-min Drive)",
     description: "The revered spiritual sanctuary of Neem Karoli Baba along the river valley. A sacred pilgrimage site attracting devotees and seekers from around the world.",
     tag: "Spiritual Pilgrimage",
-    image: "/images/Local-Sight-Himalayan-Excursions/kainchi-dham-mukteshwar.webp"
+    image: "/images/Local-Sight-Himalayan-Excursions/kainchi-dham-mukteshwar.webp",
+    guide: { href: "/blog/resort-stay-near-kainchi-dham/", label: "Resort near Kainchi Dham: where to stay" }
   },
   {
     id: "mukteshwar-temple",

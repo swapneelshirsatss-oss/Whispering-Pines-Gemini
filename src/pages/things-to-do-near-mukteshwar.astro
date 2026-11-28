@@ -6,19 +6,52 @@ import SlowLivingRhythm from "../components/SlowLivingRhythm.astro";
 import SEOExperiencesContent from "../components/SEOExperiencesContent.astro";
 import DistanceTransitMatrix from "../components/DistanceTransitMatrix.astro";
 import RecentBookingNotification from "../components/RecentBookingNotification";
+import FAQAccordion from "../components/FAQAccordion";
+
+const intro = "The top things to do near Mukteshwar and Ramgarh are Kainchi Dham Ashram (22 km, about 45 min from Whispering Pines), Mukteshwar Dham temple and Chauli Ki Jali (25 km, 45–50 min), Bhalu Gaad Waterfall (16 km, 35 min), Naini Lake in Nainital (26 km, 55 min) and Bhimtal Lake (26 km, 50 min), plus Ramgarh's fruit orchards.";
+
+// Visible FAQs; Layout prints the matching FAQPage schema from the same array.
+const thingsFaqs = [
+  {
+    question: 'What are the best places to visit near Mukteshwar?',
+    answer: 'The most visited are Mukteshwar Dham temple and Chauli Ki Jali, Kainchi Dham Ashram, Bhalu Gaad Waterfall, Naini Lake and Mall Road in Nainital, Bhimtal Lake, and the fruit orchards of Ramgarh.',
+  },
+  {
+    question: 'How far is Kainchi Dham from Whispering Pines Resort?',
+    answer: 'Kainchi Dham (Neem Karoli Baba Ashram) is 22 km from Whispering Pines in Malla Ramgarh, about a 45-minute drive.',
+  },
+  {
+    question: 'How far is Mukteshwar Dham from the resort?',
+    answer: 'Mukteshwar Dham temple and Chauli Ki Jali are 25 km from Whispering Pines, about a 45 to 50-minute drive along the Bhowali-Ramgarh-Mukteshwar Road.',
+  },
+  {
+    question: 'Is there a waterfall near Ramgarh?',
+    answer: 'Yes. Bhalu Gaad Waterfall is 16 km from Whispering Pines, about a 35-minute drive, followed by a forest trek through pine and oak to the falls.',
+  },
+  {
+    question: 'How far are Nainital and Bhimtal from the resort?',
+    answer: 'Naini Lake and Mall Road in Nainital are 26 km away (about 55 minutes). Bhimtal Lake is also 26 km away (about 50 minutes).',
+  },
+  {
+    question: 'Can the resort arrange day trips?',
+    answer: 'Yes. The travel desk at Whispering Pines books cabs and day trips to Kainchi Dham, Mukteshwar Dham, Nainital and other sights. Message the front desk on WhatsApp at +91 75050 29696.',
+  },
+];
 ---
 
-<Layout 
-  title="Things to Do Near Mukteshwar & Ramgarh | Sightseeing Guide 2026" 
+<Layout
+  title="Things to Do Near Mukteshwar & Ramgarh | Sightseeing Guide 2026"
   description="Discover the best things to do near Mukteshwar and Ramgarh. Verified driving distances and routes to Kainchi Dham, Mukteshwar Temple, Naini Lake, and Bhimtal."
+  faqs={thingsFaqs}
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#0E2C21] overflow-x-hidden selection:bg-[#B0966D] selection:text-[#0E2C21]">
     <Breadcrumbs />
     <div class="bg-[#FAF9F6]">
-      <LocalExperiencesList 
-        hideLink={true} 
+      <LocalExperiencesList
+        hideLink={true}
         asH1={true}
         title="Things to Do Near Mukteshwar — Local Sights & Highland Experiences from Ramgarh, Uttarakhand"
+        intro={intro}
       />
       
       {/* Distance & Transit Matrix */}
@@ -30,20 +63,18 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
       />
 
       <SEOExperiencesContent />
+      <FAQAccordion
+        client:visible
+        faqs={thingsFaqs}
+        title="Things to Do Near Mukteshwar: Questions We Get Asked"
+        description="Distances to Kainchi Dham, Mukteshwar Dham, Bhalu Gaad, Nainital and Bhimtal, and day trips."
+      />
     </div>
     <RecentBookingNotification client:idle />
   </div>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Resort",
-        "@id": "https://whisperingpinesresort.in/#resort",
-        "name": "Whispering Pines Resort by Casa De Bello",
-        "url": "https://whisperingpinesresort.in/",
-        "telephone": "+91-7505029696",
-        "hasMap": "https://maps.google.com/?cid=8386667112972057918"
-      },
       {
         "@type": "ItemList",
         "name": "Top Things to Do Near Mukteshwar & Ramgarh",
@@ -73,7 +104,7 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
             "@type": "ListItem",
             "position": 4,
             "name": "Tagore Top & Literary Heritage Trails",
-            "description": "Historic ridge in Ramgarh where Rabindranath Tagore composed parts of Gitanjali. 6 km (15 min drive).",
+            "description": "Historic ridge in Ramgarh where Rabindranath Tagore composed parts of Gitanjali.",
             "url": "https://whisperingpinesresort.in/things-to-do-near-mukteshwar/"
           },
           {

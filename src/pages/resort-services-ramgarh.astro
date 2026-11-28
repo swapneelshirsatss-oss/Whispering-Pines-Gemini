@@ -4,17 +4,49 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
 import ServicesSection from "../components/ServicesSection.astro";
 import SEOServicesContent from "../components/SEOServicesContent.astro";
 import RecentBookingNotification from "../components/RecentBookingNotification";
+import FAQAccordion from "../components/FAQAccordion";
+
+const intro = "Whispering Pines Resort in Malla Ramgarh, near Mukteshwar, has a 24-hour front desk and an in-house restaurant serving Kumaoni, Punjabi, North Indian and multi-cuisine meals. The travel desk arranges cabs, day trips and Kathgodam or Pantnagar transfers. Butler service is on request, a doctor is on call, and the banquet hall seats up to 80.";
+
+// Visible FAQs; Layout prints the matching FAQPage schema from the same array.
+const serviceFaqs = [
+  {
+    question: 'Does Whispering Pines Resort have a restaurant?',
+    answer: 'Yes. The in-house restaurant serves Kumaoni, Punjabi, North Indian and multi-cuisine meals, cooked fresh. Breakfast is included in the room rate.',
+  },
+  {
+    question: 'Can the resort arrange a pickup from Kathgodam station?',
+    answer: 'Yes. The travel desk arranges private cabs from Kathgodam Railway Station (43 km, about 1.5 hours) and Pantnagar Airport (76 km, about 2.5 hours). Message the front desk on WhatsApp at +91 75050 29696 with your arrival time to book and confirm the fare.',
+  },
+  {
+    question: 'Is the front desk open 24 hours?',
+    answer: 'Yes. The front desk at Whispering Pines is open 24 hours, day and night. Check-in is at 1:00 PM and check-out at 11:00 AM.',
+  },
+  {
+    question: 'Can the resort arrange sightseeing near Mukteshwar?',
+    answer: 'Yes. The travel desk books cabs and day trips to Kainchi Dham (22 km), Mukteshwar Dham (25 km), Nainital (26 km), Bhimtal and other Uttarakhand sights.',
+  },
+  {
+    question: 'Is medical help available at the resort?',
+    answer: 'A doctor is on call during your stay, and a first aid kit is kept on the estate.',
+  },
+  {
+    question: 'Can Whispering Pines host meetings and offsites?',
+    answer: 'Yes. The banquet hall seats up to 80 guests, and a separate meeting room suits smaller teams. Both have 150 Mbps fibre Wi-Fi. Full-resort buyouts sleep up to 70 guests.',
+  },
+];
 ---
 
-<Layout 
-  title="Resort Services & Dining in Mukteshwar | Whispering Pines" 
+<Layout
+  title="Resort Services & Dining in Mukteshwar | Whispering Pines"
   description="Multi-cuisine Kumaoni dining, Kathgodam railway transfers, bonfire nights, guided orchard walks, and concierge services at Whispering Pines Resort near Mukteshwar."
+  faqs={serviceFaqs}
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#0E2C21] overflow-x-hidden selection:bg-[#B0966D] selection:text-[#0E2C21]">
     <Breadcrumbs />
-    
+
     <div class="pt-8">
-      <ServicesSection asH1={true} title="Resort Services, Kumaoni Dining & Guest Facilities in Mukteshwar" />
+      <ServicesSection asH1={true} title="Resort Services, Kumaoni Dining & Guest Facilities in Mukteshwar" intro={intro} />
       
       {/* Corporate Offsites & MICE Feature Banner */}
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-10">
@@ -29,7 +61,7 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
               Executive Corporate Retreats & Team Offsites in Mukteshwar
             </h2>
             <p class="font-sans text-sm sm:text-base text-[#FAF9F6]/80 font-light leading-relaxed">
-              Elevate strategic thinking at 1,780 metres. Dedicated heated conference hall, 150 Mbps enterprise fiber Wi-Fi, 2,200 sq. ft. peak lawn, and 100% confidential buyout up to 70 delegates.
+              Elevate strategic thinking at 1,780 metres. Heated banquet hall seating up to 80, 150 Mbps enterprise fiber Wi-Fi, 2,200 sq. ft. peak lawn, and 100% confidential buyouts sleeping up to 70 delegates.
             </p>
             <div class="pt-3 flex flex-wrap items-center gap-4">
               <a
@@ -59,6 +91,12 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
       </div>
 
       <SEOServicesContent />
+      <FAQAccordion
+        client:visible
+        faqs={serviceFaqs}
+        title="Resort Services: Questions We Get Asked"
+        description="Dining, station pickups, front desk hours, sightseeing, medical help and meetings."
+      />
     </div>
     <RecentBookingNotification client:idle />
   </div>
@@ -66,47 +104,23 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Resort",
-        "@id": "https://whisperingpinesresort.in/resort-services-ramgarh/#resort",
-        "name": "Whispering Pines Resort by Casa De Bello",
-        "url": "https://whisperingpinesresort.in/resort-services-ramgarh/",
-        "telephone": "+91-7505029696",
-        "priceRange": "₹₹₹",
-        "hasMap": "https://maps.google.com/?cid=8386667112972057918",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.6",
-          "reviewCount": "428",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
-          "addressLocality": "Mukteshwar",
-          "addressRegion": "Uttarakhand",
-          "postalCode": "263137",
-          "addressCountry": "IN"
-        }
-      },
-      {
         "@type": "Service",
         "name": "Resort Dining & Room Service",
-        "provider": { "@id": "https://whisperingpinesresort.in/resort-services-ramgarh/#resort" },
+        "provider": { "@id": "https://whisperingpinesresort.in/#hotel" },
         "serviceType": "Food and Beverage",
         "description": "Authentic Kumaoni regional specialties, North Indian cuisine, and Continental comfort meals served indoors and on the panoramic Himalayan dining deck."
       },
       {
         "@type": "Service",
         "name": "Kathgodam & Pantnagar Transit Concierge",
-        "provider": { "@id": "https://whisperingpinesresort.in/resort-services-ramgarh/#resort" },
+        "provider": { "@id": "https://whisperingpinesresort.in/#hotel" },
         "serviceType": "Airport & Railway Station Pickup / Drop",
         "description": "Convenient private mountain cab pickups and drop-offs to Kathgodam Railway Station (43 km) and Pantnagar Airport (76 km)."
       },
       {
         "@type": "Service",
         "name": "Evening Mountain Bonfire & Stargazing",
-        "provider": { "@id": "https://whisperingpinesresort.in/resort-services-ramgarh/#resort" },
+        "provider": { "@id": "https://whisperingpinesresort.in/#hotel" },
         "serviceType": "Recreation & Entertainment",
         "description": "Warm evening bonfires with barbecue snacks under clear Himalayan night skies overlooking Nanda Devi."
       },
@@ -114,9 +128,9 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
         "@type": "Service",
         "name": "Executive Corporate Retreats & MICE Offsites",
         "url": "https://whisperingpinesresort.in/corporate-offsite-resort-mukteshwar/",
-        "provider": { "@id": "https://whisperingpinesresort.in/resort-services-ramgarh/#resort" },
+        "provider": { "@id": "https://whisperingpinesresort.in/#hotel" },
         "serviceType": "Corporate Offsite and Conference Facility",
-        "description": "Dedicated heated conference lounge, 150 Mbps enterprise fiber Wi-Fi, 2,200 sq. ft. peak lawn, and 100% confidential buyout up to 70 delegates."
+        "description": "Heated banquet hall seating up to 80, a separate meeting room, 150 Mbps enterprise fiber Wi-Fi, 2,200 sq. ft. peak lawn, and confidential buyouts sleeping up to 70 delegates."
       }
     ]
   })} />
