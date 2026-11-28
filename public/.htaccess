@@ -5,6 +5,10 @@ ErrorDocument 404 /404.html
 <IfModule mod_mime.c>
   AddType image/avif .avif
 </IfModule>
+# llms.txt / llms-full.txt are Markdown; agents check the Content-Type
+<FilesMatch "^llms(-full)?\.txt$">
+  ForceType "text/markdown; charset=utf-8"
+</FilesMatch>
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
