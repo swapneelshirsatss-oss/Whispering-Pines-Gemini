@@ -3,7 +3,7 @@
 // no React, no carousel library, CSS scroll-snap slider, Astro-optimised images.
 // Data comes from src/data.ts so rooms, reviews and contact stay in one place.
 import { Image, getImage } from 'astro:assets';
-import { ROOMS_INVENTORY, TESTIMONIALS, BOOKING_ENGINE_URL, RESORT_CONTACT } from '../../data';
+import { ROOMS_INVENTORY, TESTIMONIALS, RESORT_CONTACT } from '../../data';
 import hero1 from '../../assets/images/Whispering-pines-balcony-view-nanital.avif';
 import hero2 from '../../assets/images/lounge-area-inwhispering-pines-resort-by-casa-de-bello.avif';
 import hero3 from '../../assets/images/outside-view-from-resort-hotel.avif';
@@ -86,8 +86,9 @@ const rating = RESORT_CONTACT.rating;
     <p id="speakable-hero-intro" class="lx-hero-loc">Family resort in Uttarakhand · Malla Ramgarh · 1,780 m</p>
     <h1>Resort in Mukteshwar <span>with 180° Himalayan Views from Every Room</span></h1>
     <!-- generate_lead keeps homepage WhatsApp leads counting as Google Ads conversions, as the old room-list and booking-form buttons did (handled by /js/click-tracking.js) -->
-    <a class="lx-btn lx-solid" href={BOOKING_ENGINE_URL} target="_blank" rel="noopener noreferrer"
-      data-track-fn="trackAdsConversion" data-track-args='["generate_lead","booking","home_hero_whatsapp",{"conversion_type":"whatsapp"}]'>Check availability</a>
+    <!-- 28 Nov 2026 (Swapneel): hero CTA opens the BookingJini engine, not WhatsApp. Event stays generate_lead so GTM keeps counting it; label/type say booking_engine. -->
+    <a class="lx-btn lx-solid" href="https://url.bookingjini.com/be/8811" target="_blank" rel="noopener noreferrer"
+      data-track-fn="trackAdsConversion" data-track-args='["generate_lead","booking","home_hero_booking_engine",{"conversion_type":"booking_engine"}]'>Check availability</a>
     <p class="lx-hero-proof"><span aria-hidden="true">★</span> {rating.value} on Google · {rating.reviewCount} reviews · Save up to 20% booking direct</p>
   </div>
 </section>
