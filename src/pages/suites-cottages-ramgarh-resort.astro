@@ -1,26 +1,137 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Breadcrumbs from "../components/Breadcrumbs.astro";
-import RoomInventoryList from "../components/RoomInventoryList";
 import BookingInteractiveForm from "../components/BookingInteractiveForm";
 import RecentBookingNotification from "../components/RecentBookingNotification";
 import DirectVsOtaTable from "../components/DirectVsOtaTable.astro";
+import { Image } from 'astro:assets';
+import { BOOKING_ENGINE_URL, generateWhatsAppLink } from '../data';
+import deluxeRoomImgSrc from '../assets/images/rooms/Deluxe-Rooms-with-Himalayan-View.avif';
+import premiumRoomImgSrc from '../assets/images/rooms/Premium-room-with-Himalayan-view.avif';
+import cottageRoomImgSrc from '../assets/images/rooms/Cottage-Room-With-Himalayan-View.avif';
+import familyRoomImgSrc from '../assets/images/rooms/Family-Twin-Bed-Room-With-Himalayan-View.avif';
+
+// Same four room types and photos as /book-now/ (BookingJini names), but no rates here:
+// rates live on /book-now/. Copy is written fresh for this URL to avoid duplicate content.
+const ROOMS = [
+  {
+    id: 'deluxe', name: 'Deluxe Room with Himalayan View', bookingName: 'Deluxe Rooms with Himalayan View',
+    img: deluxeRoomImgSrc, sleeps: 'Sleeps 2',
+    eyebrow: 'Couples • Himalayan View Room',
+    alt: 'Deluxe room with king bed and Himalayan view at Whispering Pines Resort, Mukteshwar near Nainital',
+    text: 'A warm king-bed room in Mukteshwar for couples who want the snow peaks without the fuss. Wake to Nanda Devi from the window, then step into an en-suite bath with round-the-clock hot water and radiator heating on cold Kumaon nights.',
+    tags: ['King Bed', 'Himalayan View', 'Radiator Heating'],
+  },
+  {
+    id: 'premium', name: 'Premium Cedar Room in Mukteshwar', bookingName: 'Premium room with Himalayan view',
+    img: premiumRoomImgSrc, sleeps: 'Sleeps 2',
+    eyebrow: 'Couples • Cedar-Panelled Room',
+    alt: 'Premium cedar-panelled room with queen bed and Himalayan view at Whispering Pines Resort, Mukteshwar',
+    text: 'Cedar-panelled walls, a heated queen bed and a wide view of the Himalayan range: the room our guests pick most for a couples getaway near Nainital. Quiet, cosy and 1,780 m above the plains.',
+    tags: ['Queen Bed', 'Cedar Panels', '180° Snow View'],
+  },
+  {
+    id: 'cottage', name: 'Cottage Room with Garden Sit-out', bookingName: 'Cottage Room With Himalayan View',
+    img: cottageRoomImgSrc, sleeps: 'Sleeps 2',
+    eyebrow: 'Couples & Pets • Cottage Room',
+    alt: 'Cottage room with garden sit-out and Himalayan view at Whispering Pines Resort, Malla Ramgarh',
+    text: 'A cottage-style room in Ramgarh with its own garden sit-out for morning tea under the pines. King bed, en-suite bath and the same Himalayan view as every room at the resort. Well suited to couples travelling with a pet.',
+    tags: ['Garden Sit-out', 'King Bed', 'Pet-Friendly'],
+  },
+  {
+    id: 'family', name: 'Family Room in Mukteshwar for 4 Guests', bookingName: 'Family Twin-Bed Room With Himalayan View',
+    img: familyRoomImgSrc, sleeps: 'Sleeps 4', featured: true,
+    eyebrow: 'Families • Twin-Bed Room',
+    alt: 'Family twin-bed room with valley balcony facing Nanda Devi at Whispering Pines Resort, Mukteshwar',
+    text: 'Two king beds, cedar pine panels and a valley balcony facing Nanda Devi. One family room in Mukteshwar that fits parents and two children together, so there is no second booking and no rollaway bed.',
+    tags: ['Twin King Beds', 'Valley Balcony', 'Family of 4'],
+  },
+];
 ---
 
-<Layout 
-  title="Rooms & Suites in Mukteshwar with Himalayan Views" 
-  description="Skylight suites, family rooms and a 10-guest private villa in Mukteshwar, every room facing Nanda Devi and Trishul. Book direct and save up to 20% over OTAs."
+<Layout
+  title="Rooms in Mukteshwar near Nainital | Himalayan Views"
+  description="Family & Couples rooms in Mukteshwar near Nainital: Deluxe, Premium, Cottage and Family, all facing Nanda Devi from Malla Ramgarh. Save up to 20% direct."
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#0E2C21] overflow-x-hidden selection:bg-[#B0966D] selection:text-[#0E2C21]">
     <Breadcrumbs />
-    
+
     <div class="pt-8">
-      <RoomInventoryList 
-        title="Rooms, Skylight Suites and a Private Villa in Mukteshwar" 
-        isH1={true}
-        client:visible
-      />
-      
+      <section id="rooms" class="py-16 lg:py-24 bg-[#FAF9F6] border-b border-[#E6E0D6]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#7A6038] uppercase block mb-3">
+              Deluxe, Premium, Cottage &amp; Family Rooms
+            </span>
+            <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-[#0E2C21] leading-tight">
+              Himalayan-View Rooms for Family &amp; Couples in Mukteshwar near Nainital
+            </h1>
+            <div class="w-16 h-0.5 bg-[#B0966D] mx-auto my-5"></div>
+            <p class="text-sm sm:text-base text-[#44564E] leading-relaxed">
+              Whispering Pines has 25 Himalayan-view rooms at Malla Ramgarh, 1,780 m up, 25 km (45 min) from Mukteshwar near Nainital. Deluxe, Premium, Cottage and Family Twin-Bed rooms all face Nanda Devi and Trishul. Families, couples and pets are welcome, and booking direct on WhatsApp saves up to 20%.
+            </p>
+            <p class="mt-4 inline-block text-xs sm:text-sm font-sans text-[#7A6038] bg-white border border-[#8A6F4A]/30 px-4 py-2 rounded-sm">
+              Room prices change by season and rates are dynamic. Availability is confirmed by our reception team only.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {ROOMS.map((room) => (
+            <article class={`bg-white rounded-sm overflow-hidden shadow-md flex flex-col group ${room.featured ? 'border border-[#8A6F4A]/40 ring-2 ring-[#B0966D]/45' : 'border border-[#8A6F4A]/25'}`}>
+              <div class="relative h-64 overflow-hidden">
+                <Image
+                  src={room.img}
+                  alt={room.alt}
+                  widths={[400, 700, 900]}
+                  sizes="(max-width: 767px) 92vw, (max-width: 1200px) 46vw, 560px"
+                  quality={70}
+                  format="webp"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="absolute bottom-3 right-3 bg-[#03110B]/85 text-[#E5CFA0] border border-[#B0966D]/40 font-sans text-xs font-bold px-2.5 py-0.5 rounded-sm">
+                  {room.sleeps}
+                </div>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <span class="text-xs font-sans text-[#7A6038] uppercase tracking-[0.1em] block mb-1">{room.eyebrow}</span>
+                  <h2 class="font-display text-2xl font-semibold text-[#0E2C21] mb-2">{room.name}</h2>
+                  <p class="text-sm text-[#44564E] leading-relaxed mb-4">{room.text}</p>
+                  <div class="flex flex-wrap gap-2 text-xs font-sans text-[#7A6038] mb-6">
+                    {room.tags.map((tag) => (
+                      <span class="bg-[#FAF9F6] px-2.5 py-1 rounded-sm border border-[#8A6F4A]/25">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+                <div class="pt-4 border-t border-[#8A6F4A]/15 flex flex-wrap items-center gap-3">
+                  <a
+                    href={generateWhatsAppLink({ roomName: room.bookingName, source: "Rooms Page Card" })}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-track-fn="trackBookingConversion"
+                    data-track-args={JSON.stringify(["generate_lead", "booking", `rooms_page_whatsapp_${room.id}`, { conversion_type: "whatsapp" }])}
+                    class="inline-flex items-center justify-center bg-[#0E2C21] hover:bg-[#193F30] text-[#FAF9F6] font-sans text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-sm transition-colors"
+                  >
+                    Ask today's rate on WhatsApp
+                  </a>
+                  <a
+                    href={BOOKING_ENGINE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center text-[#0E2C21] hover:text-[#7A6038] font-sans text-xs font-semibold uppercase tracking-wider px-3 py-3 transition-colors"
+                  >
+                    Book online →
+                  </a>
+                </div>
+              </div>
+            </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Direct vs OTA Booking Comparison */}
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <DirectVsOtaTable
@@ -28,7 +139,7 @@ import DirectVsOtaTable from "../components/DirectVsOtaTable.astro";
           subtitle="Reserve directly through our official website or WhatsApp concierge to unlock up to 20% off, guaranteed 180° Nanda Devi balcony upgrades, and zero pet fees."
         />
       </section>
-      
+
       {/* Featured Travel Guides Section */}
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="bg-white rounded-sm p-8 border border-[#EAE8E3] shadow-sm text-center space-y-4">
@@ -42,8 +153,8 @@ import DirectVsOtaTable from "../components/DirectVsOtaTable.astro";
             <a href="/blog/best-resort-to-stay-near-mukteshwar/" class="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#FAF9F6] text-[#0E2C21] font-semibold text-xs rounded-full border border-[#EAE8E3] hover:border-[#8A6F4A] transition-colors">
               Best resorts in Mukteshwar →
             </a>
-            <a href="/private-villas-near-nainital/" class="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#FAF9F6] text-[#0E2C21] font-semibold text-xs rounded-full border border-[#EAE8E3] hover:border-[#8A6F4A] transition-colors">
-              Private 3-BHK villa near Nainital →
+            <a href="/book-now/" class="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#FAF9F6] text-[#0E2C21] font-semibold text-xs rounded-full border border-[#EAE8E3] hover:border-[#8A6F4A] transition-colors">
+              Check room rates &amp; book direct →
             </a>
           </div>
         </div>
@@ -64,7 +175,8 @@ import DirectVsOtaTable from "../components/DirectVsOtaTable.astro";
     "name": "Whispering Pines Resort by Casa De Bello",
     "url": "https://whisperingpinesresort.in/suites-cottages-ramgarh-resort/",
     "telephone": "+91-7505029696",
-    "priceRange": "₹3999 - ₹15999",
+    "priceRange": "₹₹₹",
+    "petsAllowed": true,
     "hasMap": "https://maps.google.com/?cid=8386667112972057918",
     "address": {
       "@type": "PostalAddress",
@@ -77,31 +189,31 @@ import DirectVsOtaTable from "../components/DirectVsOtaTable.astro";
     "containsPlace": [
       {
         "@type": "HotelRoom",
-        "name": "Deluxe Himalayan View Room",
-        "description": "Spacious mountain-facing room with private balcony offering 180° views of Nanda Devi and Trishul, king bed, heating, and modern en-suite bath.",
-        "occupancy": { "@type": "QuantitativeValue", "maxValue": 3, "unitText": "Person" },
+        "name": "Deluxe Room with Himalayan View",
+        "description": "King-bed room with Nanda Devi view, radiator heating and en-suite bath with 24/7 hot water. Suited to couples.",
+        "occupancy": { "@type": "QuantitativeValue", "maxValue": 2, "unitText": "Person" },
         "bed": { "@type": "BedDetails", "numberOfBeds": 1, "typeOfBed": "King" }
       },
       {
         "@type": "HotelRoom",
-        "name": "Executive Cedar Suite",
-        "description": "Hand-crafted cedar wood suite with sitting lounge, stone fireplace, private balcony, and panoramic Himalayan vistas.",
+        "name": "Premium Room with Himalayan View",
+        "description": "Cedar-panelled heated room with queen bed and a 180° view of the Himalayan range.",
+        "occupancy": { "@type": "QuantitativeValue", "maxValue": 2, "unitText": "Person" },
+        "bed": { "@type": "BedDetails", "numberOfBeds": 1, "typeOfBed": "Queen" }
+      },
+      {
+        "@type": "HotelRoom",
+        "name": "Cottage Room with Himalayan View",
+        "description": "Cottage-style room with private garden sit-out, king bed, en-suite bath and Himalayan view. Pet-friendly.",
+        "occupancy": { "@type": "QuantitativeValue", "maxValue": 2, "unitText": "Person" },
+        "bed": { "@type": "BedDetails", "numberOfBeds": 1, "typeOfBed": "King" }
+      },
+      {
+        "@type": "HotelRoom",
+        "name": "Family Twin-Bed Room with Himalayan View",
+        "description": "Family room with two king beds, cedar panels and a valley balcony facing Nanda Devi. Fits a family of four.",
         "occupancy": { "@type": "QuantitativeValue", "maxValue": 4, "unitText": "Person" },
-        "bed": { "@type": "BedDetails", "numberOfBeds": 1, "typeOfBed": "King" }
-      },
-      {
-        "@type": "HotelRoom",
-        "name": "Family Orchard Suite",
-        "description": "Multi-bed family accommodation directly overlooking our private peach and plum orchards with separate children seating area.",
-        "occupancy": { "@type": "QuantitativeValue", "maxValue": 5, "unitText": "Person" },
-        "bed": { "@type": "BedDetails", "numberOfBeds": 2, "typeOfBed": "Queen" }
-      },
-      {
-        "@type": "Accommodation",
-        "name": "3-BHK Alpine Heritage Villa",
-        "description": "Full standalone private villa sleeping up to 10 guests with 3 king bedrooms, attic loft, living room fireplace, kitchen, and private enclosed garden.",
-        "occupancy": { "@type": "QuantitativeValue", "maxValue": 10, "unitText": "Person" },
-        "numberOfBedrooms": 3
+        "bed": { "@type": "BedDetails", "numberOfBeds": 2, "typeOfBed": "King" }
       }
     ]
   })} />
