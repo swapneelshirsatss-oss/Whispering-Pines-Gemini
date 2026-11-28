@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Breadcrumbs from "../components/Breadcrumbs.astro";
-import BookingInteractiveForm from "../components/BookingInteractiveForm";
 import RecentBookingNotification from "../components/RecentBookingNotification";
 import DirectVsOtaTable from "../components/DirectVsOtaTable.astro";
 import { Image } from 'astro:assets';
@@ -10,6 +9,26 @@ import deluxeRoomImgSrc from '../assets/images/rooms/Deluxe-Rooms-with-Himalayan
 import premiumRoomImgSrc from '../assets/images/rooms/Premium-room-with-Himalayan-view.avif';
 import cottageRoomImgSrc from '../assets/images/rooms/Cottage-Room-With-Himalayan-View.avif';
 import familyRoomImgSrc from '../assets/images/rooms/Family-Twin-Bed-Room-With-Himalayan-View.avif';
+// Rendered at build time to static SVG (no client directive, no JS shipped).
+import { Dumbbell, UtensilsCrossed, Users, Presentation,MapPinned, Clock, ConciergeBell, SquareParking, Wifi, Stethoscope, BriefcaseMedical, ToyBrick, Dices, Bike, PawPrint } from 'lucide-react';
+
+const SERVICES = [
+  { Icon: Dumbbell, title: 'Fitness Space', text: 'Keep up your routine in the fitness space on the estate.' },
+  { Icon: UtensilsCrossed, title: 'In-House Restaurant', text: 'Kumaoni, Punjabi, North Indian and multi-cuisine meals, cooked fresh.' },
+  { Icon: Users, title: 'Banquet Hall', text: 'Seats up to 80 guests for meetings, offsites and celebrations.' },
+  { Icon: Presentation, title: 'Meeting Room', text: 'A quiet room for team meetings and small offsites, with 150 Mbps fibre Wi-Fi.' },
+  { Icon: MapPinned, title: 'Travel Desk', text: 'Cabs and day trips for Uttarakhand sightseeing: Kainchi Dham, Mukteshwar Dham, Nainital and more.' },
+  { Icon: Clock, title: 'Front Desk', text: 'Open 24 hours, day and night.' },
+  { Icon: ConciergeBell, title: 'Butler Service', text: 'Available on request.' },
+  { Icon: SquareParking, title: 'Parking', text: 'Complimentary parking on the estate.' },
+  { Icon: Wifi, title: 'Wi-Fi', text: 'Complimentary Wi-Fi in every room.' },
+  { Icon: Stethoscope, title: 'Doctor on Call', text: 'A doctor is on call during your stay.' },
+  { Icon: BriefcaseMedical, title: 'First Aid Kit', text: 'A first aid kit is kept on the estate.' },
+  { Icon: ToyBrick, title: "Kids' Play Area", text: 'Open 7:00 AM - 8:00 PM.' },
+  { Icon: Dices, title: 'Indoor Games', text: 'All day: billiards table, chess and table tennis.' },
+  { Icon: Bike, title: 'Outdoor Games', text: 'Until 8:00 PM: archery, cycling, football and cricket, with equipment on request.' },
+  { Icon: PawPrint, title: 'Pet Friendly', text: 'Pets are welcome under a clear house policy, with no pet fee. Please tell us before you travel.' },
+];
 
 // Same four room types and photos as /book-now/ (BookingJini names), but no rates here:
 // rates live on /book-now/. Copy is written fresh for this URL to avoid duplicate content.
@@ -132,6 +151,25 @@ const ROOMS = [
         </div>
       </section>
 
+      {/* Services & Facilities: cream cards on sand (DESIGN.md tokens) */}
+      <section id="services" class="py-16 lg:py-24 bg-[#E6E0D6]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-10">
+            <span class="text-xs font-sans font-bold tracking-[0.1em] text-[#7A6038] uppercase block mb-3">Included With Your Stay</span>
+            <h2 class="font-display text-3xl sm:text-4xl font-semibold text-[#0E2C21] leading-tight">Services &amp; Facilities at Our Resort in Mukteshwar</h2>
+          </div>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {SERVICES.map(({ Icon, title, text }) => (
+              <li class="bg-[#FAF9F6] rounded-2xl p-7 shadow-sm border border-[#8A6F4A]/10">
+                <Icon className="w-8 h-8 text-[#0E2C21] mb-4" strokeWidth={1.5} aria-hidden="true" />
+                <h3 class="font-display text-2xl text-[#0E2C21] mb-2">{title}</h3>
+                <p class="text-sm text-[#44564E] leading-relaxed">{text}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* Direct vs OTA Booking Comparison */}
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <DirectVsOtaTable
@@ -160,11 +198,6 @@ const ROOMS = [
         </div>
       </section>
 
-      <div id="book" class="bg-[#E6E0D6] py-20 lg:py-28 px-4">
-        <div class="max-w-4xl mx-auto">
-          <BookingInteractiveForm title="Complete Your Vacation Booking" client:visible />
-        </div>
-      </div>
     </div>
     <RecentBookingNotification client:idle />
   </div>
