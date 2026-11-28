@@ -286,10 +286,9 @@ const roomFaqs = [
   </div>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "Hotel",
-    // Same @id as Layout's sitewide Hotel node, so the rooms merge into that one entity.
-    "@id": "https://whisperingpinesresort.in/#hotel",
-    "containsPlace": [
+    // Rooms as standalone HotelRoom nodes linked back via containedInPlace. Putting them in the Hotel's
+    // containsPlace makes Google validate the Hotel as hotel-listing markup and flag it invalid.
+    "@graph": [
       {
         "@type": "HotelRoom",
         "name": "Deluxe Room with Himalayan View",
@@ -318,6 +317,6 @@ const roomFaqs = [
         "occupancy": { "@type": "QuantitativeValue", "maxValue": 4, "unitText": "Person" },
         "bed": { "@type": "BedDetails", "numberOfBeds": 2, "typeOfBed": "King" }
       }
-    ]
+    ].map((room) => ({ ...room, "containedInPlace": { "@id": "https://whisperingpinesresort.in/#hotel" } }))
   })} />
 </Layout>
