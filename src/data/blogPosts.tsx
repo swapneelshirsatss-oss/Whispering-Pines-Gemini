@@ -1905,8 +1905,9 @@ export const BLOG_POSTS: BlogPostData[] = [
     id: 5,
     slug: "resort-stay-near-kainchi-dham",
     title: "Resort Near Kainchi Dham: Where to Stay for a Peaceful Darshan (2026)",
-    seoTitle: "Resort Near Kainchi Dham: Quiet Stay 45 Min from Ashram",
-    seoDescription: "Planning Neem Karoli Baba darshan? Stay 45 min from Kainchi Dham in Malla Ramgarh: Himalayan views, senior-friendly rooms, a villa for 10. Save up to 20% direct.",
+    // 28 Nov 2026: "Neem Karoli Baba" phrasings are ~480 of the cluster's GSC impressions; villa dropped (no-villa-focus rule, 27 Nov).
+    seoTitle: "Resort Near Kainchi Dham & Neem Karoli Baba Ashram, 22 km",
+    seoDescription: "4-star resort 22 km (45 min) from Neem Karoli Baba's Kainchi Dham ashram. Himalayan views, step-free senior rooms, parking for 25+ cars. Up to 20% off direct.",
     excerpt: "Where to stay near Kainchi Dham Ashram (Neem Karoli Baba): a senior-friendly 4-star resort hotel 22 km away in Malla Ramgarh, compared with highway and Bhowali stays. Darshan plan, parking for 25+ cars, and up to 20% off when you book direct.",
     date: "August 6, 2026",
     updatedDate: "November 23, 2026",

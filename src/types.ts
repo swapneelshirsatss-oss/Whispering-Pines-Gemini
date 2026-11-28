@@ -46,6 +46,8 @@ export interface LocalExperience {
   description: string;
   tag: string;
   image: string;
+  /** Optional link to our own guide for this sight (internal link for SEO). */
+  guide?: { href: string; label: string };
 }
 
 export interface FAQItem {
