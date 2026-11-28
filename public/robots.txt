@@ -48,7 +48,9 @@ Disallow: /
 User-agent: CCBot
 Disallow: /
 
+# Content Signals (contentsignals.org): how AI may use this content
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 # Primary XML Sitemaps (Indexed & Categorized)
