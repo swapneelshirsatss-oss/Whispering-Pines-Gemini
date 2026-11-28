@@ -93,10 +93,20 @@ import HostFieldNote from "../components/HostFieldNote.astro";
                     <a
                       href={`tel:${RESORT_CONTACT.phoneTel || '+917505029696'}`}
                       data-track-dl='{"event":"phone_call_click","event_category":"engagement","event_label":"contact_page_phone_call"}'
-                      class="text-lg text-[#2C3531] hover:text-[#B0966D] transition-colors font-medium font-sans"
+                      class="text-lg text-[#2C3531] hover:text-[#B0966D] transition-colors font-medium font-sans block"
                     >
                       {RESORT_CONTACT.phoneDisplay} <span class="text-sm font-sans text-gray-500 font-normal">({RESORT_CONTACT.phoneIntlDisplay})</span>
                     </a>
+                    <div class="mt-1.5 text-sm text-[#2C3531]/85 font-sans">
+                      <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold mr-1.5">Secondary:</span>
+                      <a
+                        href="tel:+919690194954"
+                        data-track-dl='{"event":"phone_call_click","event_category":"engagement","event_label":"contact_page_secondary_phone_call"}'
+                        class="hover:text-[#B0966D] transition-colors font-medium"
+                      >
+                        09690194954
+                      </a>
+                    </div>
                   </div>
                 </div>
                 
@@ -150,6 +160,15 @@ import HostFieldNote from "../components/HostFieldNote.astro";
                       Book Directly on Website
                     </a>
                   </div>
+                </div>
+
+                {/* Legal Entity & GST Details */}
+                <div class="pt-4 border-t border-[#0E2C21]/10 text-sm text-[#2C3531]/85 space-y-1.5">
+                  <h3 class="text-xs font-bold text-[#0E2C21] uppercase tracking-wider">Legal Operating Entity &amp; GST Registration</h3>
+                  <p><strong>Operated By:</strong> CASADEBELLO PRIVATE LIMITED</p>
+                  <p><strong>GSTIN:</strong> 05AALCC4284C1ZT (Regular, Uttarakhand)</p>
+                  <p><strong>Registered Office:</strong> Bhowali Tehsil, Ramgarh Road, Ghorakhal, Nainital, Uttarakhand 263156</p>
+                  <p><strong>Resort Property:</strong> Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137</p>
                 </div>
               </div>
             </div>
