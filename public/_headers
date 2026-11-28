@@ -23,6 +23,12 @@
 /*.txt
   Cache-Control: max-age=0, no-cache, no-store, must-revalidate
 
+/llms.txt
+  Content-Type: text/markdown; charset=utf-8
+
+/llms-full.txt
+  Content-Type: text/markdown; charset=utf-8
+
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
