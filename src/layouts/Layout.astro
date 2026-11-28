@@ -169,7 +169,30 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
         "Casa De Bello Mukteshwar - ramgarh",
         "Casa De Bello Mukteshwar - Ramgarh"
       ],
-      "url": "https://whisperingpinesresort.in/"
+      "url": "https://whisperingpinesresort.in/",
+      "publisher": { "@id": "https://whisperingpinesresort.in/#organization" }
+    })} />
+
+    <!-- Operating company (sitewide). The resort entities point here via parentOrganization. -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://whisperingpinesresort.in/#organization",
+      "name": "Casa De Bello",
+      "legalName": "CASADEBELLO PRIVATE LIMITED",
+      "url": "https://casadebello.com",
+      "taxID": "05AALCC4284C1ZT",
+      "telephone": "+91-7505029696",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bhowali Tehsil, Ramgarh Road, Ghorakhal",
+        "addressLocality": "Nainital",
+        "addressRegion": "Uttarakhand",
+        "postalCode": "263156",
+        "addressCountry": "IN"
+      },
+      "founder": { "@type": "Person", "name": "Gaurav Pandey", "jobTitle": "Managing Director & Founder" },
+      "subOrganization": { "@id": "https://whisperingpinesresort.in/#hotel" }
     })} />
 
     <!-- Hotel / Resort Entity & Aggregate Rating Schema (Omitted on / where ResortLodgingSchema provides the single unified Hotel entity) -->
@@ -185,6 +208,7 @@ const ogImage = image ? (image.startsWith('http') ? image : `${siteBase}${image.
         ],
         "url": "https://whisperingpinesresort.in/",
         "image": "https://whisperingpinesresort.in/og-image.webp",
+        "parentOrganization": { "@id": "https://whisperingpinesresort.in/#organization" },
         // Ad landing pages carry the client's 25 Nov 2026 CP/MAP tariffs; the rest of the site keeps the older range.
         "priceRange": landing ? "₹5,500 - ₹12,000" : "₹3,999 - ₹15,999",
         "telephone": "+91-7505029696",
