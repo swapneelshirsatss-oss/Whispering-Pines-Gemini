@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CorporateInquiryForm from '../components/CorporateInquiryForm';
+import FAQAccordion from '../components/FAQAccordion';
 import { 
   Building2, 
   MapPin, 
@@ -224,42 +225,52 @@ const ITINERARY_DAYS = [
   }
 ];
 
+// Visible FAQs; Layout prints the matching FAQPage schema from the same array.
+const corporateFaqs = [
+  {
+    question: 'Can Whispering Pines host a corporate offsite near Mukteshwar?',
+    answer: 'Yes. Whispering Pines in Malla Ramgarh, 25 km from Mukteshwar, hosts corporate offsites and leadership retreats with a heated banquet hall, a separate meeting room, 150 Mbps fibre Wi-Fi and a 2,200 sq ft lawn facing Nanda Devi.',
+  },
+  {
+    question: 'How many people does the conference hall seat?',
+    answer: 'The banquet / conference hall seats up to 80 delegates. A separate meeting room suits smaller teams, and the 2,200 sq ft lawn takes up to 100 guests for outdoor sessions.',
+  },
+  {
+    question: 'How many delegates can stay overnight?',
+    answer: 'A full-resort buyout sleeps up to 70 delegates across 25 rooms and suites and a 3-BHK villa, giving the company the whole property.',
+  },
+  {
+    question: 'How far is Whispering Pines from Delhi?',
+    answer: 'About 340 km, a 6.5 to 7.5-hour drive via the Delhi-Meerut Expressway and NH 9. Teams can also take the Shatabdi to Kathgodam, then drive 43 km (about 1.5 hours) to the resort.',
+  },
+  {
+    question: 'Is the Wi-Fi reliable enough for work sessions?',
+    answer: 'Yes. The resort has 150 Mbps fibre Wi-Fi in every room and the meeting spaces, with generator power backup.',
+  },
+  {
+    question: 'What team activities are available?',
+    answer: 'Bonfire evenings, orchard and pine forest walks, stargazing, and outdoor games until 8:00 PM including archery, cricket, football and cycling. The travel desk arranges day trips to Kainchi Dham and Nainital.',
+  },
+  {
+    question: 'How do we get a quote for a corporate offsite?',
+    answer: 'Message the front desk on WhatsApp at +91 75050 29696 with your dates, group size and meeting needs, or fill in the inquiry form on this page.',
+  },
+];
+
 // Rich JSON-LD Structured Data
 const corporateSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": ["Hotel", "EventVenue"],
-      "@id": "https://whisperingpinesresort.in/corporate-offsite-resort-mukteshwar/#venue",
-      "name": "Whispering Pines Resort by Casa De Bello - Executive Corporate Retreats Mukteshwar",
-      "url": "https://whisperingpinesresort.in/corporate-offsite-resort-mukteshwar/",
+      // Same @id as Layout's sitewide Hotel node, so the venue facts merge into that one entity.
+      "@id": "https://whisperingpinesresort.in/#hotel",
       "image": "https://whisperingpinesresort.in/images/banquest-hall-in-resort.avif",
-      "telephone": "+917505029696",
-      "priceRange": "₹₹₹",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd",
-        "addressLocality": "Mukteshwar",
-        "addressRegion": "Nainital, Uttarakhand",
-        "postalCode": "263137",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 29.4260969,
-        "longitude": 79.5506794
-      },
-      "hasMap": "https://maps.google.com/?cid=8386667112972057918",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "reviewCount": "428",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
       "maximumAttendeeCapacity": 100,
       "amenityFeature": [
-        { "@type": "LocationFeatureSpecification", "name": "100% Confidential Estate Buyout for Up to 70 Delegates", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Heated Banquet Hall Seating Up to 80", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Separate Meeting Room", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "100% Confidential Estate Buyout Sleeping Up to 70 Delegates", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "150 Mbps Enterprise Fiber Wi-Fi", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "2,200 Sq. Ft. Peak-Facing Wedding & Conference Lawn", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Dedicated Heated Indoor Conference Lounge", "value": true },
@@ -298,6 +309,7 @@ const corporateSchema = {
   description="Plan executive corporate offsites and MICE retreats in Mukteshwar with 150 Mbps Wi-Fi, audio-visual setups, alpine lawns, and custom team meal plans."
   canonical="/corporate-offsite-resort-mukteshwar/"
   image="/images/banquest-hall-in-resort.avif"
+  faqs={corporateFaqs}
 >
   <Fragment slot="head">
     <link rel="preload" as="image" href="/images/Whispering-pines-balcony-view-nanital.avif" fetchpriority="high" />
@@ -342,8 +354,8 @@ const corporateSchema = {
         <div class="w-20 h-[1.5px] bg-[#B0966D] mx-auto mb-6 opacity-90 shadow-xs" />
 
         {/* Sub-headline with High-Contrast Legibility */}
-        <p class="font-sans text-base sm:text-lg lg:text-xl text-[#FAF9F6]/95 font-light leading-relaxed max-w-3xl mx-auto mb-10 text-pretty drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
-          Elevate strategic thinking, team synergy, and leadership alignment at 1,780 metres. Set amidst peaceful pine forests with 180° panoramic views of Nanda Devi and Trishul snow peaks, Whispering Pines Resort offers boutique 4-star hospitality, dedicated conference spaces, 150 Mbps enterprise fiber Wi-Fi, and exclusive estate buyouts for up to 70 delegates.
+        <p class="aeo-direct-answer font-sans text-base sm:text-lg lg:text-xl text-[#FAF9F6]/95 font-light leading-relaxed max-w-3xl mx-auto mb-10 text-pretty drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
+          Whispering Pines in Malla Ramgarh, 25 km from Mukteshwar, hosts corporate offsites at 1,780 metres with 180° views of Nanda Devi and Trishul. It has a heated banquet hall seating up to 80, a separate meeting room, 150 Mbps fibre Wi-Fi, a 2,200 sq ft lawn, and full-resort buyouts sleeping up to 70 delegates.
         </p>
 
         {/* CTA Buttons */}
@@ -412,7 +424,7 @@ const corporateSchema = {
                 </span>
               </div>
               <p class="font-sans text-xs text-[#FAF9F6]/80 leading-snug">
-                Rated on Google (428 Verified Reviews)
+                Rated on Google (433 Verified Reviews)
               </p>
             </div>
           </div>
@@ -830,6 +842,14 @@ const corporateSchema = {
 
       </div>
     </section>
+
+    {/* Corporate FAQs (visible; Layout prints the matching FAQPage schema) */}
+    <FAQAccordion
+      client:visible
+      faqs={corporateFaqs}
+      title="Corporate Offsites in Mukteshwar: Questions HR Teams Ask"
+      description="Hall capacity, overnight delegates, distance from Delhi, Wi-Fi, activities and quotes."
+    />
 
     {/* ========================================================================= */}
     {/* [SECTION 7: INQUIRY FORM & CORPORATE CONTACT] */}

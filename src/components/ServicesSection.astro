@@ -13,12 +13,15 @@ interface Props {
   hideLink?: boolean;
   title?: string;
   asH1?: boolean;
+  /** Direct-answer paragraph replacing the default intro (AEO; matched by SpeakableSchema). */
+  intro?: string;
 }
 
-const { 
+const {
   hideLink = false,
   title = "Dedicated personal care",
-  asH1 = false
+  asH1 = false,
+  intro
 } = Astro.props;
 
 const HeadingTag = asH1 ? "h1" : "h2";
@@ -35,9 +38,13 @@ const HeadingTag = asH1 ? "h1" : "h2";
         {title}
       </HeadingTag>
       <div class="w-16 rule-brass-left mx-auto mt-4 mb-6" />
+      {intro ? (
+        <p class="aeo-direct-answer text-sm sm:text-base text-[#2C3531]/80 font-sans leading-relaxed">{intro}</p>
+      ) : (
       <p class="text-sm sm:text-base text-[#2C3531]/80 font-sans leading-relaxed">
         Whether you are planning a quiet mountain weekend or an extended family <strong>stay in Ramgarh</strong>, our resident team takes care of every detail—from steaming pahadi chai delivered to your balcony to local trail guidance, bonfires, and on-demand travel assistance as a trusted <strong>family resort near Nainital</strong>.
       </p>
+      )}
     </div>
 
     {/* Grid Box */}

@@ -7,13 +7,16 @@ interface Props {
   title?: string;
   isH1?: boolean;
   asH1?: boolean;
+  /** Direct-answer paragraph under the H1 (AEO; matched by SpeakableSchema). */
+  intro?: string;
 }
 
 const {
   hideLink = false,
   title = "Tailored mountain comforts",
   isH1 = false,
-  asH1 = false
+  asH1 = false,
+  intro
 } = Astro.props;
 
 const useH1 = isH1 || asH1;
@@ -58,9 +61,11 @@ const specs = GENERAL_AMENITIES.filter((a) => !PHOTOS[a.title]);
           <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-[#0E2C21]">
             {title}
           </h1>
-          <p class="font-display text-xl sm:text-2xl text-[#7A6038] mt-4">
-            What Sets Us Apart — Amenities No Other Resort Near Mukteshwar Offers
-          </p>
+          {intro && (
+            <p class="aeo-direct-answer text-base sm:text-lg text-[#44564E] font-sans leading-relaxed mt-4 max-w-3xl">
+              {intro}
+            </p>
+          )}
         </>
       ) : (
         <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-[#0E2C21]">

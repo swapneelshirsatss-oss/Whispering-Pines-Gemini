@@ -4,38 +4,64 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
 import AmenitiesList from "../components/AmenitiesList.astro";
 import SEOAmenitiesContent from "../components/SEOAmenitiesContent.astro";
 import RecentBookingNotification from "../components/RecentBookingNotification";
+import FAQAccordion from "../components/FAQAccordion";
+
+const intro = "Whispering Pines is a 4-star resort at 1,780 m in Malla Ramgarh, 25 km from Mukteshwar. Every room has a 180° Himalayan view. Amenities include private fruit orchards, a 2,200 sq ft Nanda Devi lawn, 150 Mbps fibre Wi-Fi, an in-house Kumaoni and multi-cuisine restaurant, bonfire evenings, heated rooms and pet-friendly lawns.";
+
+// Visible FAQs; Layout prints the matching FAQPage schema from the same array.
+const amenityFaqs = [
+  {
+    question: 'What amenities does Whispering Pines Resort in Mukteshwar have?',
+    answer: 'Whispering Pines has 180° Himalayan views from every room, private apple, peach and plum orchards, a 2,200 sq ft Nanda Devi lawn, 150 Mbps fibre Wi-Fi, an in-house restaurant, bonfire and barbecue evenings, a fitness space, a kids\' play area, indoor and outdoor games, and complimentary parking.',
+  },
+  {
+    question: 'Does Whispering Pines have Wi-Fi?',
+    answer: 'Yes. Complimentary 150 Mbps fibre Wi-Fi covers every room, and power backup keeps it running, so the resort works well for remote work and workcations.',
+  },
+  {
+    question: 'Are the rooms warm in winter?',
+    answer: 'Yes. Rooms are heated, hot water runs round the clock, and evenings have bonfires on the lawn. Power backup supports heating, geysers and lighting during outages.',
+  },
+  {
+    question: 'Is Whispering Pines pet-friendly?',
+    answer: 'Yes. Pets are welcome under our house policy with no pet fee, and the resort has enclosed garden lawns. Please tell us before you travel.',
+  },
+  {
+    question: 'What is there for children at the resort?',
+    answer: "A kids' play area open 7:00 AM to 8:00 PM, indoor games all day (billiards, chess, table tennis) and outdoor games until 8:00 PM (archery, cycling, football, cricket).",
+  },
+  {
+    question: 'Is parking available at the resort?',
+    answer: 'Yes. Parking is complimentary, on the estate, with space for 25+ cars at the entrance.',
+  },
+];
 ---
 
-<Layout 
-  title="Luxury Resort in Mukteshwar: Amenities | Whispering Pines" 
+<Layout
+  title="Luxury Resort in Mukteshwar: Amenities | Whispering Pines"
   description="Fruit orchards, a 2,200 sq ft Nanda Devi lawn, 150 Mbps Wi-Fi, 24/7 in-room dining and pet-friendly trails at our 4-star resort near Mukteshwar."
+  faqs={amenityFaqs}
 >
   <div class="relative w-full bg-[#FAF9F6] text-[#0E2C21] overflow-x-hidden selection:bg-[#B0966D] selection:text-[#0E2C21]">
     <Breadcrumbs />
-    
+
     <div class="pt-8">
-      <AmenitiesList hideLink={true} asH1={true} title="Amenities at Our Luxury Resort in Mukteshwar" />
+      <AmenitiesList hideLink={true} asH1={true} title="Amenities at Our Luxury Resort in Mukteshwar" intro={intro} />
       <SEOAmenitiesContent />
+      <FAQAccordion
+        client:visible
+        faqs={amenityFaqs}
+        title="Resort Amenities: Questions We Get Asked"
+        description="Wi-Fi, winter warmth, pets, children and parking."
+      />
     </div>
     <RecentBookingNotification client:idle />
   </div>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "Resort",
-    "@id": "https://whisperingpinesresort.in/resort-amenities-mukteshwar/#amenities",
-    "name": "Whispering Pines Resort by Casa De Bello",
-    "url": "https://whisperingpinesresort.in/resort-amenities-mukteshwar/",
-    "telephone": "+91-7505029696",
-    "priceRange": "₹₹₹",
-    "hasMap": "https://maps.google.com/?cid=8386667112972057918",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137",
-      "addressLocality": "Mukteshwar",
-      "addressRegion": "Uttarakhand",
-      "postalCode": "263137",
-      "addressCountry": "IN"
-    },
+    "@type": "Hotel",
+    // Same @id as Layout's sitewide Hotel node, so these amenities merge into that one entity.
+    "@id": "https://whisperingpinesresort.in/#hotel",
     "amenityFeature": [
       { "@type": "LocationFeatureSpecification", "name": "180° Himalayan Views from ALL Rooms & Balconies", "value": true },
       { "@type": "LocationFeatureSpecification", "name": "Multi-Cuisine & Regional Kumaoni Dining", "value": true },

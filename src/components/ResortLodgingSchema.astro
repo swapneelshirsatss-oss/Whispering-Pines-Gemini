@@ -4,6 +4,7 @@
 import balconyViewImg from '../assets/images/Whispering-pines-balcony-view-nanital.avif?url';
 import villaImg from '../assets/images/villa_in_nanital.avif?url';
 import deluxRoomImg from '../assets/images/Delux_room_Whispering_pines_mukteshwar.avif?url';
+import { CONTACT_FAQS } from '../data';
 
 const siteBase = 'https://whisperingpinesresort.in';
 const balconyUrl = new URL(balconyViewImg, siteBase).href;
@@ -80,7 +81,7 @@ const schemaData = {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.6",
-        "reviewCount": "428",
+        "reviewCount": "433",
         "bestRating": "5",
         "worstRating": "1"
       },
@@ -347,96 +348,8 @@ const schemaData = {
     {
       "@type": "FAQPage",
       "@id": "https://whisperingpinesresort.in/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is there dedicated, secure private parking available on site?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The property features a secure, flat gated private gravel driveway that has room for 25+ cars, right inside the gate. No tricky cliff-edge parking required."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you have high-speed internet suited for remote working?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Whispering Pines has a dedicated 150 Mbps fiber-optic internet connection supporting active work sessions, video calls, and streaming seamlessly throughout the villa and front outdoor gardens."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do meals and dining work? Can we order customized food?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Whispering Pines offers customized homestyle dining on-site. The resident cook prepares fresh multi-cuisine meals and authentic local Kumaoni delicacies using locally-sourced organic vegetables. Guests can choose breakfast, lunch and dinner packages or order on-demand."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are pets allowed at Whispering Pines Resort in Mukteshwar?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Whispering Pines is a pet-friendly resort in Mukteshwar (Malla Ramgarh). The property has large, secure, enclosed front lawns and direct access to wilderness pine forest paths where dogs can explore safely with ₹0 pet fee."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does the WhatsApp booking process work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "To book, select your room, guest count, and dates, then send a WhatsApp inquiry to +91-7505029696. The reservations team responds in minutes, verifies availability, and shares a secure UPI or Credit Card payment invoice for confirmation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are fireplace logs and bonfire wood provided?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Whispering Pines arranges authentic wood logs for both the indoor living room fireplace and the outdoor bonfire grill. A complimentary setup is offered on every arrival and additional wood logs can be refilled at a nominal charge."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Where is Whispering Pines Resort in Mukteshwar located and how far is it from Delhi?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Whispering Pines Resort is located at Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd, Mukteshwar, Nainital, Uttarakhand 263137. It is 25 km from Mukteshwar Dham, 22 km (~45 minutes) from Kainchi Dham and approximately 6.5 to 7.5 hours drive (~340 km) from Delhi, Gurugram and Noida via NH9."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Whispering Pines Resort the same as Clarks Exotica Mukteshwar?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Whispering Pines by Casa De Bello is the upgraded successor to Clarks Exotica on the Mukteshwar Road in Ramgarh. Same iconic Bhowali-Ramgarh-Mukteshwar Road location, now with enhanced luxury suites, a premium private 10-guest villa, working fruit orchards and personalised Casa De Bello management."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the check-in and check-out times at Whispering Pines Resort?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Check-in time at Whispering Pines Resort is 1:00 PM (13:00) and check-out is at 11:00 AM. Early check-in and late check-out can be requested directly via WhatsApp at +91-7505029696 and are accommodated subject to availability."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I book Whispering Pines Resort directly without MakeMyTrip or Booking.com?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Direct booking via WhatsApp or phone at 075050 29696 (+91-7505029696) saves up to 20% compared to OTA platforms like MakeMyTrip, Goibibo, and Booking.com, with priority 180° Himalayan view room allocation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you have a private 3-BHK villa in Mukteshwar for large families or groups?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Alongside our 25 rooms and suites, Whispering Pines Resort in Mukteshwar offers a standalone 3-BHK Private Alpine Villa sleeping up to 10 guests with 3 king bedrooms, a wood-fired stone fireplace living room, and a private orchard yard."
-          }
-        }
-      ]
+      // Built from the same CONTACT_FAQS the homepage FAQAccordion shows, so schema and visible text match.
+      "mainEntity": CONTACT_FAQS.map((faq) => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
     }
   ]
 };
