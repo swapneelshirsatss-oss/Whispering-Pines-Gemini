@@ -213,16 +213,8 @@ const schemaData = {
         { "@type": "Audience", "audienceType": "Weekend Travelers from Delhi NCR & Uttarakhand Corridor" },
         { "@type": "Audience", "audienceType": "Legacy Clarks Exotica Returning Guests" }
       ],
-      "makesOffer": {
-        "@type": "Offer",
-        "name": "Direct WhatsApp Booking Discount",
-        "description": "Up to 20% savings over OTAs (MakeMyTrip, Booking.com, Goibibo) when booking direct.",
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "priceCurrency": "INR"
-        },
-        "url": "https://whisperingpinesresort.in/book-now/"
-      },
+      // No makesOffer / containsPlace here: on a Hotel node Google validates them as hotel-listing
+      // markup (identifier, check-in/out per offer, priced rooms) and marks the whole item invalid.
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -257,36 +249,6 @@ const schemaData = {
         { "@type": "LocationFeatureSpecification", "name": "Pine Forest Nature Trails", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Private Villa", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Workcation Setup Remote Work Ready", "value": true }
-      ],
-      "containsPlace": [
-        {
-          "@type": "Accommodation",
-          "name": "Standalone 10-Guest Private Alpine Villa",
-          "description": "3 king bedrooms, skylight loft, living room with wood-fired stone fireplace, and private fruit orchard yard.",
-          "occupancy": { "@type": "QuantitativeValue", "maxValue": 10 },
-          "bed": { "@type": "BedDetails", "numberOfBeds": 3, "typeOfBed": "King Bed" }
-        },
-        {
-          "@type": "Accommodation",
-          "name": "Deluxe Skylight Suite",
-          "description": "Glass skylight ceilings for stargazing and 180° Himalayan peak balcony views.",
-          "occupancy": { "@type": "QuantitativeValue", "maxValue": 3 },
-          "bed": { "@type": "BedDetails", "numberOfBeds": 1, "typeOfBed": "King Bed" }
-        },
-        {
-          "@type": "Accommodation",
-          "name": "Family Twin Room — Ground Floor Orchard Access",
-          "description": "Ground floor family room with direct lawn and orchard access, exposed stone brick archways and geo-heater. Safe open space for children.",
-          "occupancy": { "@type": "QuantitativeValue", "maxValue": 2 },
-          "bed": { "@type": "BedDetails", "numberOfBeds": 1, "typeOfBed": "Double Bed" }
-        },
-        {
-          "@type": "Accommodation",
-          "name": "Executive Cedar Suite",
-          "description": "Cedar wood pine finish room with mountain valley views and high-capacity heaters. Ideal for group bookings and large families.",
-          "occupancy": { "@type": "QuantitativeValue", "maxValue": 2 },
-          "bed": { "@type": "BedDetails", "numberOfBeds": 1, "typeOfBed": "Double Bed" }
-        }
       ],
       "review": [
         {
