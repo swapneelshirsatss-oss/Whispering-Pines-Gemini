@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import RoomInventoryList from "../components/RoomInventoryList";
-import BookingInteractiveForm from "../components/BookingInteractiveForm";
 import RecentBookingNotification from "../components/RecentBookingNotification";
 import FAQAccordion from "../components/FAQAccordion";
 import DirectVsOtaTable from "../components/DirectVsOtaTable.astro";
@@ -257,16 +256,6 @@ const waVilla = "https://wa.me/917505029696?text=" + encodeURIComponent("Hi, I'd
 
       <DirectVsOtaTable className="my-8" />
 
-      {/* Booking Section */}
-      <BookingInteractiveForm 
-        client:visible
-        title="Reserve Your Villa Near Nainital — Direct Booking, Up to 20% Off" 
-        features={[
-          "Entire Villa Available on Exclusive Rental Basis",
-          "Up to 20% Off on Direct WhatsApp Booking",
-          "Secure UPI & Credit Card Payment — Instant Confirmation"
-        ]}
-      />
     </div>
     <RecentBookingNotification client:idle />
   </div>
