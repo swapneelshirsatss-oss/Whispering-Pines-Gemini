@@ -4,9 +4,10 @@ Read this first in every session. Update it after finishing a task or stopping w
 
 ## 1. Current Status
 - **Active Phase:** Phase 7: Grow (site is live; Mukteshwar-first H1/Title/Meta & schema unification deployed 2026-11-18)
-- **Last Updated:** 2026-11-23
+- **Last Updated:** 2026-11-28
 
 ## 2. Open Tasks (from the weekly SEO report of 2026-11-15 & 2026-11-18 rev 2 plan)
+- [ ] **Rooms page rework (PR #53, branch `copy/rooms-page-room-types`, 28 Nov, awaiting merge; devalue CVE fix is PR #52):** `/suites-cottages-ramgarh-resort/` now shows the 4 BookingJini room types from /book-now/ (Deluxe, Premium, Cottage, Family Twin-Bed) with fresh copy, no rates, no villa. Title "Rooms in Mukteshwar near Nainital | Himalayan Views", H1 "Himalayan-View Rooms for Family & Couples in Mukteshwar near Nainital", new meta, note "prices change by season, rates dynamic, availability confirmed by reception only", schema rooms updated, priceRange "₹₹₹". Still on this page via shared components: villa + rates in BookingInteractiveForm dropdown and DirectVsOtaTable ("Room & Villa Tariff"); awaiting Swapneel. Build: 36 pages.
 - [ ] Rate parity: Agoda ₹2,415 vs official site ₹3,675 on Google Hotels (2026-11-15).
 - [x] Merge the two hotel schema blocks on the homepage into one (`@id: "https://whisperingpinesresort.in/#hotel"`, `addressLocality: "Mukteshwar"`, `WebSite` name `"Whispering Pines Resort"`).
 - [x] Update review count 409 → 425 sitewide (60 occurrences across 29 files safely synced with word boundaries).
