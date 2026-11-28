@@ -10,56 +10,8 @@ import RecentBookingNotification from "../components/RecentBookingNotification";
   title="Guest Reviews (4.6★ / 433+) | Whispering Pines Mukteshwar" 
   description="Read 433+ verified guest reviews for Whispering Pines Resort near Mukteshwar (Malla Ramgarh). See why families, couples, and groups rate our 180° views 4.6★."
 >
-  <Fragment slot="head">
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Resort",
-      "name": "Whispering Pines Resort by Casa De Bello",
-      "url": "https://whisperingpinesresort.in/reviews/",
-      "image": "https://whisperingpinesresort.in/og-image.webp",
-      "telephone": "+91-7505029696",
-      "priceRange": "₹3999 - ₹15999",
-      "hasMap": "https://maps.google.com/?cid=8386667112972057918",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Malla Ramgarh, Bhowali-Ramgarh-Mukteshwar Rd",
-        "addressLocality": "Mukteshwar",
-        "addressRegion": "Uttarakhand",
-        "postalCode": "263137",
-        "addressCountry": "IN"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "reviewCount": "433",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Dr. Vikram Sethi" },
-          "datePublished": "2026-05-01",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-          "reviewBody": "An absolute masterpiece of a premium villa. The panoramic Nanda Devi peaks look otherworldly from the Attic suite in the morning. Kumaoni cuisine was stellar and high-speed Wi-Fi worked seamlessly. Will return."
-        },
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Priya and Rohan Sen" },
-          "datePublished": "2026-04-01",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-          "reviewBody": "Whispering Pines is surrounded by massive peach trees and silent pinewood hills. The kids loved the fireplace evenings and our Golden Retriever was in absolute heaven in the safe garden lawns."
-        },
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Aman Rastogi" },
-          "datePublished": "2026-06-01",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-          "reviewBody": "Exceptional remote working setup. Constant 150 Mbps fiber speed, hot showers, cozy timber bed and serene fresh air. Highly recommend booking the Entire Villa for extended family stays."
-        }
-      ]
-    })} />
-  </Fragment>
+  {/* No page-level schema: Layout prints the sitewide #hotel with the 4.6 / 433 Google rating. Self-serving
+     Review markup was removed 28 Nov 2026 (Google ignores it; the three names were not in TESTIMONIALS). */}
 
   <div class="relative w-full bg-[#FAF9F6] text-[#0E2C21] overflow-x-hidden selection:bg-[#B0966D] selection:text-[#0E2C21]">
     <Breadcrumbs />

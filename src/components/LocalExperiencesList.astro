@@ -81,10 +81,16 @@ const HeadingTag = asH1 ? "h1" : "h2";
             </div>
 
             <div class="pt-3 border-t border-[#2C3531]/5">
+              {item.guide ? (
+                <a href={item.guide.href} class="inline-flex items-center min-h-11 text-xs font-sans font-semibold text-[#0E2C21] hover:text-[#7A6038] underline underline-offset-4 decoration-[#B0966D]">
+                  {item.guide.label} →
+                </a>
+              ) : (
               <span class="text-[10px] font-sans text-[#2C3531]/50 uppercase tracking-wider flex items-center">
                 <Compass className="w-3.5 h-3.5 text-[#7A6038] mr-1.5" />
                 Trip consulting offered
               </span>
+              )}
             </div>
           </div>
         </article>
